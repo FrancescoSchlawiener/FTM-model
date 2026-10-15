@@ -1,0 +1,28 @@
+0  Form aus 03: ξ_R = e^{−I/N*} (I < I_F), 0 ab I_F;  a = (1 − ξ_R)·a_L + ξ_R·a_N·(1 + κQ)
+   κ = 0: Rest mit w gezählt, gebunden w = 0 ⇒ Newton;  κ = 1: Rest wie Staub ⇒ (1 + Q)a_N, 1 + Q = 6.364
+   größter Rest vor der Faltung ξ_R(I_F⁻) = e^{−I_F/N*}: N* = 0,3: 0.026–0.016;  N* = 2,4: 0.632–0.594
+
+1  σ_los(R < R_e) [km/s], Plummer, isotrop; Eingaben [G]; ω = √(g(r½)/r½) in 1/Gyr (Newton | Regel); t_F = I_F/ω
+   System      Newton   Staub   Regel        gemessen  f nötig κ=0    κ=1      ω_N    ω_L    t_F [Gyr] (ω_N, I_F 1,10–1,25)   t für f (κ=0), N* 0,3 | 2,4 [Gyr]  Sterne [G]
+   Pal 14        0.66    1.68    1.78   0.38 +0.12/−0.12         –      –       36.64  98.14           0.030–0.034                         – |              –   ≈ 10–11 Gyr
+   Crater II     0.40    1.02    1.39   2.70 +0.3/−0.3         –      –        0.52   1.77           2.128–2.418                         – |              –   ≈ 10–12 Gyr
+   Draco         1.20    3.02    3.33   9.10 +1.2/−1.2         –      –        7.37  20.53           0.149–0.170                         – |              –   ≈ 10–12 Gyr
+   Fornax        5.55   13.99   13.96  11.70 +0.9/−0.9        0.646   –       10.63  26.73           0.103–0.118                     0.015 |     I=2.49≥I_F   gemischt, bis 12 Gyr
+   DF2           7.04   17.77   17.70   8.50 +2.3/−3.1        0.086   –        4.36  10.97           0.252–0.287                     0.005 |          0.044   ≈ 9 Gyr
+   DF4           7.15   18.05   19.21   4.20 +4.4/−2.2         –      –        6.09  16.36           0.181–0.205                         – |              –   ≈ 9 Gyr
+   (f nötig: übergebener Anteil, der σ gemessen trifft; – = kein f ∈ [0, 1] trifft; Staub = f = 0 mit κ = 1)
+   In 2σ bei f = 0 (κ = 0, Newton): Pal 14 nein, Crater II nein, Draco nein, Fornax nein, DF2 ja, DF4 ja
+   In 2σ bei f = 1 (Regel):          Pal 14 nein, Crater II nein, Draco nein, Fornax nein, DF2 nein, DF4 nein
+
+2  SPARC (Q ≤ 2, i ≥ 30°): 149 Galaxien, äußerster Punkt ω = V/R [1/Gyr]; I = ω·t
+   ω am äußersten Punkt: Minimum 2.16 (UGC09133, R = 108.3 kpc, V = 229 km/s), 5 %-Quantil 3.49, Median 8.18
+   seit Schließung t =  0.25 Gyr: I < I_F = 1,10 bei 17 von 149 Galaxien; Median I = 2.0 rad
+   seit Schließung t =  1.00 Gyr: I < I_F = 1,10 bei 0 von 149 Galaxien; Median I = 8.2 rad
+   seit Schließung t =  3.00 Gyr: I < I_F = 1,10 bei 0 von 149 Galaxien; Median I = 24.6 rad
+   seit Schließung t = 10.00 Gyr: I < I_F = 1,10 bei 0 von 149 Galaxien; Median I = 81.8 rad
+   größte Zeit, bei der noch ein äußerster SPARC-Punkt I < 1,25 hätte: 0.58 Gyr
+
+3  Von Hand
+   DF2: r½ = 2,2/√(2^(2/3) − 1) = 2.870 kpc;  ω² = G·(M/2)/r½³ = 4,30091·10⁻⁶·10⁸/23.65 = 18.18 (km/s/kpc)²;  ω = 4.264 km/s/kpc = 4.361/Gyr (Plummer-Profil innen, Code: 4.359)
+   t_F = 1,10/4.361 = 0.252 Gyr
+   DF2 Staub (κ = 1, f = 0): σ = √(1 + Q)·σ_N = 2.523·7.04 = 17.77 km/s (Code 17.77)

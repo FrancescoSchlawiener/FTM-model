@@ -1,0 +1,106 @@
+====================================================================================================
+A  Knoten: Windung (x+iy), Verwindung als komplexer Versatz i·a_J  →  Koordinaten auf S³
+====================================================================================================
+A1 a_J =  0.3: max| |Z0|²+|Z1|² − 1 | = 1.1e-15   (|r²−a²+2iaz|² + 4a²ρ² = (r²+a²)²)
+A1 a_J =  1.0: max| |Z0|²+|Z1|² − 1 | = 8.9e-16   (|r²−a²+2iaz|² + 4a²ρ² = (r²+a²)²)
+A1 a_J =  4.0: max| |Z0|²+|Z1|² − 1 | = 8.9e-16   (|r²−a²+2iaz|² + 4a²ρ² = (r²+a²)²)
+   Nullstellen: Z1 = 0 auf der Drehachse (Windung), Z0 = 0 ⇔ R_c² = 0 auf dem Ring ρ = a_J, z = 0 (Verwindung).
+   ⇒ Windung und komplexer Versatz sind genau die inverse stereographische Abbildung ℝ³∪∞ → S³ mit Radius a_J;
+     w = Z1^p/Z0^q ist die (p,q)-Hopf-Abbildung S³ → S², n = (2Re w, 2Im w, 1−|w|²)/(1+|w|²).
+   a_J = 0: Z1 ≡ 0, Z0 ≡ 1 ⇒ konstante Abbildung, kein Knoten.
+
+====================================================================================================
+B  Hopf-Zahl H = (1/16π²)∫A·B,  B_i = ½ε_ijk n·(∂_j n × ∂_k n),  ∇×A = B  (Gitter, FFT)
+====================================================================================================
+B1 p = +1 (Windung), q = 1 : H(N=128) = +0.9942, H(N=176) = +0.9949   p·q = +1
+B1 p = -1 (Windung), q = 1 : H(N=128) = -0.9942, H(N=176) = -0.9949   p·q = -1
+B1 p = +2 (Windung), q = 1 : H(N=128) = +1.9932, H(N=176) = +1.9976   p·q = +2
+B1 p = +1 (Windung), q = 2 : H(N=128) = +1.9828, H(N=176) = +1.9871   p·q = +2
+B1 p = +3 (Windung), q = 1 : H(N=128) = +2.9796, H(N=176) = +2.9940   p·q = +3
+B1 p = +2 (Windung), q = 2 : H(N=128) = +3.9600, H(N=176) = +3.9869   p·q = +4
+B1 p = +1 (Windung), q = 3 : H(N=128) = +2.9593, H(N=176) = +2.9744   p·q = +3
+B2 w = Z0·Z1 (|w| ≤ ½, trifft nicht die ganze Kugel): H = +0.0006  (Windung allein, ohne Pol am Ring: 0)
+   Gegenladung: Windung −1 heißt conj(Z1): H = −q (Tabelle p = −1).
+B3 feste Box ±6, N = 160, a_J = 0.25: H = +0.9157   (Abweichung nur Auflösung/Box: h/a = 0.30, L/a = 24)
+B3 feste Box ±6, N = 160, a_J = 0.50: H = +0.9930   (Abweichung nur Auflösung/Box: h/a = 0.15, L/a = 12)
+B3 feste Box ±6, N = 160, a_J = 1.00: H = +0.9948   (Abweichung nur Auflösung/Box: h/a = 0.08, L/a = 6)
+B3 feste Box ±6, N = 160, a_J = 2.00: H = +0.9468   (Abweichung nur Auflösung/Box: h/a = 0.04, L/a = 3)
+   ⇒ H = p·q, ganz; hängt linear an der Windung p (Ladung) und am Exponenten q der Verwindungsnullstelle,
+     nicht am Wert von a_J (Skala; H ist skalenfrei). a_J = 0 ⇒ H = 0.
+
+====================================================================================================
+C  Unabhängig: Verschlingung zweier Urbildkurven w = w1, w = w2 (Gauß-Integral)
+====================================================================================================
+C1 (p,q) = (1,1): Σ Verschlingung der Komponenten = -1.0000   p·q = 1  (Vorzeichen: Umlaufsinn der Kurven)   (Komponenten je Urbild: 1)
+C1 (p,q) = (2,1): Σ Verschlingung der Komponenten = -2.0000   p·q = 2  (Vorzeichen: Umlaufsinn der Kurven)   (Komponenten je Urbild: 1)
+C1 (p,q) = (1,2): Σ Verschlingung der Komponenten = -2.0000   p·q = 2  (Vorzeichen: Umlaufsinn der Kurven)   (Komponenten je Urbild: 1)
+C1 (p,q) = (3,2): Σ Verschlingung der Komponenten = -6.0001   p·q = 6  (Vorzeichen: Umlaufsinn der Kurven)   (Komponenten je Urbild: 1)
+C1 (p,q) = (2,2): Σ Verschlingung der Komponenten = -4.0000   p·q = 4  (Vorzeichen: Umlaufsinn der Kurven)   (Komponenten je Urbild: 2)
+   Probe Faser (1,1): zwei Hopf-Kreise, Verschlingung 1 (von Hand: zwei Fasern der Hopf-Faserung sind einmal verschlungen).
+
+====================================================================================================
+D  Appell-Knoten 1/R_c (Multipole M(ia)^l, Q(ia)^l): Windung um den Ring und Helizität seines Feldes
+====================================================================================================
+D1 Schleife um den Ring, Abstand 0.3: Phase von 1/R_c nach 1 Umlauf +0.5000·2π, nach 2 Umläufen +1.0000·2π;  1/R_c nach 1 Umlauf = -1.0000+0.0000j·Start
+D1 Schleife um den Ring, Abstand 0.1: Phase von 1/R_c nach 1 Umlauf +0.5000·2π, nach 2 Umläufen +1.0000·2π;  1/R_c nach 1 Umlauf = -1.0000+0.0000j·Start
+   ⇒ 1/R_c hat um den Ring die Windung ½ (q = ½): eindeutig erst auf zwei Blättern, Rückkehr nach zwei Umläufen.
+D2 w = Z1/√Z0 auf einem Blatt (Sprung an der Scheibe), N = 128: H = +0.4492  (nicht ganz, gitterabhängig)
+D2 w = Z1/√Z0 auf einem Blatt (Sprung an der Scheibe), N = 176: H = +0.4633  (nicht ganz, gitterabhängig)
+D3 Kerr-Newman-Feld E + iB = −∇(Q/R_c): max|B_φ|/max|B| = 2.7e-09 (B poloidal) ⇒ A = A_φ φ̂, A·B = 0 punktweise: ∫A·B = 0;
+   E·B ungerade in z: max|E·B(z) + E·B(−z)|/max|E·B| = 0.0e+00 ⇒ ∫E·B = 0.
+   ⇒ Das eigene Feld des Knotens trägt keine Helizität; H ≠ 0 nur in der Abbildung (Z0,Z1) → S², nicht im Feld 1/R_c.
+
+====================================================================================================
+E  Spinorhebung und Drehung
+====================================================================================================
+E1 Drehung von n um α = 2π: n zurück: True;  Spinor Uψ = -1.0000·ψ
+E1 Drehung von n um α = 4π: n zurück: True;  Spinor Uψ = +1.0000·ψ
+   ⇒ Das Zeichen −1 nach 2π gehört zu jeder Abbildung n = ψ†σψ (Faser der Hopf-Faserung), unabhängig von H.
+E2 (p,q) = (1,1), H = 1: w(R_α x) = e^(ipα)·w(x), Abw. 2.8e-15;  SU(2)-Hebung der Zieldrehung 2πp: (−1)^p = -1
+E2 (p,q) = (2,1), H = 2: w(R_α x) = e^(ipα)·w(x), Abw. 2.7e-15;  SU(2)-Hebung der Zieldrehung 2πp: (−1)^p = +1
+E2 (p,q) = (1,2), H = 2: w(R_α x) = e^(ipα)·w(x), Abw. 5.6e-15;  SU(2)-Hebung der Zieldrehung 2πp: (−1)^p = -1
+E2 (p,q) = (3,1), H = 3: w(R_α x) = e^(ipα)·w(x), Abw. 3.1e-15;  SU(2)-Hebung der Zieldrehung 2πp: (−1)^p = -1
+   ⇒ In diesem Ansatz folgt das Zeichen nach einer Raumdrehung um 2π der Windung p, nicht H: (1,2) hat H = 2 und −1, (2,1) H = 2 und +1.
+   Ob der Knoten als Spin ½ zu quantisieren ist (Klasse der Schleife im Raum der Abbildungen, π₄(S²) = ℤ₂), rechnet diese Datei nicht.
+
+====================================================================================================
+F  Verlinkung von Kurven auf verschachtelten Tori (Tori θ = const um den Ring ρ = a, z = 0)
+====================================================================================================
+F1 innen (φ-Umläufe 1, Ring-Umläufe 0), außen (0, 1): Verschlingung = -1.0000   m_innen·k_außen = 1
+F1 innen (φ-Umläufe 0, Ring-Umläufe 1), außen (1, 0): Verschlingung = -0.0000   m_innen·k_außen = 0
+F1 innen (φ-Umläufe 1, Ring-Umläufe 1), außen (1, 1): Verschlingung = -1.0000   m_innen·k_außen = 1
+F1 innen (φ-Umläufe 2, Ring-Umläufe 1), außen (1, 3): Verschlingung = -6.0001   m_innen·k_außen = 6
+F1 innen (φ-Umläufe 1, Ring-Umläufe 3), außen (2, 1): Verschlingung = -1.0000   m_innen·k_außen = 1
+F1 innen (φ-Umläufe 3, Ring-Umläufe 2), außen (2, 5): Verschlingung = -15.0004   m_innen·k_außen = 15
+   ⇒ ganz genau bei geschlossenen (rationalen) Kurven: Lk = m_innen·k_außen.
+F2 Wicklung W = 0.50000 auf beiden Tori, offene Bahn T Umläufe, Lk/T²: T=20 -0.5007, T=40 -0.5007   (W = 0.5000)
+F2 Wicklung W = 0.61803 auf beiden Tori, offene Bahn T Umläufe, Lk/T²: T=20 -0.6048, T=40 -0.6141   (W = 0.6180)
+F2 Wicklung W = 0.70711 auf beiden Tori, offene Bahn T Umläufe, Lk/T²: T=20 -0.7014, T=40 -0.7023   (W = 0.7071)
+F2 Wicklung W = 0.75000 auf beiden Tori, offene Bahn T Umläufe, Lk/T²: T=20 -0.7510, T=40 -0.7510   (W = 0.7500)
+   ⇒ Bei irrationaler Wicklung schließt keine Kurve; die mittlere Verschlingung je Umlauf² ist W, eine stetige Zahl, keine ganze.
+   Die Tori von 01 liegen im Zustandsraum; die Tori dieses Knotens im Ortsraum um den Ring ρ = a_J.
+
+====================================================================================================
+G  Eichung: A → A + ∇χ
+====================================================================================================
+G1 H = +0.99418, nach Eichung +0.99418;  lokale Dichte A·B ändert sich um bis zu 28 % ihres Maximums.
+   ⇒ A·B ist kein Wert am Ort; nur das Integral über den ganzen Knoten ist eine Größe (G).
+
+====================================================================================================
+H  Energieskala: E2 = ∫|∂n|² ∝ a, E4 = ∫|B|² ∝ 1/a  (Box ±6a, N = 128; Tabelle B: N = 176)
+====================================================================================================
+H1 a = 0.7: E2/a = 260.81, E4·a = 315.36   (unendlicher Raum: beide 32π² = 315.83; E2 fehlt der Rest außerhalb der Box, ≲ 128π/6 = 67)
+H1 a = 1.4: E2/a = 260.81, E4·a = 315.36   (unendlicher Raum: beide 32π² = 315.83; E2 fehlt der Rest außerhalb der Box, ≲ 128π/6 = 67)
+   ⇒ nur E2 (keine Viererterm): E → 0 für a → 0, kein Gleichgewicht (Derrick). Größe setzt im Modell a_J = J/(Mc), keine Energie.
+H2 (p,q) = (1,1), |H| = 1: E* = 2√(E2·E4) =    573.9,  E*/|H|^(3/4) =  573.9
+H2 (p,q) = (2,1), |H| = 2: E* = 2√(E2·E4) =   1028.5,  E*/|H|^(3/4) =  611.6
+H2 (p,q) = (1,2), |H| = 2: E* = 2√(E2·E4) =   1119.4,  E*/|H|^(3/4) =  665.6
+H2 (p,q) = (3,1), |H| = 3: E* = 2√(E2·E4) =   1572.8,  E*/|H|^(3/4) =  690.0
+H2 (p,q) = (2,2), |H| = 4: E* = 2√(E2·E4) =   1869.0,  E*/|H|^(3/4) =  660.8
+H2 (p,q) = (1,3), |H| = 3: E* = 2√(E2·E4) =   1839.1,  E*/|H|^(3/4) =  806.8
+   Anpassung E* ∝ |H|^k im Ansatz (nicht minimiert): k = 0.91. Eine Schranke E ≥ c|H|^(3/4) braucht den Viererterm E4 in der Energie;
+   das Modell hat keine Energie für die Abbildung n, also folgt daraus keine Stabilitätsgrenze.
+
+====================================================================================================
+Von Hand: Punkt (1,1,1), a = 1: |conj R_c²|² = |r²−a²+2iaz|² = |2+2i|² = 8;  |2a(x+iy)|² = 4·2 = 8;  (r²+a²)² = 4² = 16  ⇒ 8+8 = 16 ✓
+          E4(1,1) = ∫16·Ω⁴dV, Ω = 2a/(r²+a²): 256·4π·∫r²/(1+r²)⁴dr = 1024π·π/32 = 32π² = 315,83 (Gitter H1: 315,36)

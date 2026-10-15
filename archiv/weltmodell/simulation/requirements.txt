@@ -1,0 +1,8 @@
+# Feste Versionen der Umgebung, in der die Simulation läuft (Python 3.11.15). np.trapezoid verlangt numpy ≥ 2.
+numpy==2.4.6
+scipy==1.17.1
+mpmath==1.3.0
+sympy==1.14.0
+pytest==9.1.1
+# camb (Anfangsspektrum σ(M)) benutzt nur forschung/kosmos.py, beim Aufruf; der Lauf rechnet ohne.
+camb==2.0.4

@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+archiv/weltmodell/simulation/.zwischenspeicher/
+*.sperre

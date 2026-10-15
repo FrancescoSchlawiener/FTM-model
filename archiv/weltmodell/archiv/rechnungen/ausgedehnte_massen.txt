@@ -1,0 +1,62 @@
+1) Leiter im Ortsmaß: R_d = ∫(a − a_N)(r*/r)^{d−1} d ln r / (a₀Γ(d+1)ζ(d+1)),  r* aus der Gesamtmasse
+   Profil        L/r*    d=1      d=2 (innere Grenze e⁻¹⁰ / e⁻²⁰)
+   Punktmasse    0.00   1.0000         1.0000 /       1.0000
+   Plummer       0.03   2.9953      5044.8241 / 3433984.6106
+   Plummer       0.30   2.7912       683.2931 /  111371.2027
+   Plummer       1.00   1.3142       120.6730 /   18319.1131
+   Plummer       3.00   0.4985        23.5862 /    3526.2007
+   Hernquist     0.03   1.0479         1.1972 /       1.1979
+   Hernquist     0.30   5.8116      3772.8156 / 82950806.3792
+   Hernquist     1.00   7.3057      5330.9311 / 117446692.1147
+   Hernquist     3.00   3.6334      2572.8615 / 56679075.3706
+   Kugel         0.03   2.9894      5044.5541 / 3433984.3442
+   Kugel         0.30   2.7132       683.0902 /  111370.9999
+   Kugel         1.00   1.4179       120.7700 /   18319.2101
+   Kugel         3.00   0.5591        23.6046 /    3526.2192
+   Scheibe       0.03   3.2274      3458.0937 / 9109560.7665
+   Scheibe       0.30   3.2334      1248.6206 /  183883.1480
+   Scheibe       1.00   1.4712       243.7127 /   16587.7014
+   Scheibe       3.00   0.5516        50.8870 /    1846.8863
+   d = 1 hängt vom Profil ab (Kern: Faktor 0,5 bis 3,2) und divergiert logarithmisch, wo a − a_N im Zentrum endlich bleibt (Hernquist).
+   d = 2 und 3 divergieren für jedes ausgedehnte Profil: Das Gewicht 1/r bzw. 1/r² wächst im Zentrum ohne Grenze, a − a_N verschwindet
+   dort nicht exponentiell. Endlich und exakt ist die Leiter im Ortsmaß nur für die Punktmasse.
+
+2) Leiter im Maß der Bose-Variablen s: ∫ s^d n_B |ds| längs des Radius
+   Jeder monotone Ast von s liefert ∫₀^{s_max} s^d n_B ds, unabhängig vom Profil. Ein Profil mit Kern (a_N(0) = 0) durchläuft s zweimal.
+   Plummer    L = 0.3: s_max =  2.068, Äste 2,  d = 1: längs r 2.46943   Äste × ∫₀^s_max = 2.46943   (Γζ = 1.64493)
+   Plummer    L = 0.3: s_max =  2.068, Äste 2,  d = 2: längs r 2.05702   Äste × ∫₀^s_max = 2.05702   (Γζ = 2.40411)
+   Hernquist  L = 0.3: s_max =  3.333, Äste 1,  d = 1: längs r 1.48785   Äste × ∫₀^s_max = 1.48785   (Γζ = 1.64493)
+   Hernquist  L = 0.3: s_max =  3.333, Äste 1,  d = 2: längs r 1.68884   Äste × ∫₀^s_max = 1.68884   (Γζ = 2.40411)
+   Kugel      L = 1.0: s_max =  1.000, Äste 2,  d = 1: längs r 1.55491   Äste × ∫₀^s_max = 1.55491   (Γζ = 1.64493)
+   Kugel      L = 1.0: s_max =  1.000, Äste 2,  d = 2: längs r 0.70778   Äste × ∫₀^s_max = 0.70778   (Γζ = 2.40411)
+   Scheibe    L = 0.3: s_max =  1.783, Äste 2,  d = 1: längs r 2.28154   Äste × ∫₀^s_max = 2.28154   (Γζ = 1.64493)
+   Scheibe    L = 0.3: s_max =  1.783, Äste 2,  d = 2: längs r 1.69610   Äste × ∫₀^s_max = 1.69610   (Γζ = 2.40411)
+
+3) Zusatzpotential Φ_X(r) = ∫₀^r (a − a_N)dr gegen die Punktmassenform v_f²·ln ν(s(r)):
+   Profil        L/r*   Φ_X − v_f² ln ν bei r = 3L, 10 r*, 100 r*  (Einheiten v_f²)
+   Plummer       0.03    +0.0004   +0.0020   +0.0020
+   Plummer       0.30    +0.1182   +0.1452   +0.1455
+   Plummer       1.00    -0.2478   -0.2161   -0.2125
+   Plummer       3.00    -1.0452   -1.0384   -1.0076
+   Hernquist     0.03    +0.0000   +0.0000   +0.0000
+   Hernquist     0.30    -0.0363   -0.0363   -0.0363
+   Hernquist     1.00    -0.4587   -0.4587   -0.4587
+   Hernquist     3.00    -1.2607   -1.2607   -1.2607
+   Kugel         0.03    +0.0003   +0.0003   +0.0003
+   Kugel         0.30    +0.1266   +0.1266   +0.1266
+   Kugel         1.00    -0.0091   -0.0091   -0.0091
+   Kugel         3.00    -0.6736   -0.6736   -0.6736
+   Scheibe       0.03    +0.0002   -0.0052   -0.0053
+   Scheibe       0.30    +0.1940   +0.2211   +0.2201
+   Scheibe       1.00    -0.1610   -0.0979   -0.1129
+   Scheibe       3.00    -0.9607   -0.9323   -0.9042
+   Außen bleibt eine feste Verschiebung C: Φ_X = v_f²·ln ν(s) + C; C → 0 für kompakte Profile.
+
+4) Phantomdichte in der Masse (kugelsymmetrisch, exakt):
+   4πGρ_X = χΩ² + 4πGρ_b·∂(a − a_N)/∂a_N,   ∂(a − a_N)/∂a_N = n_B(1 − sν/2): Vorzeichenwechsel bei sν = 2 ⇔ 2(1 − e^{−s}) = s
+   Vorzeichenwechsel bei s = 1.5936, a_N = 2.540·a₀: genau die Wien-Stelle der Stufe 2 (größte Zusatzbeschleunigung)
+   Plummer L = 0,3, r = 0.05: numerisch 26.561982   Formel 26.561982   Materieglied +3.52035  (a_N/a₀ = 1.777)
+   Plummer L = 0,3, r = 0.2: numerisch 6.148998   Formel 6.148998   Materieglied -1.17501  (a_N/a₀ = 4.267)
+   Plummer L = 0,3, r = 0.5: numerisch 2.587206   Formel 2.587206   Materieglied +0.00212  (a_N/a₀ = 2.522)
+   Plummer L = 0,3, r = 1.0: numerisch 0.903848   Formel 0.903848   Materieglied +0.03217  (a_N/a₀ = 0.879)
+   Plummer L = 0,3, r = 3.0: numerisch 0.110425   Formel 0.110425   Materieglied +0.00114  (a_N/a₀ = 0.109)

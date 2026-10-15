@@ -1,0 +1,78 @@
+1a) Kette der Ebenen n = 0 … N (0 = Ort, unterste Ebene), Sprungrate κ je Richtung, Verlust Γ, G_n = E_n[e^{−ΓT₀}]
+    κ(G_{n+1} − 2G_n + G_{n−1}) = Γ·G_n  ⇒  G_n = λⁿ,  λ + 1/λ − 2 = Γ/κ;  L = m Ebenen, τ_D = m²/κ, s² = Γ·τ_D
+    q_m = G_m = exp(−2m·arsinh(s/2m)) → e^{−s} für m → ∞;  Kontinuum D = κh², L = m·h
+    Kette mit 20 000 Ebenen (Deckel reflektierend), m = 50, s = 0,1/1/3: G_m gegen λᵐ und Boden absorbierend gegen reflektierend mit Quelle: max. Abweichung 1.5e-12
+    ⇒ Beide Böden geben dasselbe normierte Profil; der Boden legt nur die Amplitude fest.
+    m     max|ν_m/ν − 1|   bei s = 1   q_m/e^{−s} bei s = 10
+      1      4.684 %     2.279 %          216
+      2      1.369 %     0.596 %         30.3
+      3      0.634 %     0.267 %         9.95
+      5      0.234 %     0.097 %         3.27
+     10      0.059 %     0.024 %         1.46
+    100      0.001 %     0.000 %            1
+    ⇒ Schon wenige Ebenen treffen die Regel um a₀ auf Prozente; der Newton-Schwanz ist (m/s)^{2m} statt e^{−s}, e^{−s} bis s verlangt m ≫ s.
+
+1b) „Nur aufwärts“ als Bewegung: zurück nur über eine geschlossene Kette von m Ebenen, q = (κ/(κ+Γ))^m, m/κ = τ_D
+       s    a/a₀ Kette (m = 10³)   a/a₀ Regel = s²·ν(s)
+        1         1.5824         1.5820
+      0.3         1.0457         0.3472
+      0.1         1.0050         0.1051
+     0.01         1.0001         0.0101
+    ⇒ 1 − q → s², a → a₀ (Boden, v² = a₀·r): keine Wurzel, kein Tully-Fisher.
+    Drift v, Pe = vL/2D = 0.05: aufwärts q = e^{−(Pe + √(Pe² + s²))}, ν ≤ 1/(1 − e^{−2Pe}) = 10.51 (außen Kepler);
+    abwärts q = e^{−(√(Pe² + s²) − Pe)}: a/a₀ bei s = 10⁻⁴: 0.1000 = 2Pe (Boden). Nur die symmetrische Kette gibt 1 − q ≈ s.
+
+1c) w als Glättungslänge: harmonische Fortsetzung (∇² + ∂_w²)u = 0 ist Poisson-Glättung, Symbol e^{−|k|w}
+    P_a·P_b = P_{a+b} (Glättungslängen addieren sich), P_0 = 1, |e^{−|k|w}| ≤ 1; w < 0 hieße e^{+|k|w} (unbeschränkt).
+    Schleife verlangte P_Λ = 1 für ein Λ > 0, also e^{−|k|Λ} = 1: nur k = 0 (der Mittelwert) kehrt voll zurück.
+    Punktmasse: u(r,w) = (2/πr)·arctan(r/w), Laplace-Rest 9.6e-07, u(r, 10⁻⁹)·r = 0.999999999
+    Spitze des geglätteten Feldes α·GM/w²: gleichmäßige Kugel α = 1, Plummer α = 0.3849, Poisson α = 0.1861 (bei r = 0.824w)
+    Schwelle α·GM/L² = a₀ ⇒ L = √α·r*: 1 / 0.620 / 0.431 r*;  Tully-Fisher v⁴ = GMa₀·(r*/L)²: ×1 / ×2.60 / ×5.37
+    Punktmasse: D = L²/τ_D = GM/c = 3Δs·c, Γ = a_N/c ⇒ √(Γ/D)·r = 1.000000: die Abschirmzahl ist die Wellenzahl 1/r der Kreisbahnmode.
+
+1d) Zahl der Ebenen: Schritt mit c ⇒ D = h·c/2 ⇒ h = 2GM/c² = 6Δs = r₀;  m = r*/r₀;  Weg in τ_D: c·τ_D = ℓ₀
+    Milchstraße  r* =   8.349 kpc, r₀ =      1185 AE, m = 1.45e+06, Diskretheit s³/24m² bei s = 1: 2.0e-14
+    Zwerg        r* =   0.341 kpc, r₀ =     1.975 AE, m = 3.56e+07, Diskretheit s³/24m² bei s = 1: 3.3e-17
+
+2) Schließung oben: Deckel reflektierend bei Λ (geschlossener Raum), Ebenen durchlässig (D gleich)
+   q = cosh(k(Λ − L))/cosh(kΛ), k = s/L;  tief: 1 − q ≈ s·tanh(Λ/r) ⇒ 10 % bei Λ/r = artanh(1/1,1)
+   a₀ = cH/2π: H = 77.6 km/s/Mpc, c/H = 3.86 Gpc, U = 2πc/H = ℓ₀ = 24.27 Gpc; artanh(1/1,1) = 1.5223 ⇒ r₁₀ = 0.6569·Λ
+   Λ                          Λ/L Milchstraße   Λ/L Zwerg   r₁₀ Milchstraße   r₁₀ Zwerg   a_N/a₀ bei r₁₀ (MS)
+   c/H                          4.63e+05     1.13e+07       2.538 Gpc     2.538 Gpc     1.08e-11
+   πc/H = U/2                   1.45e+06     3.56e+07       7.972 Gpc     7.972 Gpc     1.10e-12
+   13,5 Gpc (U ≥ 27 Gpc)        1.62e+06     3.96e+07       8.868 Gpc     8.868 Gpc     8.86e-13
+   Mittlere Rückkehrzeit ⟨T⟩ = τ_D(2Λ/L − 1)/2, Milchstraße, Λ = c/H: 3.66e+16 Jahre (endlich; τ_D = 79.2 Mrd. Jahre)
+   Spitze: Hubble-Kugel GM_H = c³/2H (Randneigung cH/2): L_H = r*_H = 1.7725·c/H = √π·c/H; L_H/Λ = 1.77 (Λ = c/H) bzw. 0.564 (Λ = πc/H)
+   ν_H offen = 1.2047, mit Deckel bei πc/H = 1.2204: für das Ganze ist L ≈ Λ, für jedes Teilsystem L/Λ ≤ 10⁻⁴ (Haufen 1,7·10¹⁴ M☉: 1.2e-04).
+
+3) Umgebung. (a) Einbettung im Verlust: Γ = a_N,ges/c (Gesamtfeld), L = r* (eigene Masse) und Λ unverändert.
+   (b) Ebenengrenze: Faltungen additiv ⇒ D_Ebene = 3c·ΣΔs = GM_Ebene/c; oberhalb der eigenen Glättungslänge ℓ ist D um μ = M_p/M größer.
+       Schritt mit c ⇒ Fluss stetig (D·G′ stetig); Γ je Zeit gleich ⇒ Z = √(DΓ), R = (1 − √μ)/(1 + √μ)
+       q = e^{−kL}·(1 + R·e^{−2k(ℓ−L)})/(1 + R·e^{−2kℓ}), k = s/L;  tief: ν_b/ν = (1 + R·e^{−2ℓ/r})/(1 − R·e^{−2ℓ/r}), R → −1: tanh(ℓ/r)
+   Prüfung Fluss-Kette (s = 0,7, ℓ = 5L, μ = 100): G(L) = 0.49545, Formel 0.49545
+   Glättungslänge ℓ³ = GM/(√(3/2)·|E^TF|); Elternmasse als Punkt: √(3/2)·|E^TF| = 3GM_p/d³ ⇒ ℓ = d·(M/3M_p)^{1/3}
+   (Prüfung: √(3/2)·|diag(−2,1,1)| = 3.000000)
+   Milchstraße, g_e = 0,03a₀, d = 1 Mpc: M_p = 2.58e+13 M☉, g_e = 0.0300·a₀, μ = 430, R = -0.908, ℓ = 91.8 kpc = 11.0·r*, r₁₀ (Grenze) = 63.1 kpc = 0.687·ℓ
+        r/ℓ     r [kpc]   a/a_frei: äußeres Feld ⊥ / ∥    Ebenengrenze    beide (⊥)
+        0.3      27.55         0.979 /  0.640          0.997          0.976
+        0.5      45.92         0.873 /  0.479          0.964          0.856
+        0.7      64.29         0.719 /  0.376          0.895          0.695
+        1.0      91.84         0.537 /  0.281          0.773          0.516
+   Zwerg 10⁸ M☉ bei 100 kpc von 6·10¹⁰ M☉: M_p = 6.00e+10 M☉, g_e = 0.0070·a₀, μ = 600, R = -0.922, ℓ = 8.2 kpc = 24.1·r*, r₁₀ (Grenze) = 5.7 kpc = 0.692·ℓ
+        r/ℓ     r [kpc]   a/a_frei: äußeres Feld ⊥ / ∥    Ebenengrenze    beide (⊥)
+        0.3       2.47         0.971 /  0.594          0.997          0.969
+        0.5       4.11         0.845 /  0.436          0.965          0.831
+        0.7       5.75         0.680 /  0.339          0.897          0.662
+        1.0       8.22         0.500 /  0.251          0.775          0.484
+   Grenzwert R → −1: r₁₀ = ℓ/artanh(0,9) = 0.679·ℓ;  weit außen (r ≫ ℓ√μ) 1 − q → s·√μ: zweite, tiefere Ebene v_f·μ^{−1/4}
+   Variante Γ = D/r² je Ebene (gleiches k, Z = Dk): R = (1 − μ)/(1 + μ) = -0.9954, r₁₀ = 0.665·ℓ (Milchstraße)
+   Variante Γ = D/r² je Ebene (gleiches k, Z = Dk): R = (1 − μ)/(1 + μ) = -0.9967, r₁₀ = 0.673·ℓ (Zwerg 10⁸ M☉ bei 100 kpc von 6·10¹⁰ M☉)
+   Liegt die Ebene des Sterns (1 M☉, ℓ = 0,93 pc) unter der Galaxie, gilt bei 8 kpc: k₁ℓ = 28.5, q = 10^-17.9 statt 0.352:
+   die Rückkehr wäre gesperrt. Der Ort muss die Ebene des kollektiven (über die Zonen geglätteten) Feldes sein.
+
+4) Gleiches äußeres Feld g_e = 0,03a₀, verschiedener Abstand zur Elternmasse (Milchstraße, r = 50 kpc)
+     d [Mpc]    M_p [M☉]     μ      ℓ [kpc]   Ebenengrenze a/a_frei   äußeres Feld ⊥ / ∥
+       0.5     6.46e+12      108      72.9         0.907               0.839 /  0.453
+       1.0     2.58e+13      430      91.8         0.951               0.839 /  0.453
+       2.0     1.03e+14     1721     115.7         0.980               0.839 /  0.453
+   Das äußere Feld hängt nur an g_e; die Ebenengrenze an ℓ = (GMd/3g_e)^{1/3}, also am Abstand.

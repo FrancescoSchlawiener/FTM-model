@@ -1,0 +1,81 @@
+
+================================================================================================================
+1  Welche Zählung verlangt das Modell? (Herleitung, nicht nach Ergebnis)
+================================================================================================================
+   (a) Ein Zustandsraum (ein Medium, kein Außen): das Einteilchenmaß ist ein Maß auf EINEM Raum; additiv nur über
+       disjunkte Mengen. Nach dem Einfall liegt jeder Zustand, der im Kind gebunden war, auch im Eltern gebunden
+       (tieferes Potential, Kind innerhalb R_ta der Eltern): A_Kind ⊂ A_Eltern, μ(A_Kind ∪ A_Eltern) = μ(A_Eltern).
+   (b) Naht/Übergabe: μ_inakt ist relativ zur Naht definiert (Regel bis R_ta, draußen Fluss). Innerhalb R_ta der
+       Eltern ist w = 0, dort gilt die volle Regel der Eltern; die Naht des Kindes (Schale bis 1,16·R_ta) hat keinen
+       Fluss mehr außen – sie löst sich auf, das Kind hat kein eigenes Außenmaß mehr, gegen das es inaktiv wäre.
+   (c) Triade/Projektion in ϖ: aufsteigend bleiben Fluss GM (Zentrum) und Elternhintergrund, die eigene aufgelöste
+       Struktur klingt ab (Gezeit ∝ ϖ⁻³). Das inaktive Maß sitzt fast ganz zwischen r* und R_ta (Struktur der Regel,
+       'Wirbel'); jenseits der Übergangstiefe ℓ ≈ ϖ_J gehört dieser Teil zum Hintergrund der Eltern. Von oben liest
+       man das Kind nur als Fluss (1 + wQ)·M_b, der in M_b der Eltern eingeht (Δs_ges = ΣΔs_j).
+   (d) 𝒫 löscht keine Freiheitsgrade: die inaktiven Richtungen des Kindes verschwinden nicht, sie werden Richtungen
+       des Elternbereichs (dieselben Zustände), sie werden nicht ein zweites Mal inaktiv.
+   (e) Kac-Budget Σ1/⟨T_A⟩ = 1 gilt für eine Zerlegung; geschachtelte Mengen sind keine Zerlegung.
+   ⇒ Das Modell verlangt die GESCHACHTELTE Zählung (H): je Baryon das Maß des größten Bereichs, der es enthält.
+     Kompakte Körper im Raum geschachtelt: innen behält das Kind bis ℓ seine Regel, das ist eine Verfeinerung
+     innerhalb der Elternmenge, kein zusätzliches Maß. Die unabhängige Zählung (U) zählte dieselben Zustände je
+     Generation einmal mehr; sie wird nur zum Vergleich gerechnet.
+
+================================================================================================================
+2  X(a) je Baryon: geschachtelt (H) gegen unabhängig (U); Atmen H_eff = H_b(1 + ⅓dX/dln a)  [Messwerte nur Test, G]
+================================================================================================================
+   (H) X_H(a) = ∫_{M ≥ M_min} dF/dlnM(a)·ln(μ_R/μ_N)(M, a) dlnM   (größter Bereich erreicht die Umkehr gerade bei a)
+   (U) dX_U/dln a = ∫ dF/dlnM·ν²·dlnD/dlna·ln(μ_R/μ_N) dlnM   (Sasaki-Entstehungsrate, jedes Maß bleibt)
+   E_b(1) = 0.747; für E_eff(1) = 1 nötig dX/dln a (a = 1) = 1.017
+
+   M_min  Zählung  X(z=3)  X(1)   X(0)   dX/dlna(0)  Gipfel dX/dlna bei z (Wert)  Ω_X(0)  /0,442  E_eff(1)  w₀      w_a     E/E_ΛCDM z=1  z=2   z=3    (Ω_s+Ω_X)/Ω_c
+   10^6     H      2.280   2.914   3.352    0.402       z =  8.18  (1.656)           0.158   0.36   0.844     0.143  -0.378      1.161    1.279  1.361     1.52
+   10^6     U      3.288   4.912   6.237    1.469       z =  4.50  (2.435)           0.676   1.53   1.109    -0.012   0.074      1.613    1.741  1.783     3.48
+   10^8     H      1.712   2.517   3.037    0.500       z =  5.03  (1.531)           0.200   0.45   0.869     0.036   0.153      1.222    1.363  1.444     1.68
+   10^8     U      2.217   3.795   5.112    1.463       z =  2.21  (2.288)           0.673   1.52   1.108    -0.012   0.058      1.606    1.719  1.737     3.47
+   10^10    H      0.994   1.939   2.557    0.632       z =  3.06  (1.461)           0.258   0.58   0.902    -0.070   0.617      1.290    1.432  1.469     1.90
+   10^10    U      1.153   2.601   3.889    1.445       z =  1.37  (2.141)           0.663   1.50   1.103    -0.012   0.008      1.582    1.656  1.617     3.43
+   10^12    H      0.258   1.084   1.770    0.779       z =  1.16  (1.320)           0.325   0.74   0.938    -0.183   0.895      1.321    1.367  1.275     2.16
+   10^12    U      0.272   1.302   2.474    1.363       z =  0.80  (1.824)           0.619   1.40   1.083    -0.017  -0.188      1.488    1.447  1.303     3.27
+
+   Verlauf dX/dln a (H | U), M_min = 10⁸ und 10¹²:
+   10^8    z=10  0.99|1.11  z=6   1.51|1.94  z=4   1.49|2.20  z=3   1.38|2.27  z=2   1.19|2.29  z=1   0.95|2.19  z=0.5 0.79|1.98  z=0   0.50|1.46
+   10^12   z=10  0.00|0.00  z=6   0.11|0.11  z=4   0.50|0.53  z=3   0.87|0.95  z=2   1.20|1.45  z=1   1.27|1.81  z=0.5 1.08|1.77  z=0   0.78|1.36
+   Durchlauf je Baryon (U, Zahl der Generationen = ∫ Entstehungsrate der Masse dln a bis heute):
+   10^6    N_gen(0) = 2.36   F(>M_min, 0) = 0.875
+   10^8    N_gen(0) = 2.07   F(>M_min, 0) = 0.829
+   10^10   N_gen(0) = 1.66   F(>M_min, 0) = 0.744
+   10^12   N_gen(0) = 1.11   F(>M_min, 0) = 0.570
+
+   Verschmelzungsbaum (Monte Carlo, 20000 Ausflüge in S = σ²(M), Schranke δ_ta(a)/D(a), 240 Epochen):
+   10^8    MC (H): X(3) 1.674  X(1) 2.487  X(0) 3.018  [analytisch 1.712 2.517 3.037]   MC (U, Verdopplung): X(3) 4.572  X(1) 8.053  X(0) 10.136  (Generationen je Baryon 3.55)
+           MC dX/dlna(0): H 0.724, U 1.725; Gipfel H bei z = 6.15, U bei z = 2.34
+   10^12   MC (H): X(3) 0.248  X(1) 1.049  X(0) 1.696  [analytisch 0.258 1.084 1.770]   MC (U, Verdopplung): X(3) 0.342  X(1) 1.818  X(0) 3.224  (Generationen je Baryon 1.34)
+           MC dX/dlna(0): H 0.816, U 1.353; Gipfel H bei z = 1.40, U bei z = 1.11
+
+   Vorzeichen in (H): X_H steigt, weil R_ta(M, a)/r* mit a wächst (Naht des neuen, größeren Bereichs liegt weiter
+   draußen), obwohl ln(μ_R/μ_N) bei fester Epoche mit M fällt (∝ −¼ ln M). Beim Einfall sinkt das Maß je Baryon nicht
+   zwingend: Kind 10⁸ bei a = 0,25 und Milchstraße bei a = 1 (Abschnitt 5).
+
+================================================================================================================
+3  Zusammenhänge
+================================================================================================================
+   Kac: 1 + Q = 6.364 zählt die Rückkehr in I (Mode ξ als Staub, Ω_c); X ist das Bahnmaß des Bereichs (L/G). Q geht nur
+   über M_ges = (1 + Q)M_b in R_ta ein; X schreibt nicht auf Q zurück: 1 + Q und q = 0.843 unberührt.
+   a₀ = c²/2Λ, Λ = (1 + Q)ΣΔs_b: X ändert keine Faltung, Λ und a₀ = 1.10e-10 m/s² fest. Ω_s = π²/45·Θ² als Dichte fest;
+   verschiebt X aber H₀ (E_eff(1) ≠ 1), so verschiebt es Θ = 2πa₀/(cH₀) – Rückwirkung nur über H, nicht über a₀.
+   (Ω_s + Ω_X)/Ω_Mode gegen 2.60 [G] (Ω_s = 0.244, Ω_c = 0.2642): Tabelle Abschnitt 2, letzte Spalte.
+
+================================================================================================================
+4  Beobachterfehler
+================================================================================================================
+   μ ist das Maß des Zustandsraums eines Bereichs (G des Bereichs), über die Zelle als Mittel je Baryon summiert (G).
+   Der Ebenenwechsel ist Projektion in ϖ: das Kind wird von oben als Fluss gelesen, sein Maß geht als Teilmenge in das
+   des Elternbereichs auf – nichts wird am Ort erzeugt oder vernichtet, keine Dichte, kein Stoff.
+   X ist zustandsabhängig (Epoche, Massenfunktion, M_min), keine feste Zahl.
+
+================================================================================================================
+5  Von Hand
+================================================================================================================
+   Tiefformel 10⁸ M☉, a = 1: R_ta/r* = 193.2, 0,1279·193.2^1,5 = 343.6, ln = 5.839 (Code, voller Kern-ν: 5.846)
+   Einfall 10⁸ (gebunden a = 0,25, ln = 4.148) in Milchstraße (a = 1, ln = 4.259): (H) 4.259, (U) 8.408 je Baryon
+   Sasaki-Faktor ν² bei 10¹² M☉ heute: δ_ta/σ = 1,2766/2.245 = 0.569, ν² = 0.323; dlnD/dlna(1) = 0.526

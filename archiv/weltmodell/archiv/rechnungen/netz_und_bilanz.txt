@@ -1,0 +1,32 @@
+A) Netzwerk-Summe: Galaxie (6e10 M☉, Hernquist a = 3 kpc) im Haufen
+   S_eigen = 2.954e+13 m, S_Netz = 8.370e+16 m, Verhältnis 2833
+   (1) linear eingesetzt in den Kern bei r = 15 kpc: a = (S/r)(3c²/r*) = 6.679e-11 (eigen) bzw. 1.892e-07 m/s² (Netz)
+       beobachtet (v ≈ 200–220 km/s) etwa 1.05e-10 m/s² → Netzsumme linear: Faktor 1810 zu groß
+   (2) Galaxie bei R = 0.5 Mpc im Haufen: g_e,N = 2.79e-11 m/s² = 0.232 a0
+        r [kpc]   v isoliert [km/s]   v im Haufen [km/s]   Verhältnis
+            5          176.4               175.9           0.997
+           10          179.5               175.2           0.976
+           20          179.0               155.5           0.868
+           40          177.9               120.5           0.678
+           80          177.0                88.5           0.500
+   (2) Galaxie bei R = 1.0 Mpc im Haufen: g_e,N = 1.39e-11 m/s² = 0.116 a0
+        r [kpc]   v isoliert [km/s]   v im Haufen [km/s]   Verhältnis
+            5          176.4               176.3           0.999
+           10          179.5               178.3           0.993
+           20          179.0               168.8           0.943
+           40          177.9               137.6           0.774
+           80          177.0               101.8           0.575
+   (2) Galaxie bei R = 2.0 Mpc im Haufen: g_e,N = 3.49e-12 m/s² = 0.029 a0
+        r [kpc]   v isoliert [km/s]   v im Haufen [km/s]   Verhältnis
+            5          176.4               176.4           1.000
+           10          179.5               179.4           1.000
+           20          179.0               178.2           0.995
+           40          177.9               168.8           0.949
+           80          177.0               136.5           0.771
+
+B) Bilanz des Autors: ΔL_außen/R = ΣΔs/R über das beobachtbare Universum (Teilchenhorizont), H = d/dt(ΔL/R)
+   ε = ΣΔs/r_p = (4πGρ_b/9c²)·r_p² = K·χ_p²/a,  K = 3.904e-05 Gly⁻²;  heute mit χ_p = 46,5 Mrd Lj: ε = 0.0844
+   (i) im gemessenen Hintergrund: χ_p = 46.14 Mrd Lj, ε = 0.0831, dε/dt = -0.0021 /Gyr gegen H0 = 0.0689 /Gyr → Verhältnis -0.031
+   (ii) selbstkonsistent (H = dε/dt): Beginn wie a ∝ t^(2/3), solange ε klein ist.
+        Bei heutiger Baryonendichte (a = 1): t = 217.5 Gyr, H = 2.94 km/s/Mpc, ε = 15.2278, q = 0.529
+        gemessen: t0 = 13,8 Gyr, H0 = 67–73 km/s/Mpc, q0 ≈ −0,55

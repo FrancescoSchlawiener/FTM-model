@@ -1,0 +1,86 @@
+====================================================================================================
+1 Die 3 in π⁴/15: Flussdimension, nicht Zahl der Zyklen
+====================================================================================================
+  Q̃(0) = -25.975758 = −4Γ(4)ζ(4) = −4π⁴/15 = -25.975758
+  Herkunft der Potenz: s⁴ = ℓ₀²Y, Y = |∇σ|² (ein Feld, ein Betrag) ⇒ dY = 4s³ds/ℓ₀², ∂ℒ/∂Y = 2n_B ⇒ dQ̃/ds = 4s³n_B.
+  In d Raumdimensionen verlangt die flache Rotationskurve (Tiefbereich ν ≈ 1/s, g_N ∝ r^{1−d}) s ∝ g_N^{(d−2)/(d−1)},
+  Y ∝ s^{2(d−1)/(d−2)}, Gewicht x^p n_B mit p = d/(d−2):
+     d = 3: p = 3.000, ∫x^p n_B = Γ(p+1)ζ(p+1) = 6.4939
+     d = 4: p = 2.000, ∫x^p n_B = Γ(p+1)ζ(p+1) = 2.4041
+     d = 5: p = 1.667, ∫x^p n_B = Γ(p+1)ζ(p+1) = 1.9322
+     d = 6: p = 1.500, ∫x^p n_B = Γ(p+1)ζ(p+1) = 1.7833
+  p = 3 nur bei d = 3: die Potenz ist das Flussgesetz des Feldes einer Masse (Gauß über S², L), keine Summe über Richtungen.
+  Je Richtung (d = 1 der Planck-Leiter) gäbe Γ(2)ζ(2) = 1.6449; 3·π²/6 = 4.9348 ≠ π⁴/15 = 6.4939:
+  π⁴/15 ist nicht 3 × (Beitrag je Richtung). Die Einwendung „d = 3 zählt die Richtungen schon“ trägt nicht als Zählargument.
+  Aber: ℒ_𝒮 enthält (2/ℓ₀²)Q̃(0) als Skalar je Punkt (0-Form mal √−g), ein Y, ein s. Integriert über die Zelle gibt das
+  V·Q̃(0) für jede Topologie und jede Form: b₁ kommt in ℒ_𝒮 nicht vor. Je Regelinstanz (eigenes Y_i, gleiches ℓ₀) gibt die
+  Normierung genau einmal Q̃(0), also k_s. b₁·k_s verlangt b₁ Regelinstanzen oder einen Term der Zelle (G).
+  (a) b₁ volle Instanzen am Ort: ν − 1 → b₁·n_B, im Tiefbereich a = b₁·√(a₀g_N): gelesenes a₀ = b₁²·a₀ = 9a₀ – ausgeschlossen.
+  (b) je Zyklus eine Komponente, ℒ = Σ_i Q̃(s_i), s_i⁴ = ℓ₀²B_i²: Tiefbereich |a|² = a₀g_N·Σ|n_i| ⇒ a₀_eff = a₀Σ|n_i|:
+      Achse 1, Flächendiagonale √2 = 1.414, Raumdiagonale √3 = 1.732; zufällige Lage: log a streut
+      um 0.023 dex (an SPARC kaum trennbar), Mittel +0.087 dex: gelesen würde a₀_eff = 1.49·a₀.
+      n = 3 verlangte dann an SPARC 1.60·10⁻¹⁰ statt 1,07. In einer Scheibe schwankt v⁴ mit dem Azimut bis √2 (m = 4).
+      Vor allem widerspricht es der Regel selbst: Y ist ein Skalar, der Verlust der Betrag eines Vektors (s⁴ = s_i⁴ + s_e⁴),
+      die Regel am Ort isotrop; Σ_i Q̃(s_i) legte Vorzugsachsen der Zelle in jede Galaxie (Beobachterfehler: G als L gelesen).
+  (c) Term der Zelle: Σ_{i≤b₁}|ω_i|² mit harmonischen 1-Formen ω_i (⟨|ω_i|²⟩ = 1). Auf dem flachen T³ ist ω_i = dx_i und
+      Σ|ω_i|² = h^{ij}h_ij = 3 an jedem Punkt: am Ort nicht von 3 Raumrichtungen zu unterscheiden, für jede Form des T³ gleich.
+      Das ist die einzige widerspruchsfreie Fassung der Lesart; sie folgt nicht aus ℒ_𝒮, sie ist eine Setzung (G).
+
+====================================================================================================
+2 Lesarten: n = k_DE/k_s und verlangtes a₀ (θ* fest, σ aus ±0,0003 in 100θ*)
+====================================================================================================
+  ω_DE = 0.3170 ± 0.0014;  a₀(n) = cH₁₀₀·√(30ω_DE/(8π⁴n))
+  Volumenmode b₃ = 1 (nur Vakuumteil)                  n = 1:  a₀ = 1.8590 ± 0.0040
+  nicht-orientierbar flach, b₁ = 2                     n = 2:  a₀ = 1.3145 ± 0.0028
+  b₁ = 3 (T³, jede Form: kubisch, gestreckt, schief)   n = 3:  a₀ = 1.0733 ± 0.0023
+  b₂ = 3 (T³; Poincaré b₂ = b₁)                        n = 3:  a₀ = 1.0733 ± 0.0023
+  Vakuumteil + je Zyklus, 1 + b₁ = 4                   n = 4:  a₀ = 0.9295 ± 0.0020
+  T⁴ mit innerer Richtung, b₁ = 4                      n = 4:  a₀ = 0.9295 ± 0.0020
+  T⁴, b₂ = 6                                           n = 6:  a₀ = 0.7589 ± 0.0016
+  Σ Betti T³ = 8                                       n = 8:  a₀ = 0.6573 ± 0.0014
+  Flache Zellen mit Drehung (b₁ = 1: Halb-, Viertel-, Drittel-, Sechsteldrehung) n = 1 wie Volumenmode; Hantzsche-Wendt b₁ = 0: keine.
+
+====================================================================================================
+3 a₀ aus SPARC (Gegenprobe Notiz 74: f = 0, Υ fest, Fehler je Punkt, Jackknife über Galaxien)
+====================================================================================================
+  Galaxien 153 (Primär-Abstände 70), Punkte 3168; Υ_b = 0,7
+  Υ_d = 0.4  alle   : a₀ = 1.345 ± 0.108 (Jackknife)  ⇒ n = k_DE/k_s = 1.91
+  Υ_d = 0.4  Primär : a₀ = 1.294 ± 0.138 (Jackknife)  ⇒ n = k_DE/k_s = 2.06
+  Υ_d = 0.4  Hubble : a₀ = 1.483 ± 0.142 (Jackknife)  ⇒ n = k_DE/k_s = 1.57
+  Υ_d = 0.5  alle   : a₀ = 1.106 ± 0.089 (Jackknife)  ⇒ n = k_DE/k_s = 2.83
+  Υ_d = 0.5  Primär : a₀ = 1.077 ± 0.115 (Jackknife)  ⇒ n = k_DE/k_s = 2.98
+  Υ_d = 0.5  Hubble : a₀ = 1.182 ± 0.113 (Jackknife)  ⇒ n = k_DE/k_s = 2.47
+  Υ_d = 0.6  alle   : a₀ = 0.929 ± 0.075 (Jackknife)  ⇒ n = k_DE/k_s = 4.01
+  Υ_d = 0.6  Primär : a₀ = 0.915 ± 0.099 (Jackknife)  ⇒ n = k_DE/k_s = 4.12
+  Υ_d = 0.6  Hubble : a₀ = 0.964 ± 0.093 (Jackknife)  ⇒ n = k_DE/k_s = 3.72
+  Lesung Υ_d = 0,5: a₀ = 1.106 ± 0.089 (stat.) ± 0.208 (Υ_d ± 0,1) ± 0.053 (Abstände) ⇒ gesamt ± 0.232 (21 %)
+  n = k_DE/k_s = 2.83 ± 1.19 (σ_n/n = 2σ_a/a).  Abstände zur Lesung in σ:
+     n = 1: a₀ = 1.859, Abstand +3.2σ
+     n = 2: a₀ = 1.315, Abstand +0.9σ
+     n = 3: a₀ = 1.073, Abstand -0.1σ
+     n = 4: a₀ = 0.930, Abstand -0.8σ
+     n = 6: a₀ = 0.759, Abstand -1.5σ
+     n = 8: a₀ = 0.657, Abstand -1.9σ
+  Υ_d bestimmt a₀ fast allein (d ln a₀/d ln Υ_d ≈ −1 im Tiefbereich); ohne eigenes Maß für Υ_d bleibt a₀ auf ≈ 15–20 %.
+  Zum Trennen von n = 3 gegen n = 4 (Abstand 14 %) auf 2σ braucht es σ(a₀)/a₀ ≈ 7 %, gegen jede Zahl in 2,4–3,2 etwa 1 %.
+
+====================================================================================================
+4 Zeitverlauf (a₀(z) aus a0_frueh_relativ; Rückstellung je Zyklus trägt ℓ₀ = c²/a₀ wie der Vakuumteil)
+====================================================================================================
+  b₁ ist topologisch: das Atmen skaliert L₁, L₂, L₃ gleich, die Zahl der Zyklen bleibt. k_DE(z) = 3k_s·(a₀(z)/a₀)².
+  z =         0: (a₀(z)/a₀)² = 0.9994,  ρ_DE/ρ_m = 2.23e+00,  ρ_DE/ρ_r = 7.59e+03,  als ΔN_eff = 5.7e+04 (nur früh sinnvoll)
+  z =        10: (a₀(z)/a₀)² = 0.9936,  ρ_DE/ρ_m = 1.66e-03,  ρ_DE/ρ_r = 5.15e-01,  als ΔN_eff = 3.8e+00 (nur früh sinnvoll)
+  z =       100: (a₀(z)/a₀)² = 0.9436,  ρ_DE/ρ_m = 2.04e-06,  ρ_DE/ρ_r = 6.88e-05,  als ΔN_eff = 5.1e-04 (nur früh sinnvoll)
+  z =      1090: (a₀(z)/a₀)² = 0.5755,  ρ_DE/ρ_m = 9.87e-10,  ρ_DE/ρ_r = 3.08e-09,  als ΔN_eff = 2.3e-08 (nur früh sinnvoll)
+  z =     10000: (a₀(z)/a₀)² = 0.0652,  ρ_DE/ρ_m = 1.45e-13,  ρ_DE/ρ_r = 4.95e-14,  als ΔN_eff = 3.7e-13 (nur früh sinnvoll)
+  z = 400000000: (a₀(z)/a₀)² = 0.0000,  ρ_DE/ρ_m = 2.56e-36,  ρ_DE/ρ_r = 2.18e-41,  als ΔN_eff = 1.6e-40 (nur früh sinnvoll)
+  Wie der Vakuumteil: zeitfest seit z ≈ 10 (w = −1), früh verschwindend, N_eff unberührt. Mit Λ_i ∝ L_i (Schluss an der
+  Raumschleife) liefe jeder Zyklusterm wie a⁻²: w = −⅓, heute als Krümmung Ω ≈ 0,69 (gemessen 0,0007 ± 0,0037): nur Λ fest trägt.
+
+====================================================================================================
+5 Handprobe
+====================================================================================================
+  a₀² = ω_DE·3H₁₀₀²/(8πG)·Gc²/(3·π³/30) = ω_DE·30·(cH₁₀₀)²/(8π⁴)
+  cH₁₀₀ = 2,99792e8·3,24078e-18 = 9,7156e-10;  30·0,3170/(8·97,409) = 9,510/779,27 = 0,012204;  √ = 0,11047
+  a₀ = 9,7156e-10·0,11047 = 1,0733e-10;  Code 1.0733e-10
+  Deep-Regel Handwert: g_N = 0,01a₀ ⇒ s = 0,1, ν = 1/(1 − e^{−0,1}) = 1/0,095163 = 10,508;  Kern 10.508

@@ -1,0 +1,55 @@
+1) Drei Radien je Körper: r0 = 6Δs (Takt = 0), R (Oberfläche), r* = sqrt(3c²Δs/a0) (Schwelle)
+   Körper                 r0=6Δs           R          r*    g(R)/a0       Regime
+   Erde                0.00887 m 6.37e+03 km     12.2 AE   8.18e+10 Einzeltrichter
+   Jupiter                2.82 m 6.99e+04 km      217 AE   2.16e+11 Einzeltrichter
+   Sonne                 2.95 km 6.96e+05 km    0.111 Lj   2.29e+12 Einzeltrichter
+   Beteigeuze            48.7 km     3.55 AE    0.452 Lj   6.46e+07 Einzeltrichter
+   Weißer Zwerg          3.01 km 5.84e+03 km    0.112 Lj   3.30e+16 Einzeltrichter
+   Neutronenstern        4.14 km       12 km    0.132 Lj   1.08e+22 Einzeltrichter
+   Kugelsternhaufen   0.00987 AE     16.3 Lj     78.6 Lj   2.32e+01 Einzeltrichter
+   Zwerggalaxie          1.97 AE       1 kpc   0.341 kpc   1.16e-01    kollektiv
+   Milchstraße       1.18e+03 AE    15.3 kpc    8.35 kpc   2.97e-01    kollektiv
+   Galaxienhaufen        53.1 Lj       2 Mpc   0.444 Mpc   4.94e-02    kollektiv
+   Universum         7.22e+03 Mpc 1.43e+04 Mpc 9.36e+03 Mpc   4.31e-01    kollektiv
+   Kriterium mit g(x,y) des Autors: kollektiv  <=>  x/y²·g⊕ < a0  <=>  y > sqrt(x·g⊕/a0)
+   Kritische Flächendichte: g = πGΣ < a0  <=>  Σ < a0/(πG) = 0.572 kg/m² = 274 M☉/pc²
+
+2) r* als geometrisches Mittel aus lokalem Horizont und kosmischer Länge:
+   r*² = GM/a0 = r0 · c²/(2 a0);  mit a0 = cH0/2π:  r* = sqrt(r0 · π·R_H) = sqrt(6π·Δs·R_H)
+   Sonne        sqrt(6π Δs R_H) = 0.117 Lj   sqrt(GM/(cH0/2π)) = 0.117 Lj
+   Milchstraße  sqrt(6π Δs R_H) = 8.79 kpc   sqrt(GM/(cH0/2π)) = 8.79 kpc
+
+3) Takt-Abweichung an der Schwelle: δ(r*) = 3Δs/r* = sqrt(GM a0)/c² = (v_flach/c)²
+   Sonne           δ(r*) = 1.4043e-12   (v_flach/c)² = 1.4043e-12   v_flach =     0.4 km/s
+   Zwerggalaxie    δ(r*) = 1.4043e-08   (v_flach/c)² = 1.4043e-08   v_flach =    35.5 km/s
+   Milchstraße     δ(r*) = 3.4398e-07   (v_flach/c)² = 3.4398e-07   v_flach =   175.8 km/s
+   Galaxienhaufen  δ(r*) = 1.8310e-05   (v_flach/c)² = 1.8310e-05   v_flach =  1282.8 km/s
+
+4) Faltungsmesser: Δs = v_flach⁴/(3c²·a0)  (aus GM = 3c²Δs und v⁴ = GM a0)
+   v_flach =  60 km/s  ->  Δs = 4.006e+11 m =      2.7 AE   (M = 8.14e+08 M☉)
+   v_flach = 110 km/s  ->  Δs = 4.525e+12 m =     30.2 AE   (M = 9.19e+09 M☉)
+   v_flach = 176 km/s  ->  Δs = 2.966e+13 m =    198.2 AE   (M = 6.02e+10 M☉)
+   v_flach = 220 km/s  ->  Δs = 7.240e+13 m =    484.0 AE   (M = 1.47e+11 M☉)
+   v_flach = 300 km/s  ->  Δs = 2.503e+14 m =   1673.4 AE   (M = 5.08e+11 M☉)
+
+5) Scheinbare Zusatzfaltung jenseits r*: Δs_eff(r) = a(r)·r²/(3c²) = Δs·ν,  ν = 1/(1-q), q = exp(-sqrt(a_N/a0))
+   r =   5.00 kpc   ν =  1.232   Δs_eff =    243.3 AE   Zusatzstrecke Δs_eff−Δs =     45.8 AE
+   r =   8.35 kpc   ν =  1.582   Δs_eff =    312.4 AE   Zusatzstrecke Δs_eff−Δs =    114.9 AE
+   r =  15.33 kpc   ν =  2.381   Δs_eff =    470.2 AE   Zusatzstrecke Δs_eff−Δs =    272.7 AE
+   r =  30.00 kpc   ν =  4.116   Δs_eff =    812.8 AE   Zusatzstrecke Δs_eff−Δs =    615.4 AE
+   r =  50.00 kpc   ν =  6.503   Δs_eff =   1284.0 AE   Zusatzstrecke Δs_eff−Δs =   1086.5 AE
+   r = 100.00 kpc   ν = 12.484   Δs_eff =   2465.1 AE   Zusatzstrecke Δs_eff−Δs =   2267.7 AE
+   Tief jenseits r*: Δs_eff ≈ sqrt(GM a0)·r/(3c²) wächst linear mit r (Zusatzstrecke ohne Zusatzmasse).
+
+6) Das Ganze auf seiner eigenen Schwelle:
+   Hüll-Neigung des beobachtbaren Universums g_U = GM/R² = 5.171e-11 m/s²  (a0 = 1.2e-10, Verhältnis 0.43)
+   Hubble-Kugel bei kritischer Dichte: g_H = G·M_H/R_H² = c·H0/2 = 3.400e-10 m/s²;  g_H/π = c·H0/2π = 1.082e-10 m/s²
+   r* des Universums = sqrt(GM_U/a0) = 0.66 · R_U
+
+7) Jenseits r* (tiefes Regime) ist das Potential logarithmisch: Φ = v_flach²·ln(r):
+   Faltungs-Differential zwischen r* und    2·r*: Δδ = (v/c)²·ln(2) = 2.384e-07
+   Faltungs-Differential zwischen r* und   10·r*: Δδ = (v/c)²·ln(10) = 7.920e-07
+   Faltungs-Differential zwischen r* und  100·r*: Δδ = (v/c)²·ln(100) = 1.584e-06
+   Faltungs-Differential zwischen r* und 1000·r*: Δδ = (v/c)²·ln(1000) = 2.376e-06
+   -> Das Differential wächst ohne Grenze: ein kollektiver Trichter hat keinen flachen Außenraum,
+      er muss in die Trichter der Nachbarn übergehen (Netzwerk).

@@ -1,0 +1,108 @@
+==============================================================================================================
+0  Grundgrößen (heute)
+==============================================================================================================
+   a₀ = 1.10e-10 m/s² ⇒ Λ = c²/2a₀ = 13.2394 Gpc [I];  H₀ = 2.18429e-18 s⁻¹ [G];  x = 6H₀Λ/c = 17.8591
+   1 − w_Zelle (offen) = 0.01461;  ν = 1 + Q_KOSM = 6.3643 (eingesetzt), 1/ν = 0.15713
+   d_LSS = 27.786 Gpc;  L_min = 0,985·d_LSS = 27.369 Gpc;  L(a₀ = 1,1, Lesart) = 27.592 Gpc [G]
+   ΣΔs_b(L) = Gρ_bL³/(3c²) mit Ω_b = 0.04924 (ν-frei):  L_min 2.0303, d_LSS 2.1245, L(1,1) 2.0803 Gpc
+   Probe Lesart: ν·ΣΔs_b(L(1,1)) = 13.2394 Gpc = Λ 13.2394 Gpc
+   Probe Kern: a0_aus_zelle(L_min) = 1.1270e-10 (Lesart, würfelförmig)
+==============================================================================================================
+1  K1  ΣΔs_b/Λ = 1 − w_Zelle = e^{−√(6HΛ/c)}   (Gewicht = Kac-Maß)
+==============================================================================================================
+   Mit u = Λ/ΣΔs_b und b = 6H·ΣΔs_b/c:  ln u = √(b·u).  ln u/√u hat das Maximum 2/e bei u = e²;
+   Lösung nur für b ≤ 4/e² = 0,5413 (Berührung bei u = e² = 7,389).
+   b_krit = 0.54134
+   L               ΣΔs_b [Gpc]   b          Lösungen u = Λ/ΣΔs_b          Λ [Gpc]        a₀ [10⁻¹⁰]
+   L_min    27.37      2.0303     2.7388   keine (b > b_krit)
+   d_LSS    27.79      2.1245     2.8658   keine (b > b_krit)
+   L(1,1)   27.59      2.0803     2.8061   keine (b > b_krit)
+   Grenze: ΣΔs_b ≤ 0.4013 Gpc ⇔ L ≤ 15.943 Gpc (würfelförmig) = 0.583·L_min: durch Kreispaare ausgeschlossen
+   an der Grenze: Λ = e²·ΣΔs_b = 2.9653 Gpc, a₀ = 4.9112e-10
+   verlangt für a₀ = 1,1: ΣΔs_b = Λ·e^(−√17,86) = 0.1934 Gpc ⇒ L = 12.500 Gpc < L_min; ν_impl = 1/(1 − w) = 68.44 (gegen 6.364)
+   mit der Lesart Λ = ν·ΣΔs_b (ν eingesetzt): 1/ν = e^(−√(3Hτ_D)) ⇒ a₀ = 3H₀c/(ln ν)² = 5.7356e-10 (5.21·a₀), L = 15.91 Gpc < L_min
+   Nebenform mit Abschluss bei Λ (Zelle als eine Falte): gleiche Gleichung mit cosh(k(Λ−ϖ))/cosh(kΛ)
+   L_min: min(ΣΔs_b/Λ − (1 − w_cosh)) über u = 1…10⁴ = -0.3370;  Vorzeichenwechsel: 1
+      Lösung u = 3.1396: Λ = 6.3744 Gpc, a₀ = 2.2847e-10, ϖ/Λ = √(6/u) = 1.3824 > 1: Tiefe jenseits der Schließung, Form ungültig
+   d_LSS: min(ΣΔs_b/Λ − (1 − w_cosh)) über u = 1…10⁴ = -0.3389;  Vorzeichenwechsel: 1
+      Lösung u = 3.0693: Λ = 6.5207 Gpc, a₀ = 2.2334e-10, ϖ/Λ = √(6/u) = 1.3982 > 1: Tiefe jenseits der Schließung, Form ungültig
+   Epoche (ΣΔs_b mitbewegt fest, H = H(z)): b(z) = b(0)·E(z) wächst ⇒ früher erst recht keine Lösung:
+     z =     0: b = 2.8658e+00 (b_krit 0.5413), d_LSS-Zelle
+     z =     1: b = 5.1227e+00 (b_krit 0.5413), d_LSS-Zelle
+     z =    10: b = 5.8673e+01 (b_krit 0.5413), d_LSS-Zelle
+     z =  1090: b = 6.6378e+04 (b_krit 0.5413), d_LSS-Zelle
+==============================================================================================================
+2  K2  Leiterende an der Zelle: (a) ϖ_R(Zelle) = Λ ⇒ Λ = 6ΣΔs_b;  (b) r* = 2Λ ⇒ Λ = 1,5ΣΔs_b
+==============================================================================================================
+   a₀ = c²/(2Λ) = c⁴/(2·m·G·ρ_b·V) mit m = 6 bzw. 1,5;  Lesart: m = ν.  Verhältnis zur Lesart bei gleichem L: ν/m
+   (a) m = 6.0:  ν_impl = 6.0 (Q = 5.00 gegen Q_KOSM = 5.3643);  a₀/a₀(Lesart) = ν/m = 1.0607
+       Form                f         a₀(L_min) [10⁻¹⁰]   L(a₀ = 1,1) [Gpc]   L(1,1)/L_min
+       würfelförmig       1.0000      1.1955               28.139           1.0281
+       sechseckig         0.8660      1.3804               29.521           1.0786
+       raumzentriert      0.7698      1.5530               30.703           1.1218
+       flächenzentriert   0.7071      1.6907               31.585           1.1540
+       Kac-Lemma μ(A)·⟨T_A⟩ ≤ μ(X): ν·ΣΔs_b ≤ Λ = 6.0·ΣΔs_b verlangt ν ≤ 6.0; mit ν = 6.3643: verletzt (Überschuss 1.0607)
+   (b) m = 1.5:  ν_impl = 1.5 (Q = 0.50 gegen Q_KOSM = 5.3643);  a₀/a₀(Lesart) = ν/m = 4.2429
+       Form                f         a₀(L_min) [10⁻¹⁰]   L(a₀ = 1,1) [Gpc]   L(1,1)/L_min
+       würfelförmig       1.0000      4.7819               44.668           1.6321
+       sechseckig         0.8660      5.5217               46.862           1.7122
+       raumzentriert      0.7698      6.2119               48.738           1.7808
+       flächenzentriert   0.7071      6.7627               50.138           1.8319
+       Kac-Lemma μ(A)·⟨T_A⟩ ≤ μ(X): ν·ΣΔs_b ≤ Λ = 1.5·ΣΔs_b verlangt ν ≤ 1.5; mit ν = 6.3643: verletzt (Überschuss 4.2429)
+   Lesart heute: ϖ_R(Zelle)/Λ = √(6/ν) = 0.97096; r*(Zelle)/2Λ = √(6/ν)/2 = 0.48548
+   Epoche: ΣΔs_b mitbewegt fest ⇒ Λ fest wie in der Lesart (Faktor m statt ν); a₀(z) und Ω_s(z) wie dort.
+==============================================================================================================
+3  K3  Λ/L = 1 − w_Zelle = e^{−√(6HΛ/c)}   (Rückstellung schließt die Rückkehr)
+==============================================================================================================
+   v = Λ/L, B = 6HL/c:  −ln v = √(B·v)  hat für jedes B > 0 genau eine Lösung (links +∞, bei v = 1 negativ, monoton).
+   L                B           v = Λ/L      Λ [Gpc]     a₀ [10⁻¹⁰]   ν_impl = Λ/ΣΔs_b
+   L_min    27.37      36.919   0.12091      3.3091      4.4010     1.6298
+   d_LSS    27.79      37.481   0.11997      3.3335      4.3688     1.5690
+   L(1,1)   27.59      37.219   0.12040      3.3221      4.3838     1.5970
+   verlangt für a₀ = 1,1: L = Λ·e^(√17,86) = 906.1 Gpc (32.6·d_LSS); dann ν_impl = Λ/ΣΔs_b = 1.797e-04 (gegen 6.364)
+   mit der Lesart (ν eingesetzt): Fixpunkt L = 15.860 Gpc (= 0.579·L_min), Λ = 2.5145 Gpc, a₀ = 5.7917e-10
+   Nebenform mit Abschluss bei Λ (ϖ = √(6ΣΔs_b·Λ)):
+   L_min: Λ = 6.9483 Gpc, ϖ/Λ = 1.3241, a₀ = 2.0959e-10  (ϖ > Λ: Tiefe jenseits der Schließung, Form ungültig)
+   d_LSS: Λ = 7.1359 Gpc, ϖ/Λ = 1.3365, a₀ = 2.0409e-10  (ϖ > Λ: Tiefe jenseits der Schließung, Form ungültig)
+   Epoche (Zelle mitbewegt, L_phys = L̄/(1+z), H = H(z)), L̄ = d_LSS; Θ = 2πa₀/(cH), Ω_s = (π²/45)Θ²:
+   z        Λ(z)/Λ(0)     a₀(z)/a₀(0)    Θ(z)          Ω_s(z)        Lesart: a₀(z)/a₀(0), Ω_s(z)
+   0        1.0000e+00    1.0000e+00    4.1920e+00    3.8541e+00    0.9997, 2.442e-01
+   0.5      7.1141e-01    1.4057e+00    4.4611e+00    4.3648e+00    0.9996, 1.399e-01
+   1        5.2955e-01    1.8884e+00    4.4285e+00    4.3014e+00    0.9994, 7.638e-02
+   3        2.3365e-01    4.2798e+00    3.9369e+00    3.3993e+00    0.9988, 1.174e-02
+   10       6.5286e-02    1.5317e+01    3.1362e+00    2.1572e+00    0.9968, 5.792e-04
+   100      3.7112e-03    2.6946e+02    1.9592e+00    8.4184e-01    0.9714, 6.936e-07
+   1090     1.4889e-04    6.7161e+03    1.2155e+00    3.2405e-01    0.7586, 2.621e-10
+   Vakuumteil bei z = 1090 als fester Anteil gelesen: ΔN_eff ≈ 3.57 (gemessen N_eff = 2,99 ± 0,17 [Kern])
+==============================================================================================================
+4  Beobachterfehler und Brücken
+==============================================================================================================
+   K1: ΣΔs_b [L summiert, Zelle, epochenfest] / Λ [I]  =  1 − w_Zelle [I-Rückkehr mit G-Verlust 3H, Epoche].
+       Brücke: Kac-Maß (zeitfrei, Maß) = Laplace-Gewicht (zustandsabhängig über H). Nicht hergeleitet;
+       setzt eine feste Größe einer Epochengröße gleich (Zustandsfehler). Widerspricht zudem 03: Die Mode zählt
+       im mitatmenden Hintergrund (w ≈ 1) mit 1 + Q wie Staub; das Gewicht trennt nicht gefaltet/ungefaltet.
+   K2: ϖ_R(Zelle) [I, EINER Falte] = Λ [I]. Richtung stimmt, aber die Summe ΣΔs_b [L, viele Falten] wird als
+       eine Falte mit einer Halbgeraden gelesen (G als L); nach 07 hat jede Falte ihre eigene Halbgerade bis Λ.
+       Brücke: Leiterende (01/08) ist dort eine Aussage über M_U, nicht über die Zelle. Nicht hergeleitet;
+       dazu verletzt (a) mit ν = 1 + Q_KOSM das Kac-Lemma (ν·ΣΔs_b > Λ).
+   K3: Λ [I] / L [G, Raumschleife] = 1 − w_Zelle. Liest Λ als Bruchteil einer Raumlänge (I als G), das
+       verbietet 03 (Λ keine Raumlänge); |ΔL_Raum| = Λ gilt nur dem Betrag nach aus der Bilanz. Mit H(z) und L ∝ a
+       atmet Λ mit (früh a₀/H nicht → 0). Nicht hergeleitet.
+   Lesart Λ = ν·ΣΔs_b: Kac-Lemma + kein Außen (I, G), ν = Rückkehrzeit des Bereichs ΣΔs_b (Zusatzannahme X_d).
+==============================================================================================================
+5  Ergebnis
+==============================================================================================================
+   K1  keine Lösung für L ≥ 15,9 Gpc (Kreispaare verlangen L ≥ 27,4); mit ν eingesetzt a₀ = 5,7·10⁻¹⁰, L = 15,9 Gpc;
+       cosh-Form: eine Lösung (a₀ = 2,2·10⁻¹⁰), aber mit ϖ/Λ = 1,40 > 1 (ungültig).
+   K2  (a) a₀ = 1,195·10⁻¹⁰ bei L_min (würfelförmig), L(1,1) = 28,1 Gpc; ν_impl = 6 (Q = 5) verletzt mit Q_KOSM das
+       Kac-Lemma; (b) ν_impl = 1,5. Legt Λ nicht ohne L fest; ersetzt nur ν durch eine Zahl.
+   K3  a₀ = 4,4·10⁻¹⁰ (d_LSS; Ω_s heute 3,9 > 1); für 1,1 verlangt L = 906 Gpc mit ν_impl ≈ 2·10⁻⁴; mit ν eingesetzt
+       L = 15,9 Gpc < L_min, a₀ = 5,8·10⁻¹⁰; cosh-Form 2,0–2,1·10⁻¹⁰ mit ϖ > Λ (ungültig); atmet mit der Epoche
+       (a₀(1)/a₀(0) = 1,9, Ω_s(1090) = 0,32, ΔN_eff ≈ 3,6).
+   Kein Kandidat trägt. Die Lesart Λ = ν_kosm·ΣΔs_b bleibt Lesart; ν und L bleiben offen.
+==============================================================================================================
+6  Unabhängige Prüfungen (zweiter Weg)
+==============================================================================================================
+   K1 Gitter: max ln u/√u = 0.735759 (2/e = 0.735759); b(d_LSS) = 2.8658 > b_krit ⇒ keine Lösung
+   K3 gedämpfte Iteration (d_LSS): Λ = 3.3335 Gpc (brentq 3.3335)
+   K2(a) über den Kern: a0_aus_zelle(L_min)·ν/6 = 1.1955e-10

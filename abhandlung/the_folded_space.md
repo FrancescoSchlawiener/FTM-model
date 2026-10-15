@@ -1,0 +1,37 @@
+# The Folded Space: A Geometric Origin of the Acceleration Threshold
+
+Francesco Silvano Schauer
+
+## Abstract
+
+We present a single-medium model in which space is a closed, fractally folded three-dimensional manifold. Mass is the fold depth $\Delta s = GM/(3c^2)$, gravity is the slope at the fold edge, and time is the difference in unrolling. Because the space has no exterior, every motion returns in an inner direction that closes at a fixed length $\Lambda$. This produces a universal threshold $a_0 = c^2/(2\Lambda)$ and the return rule $a = a_N/(1-q)$ with $q = e^{-\sqrt{a_N/a_0}}$. Above the threshold the rule is Newtonian, below it rotation curves are flat with $v^4 = GMa_0$. The same geometric structures (mirror, triad, full cycle) govern nuclear shells, atomic periods, galactic dynamics and the cosmological expansion. Quantitative comparisons with SPARC, star clusters, dwarf galaxies, lensing around isolated galaxies, galaxy clusters, nuclear masses, local precision tests and the full CMB spectra are reported.
+
+## 1. The model
+
+Space is a closed torus without exterior. The fold of a mass $M$ is $\Delta s = GM/(3c^2)$. The Newtonian slope is $g = 3c^2\Delta s/r^2$ and the clock rate is $\mathrm{d}\tau/\mathrm{d}t = \sqrt{1-6\Delta s/r}$. Closure at length $\Lambda$ yields the threshold $a_0 = c^2/(2\Lambda)$ and the return fraction $q = e^{-\sqrt{a_N/a_0}}$. Summing the returns gives the enhancement $\nu = 1/(1-q)$, so
+
+$$a = \frac{a_N}{1-q}.$$
+
+In the deep regime $a_N\ll a_0$ one recovers $v^4 = GMa_0$. The same three generators of the torus (mirror, triad, full cycle) fix the closing numbers of nuclei and electron shells and the cosmological mode.
+
+## 2. Galaxies, clusters and lensing
+
+Applied to the SPARC sample (141 galaxies, 2688 points) with the single requirement that stars and gas obey the same rule, the model returns $a_0 = 1.11\times10^{-10}\,\mathrm{m\,s^{-2}}$ (16 to 84 %: 1.00 to 1.21). The Bose form of the return is preferred over the standard interpolating function by $\Delta\chi^2\approx40$. Residuals show no correlation with baryonic mass, gas fraction, Hubble type or surface brightness. The standard model needs an NFW halo with two free numbers per galaxy for the same curves: $\chi^2 = 2918$ against 1434 with 282 more free numbers, and the information criterion BIC favours the rule by 736. Beyond the seam radius the local rule continues to hold for 131 points ($+0.013\pm0.006\,\mathrm{dex}$).
+
+Stars are single funnels and stay Newtonian up to their smoothing length (349 kAU for a star of one solar mass at the place of the Sun), so wide binaries are Newtonian. Stellar systems are collective: of 52 star clusters of the Local Volume Database the thin ones ($g_N < a_0$) lie $+0.10\pm0.03$ dex above the rule and $+0.41$ above Newton ($\chi^2$ 53 against 235). A uniform external field does not enter the rule: the 22 classical satellites dominated by the field of their host lie $+0.15\pm0.04$ dex above the rule without it and $+0.46\pm0.05$ with it. The return of a bound region reads the baryons it once bound: with the gas of isolated dwarfs of the same luminosity the 36 classical satellites lie $+0.011\pm0.028$ dex on the rule. Lensing around isolated galaxies (KiDS-1000) follows the rule out to 2.6 Mpc, for the blue lenses with $\chi^2 = 21$ for 15 bins. The mode is handed over where the phase-space sheet first folds, and gas folds only after it has given off its heat. In galaxy clusters the plasma never cooled (X-COP), so the mode has not been handed over: HIFLUGCS follows $(1+Q)\,g_\mathrm{bar}$ within $+0.03$ dex ($\chi^2 = 601$ against 4173 for the local rule). This is the same formula, $g = g_N + n_B\,g_{N,B}$, with the return number taken at the nome of the whole, $n_B = Q$, instead of at the local one. Without pressure the mode follows the motion of pressureless dust and lies more concentrated than the gas: in the shape after infall (NFW) it carries the cluster cores without the stars of the central galaxy, with concentration 4.2 in X-COP and 5.5 in HIFLUGCS. Where the gas never cooled, the mode computes like cold dark matter, and in a cluster collision it runs on with the galaxies. Open are the red lenses around quenched galaxies (inside $+0.13\pm0.02$ dex above the rule) and six gas-rich ultra-diffuse galaxies that rotate like Newton alone. They are measured at the seam, where the local rule and the measure of the whole give the same, while gas-rich isolated dwarfs at the same acceleration follow the rule without needing an inclination.
+
+## 3. Local precision tests
+
+The same fold and clock-rate terms reproduce the Mercury perihelion advance (42.98″ per century), solar-limb light deflection (1.7512″), the electron $g$-factor to first order in $\alpha/2\pi$, the 21 cm line (1420.60 MHz versus measured 1420.41 MHz), Gravity Probe B and the ALPHA-g result that antimatter falls like matter.
+
+## 4. Cosmology
+
+The threshold fixed by the expansion after Planck is $a_0 = 1.065\times10^{-10}\,\mathrm{m\,s^{-2}}$. With $\omega_c = (2\pi-1)\omega_b$ the model has one fewer free parameter than $\Lambda$CDM. Against Planck plik_lite (including TT $\ell<30$), Planck PR4 lensing, DESI DR2, Pantheon+, growth and primordial abundances it lies $\Delta\chi^2 = +1.0$ on the spectra alone and $+0.01$ on the full combination. Allowing a state component $(w_0,w_a)$ improves the fit by $\Delta\chi^2 = 9.6$ and returns $a_0 = 1.070\pm0.013$, the standard value costs only $\Delta\chi^2 = 0.8$. With $a_0 = 1.06$ and the state component the model has as many free numbers as $\Lambda$CDM and lies $\Delta\chi^2 = 8.8$ below it. If the maximum of the dark energy lies where the loop saturates, where the three parts catch up with the fold, $w_0$ follows from $w_a$. The data accept this at $\Delta\chi^2 = 0.9$ and read the dark energy today as $a_0 = 1.085\pm0.003$, form part and state part together, the maximum then lies at $z = 0.32$. With the standard value $a_0 = 1.06$ as the form part the state part today is $5.4\pm0.7$ % of it. The model then has as many free numbers as $\Lambda$CDM and lies $\Delta\chi^2 = 8.7$ below it. Reading $Q$ in the model itself, with $H_0$ from $a_0$ and the maximum at the saturation, all precision data give $Q = 5.36\pm0.05$ and $a_0 = 1.076\pm0.006$, and $2\pi-1$ lies $\Delta\chi^2 = 2.4$ away. Independently, the galaxy clusters of HIFLUGCS read $Q = 5.5\pm0.3$ with the mode in the shape after infall. The same $a_0$ is recovered from SPARC, the sound horizon and the distance scale.
+
+## 5. Nuclear and atomic structure
+
+The held-funnel geometry with the twist of the fold yields the observed magic numbers 2, 8, 20, 28, 50 and 82 and the period lengths of the elements. With the same two coefficients 126 is not yet reproduced, a weaker flattening gives 126 but loses 28. Binding energies and ground-state spins of odd nuclei are reproduced at the level reported in the accompanying simulation.
+
+## Conclusion
+
+A single geometric rule derived from closure of space accounts for the galactic acceleration scale, pressure supported systems from star clusters to dwarf galaxies, galaxy clusters, the local post-Newtonian tests and the cosmological spectra. With the maximum of the state part at the saturation of the loop it fits all precision data $\Delta\chi^2 = 8.7$ better than $\Lambda$CDM with the same number of free parameters. The full derivation, simulation code and data comparisons are available at the accompanying repository.

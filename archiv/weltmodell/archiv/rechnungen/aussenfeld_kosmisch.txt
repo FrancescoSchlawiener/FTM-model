@@ -1,0 +1,67 @@
+1  Kosmische Rückkehr: q_kosm = Q/(1 + Q) aus 1/(1 − q) = 1 + Q
+   Q aus dem Kern (Ω_c h²/Ω_b h²)    : Q = 5.3643, q_kosm = 0.84287, 1/(1−q) = 6.3643, s_kosm = −ln q = 0.17094, g_e/a₀ = s² = 0.02922
+   Q = 2π − 1 (Zählung je Radiant)   : Q = 5.2832, q_kosm = 0.84085, 1/(1−q) = 6.2832, s_kosm = −ln q = 0.17335, g_e/a₀ = s² = 0.03005
+
+SPARC Q ≤ 2, Neigung ≥ 30°, Υ_d = 0,5, Υ_b = 0,7, Gasdruck σ = 8 km/s: 149 Galaxien, 3150 Punkte
+
+2  Gemeinsames äußeres Feld frei (a₀ = 1,1·10⁻¹⁰ fest); Fehler: Bootstrap über Galaxien (1000)
+   A: jede Galaxie gleich (Σ Median²)   B: Punkte mit Geschwindigkeitsfehlern (Σ w r²)
+   gleichgerichtet s²=s_i²+s_e²    : A g_e/a₀ = 0.0025 ± 0.0030 (16–84 %: 0.0000–0.0052); B g_e/a₀ = 0.0000 ± 0.0006;  ΔΣMedian² (0 → 0,03) = +0.707, Δχ²_B (0 → 0,03) = +68404
+   senkrecht s⁴=s_i⁴+s_e⁴          : A g_e/a₀ = 0.0096 ± 0.0093 (16–84 %: 0.0000–0.0183); B g_e/a₀ = 0.0000 ± 0.0054;  ΔΣMedian² (0 → 0,03) = +0.158, Δχ²_B (0 → 0,03) = +12923
+   Kugelmittel über μ              : A g_e/a₀ = 0.0154 ± 0.0128 (16–84 %: 0.0000–0.0294); B g_e/a₀ = 0.0000 ± 0.0090;  ΔΣMedian² (0 → 0,03) = +0.046, Δχ²_B (0 → 0,03) = +4600
+   Produkt q_i·q_e, s=s_i+s_e      : A g_e/a₀ = 0.0000 ± 0.0004 (16–84 %: 0.0000–0.0000); B g_e/a₀ = 0.0000 ± 0.0000;  ΔΣMedian² (0 → 0,03) = +3.857, Δχ²_B (0 → 0,03) = +368846
+   Vergleich: s_kosm² = 0.0292 (Q Kern), 0.0300 (Q = 2π − 1)
+   Mittel des Rests (Median über Galaxien, dex) bei g_e = 0 / 0,02 / s_kosm² / 0,04 und Güte A:
+   gleichgerichtet s²=s_i²+s_e²    : -0.002 (2.818) / +0.029 (3.188) / +0.046 (3.525) / +0.061 (3.897)
+   senkrecht s⁴=s_i⁴+s_e⁴          : -0.002 (2.818) / +0.009 (2.854) / +0.017 (2.976) / +0.019 (3.149)
+   Kugelmittel über μ              : -0.002 (2.818) / +0.001 (2.813) / +0.007 (2.864) / +0.009 (3.002)
+   Produkt q_i·q_e, s=s_i+s_e      : -0.002 (2.818) / +0.119 (5.658) / +0.128 (6.675) / +0.140 (7.568)
+   a₀ und g_e zugleich frei (gleichgerichtet s²=s_i²+s_e², Maß A): a₀ = 1.17·10⁻¹⁰, g_e/a₀ = 0.005 (Güte 2.808; bei a₀ = 1,1, g_e = 0: 2.818)
+   a₀ und g_e zugleich frei (senkrecht s⁴=s_i⁴+s_e⁴, Maß A): a₀ = 1.09·10⁻¹⁰, g_e/a₀ = 0.010 (Güte 2.807; bei a₀ = 1,1, g_e = 0: 2.818)
+   g_e = s_kosm²·a₀ fest, a₀ frei (gleichgerichtet s²=s_i²+s_e²): a₀ = 1.52·10⁻¹⁰, Güte 3.022
+   g_e = s_kosm²·a₀ fest, a₀ frei (senkrecht s⁴=s_i⁴+s_e⁴): a₀ = 1.22·10⁻¹⁰, Güte 2.912
+   g_e = s_kosm²·a₀ fest, a₀ frei (Kugelmittel über μ): a₀ = 1.14·10⁻¹⁰, Güte 2.851
+
+3  g_e fest: Anstieg der Schwelle mit Σ₀ (gemeinsam je Drittel) und Rangkorrelation Rest–SB₀ (gasreich)
+   senkrecht s⁴=s_i⁴+s_e⁴          : 0.0000: alle +0.147, gasreich +0.363 (p 3.2e-03); 0.0200: alle +0.073, gasreich +0.280 (p 2.5e-02); 0.0292: alle +0.021, gasreich +0.233 (p 6.4e-02); 0.0400: alle -0.034, gasreich +0.190 (p 1.3e-01)
+   gleichgerichtet s²=s_i²+s_e²    : 0.0000: alle +0.147, gasreich +0.363 (p 3.2e-03); 0.0200: alle -0.033, gasreich +0.214 (p 9.0e-02); 0.0292: alle -0.089, gasreich +0.193 (p 1.3e-01); 0.0400: alle -0.134, gasreich +0.164 (p 1.9e-01)
+   Kugelmittel über μ              : 0.0000: alle +0.147, gasreich +0.363 (p 3.2e-03); 0.0200: alle +0.118, gasreich +0.332 (p 7.3e-03); 0.0292: alle +0.085, gasreich +0.285 (p 2.2e-02); 0.0400: alle +0.034, gasreich +0.224 (p 7.6e-02)
+   g_e = 0                          g_e/a₀ = 0.0000: a₀ je Drittel = 0.52, 1.49, 1.06 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.191 ± 0.089 je Dekade
+   senkrecht s⁴=s_i⁴+s_e⁴           g_e/a₀ = 0.0200: a₀ je Drittel = 0.69, 1.59, 1.11 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.125 ± 0.070 je Dekade
+   senkrecht s⁴=s_i⁴+s_e⁴           g_e/a₀ = 0.0292: a₀ je Drittel = 0.79, 1.68, 1.16 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.099 ± 0.067 je Dekade
+   senkrecht s⁴=s_i⁴+s_e⁴           g_e/a₀ = 0.0400: a₀ je Drittel = 0.91, 1.80, 1.23 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.077 ± 0.060 je Dekade
+   gleichgerichtet s²=s_i²+s_e²     g_e/a₀ = 0.0200: a₀ je Drittel = 0.92, 2.03, 1.44 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.119 ± 0.069 je Dekade
+   gleichgerichtet s²=s_i²+s_e²     g_e/a₀ = 0.0292: a₀ je Drittel = 1.07, 2.28, 1.62 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.110 ± 0.069 je Dekade
+   gleichgerichtet s²=s_i²+s_e²     g_e/a₀ = 0.0400: a₀ je Drittel = 1.23, 2.58, 1.85 ·10⁻¹⁰ (log Σ₀ = 1.59, 2.31, 3.14); Anstieg +0.107 ± 0.067 je Dekade
+
+4  Zusammensetzung der Rückkehr aus örtlichem und kosmischem Anteil (s_k = s_kosm)
+   Verlustraten addieren (Γ = Γ_i + Γ_k, s = √(Γτ_D)):   s² = s_i² + s_k²  = gleichgerichtete Form mit g_e = s_k²·a₀
+   Rückkehrwahrscheinlichkeiten multiplizieren (q = q_i·q_k): s = s_i + s_k
+   Fluchtanteile addieren (1 − q = (1 − q_i) + (1 − q_k)):   1/ν = 1/ν_i + 1/ν_k
+   s_i =  3.0: ν frei   1.0524 | Raten 1.0521 | Produkt 1.0438 | Fluchtanteile 0.9031
+   s_i =  1.0: ν frei   1.5820 | Raten 1.5688 | Produkt 1.4494 | Fluchtanteile 1.2670
+   s_i =  0.3: ν frei   3.8583 | Raten 3.4249 | Produkt 2.6625 | Fluchtanteile 2.4021
+   s_i =  0.1: ν frei  10.5083 | Raten 5.5660 | Produkt 4.2134 | Fluchtanteile 3.9637
+   s_i =  0.0: ν frei      inf | Raten 6.3643 | Produkt 6.3643 | Fluchtanteile 6.3643
+   Grenze s_i → 0: alle drei → ν_kosm = 1 + Q = 6.3643 (Fluchtanteile nur dort); Newton (s_i → ∞): Raten, Produkt → 1, Fluchtanteile → 0.864 < 1
+
+5  Milchstraße als Punktmasse, 6·10¹⁰ M☉
+   Q aus dem Kern (Ω_c h²/Ω_b h²)    : r* = 8.719 kpc, R_Q = r*/s_kosm = 51.01 kpc
+   Q = 2π − 1 (Zählung je Radiant)   : r* = 8.719 kpc, R_Q = r*/s_kosm = 50.30 kpc
+   v [km/s] bei r [kpc], g_e = s_kosm²·a₀:  frei | gleichgerichtet | senkrecht | Kugelmittel | Produkt
+   r =    20:  191.1 |  185.8 |  190.6 |  191.0 |  168.4   (ν_kosm-Kepler √((1+Q)GM/r) = 286.6)
+   r =    51:  179.4 |  153.5 |  165.8 |  174.6 |  132.2   (ν_kosm-Kepler √((1+Q)GM/r) = 179.5)
+   r =   100:  175.8 |  121.6 |  127.2 |  128.0 |  106.5   (ν_kosm-Kepler √((1+Q)GM/r) = 128.2)
+   r =   200:  173.9 |   89.3 |   90.6 |   90.6 |   81.7   (ν_kosm-Kepler √((1+Q)GM/r) = 90.6)
+   r =   300:  173.3 |   73.5 |   74.0 |   74.0 |   68.9   (ν_kosm-Kepler √((1+Q)GM/r) = 74.0)
+   r =   500:  172.8 |   57.2 |   57.3 |   57.3 |   54.8   (ν_kosm-Kepler √((1+Q)GM/r) = 57.3)
+   r =  1000:  172.4 |   40.5 |   40.5 |   40.5 |   39.6   (ν_kosm-Kepler √((1+Q)GM/r) = 40.5)
+   gleichgerichtet s²=s_i²+s_e²: d ln v/d ln r zwischen 100 und 200 kpc = -0.445 (flach 0, Kepler −0,5)
+   Kugelmittel über μ: d ln v/d ln r zwischen 100 und 200 kpc = -0.498 (flach 0, Kepler −0,5)
+
+6  Gegenproben (eigener Code, ν von Hand: 1/(1 − exp(−√x)))
+   von Hand: Q = 5.3643, q = 0.84287, ln q = -0.17094, (ln q)² = 0.02922; 2π − 1: q = 1 − 1/2π = 0.84085, (ln q)² = 0.03005
+   von Hand: r* = √(GM/a₀) = 8.719 kpc, R_Q = 51.01 kpc; a_N(R_Q)/a₀ = 0.02922
+   DDO154    Hand-Gitter (gleichgerichtet, Median-Rest = 0): g_e/a₀ = 0.000; Gitter des Skripts: 0.0000
+   NGC3198   Hand-Gitter (gleichgerichtet, Median-Rest = 0): g_e/a₀ = 0.008; Gitter des Skripts: 0.0075
+   UGC00128  Hand-Gitter (gleichgerichtet, Median-Rest = 0): g_e/a₀ = 0.002; Gitter des Skripts: 0.0025

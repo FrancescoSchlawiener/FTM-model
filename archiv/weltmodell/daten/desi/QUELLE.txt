@@ -1,0 +1,2 @@
+DESI DR2 BAO (DESI Collaboration 2025), alle Spuren zusammen: D_V/r_d, D_M/r_d, D_H/r_d mit Kovarianz.
+https://github.com/CobayaSampler/bao_data, desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_{mean,cov}.txt, geladen 2026-10-01; umbenannt, sonst unverändert.

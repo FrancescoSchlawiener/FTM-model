@@ -1,0 +1,68 @@
+A) Homologie (Kettenkomplex, Ränge numerisch; Betti b₀, b₁, …)
+   T³                         [1, 3, 3, 1]   Euler 0
+   T³ × Halbgerade [0, Λ]     [1, 3, 3, 1, 0]   (innere Richtung zusammenziehbar: keine neue Klasse)
+   T³ × Kreis 2Λ mit Umlauf   [1, 4, 6, 4, 1]   (4. Windung, 4. Erhaltungsgröße)
+   Kreis 2Λ ohne Umlauf = Kreis / Spiegelung = Strecke [0, Λ]: Betti (1, 0), wie die Halbgerade.
+   Metrische Nullmoden des flachen T³: 6 = dim GL(3)/O(3): 1 Volumen (Atmen) + 5 Scherung; Killing-Felder 3 (Verschiebungen, b₁ = 3).
+
+B) Spektrum. Λ = ν·ΣΔs_b = Gρ_mV/(3c²) sieht nur das Volumen: a₀ = 1.10e-10 ⇒ V^(1/3) = 27.59 Gpc, Λ = 13.24 Gpc
+   Form bei gleichem Volumen (L_min kürzeste Schleife, λ₁ kleinster Eigenwert ≠ 0, g₁ Entartung, a₀,max aus L_min ≥ 0,985·d_LSS, Kac 1/Packungsdichte)
+   Würfel                   L_min/V^⅓ = 1.0000  λ₁V^⅔/(2π)² = 1.0000  g₁ =  6  a₀,max = 1.127·10⁻¹⁰  Kac = 1.910
+   sechseckig (h = Seite)   L_min/V^⅓ = 1.0491  λ₁V^⅔/(2π)² = 0.9086  g₁ =  2  a₀,max = 1.301·10⁻¹⁰  Kac = 1.654
+   raumzentriert (bcc)      L_min/V^⅓ = 1.0911  λ₁V^⅔/(2π)² = 1.2599  g₁ = 12  a₀,max = 1.464·10⁻¹⁰  Kac = 1.470
+   flächenzentriert (fcc)   L_min/V^⅓ = 1.1225  λ₁V^⅔/(2π)² = 1.1906  g₁ =  8  a₀,max = 1.594·10⁻¹⁰  Kac = 1.350
+   Würfel: Entartungen der Schalen |n|² = 1…8 (Thetareihe Σq^|n|²): [6, 12, 8, 6, 24, 24, 0, 12]
+   Innere Richtung [0, Λ], Ort als Rand (G(0) = 1: homogen Dirichlet), bei Λ reflektierend: k_m = (2m+1)π/(2Λ), keine Nullmode.
+   k₁ Raum = 2π/L = 0.2277/Gpc,  k₁ innen = π/2Λ = 0.1186/Gpc  ⇒ tiefste Mode des Ganzen: räumlich konstant (k = 0), nur in der inneren Richtung.
+   Probe 2Λ/L = 0.9597 gegen Ω_m(LH₀/c)²/4π = 0.9597
+   Verhältnis 4Λ/L = 1.919 heute; L atmet (∝ a), Λ fest ⇒ epochenabhängig, nicht topologisch (2Λ/L = Ω_m(LH/c)²/4π, Würfel).
+
+C) Gauß auf dem geschlossenen T³: ∫∇²Φ dV = 0 (Grundklasse, b₃ = 1) ⇒ Σ Quelle = 0.
+   5 Punktmassen, FFT-Poisson: Quellanteil bei k = 0: 9.397 = Σm = 9.397; −k²Φ̂ = R̂ ist bei k = 0 nur lösbar mit R̂(0) = 0,
+   also mit der gleichförmigen Gegenquelle −ρ̄ = −Σm/V = -2.868e-04 (je Zelle). Sie ist die Nullmode: ohne Ort, ohne Außen.
+   Probe: diskretes ∇²Φ summiert über die Zelle = -1.8e-15
+   Die Gegenquelle wirkt als Feld a = +(4πG/3)ρ̄·r (gleichförmige Dehnung); (4πG/3)ρ̄_m/H₀² = 0.1567 = Ω_m/2 = 0.1567.
+   Das ist genau das Bremsglied des Atmens, ä/a = −(4πG/3)ρ̄: Die Gegenquelle ist die Volumen-Nullmode (Atmen), skaliert ∝ a⁻³ (w = 0).
+   In Faltungsgrößen an der Kugel R: Φ_gegen/c² = (2πG/3c²)ρ̄R² = (3/2)·ΣΔs/R exakt (Probe: 1.5000).
+   Vakuumteil zum Vergleich: Ω_s = 0.244, w = −1 (Λ fest). Die Gegenquelle trägt σ = ΣΔs − ΔL = 0, nicht Ω_s.
+   Ladung: dieselbe Bedingung gilt für ∇·E = ρ_el/ε₀, und dort nimmt kein Atmen eine Gegenquelle auf ⇒ Σ Q_el = 0 im geschlossenen Raum.
+   Unterschied: Windungen ±n heben sich auf, Faltungen Δs ≥ 0 nicht ⇒ nur die Faltung erzwingt eine Rückstellung.
+
+D) Vakuumteil Ω_s = (π²/45)Θ²: π⁴/15 = Γ(4)·Σ_{n≥1} 1/n⁴, n = Zahl der Rückläufe (Windungen der Rückkehr), Gewicht 1/n⁴ aus d = 3.
+   bis n =  1: Γ(4)Σ = 6.00000  Anteil 0.9239
+   bis n =  2: Γ(4)Σ = 6.37500  Anteil 0.9817
+   bis n =  3: Γ(4)Σ = 6.44907  Anteil 0.9931
+   bis n = 10: Γ(4)Σ = 6.49222  Anteil 0.9997
+   π⁴/15 = 6.49394. Topologisch: 3 (Dimension), ganze n (Schließung). Dynamisch: Θ = 2πa₀/(cH) = 1.055 heute.
+
+E) Legt die Topologie Q fest? gemessen Q = 5.364 ± 0.065 (Planck 2018 [G]).
+   ν = [1, 2, 3, 4, 6]: Q = ν − 1, bester Abstand 5.6σ  – Holonomieordnung 1,2,3,4,6 (orientierbare flache 3-Mannigfaltigkeiten; Hantzsche-Wendt 4)
+   ν = [6, 8, 12]: Q = ν − 1, bester Abstand 5.6σ  – Kusszahl (Bildpunkte nächster Nachbarn) Würfel 6, bcc 8, fcc 12, sechseckig 8
+   ν = [8]: Q = ν − 1, bester Abstand 25.2σ  – Σ Betti T³ = 8
+   Kac in die einbeschriebene Kugel: 1,35–1,91 (Tabelle B) ⇒ Q = 0,35–0,91.
+   Zählung je Radiant ν = 2π: Q = 5.283, 1.2σ; 2π ist Länge des Einheitskreises (Metrik der Zählung), keine Homologiezahl.
+   Topologische Zahlen sind ganz oder rational; Q = 5,364 ± 0,065 ist 5,6σ von 5 und 9,8σ von 6 entfernt.
+   Was die Gleichung erzwingt: ν·ρ_b·V = 3c⁴/(2Ga₀). Mit L_min ≥ 0,985·d_LSS folgt nur eine obere Schranke für ν bei festem a₀:
+   Würfel                   ν ≤ 6.52  (Q ≤ 5.52)
+   sechseckig (h = Seite)   ν ≤ 7.53  (Q ≤ 6.53)
+   raumzentriert (bcc)      ν ≤ 8.47  (Q ≤ 7.47)
+   flächenzentriert (fcc)   ν ≤ 9.22  (Q ≤ 8.22)
+   Die Zellform ändert nur die Schranke; ein Wert für Q folgt nicht.
+
+F) Windung.
+   Phase mit Windung +1 und Störung (Amplitude ≠ 0): gemessen +1.0000
+   Phase mit Windung -1 und Störung (Amplitude ≠ 0): gemessen -1.0000
+   Phase mit Windung +2 und Störung (Amplitude ≠ 0): gemessen +2.0000
+   Amplitude durch null geschoben (Kreis um den Knoten verfehlt ihn): Windung +0.0000 ⇒ n ändert sich nur über |ψ| = 0.
+   Spin: Drehung um 2π in SU(2) = -1·𝟙 ⇒ π₁(SO(3)) = ℤ₂: topologisch ist nur J/ħ ∈ ½ℤ, nicht j.
+   j = ½(m_Pl/M)²: Elektron 2.85e+44, Proton 8.47e+37 – stetig in M, dynamisch.
+   Ladung: π₁(U(1)) = ℤ bzw. c₁ ∈ H²(T²; ℤ) = ℤ; Dirac 1/(2α) = 68.52.
+   Innere Richtung: H¹ = 0 (Tabelle A) ⇒ dort keine Windungszahl. Ihr einer Sinn kommt vom Rand: Die Halbgerade hat genau einen Randpunkt (den Ort),
+   die Richtung weg vom Rand ist ausgezeichnet (1 Bit, Zeitsinn), der Kern bleibt gerade im Drehsinn.
+
+G) Triade als Hodge-Zerlegung auf T² (FFT): Feld = harmonisch (Nullmode, b₁ = 2 Zahlen) + Gradient (Quellen) + Rotation (Wirbel).
+   zurückgewonnen: harmonisch [ 0.3 -0.1] (gesetzt [ 0.3 -0.1]); Anteile an ⟨F²⟩: harmonisch 0.139, Gradient 0.584, Rotation 0.277
+   Quellpaar exakt im Gradienten: max|Gradient − ∇φ| = 1.1e-15; Wirbel exakt in der Rotation.
+   Kindebene (Quadrat 0,1 fern der Quellen): Dort ist das Feld der Eltern quellfrei und wirbelfrei, also ganz Hintergrund der Kindebene;
+   gleichförmiger Teil 0.943, Rest Gezeit 0.057. Mit Rand ist der harmonische Teil nicht mehr b₁-dimensional,
+   sondern durch die Randwerte gesetzt: der Hintergrund einer Ebene ist das Feld der Elternebene.

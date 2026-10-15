@@ -1,0 +1,106 @@
+
+==============================================================================================================
+A  Ein Bereich als Zykloide: r = (R_ta/2)(1 − cos η), t = B(η − sin η), B = t_ta/π; Umkehr bei η = π
+==============================================================================================================
+   θ = 3ṙ/r = 3 sin η/(B(1 − cos η)²);  w = gewicht_w(θ) (Kern); Umkehr = Kreuzung des Strahls {v = 0, r > r_Gl} im Phasenraum
+   t_ta aus gleichung_zeit.txt (Kern-Hintergrund).
+   z_c   t_ta[Gyr]  η(w=0,9)   η(w=0,1)   Δη [rad]   Hand Δη      Δt [Mio. J.]   w bei η = π
+    3.4    0.932     3.11731    3.14154    0.02423    0.02423        14.4        0.000
+    2.0    1.641     3.09886    3.14150    0.04264    0.04267        44.5        0.000
+    1.0    2.929     3.06542    3.14143    0.07601    0.07616       141.7        0.000
+    0.5    4.302     3.02997    3.14136    0.11139    0.11186       304.8        0.000
+   ⇒ w ist eine Stufe in der Phase des Bereichs: 1 vor, 0 nach der halben Windung η = π; Breite 0,01–0,1 rad.
+
+   Radiant der Bahn ab der Umkehr, I = ∫ω dt, ω² = GM/r³ (feste Masse):
+   Umkehr → r = R_ta/2 (η = 3π/2):  numerisch 1.246450,  √2·ln(1 + √2) = 1.246450
+   Umkehr → Kollaps mit ω geklemmt bei R_ta/2 (Konvention gewicht_preisach): 1.2465 + (π/2 − 1) = 1.8172
+   Umkehr → R_ta/2 in ω_vir gezählt: ω_vir·Δt = π/2 + 1 = 2.5708;  bis zum Kollaps ohne Klemme: ∫ divergiert (log)
+   Eine volle Windung (Umkehr → nächste Umkehr) im virialisierten Bereich: 2π = 6.283 rad
+
+==============================================================================================================
+B  Monotonie der Phase: Bahn mit Drehimpuls um r_Gl, Phase φ = arg(r − r_Gl, −v/ω_Gl); Umkehr = φ kreuzt 0 mod 2π
+==============================================================================================================
+   Analytisch: dφ/dt = [x·F(x)/ω + ω·y²]/(x² + y²), x = r − r_Gl, y = v/ω, F Rückstellkraft (x·F > 0) ⇒ dφ/dt > 0:
+   Die Phase läuft nur vorwärts, jede Umkehr kreuzt den Strahl im selben Sinn; rückwärts nur, wo die Kraft bei v = 0 nach außen zeigt.
+   Szenario      Umkehrungen n   min dφ/dt   Energie am Ende   Schleife am Ende   w Preisach   w(θ jetzt) am Ende   max w(θ) nach 1. Umkehr
+   fest            2 (−0)        0.005       -0.153            geschlossen        0.000        0.000                1.000
+   langsam         1 (−0)        0.005       -0.087            geschlossen        0.000        0.999                1.000
+   plötzlich       1 (−0)        0.005       +0.011            offen              0.000        1.000                1.000
+   ⇒ Die gezählten Umkehrungen (Windungen der Geschichte) fallen nie; Preisach w = 0 ⇔ n ≥ 1, auch wenn die Schleife selbst aufbricht.
+     Geschützt ist die Zählung (ein Umlaufsinn, dφ/dt > 0), nicht die momentane Schleife: eine geschlossene Bahn kann über die Separatrix öffnen.
+
+==============================================================================================================
+C  Schalen ohne Stoß um einen Keim (EdS, G = 1, t_i = 1): Umkehr, erste Faltung des Phasenraumblatts am Ort der Schale
+==============================================================================================================
+   Radiale Bahnen; ab der eigenen Umkehr Drehimpuls j² = ε·G·M(<r)·r (Perizentrum ≈ ε/2 … ε·R_ta); innerste Schalen (t_ta < t/60) als Zentralmasse.
+   Faltung = erste Änderung des Rangs der Schale (ein zweiter Strom erreicht ihren Ort, Zahl der Ströme 1 → 3).
+   I = ∫ω dt ab der Umkehr, ω² = G·M(<r)/r³ am Ort der Schale;  I_½ mit ω geklemmt bei R_ta/2 und M = M(<R_ta) (Konvention A).
+   ε = 0.05
+     M/M_Keim   t_ta     t_Falt/t_ta   r_Falt/R_ta   Perizentrum vorher   I bis Faltung   I_½ bis Faltung   I bis 1. Perizentrum   I bis 2. Umkehr
+        8.0     51.95   Faltung schon vor der eigenen Umkehr (Anlauf aus dem Hubble-Start), t = 46.9
+       12.0     97.59   Faltung schon vor der eigenen Umkehr (Anlauf aus dem Hubble-Start), t = 66.4
+       18.0    181.78      1.334         0.933          nein               0.383            0.383              3.266                6.366
+       26.0    318.32      1.684         0.695          nein               0.904            0.904              3.283                6.400
+   ε = 0.10
+     M/M_Keim   t_ta     t_Falt/t_ta   r_Falt/R_ta   Perizentrum vorher   I bis Faltung   I_½ bis Faltung   I bis 1. Perizentrum   I bis 2. Umkehr
+        8.0     51.92      1.442         0.887          nein               0.521            0.521              3.129                6.094
+       12.0     97.53      1.713         0.686          nein               0.948            0.948              3.129                6.101
+       18.0    181.78      1.725         0.674          nein               0.971            0.971              3.043                5.911
+       26.0    318.32      1.760         0.637          nein               1.045            1.045              3.064                5.930
+   ε = 0.20
+     M/M_Keim   t_ta     t_Falt/t_ta   r_Falt/R_ta   Perizentrum vorher   I bis Faltung   I_½ bis Faltung   I bis 1. Perizentrum   I bis 2. Umkehr
+        8.0     51.92      1.836         0.609          nein               1.174            1.174              2.895                5.636
+       12.0     97.53      1.820         0.627          nein               1.136            1.136              2.915                5.634
+       18.0    181.78      1.816         0.631          nein               1.129            1.129              2.950                5.734
+       26.0    318.33      1.809         0.638          nein               1.113            1.113              2.968                5.690
+   Auflösung (ε = 0,2, t_end = 700): I bis Faltung je Schale M/M_Keim = 8 / 12 / 18 / 26
+     N = 1500: 0.898 / 1.035 / 1.115 / 1.132
+     N = 6000: 1.229 / 1.020 / 1.198 / 1.026
+   ⇒ erste Faltung am Ort der Schale ≈ 0,9–1,2 rad nach der Umkehr (vor dem eigenen Perizentrum, bei r ≈ 0,6–0,7 R_ta);
+     halbe Windung (Perizentrum) ≈ 2,9–3,3 rad ≈ π, volle Windung (2. Umkehr) ≈ 5,6–6,4 rad ≈ 2π.
+
+==============================================================================================================
+D  Fenster 0,3–2,4 bei Stufe statt Exponent: Übergabe vollständig, sobald I ≥ I_c (Schließung), vorher nicht
+==============================================================================================================
+   gewicht_preisach (Konvention A, Preisach): I(t) = ∫(1 − w)ω dt, heute bzw. bei z_obs;  N*(RAR-Enge, Exponent) = 2.419
+   volle Mode (R = 1) bei z_c = 0,5 heute: |g/g_RAR − 1| bis 0.537; Exponent verlangt e^{−I/N*} ≤ 0,05/0.537
+   z_c     z_obs   I(t_obs) [rad]   I_c ≤ I? (1 | 1,25 | π/2 | 2,5 | π | 2π)
+    3.41    2.0      6.649          ja   ja   ja   ja   ja   ja 
+    3.40    2.0      6.605          ja   ja   ja   ja   ja   ja 
+    2.00    1.0      6.778          ja   ja   ja   ja   ja   ja 
+    1.00    0.5      4.814          ja   ja   ja   ja   ja   NEIN
+    0.50    0.0      5.741          ja   ja   ja   ja   ja   NEIN
+   Stufe: RAR-Enge bei z_c = 0,5 heute verlangt I_c ≤ 5.74 rad (Exponent: N* ≤ 2.42)
+   (frisch kollabierte Bereiche bei z_obs: kleinstes I = 4.81; dort ist die Regel ohnehin mit R_ξ ≈ 0,06–0,14 gerechnet)
+
+   Nachlauf nach Stößen (harvey_nachlauf, B = 0,169, Δβ ≤ 0,10): Stufe gibt φ = 1 ab ω·t ≥ I_c ⇒ Δβ = 0,169 > 0,10;
+   nötig I_c > ω_orb·t für die Stoßalter t:
+     Δ = 200, z = 0,3: 1/ω_orb = 1.237 Gyr;  t = 0,2 / 0,5 / 1,0 Gyr ⇒ I_c > 0.16 / 0.40 / 0.81 rad
+     Δ = 500, z = 0,3: 1/ω_orb = 0.782 Gyr;  t = 0,2 / 0,5 / 1,0 Gyr ⇒ I_c > 0.26 / 0.64 / 1.28 rad
+   Exponent zum Vergleich: N* ≥ 0,19–0,29 (t = 0,5 Gyr).
+
+==============================================================================================================
+E  ξ mit (∂ξ)² = −1: Einheitstakt längs der Strömung, eindeutig nur bis zur ersten Faltung
+==============================================================================================================
+   (∂ξ)² = −1 ⇔ ξ ist Eigenzeit einer druckfreien Kongruenz (Flusslinien Geodäten). Eine Funktion längs der Flusslinien
+   ist auf dem Raum genau dann eindeutig, wenn die Lagrange-Abbildung injektiv ist; nach der Faltung hat ξ an jedem Ort so viele Werte
+   wie Ströme (1, 3, 5, …). Die Phase der Windung ist Φ = ∫ω dξ, (∂Φ)² = −ω² (ortsabhängig), also nicht ξ selbst.
+   Zahl der Ströme (Faltungen der Lagrange-Abbildung r(M)) im Lauf ε = 0,2 am Ende, je Radius in Einheiten von R_ta der Zielschale 26:
+     r = 0.05 R_ta: 39 Ströme
+     r = 0.10 R_ta: 79 Ströme
+     r = 0.20 R_ta: 87 Ströme
+     r = 0.30 R_ta: 55 Ströme
+     r = 0.50 R_ta: 33 Ströme
+     r = 0.80 R_ta: 3 Ströme
+     r = 1.20 R_ta: 3 Ströme
+     r = 2.00 R_ta: 1 Ströme
+   Die Zahl der Ströme ist ungerade (1 + 2·Faltungen) und wächst nach innen: sie zählt die Windungen des Phasenraumblatts.
+
+==============================================================================================================
+F  Handprüfungen
+==============================================================================================================
+   √2·ln(1 + √2): ln(2,41421) = 0,881374; ·1,414214 = 1.246451
+   Zykloide: dI/dη = ω·dt/dη; ω = √(GM/r³), r = (R_ta/2)(1 − cos η), dt/dη = B(1 − cos η), 1/B² = 8GM/R_ta³
+            ⇒ ω·dt/dη = (1 − cos η)^{−1/2} = 1/(√2 sin(η/2));  ∫_π^{3π/2} = √2·[ln tan(η/4)] = √2·ln tan(3π/8) = √2·ln(1 + √2)
+   Breite z_c = 2 (t_ta = 1,641 Gyr): B = 0,5224 Gyr; Δη = (4/3)·B·(ln²10 − ln²(10/9))/τ_D = 1,3333·0,5224·5,2908/86,36 = 0.0427 rad
+            Δt = 2B·Δη = 44.6 Mio. J. (03: 45)

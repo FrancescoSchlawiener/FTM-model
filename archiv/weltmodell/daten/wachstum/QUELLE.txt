@@ -1,0 +1,2 @@
+Volle Form der Galaxienverteilung (BAO und Rotverschiebungsraum): SDSS DR12 (Alam u. a. 2017, z = 0,38 und 0,51) mit eBOSS DR16 LRG (z = 0,698) in sdss_DR16_BAOplus_LRG_FSBAO_DMDHfs8.dat, Quasare eBOSS DR16 (z = 1,48) in sdss_DR16_BAOplus_QSO_FSBAO_DMDHfs8.dat, je D_M/r_d, D_H/r_d, f·σ₈ mit Gesamtkovarianz (_covtot.txt); gebraucht wird nur f·σ₈ (Teilblock, die Abstände liefert DESI DR2).
+https://github.com/CobayaSampler/bao_data, geladen 2026-10-12, unverändert (Ursprung: CosmoMC, eBOSS-Veröffentlichung).

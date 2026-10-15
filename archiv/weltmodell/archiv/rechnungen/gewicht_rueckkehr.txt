@@ -1,0 +1,244 @@
+
+==============================================================================================================
+0  Grundgrößen
+==============================================================================================================
+   a₀ = 1.10e-10, τ_D = c/a₀ = 86.362 Gyr, θ_c = a₀/c = 3.6692e-19 s⁻¹ = 0.16798 H₀, 3H₀τ_D = 17.8591
+   Schwellen: w_R = 0,9 / 0,5 / 0,1 bei x = (ln 10)² = 5.30190 / (ln 2)² = 0.48045 / (ln(10/9))² = 0.011101;  w_M bei 3 / 1 / 1/3
+
+==============================================================================================================
+1  Herleitung: Laplace-Transformierte der Dichte erster Rückkehrzeiten
+==============================================================================================================
+   Halbgerade [0, ∞), Start in der Tiefe ϖ, Diffusion D, Rückkehr bei 0: f(t) = ϖ/√(4πDt³)·e^{−ϖ²/(4Dt)}.
+   Von Hand: E[e^{−θT}] = ∫f e^{−θt}dt; mit t = ϖ²/(4Du²) wird daraus (2/√π)∫e^{−u²−k²ϖ²/(4u²)}du = e^{−kϖ}, k = √(θ/D)
+   (Integral ∫₀^∞ e^{−u²−b²/u²}du = (√π/2)e^{−2b}); Sattelpunkt: min_t[θt + ϖ²/(4Dt)] = ϖ√(θ/D) — der Exponent ist exakt.
+   Mit ϖ² = D·τ_D: kϖ = √(θτ_D) = √x  ⇒  1 − w = E[e^{−θ̃T}] = e^{−√x},  w_R = 1 − e^{−√x}.
+   Numerisch (quad über ln t, τ_D = 1, eigenes Integral):
+     x = 0.01      ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -0.0434, Formel -0.0434)
+     x = 0.4805    ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -0.3010, Formel -0.3010)
+     x = 1         ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -0.4343, Formel -0.4343)
+     x = 17.86     ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -1.8354, Formel -1.8354)
+     x = 100       ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -4.3429, Formel -4.3429)
+     x = 10000     ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -43.4294, Formel -43.4294)
+     x = 1e+06     ∫ = e^{−√x}·1.0000000000   (Rückkehr: log10(1 − w) = -434.2945, Formel -434.2945)
+
+   Halbgerade bei Λ geschlossen (spiegelnd, gleich Kreis 2Λ): 1 − w = cosh(k(Λ−ϖ))/cosh(kΛ);  offen bei Λ (absorbierend): sinh(k(Λ−ϖ))/sinh(kΛ)
+   Verhältnis zur offenen Halbgeraden: cosh-Form/e^{−kϖ} = (1 + e^{−2k(Λ−ϖ)})/(1 + e^{−2kΛ}), kΛ = √x·Λ/ϖ.
+   ϖ = r*(M) (ϖ² = Dτ_D, D = GM/c), Λ = 13.2394 Gpc:
+   M [M☉]      ϖ/Λ          rel. Änderung von 1 − w durch den Abschluss bei x = 1 | 17,86 | 10³ | 10⁶
+   1e+08     2.689e-08    +0.00e+00  +0.00e+00  +0.00e+00  +0.00e+00
+   1e+12     2.689e-06    +0.00e+00  +0.00e+00  +0.00e+00  +0.00e+00
+   1e+15     8.502e-05    +0.00e+00  +0.00e+00  +0.00e+00  +0.00e+00
+   1e+18     2.689e-03    +5.43e-323  +0.00e+00  +0.00e+00  +0.00e+00
+   1e+21     8.502e-02    +3.89e-10  +3.14e-40  +2.60e-296  +0.00e+00
+   1e+22     2.689e-01    +3.76e-03  +1.04e-10  +2.04e-75  +0.00e+00
+   ganze Zelle als eine Falte (Δs = ΣΔs_b = Λ/ν_kosm): ϖ/Λ = √(6/ν) = 0.97096:  x=1: +7.224e-01  x=17.86: +7.763e-01  x=1000: +1.508e-01
+   ⇒ Für jeden Bereich unterhalb der Zelle (ϖ/Λ ≤ 10⁻⁴ bis 10¹⁸ M☉) ändert der Abschluss bei Λ 1 − w um weniger als e^{−2√x·Λ/ϖ}: null.
+
+   Zweiter Weg (Reihe der Überlebenswahrscheinlichkeit): S(t) = Σ 4/((2n+1)π)·sin(k_nϖ)e^{−Dk_n²t}, k_n = (2n+1)π/(2Λ);
+   E[e^{−θT}] = 1 − θ·Σ 4/((2n+1)π)·sin(k_nϖ)/(θ + Dk_n²).  Dritter Weg: Differenzen D G'' = θG, G(0) = 1, G'(Λ) = 0.
+   ϖ/Λ     x       cosh-Form      Reihe          Differenzen    offen e^{−√x}
+   0.20     0.10   0.75500779     0.75500779     0.75500779     0.72889341
+   0.20     1.00   0.36798614     0.36798614     0.36798615     0.36787944
+   0.20    17.86   0.01460912     0.01460912     0.01460912     0.01460912
+   0.50     0.10   0.87044762     0.87044762     0.87044763     0.72889341
+   0.50     1.00   0.41015427     0.41015427     0.41015427     0.36787944
+   0.50    17.86   0.01461224     0.01461224     0.01461224     0.01460912
+   0.97     0.10   0.94916054     0.94916054     0.94916053     0.72889341
+   0.97     1.00   0.63314562     0.63314562     0.63314562     0.36787944
+   0.97    17.86   0.02585340     0.02585340     0.02585340     0.01460912
+
+==============================================================================================================
+2  1 − w im Hintergrund: θ̃ = 3H(z) (fällt monoton, Preisach = jetziger Wert), a₀(z) = a₀·a0_frueh_relativ(z)
+==============================================================================================================
+   z        a₀(z)/a₀   x = 3H·c/a₀(z)   1 − w_M          1 − w_R            (1−w_R)/(1−w_M)   w_R
+   0        0.9997     1.78643e+01      3.1237e-03       10^   -1.836       4.674e+00          0.98540
+   0.1      0.9997     1.87689e+01      2.8307e-03       10^   -1.881       4.641e+00          0.98686
+   0.3      0.9996     2.09519e+01      2.2728e-03       10^   -1.988       4.524e+00          0.98972
+   0.5      0.9996     2.35998e+01      1.7923e-03       10^   -2.110       4.333e+00          0.99223
+   1        0.9994     3.19418e+01      9.7917e-04       10^   -2.455       3.586e+00          0.99649
+   2        0.9991     5.40859e+01      3.4173e-04       10^   -3.194       1.872e+00          0.99936
+   3        0.9988     8.14811e+01      1.5060e-04       10^   -3.920       7.979e-01          0.99988
+   5        0.9983     1.48068e+02      4.5610e-05       10^   -5.285       1.138e-01          0.99999
+   10       0.9968     3.66809e+02      7.4322e-06       10^   -8.318       6.474e-04          1.00000
+   20       0.9939     9.71103e+02      1.0604e-06       10^  -13.534       2.759e-08          1.00000
+   50       0.9853     3.72293e+03      7.2149e-08       10^  -26.499       4.395e-20          1.00000
+   100      0.9714     1.05999e+04      8.9001e-09       10^  -44.713       2.175e-37          1.00000
+   300      0.9193     5.92341e+04      2.8501e-10       10^ -105.699       7.020e-97          1.00000
+   1090     0.7586     5.45264e+05      3.3635e-12       10^ -320.692       6.046e-310          1.00000
+   1100     0.7569     5.54614e+05      3.2510e-12       10^ -323.429       1.144e-312          1.00000
+   mit a₀ = cH₀/2π (x = 6π): 1 − w_M = 2.8066e-03, 1 − w_R = 1.3016e-02
+   z = 1090: √x = 738.420, 1 − w_R = e^{−738.42} = 10^-320.69 (Kontrolle: 10⁻³²¹); 1 − w_M = 3.36e-12
+
+==============================================================================================================
+3  Lineares Wachstum mit Übergabe λ = (1 − w)ω/N*
+==============================================================================================================
+   Lesart (03, 05): w ist der Speicheranteil — mitatmend, die Mode wirkt wie druckfreier Staub; 1 − w ist der Anteil, der nicht
+   mitatmet und mit der Rate λ(w) = (1 − w)·ω_orb/N* in die Operatorform übergeht (03, Zeile der Gleichung λ(w)).
+   Im homogenen Hintergrund zählt die Operatorform nicht (kein Gefälle, q = 1): konservativ klumpt der übergegangene Anteil nicht.
+   dε/dln a = (1 − w)·√(Ω_m(a)/2)·(1 − ε)/N*  (ω_orb = H√(Ω_m(a)/2)),   D'' + (2 + dlnE/dlna)D' = 1,5Ω_m(a)(1 − ε)D
+   Obere Schranke (sofort): Anteil (1 − w) der Mode klumpt nicht: Quelle 1,5Ω_m(a)(1 − (1 − w)·Q/(1+Q))D.
+
+   Kontrolle (Eingaben wie die Rechnung zur Schließungsregel: Ω_m = 0,3138, h = 0,6736, a₀ = 1,2·10⁻¹⁰, a₀ fest, N* = 1, w_M):
+     z=0.0: Δ(fσ₈)/fσ₈ = -4.651e-04  z=0.5: Δ(fσ₈)/fσ₈ = -2.187e-04  z=1.0: Δ(fσ₈)/fσ₈ = -1.094e-04  z=2.0: Δ(fσ₈)/fσ₈ = -3.599e-05   (Ziel −4,65e-04 / −2,19e-04 / −1,09e-04 / −3,60e-05)
+
+   Kern (Ω_m = 0.3134, h = 0,674, a₀ = 1,1·10⁻¹⁰, a₀(z) aus dem Kern):
+   Form  Lesart       N*     ε(z=0)       Δσ₈/σ₈ z=0 / 0,5 / 1                 Δ(fσ₈)/fσ₈ z=0 / 0,5 / 1
+   w_M   uebergabe    1.0    9.445e-04    -1.00e-04 -4.65e-05 -2.31e-05          -3.90e-04 -1.83e-04 -9.16e-05
+   w_M   uebergabe    0.3    3.145e-03    -3.33e-04 -1.55e-04 -7.69e-05          -1.30e-03 -6.11e-04 -3.05e-04
+   w_M   uebergabe    2.4    3.936e-04    -4.17e-05 -1.94e-05 -9.61e-06          -1.63e-04 -7.64e-05 -3.82e-05
+   w_M   sofort       –      0.000e+00    -3.30e-04 -1.60e-04 -8.10e-05          -1.21e-03 -6.14e-04 -3.17e-04
+   w_R   uebergabe    1.0    3.611e-03    -2.26e-04 -6.77e-05 -1.92e-05          -1.18e-03 -4.03e-04 -1.29e-04
+   w_R   uebergabe    0.3    1.198e-02    -7.51e-04 -2.26e-04 -6.41e-05          -3.94e-03 -1.34e-03 -4.30e-04
+   w_R   uebergabe    2.4    1.506e-03    -9.40e-05 -2.82e-05 -8.02e-06          -4.94e-04 -1.68e-04 -5.38e-05
+   w_R   sofort       –      0.000e+00    -1.09e-03 -3.92e-04 -1.30e-04          -4.92e-03 -2.07e-03 -7.87e-04
+   (Übergabe ∝ 1/N*: die Abweichung skaliert fast genau mit 1/N*.)
+   Hintergrundstrahlung: 1 − w_R(1090) = 10^-320.7; Schallgeschwindigkeit c_s² = 1/(3(1 + R + (1−w)QR)) unverändert; Peaks wie bisher.
+
+==============================================================================================================
+4  Übergangsbreite w 0,9 → 0,1 vor der Umkehr (Preisach: θ̃ = θ bis zur Umkehr)
+==============================================================================================================
+   (a) Zykloide (Einstein-de Sitter, t_c = Alter bei z_c im Kern);  (b) Energieintegral im Kern-Hintergrund (Ω_Λ, ohne Strahlung)
+   z_c    Maxwell (a)   (b)   [gewicht_preisach 7,24/22,48/72,00/156,40]    Rückkehr (a)   (b)   [kac 14,36/44,58/142,64/309,26]   R/M   w_R=0,9 vor Umkehr (b)
+    3.4       7.22       7.25                                                14.32      14.39                                  1.984      14.42
+    2.0      22.40      22.51                                                44.41      44.64                                  1.983      44.74
+    1.0      71.41      72.07                                               141.47     142.76                                  1.981     143.07
+    0.5     153.90     156.52                                               304.34     309.46                                  1.977     310.11
+   Einsatz in frühen Dichtespitzen (Zykloide):  z_c   Maxwell [Mio. J.]   Rückkehr [Mio. J.]   (stoerungen_rekombination: 0,02/0,06/0,46/2,85)
+                                                 30.0       0.020               0.040
+                                                 20.0       0.066               0.131
+                                                 10.0       0.463               0.919
+                                                  5.0       2.858               5.670
+   Hand (Zykloide, linear um die Umkehr): θ̇_ta = −3/(8B²), Δt = Δx·θ_c·8B²/3; z_c = 1: B = 0.9317 Gyr
+     Maxwell Δx = 8/3: Δt = 71.48 Mio. J.;  Rückkehr Δx = 5.2908: Δt = 141.81 Mio. J. (linear; exakt oben, Rückkehr reicht weiter vor die Umkehr)
+
+==============================================================================================================
+5  Umkehrkante heute (Energieintegral der Schale im Kern-Hintergrund ohne Strahlung)
+==============================================================================================================
+   Probe: y = θ/3H₀ = 1 ⇒ 1 + Δ = 2μ/Ω_m = 1.00000000 (soll 1)
+   Umkehr heute: 1 + Δ_ta = 11.8157 (trichterkette_gewicht mit Strahlung: 11,816)
+   w       Maxwell: θ̃/3H₀   1 + Δ      Rückkehr: θ̃/3H₀   1 + Δ      (trichterkette Maxwell: 0,99→4,599, 0,9→9,345, 0,5→10,965, 0,1→11,529; kac: 7,619/11,404/11,806)
+   0.99    0.55713          4.5992       1.18750          – (θ̃ > 3H₀: nur in Leeren)
+   0.90    0.16798          9.3449       0.29687            7.6192
+   0.50    0.05599         10.9646       0.02690           11.4033
+   0.10    0.01866         11.5289       0.00062           11.8061
+   w_R = 0,99 verlangt θ̃ = 1.187·3H₀: nur Bereiche, die schneller als der Hintergrund atmen (Leeren).
+   w im Hintergrund: w_M = 0.99687, w_R = 0.98539
+   1 + Δ     θ/3H₀      w_M        w_R        (Punktmasse: R/R_ta = ((1+Δ_ta)/(1+Δ))^{1/3})
+    0.300    1.14699    0.99762    0.98918     R/R_ta = 3.402
+    0.500    1.09820    0.99741    0.98807     R/R_ta = 2.870
+    1.000    1.00000    0.99687    0.98539     R/R_ta = 2.278
+    1.500    0.91915    0.99630    0.98260     R/R_ta = 1.990
+    2.000    0.84815    0.99566    0.97959     R/R_ta = 1.808
+    3.000    0.72445    0.99406    0.97259     R/R_ta = 1.579
+    3.501    0.66882    0.99304    0.96845     R/R_ta = 1.500
+    5.000    0.51918    0.98850    0.95240     R/R_ta = 1.332
+    8.000    0.26745    0.95801    0.88758     R/R_ta = 1.139
+   10.000    0.12176    0.82543    0.77114     R/R_ta = 1.057
+   Schale w 0,9 → 0,1 in R/R_ta (Punktmasse): Maxwell 1.081 → 1.008, Rückkehr 1.157 → 1.000
+   Lokale Gruppe 2·10¹²   R_ta = 1.01 Mpc; w = ½ bei 1.033 (M) / 1.020 Mpc (R); w = 0,9 bei 1.089 (M) / 1.166 Mpc (R)
+   Virgo 1,2·10¹⁵         R_ta = 8.50 Mpc; w = ½ bei 8.712 (M) / 8.599 Mpc (R); w = 0,9 bei 9.189 (M) / 9.836 Mpc (R)
+
+==============================================================================================================
+6  Folgen
+==============================================================================================================
+6a Ω_s/(1 − w):  x = 3Hτ_D = 6π/Θ (Θ = 2πa₀/(cH));  Ω_s = (π²/45)Θ²
+   Maxwell: 1 − w = 1/(1 + (6π/Θ)²) ≈ (Θ/6π)² ⇒ Ω_s/(1 − w) = (π²/45)(Θ² + 36π²) ≈ 36π⁴/45 = 77.93
+   Rückkehr: 1 − w = e^{−√(6π/Θ)} ⇒ Ω_s/(1 − w) = (π²/45)·Θ²·e^{√(6π/Θ)}
+   (Ω_s hier mit festem a₀ zur Epoche gerechnet wie im Modell: Θ(z) = 2πa₀(z)/(cH(z)))
+   z       Θ          Ω_s/(1−w_M)    Ω_s/(1−w_R)
+   0       1.0552e+00     78.171       16.723
+   0.5     7.9872e-01     78.067       18.016
+   1       5.9012e-01     78.004       21.751
+   2       3.4851e-01     77.954       41.635
+   10      5.1388e-02     77.928       120372.023
+   1090    3.4570e-05     77.927       10^311.1
+   heute direkt: Ω_s = 0.2443, 1 − w_R = 1.4602e-02 ⇒ 16.733 (kac: 16,72)
+
+6b Frisch kollabierte Galaxien (M_b = 6·10¹⁰, Hernquist a = 1,5 kpc·6^0,3, Top-Hat (1+Q)M_b; Energieintegral statt ODE)
+   R_Q = 53.09 kpc (gewicht_preisach 53,09)
+   w_M: I vor der Umkehr (Expansion) z_c = 3,4/2/1/0,5: 0.0051 / 0.0089 / 0.0160 / 0.0238;  Einfall 1.817 / 1.820 / 1.828 / 1.841
+        N* aus der Enge der Relation (z_c = 0,5, ≤ 5 % bei 10–50 kpc heute) = 2.416   (gewicht_preisach, Maxwell: 2,416)
+        z_c → z_obs   W = e^{−I/N*}   g/g_RAR − 1 bei 10 / 20 / 50 kpc      Δlog M_b bei festem v (10 / 50 kpc) [dex]
+         3.4 → 2.0      6.5000e-02      +0.0193  +0.0093  +0.0002              +0.0127 / +0.0002
+         2.0 → 1.0      6.0542e-02      +0.0028  -0.0070  -0.0159              +0.0019 / -0.0129
+         1.0 → 0.5      1.3659e-01      -0.0173  -0.0402  -0.0613              -0.0116 / -0.0508
+         0.5 → 0.0      9.3120e-02      -0.0195  -0.0354  -0.0500              -0.0131 / -0.0412
+   w_R: I vor der Umkehr (Expansion) z_c = 3,4/2/1/0,5: 0.0065 / 0.0114 / 0.0203 / 0.0300;  Einfall 1.817 / 1.820 / 1.828 / 1.841
+        N* aus der Enge der Relation (z_c = 0,5, ≤ 5 % bei 10–50 kpc heute) = 2.418   (gewicht_preisach, Maxwell: 2,416)
+        z_c → z_obs   W = e^{−I/N*}   g/g_RAR − 1 bei 10 / 20 / 50 kpc      Δlog M_b bei festem v (10 / 50 kpc) [dex]
+         3.4 → 2.0      6.5152e-02      +0.0193  +0.0093  +0.0002              +0.0127 / +0.0002
+         2.0 → 1.0      6.0663e-02      +0.0028  -0.0070  -0.0159              +0.0019 / -0.0129
+         1.0 → 0.5      1.3664e-01      -0.0173  -0.0403  -0.0613              -0.0116 / -0.0509
+         0.5 → 0.0      9.3120e-02      -0.0195  -0.0354  -0.0500              -0.0131 / -0.0412
+   nötiger Massennullpunkt (3σ, z_c = 3,4 → 2, 10 kpc) = Δ/3: Maxwell 0.0042 dex, Rückkehr 0.0042 dex
+   1/λ_m heute bei 200–500 ρ_krit mit N* = 0,3–N*(Relation): Maxwell 0.28–3.50 Gyr, Rückkehr 0.28–3.51 Gyr
+
+6c Übergabe im Hintergrund λ/H = (1 − w)√(Ω_m(a)/2)/N* und aufsummiert ε (N* = 1, Kern):
+   z = 0    λ/H: w_M 1.237e-03, w_R 5.780e-03
+   z = 0.5  λ/H: w_M 9.869e-04, w_R 4.276e-03
+   z = 1    λ/H: w_M 6.135e-04, w_R 2.200e-03
+   z = 2    λ/H: w_M 2.324e-04, w_R 4.351e-04
+   z = 10   λ/H: w_M 5.251e-06, w_R 3.399e-09
+   ε(z = 0) mit N* = 1: w_M 9.445e-04, w_R 3.611e-03;  mit N* aus der Relation (2.42 / 2.42): w_M 3.910e-04, w_R 1.493e-03
+   Δ(fσ₈)/fσ₈ mit N* aus der Relation: w_M (N* = 2.42) z=0.0: -1.61e-04 z=0.5: -7.59e-05 z=1.0: -3.79e-05;  w_R (N* = 2.42) z=0.0: -4.90e-04 z=0.5: -1.67e-04 z=1.0: -5.34e-05
+   Δσ₈/σ₈ mit N* aus der Relation: w_M -4.14e-05 -1.92e-05 -9.55e-06;  w_R -9.33e-05 -2.80e-05 -7.96e-06
+
+6d w = ½ und Filament
+   w_M = ½ bei θ̃ = θ_c;  w_R = ½ bei θ̃ = (ln 2)²θ_c = 0.4805 θ_c = 0.0807 H₀;  w_R(θ_c) = 1 − 1/e = 0.6321
+   Filament (eine Achse mit H₀, zwei Querachsen r): θ = H₀ + 2r; w = ½ ⇒ r = (θ_½ − H₀)/2: Maxwell -0.416 H₀, Rückkehr -0.460 H₀
+   Wand (zwei Achsen mit H₀): r = θ_½ − 2H₀: Maxwell -1.832 H₀, Rückkehr -1.919 H₀
+
+6e Linse um isolierte Galaxien (Milchstraße 6·10¹⁰, z = 0, Ansatz lokal; Funktionen aus linsen_isoliert, w_R statt gewicht_w):
+   w_M flach: N* = 0,3: +0.000 -0.000 | N* = 2,4: -0.031 -0.191 | N* = 2.42: -0.032 -0.193   (200/300 kpc)
+   w_M NFW  : N* = 0,3: +0.000 -0.002 | N* = 2,4: -0.071 -0.393 | N* = 2.42: -0.073 -0.395   (200/300 kpc)
+   w_R flach: N* = 0,3: +0.000 -0.000 | N* = 2,4: -0.031 -0.191 | N* = 2.42: -0.032 -0.193   (200/300 kpc)
+   w_R NFW  : N* = 0,3: +0.000 -0.002 | N* = 2,4: -0.071 -0.393 | N* = 2.42: -0.073 -0.395   (200/300 kpc)
+   (linsen_isoliert.txt, Maxwell: flach −0,031/−0,192, NFW −0,072/−0,394 bei N* = 2,4)
+
+==============================================================================================================
+7  Änderungsliste (alt → neu mit w_R)
+==============================================================================================================
+   03:13   Filament mitatmend, bis Querschnitt schneller als 0,42·H₀ schrumpft (w < ½)  alt: 0,42·H₀                    neu: 0.46·H₀
+   03:37   w wechselt in dünner Schale vor der Umkehr, heute bei 10- bis 12-facher Dichte  alt: 1+Δ 9,3–11,5 (w 0,9→0,1)   neu: 1+Δ 7.6–11.8
+   03:37   außerhalb w ≥ 0,99                                                        alt: w ≥ 0,99                   neu: w_R ≥ 0.985 nur im Hintergrund, bei 1+Δ = 3,5 (1,5 R_ta) w_R = 0.968
+   03:51   w = θ̃²/(θ̃² + θ_c²)                                                      alt: Maxwell                    neu: w = 1 − e^{−√(θ̃/θ_c)}
+   03:56   1 − w heute                                                               alt: 3,1·10⁻³                   neu: 1.46e-02
+   03:56   1 − w mit cH₀/2π                                                          alt: 2,8·10⁻³                   neu: 1.30e-02
+   03:56   1 − w Rekombination                                                       alt: 3·10⁻¹²                    neu: 10^-321
+   03:56   fσ₈ auf 5·10⁻⁴ (N* = 1, a₀ = 1,2)                                         alt: 4.7e-04 (Kontrolle)        neu: 1.2e-03 (N* = 1, a₀ = 1,1); 3.9e-03 (N* = 0,3)
+   03:57   Übergangsbreiten 7/22/72/156 Mio. J.                                      alt: 7/22/72/156                neu: 14/45/143/309
+   03:57   N* ≈ 0,3–2,4 (obere Grenze aus der Enge der Relation)                     alt: 2,4                        neu: 2.42
+   03:57   1/λ_m heute 0,28–3,5 Mrd. J.                                              alt: 0,28–3,5                   neu: 0.28–3.51
+   03:74   1 − w = 3·10⁻¹² bei der Rekombination                                     alt: 3·10⁻¹²                    neu: 10^-321
+   03:105  1 − w ≈ (Θ/6π)², Ω_s = 78(1 − w) in jeder Epoche                          alt: 78, fest                   neu: (π²/45)Θ²e^{√(6π/Θ)}, heute 16.7
+   03:131  frisch kollabiert: +1,9 % (3,4→2, 10 kpc)                                 alt: +1,9 %                     neu: +1.9 %
+   03:131  frisch kollabiert: −2 bis −6 % (1→0,5)                                    alt: −2 bis −6 %                neu: -1.7 bis -6.1 %
+   03:131  0,013 dex (10 kpc) bis 0,05 dex (50 kpc); Nullpunkt 0,004 dex             alt: 0,013/0,05/0,004           neu: 0.013/0.051/0.0042
+   05:89   w = x²/(1 + x²) als Speicheranteil eines Maxwell-Elements                 alt: Maxwell                    neu: Rückkehranteil 1 − e^{−√x} (Lévy-Dichte, Kac)
+   07:35   w = ½ bei θ = θ_c (gesetzt, θ_c = 1/τ_D)                                  alt: ½ bei θ_c                  neu: ½ bei (ln 2)²θ_c = 0,48θ_c; θ_c = 1/τ_D folgt
+   03:137 Linse um isolierte Galaxien (N* = 2,4: 3–7 % bei 200, 19–43 % bei 300 kpc) → siehe 6e mit N* = 2.42
+
+   Prüfstand (ftm_pruefstand.py) und Gesetze (ftm_gesetze.py):
+   pruefstand:69        1 − w heute (Standardwert a₀)                                         alt: 3,1e-3       neu: 1.460e-02
+   pruefstand:70        1 − w heute (a₀ = cH₀/2π)                                             alt: 2,8e-3       neu: 1.302e-02
+   pruefstand:312-315   w 0,9 → 0,1 bei z_c = 3,4/2/1/0,5 (liest gewicht_preisach.txt)        alt: 7/22/72/156  neu: 14.4/44.6/142.8/309.5
+   pruefstand:316       Preisach = jetzige Form im Hintergrund                                alt: 1,0          neu: 1,0 (formunabhängig)
+   pruefstand:353       1 − w bei der Rekombination                                           alt: 3,4e-12      neu: 10^-320.69 (Gleitkomma subnormal: log10 prüfen)
+   pruefstand:491       w = ½ bei θ = a₀/c                                                    alt: 0,5          neu: 0.6321 (½ erst bei (ln 2)²a₀/c)
+   pruefstand:494       Ω_s/(1 − w) heute                                                     alt: 78           neu: 16.73
+   pruefstand:562       Ω_s/(1 − w) = 36π⁴/45                                                 alt: 78           neu: entfällt (nicht fest)
+   pruefstand:569       Preisach Δlog M_b (3,4→2, 10 kpc) [dex] (liest fruehe_galaxien_a0.txt)  alt: 0,013        neu: 0.0127
+   pruefstand:570       Preisach nötiger Massennullpunkt [dex]                                alt: 0,004        neu: 0.0042
+   pruefstand:580       Umkehr heute 1 + Δ_ta                                                 alt: 11,8         neu: 11,8 (unverändert)
+   gesetze:666          w = Speicheranteil eines Maxwell-Elements (sim M)                     alt: trägt        neu: entfällt für w (Maxwell bleibt für den Kern in 05)
+
+==============================================================================================================
+8  Handprüfungen
+==============================================================================================================
+   1) x heute = 3H₀c/a₀ = 3·2,1843e-18·2,9979e8/1,1e-10 = 17.8591; √x = 4.2260; e^{−√x} = 0.01461; Maxwell 1/(1+x²) = 0.00313
+      Von Hand: 17,859² = 318,9; 1/319,9 = 3,126e-3; √17,859 = 4,2260; e^{−4,226} = e^{−4}·e^{−0,226} = 0,018316·0,7977 = 0,014610
+   2) Ω_s/(1 − w_R) heute = 0,2443·e^{4,226} = 0,2443·68,44 = 16,72
+   3) Rekombination: x = 5,4526e5, √x = 738,42, log10 e^{−738,42} = −738,42·0,43429 = −320,69
+   4) Filament: θ_½ = 0,4805·0,16798 H₀ = 0,0807 H₀; r = (0,0807 − 1)/2 = −0,4596 H₀
+   5) Umkehrkante EdS-Probe: Energieintegral mit Ω_Λ = 0 muss 9π²/16 = 5,5517 geben:
+      1 + Δ_ta (EdS, Ω_m = 1) = 2μ = 5.55165 (9π²/16 = 5.55165)

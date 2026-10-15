@@ -1,0 +1,328 @@
+205 Zahlen, 18 Grundgrößen: G, c, ħ, k, e, m_p, m_e, α, R_p, M, R☉, R⊕, AU, a₀, H₀, Ω_bh², Ω_ch², T_CMB
+Rang der Exponentenmatrix: 18
+
+=== 1 Reine Zahlen (von keiner Grundgröße abhängig)
+  03 | 1 − w heute (a₀ = cH₀/2π)                                    | 0.00280658
+  03 | ν an der Hubble-Kugel (g = πa₀)                              | 1.2047
+  03 | Vakuumteil Ω_s bei Θ = 1                                     | 0.219325
+  03 | ΔN_eff bei Ω_s = 0,22 zu jeder Zeit                          | 2.09283
+  07 | ν bei r*                                                     | 1.58198
+  07 | Bose-Stufen bei r* (s = 1)                                   | 0.581977
+  07 | Maximum d = 2: a_N/a₀                                        | 2.53964
+  07 | Maximum d = 2: Zusatz/a₀                                     | 0.64761
+  07 | Maximum d = 3: a_N/a₀                                        | 7.96052
+  07 | beide Umlaufsinne: coth(1)                                   | 1.31304
+  07 | Rosette χ = 1: Winkel zwischen Perizentren [°]               | 254.558
+  02 | Saturn: Kante / Erde (mittlerer Radius 58 232 km)            | 1.14026
+  02 | Anteil der Sonne [%]                                         | 99.866
+  02 | Δs·λ̄/ℓ_P² (Proton)                                          | 0.333333
+  03 | Bilder quadratischer Torus, Abstand² = 1                     | 4
+  03 | Bilder quadratischer Torus, Abstand² = 2                     | 4
+  03 | Bilder quadratischer Torus, Abstand² = 4                     | 4
+  03 | Bilder quadratischer Torus, Abstand² = 5                     | 8
+  03 | Bilder sechseckiger Torus, Abstand² = 1                      | 6
+  03 | Bilder sechseckiger Torus, Abstand² = 3                      | 6
+  03 | Bilder sechseckiger Torus, Abstand² = 4                      | 6
+  04 | Takt bei 100 r₀                                              | 0.994987
+  04 | Takt bei 2 r₀                                                | 0.707107
+  04 | S = 36πk(Δs/ℓ_P)² = 4πk·α_G (Sonne)                          | 1
+  04 | Lebensdauer 3840(S/k)Δs/c = Hawking                          | 1
+  04 | Temperatur global = ħH/(2πk) (Δs_H = c/6H)                   | 1
+  04 | Entropieexport der Erde [W/K]                                | 6.09726e+14
+  05 | ν bei Im τ = ½                                               | 1.04517
+  05 | ν bei Im τ = 2                                               | 1
+  05 | (2π)^k/(Γ(k)ζ(k)), k = 2                                     | 24
+  05 | (2π)^k/(Γ(k)ζ(k)), k = 4                                     | 240
+  05 | (2π)^k/(Γ(k)ζ(k)), k = 6                                     | 504
+  05 | 12 = 2/(1 − ½ − ⅓)                                           | 12
+  05 | 1728 = 3·240 + 2·504                                         | 1728
+  05 | Gedächtnis-Bindung: Umkehrpunkt (v = 1,6, γ = 0,01)          | 9.74747
+  06 | Aufschaukeln im Dreieck: (Σt)(Σ1/t) − 1 ≥ 8                  | 8
+  07 | Pólya: ν ≤ 1/(1 − 0,3405) in drei Dimensionen                | 1.51639
+  07 | beide Sinne voll: (1 + 2n_B)/(1 + n_B) bei s = 1             | 1.36788
+  07 | Milchstraße bei r* mit beiden Sinnen [km/s]                  | 258.591
+  07 | Re τ_M bei r* (Punktmasse)                                   | 1.25777
+  07 | Bose-Leiter: ∫ s^1 n_B ds                                    | 1.64493
+  07 | Bose-Leiter: ∫ s^2 n_B ds                                    | 2.40411
+  07 | Bose-Leiter: ∫ s^3 n_B ds                                    | 6.49394
+  07 | größte Zusatzbeschleunigung Punktmasse bei r/r*              | 0.6275
+  07 | M_schein/M Reihe bei r = 3r*                                 | 3.52773
+  08 | δ(r*) = (v_flach/c)² (Milchstraße)                           | 1
+  08 | ISCO j = 0,9 mitläufig [3Δs]                                 | 2.32088
+  08 | ISCO j = 0,9 gegenläufig [3Δs]                               | 8.71735
+  09 | Debye-Länge physiologische Salzlösung 0,15 M [nm]            | 0.784925
+  03 | ν bei g/a₀ = 23 (kompakter Kugelsternhaufen)                 | 1.00833
+  03 | ν bei g/a₀ = 0,12 (Zwerggalaxie)                             | 3.41556
+  03 | kosmische Streuung des Quadrupols                            | 0.632456
+  03 | Warp: 90° bei 10,86 km/s/kpc [Mrd. Jahre]                    | 0.141428
+  08 | Linse I(1)                                                   | 2.13544
+  03 | Warp: Aufwickeln 12–16 kpc, Newton [Mrd. Jahre]              | 0.281303
+
+=== 2 Klassen gleicher Abhängigkeit (Exponentenvektor)
+  [G c^-2 M]  (17)
+      01 | Δs Erde [mm]                                               | 1.4783
+      01 | Δs Sonne [m]                                               | 492.21
+      01 | r₀ Erde [mm]                                               | 8.8701
+      01 | r₀ Sonne [km]                                              | 2.9533
+      02 | Δs Neutronenstern 1,4 M☉ [m]                               | 689.09
+      02 | Δs/R Neutronenstern (12 km)                                | 0.057424
+      02 | Δs Roter Riese 18 M☉ [km]                                  | 8.8598
+      03 | Δs/R Milchstraße (15,3 kpc)                                | 6.2554e-08
+      03 | Δs Galaxienhaufen [Lj]                                     | 8.8445
+      03 | Δs/R Galaxienhaufen (2 Mpc)                                | 1.3559e-06
+      03 | Δs Universum [Mrd Lj]                                      | 3.902
+      03 | Δs/R Universum (46,5 Mrd Lj)                               | 0.083914
+      07 | Δs/r Milchstraße bei 8 kpc                                 | 1.1964e-07
+      08 | Merkur-Perihel [″/Jh]                                      | 42.98
+      08 | Schatten M87* [μas]                                        | 39.688
+      02 | Faltung des Sonnensystems [m]                              | 492.87
+      08 | Faltungsmesser GW170817 Δs_c [m]                           | 589.52
+  [G^1/2 M^1/2 a₀^-1/2]  (8)
+      03 | r* Milchstraße [kpc]                                       | 8.3482
+      07 | Resonanz Re τ_M = 1.2000 in der Milchstraße [kpc]          | 5.6946
+      07 | Resonanz Re τ_M = 1.2500 in der Milchstraße [kpc]          | 7.8886
+      07 | Resonanz Re τ_M = 1.2857 in der Milchstraße [kpc]          | 10.445
+      07 | Resonanz Re τ_M = 1.3333 in der Milchstraße [kpc]          | 17.276
+      07 | Resonanz Re τ_M = 1.4000 in der Milchstraße [kpc]          | 102.94
+      07 | größte Zusatzbeschleunigung Milchstraße [kpc]              | 5.2385
+      08 | r* Sonne [Lj]                                              | 0.11116
+  [G c^-2 M R☉^-1]  (4)
+      01 | δ Sonnenoberfläche                                         | 2.1225e-06
+      01 | Sonnenoberfläche [s/Jahr]                                  | 66.981
+      02 | Δs/R Roter Riese (764 R☉)                                  | 1.6669e-08
+      08 | Ablenkung Sonnenrand [″]                                   | 1.7512
+  [G^1/2 M^1/2 AU^-1 a₀^-1/2]  (3)
+      02 | r* Sonne [AE]                                              | 7029.7
+      07 | Erdbahn: s = r*/r                                          | 7029.7
+      08 | r* Erde [AE]                                               | 12.183
+  [G c^-2 M AU^-1]  (3)
+      03 | Δs Milchstraße [AE]                                        | 197.41
+      07 | Δs/r an der Erdbahn                                        | 3.2902e-09
+      08 | Erdbahn im Sonnentrichter [s/Jahr]                         | 0.31149
+  [G^1/4 M^1/4 a₀^1/4]  (3)
+      03 | v_flach Milchstraße [km/s]                                 | 175.82
+      03 | σ Tiefgrenze 10⁷ M☉ [km/s]                                 | 9.4171
+      03 | σ Tiefgrenze 2·10⁸ M☉ [km/s]                               | 19.915
+  [G M R☉^-2]  (2)
+      01 | g Sonne [m/s²]                                             | 274.2
+      02 | g Roter Riese [m/s²]                                       | 0.0084558
+  [G c^-2 M R⊕^-1]  (2)
+      01 | δ Erdoberfläche                                            | 6.9613e-10
+      01 | Erdoberfläche [s/Jahr]                                     | 0.021968
+  [G c^-2 m_p]  (2)
+      02 | Δs Proton [m]                                              | 4.1404e-55
+      02 | δ bei 1 fm neben einem Proton                              | 1.2421e-39
+  [G^1.118 c^-2.235 M^1.118]  (2)
+      02 | Neutronenstern: Takt langsamer um                          | 0.1904
+      04 | Neutronenstern: Tage je Jahr                               | 69.543
+  [c^-2 a₀^2 H₀^-2]  (2)
+      03 | 1 − w heute (a₀ = 1,2·10⁻¹⁰)                               | 0.0037174
+      03 | Vakuumteil mit a₀ = 1,2·10⁻¹⁰                              | 0.29077
+  [c H₀^-0.203 Ω_bh²^-0.063 Ω_ch²^-1/3]  (2)
+      03 | Durchmesser letzte Streufläche [Gpc]                       | 27.786
+      03 | Zelle mindestens (0,985·d_LSS) [Gpc]                       | 27.369
+  [c^4/3 Ω_bh²^-0.052 Ω_ch²^-0.281]  (2)
+      03 | Zelle für a₀ = 1,04·10⁻¹⁰ [Gpc]                            | 28.112
+      03 | Zelle für a₀ = 1,19·10⁻¹⁰ [Gpc]                            | 26.878
+  [rein]  (2)
+      03 | a₀(z = 10)/a₀(0)                                           | 0.9968
+      03 | Galaxie im Haufen, 80 kpc, 2 Mpc: Anteil des freien Werts  | 0.77131
+  [H₀^-1]  (2)
+      03 | 1/λ_m heute, 500 ρ_krit, N* = 0,3 [Mrd J]                  | 0.27526
+      03 | 1/λ_m heute, 200 ρ_krit, N* = 2,4 [Mrd J]                  | 3.4818
+  [H₀^-0.110 Ω_bh²^-0.070 Ω_ch²^-0.375]  (2)
+      03 | 1/λ_m Kollaps z = 2, 500 ρ_krit, N* = 0,3 [Mrd J]          | 0.090969
+      03 | 1/λ_m Kollaps z = 2, 200 ρ_krit, N* = 2,4 [Mrd J]          | 1.1507
+  [G c^-3 ħ]  (2)
+      03 | Kreislauf: Mindestrate Λ̇/Λ [s⁻¹]                          | 3.6823e-37
+      03 | Kreislauf: je Jahr                                         | 1.162e-29
+  [G^1/2 c^-2 M^1/2 a₀^1/2]  (2)
+      08 | α_∞ Milchstraße [″]                                        | 0.44574
+      08 | α_∞ Galaxienhaufen [″]                                     | 23.727
+  [c^2 ħ^-1 m_e α^2]  (2)
+      09 | ω₂ = αc/a_B [rad/s]                                        | 4.1341e+16
+      02 | Umlauffrequenz Wasserstoff-Hülle [Hz]                      | 6.5797e+15
+  [c^3 ħ^-1 m_e α^3]  (2)
+      02 | Bindungssteilheit Wasserstoff [m/s²]                       | 9.0442e+22
+      02 | Bindungssteilheit Wasserstoff [g⊕]                         | 9.2194e+21
+  [G^1/2 M^1/2 R☉^-1 a₀^-1/2]  (2)
+      07 | Periode in Im τ: Sonnenoberfläche Λ >                      | 2.4058e+05
+      07 | Periode in Im τ: Grenze Sonnenoberfläche                   | 2.4058e+05
+  [G c^-2 m_p R_p^-1]  (1)
+      02 | Δs/R Proton                                                | 4.9208e-40
+  [G m_p R_p^-2]  (1)
+      02 | g Proton [m/s²]                                            | 1.5769e-07
+  [G c^-1 ħ^-1 m_p m_e α]  (1)
+      02 | Δs/R Wasserstoff-Atom                                      | 7.8242e-45
+  [G M]  (1)
+      02 | g Neutronenstern [m/s²]                                    | 1.2903e+12
+  [G c^-1 ħ^-1 m_p^2]  (1)
+      02 | α_G                                                        | 5.9061e-39
+  [G^-3/2 c^3/2 ħ^3/2 m_p^-2 M^-1]  (1)
+      02 | Sternmasse M_* [M☉]                                        | 1.8533
+  [G^-1/2 c^-1/2 ħ^3/2 m_p^-2]  (1)
+      02 | Δs_* [m]                                                   | 912.19
+  [G^1/2 M^1/2 AU^-1/2]  (1)
+      02 | Bahngeschwindigkeit Erde [km/s]                            | 29.785
+  [G^-1 c^2 M^-1]  (1)
+      02 | Neutronenstern: Hülle bei r/r₀                             | 2.9024
+  [G^0.403 M^0.403 a₀^0.097]  (1)
+      03 | v Milchstraße bei 5 kpc [km/s]                             | 252.16
+  [G^0.354 M^0.354 a₀^0.146]  (1)
+      03 | v Milchstraße bei 8.35 kpc [km/s]                          | 221.13
+  [G^0.313 M^0.313 a₀^0.187]  (1)
+      03 | v Milchstraße bei 15 kpc [km/s]                            | 200.77
+  [G^0.270 M^0.270 a₀^0.230]  (1)
+      03 | v Milchstraße bei 50 kpc [km/s]                            | 183.2
+  [G^-1 M^-1 a₀]  (1)
+      03 | Grenzflächendichte a₀/(πG) [M☉/pc²]                        | 274.04
+  [G^-0.459 M^-0.459 a₀^0.459]  (1)
+      03 | ν frei (Milchstraße 50 kpc)                                | 6.5033
+  [G^-0.209 M^-0.209 a₀^0.209]  (1)
+      03 | ν senkrechtes Außenfeld 0,03 a₀                            | 5.4584
+  [G^-0.213 M^-0.213 a₀^0.213]  (1)
+      03 | ν gleichgerichtetes Außenfeld                              | 4.6767
+  [Ω_bh²^11/6 Ω_ch²^-11/6]  (1)
+      03 | R_Q: a_N/a₀ beim kosmischen q                              | 0.02922
+  [G^1/2 M^1/2 a₀^-1/2 Ω_bh²^-11/12 Ω_ch²^11/12]  (1)
+      03 | R_Q Milchstraße [kpc]                                      | 48.837
+  [c H₀]  (1)
+      03 | cH₀/2π bei 67,4 [10⁻¹⁰]                                    | 1.0422
+  [c]  (1)
+      03 | cH₀/2π bei 70 [10⁻¹⁰]                                      | 1.0824
+  [c^-1 a₀]  (1)
+      03 | H₀ für a₀ = 1,2·10⁻¹⁰ [km/s/Mpc]                           | 77.605
+  [c H₀^0.609 Ω_bh²^0.031 Ω_ch²^1/6]  (1)
+      03 | a₀ ohne Kreispaare (L ≥ 0,985 d_LSS) [10⁻¹⁰]               | 1.127
+  [H₀^-0.483 Ω_bh²^0.038 Ω_ch²^0.203]  (1)
+      03 | a₀(z = 1090)/a₀(0)                                         | 0.75862
+  [H₀^-0.231 Ω_bh²^0.018 Ω_ch²^0.097]  (1)
+      03 | Vakuumteil bei z = 1090                                    | 2.513e-10
+  [c^2 a₀^-1]  (1)
+      03 | Schließlänge Λ für a₀ = 1,2 [Gpc]                          | 12.136
+  [c^2]  (1)
+      03 | Schließlänge Λ für a₀ = 1,04 [Gpc]                         | 14.003
+  [G c^-4 ħ]  (1)
+      03 | Kreislauf: w_s + 1                                         | 2.3184e-19
+  [G^-1 c^3 ħ^-1]  (1)
+      03 | Kreislauf: S_max [k]                                       | 9.6408e+122
+  [c H₀^-1]  (1)
+      03 | Kreislauf: H im Endzustand / H₀                            | 0.48475
+  [G^-1 c^3 ħ k^-1 T_CMB^-1]  (1)
+      04 | Grenze Rückgabe T_H = T_CMB [kg]                           | 4.5016e+22
+  [c a₀^-1]  (1)
+      07 | τ_D = c/a₀ [Mrd J]                                         | 79.165
+  [G^-1/2 c^2 M^-1/2 a₀^-1/2]  (1)
+      07 | Ebenen bis r* Milchstraße                                  | 1.4537e+06
+  [G^-0.051 c^0.102 M^-0.051 AU^0.051]  (1)
+      07 | Im τ_M an der Erdbahn                                      | 3.1087
+  [G^-0.063 c^0.125 M^-0.063]  (1)
+      07 | Im τ_M Milchstraße 8 kpc                                   | 2.5367
+  [G^-1/3 c^-2/3 ħ^2/3 a₀^1/3]  (1)
+      08 | Masse mit r* = λ̄ [kg]                                     | 6.0594e-29
+  [c^-1 M^-1]  (1)
+      08 | Verwindung Erde a_J [m]                                    | 3.2721
+  [c^-2 M^-1]  (1)
+      08 | T_prograd − T_retrograd [ns]                               | 137.16
+  [G^5/3 c^-5 M^5/3]  (1)
+      08 | Hulse-Taylor dP/dt                                         | -2.4026e-12
+  [c^-1 ħ m_e^-1]  (1)
+      09 | a_J Elektron [fm]                                          | 193.08
+  [ħ e m_e^-1]  (1)
+      09 | Bohr-Magneton [J/T]                                        | 9.274e-24
+  [G^-1 c ħ m_e^-2]  (1)
+      09 | Spinzahl Elektron                                          | 2.8542e+44
+  [G^-1 c ħ m_p^-2]  (1)
+      09 | Spinzahl Proton                                            | 8.4658e+37
+  [G^-1 c ħ m_p^-2 α]  (1)
+      09 | α/α_G                                                      | 1.2356e+36
+  [c^2 ħ^-1 m_p]  (1)
+      09 | ω₁ = c/λ̄_p [rad/s]                                        | 1.4255e+24
+  [G c ħ^-2 m_p^3]  (1)
+      09 | Γ_G = α_G·ω₁ [1/s]                                         | 8.4191e-15
+  [G^-1 c ħ m_e^-1 α]  (1)
+      02 | Faltung für diese Steilheit [kg]                           | 3.7946e+12
+  [G k^-1 M R⊕^-1]  (1)
+      02 | Erde: δ gegen 2(v_th/c)² (Eisen, Schmelzpunkt)             | 116.02
+  [G^-1 M^-1]  (1)
+      02 | Saturn: Faltung / Erde                                     | 95.161
+  [G^-1/2 M^-1/2 a₀^1/2]  (1)
+      02 | Glättungslänge Sonne / r*                                  | 27.288
+  [G^1/3 M^1/3]  (1)
+      02 | Gezeitengrenze Sonne [pc]                                  | 1.3722
+  [G c^-1 ħ^-1 m_p^6 m_e^-4 α^-12]  (1)
+      02 | Carter-Faktor 𝒞 = α_G/(α¹²(m_e/m_p)⁴)                      | 2.9441
+  [G c^3 ħ^-2 m_p m_e^2 α^-2 M]  (1)
+      02 | Eddington-Grenze Sonne [W]                                 | 1.2571e+31
+  [G c^-2 α^-2 M R☉^-1]  (1)
+      02 | δ Sonnenoberfläche / α²                                    | 0.039858
+  [α]  (1)
+      02 | α = r_e/λ̄_e                                               | 0.0072974
+  [G^-0.011 c^0.011 ħ^0.011 m_p^-0.023]  (1)
+      02 | Im τ_G (α_G = e^{−2π Im τ})                                | 14.01
+  [α^-0.203]  (1)
+      02 | Im τ_α                                                     | 0.78308
+  [α^-1]  (1)
+      02 | magnetische/elektrische Elementarladung 1/(2α)             | 68.518
+  [G^0.043 M^0.043 a₀^-0.043]  (1)
+      03 | Galaxie im Haufen, 80 kpc, 0,5 Mpc: Anteil des freien Werts | 0.50011
+  [c^-2 a₀^2 H₀^-1.447 Ω_bh²^-0.045 Ω_ch²^-0.233]  (1)
+      03 | 1 − w bei der Rekombination                                | 4.0028e-12
+  [G^-1 M^-1 a₀^-1]  (1)
+      07 | 220 km/s gehören zu [M☉]                                   | 1.4709e+11
+  [G^3/2 c^-2 M^3/2]  (1)
+      08 | Gravity Probe B geodätisch [mas/Jahr]                      | 6603.9
+  [G c^-2]  (1)
+      08 | Gravity Probe B Mitführung [mas/Jahr]                      | 40.8
+  [G^-1/4 M^-1/4 a₀^3/4]  (1)
+      08 | Schwellenfrequenz Gravitationswellen (1 M☉) [Hz]           | 1.0752e-13
+  [G c^-2 M R⊕^-0.941]  (1)
+      08 | ISS [s/Jahr]                                               | 0.02067
+  [G^-1 M^-1 a₀^3 H₀^-4 Ω_bh²^2.987 Ω_ch²^-2.987]  (1)
+      03 | M_Q heute (R_Q = R₂₀₀) [M☉]                                | 3.6786e+14
+  [ħ k^-1]  (1)
+      09 | Dephasierungszeit ħ/kT bei 310 K [s]                       | 2.4639e-14
+  [G^-0.225 M^-0.225 a₀^-0.364 H₀^0.856 Ω_bh²^0.025 Ω_ch²^0.135]  (1)
+      03 | Haufen: fehlender Faktor bei 100 kpc                       | 3.0347
+  [G^1/12 M^1/12 a₀^-5/12 H₀^0.490 Ω_bh²^0.014 Ω_ch²^1/12]  (1)
+      03 | Haufen: fehlender Faktor bei 1 Mpc                         | 1.5563
+  [G c^-3 ħ H₀^-1]  (1)
+      03 | w_s + 1 heute aus der Mindestrate                          | 1.1239e-19
+  [c^-1.690 a₀^1.690]  (1)
+      07 | Rückkehr als Vorgang: Anteil nach 13,8 Mrd. J. (s = 1)     | 0.21762
+  [c^-1.774 a₀^1.774]  (1)
+      07 | Rückkehr als Vorgang: Anteil nach 13,8 Mrd. J. (s = 0,3)   | 0.12062
+  [G^-1 c^2 M^-1 a₀ H₀^-3]  (1)
+      07 | Rückkehrzeit Kugel r* im Hubble-Volumen, Sonne [Jahre]     | 3.2947e+32
+  [G^3/4 c^-3 M^3/4 a₀^3/4]  (1)
+      08 | Knotenzahl an r* Milchstraße (j = 1329)                    | 5.3614e-07
+  [α^-1/2]  (1)
+      02 | Radius des Ladungskreises 2ℓ_P/√α [ℓ_P]                    | 23.412
+  [G^-1/2 c^5/2 ħ^1/2 α^1/2]  (1)
+      02 | Umlauf um den Ladungskreis [GeV]                           | 5.2147e+17
+  [G^0.048 c^-0.145 ħ^-0.048 k^0.048 M^0.048 H₀^-17/12 Ω_bh²^0.032 Ω_ch²^1/6 T_CMB^0.048]  (1)
+      04 | Einsatz der Rückgabe 10 M☉ (Dunkle Energie konstant) [Jahre] | 3.612e+11
+  [G^0.026 c^-1/12 ħ^-0.026 k^0.026 M^0.026 H₀^-0.983 T_CMB^0.026]  (1)
+      04 | Einsatz der Rückgabe 10⁹ M☉ (nur Vakuumteil) [Jahre]       | 1.1979e+12
+  [a₀^-0.121]  (1)
+      03 | Warp: Aufwickeln 12–16 kpc, örtliche Regel [Mrd. Jahre]    | 0.2545
+
+=== 3 Verknüpfungen zwischen Klassen: x_i / x_j^k ist rein
+  Δs Erde [mm]                             = C · (Neutronenstern: Hülle bei r/r₀)^-1   [G c^-2 M]  C = 4.2907
+  g Neutronenstern [m/s²]                  = C · (Saturn: Faltung / Erde)^-1   [G M]  C = 1.2278e+14
+  g Neutronenstern [m/s²]                  = C · (Gezeitengrenze Sonne [pc])^3   [G M]  C = 4.9939e+11
+  α_G                                      = C · (Spinzahl Proton)^-1   [G c^-1 ħ^-1 m_p^2]  C = 0.5
+  r* Milchstraße [kpc]                     = C · (Grenzflächendichte a₀/(πG) [M☉/pc²])^-0.5   [G^1/2 M^1/2 a₀^-1/2]  C = 138.2
+  r* Milchstraße [kpc]                     = C · (Glättungslänge Sonne / r*)^-1   [G^1/2 M^1/2 a₀^-1/2]  C = 227.8
+  v_flach Milchstraße [km/s]               = C · (220 km/s gehören zu [M☉])^-0.25   [G^1/4 M^1/4 a₀^1/4]  C = 1.0888e+05
+  Grenzflächendichte a₀/(πG) [M☉/pc²]      = C · (Glättungslänge Sonne / r*)^2   [G^-1 M^-1 a₀]  C = 0.36803
+  cH₀/2π bei 70 [10⁻¹⁰]                    = C · (Schließlänge Λ für a₀ = 1,04 [Gpc])^0.5   [c]  C = 0.28925
+  H₀ für a₀ = 1,2·10⁻¹⁰ [km/s/Mpc]         = C · (τ_D = c/a₀ [Mrd J])^-1   [c^-1 a₀]  C = 6143.6
+  Kreislauf: Mindestrate Λ̇/Λ [s⁻¹]        = C · (Kreislauf: S_max [k])^-1   [G c^-3 ħ]  C = 3.55e+86
+  Ebenen bis r* Milchstraße                = C · (α_∞ Milchstraße [″])^-1   [G^-1/2 c^2 M^-1/2 a₀^-1/2]  C = 6.48e+05
+  Ebenen bis r* Milchstraße                = C · (Knotenzahl an r* Milchstraße (j = 1329))^-0.667   [G^-1/2 c^2 M^-1/2 a₀^-1/2]  C = 95.942
+  α_∞ Milchstraße [″]                      = C · (Knotenzahl an r* Milchstraße (j = 1329))^0.667   [G^1/2 c^-2 M^1/2 a₀^1/2]  C = 6754.1
+  Saturn: Faltung / Erde                   = C · (Gezeitengrenze Sonne [pc])^-3   [G^-1 M^-1]  C = 245.87
+  α = r_e/λ̄_e                             = C · (magnetische/elektrische Elementarladung )^-1   [α]  C = 0.5
+  α = r_e/λ̄_e                             = C · (Radius des Ladungskreises 2ℓ_P/√α [ℓ_P])^-2   [α]  C = 4
+  magnetische/elektrische Elementarladung  = C · (Radius des Ladungskreises 2ℓ_P/√α [ℓ_P])^2   [α^-1]  C = 0.125

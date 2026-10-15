@@ -1,0 +1,45 @@
+1) Kern-Nome q_Δs = Δs/r und Δ(τ)/q_Δs − 1
+   Sonne, 1 AE                q_Δs = 3.291e-09   Δ/q−1 = -7.898e-08   r*/r = 7.031e+03
+   Sonne, r* (7030 AE)        q_Δs = 4.681e-13   Δ/q−1 = -1.123e-11   r*/r = 1.000e+00
+   Milchstraße 6e10, 8 kpc    q_Δs = 1.197e-07   Δ/q−1 = -2.872e-06   r*/r = 1.044e+00
+   Milchstraße, 50 kpc        q_Δs = 1.914e-08   Δ/q−1 = -4.595e-07   r*/r = 1.670e-01
+
+2) Geforderter Kern M_req, damit a_K = (ν−1)·g_N mit ν = 1/(1−q), q = e^{−r*/r}
+   Behauptung: M_req = (Δs/r)·√s·q/√(1−q),  s = r*/r = −ln q  (→ Δs/r für r ≫ r*)
+     r/r*      M_req/(Δs/r)   √s·q/√(1−q)   Δ(τ_fb)/M_req
+      0.010       0.000000       0.000000            inf
+      0.032       0.000000       0.000000      4.914e+04
+      0.100       0.000144       0.000144      2.755e+05
+      0.316       0.076919       0.076919      5.139e+05
+      1.000       0.462706       0.462706      5.107e-01
+      3.162       0.787216       0.787216      8.028e-32
+     10.000       0.927550       0.927550     1.256e-142
+     31.623       0.976542       0.976542      0.000e+00
+    100.000       0.992526       0.992526      0.000e+00
+
+3) Δs/r = (v_rot²/3c²)·s, also M_req = (v_rot²/3c²)·s^{3/2}·q/√(1−q)
+   r/r* =   0.1:  Δs/r = 1.146606e-06   (v_rot²/3c²)·s = 1.146606e-06
+   r/r* =   1.0:  Δs/r = 1.146606e-07   (v_rot²/3c²)·s = 1.146606e-07
+   r/r* =  10.0:  Δs/r = 1.146606e-08   (v_rot²/3c²)·s = 1.146606e-08
+
+4) Kreisbahn aus v²/r = g_N + (κ0/λ_eff)·M_req(r)·v, gelöst für v, gegen v_RAR
+   r/r* =    0.010   v =  1758.281 km/s   v_RAR =  1758.281 km/s   Δ = +0.0e+00
+   r/r* =    0.032   v =   988.754 km/s   v_RAR =   988.754 km/s   Δ = +0.0e+00
+   r/r* =    0.100   v =   556.030 km/s   v_RAR =   556.030 km/s   Δ = +0.0e+00
+   r/r* =    0.316   v =   319.507 km/s   v_RAR =   319.507 km/s   Δ = +0.0e+00
+   r/r* =    1.000   v =   221.151 km/s   v_RAR =   221.151 km/s   Δ = +2.2e-16
+   r/r* =    3.162   v =   189.897 km/s   v_RAR =   189.897 km/s   Δ = +0.0e+00
+   r/r* =   10.000   v =   180.242 km/s   v_RAR =   180.242 km/s   Δ = +2.2e-16
+   r/r* =   31.623   v =   177.220 km/s   v_RAR =   177.220 km/s   Δ = -4.4e-16
+   r/r* =  100.000   v =   176.268 km/s   v_RAR =   176.268 km/s   Δ = -1.1e-16
+
+5) Langes Gedächtnis (λ_m ≪ ω, a_K = κ0·M·r): M_req ∝ s³·q/(1−q) → ∝ 1/r² für r ≫ r*,
+   also nicht Δs/r. Die Form Δs/r des Kerns gehört zur Geschwindigkeitsform (λ_eff fest).
+
+6) Kern mit q_Δs allein (a_K = √(GM a0)/r) gegen einheitlichen Kern (a_K = (ν−1)·g_N)
+   r/r* =   0.3:  v_Summe/v_RAR = 1.1197
+   r/r* =   1.0:  v_Summe/v_RAR = 1.1244
+   r/r* =   3.0:  v_Summe/v_RAR = 1.0648
+   r/r* =  10.0:  v_Summe/v_RAR = 1.0231
+   Erde (1 AE)      Zusatz q_Δs-Kern: 8.44e-07 m/s²   einheitlicher Kern: e^(−7031)·g_N ≈ 10^-3056 m/s²
+   Saturn (9,5 AE)  Zusatz q_Δs-Kern: 8.84e-08 m/s²   einheitlicher Kern: e^(−737)·g_N ≈ 10^-324 m/s²

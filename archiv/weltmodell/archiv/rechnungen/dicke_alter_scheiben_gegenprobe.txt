@@ -1,0 +1,2 @@
+3D h = 0.3, σ_z0 = 18.0: Regel      rms z 0.1713 → 0.1719 kpc (+0.4 %), ΔE nach 10 Gyr: Mittel +0.8, Streuung 7.3 (km/s)²
+3D h = 0.3, σ_z0 = 18.0: wirbelfrei rms z 0.1707 → 0.1713 kpc (+0.4 %), ΔE nach 10 Gyr: Mittel +0.0, Streuung 0.0 (km/s)²

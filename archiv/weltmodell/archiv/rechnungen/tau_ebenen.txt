@@ -1,0 +1,114 @@
+
+====================================================================================================
+1  Spiegelung an der Schwelle: s → 1/s  (Punktmasse: s = r*/r, also r → r*²/r;  a_N → a₀²/a_N)
+====================================================================================================
+1a Leiter Sonne: 3Δs = 1.4766e+03 m, r* = 1.0984e+15 m, ℓ₀ = c²/a₀ = 8.1705e+26 m;  r*²/(3Δs·ℓ₀) = 1.000000000000
+   a_N(3Δs)·a_N(ℓ₀)/a₀² = 1.000000000000   (Spiegelung r → r*²/r ist a_N → a₀²/a_N)
+   Bild des innersten Ortes r₀ = 6Δs: r*²/r₀ = 4.0853e+26 m = Λ = c²/2a₀ = 4.0853e+26 m
+
+1b Gesuchte Dualität: s^k·ν(s) = s^{−k}·ν(1/s) für ein festes k (Gewicht).  Führende Ordnung beider Ränder:
+   s → 0: ν ≈ 1/s;  s → ∞: ν → 1.  Beide Ränder zugleich nur mit k = 1/2, d. h. ν(1/s) = s·ν(s),
+   in Beschleunigungen a(a₀²/a_N)·(a_N/a₀)^{3/2} = a(a_N)  (tiefer Ast √(a_N a₀) ↔ Newton-Ast a_N).
+         s       ν(s)     ν(1/s)     s·ν(s)  ν(1/s)/(s ν(s))    [dex]       χ(s)      χ(1/s)
+     0.050   20.50417    1.00000    1.02521         0.975412  -0.0108    0.97521   4.122e-08
+     0.100   10.50833    1.00005    1.05083         0.951669  -0.0215    0.95083   4.540e-04
+     0.200    5.51666    1.00678    1.10333         0.912495  -0.0398    0.90333   3.392e-02
+     0.300    3.85830    1.03699    1.15749         0.895900  -0.0477    0.85749   1.233e-01
+     0.500    2.54149    1.15652    1.27075         0.910108  -0.0409    0.77075   3.130e-01
+     0.700    1.98643    1.31519    1.39050         0.945834  -0.0242    0.69050   4.503e-01
+     1.000    1.58198    1.58198    1.58198         1.000000  +0.0000    0.58198   5.820e-01
+   bestes festes k (kleinste größte Abweichung über s = 10⁻³…1): k = 0.507, max |Δ ln| = 0.0962 (0.0418 dex) bei s = 0.001
+   Reihen: tiefer Rand ν(s) = 1/s + 1/2 + s/12 − s³/720 … (Potenzen, Bernoulli);
+           Newton-Rand ν(1/s) = 1 + e^{−1/s} + e^{−2/s} … (exponentiell).  Eine Seite Potenzreihe, die andere
+           exponentiell klein: keine Funktionalgleichung f(1/s) = s^{2k}·f(s) kann beide verbinden.
+   χ(s) → 1 (s → 0), χ(1/s) → e^{−1/s}/s: kein Gewicht k gleicht konstant gegen exponentiell aus.
+
+1c Exakte Symmetrien der Regelfunktionen (Kontrolle):
+   s = 0.3: ν(s) + ν(−s) = 1.000000000000;   χ(−s) − χ(s) − s = +5.55e-17
+   s = 1.0: ν(s) + ν(−s) = 1.000000000000;   χ(−s) − χ(s) − s = +0.00e+00
+   s = 2.5: ν(s) + ν(−s) = 1.000000000000;   χ(−s) − χ(s) − s = +0.00e+00
+   Exakt ist nur die Spiegelung s → −s (|q| → 1/|q|, Spiegelung am Ort |q| = 1), nicht s → 1/s.
+
+1d Modulare Spiegelung τ → −1/τ in der Schreibweise Im τ = s/2π (Punkt 1): s → 4π²/s, Fixpunkt s = 2π (r = r*/2π).
+   η: s =  0.7000 ↔ 4π²/s =  56.3977:  ln η(−1/τ) − [ln η(τ) + ½ ln(−iτ)] = +0.00e+00
+   η: s =  1.0000 ↔ 4π²/s =  39.4784:  ln η(−1/τ) − [ln η(τ) + ½ ln(−iτ)] = +0.00e+00
+   η: s =  2.0000 ↔ 4π²/s =  19.7392:  ln η(−1/τ) − [ln η(τ) + ½ ln(−iτ)] = +1.11e-16
+   η: s =  6.2832 ↔ 4π²/s =   6.2832:  ln η(−1/τ) − [ln η(τ) + ½ ln(−iτ)] = +0.00e+00
+   Die Produktform über alle Oberschwingungen ∏(1 − qⁿ) ist exakt modular (Fixpunkt s = 2π); die Regel ist ein
+   einzelner Faktor 1/(1 − q) und zählt nur die Grundschwingung. Schwellenpunkt s = 1 und modularer Fixpunkt s = 2π
+   fallen nicht zusammen (Faktor 2π); bei s = 2π ist Re τ = 1.00586, τ ≡ i + 0.0059 (mod 1).
+   Test mit Realteil: τ(s) = √(1+χ) + i s/2π gegen −1/(N τ(1/s)), N = 4π² (Fricke-Form der Leiterspiegelung):
+   s = 0.3: τ(s) = 1.3629+0.0477i,  −1/(4π² τ(1/s)) = -0.0191+0.0096i  (mod 1: 0.9809)
+   s = 0.5: τ(s) = 1.3307+0.0796i,  −1/(4π² τ(1/s)) = -0.0205+0.0057i  (mod 1: 0.9795)
+   s = 1.0: τ(s) = 1.2578+0.1592i,  −1/(4π² τ(1/s)) = -0.0198+0.0025i  (mod 1: 0.9802)
+   s = 2.0: τ(s) = 1.1459+0.3183i,  −1/(4π² τ(1/s)) = -0.0190+0.0011i  (mod 1: 0.9810)
+   In Schreibweise Punkt 3 (|q| = Δs/r) ist die Spiegelung |q|·|q′| = (Δs/r*)², Im τ + Im τ′ = 2 Im τ(r*):
+   eine Spiegelung an einer waagrechten Geraden, keine Isometrie der oberen Halbebene, also kein Element von SL(2,ℝ).
+
+1e Gemessene Relation (SPARC, Q ≤ 2, i ≥ 30°, Υ_d = 0,5, Υ_b = 0,7): Dualitätsdefekt
+    D(y) = lg x(y) − lg x(1/y) − 1,5·lg y  (y = g_bar/a₀, x = g_obs/a₀; Dualität ⇔ D = 0)
+   Υ_d = 0.4: Paare 13, χ²(D = 0) =    120.5,  χ²(D = Regel) =     28.6,  mittleres D = -0.063 dex (Regel -0.037)
+   N = 2696 Punkte; lg y von -2.12 bis 1.77
+     lg y  n(y) n(1/y)  D Messung      ±  D Regel
+     0.10    93    107    -0.0183 0.0193  -0.0084
+     0.20    71    105    -0.0258 0.0223  -0.0158
+     0.30    74    117    -0.0146 0.0190  -0.0237
+     0.40    60    112    -0.0442 0.0204  -0.0304
+     0.50    64    111    -0.0499 0.0196  -0.0362
+     0.60    52    104    -0.0541 0.0203  -0.0407
+     0.70    45    117    -0.1009 0.0189  -0.0441
+     0.80    43    125    -0.0734 0.0222  -0.0471
+     0.90    30    121    -0.0539 0.0222  -0.0479
+     1.00    21    150    -0.0473 0.0258  -0.0511
+     1.10    20    152    -0.0622 0.0255  -0.0489
+     1.20    16    148    -0.0317 0.0238  -0.0453
+   Υ_d = 0.5: Paare 12, χ²(D = 0) =     77.5,  χ²(D = Regel) =     13.2,  mittleres D = -0.048 dex (Regel -0.037)
+   Υ_d = 0.6: Paare 12, χ²(D = 0) =     67.2,  χ²(D = Regel) =     13.6,  mittleres D = -0.040 dex (Regel -0.037)
+   (Die Gewichtung 1,5·lg y ist mit den gemessenen Bin-Mitten gebildet: lg y − lg(1/y) = my − my2, also 0,75·(my − my2).)
+
+   Freier Spiegelpunkt a_m und freies Gewicht k: lg x(y) − lg x(1/y) = k′·(lg y − lg(1/y)), y = g_bar/a_m; Dualität ⇔ Gerade durch 0 (Υ_d = 0,5)
+   bester Spiegelpunkt Messung: a_m = 4.17e-11 m/s², Paare 14, k′ = 0.660 (Gewicht 3/2 ⇔ 0,75), χ² = 6.6 (Freiheitsgrade 13)
+   Probe der Trennschärfe: dieselbe freie Anpassung an der Regel, die beweisbar nicht dual ist:
+   dieselbe Prüfung an der Regel (a₀ = 1,1e-10, fehlerfrei, gleiche Fehlerbalken): a_m = 3.80e-10, k′ = 0.828, χ² = 0.0
+   Freies k′ ≠ 0,75 widerspricht den beiden Ästen (Newton x = y, tief x = √y verlangen Gewicht 3/2); im Messbereich
+   (|lg y| ≤ 1,3) ist die freie Form zu schwach, um Dualität von Nicht-Dualität zu trennen.
+
+====================================================================================================
+2  τ = Re + i·Im je Ebene  (Re = Umlaufphase ω_rad/ω_azim bzw. Windungszahl; Im: P1 = s/2π, P3 = ln(r/Δs)/2π)
+====================================================================================================
+   Ebene                            s = r*/r    Re τ    Im τ P1  Im τ P3  δ* = (v_f/c)² Im τ P3(r*)        P1 reduziert
+   Proton, Hülle R_p               3.786e+01  1.0000  6.026e+00   14.405      3.899e-41      14.983  +0.0000+6.0259i
+   Proton, Bohr-Radius (nur Gravitation)  6.020e-04  1.4141  9.581e-05   16.164      3.899e-41      14.983  -0.0501+1.0568i
+   Erde, Hülle                     2.988e+05  1.0000  4.755e+04    3.531      2.330e-15       5.537  +0.0000+47553.7830i
+   Sonne, Hülle                    1.579e+06  1.0000  2.513e+05    2.254      1.344e-12       4.525  +0.0000+251279.8145i
+   Planetenbahn 1 AE               7.342e+03  1.0000  1.169e+03    3.109      1.344e-12       4.525  +0.0000+1168.5686i
+   Milchstraße 8 kpc               1.090e+00  1.2458  1.735e-01    2.537      3.293e-07       2.550  +0.2844+1.9161i
+   Haufen 1e14 M☉, R = r*/0,55     5.500e-01  1.3229  8.754e-02    2.055      1.344e-05       1.960  -0.1843+1.2516i
+
+   An r* jeder Punktmasse (s = 1): τ* = 1.25777 + 0.15915i (P1), reduziert +0.1913+1.7342i;  j(τ*) nicht ausgezeichnet (weder i noch ρ).
+   P3 an r*: |q| = Δs/r* = δ*/3, Im τ_P3(r*) = ln(3/δ*)/2π; δ* ∝ M^{1/2}: Im τ_P3(r*) = const − ln M/(4π), stetig in M.
+   Leiter 3Δs : r* : ℓ₀ in P3: |q| = 1/3, δ*/3, δ*²/3 — jede Stufe q → δ*·q (Im τ + ln(1/δ*)/2π), eine Skalierung, kein τ → τ + 1.
+   Zelle (Obergrenze M_U, r* = 3Δs = ℓ₀, δ* = 1): Im τ_P3 = ln 3/2π = 0.1748, Im τ_P1(r*) = 1/2π = 0.1592;  Re τ = Wicklung W der Zelle, vom Modell nicht festgelegt (nur irrational).
+   Realteil: Kepler (Planeten, Hülle kompakter Körper) Re τ = 1, Tiefbereich √2, homogener Kern 2 (Newton) bzw. √3,5 (mit Regel,
+   a ∝ r^{1/2}); geschlossene Bahnen genau bei Re τ ∈ ℤ: 1 (Kepler) und 2 (harmonisch) — q gleich, τ um 1 verschoben.
+   Teilchen: Windungszahl n ∈ ℤ (Ladung) als Realteil, e^{2πin} = 1: die Ladung ändert q nicht, nur τ.
+
+   Paare von Ebenen unter SL(2,ℤ) gleich?  (gleicher reduzierter Punkt)
+   kleinster Abstand zweier reduzierter Punkte (P1): 2.365e-01  → keine zwei Ebenen SL(2,ℤ)-äquivalent außer über gleiches s.
+
+====================================================================================================
+3  α und α_G: eine Zahl Im τ_X?
+====================================================================================================
+   |q_G| = 3Δs_p/λ̄_p = α_G = 5.9061e-39, Im τ_G = 14.0096;  |q_α| = r_e/λ̄_e = α = 7.297353e-03, Im τ_α = 0.7831
+   Probe: 3Δs_p/λ̄_p = 5.9061e-39;  r_e/λ̄_e = 7.297353e-03
+   Beide stehen im Modell als Beträge (Längenverhältnis Wirkungslänge/Quantenlänge), keiner als Phase.
+   Die Phase der Ladung ist die Windungszahl n ∈ ℤ: Re τ ganzzahlig, q unverändert — sie trägt keine reelle Zahl wie α.
+   Verhältnis Im τ_G/Im τ_α = 17.8903;  Produkt = 10.9706;  S-Bild von i·Im τ_α: i·1.2770;  Fricke N = 1/(y_G y_α) = 0.0912
+   α_G/α = 8.0936e-37 = (3Δs_p/r_e)·(λ̄_e/λ̄_p) = (3Δs_p/r_e)·(m_p/m_e) = 8.0936e-37: enthält m_p/m_e und G.
+   Eine gemeinsame Zahl verlangte τ_G und τ_α als Bilder unter einer Abbildung, die die Struktur festlegt; keine gefunden.
+
+====================================================================================================
+5  Von Hand nachgerechnet (Werte zum Vergleich)
+====================================================================================================
+   ν(0,5) = 1/(1 − e^{−0,5}) = 2.54149;  ν(2) = 1.15652;  ν(2)/(0,5·ν(0,5)) = 0.91011
+   Re τ(r*) = √(1 + 1/(e − 1)) = 1.25777;  Milchstraße 6e10 M☉: v_f = 172.03 km/s, Im τ_P3(r*) = 2.5504

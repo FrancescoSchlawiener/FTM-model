@@ -1,0 +1,15 @@
+Rückstellung aus der Straffung ΣΔs_i/R_i gebundener Trichter (Gewicht M^{2/3}), Vakuumteil fest (Θ0 = 1), selbstkonsistent
+Verfahren | R aus 200·ρ | gelesen als | z des Maximums von ρ_DE | w_DE(0) | w_DE(1) | CPL w0 / wa | Straffung S(0) [Δs/R, massengewichtet]
+PS-w | krit | d ln a | früh | +nan | +nan | -1.600 / +nan | nan
+PS-w | krit | dt | früh | +nan | +nan | -1.600 / +nan | nan
+PS-w | krit | Bestand | heute (wächst) | -1.289 | -1.276 | -1.335 / +0.130 | 2.40e-06
+PS-w | mittel | d ln a | 0.90 | -0.482 | -1.051 | -0.365 / -1.395 | 1.21e-06
+PS-w | mittel | dt | 1.97 | -0.362 | -0.689 | -0.305 / -0.755 | 9.40e-07
+PS-w | mittel | Bestand | heute (wächst) | -1.088 | -1.307 | -1.125 / -0.335 | 1.57e-06
+ST | krit | d ln a | früh | +nan | +nan | -1.600 / +nan | nan
+ST | krit | dt | früh | +nan | +nan | -1.600 / +nan | nan
+ST | krit | Bestand | heute (wächst) | -1.335 | -1.288 | -1.405 / +0.249 | 5.82e-07
+ST | mittel | d ln a | 0.66 | -0.578 | -1.196 | -0.465 / -1.456 | 3.03e-07
+ST | mittel | dt | 1.36 | -0.448 | -0.858 | -0.335 / -1.073 | 2.46e-07
+ST | mittel | Bestand | heute (wächst) | -1.128 | -1.335 | -1.190 / -0.255 | 3.80e-07
+Vergleich DESI DR2 + CMB + Pantheon+: w0 = −0,84…−0,86, wa = −0,58…−0,62; Maximum der Dunklen Energie bei z ≈ 0,35–0,44 [G]

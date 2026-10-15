@@ -1,0 +1,94 @@
+SPARC Q ≤ 2, Neigung ≥ 30°: 149 Galaxien; davon äußerster Punkt a_N ≤ 0,05·a₀: 72
+   (a_N am letzten Punkt; Υ_d = 0,5, Υ_b = 0,7; unabhängig von σ)
+1  Punkte je Bereich a_N/a₀ (in den ausgewählten Galaxien; in Klammern Zahl der Galaxien mit Punkten dort):
+   0.00–0.01:   15 Punkte (9 Galaxien)
+   0.01–0.03:  220 Punkte (40 Galaxien)
+   0.03–0.10:  683 Punkte (70 Galaxien)
+   a_N/a₀ am letzten Punkt: Median 0.0317, kleinster 0.0076; < 0,01: 3, 0,01–0,03: 29, 0,03–0,05: 40
+   letzter Radius: Median 10.8 kpc (6.7 R_d), größter 108.3 kpc
+   Zahl der Punkte mit a_N < g_e = 0.003·a₀: 0 (0 Galaxien)
+   Zahl der Punkte mit a_N < g_e = 0.01·a₀: 15 (9 Galaxien)
+   Zahl der Punkte mit a_N < g_e = 0.03·a₀: 235 (40 Galaxien)
+
+2  Rest log(g_obs/g_Regel) [dex], σ = 8 km/s; Median über Punkte je Bereich ± Bootstrap über Galaxien (1000)
+   roh | relativ zum eigenen Rest bei 0,1–1 a₀ | Steigung d Rest/d log a_N innerhalb der Galaxien (a_N < 0,1 a₀)
+   (a) verlangt: Modell mit dem richtigen g_e flach (relativ ≈ 0, Steigung ≈ 0); ohne g_e fällt der Rest unter g_e (Steigung > 0)
+   ohne                  : <0,01: +0.000±0.156 | +nan±nan;  0,01–0,03: +0.025±0.062 | +0.139±0.153;  0,03–0,1: +0.001±0.017 | -0.002±0.018;  Steigung -0.082 ± 0.061
+   senkrecht 0.003       : <0,01: +0.016±0.153 | +nan±nan;  0,01–0,03: +0.027±0.064 | +0.141±0.145;  0,03–0,1: +0.001±0.018 | -0.002±0.017;  Steigung -0.091 ± 0.063
+   senkrecht 0.01        : <0,01: +0.105±0.169 | +nan±nan;  0,01–0,03: +0.045±0.066 | +0.157±0.145;  0,03–0,1: +0.005±0.018 | +0.000±0.016;  Steigung -0.147 ± 0.065
+   senkrecht 0.03        : <0,01: +0.287±0.162 | +nan±nan;  0,01–0,03: +0.129±0.071 | +0.239±0.160;  0,03–0,1: +0.035±0.020 | +0.023±0.017;  Steigung -0.298 ± 0.072
+   gleichgerichtet 0.003 : <0,01: +0.070±0.167 | +nan±nan;  0,01–0,03: +0.052±0.060 | +0.163±0.148;  0,03–0,1: +0.011±0.018 | +0.006±0.017;  Steigung -0.129 ± 0.063
+   gleichgerichtet 0.01  : <0,01: +0.174±0.165 | +nan±nan;  0,01–0,03: +0.098±0.067 | +0.205±0.154;  0,03–0,1: +0.037±0.019 | +0.023±0.016;  Steigung -0.203 ± 0.063
+   gleichgerichtet 0.03  : <0,01: +0.326±0.154 | +nan±nan;  0,01–0,03: +0.196±0.063 | +0.286±0.161;  0,03–0,1: +0.091±0.020 | +0.057±0.015;  Steigung -0.311 ± 0.064
+   Kugelmittel 0.003     : <0,01: +0.003±0.152 | +nan±nan;  0,01–0,03: +0.025±0.060 | +0.139±0.146;  0,03–0,1: +0.001±0.018 | -0.002±0.015;  Steigung -0.084 ± 0.061
+   Kugelmittel 0.01      : <0,01: +0.070±0.159 | +nan±nan;  0,01–0,03: +0.029±0.065 | +0.143±0.152;  0,03–0,1: +0.001±0.017 | -0.001±0.016;  Steigung -0.115 ± 0.067
+   Kugelmittel 0.03      : <0,01: +0.282±0.153 | +nan±nan;  0,01–0,03: +0.099±0.067 | +0.207±0.150;  0,03–0,1: +0.008±0.019 | +0.004±0.017;  Steigung -0.283 ± 0.073
+   — zum Vergleich ohne Gasdruck (σ = 0):
+   ohne                  : <0,01: -0.076±0.128 | +nan±nan;  0,01–0,03: -0.031±0.047 | +0.119±0.146;  0,03–0,1: -0.021±0.017 | -0.009±0.017;  Steigung -0.032 ± 0.070
+   senkrecht 0.003       : <0,01: -0.066±0.144 | +nan±nan;  0,01–0,03: -0.028±0.050 | +0.121±0.143;  0,03–0,1: -0.021±0.019 | -0.009±0.017;  Steigung -0.042 ± 0.068
+   senkrecht 0.01        : <0,01: +0.002±0.129 | +nan±nan;  0,01–0,03: -0.002±0.052 | +0.140±0.132;  0,03–0,1: -0.016±0.019 | -0.007±0.016;  Steigung -0.097 ± 0.071
+   senkrecht 0.03        : <0,01: +0.169±0.149 | +nan±nan;  0,01–0,03: +0.087±0.056 | +0.220±0.160;  0,03–0,1: +0.011±0.018 | +0.014±0.016;  Steigung -0.249 ± 0.072
+   Steigung d Rest/d log a_N innerhalb der Galaxien mit Υ_d = 0,4 / 0,6 (Υ_b mitskaliert), σ = 8 km/s:
+   ohne                  : -0.076 ± 0.059 / -0.099 ± 0.054
+   senkrecht 0.01        : -0.153 ± 0.073 / -0.158 ± 0.065
+   senkrecht 0.03        : -0.309 ± 0.067 / -0.309 ± 0.066
+   Anzahl Galaxien mit Referenzrest (0,1–1 a₀, ≥ 2 Punkte): 32 von 72
+
+3  Steigung d ln v/d ln r der äußersten 3 Punkte, gemessen (V_c mit Gasdruck) und Regel mit eigenen Baryonen, je Bereich a_N/a₀ am letzten Punkt
+   Median über Galaxien; Fehler: Bootstrap über Galaxien ⊕ Monte-Carlo (Abstand, Neigung, Υ 0,1 dex, Geschwindigkeitsfehler; 200 Ziehungen)
+   Galaxien je Bereich: <0,01: 3, 0,01–0,03: 29, 0,03–0,05: 40
+   ohne                  : gem +0.328 Regel +0.118 Δ +0.195±0.265 (B 0.170, MC 0.204);  gem +0.158 Regel +0.048 Δ +0.066±0.101 (B 0.056, MC 0.084);  gem +0.129 Regel +0.196 Δ -0.076±0.088 (B 0.060, MC 0.065)
+   senkrecht 0.003       : gem +0.328 Regel +0.080 Δ +0.221±0.270 (B 0.166, MC 0.213);  gem +0.158 Regel +0.042 Δ +0.068±0.103 (B 0.054, MC 0.088);  gem +0.129 Regel +0.195 Δ -0.076±0.093 (B 0.059, MC 0.071)
+   senkrecht 0.01        : gem +0.328 Regel -0.082 Δ +0.343±0.251 (B 0.126, MC 0.217);  gem +0.158 Regel -0.009 Δ +0.124±0.104 (B 0.057, MC 0.087);  gem +0.129 Regel +0.187 Δ -0.074±0.095 (B 0.062, MC 0.072)
+   senkrecht 0.03        : gem +0.328 Regel -0.205 Δ +0.452±0.221 (B 0.082, MC 0.205);  gem +0.158 Regel -0.188 Δ +0.333±0.121 (B 0.083, MC 0.089);  gem +0.129 Regel +0.133 Δ -0.055±0.100 (B 0.073, MC 0.068)
+   gleichgerichtet 0.003 : gem +0.328 Regel +0.026 Δ +0.264±0.260 (B 0.147, MC 0.215);  gem +0.158 Regel +0.004 Δ +0.108±0.108 (B 0.062, MC 0.089);  gem +0.129 Regel +0.182 Δ -0.071±0.095 (B 0.062, MC 0.072)
+   gleichgerichtet 0.01  : gem +0.328 Regel -0.072 Δ +0.342±0.248 (B 0.121, MC 0.216);  gem +0.158 Regel -0.069 Δ +0.182±0.112 (B 0.070, MC 0.088);  gem +0.129 Regel +0.154 Δ -0.062±0.096 (B 0.064, MC 0.072)
+   gleichgerichtet 0.03  : gem +0.328 Regel -0.157 Δ +0.413±0.237 (B 0.100, MC 0.215);  gem +0.158 Regel -0.172 Δ +0.312±0.120 (B 0.081, MC 0.088);  gem +0.129 Regel +0.102 Δ -0.019±0.102 (B 0.071, MC 0.073)
+   Kugelmittel 0.003     : gem +0.328 Regel +0.110 Δ +0.200±0.267 (B 0.160, MC 0.213);  gem +0.158 Regel +0.047 Δ +0.066±0.104 (B 0.057, MC 0.087);  gem +0.129 Regel +0.196 Δ -0.076±0.093 (B 0.060, MC 0.071)
+   Kugelmittel 0.01      : gem +0.328 Regel -0.155 Δ +0.350±0.278 (B 0.176, MC 0.216);  gem +0.158 Regel +0.036 Δ +0.071±0.103 (B 0.053, MC 0.089);  gem +0.129 Regel +0.194 Δ -0.076±0.094 (B 0.061, MC 0.071)
+   Kugelmittel 0.03      : gem +0.328 Regel -0.226 Δ +0.474±0.225 (B 0.072, MC 0.213);  gem +0.158 Regel -0.217 Δ +0.353±0.158 (B 0.112, MC 0.111);  gem +0.129 Regel +0.180 Δ -0.073±0.099 (B 0.066, MC 0.074)
+   — ohne Gasdruck (σ = 0):
+   ohne                  : gem +0.189 Regel +0.118 Δ +0.072±0.339 (B 0.136, MC 0.310);  gem +0.127 Regel +0.048 Δ +0.033±0.116 (B 0.067, MC 0.095);  gem +0.094 Regel +0.196 Δ -0.108±0.088 (B 0.056, MC 0.069)
+   senkrecht 0.03        : gem +0.189 Regel -0.205 Δ +0.394±0.306 (B 0.052, MC 0.302);  gem +0.127 Regel -0.188 Δ +0.268±0.142 (B 0.102, MC 0.099);  gem +0.094 Regel +0.133 Δ -0.076±0.096 (B 0.064, MC 0.072)
+   Trend von Δ = gemessen − Regel gegen log(a_N/a₀) am letzten Punkt (Theil-Sen, Bootstrap; Spearman):
+   ohne                  : dΔ/d log a_N = -0.275 ± 0.175; ρ = -0.170 (p = 0.15); Median Δ alle -0.012
+   senkrecht 0.003       : dΔ/d log a_N = -0.317 ± 0.166; ρ = -0.185 (p = 0.12); Median Δ alle -0.002
+   senkrecht 0.01        : dΔ/d log a_N = -0.457 ± 0.166; ρ = -0.285 (p = 0.02); Median Δ alle +0.021
+   senkrecht 0.03        : dΔ/d log a_N = -0.727 ± 0.189; ρ = -0.377 (p = 0.00); Median Δ alle +0.092
+   gleichgerichtet 0.003 : dΔ/d log a_N = -0.363 ± 0.170; ρ = -0.224 (p = 0.06); Median Δ alle +0.012
+   gleichgerichtet 0.01  : dΔ/d log a_N = -0.494 ± 0.183; ρ = -0.281 (p = 0.02); Median Δ alle +0.057
+   gleichgerichtet 0.03  : dΔ/d log a_N = -0.592 ± 0.194; ρ = -0.311 (p = 0.01); Median Δ alle +0.119
+   Kugelmittel 0.003     : dΔ/d log a_N = -0.283 ± 0.155; ρ = -0.176 (p = 0.14); Median Δ alle -0.010
+   Kugelmittel 0.01      : dΔ/d log a_N = -0.378 ± 0.175; ρ = -0.230 (p = 0.05); Median Δ alle +0.010
+   Kugelmittel 0.03      : dΔ/d log a_N = -0.903 ± 0.215; ρ = -0.468 (p = 0.00); Median Δ alle +0.074
+   χ² der drei Bereichsmediane (Δ/Fehler)², σ = 8 km/s:
+   ohne                  : χ² =   1.71
+   senkrecht 0.003       : χ² =   1.78
+   senkrecht 0.01        : χ² =   3.91
+   senkrecht 0.03        : χ² =  12.01
+   gleichgerichtet 0.003 : χ² =   2.60
+   gleichgerichtet 0.01  : χ² =   4.94
+   gleichgerichtet 0.03  : χ² =   9.85
+   Kugelmittel 0.003     : χ² =   1.64
+   Kugelmittel 0.01      : χ² =   2.70
+   Kugelmittel 0.03      : χ² =  10.00
+
+4  R_Q: a_N/a₀ = s_kosm² = (ln q_kosm)² = 0.0292; χ dort = s/(e^s − 1) = 0.9170
+   Kurven, deren letzter Punkt jenseits R_Q liegt (a_N < 0.029 a₀): 31 von 149
+   Kurven mit ≥ 2 Punkten beiderseits (a_N < s_kosm² und s_kosm²–0,1): 29
+   ohne            : Sprung Rest(jenseits R_Q) − Rest(diesseits bis 0,1 a₀) Median +0.069 ± 0.044 dex (n = 29); Knick der Steigung +0.138 ± 0.167 (n = 25)
+   senkrecht 0.03  : Sprung Rest(jenseits R_Q) − Rest(diesseits bis 0,1 a₀) Median +0.150 ± 0.050 dex (n = 29); Knick der Steigung -0.132 ± 0.168 (n = 25)
+   ohne, σ = 0     : Sprung Rest(jenseits R_Q) − Rest(diesseits bis 0,1 a₀) Median +0.040 ± 0.042 dex (n = 29); Knick der Steigung +0.206 ± 0.182 (n = 25)
+   Regel bei a_N = 0.1000 a₀: χ = 0.8502, d ln a/d ln a_N = 0.5749, Punktmasse d ln v/d ln r = -0.0749
+   Regel bei a_N = 0.0292 a₀: χ = 0.9170, d ln a/d ln a_N = 0.5415, Punktmasse d ln v/d ln r = -0.0415
+   Regel bei a_N = 0.0100 a₀: χ = 0.9508, d ln a/d ln a_N = 0.5246, Punktmasse d ln v/d ln r = -0.0246
+
+6  Gegenprobe von Hand (eigener Code ohne ftm_kern, eine Galaxie):
+   D564-8: R_d = 0.61 kpc; letzte 3 Zeilen (R, V_obs, V_gas, V_disk, V_bul):
+   R =   2.04: V_obs =  21.90, V_bar² =    85.34 (km/s)², a_N/a₀ = 0.01232, ν = 9.5168, V_c =  26.34, V_Regel =  28.50, Rest = -0.0685 dex
+   R =   2.56: V_obs =  24.00, V_bar² =    83.08 (km/s)², a_N/a₀ = 0.00956, ν = 10.7352, V_c =  29.06, V_Regel =  29.86, Rest = -0.0236 dex
+   R =   3.07: V_obs =  25.00, V_bar² =    78.82 (km/s)², a_N/a₀ = 0.00756, ν = 12.0050, V_c =  30.77, V_Regel =  30.76, Rest = +0.0004 dex
+   Steigung gemessen: +0.3831
+   Steigung Regel: +0.1877
+   dasselbe mit dem Skript (ftm_kern): a_N/a₀ letzter Punkt 0.00756, Steigung gemessen +0.3831, Regel +0.1877, Rest letzter Punkt +0.0004
+   Punkt 2 von Hand: s_kosm² = (ln(5,364/6,364))² = 0.02922

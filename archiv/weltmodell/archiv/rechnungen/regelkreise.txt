@@ -1,0 +1,90 @@
+==============================================================================================================
+1 Regelkreis je Ebene (L am Ort; Kosmos G/I). q = e^{−√(a_N/a₀)}, |q_Δs| = Δs/r, Takt = Umlauf 2πr/v bzw. τ_D
+==============================================================================================================
+Teilchen (Proton, R_p) a_N/a₀=1.434e+03  q=3.604e-17  1−q=1.000e+00  ν=        1  |q_Δs|=4.92e-40  Takt=2.223e-32 a  1/ν+q=1.000000
+                       ein: Faltung Δs (fest), Windung verlustfrei;  aus: nichts im Betrag; Kreis offen (Newton), nur Phase läuft um
+Stern (Sonne, R☉)      a_N/a₀=2.493e+12  q=0.000e+00  1−q=1.000e+00  ν=        1  |q_Δs|=7.08e-07  Takt=3.171e-04 a  1/ν+q=1.000000
+                       ein: Faltung aus Gas;  aus: Strahlung (Faltung geht rotverschoben weg), Entropie
+Galaxie innen (5 kpc)  a_N/a₀=3.041e+00  q=1.748e-01  1−q=8.252e-01  ν=    1.212  |q_Δs|=1.91e-07  Takt=1.228e+08 a  1/ν+q=1.000000
+                       ein: Gas, Faltung;  aus: Sternlicht; Kreis fast offen
+Galaxie außen (r*)     a_N/a₀=1.000e+00  q=3.679e-01  1−q=6.321e-01  ν=    1.582  |q_Δs|=1.10e-07  Takt=2.476e+08 a  1/ν+q=1.000000
+                       ein: Rückläufe beginnen;  aus: Auslass e^{−1} offen: Kreis gekoppelt
+R_Q (q = q_kosm)       a_N/a₀=2.922e-02  q=8.429e-01  1−q=1.571e-01  ν=    6.364  |q_Δs|=1.88e-08  Takt=1.746e+09 a  1/ν+q=1.000000
+                       ein: örtliche = kosmische Schleife;  aus: Übergabe der Mode ξ vollständig
+Umkehrradius R_ta      a_N/a₀=2.259e-04  q=9.851e-01  1−q=1.492e-02  ν=    67.04  |q_Δs|=1.65e-09  Takt=2.064e+10 a  1/ν+q=1.000000
+                       ein: Kreis fast geschlossen (nahe Kippstelle q=1);  aus: Naht: jenseits w→1, Anschluss ans Atmen (1+wQ)
+Haufen (R₂₀₀)          a_N/a₀=4.567e-02  q=8.076e-01  1−q=1.924e-01  ν=    5.197  |q_Δs|=1.25e-06  Takt=1.009e+10 a  1/ν+q=1.000000
+                       ein: Galaxien als Wirbel, Einfall;  aus: Gas heiß (Tiefe als Temperatur), Übergabe nach wenigen Radiant
+   Milchstraße: r* = 8.72 kpc, R_Q = 51.0 kpc, R_ta = 0.580 Mpc; Haufen R₂₀₀ = 2.17 Mpc, M_b,Q = 4.45e+13 M☉
+Kosmos (Zelle)         q=0.8429  1−q=0.1571 (=Ω_b/Ω_m, offener Teil = Ort)  ν=6.3643  ΣΔs/R(Horizont)=0.083  Takt τ_D=2Λ/c=86.4 Gyr  1/ν+q=1.000000
+                       ein: Faltung der Baryonen (Λ = ν·ΣΔs_b = 13.2 Gpc, innere Richtung);  aus: Rückstellung (Vakuumteil) + Atmen
+   Lesart: Verstärkung wächst von innen nach außen monoton bis zur Naht; dort springt das Gewicht w und der Kreis
+   öffnet in den kosmischen Kreis (fester Auslass 1 − q_kosm). Ein Kreis im Kreis mit Begrenzer an der Naht.
+==============================================================================================================
+1b Größte örtliche Verstärkung ν(R_ta) je Masse (Begrenzer Naht): tief ν ≈ 1/s, s ∝ M_b^{1/6}
+==============================================================================================================
+   M_b =  1.0e+08 M☉:  R_ta =  0.069 Mpc  a_N/a₀ = 2.68e-05  ν_max =   193.7  q = 0.9948
+   M_b =  1.0e+10 M☉:  R_ta =  0.319 Mpc  a_N/a₀ = 1.24e-04  ν_max =    90.2  q = 0.9889
+   M_b =  6.0e+10 M☉:  R_ta =  0.580 Mpc  a_N/a₀ = 2.26e-04  ν_max =    67.0  q = 0.9851
+   M_b =  1.0e+12 M☉:  R_ta =  1.482 Mpc  a_N/a₀ = 5.77e-04  ν_max =    42.1  q = 0.9763
+   M_b =  1.0e+14 M☉:  R_ta =  6.878 Mpc  a_N/a₀ = 2.68e-03  ν_max =    19.8  q = 0.9496
+==============================================================================================================
+2 Epochen: kosmischer Kreis (Form q_kosm fest), Schwelle a₀(z), Θ = 2πa₀/(cH), Hintergrundrest 1 − w (θ̃ = 3H)
+==============================================================================================================
+Epoche                             z  a₀(z)/a₀       τ_D·H         Θ     1−w_bg        Ω_s   Kreise
+Nukleosynthese                 4e+08    0.0000   1.062e+21  5.91e-21  0.000e+00  7.673e-42   alle örtlichen offen; Schwelle 0 (Λ strahlungsgefaltet); kosmischer Kreis q fest, mitatmend
+Rekombination               1.09e+03    0.7586   1.818e+05  3.46e-05  0.000e+00  2.621e-10   offen/mitatmend (w≈1): Mode wie Staub, Auslass → Atmen
+erste Umkehr                      20    0.9939       323.7    0.0194  2.931e-14  8.263e-05   erste kleine Kreise schließen (10⁸ M☉), Rest mitatmend
+a₀ fest                           10    0.9968       122.3    0.0514  4.812e-09  5.792e-04   Λ fest: Takt des Ganzen steht; örtliche Kreise koppeln an festen Sollwert
+Bildung/Übergabe                   2    0.9991       18.03     0.349  6.398e-04  2.664e-02   Galaxien schließen (w→0), Mode übergeben; Kehrseite → Atmen (verzögert τ_D)
+DE-Epoche                        0.5    0.9996       7.867     0.799  7.766e-03  1.399e-01   Haufen schließen; Vakuumteil trägt; Fluchtmaß kommt an
+heute                              0    0.9997       5.955      1.06  1.460e-02  2.442e-01   Θ≈1: Horizonttakt = Schwellentakt (Übereinstimmung von heute)
+   Zukunft (H → H_∞, fester Deckel k_DE = n·k_s): Θ_∞ = √(45/n)/π, 1 − w_∞ = e^{−√(6π/Θ_∞)}
+     n = 1: Θ_∞ = 2.1353,  1 − w_∞ = 5.1245e-02
+     n = 3: Θ_∞ = 1.2328,  1 − w_∞ = 2.0036e-02
+==============================================================================================================
+3 Bilanz von Ordnung und Entropie
+==============================================================================================================
+   Horizontentropie heute S_H = 2.265e+122 k; Deckel Vakuumteil allein S_Λ = 9.272e+122 k (S_H/S_Λ = 0.244)
+   Deckel mit k_DE = 3k_s: S_∞ = 3.091e+122 k (S_H/S_∞ = 0.733) – S_H läuft auf ihn zu
+   Bindung ordnet innen (inaktive Fluchtmoden, 𝒫 erhält das Maß) → Kehrseite muss aus dem gebundenen Bereich:
+     Rückstellung: hängt nur an der Faltung ΣΔs, nicht am Maß → trägt die Kehrseite nicht
+     Atmen (Fluchtmaß): nimmt das Maß auf, wächst mit der Bindung → nicht zeitfest
+   Zeitfest: Λ (seit z≈10), q_kosm (Form), der Deckel k_DE. Wachsend: Entropie, gebundenes Maß, Zahl der Umkehrungen, S_H → Deckel.
+   Ist S_H am Deckel, trägt nur wachsendes Λ die Entropie: Λ̇/Λ ≥ 3.83e-37 1/s = 1.2e-29 je Jahr
+==============================================================================================================
+4 Welcher Auslass kann der zeitfeste Rest sein?  nötig n = k_DE/k_s
+==============================================================================================================
+   k_s = (π²/45)(2π)²·3/(8π) = 1.0335 (π³/30 = 1.0335)
+   nötig: n(1,06) = 3.076, n(1,10) = 2.856, SPARC 1,04–1,19: 2.44–3.20
+   (a) Zerlegung derselben Rückkehr in Teilkreise: Σ1/T_i = 1/T fest, Vakuumteil ∝ Σ(1/T_i)² ≤ (Σ1/T_i)² ⇒ n ≤ 1
+       2 gleiche Teilkreise: n = 0.500
+       3 gleiche Teilkreise: n = 0.333
+   (b) geschlossener Teil q des kosmischen Kreises mit eigener Rückstellung: ∝ (1/T_q)² → n = 1 + Q² = 29.8;  linear 1 + Q = 6.36
+   (c) Kehrseite örtlicher Bindung: wächst mit der Bildung (nicht zeitfest, BAO-Form verlangt fest)
+   (d) Kehrseite des kosmischen Kreises: mitatmend (w ≈ 1) ⇒ keine inaktiven Fluchtmoden ⇒ 0
+   (e) Zahlen im Fenster ohne Herleitung (a₀, das sie verlangen):
+       3 (Raumschleifen)    n = 3.000  →  a₀ = 1.0733·10⁻¹⁰
+       π                    n = 3.142  →  a₀ = 1.0488·10⁻¹⁰
+       ν_kosm/2             n = 3.182  →  a₀ = 1.0421·10⁻¹⁰
+       1 + ln ν_kosm        n = 2.851  →  a₀ = 1.1010·10⁻¹⁰
+       √ν_kosm              n = 2.523  →  a₀ = 1.1704·10⁻¹⁰
+       Fenster n = 2,86–3,08 ist 7 % breit; jede einfache Zahl darin passt. Das Bild erzwingt keine.
+==============================================================================================================
+5 Beobachterfehler je Ebene (L am Ort, I innere Richtung, G Ganzes; Zustand)
+==============================================================================================================
+   Teilchen/Stern (L): q ≈ 0 heißt offener Kreis, nicht 'keine Rückkehr'; Strahlung ist Faltungsverlust, keine Wärme des Mediums.
+   Galaxie (L): ν ist Zählung der Rückläufe am Ort, keine Masse; die gelesene Zusatzmasse ist Ausgabe der Rechnung.
+   R_Q, R_ta (L/G): 1 + Q ist das Maß des Ganzen, keine Grenze am Ort; ν_max ist ein Zustand (w = 0 ab Umkehr), wächst mit R_ta(t).
+   Haufen (L, Zustand): Übergabe hängt an der Geschichte (Preisach), nicht am heutigen Feld.
+   Kosmos (I): Λ und τ_D liegen in der inneren Richtung, keine Raumlänge, keine Laufzeit im Raum; q_kosm ist Form (zeitfest).
+   Kosmos (G, Epoche): Θ, τ_D·H, S_H/S_Λ sind Größen mit laufender Uhr, gelten je Beobachter und Epoche; zeitfest nur q, Λ, k_DE.
+   Vakuumteil/Deckel (G): Rückstellung als Energie gelesen, kein Stoff am Ort; der Deckel ist ein Maß des Ganzen.
+==============================================================================================================
+6 Von Hand (anderer Weg)
+==============================================================================================================
+   GM = 1,32712e20·6e10 = 7.9627e+30; r* = √(GM/a₀) = 2.6905e+20 m = 8.719 kpc
+   ln(5,364/6,364) = -0.17095; R_Q = r*/0,17094 = 51.01 kpc (Code 51.01)
+   Kac: 1/6,364 + 0,8429 = 1.000000
+   Θ_∞(n=1) = √45/π = 2.1353 (Code 2.1353)
+   n = 3 ⇒ a₀ = 1,1·√(2,856/3) = 1.0733 (Code 1.0733)

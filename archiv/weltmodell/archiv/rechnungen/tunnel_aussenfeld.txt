@@ -1,0 +1,19 @@
+1) ν bei 50 kpc (Milchstraße, g_e = 0,03·a₀) je Zusammensetzung:
+   frei 6.249 | Vektor senkrecht 5.356 | Vektor gleichgerichtet 4.589 | Matthiessen 4.589 | Reihe 3.406
+   (die Reihe senkt die Verstärkung am stärksten; nur die Vektorform hängt an der Richtung)
+
+2) Signatur der Vektorform: g_e in der Scheibenebene; v_c²(φ) = −R·a_int·e_R; Fourier-Anteile von v_c(φ)
+   R [kpc] | g_i/a₀ | v_c Mittel [km/s] | frei [km/s] | m = 1 Amplitude [%] | m = 2 Amplitude [%] | senkrechtes g_e: m = 1, m = 2
+        5  |  3.041 |             250.1 |       250.1 |                2.16 |                0.01 | 3.6e-16, 7.8e-16
+       10  |  0.760 |             210.4 |       210.6 |                5.88 |                0.08 | 1.1e-15, 1.3e-15
+       20  |  0.190 |             189.9 |       191.1 |               12.95 |                0.36 | 9.5e-16, 1.1e-15
+       30  |  0.084 |             181.2 |       184.7 |               18.52 |                0.59 | 9.1e-15, 4.1e-15
+       50  |  0.030 |             160.2 |       179.6 |               19.64 |                4.04 | 6.5e-16, 7.3e-16
+
+3) Bezug der Galaxie als Ganzes: B = ν(g_e)·g_e (Feldform, Impuls erhalten) gegen A = g_e (Masse im Newtonschen Zentrum, ν = 1)
+   R [kpc] | m = 1 [%] Bezug B | m = 1 [%] Bezug A | Relativbeschleunigung außen/innen (A) in g_i·ν
+        5  |               2.2 |               0.0 | 0.002
+       10  |               5.9 |               0.2 | 0.016
+       20  |              12.9 |               2.0 | 0.102
+       30  |              18.5 |               6.0 | 0.266
+       50  |              19.6 |              36.1 | 0.829

@@ -1,0 +1,26 @@
+1) Welche Faltungstiefe hat ein Stern? Die Sternmassen-Skala M_* = m_Pl³/m_p² (Landau/Chandrasekhar)
+   M_* = 3.685e+30 kg = 1.85 M☉,   Δs_* = 912.2 m
+   FTM-Längenform:  Δs_*² · Δs_p = (λ̄_p/3)³   ->  3.4452e-49 = 3.4452e-49
+   Gleichwertig: 3Δs_*/λ̄_p = α_G^(-1/2) = 1.3012e+19  (Proton: 3Δs_p/λ̄_p = α_G^(+1) = 5.906e-39)
+   Sonne                          Δs =   492.4 m
+   Chandrasekhar-Grenze 1,44 M☉   Δs =   709.0 m
+   -> Sterne sind die Trichter, deren Faltung die geometrische Mitte zwischen Proton-Faltung und Compton-Länge trifft.
+
+2) Photosphäre eines Sterns in Faltungsgrößen (Größenordnung, Thomson-Opazität, T_c ~ α² m_p c²):
+   Hydrostatik (parametrisch): kT_c ~ G M m_p/R = 3c²Δs·m_p/R
+   Strahlungstransport (tangential/transversal): σ_T = (8π/3)·r_e²  (EM-Radius des Elektrons!)
+   L ~ T_c⁴ R⁴ m_p/(σ_T M),  T_s⁴ = L/(4πR²σ_SB)  =>  T_s⁴ ~ α²·m_p³·m_e²/m_Pl   (mit M ~ M_*, T_c ~ α² m_p)
+   => kT_s ~ √(α·m_e c² · kT_×)  mit kT_× = m_p c² α_G^(1/4) = 0.2601 eV  (Proton-Kreuzung, Rekombination)
+      √(α m_e c² · kT_×) = 31.1 eV   (reine Skala ohne Vorfaktoren)
+
+3) Die Photosphäre liegt an der Ionisationsgrenze (Übergang Strahlung/Konvektion) genau dann, wenn:
+   kT_s ~ α² m_e c²  ⟺  kT_× ~ α³ m_e c²  ⟺  α_G ~ α¹²(m_e/m_p)⁴  (Carter)
+   α² m_e c² = 27.21 eV;  α³ m_e c² = 0.1986 eV;  kT_× = 0.2601 eV
+   -> Dieselbe Temperatur kT_× regelt (a) wann das Proton kosmisch zum Einzeltrichter wird und
+      (b) über √(α m_e c² · kT_×) die Temperaturskala der Stern-Oberflächen.
+
+4) Ehrliche Vorfaktor-Prüfung an der Sonne (Größenordnung):
+   Virialtemperatur T_c ≈ 1.156e+07 K  (Modell der Sonne: 1,57e7 K)
+   L mit Thomson-Opazität ≈ 2.80e+28 W  (gemessen 3.83e+26 W)  ->  T_s ≈ 16887 K  (gemessen 5772 K)
+   -> Die Skalen stimmen in der Größenordnung; die Vorfaktoren (reale Opazität, Gradienten, Kernfusion)
+      sind mit dieser Grobrechnung nicht genau zu treffen.

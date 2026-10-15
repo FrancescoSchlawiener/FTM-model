@@ -1,0 +1,61 @@
+Eingaben: H₀ = 67,4, Ω_b = 0.0492, Q = 5.364, Ω_m = 0.3134, Ω_r = 9.14e-05, k_s = π²/45 = 0.2193, a₀(0) = cH₀/2π = 1.042e-10 m/s²
+
+0) Verlangte Form: ρ_s(z) = ρ_DE,CPL(z) − (Ω_DE − k_s), a₀(z)/a₀(0) = √(ρ_s/k_s)   (DESI DR2 + CMB + SN, CPL-Werte [G])
+   Kombination     z_max   max/heute   a₀(1)/a₀(0)   a₀(2)/a₀(0)   heute/max   z=1/max   s₀ = dln a₀/dln a
+   Pantheon+       0.35      1.108        0.965         0.510      0.903     0.871   -0.76
+   DESY5           0.40      1.182        1.027         0.442      0.846     0.869   -1.16
+   Union3          0.44      1.259        1.094         0.393      0.795     0.869   -1.56
+   Robust: Maximum bei z = 0,35–0,44; heute/max = 0,80–0,91; a₀(1)/max = 0,87; heutige Steigung −0,76 bis −1,56.
+
+1) Kandidaten X(z) im selbstkonsistenten H(z) (a₀ ∝ X, Θ₀ = 1). Formwerte X/X(heute); s₀ = dln X/dln a heute.
+   Kandidat                                        z_max    max/heute  X(1)/X₀  X(2)/X₀   s₀      w₀ / w_a (ges. DE)  Ω_s(1090)
+   Gewicht 1 − w, a₀ = cH/2π                       konstant: 1 − w = 1/(1 + 36π²) = 2.81e-03 zu jeder Zeit (a₀ ∝ H), kein Extremum
+   Gewicht 1 − w, a₀ fest                          Zukunft     1.209     0.334     0.112   +0.65   -1.232 / +0.297   3.3e-27 
+   Rate d(1 − w)/dt, a₀ fest                          0.64     1.484     1.405     0.979   -1.59   -0.553 / -1.146   (1 Schritt im ΛCDM-Hintergrund; Iteration: a₀ < 0 bei z = 0.01 bis 5.00)
+   Anteil jenseits Umkehr F(>M_Q)                  Zukunft     1.510     0.285     0.064   +1.05   -1.276 / +0.406   0.0e+00 (Rest 1e-08)
+     Rate dF/d ln a                                   0.35     1.114     0.886     0.382   -0.68   -0.856 / -0.612   (1 Schritt im ΛCDM-Hintergrund; Iteration: a₀ < 0 bei z = 0.00 bis 5.00)
+     Rate dF/dt                                       1.01     1.587     1.582     1.154   -1.15   -0.540 / -1.092   (1 Schritt im ΛCDM-Hintergrund; Iteration: a₀ < 0 bei z = 0.06 bis 1.79)
+   lineares Wachstum dD/d ln a = fD                   0.44     1.103     1.017     0.769   -0.52   -0.875 / -0.426   3.3e-15 (Rest 8e-09)
+   lineares Wachstum dD/dt                            Rand     6.948     1.871     2.463   -1.09   -0.749 / +0.106   1.6e-06 (Rest 3e-08)
+   Gleichstand Ω_m·Ω_DE (ges.)                        0.35     1.160     0.705     0.235   -0.90   -0.880 / -0.581   9.3e-27 
+   Gleichstand Ω_m·Ω_s (Vakuumteil fest)              0.32     1.093     0.819     0.336   -0.59   -0.892 / -0.532   2.0e-26 
+   mitbewegter Hubble-Radius c/(aH)                   0.68     1.124     1.110     0.991   -0.43   -0.885 / -0.297   1.3e-12 
+     d(H⁻²)/dt ∝ ε/H                                  0.64     1.480     1.399     0.974   -1.59   -0.556 / -1.141   (1 Schritt im ΛCDM-Hintergrund; Iteration: a₀ < 0 bei z = 0.01 bis 0.01)
+   Zerfall des Potentials (1 − f)D/a                 -0.30     1.191     0.230     0.076   +1.13   -1.315 / +0.506   0.0e+00 (Rest 2e-08)
+   Rückstellung ΣΔs(<c/H)/(c/H) = Ω_b/6              16.22     3.164     2.049     2.590   -1.43   -0.633 / -0.131   3.3e-09 
+   Rückstellung ΣΔs(<R_P)/R_P                         1.97     1.171     1.156     1.171   -0.37   -0.916 / -0.127   3.3e-11 
+   Rückstellung ΣΔs(<c/H) absolut                     0.76     1.327     1.304     0.975   -0.96   -0.699 / -0.777   8.1e-18 
+   (z_max „Rand“: größter Wert am frühen Ende z = 20; „Zukunft“: Maximum bei z < −0,5.)
+
+2) Epochen im Hintergrund (ΛCDM-Form mit Q; Θ₀ = 1):
+   Bremsen/Beschleunigen ä = 0 bei z = 0.636;  ρ_m = ρ_DE bei z = 0.299;  ρ_m = ρ_s (Vakuumteil π²/45, fest) bei z = -0.112
+   M_Q(z) (R_Q = R₂₀₀, a₀ = cH/2π): heute 2.41e+14 M☉, z = 0,4: 1.94e+14, z = 1: 1.35e+14
+
+   Abhängigkeit der Lage des Maximums von dF/d ln a von Konventionen (ΛCDM-Hintergrund): Schwellwert δ, Überdichte Δ von R_Δ, Schwelle in M_Q
+   δ = 1.062 (Umkehr):  Δ=100 atmend:  0.01;  Δ=100 fest:  5.91;  Δ=200 atmend:  0.35;  Δ=200 fest:  5.93;  Δ=500 atmend:  0.84;  Δ=500 fest:  5.89
+   δ = 1.686 (Kollaps):  Δ=100 atmend: -0.33;  Δ=100 fest:  4.02;  Δ=200 atmend: -0.09;  Δ=200 fest: -0.35;  Δ=500 atmend:  0.24;  Δ=500 fest:  3.22
+
+3) Bindungsteil des Strukturterms, Anteil am Vakuumteil ⟨Q_s⟩/(4π⁴/15); a₀ = cH/2π, Hintergrund ΛCDM-Form; wirkt negativ auf ρ_s
+   J(R_Q/r*) = J(5.85) = 36.25;  σ_g/a₀ heute (baryonisch) = 0.0015
+   z                   0.0      0.2      0.4      0.6      0.8      1.0      1.5      2.0      3.0
+   lineares Feld   2.9e-06  3.6e-06  4.1e-06  4.4e-06  4.5e-06  4.5e-06  4.3e-06  4.0e-06  3.3e-06
+   Trichter bis R_Q5.2e-07  5.9e-07  5.9e-07  5.6e-07  5.0e-07  4.4e-07  2.9e-07  1.9e-07  8.5e-08
+   Maximum: lineares Feld bei z = 0.90 (×1.58 gegen heute, z = 1: ×1.58, z = 2: ×1.38);  Trichter bei z = 0.33 (×1.15, z = 1: ×0.84, z = 2: ×0.37)
+   → Form mit innerem Maximum, Betrag 10⁻⁷–10⁻⁴ des Vakuumteils, Vorzeichen negativ: an seinem Maximum ist ρ_s am kleinsten.
+
+4) Vergleich mit der verlangten Form (DESY5 [G]: z_max = 0,41, max/heute = 1,18, a₀(1)/max = 0,87, s₀ = −1,16; w₀ > −1, w_a < 0)
+   Gewicht 1 − w, a₀ fest                          inneres Maximum: nein;  Lage 0,3–0,5: nein;  DESI-Quadrant: nein
+   Rate d(1 − w)/dt, a₀ fest                       inneres Maximum: ja bei 0.64;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+   Anteil jenseits Umkehr F(>M_Q)                  inneres Maximum: nein;  Lage 0,3–0,5: nein;  DESI-Quadrant: nein
+     Rate dF/d ln a                                inneres Maximum: ja bei 0.35;  Lage 0,3–0,5: ja;  DESI-Quadrant: ja
+     Rate dF/dt                                    inneres Maximum: ja bei 1.01;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+   lineares Wachstum dD/d ln a = fD                inneres Maximum: ja bei 0.44;  Lage 0,3–0,5: ja;  DESI-Quadrant: ja
+   lineares Wachstum dD/dt                         inneres Maximum: nein;  Lage 0,3–0,5: nein;  DESI-Quadrant: nein
+   Gleichstand Ω_m·Ω_DE (ges.)                     inneres Maximum: ja bei 0.35;  Lage 0,3–0,5: ja;  DESI-Quadrant: ja
+   Gleichstand Ω_m·Ω_s (Vakuumteil fest)           inneres Maximum: ja bei 0.32;  Lage 0,3–0,5: ja;  DESI-Quadrant: ja
+   mitbewegter Hubble-Radius c/(aH)                inneres Maximum: ja bei 0.68;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+     d(H⁻²)/dt ∝ ε/H                               inneres Maximum: ja bei 0.64;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+   Zerfall des Potentials (1 − f)D/a               inneres Maximum: nein;  Lage 0,3–0,5: nein;  DESI-Quadrant: nein
+   Rückstellung ΣΔs(<c/H)/(c/H) = Ω_b/6            inneres Maximum: ja bei 16.22;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+   Rückstellung ΣΔs(<R_P)/R_P                      inneres Maximum: ja bei 1.97;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja
+   Rückstellung ΣΔs(<c/H) absolut                  inneres Maximum: ja bei 0.76;  Lage 0,3–0,5: nein;  DESI-Quadrant: ja

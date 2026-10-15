@@ -1,0 +1,183 @@
+
+====================================================================================================
+0) Konstanten und Eingaben
+====================================================================================================
+  l_P = sqrt(hbar G/c^3) = 1.6162e-35 m,   t_P = 5.3911e-44 s
+  H0 = 70 km/s/Mpc = 2.2685e-18 1/s,  Omega_m = 0.3,  Omega_L = 0.7,  H_Lambda = H0 sqrt(Omega_L) = 1.8980e-18 1/s
+  Alter aus a(t) = (Om/OL)^(1/3) sinh^(2/3)(1.5 sqrt(OL) H0 t):  t0 = 1.3467e+10 a  (Kontrolle)
+  Fuer Verhaeltnisse und Raten wird das gemessene Weltalter t0 = 1.380e+10 a verwendet.
+  T_CMB = 2.7255 K,  R_obs = 4.400e+26 m,  M_U = 1.500e+53 kg (FTM-Eingabe)
+
+====================================================================================================
+1) Lokale Engstelle: Bekenstein-Hawking-Entropie, Hawking-Temperatur, Verdampfung in Ds
+====================================================================================================
+  Falte                             Ds      r0=6Ds        S/k    T_H [K]   t_ev [a]    t_ev/t0
+  stellar 10 M_S               4.92 km     29.5 km  1.049e+79  6.169e-09  2.097e+70  1.520e+60
+  Sonne als Falte 1 M_S          492 m     2.95 km  1.049e+77  6.169e-08  2.097e+67  1.520e+57
+  Sgr A* 4,15e6 M_S          0.0137 AE   0.0819 AE  1.807e+90  1.486e-14  1.499e+87  1.086e+77
+  M87* 6,5e9 M_S               21.4 AE      128 AE  4.434e+96  9.490e-18  5.759e+96  4.173e+86
+  Milchstrasse 6e10 M_S         197 AE 1.18e+03 AE  3.778e+98  1.028e-18  4.530e+99  3.283e+89
+  Universum 1,5e53 kg      1.2e+03 Mpc 7.22e+03 Mpc 5.969e+122  8.180e-31 8.995e+135 6.518e+125
+
+  Kontrolle Ds-Form gegen Standardform (Quotienten muessen 1 sein):
+    stellar 10 M_S         S: 1.000000000000   T: 1.000000000000   t_ev: 1.000000000000   Smarr 2TS/(Mc^2): 1.000000000000
+    M87* 6,5e9 M_S         S: 1.000000000000   T: 1.000000000000   t_ev: 1.000000000000   Smarr 2TS/(Mc^2): 1.000000000000
+  Identitaet t_ev = 3840 (S/k) (Ds/c):  1.000000000000
+  Hinweis: t_ev ist Hawkings Abschaetzung (nur Photonen, ohne Grauekoerperfaktoren); Page (1976) mit realen
+  Teilchenarten aendert den Vorfaktor um eine Groessenordnung O(1), nicht die M^3-Skalierung.
+
+====================================================================================================
+1b) Rueckgabe erst, wenn der Aussenraum kaelter ist als die Falte: T_CMB(a) = T_CMB/a < T_H
+====================================================================================================
+  Heute gilt T_H = T_CMB fuer M = 4.502e+22 kg (= 0.61 Mondmassen).
+  Jede astrophysikalische Falte ist heute kaelter als der CMB und waechst netto (Absorption > Emission).
+  Untergrenze des Aussenraums (de Sitter): T_GH = hbar H_L/(2 pi k) = 2.307e-30 K
+  Falte                     a_start=T_CMB/T_H  t_start [a]   T_H/T_GH
+  stellar 10 M_S                    4.418e+08    3.448e+11  2.674e+21
+  Sonne als Falte 1 M_S             4.418e+07    3.063e+11  2.674e+22
+  Sgr A* 4,15e6 M_S                 1.834e+14    5.608e+11  6.442e+15
+  M87* 6,5e9 M_S                    2.872e+17    6.836e+11  4.113e+12
+  Milchstrasse 6e10 M_S             2.651e+18    7.207e+11  4.456e+11
+  Universum 1,5e53 kg               3.332e+30    1.186e+12  3.545e-01
+  -> Fuer alle Falten bis 6e10 M_S setzt die Nettoverdampfung nach ~1e11-1e12 Jahren ein (Expansion kuehlt den
+     Aussenraum), also verschwindend frueh gegen t_ev. Fuer die Universums-Masse gilt T_H < T_GH: keine Rueckgabe.
+
+====================================================================================================
+1c) Vergleich: Entropie der Materie der Sonne (Sackur-Tetrode, gemittelt) gegen dieselbe Masse als Falte
+====================================================================================================
+  mu = 0.605,  mittlere Temperatur (Virial, n=3) T = 6.947e+06 K,  mittlere Dichte = 1410 kg/m^3
+  S(Protonen) = 1.627e+58 k,  S(He) = 1.817e+57 k,  S(Elektronen) = 7.513e+57 k,  S(Strahlung) = 3.454e+55 k
+  S_Sonne ~ 2.563e+58 k   = 21.4 k pro Baryon
+  S_BH(1 M_S) = 1.049e+77 k   ->  Faktor S_BH/S_Sonne = 4.094e+18
+  -> Der Kollaps zur Falte erhoeht die Entropie um ~19 Groessenordnungen (Penrose).
+
+====================================================================================================
+1d) Entropie der kosmischen Hintergrundstrahlung
+====================================================================================================
+  n_gamma = 410.7 /cm^3,  s_gamma = 1479.3 k/cm^3,  s_nu = 1412.0 k/cm^3
+  V_obs = 3.568e+80 m^3
+  S_CMB = 5.278e+89 k,   S_Neutrinos = 5.038e+89 k
+  Vergleich: eine einzige Falte von 1e6 M_S hat S = 1.049e+89 k  (> S_CMB)
+  Eine Falte mit S = S_CMB haette M = 2.243e+06 M_S
+
+====================================================================================================
+1e) Syntropie als Ordnungsbildung mit Entropieexport: Beispiel Erde im Strahlungsstrom der Sonne
+====================================================================================================
+  absorbierte Leistung P = 1.215e+17 W,  T_ein = 5772.0 K,  T_aus = 255.0 K
+  Entropieexport J = (4/3) P (1/T_aus - 1/T_ein) = 6.072e+14 W/K = 4.398e+37 k/s
+  -> Ordnungsbildung (Syntropie) ist nur moeglich, weil eine heisse Quelle (die Falte Sonne) in einem kalten
+     Aussenraum steht. Die Falte erzeugt den Temperaturgradienten, der dissipative Strukturen treibt.
+
+====================================================================================================
+2) Informationserhalt: Page-Kurve (einfaches Modell S_BH(t) = S0 (1 - t/t_ev)^(2/3))
+====================================================================================================
+  grob gekoernte Strahlungsentropie S_rad = beta (S0 - S_BH);  feinkoernig (unitaer): S_vN = min(S_rad, S_BH)
+  beta = 1.0000:  Page-Zeit t_P/t_ev = 1 - (beta/(1+beta))^(3/2) = 0.6464,  S_BH(t_P)/S0 = 0.5000,  M(t_P)/M0 = 0.7071
+  beta = 1.4847:  Page-Zeit t_P/t_ev = 1 - (beta/(1+beta))^(3/2) = 0.5381,  S_BH(t_P)/S0 = 0.5975,  M(t_P)/M0 = 0.7730
+  (beta = 1,4847 ist Pages Verhaeltnis fuer Photonen+Gravitonen; Page 2013: t_Page = 0,5381 t_ev, 40,25 % von S0 abgegeben)
+    t/t_ev   S_BH/S0  S_rad/S0   S_vN/S0
+    0.0000    1.0000    0.0000    0.0000
+    0.2000    0.8618    0.2052    0.2052
+    0.4000    0.7114    0.4285    0.4285
+    0.5000    0.6300    0.5494    0.5494
+    0.5381    0.5975    0.5975    0.5975
+    0.6000    0.5429    0.6787    0.5429
+    0.8000    0.3420    0.9769    0.3420
+    0.9500    0.1357    1.2832    0.1357
+    1.0000    0.0000    1.4847    0.0000
+  Page-Zeiten konkret (beta = 1,4847):
+    stellar 10 M_S           t_Page = 1.128e+70 a
+    Sonne als Falte 1 M_S    t_Page = 1.128e+67 a
+    Sgr A* 4,15e6 M_S        t_Page = 8.066e+86 a
+    M87* 6,5e9 M_S           t_Page = 3.099e+96 a
+    Milchstrasse 6e10 M_S    t_Page = 2.438e+99 a
+
+====================================================================================================
+3) Globale Engstelle: Horizont als Schliessungsregion
+====================================================================================================
+  Hubble-Radius heute  c/H0      = 1.3215e+26 m = 4.283 Gpc  -> S = pi R^2/l_P^2 = 2.100e+122 k
+  Ereignishorizont heute R_CEH   = 1.5074e+26 m = 15.93 Mrd Lj  -> S_CEH = 2.733e+122 k
+  de-Sitter-Endzustand c/H_L     = 1.5795e+26 m = 5.119 Gpc  -> S_dS  = 3.001e+122 k   (Maximum)
+  Gibbons-Hawking-Temperatur T_GH = 2.307e-30 K
+
+  Brueckenidentitaet: Masse in der Hubble-Kugel bei kritischer Dichte
+    M_H = c^3/(2 G H0) = 8.8982e+52 kg ;  (4pi/3) rho_c (c/H0)^3 = 8.8982e+52 kg  (identisch)
+    Ds_H = G M_H/(3c^2) = c/(6 H0) = 2.2025e+25 m ;  6 Ds_H = 1.3215e+26 m = c/H0 = 1.3215e+26 m
+    S_Falte(M_H) = 36 pi (Ds_H/l_P)^2 = 2.1004e+122 k  =  S_Hubble = 2.1004e+122 k  (Quotient 1.000000000000)
+    Temperatur: Falte T_H(M_H) = hbar H0/(4 pi k) = 1.379e-30 K ;  Horizont hbar H0/(2 pi k) = 2.758e-30 K  (Faktor 2)
+    FTM-Universum: M_U/M_H = 1.686,  r0(M_U) = 2.228e+26 m = 1.686 c/H0,  S(M_U)/S_dS = 1.989
+
+  Groesste Falte in de Sitter (Nariai): M_N = c^3/(3 sqrt3 G H_L), r = c/(sqrt3 H_L)
+    M_N = 4.094e+52 kg = 2.058e+22 M_S ;  S_Nariai (ein Horizont) = 1.000e+122 k = S_dS/3 ;  beide Horizonte 2/3 S_dS
+
+  Entropiehaushalt (Egan & Lineweaver 2010): S_obs = 3,1e104 k (SMBH dominieren), S_CEH = 2,6e122 k
+    Fuellgrad heute S_obs/S_dS = 1.03e-18
+    Obergrenze Sum S_Falten <= 4 pi G (Sum M)^2/(hbar c) mit Sum M = Omega_m M_H: 1.890e+121 k = Om^2 S_H
+    aequivalent: 1e11 Falten mit S_obs zusammen haetten sqrt(<M^2>) = 1.72e+08 M_S
+    Beitrag einer M87*-Falte: 1.43e-08 von S_obs;  Sgr A*: 5.83e-15
+    Hierarchie: S_Sonne(Materie) 2.6e+58 << S_CMB 5.3e+89 << S_obs 3.1e+104 << S_CEH 2.7e+122 < S_dS 3.0e+122
+
+====================================================================================================
+4) Kreislauf, Zeitskalen, zweiter Hauptsatz
+====================================================================================================
+  Zeitskalen des Kreislaufs
+    Verdichtung: Freifallzeit Molekuelwolkenkern (n = 1e4 /cm^3)      t_ff  = 3.384e+05 a
+    Verdichtung: Kelvin-Helmholtz-Zeit Sonne GM^2/(R L)            t_KH  = 3.142e+07 a
+    Akkretion:   Salpeter-Zeit (eps = 0,1)                          t_Sal = 5.006e+07 a
+    Rueckgabe:   Verdampfung 1 M_S ... 6e10 M_S                     t_ev  = 2.10e+67 ... 4.53e+99 a
+    Rueckgabe:   Verdampfung 1e11 M_S                                t_ev  = 2.10e+100 a
+
+  Omega physikalisch: dM/dt = -A/M^2, A = hbar c^4/(15360 pi G^2) = 3.963e+15 kg^3/s
+  relative Rueckgaberate |dM/dt|/M = A/M^3 = 1/(3 t_ev):  faellt mit der Zentrierung wie M^-3
+    stellar 10 M_S           |dM/dt|/M = 1.589e-71 1/a   Leistung L_H = 9.004e-31 W
+    Sonne als Falte 1 M_S    |dM/dt|/M = 1.589e-68 1/a   Leistung L_H = 9.004e-29 W
+    Sgr A* 4,15e6 M_S        |dM/dt|/M = 2.224e-88 1/a   Leistung L_H = 5.228e-42 W
+    M87* 6,5e9 M_S           |dM/dt|/M = 5.788e-98 1/a   Leistung L_H = 2.131e-48 W
+    Milchstrasse 6e10 M_S    |dM/dt|/M = 7.359e-101 1/a   Leistung L_H = 2.501e-50 W
+
+  Rueckverdichtung der Strahlung zu einer neuen Falte (zweiter Hauptsatz):
+    N Falten der Masse M strahlen S_rad = N beta S0 ab (Energie N M c^2). Bis zur Rueckverdichtung wird die
+    Strahlung um den Faktor z_f = a2/a1 rotverschoben (Energie / z_f, Entropie bleibt). Eine neue Falte aus
+    dieser Energie hat S = (N/z_f)^2 S0. Erlaubt ist das nur, wenn (N/z_f)^2 S0 >= N beta S0, also
+        N >= beta * z_f^2
+    z_f = 1:  N >= 1.485
+    z_f = 10:  N >= 148.5
+    z_f = 1000:  N >= 1.485e+06
+    -> Rueckverdichtung ist nur hierarchisch aufwaerts erlaubt (mehr Masse in weniger Falten). In einer
+       Kontraktionsphase (z_f < 1, Blauverschiebung) wird sie leichter: das ist das Tolman-Problem zyklischer Modelle.
+
+  Falte im geschlossenen Kasten (Hawking 1976): stabiles Gleichgewicht mit eigener Strahlung nur fuer E_rad < M c^2/4
+    Sonne als Falte 1 M_S    V_max = 4.079e+90 m^3,  R_max = 9.912e+29 m  (R_obs = 4.4e+26 m)
+    Sgr A* 4,15e6 M_S        V_max = 5.021e+123 m^3,  R_max = 1.062e+41 m  (R_obs = 4.4e+26 m)
+    M87* 6,5e9 M_S           V_max = 4.733e+139 m^3,  R_max = 2.244e+46 m  (R_obs = 4.4e+26 m)
+    -> Ohne Expansion (fester Kasten) stellt sich ein stationaeres Gleichgewicht Falte + Strahlung ein: das ist
+       maximale Entropie, kein Kreislauf. Erst das Atmen (V waechst, T_aussen faellt) macht das Gleichgewicht
+       instabil (negative Waermekapazitaet der Falte) und startet die Rueckgabe.
+    Waermekapazitaet der Falte C = dE/dT = -8 pi G M^2 k/(hbar c) = -2.898e+54 J/K fuer 1 M_S  (negativ)
+
+  Stationaritaet: dS_sys/dt = sigma - J = 0 und Senke mit Kapazitaet S_max = pi k c^2/(l_P^2 H^2)
+    dauerhaft nur, wenn dS_max/dt >= sigma_ges   <=>   -dH/dt >= l_P^2 H^3 sigma_ges /(2 pi c^2 k)
+    sigma_ges heute ~ S_obs/t0 = 7.118e+86 k/s
+    -dH/dt heute (LambdaCDM) = 1,5 H0^2 Om = 2.316e-36 1/s^2 ;  benoetigt: 3.844e-54 1/s^2 ;  Reserve 6.02e+17
+    bei konstantem sigma versagt die Bedingung in LambdaCDM ab a = 1.009e+06, t = 2.432e+11 a
+    Fuellzeit der Senke bei heutigem sigma: (S_dS - S_obs)/sigma = 1.336e+28 a
+    -> Mit Lambda = konst. endet jeder Kreislauf im de-Sitter-Gleichgewicht S -> S_dS. Ein dauerhaft
+       stationaerer Kreislauf verlangt, dass die globale Engstelle (Horizontflaeche) mitwaechst: H muss weiter fallen.
+
+====================================================================================================
+5) Lokal und global: dieselbe Formel, zwei Grenzfaelle
+====================================================================================================
+  lokal : r0 = 6 Ds,        S = 36 pi k (Ds/l_P)^2,  T = hbar c/(24 pi k Ds),  kappa = c^2/(2 r0)
+  global: r_H = c/H = 6 Ds_H, S = 36 pi k (Ds_H/l_P)^2, T = hbar c/(12 pi k Ds_H), kappa = c^2/r_H
+    stellar 10 M_S           S/S_dS = 3.498e-44   r0/(c/H_L) = 1.870e-22
+    Sonne als Falte 1 M_S    S/S_dS = 3.498e-46   r0/(c/H_L) = 1.870e-23
+    Sgr A* 4,15e6 M_S        S/S_dS = 6.024e-33   r0/(c/H_L) = 7.761e-17
+    M87* 6,5e9 M_S           S/S_dS = 1.478e-26   r0/(c/H_L) = 1.216e-13
+    Milchstrasse 6e10 M_S    S/S_dS = 1.259e-24   r0/(c/H_L) = 1.122e-12
+    Universum 1,5e53 kg      S/S_dS = 1.989e+00   r0/(c/H_L) = 1.410e+00
+
+====================================================================================================
+Einheiten-Kontrolle
+====================================================================================================
+  [Ds/l_P] = 1 ; [S] = k ; [hbar c/(k Ds)] = J m /(J/K m) = K ; [Ds^3/(l_P^2 c)] = m/(m/s) = s
+  [A] = J s m^4 s^-4 /(m^6 kg^-2 s^-4) = kg^3/s ; [l_P^2 H^3 sigma/c^2] = m^2 s^-3 s^-1 /(m^2 s^-2) = s^-2

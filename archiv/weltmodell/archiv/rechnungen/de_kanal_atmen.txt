@@ -1,0 +1,90 @@
+
+================================================================================================================
+1  Kanal: Minimalmodell (Raumschleife L, innere Richtung Λ, gemeinsames Maß erhalten)
+================================================================================================================
+   Maß je Baryon: μ₁ = L³·(2Λ)·(Impulsanteile). Jede Falte hat ihre eigene Halbgerade bis Λ (07), also trägt jedes Baryon
+   einen Faktor Λ wie einen Faktor V = L³. Erhaltung: δ ln μ₁ = 3 δ ln L + δ ln Λ = X (mitbewegte Impulse fest).
+
+   (i) Rückkehr als Transit: Irrfahrt in ϖ auf [0, ℓ], Start in der Rückkehrtiefe ϖ_R = 1, Ort (Raum) bei ϖ = 0,
+       bei ℓ = Λ/ϖ_R geschlossen (reflektierend); D = 1 ⇒ τ_D = 1. Eigenreihe k_n = (n − ½)π/ℓ.
+       ℓ       ⟨T⟩/τ_D  (ϖ_R(2Λ−ϖ_R)/2D)   in I bei t = 1, 10, 100, 10⁴ τ_D       f(t)/Lévy bei t = 0,2  1  10
+         10          9.5   (       9.5)          0.5205  0.1769  0.0169  0.0000        1.0000  1.0000  1.0020
+        100         99.5   (      99.5)          0.5205  0.1769  0.0564  0.0017        1.0000  1.0000  1.0000
+       1000        999.5   (     999.5)          0.5205  0.1769  0.0564  0.0056        1.0000  1.0000  1.0000
+       Offen (ℓ → ∞): ⟨T⟩ = ∞, in I bei t: erf(1/√(4t)) (t = 10⁴: 0.0056); geschlossen: alles kommt an, ⟨T⟩ endlich.
+       Heute ist Λ/ϖ_R ≈ 10⁶ (Milchstraße: ϖ_R = r* ≈ 8,6 kpc, Λ = 13,2 Gpc): f(T) = Lévy bis T ≈ 10¹¹ τ_D; die Schließung
+       ändert nicht die Laufzeit, sondern macht den Transit vollständig: Bei gleichmäßigem Zufluss r liegt in I nur
+       r·⟨T⟩ im Durchgang, fest; was zufließt, fließt in den Raum ab. Die Gleichung ist linear im Inhalt u auf festem [0, Λ]:
+       Der Inhalt verschiebt den Abschluss nicht (Kac: ⟨T⟩ = 2Λ/c hängt weder an Dynamik noch an Masse noch am Inhalt).
+
+   (ii) Λ aus dem Modell: Λ = ν_kosm·ΣΔs_b (03), Δs = GM/3c² je Masse, unabhängig vom Bahnzustand; die gezählte Faltung
+       gebundener Bereiche hebt sich in der Naht auf (03). Bindung ändert ΣΔs_b nicht, ν_kosm = 1 + Q (mitatmend) auch nicht.
+       ⇒ δ ln Λ = 0 bei fester Faltung; aus der Erhaltung bleibt δ ln V = 3 δ ln L = X: Kanal (b).
+
+   (iii) Kanäle gegeneinander (arrivierter Anteil X_an(t) aus der erzwungenen Kombination B, 10⁶, oben, θ̃ = 0, I_F):
+       (a) δ ln Λ = X_an ⇒ a₀ ∝ e^{−X_an}, Ω_s ∝ Λ⁻² ∝ e^{−2X_an}
+       (b) δ ln V = X_an ⇒ H_eff = H_b + ⅓·dX_an/dt, Λ fest
+       (c) Schließung Λ ≙ ΔL (03), δΛ = δL_i je Schleife: dΛ·(3/L + 1/Λ) = dX_an, δ ln a = dΛ/L; L = L_Zelle·a.
+           Anteil ins Atmen 3Λ/(3Λ + L) = 0.590 heute (L_Zelle = 27.6 Gpc, Λ = 13.24 Gpc).
+
+   Kanal  Ω_DE(0) [0,687 G]  Ω_s(0)   a₀(z=1)/a₀(z=3)  a₀(0)/a₀(z=3)   H/H_Λ z=0    1      2     w(0)    w₀      w_a
+   (a)       0.159             0.159      0.9921           0.8063          0.687    0.928   0.976  -0.623  -0.613   -0.657
+   (b)       0.564             0.244      1.0000           1.0000          0.937    0.949   0.976  -0.994  -1.012   -0.612
+   (c)       0.391             0.211      0.9981           0.9292          0.840    0.943   0.976  -0.836  -0.846   -0.754
+   X_an(0) = 0.215 (arriviert je Baryon), X(0) = 4.564 (inaktiv).  Rückwirkung von Λ auf τ_D in (a), (c) nicht mitgeführt
+   (würde den Transit weiter verlangsamen).
+   (a) senkt Ω_DE unter den Vakuumteil (Vorzeichen falsch) und ließe a₀ seit z = 1 um 19 % fallen, auf Dauer (X → 4.6)
+       um den Faktor e^{−X} ≈ 0.010; das widerspricht Λ = ν_kosm·ΣΔs_b (a₀ seit z ≈ 10 bis auf 0,3 % fest).
+   (c) teilt: 59 % ins Atmen, der Rest verlängert Λ und senkt Ω_s; netto kleiner als (b), a₀ wandert (6.9 % seit z = 1).
+       Λ ≙ ΔL (03) gilt für die Faltung (Rückstellung σ = ΣΔs − ΔL = 0), nicht für Maß der Bewegung: Bewegung faltet nicht.
+   ⇒ Kanal (b): Weg durch I (Laufzeit f(T), τ_D = 2Λ/c), Ankunft als Dehnung der Raumschleifen (G); Λ bleibt.
+
+================================================================================================================
+2  Fehlender Faktor in X (nötig 1,33: X(0) = 6,09 statt 4,56)
+================================================================================================================
+   (i) Drehimpuls/Bahnebene: Monte Carlo im vollen 6D-Raum (r, v; alle Bahnebenen, L, L_z), gebunden ⇔ Apozentrum ≤ R:
+       μ_b(MC) = 40.1023 ± 0.0244, Ellipsoid analytisch 40.1247; μ_a(MC) = 29.1974 (π²·(16/3)·2^{3/2}·π/16 = 29.2330); Verhältnis 1.3735 (16(3/2 − √2) = 1.3726)
+       Das Maß der Tori in 3D ist vollständig (Bahnebene und Drehimpuls stecken in d³v); kein Faktor.
+   (ii) Gas: Liouville zählt das Einteilchenmaß des Bereichs; ob ein Baryon auf Sternbahnen oder im Gas (Stöße, Druck)
+       läuft, ändert die Menge der Tori in der Naht nicht; F zählt alle Baryonen gebundener Bereiche schon mit. Kein Faktor;
+       Druck verhindert Bindung kleiner Bereiche, das senkt X eher (nur Richtung).
+   (iii) Mode ξ: (1 + Q) auf X gäbe den Faktor 6.36 (statt 1,33) und läse die Mode innen (w = 0) als bindenden Stoff; als
+       Bezug (D: ln B − 1,5 ln(1 + Q)) senkt sie X. Kein zwingender Anteil.
+   (iv) Einbettung: F(>10⁶, z = 0) = 0.875; die übrigen 0.125 der Baryonen liegen in keinem Bereich ≥ 10⁶ M☉.
+       Lägen alle in Bereichen von 10^5 M☉ (ln B = 9.423): ΔX ≤ 1.179 ⇒ X(0) ≤ 5.743, Faktor ≤ 1.258
+       Lägen alle in Bereichen von 10^4 M☉ (ln B = 9.998): ΔX ≤ 1.251 ⇒ X(0) ≤ 5.815, Faktor ≤ 1.274
+       Lägen alle in Bereichen von 10^3 M☉ (ln B = 10.573): ΔX ≤ 1.323 ⇒ X(0) ≤ 5.887, Faktor ≤ 1.290
+       Obere Schranke (voller Anteil, jüngste Epoche); die Bindung kleiner Bereiche ist früher und seltener: bleibt unter 1,33.
+   (v) Übergabe ab Umkehr statt ab I_F: Ω_DE(0) = 0.606 (I_F 0.564); X(0) gleich. I_F ist erzwungen (03), Umkehr nur Spannweite.
+   ⇒ Kein im Modell zwingender Anteil liefert 1,33; die Rechnung bleibt bei X(0) = 4.56.
+
+================================================================================================================
+3  Gesamtbild mit dem geklärten Kanal (b), Vergleich (a), (c) [Messwerte nur Test, G]
+================================================================================================================
+   (b) Ω_DE(z) = z=0: 0.643, z=0.5: 0.320, z=1: 0.128, z=2: 0.029; w(0) = -0.994, w₀ = -1.012, w_a = -0.612
+       H/H_Λ: z=0: 0.937, z=0.5: 0.944, z=1: 0.949, z=2: 0.976, z=3: 0.989; D_M(1090)/D_M,Λ = 1.022; Q-Fenster oben 5.10 (ΛCDM 5.52), unten 5
+       fσ₈/fσ₈,Λ (gleiche frühe Amplitude): z=0.0: 1.145, z=0.3: 1.120, z=0.6: 1.108, z=1.0: 1.087, z=1.5: 1.057
+   (a) Ω_DE(z) = z=0: 0.336, z=0.5: 0.173, z=1: 0.087, z=2: 0.028; w(0) = -0.623, w₀ = -0.613, w_a = -0.657
+       H/H_Λ: z=0: 0.687, z=0.5: 0.857, z=1: 0.928, z=2: 0.976, z=3: 0.989; D_M(1090)/D_M,Λ = 1.062; Q-Fenster oben 4.45 (ΛCDM 5.52), unten 5
+       fσ₈/fσ₈,Λ (gleiche frühe Amplitude): z=0.0: 1.742, z=0.3: 1.376, z=0.6: 1.215, z=1.0: 1.116, z=1.5: 1.062
+   (c) Ω_DE(z) = z=0: 0.555, z=0.5: 0.279, z=1: 0.118, z=2: 0.029; w(0) = -0.836, w₀ = -0.846, w_a = -0.754
+       H/H_Λ: z=0: 0.840, z=0.5: 0.917, z=1: 0.943, z=2: 0.976, z=3: 0.989; D_M(1090)/D_M,Λ = 1.034; Q-Fenster oben 4.90 (ΛCDM 5.52), unten 5
+       fσ₈/fσ₈,Λ (gleiche frühe Amplitude): z=0.0: 1.321, z=0.3: 1.195, z=0.6: 1.138, z=1.0: 1.094, z=1.5: 1.058
+   Ω_DE(0) gemessen [G] 0.687. (b) trägt 0,56 davon (82 %); Form: w(0) ≈ −1, w_a ≪ 0 (Anstieg erst spät).
+
+================================================================================================================
+4  Beobachterfehler
+================================================================================================================
+   X: Maß des Zustandsraums (G des Bereichs, je Baryon über die Zelle G). Λ: Länge der inneren Richtung (I), gesetzt durch
+   die Faltung mit ihren Rückläufen, kein Behälter, dessen Größe am Inhalt hängt. Atmen: L_i(t) des Ganzen (G).
+   Der Weg läuft in I (Rückkehrzeit T, keine Raumstrecke), die Wirkung kommt in G an (Rate ⅓R, keine Dichte am Ort).
+   Kanal (a) läse Maß der Bewegung als Faltung (Stoff in der inneren Richtung): derselbe Fehler wie Regel als Stoff.
+   Zustandsabhängig: X, X_an, Ω_DE(z); fest: Λ, τ_D, a₀ (seit z ≈ 10).
+
+================================================================================================================
+5  Von Hand
+================================================================================================================
+   Anteil ins Atmen in (c): 3Λ/(3Λ + L) = 3·13,24/(3·13,24 + 27.59) = 39,72/67.31 = 0.590 (Code 0.590).
+   Transit ℓ = 100: ⟨T⟩ = ϖ_R(2ℓ − ϖ_R)/2D = (200 − 1)/2 = 99,5 τ_D (Eigenreihe 99.5).
+   Newton-Tori: μ_b/μ_a = 16(3/2 − √2) = 16·0,085786 = 1,3726 (Monte Carlo 1.3735).
+   Kanal (a) heute: Ω_s·e^{−2X_an} = 0.244·e^{−2·0.215} = 0.159 (Code 0.159).

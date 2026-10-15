@@ -1,0 +1,83 @@
+
+==============================================================================================================
+1  Inventur der Ausdehnungsgleichung  H²/H₀² = Σ Glieder (flacher Torus, ε = −ℒ für statische Glieder)
+==============================================================================================================
+   Hintergrund: θ̃τ_D = 17.86, 1 − w = 0.0146, (1 − w)(ν − 1) = 2.17e-04 (s² = θ̃τ_D, a_N = 0)
+   Ω_s = (π²/45)Θ² = 0.2443 (a₀ = 1.10e-10), gemessene Lücke Ω_DE = 0.6865, fehlend Ω_x = 0.4422 (Anteil 64.4 %)
+   Nur mit Ω_s allein: Θ = 1.769 nötig, a₀ = 1.844e-10 m/s² (cH₀/2π = 1.042e-10); SPARC 1,04–1,19, Zelle ≤ 1,13
+
+   Glied                                        Vorz.  Skalierung mit a           Ω heute        Blick / Zustand
+   Staub (1 + Q)ρ_b (Kac-Zählung)               +      a⁻³                        0.3134         G; Maß in I, fällt
+   Strahlung                                    +      a⁻⁴                        9.14e-05       G; fällt
+   Vakuumteil π⁴/(15Λ²)                         +      a⁰ (Λ fest seit z≈10)      0.2443         I→G; fest, trägt 1/3
+   Rest der Schließungsregel (1 − w)            0      in (1+Q)ρ_b, a⁻³           0 (1−w=0.015)  Mode = Staub (c_s²=0)
+   Gegenquelle/Nullmode σ = ΣΔs − ΔL = 0        0      ist das Staubglied         0              G; ⟨ρ − ρ̄⟩ = 0
+   Scherung/Wirbel der Zelle                    +      a⁻⁶                        ≤ 1e-12        G; (σ/H)² < 10⁻¹²
+   ⟨ℒ_𝒮⟩: −a₀²⟨Q_s⟩/8πG gebunden                −      ∝ F(a)·a⁻³                 ≥ −4.1e-06     L gemittelt → G; wächst mit F
+   ⟨ℒ_𝒮⟩: lineares Feld a_N ≤ 4e-4 a₀           −      ∝ (D/a²)^{3/2}, fällt      −1.0e-07       L gemittelt → G
+   2h^{μν}B_μB_ν (Strom J)                      ±      ∝ gebunden                 ≤ 3e-10        Spannung 10⁻⁹ρc², Bilanz
+   Arbeitsaustausch der Regel                   ±      mittelt weg                ≤ 4e-11        L; 3·10⁻⁴·σ² je 10 Mrd. J.
+   Gewicht (1 − w)(ν − 1)                       0      nur Störungen              0 (Faktor 2.2e-04) wirkt auf a_N ≠ 0, Hintergrund a_N = 0
+   Summe der Glieder außer Staub/Strahlung/Vakuumteil: |ΣΩ| ≤ 4.1e-06 gegen nötig +0.442.
+
+==============================================================================================================
+2  ⟨ℒ_𝒮⟩ über gebundene Bereiche: ε_𝒮 = −a₀²Q̃/(8πG) = ε_s·(1 − ⟨Q_s⟩/(4π⁴/15))
+==============================================================================================================
+   Normierung: ℒ_𝒮 ⊃ (c⁴/16πG)(2/ℓ₀²)Q̃, ℓ₀ = c²/a₀; Q̃(0) = −4π⁴/15 gibt genau Λ_s = 4π⁴/(15ℓ₀²) (Vakuumteil).
+   Wo Feld ist (s > 0), steigt Q̃ gegen 0: Die Strukturwirkung SENKT den Vakuumteil am Ort (im Newton-Bereich ganz).
+   Punktmasse: s = r*/r, ∫Q_s dV = 4πr*³·J, J = ∫_{s_R}^∞ Q_s/s⁴ ds ≈ (4/3)ln(R/r*) + C; Energie je Objekt M_b·v_f²·J/2.
+   Obergrenze: alle Baryonen gebunden (F = 1) in Objekten der Masse M_b, Bereich bis R_ta.
+   M_b/M☉   r* [kpc]  R_ta [kpc] J       v_f km/s  |Ω_𝒮|        |Ω_𝒮|/Ω_s
+   1e8      0.4       69         7.47    35        2.47e-09     1.01e-08
+   1e10     3.6       319        6.45    110       2.13e-08     8.73e-08
+   1e11     11.3      688        5.94    195       6.21e-08     2.54e-07
+   1e12     35.6      1482       5.43    348       1.80e-07     7.35e-07
+   1e13     112.6     3193       4.92    618       5.15e-07     2.11e-06
+   1e14     356.0     6878       4.42    1099      1.46e-06     5.99e-06
+   1e15     1125.7    14819      3.92    1955      4.10e-06     1.68e-05
+   J − (4/3)ln(R_ta/r*) = 0.456 (Konstante des inneren Teils, M_b = 10¹² M☉)
+   Lineares Feld a_N = 1e-04·a₀: Q_s = 1.33e-06, Anteil am Vakuumteil 5.1e-08
+   Lineares Feld a_N = 4e-04·a₀: Q_s = 1.06e-05, Anteil am Vakuumteil 4.1e-07
+   Vorzeichen: negativ (senkt ε). Verlauf: ∝ F(a)·a⁻³ je Objektmasse, Betrag wächst mit der Bindung → Dichte der
+   Dunklen Energie fiele mit der Zeit (w > −1, richtiger Quadrant), aber um ≤ 2e-05·Ω_s. Trägt nicht (nötig +1.81·Ω_s).
+   Auch mit umgekehrtem Vorzeichen gelesen bliebe der Betrag ≤ 4e-06: keine Lesart der Strukturwirkung trägt.
+
+==============================================================================================================
+3  Beobachterfehler in der Messung: Takt am Ort, gebundener Bereich (w = 0), mittlere Konvergenz
+==============================================================================================================
+   (a) Tiefe Φ/c² am Beobachter: Milchstraße (6·10¹⁰ M☉, 8,2 kpc, Regel bis R_ta = 580 kpc) 1.62e-06, Andromeda (10¹¹ M☉, 780 kpc) 3.90e-08
+       Summe δ_obs = 1.66e-06. Wirkung: 1 + z_gel = (1 + z)(1 − δ_obs + δ_Quelle); H₀ in eigener Zeit um δ verschoben.
+       Δμ(z = 0,02 / 0,5 / 1,5) = -1.9e-04 / -1.3e-05 / -7.4e-06 mag; gelesen Δw₀ = -3.3e-04, Δw_a = +7.3e-04
+       Quellen sitzen selbst in Mulden (δ_Quelle ~ δ_obs, zufällig): Streuung, kein Gang mit z über 10⁻⁶ hinaus.
+   (b) Bereich mit w = 0 (R_ta = 0.58 Mpc): Rotverschiebung des nicht mitatmenden Wegs wird am Rand durch dessen Lauf H·R_ta
+       ausgeglichen; es bleiben (H₀R_ta/c)² = 1.7e-08 und die Mulde der Linse (3 % von (1+Q)M_b an R_ta): 9.4e-10.
+       Als Abstandsfehler bei z = 0,02: 9.0e-07 relativ; bei z = 0,5 3.6e-08. Kein Gang wie w(z).
+   (c) Mittlere Konvergenz, falls das vom Licht gesehene Mittel um ε_L = -0.025 unter (1 + Q)ρ̄_b läge (Obergrenze):
+       Δμ(z = 0,5 / 1,5) = 8.4e-04 / 4.4e-03 mag; gelesen Δw₀ = +9.6e-03, Δw_a = -8.0e-02.
+       Auf dem geschlossenen Torus ist aber nur ρ − ρ̄ lösbar (Gauß, Σ Quelle = 0): ⟨κ⟩ = 0 genau; ein Fehlbetrag
+       fiele in die Nullmode, also ins Staubglied der Ausdehnung (Staubverlust, falsches Vorzeichen). Scheiben (η > 1)
+       berühren nur die Streuung. Ergebnis (c): 0 im Mittel.
+   (d) Nötig: Modell nur mit Ω_s (ω_m, ω_s fest) gibt H₀,mod = 0.747·H₀ = 50.3 km/s/Mpc; Δμ(0,5) − Δμ(0,02) = -0.157 mag,
+       linear projiziert Δw₀ = +0.10, Δw_a = +2.77 (nur Richtung). Messeffekte: (a) |Δμ| ≤ 2·10⁻⁴ mag, |Δw| ≤ 10⁻³; (b) 10⁻⁸; (c) 0 → 3 Größenordnungen und mehr zu klein.
+       Einen Faktor 1.34 in H₀ gäbe nur δ_obs ≈ 0.25 (gemessen 2e-06).
+
+==============================================================================================================
+3b Blick (L/I/G) und Zustand je Glied
+==============================================================================================================
+   Staub (1+Q)ρ_b: G (Zelle, Nullmode); 1+Q ist Kac-Zählung in I, kein Stoff; Epoche: seit Rekombination w≈1 → Staub.
+   Vakuumteil: Λ liegt in I, als Rückstellung des Ganzen in G gelesen; zustandsfest, solange Λ fest (seit z≈10).
+   Schließungsregel (1−w): Z/G, zustandsabhängig (θ̃, Preisach); ändert Dynamik der Störungen, nicht das Maß.
+   Q_s gebunden: am Ort (L) eine Regelgröße, keine Dichte; als Mittel über die Zelle (G) ins Atmen gelesen.
+   B², Arbeitsaustausch: L, Bilanz über 𝒫L auf der Schließung; keine Energie am Ort.
+   Scherung: G; Schleifen atmen gleich (01).
+   Messung: δ_obs ist L am Beobachter (gebunden, w = 0), H und d_L sind G; Verwechslung nur auf 10⁻⁶-Stufe.
+
+==============================================================================================================
+4  Von Hand
+==============================================================================================================
+   Haufen 10¹⁵ M☉: v_f = (GMa₀)^{1/4} = (1,327·10³⁵·1,1·10⁻¹⁰)^{1/4} = 1.955e+06 m/s; (v_f/c)² = 4.25e-05
+   J ≈ (4/3)ln(R_ta/r*) + C = (4/3)·ln(14819/1126) + 0.46 = 3.89 (Code 3.92)
+   |Ω_𝒮| = Ω_b·(v_f/c)²·J/2 = 0,0492·4.25e-05·3.89/2 = 4.07e-06 (Code 4.10e-06)
+   Q̃(2) aus Li: -21.270387; Q_s(2) − 4π⁴/15 per Integral: -21.270387
+   Tiefe Milchstraße: v_f²/c²·[1 + ln(R_ta/r) + (1+Q)v_N²/v_f²...] ≈ (172 km/s/c)²·(1 + ln(580/8,2)) = 1.7e-06 (Code 1.6e-06)
+   a₀ für Ω_s = Ω_DE: Θ = √(0,6865·45/π²) = √3,130 = 1,769; a₀ = 1,769·1,042·10⁻¹⁰ = 1,84·10⁻¹⁰ m/s²

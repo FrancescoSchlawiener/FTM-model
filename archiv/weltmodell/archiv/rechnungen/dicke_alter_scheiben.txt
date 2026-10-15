@@ -1,0 +1,11 @@
+Probe Kreisgeschwindigkeit (Regel) und Newton bei 8 kpc:
+  v_c(8 kpc) = 224.1 km/s
+h = 0.3 kpc, σ_z0 = 18.0 km/s
+  Regel      rms z: 0.1832 → 0.1841 kpc (+0.5 %), ΔE nach 10 Gyr: Mittel +1.8, Streuung 10.0 (km/s)², σ_z0² = 324
+  wirbelfrei rms z: 0.1825 → 0.1835 kpc (+0.5 %), ΔE nach 10 Gyr: Mittel +0.1, Streuung 0.1 (km/s)², σ_z0² = 324
+h = 0.3 kpc, σ_z0 = 30.0 km/s
+  Regel      rms z: 0.3586 → 0.3609 kpc (+0.7 %), ΔE nach 10 Gyr: Mittel +7.2, Streuung 22.0 (km/s)², σ_z0² = 900
+  wirbelfrei rms z: 0.3563 → 0.3574 kpc (+0.3 %), ΔE nach 10 Gyr: Mittel +0.2, Streuung 0.2 (km/s)², σ_z0² = 900
+h = 0.15 kpc, σ_z0 = 12.0 km/s
+  Regel      rms z: 0.0878 → 0.0883 kpc (+0.6 %), ΔE nach 10 Gyr: Mittel +2.2, Streuung 11.0 (km/s)², σ_z0² = 144
+  wirbelfrei rms z: 0.0874 → 0.0878 kpc (+0.5 %), ΔE nach 10 Gyr: Mittel +0.2, Streuung 0.2 (km/s)², σ_z0² = 144

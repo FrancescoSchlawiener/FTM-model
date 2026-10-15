@@ -1,0 +1,22 @@
+Hintergrund (θ* fest):
+   Q = 5,364 (Messwert)     ω_c = 0.11999  H0 =  67.34  z* = 1089.91  r_drag = 147.105 Mpc  z_eq = 3402.7
+   Q = 2π − 1 = 5,283       ω_c = 0.11818  H0 =  67.98  z* = 1089.75  r_drag = 147.585 Mpc  z_eq = 3359.5
+
+Relative Änderung der TT-Leistung (Q = 2π−1 gegen 5,364):
+   ℓ =     2   ΔC_ℓ/C_ℓ = +1.591 %
+   ℓ =    10   ΔC_ℓ/C_ℓ = +0.470 %
+   ℓ =    30   ΔC_ℓ/C_ℓ = +0.369 %
+   ℓ =   220   ΔC_ℓ/C_ℓ = +0.777 %
+   ℓ =   540   ΔC_ℓ/C_ℓ = +0.710 %
+   ℓ =   810   ΔC_ℓ/C_ℓ = +0.224 %
+   ℓ =  1130   ΔC_ℓ/C_ℓ = +0.343 %
+   ℓ =  1450   ΔC_ℓ/C_ℓ = +0.145 %
+   ℓ =  2000   ΔC_ℓ/C_ℓ = -0.062 %
+
+Δχ² (nur ω_c geändert, übrige Parameter fest, obere Schranke):
+   Planck-ähnlich (f_sky 0,6, 33 µK', 7,3'):   Δχ² =    15.24  ->  3.90 σ
+   ideale Messung (nur kosmische Varianz):     Δχ² =    38.72  ->  6.22 σ
+   CMB-S4-ähnlich (f_sky 0,4, 1 µK', 1,4'):    Δχ² =    25.58  ->  5.06 σ
+
+Mit Entartungen (A_s, n_s, H0 frei) gilt die marginalisierte Planck-Unsicherheit σ(ω_c) = 0,0012:
+   Δω_c = 0.00181  ->  1.51 σ (Planck),  mit BAO σ = 0,00091 -> 1.99 σ

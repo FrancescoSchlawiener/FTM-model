@@ -1,0 +1,196 @@
+
+====================================================================================================
+1  Hintergrund, Schallhorizont, Daempfung (k_D-Spalte: Integral mit x_e = 1, zu gross; im Spektrum auf Planck k_D = 0,1409 fuer LCDM skaliert)
+====================================================================================================
+  LCDM / Operator mit Q = 5,364 (Om = Ob(1+Q))     z_eq    3402  r_s(z*)  144.43 Mpc  D_M(z*)  13894.1 Mpc  100 theta* 1.0395  k_D 0.2053/Mpc  Hc(a*) 4.7773e-03/Mpc
+  nur Baryonen                                     z_eq     534  r_s(z*)  195.11 Mpc  D_M(z*)  27745.1 Mpc  100 theta* 0.7032  k_D 0.1656/Mpc  Hc(a*) 2.8733e-03/Mpc
+  Q = omega_c/omega_b = 5.3643;  q = Q/(1+Q) = 0.84287;  1/(1-q) = 6.3643
+  Befund: Mit Om_eff = Ob(1+Q) ist der Hintergrund identisch mit LCDM. Das gilt fuer JEDE Variante,
+  in der der Operator auf die erhaltene mitbewegte Baryonenmasse wirkt (dort ist das Gedaechtnis exakt stationaer).
+
+  Gegenprobe: Gedaechtnis auf das physikalische Hintergrundpotential Phi_bg ~ 1/a (fester mitbewegter Radius),
+  Kern Q*beta*exp(-beta s) in e-Folds: wirksamer Faktor = Q*beta/(beta-1) (divergiert fuer beta <= 1):
+    beta =   1.2:  Q_eff/Q = 6.000
+    beta =   2.0:  Q_eff/Q = 2.000
+    beta =   5.0:  Q_eff/Q = 1.250
+    beta =  20.0:  Q_eff/Q = 1.053
+  => Ein langes Gedaechtnis muss auf der erhaltenen Groesse (mitbewegte Masse, Kontrast delta) sitzen, nicht auf Phi.
+
+====================================================================================================
+1a  Analytischer Oszillator mit festem Psi (Hu & Sugiyama 1995):  Theta0+Psi = (1/3+R)Psi cos(k r_s) - R Psi
+====================================================================================================
+  R(z*) = 0.6219
+  statische Mulde: |ungerade| = 1/3+2R = 1.5771, |gerade| = 1/3 = 0.3333, Amplitudenverh. 1+6R = 4.731, Leistung 22.38
+  Mitschwingende Mulde (Psi ~ Theta, zeitlicher Mittelwert 0): Nulllage -R<Psi> = 0 -> Verhaeltnis 1 (keine Ungerade/Gerade-Modulation)
+  Das ist die Freiheitsgrad-Aussage: nur ein Potentialanteil, der NICHT Teil der akustischen Mode ist, verschiebt die Nulllage.
+
+====================================================================================================
+1b  Spielzeug-Boltzmann: Peakhoehen im k-Raum (Proxy fuer l(l+1)C_l), Referenz Notiz 08 (Fitformel, Planck-Werte): H2/H1 0,460  H3/H1 0,450  H3/H2 0,978
+====================================================================================================
+  (a) LCDM-artig (Mulde aus 5,36-fach, statisch) H2/H1  0.708  H3/H1  1.151  H3/H2  1.625  H4/H3  0.597  H5/H4  0.856  H1/Plateau   7.28
+  (b) nur Baryonen                             H2/H1  1.146  H3/H1  0.944  H3/H2  0.824  H4/H3  0.748  H5/H4  0.691  H1/Plateau  10.61  |dH3/H2|  49.3%
+  (c) Baryonenkraft x6,36 (Mulde schwingt mit) H2/H1  1.147  H3/H1  0.936  H3/H2  0.816  H4/H3  0.726  H5/H4  0.655  H1/Plateau  10.74  |dH3/H2|  49.8%
+
+  Peaklagen k [1/Mpc] und l ~ k D_M:
+   (a) k=0.0198 (l~  275)  k=0.0412 (l~  573)  k=0.0627 (l~  871)  k=0.0847 (l~ 1177)  k=0.1068 (l~ 1484)
+   (b) k=0.0149 (l~  412)  k=0.0308 (l~  854)  k=0.0473 (l~ 1313)  k=0.0633 (l~ 1755)  k=0.0798 (l~ 2214)
+   (c) k=0.0210 (l~  292)  k=0.0431 (l~  598)  k=0.0645 (l~  896)  k=0.0866 (l~ 1203)  k=0.1080 (l~ 1501)
+
+  Robustheit (k_D x 0,8, staerkere Daempfung), nur H3/H2:
+   (a) H3/H2 = 1.432
+   (b) H3/H2 = 0.736
+   (c) H3/H2 = 0.714
+
+  Anteile an der Poisson-Quelle bei z* (Einheiten Ob(a*)*delta; Baryonen: Huellkurve |d_b| ueber +-0,01/Mpc):
+   k = 0.02: (a) Q*d_c =    -45.96,  |d_b|max =    4.68,  Verh. gebunden/frei =   9.83
+   k = 0.05: (a) Q*d_c =   -132.13,  |d_b|max =    3.85,  Verh. gebunden/frei =  34.36
+   k = 0.10: (a) Q*d_c =   -230.07,  |d_b|max =    4.11,  Verh. gebunden/frei =  55.99
+   k = 0.20: (a) Q*d_c =   -349.95,  |d_b|max =    4.05,  Verh. gebunden/frei =  86.32
+
+====================================================================================================
+2a  Gedaechtnis als Tiefpass: M = int K (x + M), K = q lam e^{-lam s}  =>  M^ = q lam/(lam(1-q) + i w) x^
+====================================================================================================
+  stationaer (w = 0): M = q/(1-q) x = Q x  (bei q = 0,8429: Q = 5,364). Schwingung (w >> lam(1-q)): |M^|/x^ -> q lam/w.
+  In e-Folds: lam = beta*H, Schwingungsrate w_N = k c_s / Hc(a*):
+   k[1/Mpc]  w_N    |H|/Q fuer beta = 0,03   0,1    0,3    1      3      10
+     0.02     1.90    0.002   0.008   0.025   0.083   0.241   0.638
+     0.05     4.74    0.001   0.003   0.010   0.033   0.099   0.314
+     0.10     9.49    0.000   0.002   0.005   0.017   0.050   0.163
+     0.20    18.98    0.000   0.001   0.002   0.008   0.025   0.083
+  => Fuer beta(1-q) << w_N wird die Schwingung herausgefiltert, der statische Anteil bleibt voll (Q).
+
+====================================================================================================
+2b  Variante (i) Gedaechtnis auf den mitbewegten Baryonenkontrast, q = 0,8429, Hintergrund Ob(1+Q)
+====================================================================================================
+  (i) beta = 0.01 (Gedaechtnis 636.43 e-Folds) H2/H1  1.083  H3/H1  0.903  H3/H2  0.834  H4/H3  0.718  H5/H4  0.660  H1/Plateau  17.41  |dH3/H2|  48.6%
+  (i) beta = 0.03 (Gedaechtnis 212.14 e-Folds) H2/H1  1.082  H3/H1  0.903  H3/H2  0.835  H4/H3  0.719  H5/H4  0.661  H1/Plateau  17.36  |dH3/H2|  48.6%
+  (i) beta = 0.1 (Gedaechtnis 63.64 e-Folds)   H2/H1  1.081  H3/H1  0.904  H3/H2  0.836  H4/H3  0.719  H5/H4  0.661  H1/Plateau  17.19  |dH3/H2|  48.6%
+  (i) beta = 0.3 (Gedaechtnis 21.21 e-Folds)   H2/H1  1.079  H3/H1  0.904  H3/H2  0.838  H4/H3  0.720  H5/H4  0.661  H1/Plateau  16.73  |dH3/H2|  48.4%
+  (i) beta = 1 (Gedaechtnis 6.36 e-Folds)      H2/H1  1.071  H3/H1  0.904  H3/H2  0.845  H4/H3  0.724  H5/H4  0.663  H1/Plateau  15.45  |dH3/H2|  48.0%
+  (i) beta = 3 (Gedaechtnis 2.12 e-Folds)      H2/H1  1.049  H3/H1  0.894  H3/H2  0.852  H4/H3  0.735  H5/H4  0.667  H1/Plateau  13.37  |dH3/H2|  47.5%
+  (i) beta = 30 (Gedaechtnis 0.21 e-Folds)     H2/H1  1.038  H3/H1  0.823  H3/H2  0.793  H4/H3  0.730  H5/H4  0.667  H1/Plateau  10.62  |dH3/H2|  51.2%
+
+  Gedaechtnisanteil M bei z* gegen (a) Q*d_c (Einheiten phi_p):
+   k      (a) Q d_c   (i) M: beta=0,01   0,1     1      30
+   0.02      -45.96        -8.08    -8.38   -10.97   -24.42
+   0.05     -132.13        -8.05    -8.07    -7.80    15.62
+   0.10     -230.07        -8.04    -7.99    -7.03     6.26
+   0.20     -349.95        -8.04    -7.93    -6.60    -4.04
+
+====================================================================================================
+2c  Variante (ii) Projektion z' = (I - w Pi_perp) F auf den Baryonenfluss; Pi_perp = Druck-/Streurichtung (Flucht aus der Mulde)
+====================================================================================================
+  Der projizierte Fluss hat keine eigenen Anfangsdaten: Start = Baryonenzustand (adiabatisch von selbst). Gewicht Q = 5,364.
+  (ii) w = 0                                   H2/H1  1.147  H3/H1  0.936  H3/H2  0.816  H4/H3  0.726  H5/H4  0.655  H1/Plateau  10.74  |dH3/H2|  49.8%
+  (ii) w = 0.25                                H2/H1  1.033  H3/H1  0.966  H3/H2  0.936  H4/H3  0.711  H5/H4  0.686  H1/Plateau   9.75  |dH3/H2|  42.4%
+  (ii) w = 0.5                                 H2/H1  0.918  H3/H1  1.010  H3/H2  1.101  H4/H3  0.683  H5/H4  0.730  H1/Plateau   8.86  |dH3/H2|  32.3%
+  (ii) w = 0.75                                H2/H1  0.811  H3/H1  1.071  H3/H2  1.321  H4/H3  0.645  H5/H4  0.784  H1/Plateau   8.04  |dH3/H2|  18.7%
+  (ii) w = 0.9                                 H2/H1  0.748  H3/H1  1.116  H3/H2  1.491  H4/H3  0.617  H5/H4  0.826  H1/Plateau   7.57  |dH3/H2|   8.2%
+  (ii) w = 0.97                                H2/H1  0.720  H3/H1  1.140  H3/H2  1.583  H4/H3  0.603  H5/H4  0.847  H1/Plateau   7.37  |dH3/H2|   2.6%
+  (ii) w = 1                                   H2/H1  0.708  H3/H1  1.151  H3/H2  1.625  H4/H3  0.597  H5/H4  0.856  H1/Plateau   7.28  |dH3/H2|   0.0%
+  w = 1 ist Zeile fuer Zeile (a): die Gleichungen sind identisch mit CDM der Dichte Q*rho_b.
+
+  (ii') Momentan-Projektion auf Gleichgewichtslage H2/H1  0.943  H3/H1  0.713  H3/H2  0.755  H4/H3  0.701  H5/H4  0.643  H1/Plateau   0.89  |dH3/H2|  53.5%
+  (ii') projiziert den momentanen Baryonenzustand auf die nicht schwingende Richtung: delta_eq = -3(1+R) psi.
+   Beispiel k = 0,05: |Q delta_eq| = 0.182  gegen (a) |Q d_c| = 132.13
+   Plateau (k = 0,002): (ii') 2.334 gegen (a) 0.122; Rueckkopplungsfaktor (9/2)(Hc/k)^2 Ob(a*) Q (1+R) bei k = 0,002: 26.6, bei k = 0,05: 0.0425
+
+====================================================================================================
+2d  Noetige Staerke. (1) Gedaechtnis mit Stoerungs-Q frei, Hintergrund fest bei 5,364; (2) q zu 5,36; (3) y-Werte aus Notiz 08
+====================================================================================================
+  (1) beta = 0,03 und 0,1; Q_pert gescannt:
+  beta=0.03, Q_pert=5.364                      H2/H1  1.082  H3/H1  0.903  H3/H2  0.835  H4/H3  0.719  H5/H4  0.661  H1/Plateau  17.36  |dH3/H2|  48.6%
+  beta=0.03, Q_pert=10                         H2/H1  0.925  H3/H1  0.772  H3/H2  0.834  H4/H3  0.709  H5/H4  0.663  H1/Plateau   3.91  |dH3/H2|  48.6%
+  beta=0.03, Q_pert=20                         H2/H1  0.665  H3/H1  0.539  H3/H2  0.810  H4/H3  0.679  H5/H4  0.663  H1/Plateau   1.20  |dH3/H2|  50.1%
+  beta=0.03, Q_pert=40                         H2/H1  0.423  H3/H1  0.305  H3/H2  0.721  H4/H3  0.612  H5/H4  0.648  H1/Plateau   0.58  |dH3/H2|  55.6%
+  beta=0.03, Q_pert=80                         H2/H1  0.292  H3/H1  0.173  H3/H2  0.592  H4/H3  0.507  H5/H4  0.600  H1/Plateau   0.41  |dH3/H2|  63.6%
+  beta=0.1, Q_pert=5.364                       H2/H1  1.081  H3/H1  0.904  H3/H2  0.836  H4/H3  0.719  H5/H4  0.661  H1/Plateau  17.19  |dH3/H2|  48.6%
+  beta=0.1, Q_pert=10                          H2/H1  0.924  H3/H1  0.772  H3/H2  0.835  H4/H3  0.709  H5/H4  0.663  H1/Plateau   3.91  |dH3/H2|  48.6%
+  beta=0.1, Q_pert=20                          H2/H1  0.664  H3/H1  0.539  H3/H2  0.811  H4/H3  0.679  H5/H4  0.664  H1/Plateau   1.20  |dH3/H2|  50.1%
+  beta=0.1, Q_pert=40                          H2/H1  0.423  H3/H1  0.305  H3/H2  0.722  H4/H3  0.613  H5/H4  0.649  H1/Plateau   0.58  |dH3/H2|  55.6%
+  beta=0.1, Q_pert=80                          H2/H1  0.292  H3/H1  0.173  H3/H2  0.593  H4/H3  0.507  H5/H4  0.600  H1/Plateau   0.41  |dH3/H2|  63.5%
+
+  (2) Rueckkopplungssumme: gebunden/frei = sum_{n>=1} q^n = q/(1-q) = 5,364  =>
+      q = 0.84287;  mit q = exp(-sqrt(y)):  y = 0.02922,  nu = 1/(1-q) = 6.3643
+  (3) y-Werte der Stoerungen bei z = 1100 (Formeln aus Notiz 08) und das zugehoerige Q = q/(1-q):
+      R =  147 Mpc, Phi/c^2 = 1e-05:  y = 8.896e-05,  q = 0.99061,  Q =     105.5
+      R =   50 Mpc, Phi/c^2 = 1e-05:  y = 2.616e-04,  q = 0.98396,  Q =      61.3
+      R =   10 Mpc, Phi/c^2 = 1e-05:  y = 1.308e-03,  q = 0.96448,  Q =      27.2
+      R =    1 Mpc, Phi/c^2 = 1e-04:  y = 1.308e-01,  q = 0.69654,  Q =       2.3
+      Hubble-Kugel y = pi                         : y = 3.1416,  q = 0.1699,  Q = 0.205
+      Hintergrund y = pi*Omega_b(1100) = pi*0.1187: y = 0.3730,  q = 0.5430,  Q = 1.188
+      Noetige Bezugslaenge fuer y_bg = pi Omega_b(z)/X = 0.0292:  X = 12.76 (bei z = 1100), X = 16.89 (Materie-Aera, Omega_b = 1-q)
+
+====================================================================================================
+3  Galaxien: nur der Operator (keine Quelle) gegen Hybrid (Schatten klumpt wie CDM, Notiz 17)
+====================================================================================================
+  Baryonen Hernquist a = 1,5 kpc (M/1e10)^0,3; Schatten = NFW mit kosm. Anteil (wie Notiz 17); a0 = 1,2e-10
+  Spalten: g_Op/g_RAR (Gedaechtnis, stationaer, q = exp(-sqrt y) lokal) | g_Hybrid/g_RAR | g(q=0,8429 fest)/g_RAR
+   M_b = 6e+10, M200 = 1e+12:
+     r =    5 kpc  y =   1.2172    1.0000     1.353     4.253
+     r =   10 kpc  y =   0.4413    1.0000     1.636     3.089
+     r =   20 kpc  y =   0.1369    1.0000     2.094     1.968
+     r =   50 kpc  y =   0.0252    1.0000     2.898     0.935
+     r =  100 kpc  y =   0.0066    1.0000     3.544     0.498
+   M_b = 1e+09, M200 = 1e+11:
+     r =    5 kpc  y =   0.0351    1.0000     3.375     1.088
+     r =   10 kpc  y =   0.0101    1.0000     4.754     0.607
+     r =   20 kpc  y =   0.0027    1.0000     6.331     0.322
+     r =   50 kpc  y =   0.0005    1.0000     8.425     0.134
+     r =  100 kpc  y =   0.0001    1.0000     9.917     0.068
+
+====================================================================================================
+4  Wachstum nach z* (Baryonen druckfrei, Strahlung glatt, subhorizontal)  ' = d/dln a
+====================================================================================================
+  d_b'' + (2 + dlnH/dlna) d_b' = 3/2 [Ob(a)(d_b + M) + Oc(a) d_c];  M' = beta[q(d_b+M) - M]
+  Wachstumsexponent im Materie-Zeitalter, D ~ a^p:  p(p+1/2) = 3/2 (1-q)[1 + q beta/(beta(1-q)+p)]
+   beta =     0.01:  p = 0.3020
+   beta =     0.03:  p = 0.3130
+   beta =      0.1:  p = 0.3444
+   beta =      0.3:  p = 0.4056
+   beta =        1:  p = 0.5193
+   beta =        3:  p = 0.6586
+   beta =       10:  p = 0.8136
+   beta =    1e+06:  p = 1.0000
+
+  Normierung: Delta_phi_p = (2/3) sqrt(2,1e-9) = 3.055e-05 pro ln k (n_s = 1). Tabellen: Delta = |delta|*Delta_phi_p.
+  Variante                         k[1/Mpc]  Delta_b(z*)  Delta_well(z*)  Delta_b(z=0)  Delta_eff(z=0)  f_b(z=0,5)  Delta_b(0)/LCDM
+  (a) LCDM                          0.050     1.55e-06     4.04e-03     4.588e-01     4.596e-01      0.762       1.000
+  (b) nur Baryonen                  0.050     1.25e-04     0.00e+00     5.653e-02     5.653e-02      0.344      -0.123
+  (c) mitschwingend                 0.050     7.34e-05     3.94e-04     1.344e-01     1.344e-01      0.760       0.293
+  (i) beta=0,01                     0.050     3.23e-05     2.46e-04     5.052e-03     8.508e-04      0.238       0.011
+  (i) beta=0,1                      0.050     3.24e-05     2.47e-04     5.588e-03     1.105e-03      0.262       0.012
+  (i) beta=1                        0.050     3.34e-05     2.38e-04     1.073e-02     3.997e-03      0.393       0.023
+  (i) beta=30                       0.050     5.94e-05     4.77e-04     7.436e-02     6.745e-02      0.699       0.162
+  (ii) w=1                          0.050     1.55e-06     4.04e-03     4.588e-01     4.596e-01      0.762       1.000
+
+  (a) LCDM                          0.100     7.35e-05     7.03e-03     8.080e-01     8.092e-01      0.761       1.000
+  (b) nur Baryonen                  0.100     9.78e-05     0.00e+00     2.232e-01     2.232e-01      0.344       0.276
+  (c) mitschwingend                 0.100     3.90e-05     2.09e-04     3.926e-01     3.926e-01      0.760       0.486
+  (i) beta=0,01                     0.100     6.99e-05     2.46e-04     8.679e-03     1.435e-03      0.234       0.011
+  (i) beta=0,1                      0.100     6.97e-05     2.44e-04     9.709e-03     1.901e-03      0.259       0.012
+  (i) beta=1                        0.100     6.82e-05     2.15e-04     1.995e-02     7.433e-03      0.393       0.025
+  (i) beta=30                       0.100     4.75e-05     1.91e-04     1.993e-01     1.808e-01      0.699       0.247
+  (ii) w=1                          0.100     7.35e-05     7.03e-03     8.080e-01     8.092e-01      0.761       1.000
+
+  (a) LCDM                          0.135     6.65e-05     8.55e-03     9.721e-01     9.737e-01      0.761       1.000
+  (b) nur Baryonen                  0.135     3.90e-05     0.00e+00     4.353e-01     4.353e-01      0.344       0.448
+  (c) mitschwingend                 0.135     1.02e-04     5.48e-04     2.751e-01     2.751e-01      0.760       0.283
+  (i) beta=0,01                     0.135     8.28e-05     2.46e-04     9.592e-03     1.582e-03      0.233       0.010
+  (i) beta=0,1                      0.135     8.28e-05     2.43e-04     1.069e-02     2.088e-03      0.259       0.011
+  (i) beta=1                        0.135     8.26e-05     2.06e-04     2.145e-02     7.990e-03      0.393       0.022
+  (i) beta=30                       0.135     8.62e-05     1.95e-04     1.730e-01     1.569e-01      0.699       0.178
+  (ii) w=1                          0.135     6.65e-05     8.55e-03     9.721e-01     9.737e-01      0.761       1.000
+
+  (k = 0,135/Mpc = 0,2 h/Mpc entspricht grob der sigma_8-Skala R = 8 Mpc/h.)
+
+  Aufholen durch lokale Verstaerkung (Tief-a0-Regime): Operator mit lokalem nu auf die Baryonenquelle,
+  p(p+1/2) = 3/2 (1-q) nu_lok; noetige e-Folds n = ln(F)/(p-1) fuer den Rueckstand F von (i) beta = 1 bei k = 0,135:
+   nu_lok =    3.3:  p = 0.667,  n = inf e-Folds (F = 45.3)
+   nu_lok =   28.2:  p = 2.340,  n = 2.85 e-Folds (F = 45.3)
+   nu_lok =   62.3:  p = 3.590,  n = 1.47 e-Folds (F = 45.3)
+   nu_lok =  106.5:  p = 4.766,  n = 1.01 e-Folds (F = 45.3)
+  (nu_lok-Werte = 1+Q aus Abschnitt 2d(3); nu haengt von delta ab, Superposition verletzt, vgl. Notiz 08, Befund 2.)
+
+  Bullet-Schranke 1/lam >= 170 Myr heute (Notiz 12), lam = beta H0:  beta <= 85  (H0^-1 = 14.52 Gyr)
+  Bullet-Schranke 1/lam >= 260 Myr heute (Notiz 12), lam = beta H0:  beta <= 56  (H0^-1 = 14.52 Gyr)

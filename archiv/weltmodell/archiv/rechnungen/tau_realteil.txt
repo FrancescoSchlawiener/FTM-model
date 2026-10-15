@@ -1,0 +1,16 @@
+Milchstraße (Punktmasse 6e10 M☉), r* = 8.35 kpc
+
+ r [kpc]   y=gN/a0     κ/Ω Re τ mod 1   ν (|q|)  Re ν(q komplex)  Δ [dex]  |ν komplex|
+    0.50 2.788e+02  1.0000     0.0000    1.0000           1.0000   +0.000       1.0000
+    1.00 6.971e+01  1.0010     0.0010    1.0002           1.0002   -0.000       1.0002
+    2.00 1.743e+01  1.0321     0.0321    1.0156           1.0153   -0.000       1.0153
+    5.00 2.788e+00  1.1778     0.1778    1.2320           1.0540   -0.068       1.0718
+    8.35 9.998e-01  1.2578     0.2578    1.5821           0.8691   -0.260       0.9240
+   15.00 3.098e-01  1.3219     0.3219    2.3427           0.6836   -0.535       0.7395
+   30.00 7.745e-02  1.3665     0.3665    4.1163           0.5826   -0.849       0.6220
+   60.00 1.936e-02  1.3900     0.3900    7.6980           0.5392   -1.155       0.5682
+  120.00 4.841e-03  1.4020     0.4020   14.8785           0.5191   -1.457       0.5429
+
+Größte Abweichung mit Phase: 1.457 dex  (Streuung der gemessenen RAR ≈ 0,13 dex, systematisch < 0,05 dex)
+Im Kepler-Bereich ist κ/Ω = 1 ≡ 0 (mod 1): die Phase verschwindet exakt (T-Symmetrie).
+Im flachen Bereich ist κ/Ω → √2, Re τ mod 1 → 0,414: die Phase dreht q aus der reellen Achse.

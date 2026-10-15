@@ -1,0 +1,98 @@
+1) Kreisdrehung x → x + α mod 1, Zelle [0, μ): erste Rückkehrzeiten (2·10⁵ Startpunkte gleichverteilt in der Zelle)
+   α = golden (√5−1)/2 μ = 0.1   : ⟨T⟩·μ = 1.000000   Werte [5, 8, 13] Anteile [0.0983, 0.4427, 0.459] T₃ − T₁ − T₂ = 0
+   α = golden (√5−1)/2 μ = 0.01  : ⟨T⟩·μ = 0.999998   Werte [55, 89, 144] Anteile [0.1869, 0.4975, 0.3156] T₃ − T₁ − T₂ = 0
+   α = golden (√5−1)/2 μ = 0.001 : ⟨T⟩·μ = 0.999998   Werte [610, 987, 1597] Anteile [0.2669, 0.5469, 0.1862] T₃ − T₁ − T₂ = 0
+   α = √2 − 1          μ = 0.1   : ⟨T⟩·μ = 1.000003   Werte [5, 12, 17] Anteile [0.2893, 0.7056, 0.0051] T₃ − T₁ − T₂ = 0
+   α = √2 − 1          μ = 0.01  : ⟨T⟩·μ = 1.000000   Werte [70, 99, 169] Anteile [0.4949, 0.2857, 0.2193] T₃ − T₁ − T₂ = 0
+   α = √2 − 1          μ = 0.001 : ⟨T⟩·μ = 0.999997   Werte [408, 985, 1393] Anteile [0.1335, 0.6411, 0.2255] T₃ − T₁ − T₂ = 0
+   α = e − 2           μ = 0.1   : ⟨T⟩·μ = 1.000003   Werte [7, 11, 18] Anteile [0.7203, 0.011, 0.2687] T₃ − T₁ − T₂ = 0
+   α = e − 2           μ = 0.01  : ⟨T⟩·μ = 1.000004   Werte [71, 181, 252] Anteile [0.801, 0.0989, 0.1001] T₃ − T₁ − T₂ = 0
+   α = e − 2           μ = 0.001 : ⟨T⟩·μ = 1.000000   Werte [536, 1001, 1537] Anteile [0.0601, 0.8897, 0.0502] T₃ − T₁ − T₂ = 0
+   Kac ⟨T⟩ = 1/μ erfüllt; höchstens drei Werte, der größte ist die Summe der beiden anderen (Drei-Abstände-Satz).
+   Golden: die Werte sind aufeinanderfolgende Fibonacci-Zahlen (μ = 0,01: 55, 89, 144; μ = 0,001: 610, 987, 1597).
+   Normierte längste Rückkehr μ·T_max über μ ∈ [10⁻³, 10⁻¹] (40 Werte, 2·10⁴ Startpunkte):
+     α = golden (√5−1)/2: max μ·T_max = 1.884, Mittel 1.490
+     α = √2 − 1         : max μ·T_max = 2.035, Mittel 1.552
+     α = e − 2          : max μ·T_max = 2.706, Mittel 1.749
+
+2) G(Γ) = ⟨e^{−ΓT}⟩ (T in Schritten, Schrittdauer 1). Lokaler Exponent d ln(1 − G)/d ln Γ.
+   Regel: 1 − e^{−√(Γτ_D)} hat für Γτ_D → 0 den Exponenten ½ über beliebig viele Dekaden.
+   Regel (τ_D = 100): Exponent bei Γτ_D = 10⁻⁴: 0.4975; bei Γτ_D = 1: 0.291; Dekaden mit |Exp − ½| < 0,05 im Gitter (Γτ_D ≥ 10⁻⁶): 4.7, ohne untere Grenze
+   Drehung α = golden (√5−1)/2 μ = 0,01: Exponent bei Γ = 10⁻⁶: 0.9999, 10⁻²: 0.569, 10⁰: 0.000; Dekaden mit |Exp − ½| < 0,05: 0.13
+   Drehung α = √2 − 1          μ = 0,01: Exponent bei Γ = 10⁻⁶: 0.9999, 10⁻²: 0.569, 10⁰: 0.000; Dekaden mit |Exp − ½| < 0,05: 0.13
+   Drehung α = e − 2           μ = 0,01: Exponent bei Γ = 10⁻⁶: 0.9999, 10⁻²: 0.566, 10⁰: 0.000; Dekaden mit |Exp − ½| < 0,05: 0.15
+   Drehung ohne Rauschen: 1 − G ≈ Γ⟨T⟩ (Exponent 1), bei Γ ≳ 1/T₁ Übergang auf 0. Der Wert ½ wird nur im Durchgang berührt.
+   Drehung mit Phasenrauschen x → x + α + σξ (ξ normal), μ = 0,01, 2·10⁵ Läufe:
+     α = golden       σ = 0.003  (Pe = αL/σ² =  6.87e+04): ⟨T⟩μ = 1.002, P(T=1) = 0.000, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.922, 10⁻¹: 0.050; Dekaden |Exp−½|<0,05: 0.18
+     α = golden       σ = 0.01   (Pe = αL/σ² =  6.18e+03): ⟨T⟩μ = 1.002, P(T=1) = 0.000, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.915, 10⁻¹: 0.079; Dekaden |Exp−½|<0,05: 0.18
+     α = golden       σ = 0.03   (Pe = αL/σ² =       687): ⟨T⟩μ = 0.997, P(T=1) = 0.000, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.912, 10⁻¹: 0.089; Dekaden |Exp−½|<0,05: 0.18
+     α = golden       σ = 0.1    (Pe = αL/σ² =      61.8): ⟨T⟩μ = 1.001, P(T=1) = 0.000, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.910, 10⁻¹: 0.091; Dekaden |Exp−½|<0,05: 0.18
+     α = golden·10⁻²  σ = 0.003  (Pe = αL/σ² =       687): ⟨T⟩μ = 0.998, P(T=1) = 0.393, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.919, 10⁻¹: 0.057; Dekaden |Exp−½|<0,05: 0.10
+     α = golden·10⁻²  σ = 0.01   (Pe = αL/σ² =      61.8): ⟨T⟩μ = 0.998, P(T=1) = 0.314, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.886, 10⁻¹: 0.129; Dekaden |Exp−½|<0,05: 0.13
+     α = golden·10⁻²  σ = 0.03   (Pe = αL/σ² =      6.87): ⟨T⟩μ = 1.002, P(T=1) = 0.130, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.868, 10⁻¹: 0.186; Dekaden |Exp−½|<0,05: 0.18
+     α = golden·10⁻²  σ = 0.1    (Pe = αL/σ² =     0.618): ⟨T⟩μ = 1.000, P(T=1) = 0.040, Exp bei Γ=10⁻⁶: 1.000, 10⁻³: 0.901, 10⁻¹: 0.106; Dekaden |Exp−½|<0,05: 0.20
+     α = golden·10⁻⁵  σ = 0.001  (Pe = αL/σ² =      6.18): ⟨T⟩μ = 1.049, P(T=1) = 0.921, Exp bei Γ=10⁻⁶: 0.938, 10⁻³: 0.576, 10⁻¹: 0.787; Dekaden |Exp−½|<0,05: 0.95
+     α = golden·10⁻⁵  σ = 0.003  (Pe = αL/σ² =     0.687): ⟨T⟩μ = 1.006, P(T=1) = 0.761, Exp bei Γ=10⁻⁶: 0.981, 10⁻³: 0.517, 10⁻¹: 0.616; Dekaden |Exp−½|<0,05: 2.03
+   Rauschen verschmiert nur die drei Werte; solange die Drehung die Bewegung trägt (Pe ≫ 1), bleibt kein Bereich mit ½.
+   Ein ½-Bereich entsteht erst, wenn die Drift fast null ist (Pe ≪ 1) und die Schritte kleiner als die Zelle: dann ist es ein Irrweg.
+
+3a) Zelle am Rand: gefaltete Drehung (Spiegelung an den Enden von [0, 1] = Drehung auf dem Kreis der Länge 2), Zelle [0, μ) am Rand.
+   α = golden (√5−1)/2: ⟨T⟩μ = 1.0000, Werte [55, 89, 144], Exp bei Γ = 10⁻⁶: 0.9999, Dekaden |Exp−½|<0,05: 0.13
+   α = √2 − 1         : ⟨T⟩μ = 1.0000, Werte [70, 99, 169], Exp bei Γ = 10⁻⁶: 0.9999, Dekaden |Exp−½|<0,05: 0.13
+   α = e − 2          : ⟨T⟩μ = 1.0000, Werte [71, 181, 252], Exp bei Γ = 10⁻⁶: 0.9999, Dekaden |Exp−½|<0,05: 0.15
+   Der Rand ändert nichts: gefaltete Drehung ist wieder eine Drehung, drei Werte, Exponent 1 → 0.
+
+3b) Von der Drehung getriebener Lauf (deterministisch): y_{n+1} = y_n + f(x_n), f = +1 auf [0, ½), −1 auf [½, 1), x → x + α;
+    Halbgerade |y|, Rückkehr nach y = 0. 2·10⁴ Startphasen x gleichverteilt, bis 2·10⁵ Schritte.
+   α = golden (√5−1)/2: Exp von 1 − G bei Γ = 10⁻⁶, 10⁻⁴, 10⁻², 10⁰: [0.999, 0.949, 0.828, 0.233], Dekaden |Exp−½|<0,05: 0.18; Verhältnis aufeinanderfolgender Werte 4.220, 4.232
+   α = golden (√5−1)/2: Rückkehr bis 2·10⁵: 1.0000, ⟨T⟩ = 8.26, verschiedene Werte 7 ([2, 6, 24, 100, 422, 1786]…), max|y| = 7, P(T > 10, 10², 10³, 10⁴) = [0.0564, 0.0037, 0.0008, 0.0]
+   α = √2 − 1         : Exp von 1 − G bei Γ = 10⁻⁶, 10⁻⁴, 10⁻², 10⁰: [0.999, 0.932, 0.849, 0.253], Dekaden |Exp−½|<0,05: 0.20; Verhältnis aufeinanderfolgender Werte 5.808, 5.825
+   α = √2 − 1         : Rückkehr bis 2·10⁵: 1.0000, ⟨T⟩ = 7.63, verschiedene Werte 6 ([2, 8, 42, 240, 1394, 8120]…), max|y| = 6, P(T > 10, 10², 10³, 10⁴) = [0.0302, 0.0051, 0.001, 0.0]
+   α = e − 2          : Exp von 1 − G bei Γ = 10⁻⁶, 10⁻⁴, 10⁻², 10⁰: [0.987, 0.907, 0.788, 0.192], Dekaden |Exp−½|<0,05: 0.23; Verhältnis aufeinanderfolgender Werte 2.643, 2.919
+   α = e − 2          : Rückkehr bis 2·10⁵: 1.0000, ⟨T⟩ = 15.40, verschiedene Werte 13 ([2, 4, 14, 28, 74, 216]…), max|y| = 15, P(T > 10, 10², 10³, 10⁴) = [0.1268, 0.0108, 0.0007, 0.0001]
+    Irrweg zum Vergleich: P(T > t) ≈ √(2/(πt)) = [0.2523, 0.0798, 0.0252, 0.008]
+    Der von der Wicklung getriebene Lauf streut nur logarithmisch (Ostrowski); die Rückkehrzeiten bilden eine Leiter
+    (golden: Verhältnis → φ³ = 4,236; √2 − 1: (1 + √2)² = 5,828), das Mittel ist endlich, kein t^{−3/2}-Schwanz, keine Wurzel.
+
+3c) Irrweg auf der bei Λ geschlossenen Halbgeraden: Orte 0 … N (Schrittlänge ℓ, Schrittdauer ℓ/c = 1), Spiegel bei N = Λ/ℓ.
+   N =    100: Kac ⟨T⟩ = 200.0000 (2N = 200); Exp bei Γ = 0,1/N²: 0.939, Γ = 10/N²: 0.501, Γ = 10⁻¹: 0.452; Dekaden |Exp−½|<0,05: 2.60
+   N =   1000: Kac ⟨T⟩ = 2000.0000 (2N = 2000); Exp bei Γ = 0,1/N²: 0.939, Γ = 10/N²: 0.501, Γ = 10⁻¹: 0.452; Dekaden |Exp−½|<0,05: 4.60
+   N =  10000: Kac ⟨T⟩ = 20000.0000 (2N = 20000); Exp bei Γ = 0,1/N²: 0.939, Γ = 10/N²: 0.501, Γ = 10⁻¹: 0.452; Dekaden |Exp−½|<0,05: 6.60
+   Exponent 1 unterhalb Γ ≈ D/Λ² (Kac, endliches Mittel), ½ zwischen D/Λ² und c/ℓ (Pólya), das Fenster wächst wie 2·log₁₀N.
+   Rückkehr aus der Tiefe ϖ (Ort m) mit Spiegel bei Λ, kontinuierlich: G = cosh((Λ − ϖ)k)/cosh(Λk), k = √(Γ/D):
+     ϖ = 10, Λ = 1000, Γ = 1e-07: diskret 0.998133, kontinuierlich 0.998133, offen e^{−ϖk} = 0.995538
+     ϖ = 10, Λ = 1000, Γ = 0.0001: diskret 0.868121, kontinuierlich 0.868123, offen e^{−ϖk} = 0.868123
+     ϖ = 10, Λ = 1000, Γ = 0.01: diskret 0.242544, kontinuierlich 0.243117, offen e^{−ϖk} = 0.243117
+     ϖ = 10, Λ = 10000, Γ = 1e-07: diskret 0.995539, kontinuierlich 0.995539, offen e^{−ϖk} = 0.995538
+     ϖ = 10, Λ = 10000, Γ = 0.0001: diskret 0.868121, kontinuierlich 0.868123, offen e^{−ϖk} = 0.868123
+     ϖ = 10, Λ = 10000, Γ = 0.01: diskret 0.242544, kontinuierlich 0.243117, offen e^{−ϖk} = 0.243117
+
+3d) Drift und Diffusion (½ liegt zwischen max(D/L², v²/4D) und D/ϖ²) auf dem Kreis (Umfang L, Zelle am Ort, Start in der Tiefe ϖ hinter der Zelle): D u'' + v u' = Γ u, u = 1 an beiden Zellrändern.
+   Pe = vL/D =     0, ϖ/L = 10⁻³: Exp bei ΓL²/D = 10⁻², 10⁰, 10², 10⁴: [0.999, 0.925, 0.498, 0.475]; Dekaden |Exp−½|<0,05: 3.33
+   Pe = vL/D =     1, ϖ/L = 10⁻³: Exp bei ΓL²/D = 10⁻², 10⁰, 10², 10⁴: [0.999, 0.922, 0.473, 0.473]; Dekaden |Exp−½|<0,05: 3.45
+   Pe = vL/D =    10, ϖ/L = 10⁻³: Exp bei ΓL²/D = 10⁻², 10⁰, 10², 10⁴: [1.0, 0.958, 0.287, 0.45]; Dekaden |Exp−½|<0,05: 0.40
+   Pe = vL/D =   100, ϖ/L = 10⁻³: Exp bei ΓL²/D = 10⁻², 10⁰, 10², 10⁴: [1.0, 0.995, 0.592, 0.255]; Dekaden |Exp−½|<0,05: 0.10
+   Pe = vL/D =  1000, ϖ/L = 10⁻³: Exp bei ΓL²/D = 10⁻², 10⁰, 10², 10⁴: [1.0, 1.0, 0.951, 0.006]; Dekaden |Exp−½|<0,05: 0.13
+   Ohne Drift ist der Kreis vom Umfang L = 2Λ genau die bei Λ geschlossene Halbgerade (Spiegelsymmetrie, vgl. 3c).
+   Eine Drift (die Wicklung als Umlauf) verkürzt das ½-Fenster; bei Pe ≳ 10³ bleibt keins.
+
+4) Kac-Budget, Umlaufsinn, Wicklung
+   Zerlegung des Kreises in 7 Zellen, α = golden (√5−1)/2: Σ 1/⟨T_i⟩ = 1.000000
+   Zerlegung des Kreises in 7 Zellen, α = √2 − 1         : Σ 1/⟨T_i⟩ = 1.000000
+   Zerlegung des Kreises in 7 Zellen, α = e − 2          : Σ 1/⟨T_i⟩ = 1.000001
+   Umlaufsinn α ↔ −α (golden (√5−1)/2, μ = 0,01): Werte [55, 89, 144] / [55, 89, 144], Anteile gleich: True
+   Umlaufsinn α ↔ −α (√2 − 1, μ = 0,01): Werte [70, 99, 169] / [70, 99, 169], Anteile gleich: True
+   Umlaufsinn α ↔ −α (e − 2, μ = 0,01): Werte [71, 181, 252] / [71, 181, 252], Anteile gleich: True
+   Halbgerade N = 1000: Kac-Anteil des Ortes π₀ = 1/(2N) = 0.000500; Σ π_i = (1 + 2(N−1) + 1)/(2N) = 1
+
+5) Unabhängige Prüfungen
+   ∫ √(t₀/π) t^{−3/2} e^{−t₀/t} e^{−Γt} dt, t₀ = 1.0, Γ = 0.3: 0.3343907315; e^{−√(4Γt₀)} = 0.3343907315
+   ∫ √(t₀/π) t^{−3/2} e^{−t₀/t} e^{−Γt} dt, t₀ = 25.0, Γ = 0.001: 0.7288934141; e^{−√(4Γt₀)} = 0.7288934141
+   ∫ √(t₀/π) t^{−3/2} e^{−t₀/t} e^{−Γt} dt, t₀ = 0.25, Γ = 4.0: 0.1353352832; e^{−√(4Γt₀)} = 0.1353352832
+   Regel: a_N/a₀ = 1, Γ = a_N/c, t₀ = τ_D/4, τ_D = c/a₀ = 2.725e+18 s: Integral 0.36787944, ftm_kern q = 0.36787944
+   Regel: a_N/a₀ = 0.01, Γ = a_N/c, t₀ = τ_D/4, τ_D = c/a₀ = 2.725e+18 s: Integral 0.90483742, ftm_kern q = 0.90483742
+   Regel: a_N/a₀ = 4, Γ = a_N/c, t₀ = τ_D/4, τ_D = c/a₀ = 2.725e+18 s: Integral 0.13533528, ftm_kern q = 0.13533528
+   Kac ohne Rechner: Halbgerade 0 … N spiegelnd, Stationärmaß ∝ Grad (1, 2, …, 2, 1), Summe 2N ⇒ ⟨T₀⟩ = 2N (3c exakt gelöst).
+   Drei Werte von Hand, golden, μ = 0,01: 55α = 33,9919… → Rest 0,99187; 89α = 55,00502 → Rest 0,00502 < μ; 144α = 88,99689 → Rest 0,99689.
+   Von x ∈ [0, μ): Rückkehr nach 89 für x < μ − 0,00502, nach 55 für x ≥ 1 − 0,99187 = 0,00813, dazwischen 144 ⇒ Anteile
+   p₅₅ = 0.1869, p₈₉ = 0.4975, p₁₄₄ = 0.3156; Kac 55p₅₅ + 89p₈₉ + 144p₁₄₄ = 100.0000 (1/μ = 100)

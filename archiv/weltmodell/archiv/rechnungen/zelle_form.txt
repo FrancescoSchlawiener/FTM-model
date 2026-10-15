@@ -1,0 +1,94 @@
+
+================================================================================================================
+0  Abstand zur letzten Streufläche (mitbewegt, heutiger Beobachter, ρ_b fest)
+================================================================================================================
+   Standardhintergrund: d_LSS = 27.786 Gpc
+   V0: D_M-Faktor 1.0223  ⇒ d_LSS = 28.406 Gpc
+   S1: D_M-Faktor 1.0210  ⇒ d_LSS = 28.369 Gpc
+   S2: D_M-Faktor 1.0209  ⇒ d_LSS = 28.367 Gpc
+   S2 + Rest 0.114 als feste Rückstellung (Spannweite, nicht Modell): Faktor 1.0088
+   weiter mit S2 (selbstkonsistent): d_LSS = 28.367 Gpc, L_min = 0,985·d_LSS = 27.941 Gpc
+
+================================================================================================================
+1  (a₀, Q)-Gebiet je Form:  5 ≤ Q ≤ K·f³/a₀ − 1;  Prüfung mit a₀ = 1,06 ± 0,09 ± 0,04 (SPARC), Q = 5,36 ± 0,07 [G]
+================================================================================================================
+   K = 7.1729e-10 (Standard) → 6.7411e-10 m/s² (S2, Faktor 0.9398 = 1/1.0209³)
+   Form               f³     Q_max(a₀=1,00) (1,06) (1,10) (1,13)  a₀,max(Q=5,36)  Fenster zu (Q=5)  Abstand/σ  P(erfüllt)  [Rest als Rückstellung]
+   Würfel            1.000     5.74          5.36   5.13   4.97      1.060            1.124         -0.00      0.500       [+0.39]
+   sechseckig        1.155     6.78          6.34   6.08   5.89      1.224            1.297         +1.65      0.951       [+2.10]
+   raumzentriert     1.299     7.76          7.26   6.96   6.75      1.377            1.459         +3.19      0.999       [+3.70]
+   flächenzentriert  1.414     8.53          7.99   7.67   7.44      1.499            1.589         +4.43      1.000       [+4.98]
+   Abstand/σ = (K·f³ − (1 + Q)·a₀)/σ, σ² = (1 + Q)²σ_a² + a₀²σ_Q², σ_a = √(0,09² + 0,04²) = 0.0985·10⁻¹⁰;
+   P(erfüllt) = Anteil der gemessenen (a₀, Q)-Verteilung innerhalb der Grenze.
+   Probe Monte Carlo: Würfel 0.500, sechseckig 0.951, raumzentriert 0.999, flächenzentriert 1.000
+   SPARC-Spanne 1,00–1,13 (Υ_d, Gewichtung): Würfel Q_max 4.97–5.74, sechseckig 5.89–6.78.
+   Modellwert a₀ = 1,1: Würfel Q ≤ 5.13 (Q = 5,36 um 3.3σ_Q darüber), sechseckig Q ≤ 6.08.
+
+================================================================================================================
+2  Messbare Folgen der Form bei gleichem Volumen V = 3c⁴/(2Gρ_b(1 + Q)a₀), Beobachter heute, χ = d_LSS/2 (S2)
+================================================================================================================
+   Probe: Würfel mit L = d_LSS: C₂/C₂(∞) = 0.844, C₃ 1.023, C₄ 0.993 (frühere Modensumme: ≈ 0,84)
+
+   a₀ = 1,06, Q = 5,36 (SPARC):  V^⅓ = 27.94 Gpc, d_LSS = 28.37 Gpc
+   Form               L_min[Gpc] L_min/d  Kreispaare (Radius)          k₁χ    g₁  k₂/k₁ g₂  C₂/C₂∞  C₃/C₃∞  C₄/C₄∞  S½/S½∞  1. Schale an C₂, C₃
+   Würfel              27.94    0.985   3 (9.9°)                     3.19    6  1.414  12    0.830   1.028   0.989   0.672   0.64, 0.32
+   sechseckig          29.31    1.033   keine                        3.04    2  1.155   6    0.840   1.020   0.994   0.687   0.24, 0.11
+   raumzentriert       30.49    1.075   keine                        3.58   12  1.414   6    0.849   1.016   0.997   0.702   0.87, 0.66
+   flächenzentriert    31.36    1.106   keine                        3.48    8  1.155   6    0.850   1.015   0.997   0.703   0.65, 0.44
+
+   a₀ = 1,10, Q = 5,36 (Modellwert):  V^⅓ = 27.60 Gpc, d_LSS = 28.37 Gpc
+   Form               L_min[Gpc] L_min/d  Kreispaare (Radius)          k₁χ    g₁  k₂/k₁ g₂  C₂/C₂∞  C₃/C₃∞  C₄/C₄∞  S½/S½∞  1. Schale an C₂, C₃
+   Würfel              27.60    0.973   3 (13.4°)                    3.23    6  1.414  12    0.817   1.033   0.986   0.652   0.66, 0.33
+   sechseckig          28.95    1.021   keine                        3.08    2  1.155   6    0.829   1.023   0.993   0.669   0.24, 0.11
+   raumzentriert       30.11    1.062   keine                        3.62   12  1.414   6    0.840   1.018   0.996   0.686   0.87, 0.68
+   flächenzentriert    30.98    1.092   keine                        3.52    8  1.155   6    0.841   1.017   0.996   0.687   0.65, 0.46
+
+   Kreispaare erscheinen (kürzeste Schleife = d_LSS) bei a₀ ≥ 3c⁴/(2Gρ_b(1 + Q)(d_LSS/f)³), Q = 5,36, und mit dem Muster
+   der kürzesten Gittervektoren (Zentren der Kreise, Winkel zwischen den Achsen):
+   Würfel            a₀ ≥ 1.013·10⁻¹⁰:  3 Paare zugleich, Achsenwinkel 90°
+   sechseckig        a₀ ≥ 1.170·10⁻¹⁰:  4 Paare zugleich, Achsenwinkel 60, 90°
+   raumzentriert     a₀ ≥ 1.316·10⁻¹⁰:  4 Paare zugleich, Achsenwinkel 70.5°
+   flächenzentriert  a₀ ≥ 1.433·10⁻¹⁰:  6 Paare zugleich, Achsenwinkel 60, 90°
+
+   Ausrichtung (a₀ = 1,06): Eigenwerte der Kovarianz ⟨a_ℓm a_ℓm'⟩ im Achsensystem der Zelle, Mittel = 1 (unendlicher Raum: alle 1)
+   Würfel            ℓ = 2: 0.40 0.40 0.40 1.90 1.90   ℓ = 3: 0.53 1.04 1.04 1.04 1.12 1.12 1.12
+   sechseckig        ℓ = 2: 0.43 0.43 1.11 1.11 1.91   ℓ = 3: 0.23 0.89 0.89 0.99 0.99 1.13 1.88
+   raumzentriert     ℓ = 2: 0.72 0.72 1.19 1.19 1.19   ℓ = 3: 0.29 0.64 0.64 0.64 1.60 1.60 1.60
+   flächenzentriert  ℓ = 2: 0.74 0.74 1.17 1.17 1.17   ℓ = 3: 0.42 0.42 0.42 1.30 1.30 1.30 1.83
+   Würfel ℓ = 2: Diagonale (m = −2 … 2, reell; m = 0 ∝ 3z²−r², m = 2 ∝ x²−y²): 0.40 0.40 1.90 0.40 1.90  ⇒ E_g (m = 0, 2) 1.90 gegen T₂g 0.40
+   Würfel ℓ = 3: Diagonale m = −3 … 3: 1.07 0.53 1.09 1.04 1.09 1.12 1.07
+   sechseckig ℓ = 2 (Achse = z): Diagonale m = −2 … 2: 1.11 0.43 1.91 0.43 1.11  ⇒ m = 0 1.91, |m| = 1 0.43, |m| = 2 1.11
+   sechseckig ℓ = 3: Diagonale m = −3 … 3: 1.88 0.89 0.99 1.13 0.99 0.89 0.23  ⇒ m = 0 1.13, |m| = 3 1.05
+   sechseckig ℓ = 3: sin 3φ (m = −3) 1.88 gegen cos 3φ (m = +3) 0.23: die Ecken des Sechsecks legen die Phase fest
+   Trennschärfe eines Himmels (Achsen bekannt): KL = ½Σ(λ − 1 − ln λ) gegen den unendlichen Raum, ℓ = 2 + 3 [nats]: Würfel 0.82, sechseckig 0.90, raumzentriert 0.67, flächenzentriert 0.66
+   Anteil des Quadrupols in E_g (Würfel) bzw. m = 0 um die Achse (sechseckig), unendlicher Raum 0,40 bzw. 0,20:
+   Würfel 0.758,  sechseckig 0.382;  Oktupol sechseckig m = 0: 0.162 (0,143), |m| = 3: 0.301 (0,286)
+
+================================================================================================================
+3  Hängt die Form im Modell an etwas?
+================================================================================================================
+   Volumen: fest durch a₀ und Q (Λ = ν·ΣΔs_b sieht nur V). Form: 5 Scherungen des flachen T³, ohne Rückstellung (Nullmoden).
+   Drehsymmetrien der Zelle (Kaleidoskop, 03): Ordnung 1, 2, 3, 4, 6; eine irrationale (goldene) Wicklung ist keine Drehung der Zelle.
+   Vergleich der Extreme (Rechnung, keine Herleitung):
+   Wicklung: min n·‖nW‖ über n ≤ 2·10⁵, golden: 0.44721 → 1/√5 = 0.44721 (Hurwitz: größter Rückkehrabstand, indefinite Form x² + xy − y²)
+   Gitter: kürzeste Schleife bei festem Volumen, f² = γ (Hermite): 2D Quadrat 1,000, Sechseck 1.0746 = (4/3)^½ (x² + xy + y²);
+   3D: Würfel 1.0000, sechseckig 1.0491, raumzentriert 1.0911, flächenzentriert 1.1225; Maximum flächenzentriert = 2^{1/6} = 1.1225
+   Gälte für die Raumzelle dasselbe Prinzip wie für die Wicklung (größte kürzeste Rückkehr), wäre sie flächenzentriert;
+   das Modell setzt dieses Prinzip für die Zelle nicht. Die Zellform folgt nicht.
+
+================================================================================================================
+4  Beobachterfehler
+================================================================================================================
+   Zelle, Form, V, L_min: G (Ganzes), mitbewegt fest; L atmet ∝ a, Λ und a₀ fest (I), Q seit z ≈ 10 fest.
+   d_LSS: je Beobachter und Epoche (Radius seines Lichtkegels bis z = 1090); die Grenze ist die von heute an einer mitbewegt
+   festen Zelle: Beobachter bei z = 1 sähe d_LSS = 21.19 Gpc (mitbewegt), L_min/d_LSS (sechseckig, a₀ = 1,06) = 1.38.
+   Verschiebungsgitter sind homogen: Muster der Kreise und Achsen gleich für jeden Ort, nur die Phasen δ_k hängen am Ort.
+   Die Vorzugsachsen sind Achsen des Ganzen (G), keine Richtung am Ort; die Senkung der großen Winkel ist Folge der fehlenden
+   Moden k < k₁ (Schließung), nicht einer Dichte. Sachs-Wolfe allein: das späte Atmen (integrierter Anteil) ist nicht gerechnet.
+
+================================================================================================================
+5  Von Hand
+================================================================================================================
+   K(S2) = 7,1729·10⁻¹⁰/1.0209³ = 6.7411·10⁻¹⁰;  Würfel, a₀ = 1,06: Q_max = 6.7411/1,06 − 1 = 5.360
+   sechseckig, h = a: V = (√3/2)a³ ⇒ a = 29.313 Gpc; k₁ = 2π/h = 0.2143/Gpc, k₁χ = 3.040 (g₁ = 2, längs der Achse);
+   Würfel: L = V^⅓ = 27.941 Gpc, k₁χ = 2π·14.183/27.941 = 3.190 (g₁ = 6)

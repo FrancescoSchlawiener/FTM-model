@@ -1,0 +1,84 @@
+====================================================================================================
+A  Wirbelanteil der örtlichen Regel und Arbeitsaustausch mit dem Medium
+====================================================================================================
+   a₀ = 1.10e-10 m/s² = 3394.2453 (km/s)²/kpc,  G = 4.30092e-06 kpc(km/s)²/M☉,  Zeiteinheit 977.8 Myr
+
+A0 Prüfung des Lösers: Plummer-Kugel 6·10¹⁰ M☉, b = 3 kpc (Feldform = Regel, W = 0)
+     R [kpc]   g_N Gitter / exakt     a Regel     a Feldform    |W|/a
+        1.01   0.99982          10408.509   10408.663     1.49e-05
+        3.03   1.00023          12277.086   12277.291     1.67e-05
+        8.21   1.00087           5123.447    5123.239     4.05e-05
+       20.53   1.00111           1737.446    1737.250     1.13e-04
+       61.47   1.00116            515.712     515.637     1.45e-04
+
+A0b Dünne Exponentialscheibe 5·10¹⁰ M☉ ohne Bulge (h = 0,01 R_d), Feldform/Regel in der Mittelebene
+     R_d = 0.3 r*:  0.25 R_d: g_N/Freeman 0.966, Feldform/Regel 0.831;  1.0 R_d: g_N/Freeman 0.987, Feldform/Regel 0.925;  3.5 R_d: g_N/Freeman 0.997, Feldform/Regel 1.002
+     R_d = 1.0 r*:  0.25 R_d: g_N/Freeman 0.966, Feldform/Regel 0.623;  1.0 R_d: g_N/Freeman 0.987, Feldform/Regel 0.835;  3.5 R_d: g_N/Freeman 0.998, Feldform/Regel 1.003
+     R_d = 3.0 r*:  0.25 R_d: g_N/Freeman 0.966, Feldform/Regel 0.552;  1.0 R_d: g_N/Freeman 0.987, Feldform/Regel 0.799;  3.5 R_d: g_N/Freeman 0.998, Feldform/Regel 1.004
+
+A1 Milchstraße (Scheibe 5e+10, R_d = 3.0 kpc, h = 0.3 kpc; Bulge 1e+10, a = 0.6 kpc), r* = 8.72 kpc, R_d/r* = 0.344   (0.0 s)
+   Mittelebene (unterste Zelle z = 0.015 kpc): Feldform gegen örtliche Regel, Wirbelanteil W_R = a_R − g_F,R
+     R/R_d   R [kpc]   a_N        a Regel    a Feldform   Feldform/Regel   W_R/a_Regel   v Regel / Feldform [km/s]
+      0.25     0.77    27063.19    28769.27    28090.22     0.976           +0.024         148.5 /  146.8
+      0.50     1.55    14798.34    16888.98    16104.36     0.954           +0.046         161.7 /  157.9
+      1.00     3.03     9135.72    11330.56    10733.39     0.947           +0.053         185.3 /  180.4
+      2.00     6.04     5262.38     7389.16     7168.50     0.970           +0.030         211.2 /  208.0
+      2.67     8.21     3656.69     5661.77     5585.31     0.986           +0.014         215.6 /  214.1
+      3.50    10.81     2404.35     4225.46     4228.93     1.001           -0.001         213.8 /  213.8
+      5.00    15.13     1282.56     2793.01     2826.49     1.012           -0.012         205.6 /  206.8
+      8.00    24.65      454.38     1482.90     1498.25     1.010           -0.010         191.2 /  192.2
+   Probe: Flächenfluss von W je Zelle, größter Betrag / größter Einzelfluss = 5.9e-07 (divergenzfrei)
+   Wirbelanteil über der Ebene (R = R_d): |W|/|a_Regel| bei z = 0 / h / 3h / 1 kpc / 3 kpc
+     0.053 / 0.022 / 0.002 / 0.001 / 0.007
+
+A2 Größe des Austauschterms T_Austausch (senkrechte Bilanz ∂_zΣ_zz = ρW_z, radial Σ_RR ~ ∫ρW_R dz·h)
+     R/R_d   Σ_zz(0)/P_z(0)   Σ_R/P_z(0)   Σ/(ρ₀c²)      (P_z(0) = ∫₀^∞ ρ|a_z| dz Gewicht der Säule nach der Regel)
+      0.25        0.017          0.006     1.3e-09
+      1.00        0.002          0.019     3.9e-10
+      2.00        0.005          0.017     1.4e-10
+      3.50        0.006          0.007     1.9e-11
+
+A3 Arbeit mit dem Medium auf Sternbahnen, 10 Mrd. Jahre: A(t) = ∫W·v dt (W = a_Regel − g_F; mit E = v²/2 + Φ_F gilt dE/dt = W·v)
+   säkular = Mittel von A über die letzte minus über die erste Mrd. Jahre (die Schwingung längs der Bahn mittelt sich heraus);
+   Kontrolle: dieselben Bahnen im Feld g_F allein, E ebenso über die Fenster gemittelt (Fehler der Interpolation)
+   R 6–10 kpc, σ_z0 = 18 km/s: Arbeit säkular Mittel  -0.03 ± 0.09, Streuung  1.82 (km/s)² = -0.01 % / 0.56 % von σ_z0²; ΔE -0.03; Schwingung längs der Bahn (A am Ende) Streuung 13.2 %; rms z 0.165 → 0.165 kpc (+0.3 %)
+        Kontrolle g_F: ΔE Mittel +0.01, Streuung 0.44 (km/s)², rms z +0.4 %   (10 s)
+   R 6–10 kpc, σ_z0 = 30 km/s: Arbeit säkular Mittel  +0.07 ± 0.08, Streuung  1.63 (km/s)² = +0.01 % / 0.18 % von σ_z0²; ΔE +0.13; Schwingung längs der Bahn (A am Ende) Streuung 3.9 %; rms z 0.350 → 0.351 kpc (+0.1 %)
+        Kontrolle g_F: ΔE Mittel +0.02, Streuung 0.87 (km/s)², rms z +0.3 %   (10 s)
+   R 3–6 kpc, σ_z0 = 30 km/s: Arbeit säkular Mittel  +0.05 ± 0.16, Streuung  3.13 (km/s)² = +0.01 % / 0.35 % von σ_z0²; ΔE +0.15; Schwingung längs der Bahn (A am Ende) Streuung 11.2 %; rms z 0.168 → 0.169 kpc (+0.1 %)
+        Kontrolle g_F: ΔE Mittel +0.02, Streuung 2.22 (km/s)², rms z +0.1 %   (10 s)
+
+====================================================================================================
+B  Gewicht w in der Wirkung: ℒ_𝒮 = 2hBB + (2/ℓ₀²)[(1 − w)·Q_s(q) − 4π⁴/15],  ν_eff = 1 + (1 − w)(ν − 1)
+====================================================================================================
+   z =   1090: θτ_D = 5.453e+05 (a₀(z) = 0.759·a₀),  1 − w = 2.03e-321
+   z =      0: θτ_D = 17.86 (a₀(z) = 1.000·a₀),  1 − w = 0.0146
+   Probe der Kernfunktion: 1 − gewicht_w(3H₀) = 0.01461
+   Lineare Störungen, ν_eff − 1 = (1 − w)(ν − 1) bei |δg| = 10⁻³ / 10⁻² / 0,1 / 1 a₀:
+     z =   1090: 6.33e-320 / 1.93e-320 / 5.47e-321 / 1.18e-321
+     z =      0: 0.454 / 0.139 / 0.0393 / 0.0085
+   Faktor vor ganz Q̃ statt vor Q_s: Vakuumteil heute Ω_s = 0.2443 → (1 − w)·Ω_s = 3.57e-03 im mitatmenden Kosmos, in jeder gebundenen Zone dagegen voll (Vakuum je Zone)
+   Q_s(s) = Q̃(s) + 4π⁴/15 (Probe klein: 4s³/3):  s = 0.05: 0.0001636 (0.0001667),  s = 0.171: 0.006249 (0.006667),  s = 1.0: 0.8992 (1.333)
+   ∂w/∂(θτ_D) = e^{−√x}/(2√x) bei x = 10⁻⁴ / 10⁻² / 1 / 17,9: 49.5 / 4.52 / 0.184 / 0.00172  (am Umkehrpunkt θ → 0 unbeschränkt, integrierbar)
+
+   Preisach als Hilfsfeld mit einseitiger Nebenbedingung: max Σθ̃_n unter θ̃_n ≤ θ_n, θ̃_{n+1} ≤ θ̃_n (lineares Programm)
+     Lösung gegen laufendes Minimum: größte Abweichung 0.0e+00;  Komplementarität max|κ_n(θ_n − θ̃_n)| = 0.0e+00;  aktiv an 13 von 120 Schritten
+     Die Lösung ist kausal (θ̃_n hängt nur an θ_{m≤n}): das Extremum mit einseitigen Bedingungen ergibt das Gedächtnis.
+
+====================================================================================================
+C  Übergabe λ_m: Energie der Mode ξ (Multiplikator-Staub) gegen den Strukturteil
+====================================================================================================
+   Milchstraße 6·10¹⁰ M☉: r* = 8.72 kpc, R_Q = r*/(−ln q) = 51.0 kpc (q = 0.8429)
+   gelesene Masse der Regel (Punktmasse) (ν(r) − 1)·M gegen die der Mode Q·M:  r = R_Q / 100 / 200 / 300 kpc:
+     1.000 / 2.046 / 4.183 / 6.321
+   200-fache kritische Dichte, s = 0.171: ρ_b = 2.68e-25 kg/m³, 1/λ_m = 0.44–3.48 Mrd. J.; Rate der Mode λ_m·Qρ_bc² ≥ 1.18e-24 W/m³, expliziter w-Term a₀²Q_s/(8πG)·ẇ ≤ 1.02e-28 W/m³, Verhältnis 8.7e-05
+   500-fache kritische Dichte, s = 1.0: ρ_b = 6.70e-25 kg/m³, 1/λ_m = 0.28–2.20 Mrd. J.; Rate der Mode λ_m·Qρ_bc² ≥ 4.65e-24 W/m³, expliziter w-Term a₀²Q_s/(8πG)·ẇ ≤ 1.47e-26 W/m³, Verhältnis 3.2e-03
+   Aufbau der gelesenen Masse der Regel ohne Nachlauf: ν·r/c bei 50 kpc = 1.02 Mio. J.
+
+====================================================================================================
+Unabhängige Prüfung (von Hand, nicht mit diesem Code)
+====================================================================================================
+   1) R_Q Milchstraße: GM = 6,674e-11·1,989e30·6e10 = 7,965e30; /1,1e-10 = 7,241e40; √ = 2,691e20 m = 8,72 kpc;
+      q = 5,364/6,364 = 0,8429, −ln q = 0,1709; R_Q = 51,0 kpc  (Code: 51.0 kpc)
+   2) 1 − w heute: θ = 3·67,4/3,0857e19 = 6,553e-18 s⁻¹; τ_D = c/a₀ = 2,7254e18 s; x = 17,86; √x = 4,226; e^{−4,226} = 0,0146  (Code: 0.0146)
+   3) Größe des Austauschterms: W ≈ 0,1·v²/R bei R_d: 0,1·(220e3)²/9,26e19 = 5,2e-11 m/s²; mal h = 9,26e18 m: 4,8e8 m²/s² ≈ (22 km/s)², also Σ ~ ρσ_z², Σ/(ρc²) ≈ 5e-9

@@ -1,0 +1,82 @@
+
+==============================================================================================================
+1  Λ = ν_kosm·ΣΔs_b(Zelle): was ändert sich, wenn Baryonen in Falten (r ≤ r₀) fallen?
+==============================================================================================================
+   Λ = c²/2a₀ = 13.24 Gpc,  ν_kosm = 1 + Q = 6.364,  ρ_b = 4.202e-28 kg/m³
+   (a) Δs additiv: ΣΔs = GΣM/3c². Umlagerung von Masse in die Falte ändert ΣM der Zelle nicht: dΣΔs = 0.
+   (b) Rückkehrtiefe: r*(M_b) der Galaxie hängt nur an ihrer Gesamtmasse (Gauß, kein Außen); ob ein Teil in r₀ liegt,
+       sieht die Ebene darüber nicht. Beispiel 10⁸ M☉: r₀ = 1.97 AE, r* = 0.36 kpc, r*/r₀ = 3.72e+07
+       ν_kosm ist Kac-Zählung in der inneren Richtung der Zelle (I/G), kein Mittel örtlicher ν: dν_kosm = 0.
+       [L-Lesart, falsch] ν am Ort r₀: a_N = c⁴/(36GM) = 1.52e+05 m/s² = 1.4e+15·a₀ ⇒ ν = 1;
+       setzte man dort ν = 1 statt ν_kosm, fiele Λ um (Q/(1+Q))·dM_BH/M_b = 0.843·dM_BH/M_b.
+   (c) Abstrahlung: Beim Einfall wird der Anteil η der Ruhemasse Strahlung; Strahlung verliert ihre Faltung durch
+       Rotverschiebung (03) ⇒ dΛ/Λ = −η·dM_BH/M_b (Obergrenze, der Verlust läuft mit 1/a nach).
+       j = 0.000: r_ISCO = 6.000·3Δs = 3.000·r₀,  η = 1 − E_ISCO = 0.0572
+       j = 0.700: r_ISCO = 3.393·3Δs = 1.697·r₀,  η = 1 − E_ISCO = 0.1036
+       j = 0.998: r_ISCO = 1.237·3Δs = 0.618·r₀,  η = 1 − E_ISCO = 0.3210
+       Verschmelzung gleicher Falten: S ∝ M² und S_f ≥ S₁ + S₂ ⇒ M_f ≥ √2·M₁, abgestrahlt ≤ 1 − 1/√2 = 0.293
+   ⇒ Einfall und Verschmelzung vergrößern Λ nie; sie senken es um den abgestrahlten Anteil.
+
+==============================================================================================================
+2  Raten im Vergleich und w(z)
+==============================================================================================================
+   Mindestrate aus der Entropiebilanz (04): ε = Ṡ_i/(2S_Λ) = 3.829e-37 s⁻¹ (S_Λ = 9.272e+122 k)
+   ρ_BH(0) = 3.0e+05 M☉/Mpc³ [G]: ρ_BH/ρ_b = 4.83e-05,  Ṁ/M_b heute = 2.84e-23 s⁻¹,  Mittel ρ_BH/(ρ_b t₀) = 1.11e-22 s⁻¹
+   ρ_BH(0) = 4.5e+05 M☉/Mpc³ [G]: ρ_BH/ρ_b = 7.25e-05,  Ṁ/M_b heute = 4.26e-23 s⁻¹,  Mittel ρ_BH/(ρ_b t₀) = 1.66e-22 s⁻¹
+   ρ_BH(0) = 6.0e+05 M☉/Mpc³ [G]: ρ_BH/ρ_b = 9.66e-05,  Ṁ/M_b heute = 5.68e-23 s⁻¹,  Mittel ρ_BH/(ρ_b t₀) = 2.22e-22 s⁻¹
+   Abstrahlung (η = 0.1): dΛ/Λdt = −η·Ṁ/M_b = -4.26e-24 s⁻¹  (Betrag = 1.1e+13·ε, Vorzeichen falsch)
+   Obergrenze, als ob jede eingefallene Masse Λ neu um ν·Δs verlängerte (Doppelzählung): +4.26e-23 s⁻¹ = 1.1e+14·ε
+   Entropie-Weg: Ṡ_Falten ≈ 2S_obs·Ṁ_BH/M_BH = 3.64e+86 k/s [G] (Modellwert Ṡ_i = 7.1e+86: von Falten getragen)
+     ⇒ ε_BH = Ṡ_Falten/(2S_Λ) = 1.96e-37 s⁻¹ = Mindestrate; keine Faltung, nur Maß des Zustandsraums.
+   Nötig, wenn der Vakuumteil (Ω_s = 0.244 von Ω_DE = 0.687) allein die Form w₀, w_a [G] trüge (Ω_x fest):
+     d ln Λ/d ln a = −½·d ln ρ_s/d ln a = (3/2)(Ω_DE(a)/Ω_s)(1 + w(a)),  w(a) = w₀ + w_a(1 − a)
+     w₀ = -0.75, w_a = -0.9: heute d ln Λ/d ln a = 1.054 ⇒ Λ̇/Λ = 2.30e-18 s⁻¹ = 6.0e+18·ε;  ρ_DE-Maximum verlangt Vorzeichenwechsel bei 1 + w = 0, z = 0.38
+     w₀ = -0.8, w_a = -0.75: heute d ln Λ/d ln a = 0.843 ⇒ Λ̇/Λ = 1.84e-18 s⁻¹ = 4.8e+18·ε;  ρ_DE-Maximum verlangt Vorzeichenwechsel bei 1 + w = 0, z = 0.36
+     w₀ = -0.85, w_a = -0.6: heute d ln Λ/d ln a = 0.632 ⇒ Λ̇/Λ = 1.38e-18 s⁻¹ = 3.6e+18·ε;  ρ_DE-Maximum verlangt Vorzeichenwechsel bei 1 + w = 0, z = 0.33
+   Die übrigen zwei Drittel (Ω_x = 0.442) wachsen mit Λ nicht: Ω_s ∝ Λ⁻² kann nur fallen, wenn Λ wächst.
+
+   w(z) mit Λ an die Akkretion gebunden (Form ψ(z) [G], ρ_BH(0) = 4,5·10⁵ M☉/Mpc³ [G]);
+   w_s = −1 + (2/3)d ln Λ/d ln a,  w_DE = −1 + (Ω_s/Ω_DE)(1 + w_s) mit Ω_x fest:
+        z    Ṁ/(M_b H)     w_s − (−1): Abstrahlung η=0,1   Obergrenze (Doppelzählung)    w_DE − (−1) Obergrenze
+      0.0   1.949e-05      -1.300e-06                 +1.300e-05                  +4.625e-06
+      0.4   3.833e-05      -2.555e-06                 +2.555e-05                  +9.095e-06
+      1.0   6.317e-05      -4.211e-06                 +4.211e-05                  +1.499e-05
+      2.0   5.678e-05      -3.785e-06                 +3.785e-05                  +1.347e-05
+      3.0   2.567e-05      -1.711e-06                 +1.711e-05                  +6.090e-06
+      5.0   4.996e-06      -3.331e-07                 +3.331e-06                  +1.185e-06
+   Die Form verlangt vor z ≈ 0,36 schrumpfendes, danach wachsendes Λ; die Akkretion hat ein Vorzeichen.
+   Maximum der Akkretion bei z ≈ 2, nicht bei 0,4; Betrag 10⁻⁵ statt 10⁻¹; Vorzeichen im Modell negativ.
+
+==============================================================================================================
+3  Rückgabe: Faltung → Engstelle → Strahlung. Zeitskalen und Bilanz
+==============================================================================================================
+   Horizonttemperatur im Endzustand bei festem Λ: T_s = ħH_s/(2πk) = 1.31e-30 K; Falten mit M < 4.7e+22 M☉ geben zurück
+   heute (T_CMB) erst unter 4.50e+22 kg; Beginn der Rückgabe 4·10¹¹–10¹² a (04)
+   M =    1e+01 M☉: S/k = 4πα_G = 1.05e+79,  Lebensdauer 2.10e+70 a (3840·(S/k)·Δs/c: 2.10e+70 a)
+   M =    1e+06 M☉: S/k = 4πα_G = 1.05e+89,  Lebensdauer 2.10e+85 a (3840·(S/k)·Δs/c: 2.10e+85 a)
+   M =    1e+09 M☉: S/k = 4πα_G = 1.05e+95,  Lebensdauer 2.10e+94 a (3840·(S/k)·Δs/c: 2.10e+94 a)
+   M =    1e+11 M☉: S/k = 4πα_G = 1.05e+99,  Lebensdauer 2.10e+100 a (3840·(S/k)·Δs/c: 2.10e+100 a)
+   1/ε = 8.28e+28 a  ≪ Lebensdauer jeder Falte ab 1.6e-13 M☉
+   Entropie der Rückgabe (Schwarzkörper, dE = c²dM, S_rad = (4/3)∫dE/T_H):
+     S_rad/S_Falte = 1.3333 (= 4/3): Rückgabe erzeugt Entropie, sie kehrt die Einfaltung nicht um.
+   Bilanz der Faltung: Einfall ΔΣΔs = 0; Rückgabe macht die Masse zu Strahlung, deren Faltung mit 1/a vergeht;
+   Λ fällt am Ende höchstens um den Anteil der Falten an den Baryonen (heute 7.2e-05, obere Grenze 1).
+   Die Entropiebilanz verlangt in derselben Zeit Wachstum Λ² = Λ0²(1 + 2εt): nach 10⁶⁷ a Λ/Λ0 = 1.6e+19.
+   ⇒ Der lokale Kreislauf schließt in der Form (flach → Wirbel → Falte → Strahlung → flach), nicht in Λ.
+
+==============================================================================================================
+4  Beobachterfehler
+==============================================================================================================
+   Λ, ν_kosm: I/G (innere Richtung, Zelle), zeitfest außer über ΣΔs_b. Falte, r₀, T_H, Lebensdauer: L.
+   S_Falte = 4πkα_G(M) gilt je Falte; S_Λ und S_H je Horizont eines Beobachters; verglichen wird nur ΣS_Falten ≤ S_Λ im selben Horizont.
+   ΣS_Falten ≤ Ω_b²·S_H: heute S_obs/S_Λ = 3.3e-19; die Falten können S_Λ nie füllen, Λ muss nicht ihretwegen wachsen,
+   sondern damit das Maß des Zustandsraums schneller wächst als die Entropie (Mindestrate ε).
+   ν = 1 am Ort r₀ ist örtlich (L); als Beitrag zu ν_kosm gelesen wäre es die Verwechslung L statt I.
+
+==============================================================================================================
+5  Von Hand
+==============================================================================================================
+   ρ_BH = 4,5·10⁵·1,989·10³⁰ kg/(3,0857·10²² m)³ = 8,95·10³⁵/2,938·10⁶⁷ = 3,05·10⁻³² kg/m³
+   ρ_b = 4,20·10⁻²⁸ ⇒ ρ_BH/ρ_b = 7,3·10⁻⁵; Mittel über t₀ = 4,35·10¹⁷ s: 1,7·10⁻²² s⁻¹; mal η = 0,1: 1,7·10⁻²³ s⁻¹
+   Mittel/ε = 1,7·10⁻²³/3,83·10⁻³⁷ = 4,4·10¹³ (heute nach ψ: 1,1·10¹³).   Kern: ρ_BH/ρ_b = 7.248e-05, Mittel·η = 1.664e-23 s⁻¹
+   η (j = 0): E_ISCO = √(8/9) = 0,9428 ⇒ η = 0,0572

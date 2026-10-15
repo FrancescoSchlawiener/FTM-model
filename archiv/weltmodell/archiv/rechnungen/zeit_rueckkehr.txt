@@ -1,0 +1,66 @@
+1) Gleichwertigkeit L = r* ⇔ τ_D = c/a0
+   Γ = a_N/c, √(Γ/D) = 1/r  ⇒  D = G*M/c   (für alle r dieselbe)
+   L² = D·τ_D = G*M*tau_D/c;   L = r* = √(GM/a0)  ⇒  τ_D = [c/a_0]
+   Probe L/r − √(a_N/a0) bei τ_D = c/a0: 0
+   beliebige Verteilung, D = a_N r²/c:  L/r = sqrt(g)*sqrt(tau_D)/sqrt(c);  = √(a_N/a0) genau für τ_D = c/a0
+   Sonne                  D = 4.428e+11 m²/s   L = r* = 1.0518e+15 m   τ_D = L²/D = 79.17 Mrd. J.
+   Milchstraße 6·10¹⁰ M☉  D = 2.657e+22 m²/s   L = r* = 2.5763e+20 m   τ_D = L²/D = 79.17 Mrd. J.
+
+2) Q̃ = −4[s³Li₁ + 3s²Li₂ + 6s·Li₃ + 6Li₄](e^{−s})
+   ∫_s^∞ x³e^{−nx}dx = (n**3*s**3 + 3*n**2*s**2 + 6*n*s + 6)/n**4·e^{−ns}  →  Σ_n: s³Li₁ + 3s²Li₂ + 6sLi₃ + 6Li₄, da 1/(eˣ−1) = Σe^{−nx}
+   numerisch Q̃(Polylog) / (−4∫_s^∞ x³/(eˣ−1)dx) − 1, s = 10⁻³…30: max 9.6e-18;  Q̃(0) = −4π⁴/15 = -25.9758
+   s⁴ = ℓ0²Y, dQ̃/ds = 4s³/(eˢ−1)  ⇒  ∂ℒ_𝒮/∂Y = 2/(exp(s) - 1) = 2·n_B(s)
+   ∂ℒ/∂(∂σ) = −4B + 2·(∂ℒ/∂Y)·∇σ = 4[(1 + n_B)∇σ − a]  ⇒  ν = 1 + n_B(s),  q = n_B/(1 + n_B) = e^{−s}
+   Also Q̃ = −∫_s^∞ n_B(x) d(x⁴): Besetzung n_B, Modenmaß d(x⁴) = 4x³dx. Die 4 ist der Exponent von s⁴ = ℓ0²Y.
+
+   Geschlossene Formen: f₃(s) = ∫_s^∞x²ln(1−e^{−x}) = −[s²Li₂ + 2sLi₃ + 2Li₄]  (Probe s = 1: -1.936820 / -1.936820)
+                        f₄(s) = ∫_s^∞x³ln(1−e^{−x}) = −[s³Li₂ + 3s²Li₃ + 6sLi₄ + 6Li₅]  (Probe s = 1: -6.065968 / -6.065968)
+      s      Q̃        −4·U₃     12·f₃(schnitt)  12·f₃(gehalten)  12·f₃(Masse s/β)
+     0.3  -25.9436  -25.9436    -25.7978       -25.9436         -25.2334
+     1.0  -25.0765  -25.0765    -23.2418       -25.0765         -20.3577
+     3.0  -15.7669  -15.7669    -10.2514       -15.7669          -6.6896
+   s = 0: alle −4π⁴/15 = -25.9758 (12·f₃(0) = −12π⁴/45).
+   Q̃ = −4·U₃ = 12·∫_0^∞ x² ln(1 − e^{−max(x,s)}) dx exakt; der scharfe Schnitt fehlt um den Randterm −4s³Li₁ = 4s³ln(1−e^{−s}).
+   Test an der Feldgleichung: ν − 1 = dQ/d(s⁴), Tully-Fisher verlangt s·ν → 1 für s → 0:
+      s        Q̃ (−4U₃)   12·f₃ schnitt   12·f₃ Masse   f₄ schnitt (jeder Faktor)
+     0.10      1.0508       7.1565      45.0924       0.1588
+     0.01      1.0050      13.8405     488.8308       0.0215
+   geschnitten: ν − 1 = 3Li₁(e^{−s})/s (Logarithmus); Masse: ν − 1 → π²/(2s²), a → (π²/2)·a0; 4D: ν − 1 ∝ Li₁, a → a_N.
+
+   Bildsumme: KMS in imaginärer Zeit mit Periode β und Zerfallsrate ω: Σ_n e^{−nβω} = n_B(βω).
+   Mit der Rate der Gleichung (ω = Γ) und β = τ_D: βω = Γτ_D = s² → n_B(s²). Windungen in w: Σ_n e^{−n·L√(Γ/D)} = n_B(s).
+      s      ν = 1+n_B(s)   ν = 1+n_B(s²)
+     0.3      3.8583        11.6186
+     1.0      1.5820         1.5820
+     3.0      1.0524         1.0001
+   s = 0.01: n_B(s): s·ν = 1.0050;   n_B(s²): s·ν = 100.0  (a → a_N + a0, v² ∝ r)
+   s = 0.001: n_B(s): s·ν = 1.0005;   n_B(s²): s·ν = 1000.0  (a → a_N + a0, v² ∝ r)
+   β = τ_D gibt n_B(s) nur mit ω = s/τ_D = √(Γ/τ_D) = √(a_N·a0)/c; diese Rate kommt in D·G'' = Γ·G nicht vor.
+
+   Lesarten von x (Milchstraße r* = 8.35 kpc, v∞ = 175.8 km/s; Sonne r* = 7031 AE, v∞ = 355 m/s):
+   x = κ·L, κ = 1/r (Kreisbahnmode), L = r*: s = r*/r; Periode der Windungen L, Ausbreitungszeit L²/D = c/a0 = 79.2 Mrd. J. für jedes M
+   Welle in w mit c: Periode β = L/c: Sonne 40.6 d, Milchstraße 27229 a (hängt von M ab)
+   β = τ_D in der Wellen-Lesart verlangt die Geschwindigkeit L/τ_D = √(GMa0)/c = v∞²/c: Sonne 4.21e-04 m/s, Milchstraße 103.123 m/s
+   Horizontbad (Lichtmoden, kT = ħa0/c): x = k·ℓ0; die Kreisbahnmode bei r* hat x = ℓ0/r* = c²/v∞² = 2.91e+06 (Milchstraße), n_B = e^(−2.9e+06)
+
+   Normierung: ℒ_𝒮 trägt c⁴/(16πG)·(2/ℓ0²)·Q̃ (so gibt Q̃(0) genau Λ_s = 4π⁴/(15ℓ0²)); ein Freiheitsgrad bei kT = ħa0/c trägt
+   (kT)⁴/(2π²(ħc)³)·Q̃/12 = ħc·Q̃/(24π²ℓ0⁴). Verhältnis 3π·ℓ0²/ℓ_P² = 2.02e+124. Die Wirkung legt s = βω und N·T⁴ fest, β allein nicht.
+
+3) Kandidaten für τ_D, a0 = c/τ_D   (flach, Ω_m = 0,315, Ω_Λ = 0,685 angenommen; Strahlung vernachlässigt)
+   t0·H0 = 0.9510,  R_E·H0/c = 1.1497,  H_Λ/H0 = √Ω_Λ = 0.8276
+   τ_D                              H0 = 67,4: τ_D [Mrd. J.]  a0 [10⁻¹⁰]  Abstand   |  H0 = 73: τ_D  a0  Abstand
+   ℓ0/c (Wirkung, gemessenes a0)          79.2      1.200    +0.0%         79.2      1.200    +0.0%  
+   2π/H0 (KMS am Hubble-Radius)           91.2      1.042   -13.2%         84.2      1.129    -5.9%  
+   2π/H_Λ (KMS de Sitter, exakt)         110.1      0.863   -28.1%        101.7      0.934   -22.1%  
+   2π·R_E/c (Ereignishorizont)           104.8      0.907   -24.5%         96.8      0.982   -18.2%  
+   1/H0                                   14.5      6.548   +445.7%         13.4      7.092   +491.0%  
+   Weltalter t0                           13.8      6.886   +473.8%         12.7      7.458   +521.5%  
+   Für a0 = 1,2·10⁻¹⁰ nötig: τ_D = 79.2 Mrd. J. = 0.868·2π/H0 (67,4) bzw. 0.941·2π/H0 (73); H0 = 77.6 km/s/Mpc
+
+4) τ_D = 2π/H(z)  ⇒  a0(z) = c·H(z)/2π,  a0(z)/a0(0) = H(z)/H0 (H(z) gemessen einsetzbar; hier ΛCDM wie oben)
+      z     H/H0    r*(z)/r*(0)   v∞ bei festem M_b   Δlog M_b bei festem v∞ [dex]
+     0.5    1.322      0.870         +7.2%             -0.121
+     1.0    1.790      0.747        +15.7%             -0.253
+     2.0    3.032      0.574        +32.0%             -0.482
+   Mit τ_D = ℓ0/c (Konstante) oder 2π/H_Λ: a0(z) = a0(0), keine Verschiebung.
+   Nullpunkt der baryonischen Tully-Fisher-Relation, v∞⁴ = G·M_b·a0(z), trennt beide.

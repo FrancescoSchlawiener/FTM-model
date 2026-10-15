@@ -1,0 +1,238 @@
+﻿
+================================================================================================
+0   Grundgroessen, Sonnenumgebung, Hierarchie
+================================================================================================
+   Sonnenumgebung [G]: v0 = 233 km/s, R0 = 8.178 kpc  ->  g_obs = v0²/R0 = 2.151e-10 m/s²
+   (mit v0 = 229 km/s: 2.078e-10 m/s²)
+   a0=cH0/2π   a0 = 1.0824e-10: g_obs/a0 = 1.988;  Newtonsches Feld aus RAR-Umkehr g_Ne = 1.484e-10 = 1.371 a0;  nu_e = 1.4494;  K = dln nu/dln g = -0.2631
+   a0=1,2e-10  a0 = 1.2000e-10: g_obs/a0 = 1.793;  Newtonsches Feld aus RAR-Umkehr g_Ne = 1.429e-10 = 1.191 a0;  nu_e = 1.5056;  K = dln nu/dln g = -0.2759
+   Galaktische Gezeiten [G: A=15,3, B=-11,9 km/s/kpc, ρ0=0,10 M☉/pc³]: Φ_RR = -9.713e-31, Φ_φφ = 7.770e-31, Φ_zz = 5.871e-30 s⁻²;  4A(A-B) = 1.748e-30 s⁻²;  |T|_F = 6.001e-30
+   Sonne: r* = 7030 AE,  r_e = √(GM/g_Ne) = 6442 AE (= 0.916 r*),  r_J = (GM/4A(A-B))^(1/3) = 2.830e+05 AE = 1.372 pc
+
+   Hierarchie-Tabelle (a0 = 1,2e-10):  r* = √(GM/a0),  r_e: eigenes Newtonfeld = Elternfeld,  r_J: Gezeitengrenze
+   Trichter (in Eltern)                GM [m³/s²]             r*            r_e            r_J    r_J/r* g_Eltern/a0
+   Erde (Sonne, 1 AE)                   3.986e+14      12.18  AE   0.001733  AE       0.01  AE  0.000821    4.94e+07
+   Jupiter (Sonne, 5,2 AE)              1.267e+17      217.2  AE     0.1607  AE     0.3552  AE   0.00164    1.83e+06
+   Sonne (Milchstrasse)                 1.327e+20       7030  AE       6442  AE   2.83e+05  AE      40.3        1.19
+   Doppelstern 1,5 M☉ (Milchstrasse)    1.991e+20       8610  AE       7890  AE   3.24e+05  AE      37.6        1.19
+   Milchstrasse (Lokale Gruppe) [G]     7.963e+30      8.348 kpc      493.3 kpc      398.5 kpc      47.7    0.000286
+
+================================================================================================
+1a  actio = reactio: naive Einzeltrichter-Regel gegen Energiefunktional
+================================================================================================
+   Sonne (1 M☉) + Begleiter (0,5 M☉), s = 10 kAE, naive Regel 'Feld der Quelle mit nu(eigenes Feld der Quelle)':
+   nu(g1) = 1.9806, nu(g2) = 2.5530;  F21/F12 = 0.7758;  Selbstbeschleunigung des Schwerpunkts = -1.131e-11 m/s² = -0.053 g_obs
+   ueber 1 Gyr: Δv = -357.1 km/s  (Energiefunktional: beide Glieder in EINEM Trichter, F21 = F12 exakt)
+
+================================================================================================
+1b  l-Kraefte: Abhaengigkeit der Strukturenergie vom Uebergaberadius l (Parameter p)
+================================================================================================
+   E1 (eigene Struktur bis r_J): dV/dl = -3.9314e+18 J/m;  l ∝ R^(2/3)  ->  Kraft/Masse = 2.212e-16 m/s² (tiefe MOND-Naeherung (4/9)√(GMa0)/R0 = 2.223e-16);  relativ zu g_obs: 1.03e-06
+   E0 (kollektives Feld, Sonne ueber r_J geglaettet): dV/dl = 1.5918e+16 J/m -> Kraft/Masse = -8.955e-19 m/s², relativ -4.16e-09
+      Vergleich (nu_e-1)·|W_Plummer|/l: 2.192e+16 J/m
+   Normierung: Q_s(0) = 0 (kein Vakuumterm je Trichter). Mit der Normierung Q~ aus 06 (Q~(0) = -4π⁴/15 = -25.9758)
+      waere die Vakuumenergie je Zone ∝ l³ und divergiert fuer das Plummer-Fenster (W ~ 3l²/2r²).
+
+================================================================================================
+1c  WEP-Abschaetzung in E0 (verschiedene Glaettungsradien im galaktischen Strukturpotential)
+================================================================================================
+   Sonne (l = 1.37 pc) gegen Jupiter        (l =  2.787e+04 AE): Δa ≈ ½Δ(l²)·∇(4πGρ_ph) = 2.00e-18 m/s²,  Δa/g_obs = 9.3e-09
+   Sonne (l = 1.37 pc) gegen Komet 1e13 kg  (l =     0.4849 AE): Δa ≈ ½Δ(l²)·∇(4πGρ_ph) = 2.02e-18 m/s²,  Δa/g_obs = 9.4e-09
+   Sonne (l = 1.37 pc) gegen Stern 0,1 M☉   (l =  1.314e+05 AE): Δa ≈ ½Δ(l²)·∇(4πGρ_ph) = 1.58e-18 m/s²,  Δa/g_obs = 7.4e-09
+
+================================================================================================
+2   Lokale Variante L: g~ = (√10/2)|∂∂Φ_N|²/|∂∂∂Φ_N|
+================================================================================================
+   Punktmasse GM=1, r = 1.0312: |T|·r³ = 2.44949 (√6 = 2.44949), |C|·r⁴ = 9.4868 (√90 = 9.4868)
+   g~ = (√10/2)|T|²/|C| = 0.940380,  GM/r² = 0.940380  (homogenes aeusseres Feld aendert T, C nicht)
+   Identitaet ∂i∂j[F τ_ij] = 2F''+10F'/r+6F/r²:  numerisch -0.610349,  Formel -0.610349
+   Identitaet ∂i∂j∂k[F A_ijk] = L[F'+4F/r]:      numerisch 3.17229,  Formel 3.17231
+   Testteilchen-Gesetz fuer Punktmasse (h = (nu-1)GM):  Φ_s' = -h''/15 + h'/(5r) + 4h/(5r²)   [QUMOND: Φ_s' = h/r²]
+    x=g_N/a0   nu (FTM)    nu^ (L)   nu^/nu-1
+       1e+02    1.00005    0.99988    -0.0002
+       3e+01    1.00420    1.00255    -0.0016
+       1e+01    1.04420    1.05053    +0.0061
+       5e+00    1.11967    1.14025    +0.0184
+       3e+00    1.21495    1.24808    +0.0273
+       2e+00    1.32121    1.36409    +0.0325
+       1e+00    1.58198    1.63971    +0.0365
+       3e-01    2.37116    2.44718    +0.0321
+       1e-01    3.68859    3.77486    +0.0234
+       1e-02   10.50833   10.60412    +0.0091
+       1e-03   32.12541   32.22546    +0.0031
+       1e-04  100.50083  100.60730    +0.0011
+   Zone von L fuer die Sonne: |T_eigen|_F = |T_gal|_F bei r_L = (√6 GM/|T_gal|)^(1/3) = 2.529e+05 AE = 1.226 pc (r_J = 1.372 pc)
+   g~/g_eigen fuer die Sonne im galaktischen Gezeitenfeld:  r = 0.01 r_L: x-Richtung 1.0000, z-Richtung 1.0000;  r = 0.10 r_L: x-Richtung 1.0012, z-Richtung 0.9984;  r = 0.30 r_L: x-Richtung 1.0323, z-Richtung 0.9569;  r = 1.00 r_L: x-Richtung 3.1688, z-Richtung 0.3760
+
+================================================================================================
+3a  Quadrupol Q2 am Ort der Sonne: Elternstruktur sieht die Sonne ueber l geglaettet (Plummer), λ = l/r_e
+================================================================================================
+   J(β,λ) = ½∫∫(nu(β|ĝ|)-nu(β))[-3(3c²-1)h/ρ² + (9c-15c³)/ρ²]dρdc + (4/15)·β nu'(β)/λ³ ,  h = ρ/(ρ²+λ²)^(3/2) (λ=0: h=1/ρ²)
+   Q2 = -(3/2)(g_e/r_e)·J,  r_e = √(GM/g_e)   (λ=0 ist exakt die Rechnung aus 06)
+   Probe gegen 06 (β = 1, Punktmasse): J = -0.169884   (06: -0,169873)
+   Probe λ = 0.5: Quadratur J = -2.649819 (Volumen -1.667767, Oberflaeche -0.982052); N=400: -2.649819;  Gitter-Hauptwert: -2.649084
+   Probe λ = 1.0: Quadratur J = -0.146250 (Volumen -0.023494, Oberflaeche -0.122756); N=400: -0.146250;  Gitter-Hauptwert: -0.146124
+   Probe λ = 3.0: Quadratur J = -0.004557 (Volumen -0.000011, Oberflaeche -0.004547); N=400: -0.004557;  Gitter-Hauptwert: -0.004552
+
+   Sonne mit g_e = g_Ne aus RAR-Umkehr; λ_J = r_J/r_e = 43.9;  Cassini: Q2 = (3 ± 3)·10⁻²⁷ s⁻² (Hees et al. 2014)
+    λ = l/r_e    l [AE]          J   Q2 [s⁻²] a0=1,2e-10  (Q2-3e-27)/3e-27   Q2 [s⁻²] a0=cH0/2π
+         0.00         0   -0.15091             3.356e-26              10.2            3.219e-26
+         0.50      3221   -2.39506             5.327e-25             176.6            5.187e-25
+         1.00      6442   -0.13199             2.936e-26               8.8            2.855e-26
+         1.25      8053   -0.06119             1.361e-26               3.5            1.323e-26
+         1.50      9663   -0.03407             7.577e-27               1.5            7.367e-27
+         2.00     12884   -0.01401             3.116e-27               0.0            3.030e-27
+         3.00     19326   -0.00411             9.145e-28              -0.7            8.890e-28
+         5.00     32210   -0.00089             1.971e-28              -0.9            1.916e-28
+        10.00     64421   -0.00011             2.463e-29              -1.0            2.395e-29
+        43.94    283034   -0.00000             2.904e-31              -1.0            2.824e-31
+   Cassini-Grenze 1σ (6e-27): λ ≥ 1.62  ->  l ≥ 10422 AE = 1.48 r*
+   Cassini-Grenze 2σ (9e-27): λ ≥ 1.42  ->  l ≥ 9159 AE = 1.30 r*
+   Cassini-Grenze 3σ (1,2e-26): λ ≥ 1.30  ->  l ≥ 8374 AE = 1.19 r*
+   Zum Vergleich 06: g_e = 1,2e-10 (β=1): Q2 = 2.908e-26 s⁻²
+   Galaktische Gezeit (effektiv, in jeder Variante vorhanden): spurfreier Tensor diag = (-2.86e-30, -1.12e-30, 3.98e-30) s⁻²;
+      Projektion auf Hees-Form (Richtung GZ): Q2_Gezeit = -(3/2)T^TF_xx = 4.30e-30 s⁻²;  g_obs/R0 = 8.53e-31;  GM/r_J³ = 1.75e-30
+
+================================================================================================
+3b  Periheldrehung der Planeten durch Q2 (Gauss-Gleichungen, Bahnmittel)
+================================================================================================
+   Richtung Galaktisches Zentrum in Ekliptik-Koordinaten: λ = 266.84°, β = -5.54°
+   Probe (konstante Radialbeschleunigung 1e-12 an Mars): numerisch 4.126208e-17, analytisch A√(1-e²)/(na) = 4.126208e-17 rad/s
+   Q2-Werte: G = 3.36e-26, E2 (λ=1) = 2.94e-26, E1/E0 (λ_J) = 2.90e-31 (+ Gezeit 4.3e-30) s⁻²
+   Planet    Δϖ̇ je 1e-26 s⁻²           G          E2   E1/E0+Gez.       EPM2011 [G]     G/σ    E2/σ  Q2-Grenze 1σ  [mas/Jahr]
+   Merkur          1.1009e-04   3.695e-04   3.232e-04     5.05e-08    -0.02 ± 0.03        0.0     0.0       2.7e-24
+   Venus           5.4278e-05   1.822e-04   1.593e-04     2.49e-08    0.026 ± 0.016       0.0     0.0       2.9e-24
+   Erde            4.2201e-04   1.416e-03   1.239e-03     1.94e-07   0.0019 ± 0.0019      0.7     0.7       4.5e-26
+   Mars           -4.1640e-04  -1.398e-03  -1.222e-03    -1.91e-07  -0.0002 ± 0.00037     3.8     3.3       8.9e-27
+   Jupiter        -3.0015e-03  -1.007e-02  -8.811e-03    -1.38e-06    0.587 ± 0.28        0.0     0.0       9.4e-25
+   Saturn          1.3939e-02   4.679e-02   4.092e-02     6.39e-06  -0.0032 ± 0.0047     10.0     8.7       3.4e-27
+   Uranus         -2.6671e-02  -8.952e-02  -7.830e-02    -1.22e-05    -3.89 ± 3.9         0.0     0.0       1.5e-24
+   Neptun          2.7076e-02   9.088e-02   7.948e-02     1.24e-05    -4.44 ± 5.4         0.0     0.0       2.0e-24
+
+   Zusatzbeschleunigungen: Quadrupol |Q2|·a und eigener Strukturterm (nu-1)g_N (E1: nu vom eigenen Feld)
+   Planet      |Q2_G|·a   |Q2_E2|·a   |Q2_E0|·a  log10[(nu-1)g_N]  [m/s²]
+   Merkur      1.94e-15    1.70e-15    2.66e-19           -7888.2
+   Venus       3.63e-15    3.18e-15    4.96e-19           -4222.7
+   Erde        5.02e-15    4.39e-15    6.86e-19           -3055.2
+   Mars        7.65e-15    6.69e-15    1.05e-18           -2006.3
+   Jupiter     2.61e-14    2.28e-14    3.57e-18            -590.5
+   Saturn      4.80e-14    4.20e-14    6.55e-18            -323.7
+   Uranus      9.65e-14    8.44e-14    1.32e-17            -163.7
+   Neptun      1.51e-13    1.32e-13    2.07e-17            -106.6
+
+================================================================================================
+4   Weite Doppelsterne: γ = <g>/g_N (kugelgemittelt), v/v_N = √γ
+================================================================================================
+   M_tot = 1.5 M☉, a0 = 1,2e-10: r* = 8610 AE, r_e = 7890 AE, r_J = 3.240e+05 AE, g_Ne = 1.429e-10
+    s [kAE]  g_N [m/s²]        Newton  G (g_Ne RAR)    G (1,5 a0)      G (2 a0)    E2 (l=r_e)    E1 (l=r_J)    E0 (l=r_J)
+          1   8.895e-09        1.0000        1.0002        1.0002        1.0002        1.0009        1.0002        1.0000
+          2   2.224e-09        1.0000        1.0137        1.0136        1.0136        1.0189        1.0137        1.0000
+          3   9.883e-10        1.0000        1.0595        1.0592        1.0584        1.0738        1.0601        1.0000
+          5   3.558e-10        1.0000        1.2038        1.1958        1.1793        1.2403        1.2176        1.0000
+          7   1.815e-10        1.0000        1.3283        1.2828        1.2169        1.3991        1.4130        1.0000
+         10   8.895e-11        1.0000        1.3621        1.2934        1.2203        1.5551        1.7324        1.0000
+         15   3.953e-11        1.0000        1.3662        1.2954        1.2210        1.6499        2.2897        1.0000
+         20   2.224e-11        1.0000        1.3668        1.2957        1.2211        1.6579        2.8584        1.0001
+         30   9.883e-12        1.0000        1.3671        1.2958        1.2212        1.6192        4.0063        1.0003
+   v/v_N = √γ:
+          1                    1.0000        1.0001        1.0001        1.0001        1.0005        1.0001        1.0000
+          2                    1.0000        1.0068        1.0068        1.0068        1.0094        1.0068        1.0000
+          3                    1.0000        1.0293        1.0292        1.0288        1.0363        1.0296        1.0000
+          5                    1.0000        1.0972        1.0935        1.0859        1.1137        1.1035        1.0000
+          7                    1.0000        1.1525        1.1326        1.1031        1.1828        1.1887        1.0000
+         10                    1.0000        1.1671        1.1373        1.1047        1.2470        1.3162        1.0000
+         15                    1.0000        1.1688        1.1381        1.1050        1.2845        1.5132        1.0000
+         20                    1.0000        1.1691        1.1383        1.1050        1.2876        1.6907        1.0000
+         30                    1.0000        1.1692        1.1383        1.1051        1.2725        2.0016        1.0001
+   a0 = cH0/2π (g_Ne entsprechend):
+   G   γ: 1.000 1.011 1.051 1.181 1.292 1.318 1.322 1.322 1.322
+   E2  γ: 1.001 1.016 1.064 1.215 1.360 1.501 1.585 1.591 1.554
+   E1  γ: 1.000 1.011 1.051 1.195 1.377 1.678 2.205 2.744 3.832
+   E0  γ: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+   Lineares EFE-Regime (G, s ≫ r_e): γ(θ) = nu_e(1 + (K/2)sin²θ), nu_e = 1.5056, K = -0.2759: γ(θ=0) = 1.506, γ(90°) = 1.298, Mittel nu_e(1+K/3) = 1.367
+   Tief-MOND-Zweikoerperfaktor a_rel/√(G M a0)/s = (2/3)[1-p^1,5-(1-p)^1,5]/(p(1-p)) [Milgrom, G]:  p=0.5: 0.781, p=0.3: 0.794, p=0.1: 0.849, p=0.01: 0.940
+   Gezeitenbeitrag |T|_F·s/g_N bei 30 kAE: 2.73e-03
+   Daten [G]: Chae 2023 γ ≈ 1,43 ± 0,06 fuer g_N ≲ 1e-10; Hernandez 2023 aehnlich; Banik et al. 2024 γ ≈ 1 (MOND mit EFE stark verworfen).
+
+   Familie E(λ): Uebergabe bei l = λ r_e (eigene Struktur innen, Elternstruktur mit geglaetteter Masse aussen)
+        λ   Q2 Sonne   Q2/σ  γ(5 kAE)  γ(10 kAE)  γ(20 kAE)  γ(30 kAE)
+     0.00   3.36e-26   10.2     1.204      1.362      1.367      1.367
+     1.00   2.94e-26    8.8     1.240      1.555      1.658      1.619
+     1.50   7.58e-27    1.5     1.226      1.634      1.908      1.882
+     2.00   3.12e-27    0.0     1.222      1.676      2.137      2.177
+     3.00   9.14e-28   -0.7     1.219      1.711      2.458      2.730
+     5.00   1.97e-28   -0.9     1.218      1.727      2.721      3.423
+    43.94   2.90e-31   -1.0     1.218      1.732      2.858      4.007
+
+================================================================================================
+5   Aeussere Oortsche Wolke (Sonne, a0 = 1,2e-10)
+================================================================================================
+   γ = <g>/g_N (kugelgemittelt); Verhaeltnis galaktische Gezeit |T|·r zu Eigenbeschleunigung (Newton bzw. E1)
+     r [AE]   γ Newton        γ G       γ E2       γ E1       γ E0  T r/g (N)  T r/g (E1)
+      10000      1.000      1.365      1.616      1.981      1.000   1.51e-04    7.64e-05
+      20000      1.000      1.367      1.643      3.374      1.000   1.21e-03    3.59e-04
+      50000      1.000      1.367      1.520      7.591      1.002   1.89e-02    2.49e-03
+     100000      1.000      1.367      1.450     14.237      1.014   1.51e-01    1.06e-02
+     200000      1.000      1.367      1.410     23.652      1.071   1.21e+00    5.12e-02
+
+   Scheinbare 'urspruengliche' Bahnenergie: Bahnbestimmung bei ~250 AE ist Newtonsch (Strukturpotential dort konstant).
+   E_N = -GM/Q + ΔΦ_s(Q),  1/a_app = -2E_N/GM  fuer einen radialen Kometen mit wahrem Aphel Q
+     Q [AE]    1/a Newton         1/a G        1/a E2        1/a E1        1/a E0   [1e-5 AE⁻¹]
+       5000         40.00         32.36         30.50         32.00         40.00
+      10000         20.00          5.50          1.03          0.56         20.00
+      20000         10.00         -8.16        -15.45        -24.60         10.00
+      30000          6.67        -12.72        -20.85        -37.88          6.67
+      50000          4.00        -16.37        -25.00        -53.75          4.00
+     100000          2.00        -19.10        -27.97        -74.19          1.99
+     200000          1.00        -20.47        -29.40        -92.56          0.95
+   Beobachtete Oort-Spitze [G]: 1/a_orig ≈ 2…5·10⁻⁵ AE⁻¹ (gebunden); stark hyperbolische Ursprungsbahnen fehlen.
+   G: Aphel, ab dem ein Oortkomet hyperbolisch erscheint (E_N = 0): Q0 = 12533 AE;  ΔΦ_s(∞) - ΔΦ_s(0) ≈ 9.678e+04 m²/s²  (vgl. E_N der Spitze bei 1/a = 3e-5: -1.331e+04)
+   E2: Aphel, ab dem ein Oortkomet hyperbolisch erscheint (E_N = 0): Q0 = 10337 AE;  ΔΦ_s(∞) - ΔΦ_s(0) ≈ 1.365e+05 m²/s²  (vgl. E_N der Spitze bei 1/a = 3e-5: -1.331e+04)
+   E1: Aphel, ab dem ein Oortkomet hyperbolisch erscheint (E_N = 0): Q0 = 10159 AE;  ΔΦ_s(∞) - ΔΦ_s(0) ≈ 5.074e+05 m²/s²  (vgl. E_N der Spitze bei 1/a = 3e-5: -1.331e+04)
+
+   Drehmoment je Masse: EFE-Anisotropie (G, E2; lineares Regime) nu_e|K|GM/(2r) gegen galaktische Gezeit ½|T|_F r²
+   r =    6442 AE: EFE 2.860e+04 m²/s², Gezeit 2.787e+00 m²/s², Verhaeltnis 1.03e+04
+   r =   10000 AE: EFE 1.842e+04 m²/s², Gezeit 6.715e+00 m²/s², Verhaeltnis 2.74e+03
+   r =   30000 AE: EFE 6.141e+03 m²/s², Gezeit 6.044e+01 m²/s², Verhaeltnis 1.02e+02
+   r =  100000 AE: EFE 1.842e+03 m²/s², Gezeit 6.715e+02 m²/s², Verhaeltnis 2.74e+00
+
+   Gezeiten-Einschuss: Δ√q je Umlauf ≈ ½ν_z²<r²>P/√(2GM) (+ EFE-Drehmoment nu_e|K|GM/2r fuer r>r_e bei G, E2); Sprung ueber die Jupiter-Saturn-Barriere (15 → 5 AE) verlangt Δ√q ≥ √15-√5 = 1.64 √AE
+     Q [AE] P Newton [Myr]      P G [Myr]     P E2 [Myr]     P E1 [Myr]     P E0 [Myr]
+      10000          0.354          0.306          0.286          0.267          0.354
+      30000          1.837          1.574          1.453          0.924          1.837
+      60000          5.196          4.446          4.214          1.927          5.190
+     100000         11.181          9.564          9.223          3.295         11.128
+   Variante  Q_krit [AE]  Δ√q Gezeit   Δ√q EFE  1/a_app(Q_krit) [1e-5 AE⁻¹]
+   Newton          47005       1.637     0.000                         4.25
+   G                6463       0.001     1.636                        20.39
+   E2               6465       0.001     1.637                        17.87
+   E1              64185       1.637     0.000                       -61.26
+   E0              47014       1.637     0.000                         4.25
+   Probe Newton: Q_krit/2 = a_krit (Literatur [G]: ~2–3·10⁴ AE)
+
+================================================================================================
+6   Zwerggalaxien im aeusseren Feld: σ_los = √(r_½ g(r_½)/3) (Wolf-Schaetzer), M(<r_½) = M/2, a0 = 1,2e-10
+================================================================================================
+   Eingaben [G]: M = M*(Υ=2), R_e, Wirt-Baryonenmasse, Abstand (3D ≈ projiziert), σ_obs.
+   System                     r_½[kpc]  g_Ne/a0 r_e[kpc] l_J[kpc]  Newton   isol.    G=E0      E2      E1         σ_obs  [km/s]
+   Crater II (MW)                 1.42   0.0050     0.27     0.67    0.40    4.11    1.41    1.66    2.41    2.7 +0.3/-0.3
+   And XIX (M31) [unsicher]       2.13   0.0132     0.27     0.76    0.52    5.17    1.45    1.63    2.48    4.7 +1.6/-1.4
+   NGC1052-DF2                    2.93   0.0181     3.58     4.01    6.99   21.11   17.97   20.38   20.52    8.5 +2.3/-3.1
+   NGC1052-DF4                    2.13   0.0043     6.39     5.97    7.10   19.75   19.66   19.97   20.02    4.2 +4.4/-2.2
+   E1 mit l_J aus der eigenen EFFEKTIVEN Neigung (√(GM a0)/r = 2 g_e r/D):
+   Crater II (MW)             l_J,eff =    3.92 kpc -> σ(E1) = 4.04 km/s
+   And XIX (M31) [unsicher]   l_J,eff =    3.80 kpc -> σ(E1) = 4.88 km/s
+   NGC1052-DF2                l_J,eff =   11.57 kpc -> σ(E1) = 21.07 km/s
+   NGC1052-DF4                l_J,eff =   22.59 kpc -> σ(E1) = 19.76 km/s
+   Literatur [G]: Crater II σ = 2,7 ± 0,3 (Caldwell 2017), MOND-EFE-Vorhersage 2,1 (McGaugh 2016);
+   DF2 σ = 8,5 +2,3/-3,1 (Danieli 2019), MOND isoliert ~20, mit EFE ~13–14 (Famaey, McGaugh & Milgrom 2018); DF4 σ = 4,2 +4,4/-2,2 (van Dokkum 2019).
+
+================================================================================================
+7   Uebersicht (a0 = 1,2e-10; Sonne mit g_Ne aus RAR-Umkehr; Doppelstern 1,5 M☉)
+================================================================================================
+   Variante   Q2 [s⁻²]   Q2/σ  γ(10kAE)  γ(20kAE)  1/a_app(Q=5e4 AE)
+   G          3.36e-26   10.2     1.362     1.367             -16.37
+   E2         2.94e-26    8.8     1.555     1.658             -25.00
+   E1         4.59e-30   -1.0     1.732     2.858             -53.75
+   E0         4.59e-30   -1.0     1.000     1.000               4.00
+   Newton            -      -     1.000     1.000               4.00

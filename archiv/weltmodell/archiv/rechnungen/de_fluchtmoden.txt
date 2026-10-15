@@ -1,0 +1,118 @@
+
+================================================================================================================
+1  Inaktives Fluchtmaß je gebundenem Bereich (Einteilchen-Phasenraum bis zur Naht R_ta, Kern-Regel ν)
+================================================================================================================
+   Probe: R_ta(Milchstraße, a = 1) = 0.580 Mpc (Kern 0.580), 1 + Δ_ta = 11.816 (Kern 11.816)
+   μ = ∫4πr²·(4π/3)v_esc³ dr; Newton v_N² = 2GM/r (E > 0 entkommt), Regel v_R² = 2∫_r^{R_ta}ν(a_N)a_N dr' (Naht = Rand).
+   Tief (R_ta ≫ r*): μ_R/μ_N → (3/2)·Γ(5/2)/3^{5/2}·(R_ta/r*)^{3/2} = 0.1279·(R_ta/r*)^{3/2}
+
+   Punktmasse
+   M_b [M☉]   a     R_ta[kpc]  R_ta/r*   μ_R/μ_N   Tiefformel  μ_inakt/μ_R   μ_akt/μ_R   μ_R/μ_N(bis R_ta)  ln(μ_R/μ_N)  μ_inakt/μ_Fluss
+   10^8.000   1.00        69    193.2     345.84     343.59     0.9971       1.42e-05       1174.21           5.846       2.192
+   10^8.000   0.50        42    118.4     166.65     164.89     0.9940       4.49e-05        565.81           5.116       5.664
+   10^8.000   0.25        22     61.7      63.32      62.05     0.9844       2.27e-04        215.00           4.148       3.097
+   10^9.000   1.00       148    131.6     195.07     193.22     0.9949       3.44e-05        662.32           5.273       1.234
+   10^9.000   0.50        91     80.7      94.18      92.72     0.9895       1.17e-04        319.76           4.545       3.186
+   10^9.000   0.25        47     42.1      35.95      34.89     0.9728       5.88e-04        122.06           3.582       1.738
+   10^10.000  1.00       319     89.7     110.19     108.65     0.9910       9.10e-05        374.12           4.702       0.694
+   10^10.000  0.50       196     55.0      53.35      52.14     0.9816       3.07e-04        181.13           3.977       1.790
+   10^10.000  0.25       102     28.7      20.50      19.62     0.9527       1.51e-03         69.61           3.020       0.971
+   10^10.778  1.00       580     66.5      70.75      69.43     0.9861       1.91e-04        240.23           4.259       0.444
+   10^10.778  0.50       356     40.8      34.36      33.32     0.9715       6.37e-04        116.67           3.537       1.141
+   10^10.778  0.25       185     21.3      13.30      12.54     0.9280       3.13e-03         45.16           2.588       0.613
+   10^12.000  1.00      1482     41.6      35.41      34.36     0.9724       6.03e-04        120.24           3.567       0.219
+   10^12.000  0.50       908     25.5      17.32      16.49     0.9443       2.01e-03         58.81           2.852       0.559
+   10^12.000  0.25       473     13.3       6.82       6.20     0.8631       9.68e-03         23.16           1.920       0.293
+   10^13.000  1.00      3193     28.4      20.20      19.32     0.9520       1.55e-03         68.58           3.006       0.122
+   10^13.000  0.50      1957     17.4       9.97       9.27     0.9048       5.10e-03         33.85           2.299       0.308
+   10^13.000  0.25      1020      9.1       4.01       3.49     0.7745       2.39e-02         13.61           1.389       0.154
+   10^14.000  1.00      6878     19.3      11.60      10.87     0.9177       3.95e-03         39.37           2.451       0.068
+   10^14.000  0.50      4216     11.8       5.80       5.21     0.8403       1.27e-02         19.69           1.758       0.167
+   10^14.000  0.25      2198      6.2       2.41       1.96     0.6418       5.75e-02          8.17           0.878       0.077
+   μ_R/μ_N ∝ (R_ta/r*)^{3/2} ∝ M_b^{−1/4}: kleine und späte Bereiche machen je Baryon mehr Flucht inaktiv.
+   Kac: μ_R/μ_N ist die mittlere Rückkehrzeit (in Einheiten des Umlaufs) in den Newton-gebundenen Teil; 1 + Q = 6.364
+   liegt nur bei R_ta/r* = 13.5 (M_b ≈ 10^15.1 M☉ heute) – ein Einzelwert, keine Invariante.
+
+   Profil (Hernquist, Skala b): Maß des Bereichs und je Baryon am Ort (Geschwindigkeitsraum an der Stelle der Masse)
+   M_b [M☉]  b[kpc]  a     μ_R/μ_N   μ_inakt/μ_R   ⟨1 − (v_N/v_R)³⟩_M   ⟨(v_R/v_N)³⟩_M
+   10^9.000    1.0  1.00     196.95     0.9950           0.971               72.777
+   10^9.000    1.0  0.50      95.52     0.9896           0.964               49.578
+   10^9.000    1.0  0.25      36.77     0.9734           0.950               28.623
+   10^10.778   3.0  1.00      71.28     0.9862           0.905               22.606
+   10^10.778   3.0  0.50      34.74     0.9719           0.888               15.831
+   10^10.778   3.0  0.25      13.53     0.9293           0.852               9.584
+   10^12.000  10.0  1.00      35.74     0.9726           0.868               14.093
+   10^12.000  10.0  0.50      17.55     0.9450           0.841               9.844
+   10^12.000  10.0  0.25       6.95     0.8660           0.786               5.948
+   Am Ort der Baryonen (ν klein) ist die inaktive Flucht klein; das Bereichsmaß sitzt fast ganz jenseits von r*, wo keine Baryonen sind.
+   Liouville: nach der Umkehr sind R_ta und v_R physikalisch fest; mitbewegt (R/a)³(a·v)³ = R³v³ – das Maß je Bereich ist
+   in beiden Koordinaten gleich und zeitlich fest. Es wächst nur durch neue Bindung (dF/dt) und größere Bereiche.
+
+================================================================================================================
+2  Erhaltung im Ganzen: Zuwachs des parametrischen Maßes = inaktives Fluchtmaß (Messwerte nur Test [G])
+================================================================================================================
+   σ(M_ges, 0) [G, CAMB]: 10⁸ 5.898, 10¹² 2.245, 10¹⁴ 1.014
+   F = erfc(δ_ta(a)/(√2σD)) (Bindung ab der Umkehr, Regel setzt dort ein); je Bereich μ bei R_ta(M, a).
+   (A) additiv: X_A = Σ dF/dlnM · μ_inakt/μ_Fluss, μ_Fluss = (4π/3)R_L³·(4π/3)(H R_L)³ (Maß des Bereichs im Hubble-Fluss).
+   (B) Liouville-Produkt je Baryon: X_B = Σ dF/dlnM · ln(μ_R/μ_N) (normfrei).
+   Atmen: δ ln μ_par = X bei festem mitbewegtem Impuls ⇒ δ ln V = X, a_eff = a·e^{X/3}, H_eff = H_b(1 + ⅓ dX/d ln a).
+   H_b: Ω_m + Ω_s = 0.5577 (E_b(1) = 0.747); nötig ⅓dX/dln a (a=1) = 0.339, damit E_eff(1) = 1.
+
+   M_min   F(0)   ⟨inakt/μ_R⟩  X_A(z=3)  X_A(1)  X_A(0)  dX_A/dlna(0)  Ω_X,A(0)  /0,442   |  X_B(3)  X_B(1)  X_B(0)  dX_B/dlna(0)  Ω_X,B(0)  /0,442
+   10^6    0.874   0.9652      1.7731   2.2035  0.6876   -2.2310       -0.5374    -1.215    |  2.293   2.911   3.342   0.444        0.183     0.41
+   10^8    0.828   0.9633      0.7876   1.1504  0.3817   -1.2163       -0.3719    -0.841    |  1.728   2.513   3.026   0.530        0.221     0.50
+   10^10   0.743   0.9595      0.2786   0.5562  0.2058   -0.6352       -0.2178    -0.493    |  1.010   1.934   2.544   0.643        0.273     0.62
+   10^12   0.568   0.9504      0.0450   0.1969  0.0925   -0.2664       -0.0976    -0.221    |  0.268   1.078   1.755   0.761        0.329     0.74
+   10^13   0.413   0.9410      0.0068   0.0811  0.0499   -0.1325       -0.0497    -0.112    |  0.052   0.562   1.183   0.764        0.330     0.75
+
+   Verlauf mit a (B, M_min = 10⁸ bzw. 10¹²): E_eff/E_ΛCDM [G] und Ω_X,B(a) = E_eff² − E_b²
+   10^8    z=6  : 1.498 (Ω_X 134.818)  z=3  : 1.441 (Ω_X 22.267)  z=2  : 1.379 (Ω_X 10.006)  z=1  : 1.222 (Ω_X 2.040)  z=0.5: 1.066 (Ω_X 0.660)  z=0  : 0.885 (Ω_X 0.221)
+   10^12   z=6  : 1.035 (Ω_X 8.103)  z=3  : 1.278 (Ω_X 13.289)  z=2  : 1.356 (Ω_X 9.329)  z=1  : 1.321 (Ω_X 2.851)  z=0.5: 1.138 (Ω_X 0.914)  z=0  : 0.943 (Ω_X 0.329)
+   Vorzeichen: X > 0, wächst mit der Bindung ⇒ zusätzliche Ausdehnung. Verlauf: dX/dln a folgt dF/dln a, Gipfel früh
+   (kleine Bereiche binden bei z ≈ 2–6), heute fallend – also mitlaufend mit der Strukturbildung, nicht fest wie w ≈ −1.
+   (B) gibt heute 0,18–0,33 (41–75 % von 0,442), hebt aber H(z) bei z = 1–3 um 22–44 % über ΛCDM [G] (Ω_X(z=2) ≈ 10):
+   ein Glied, das in die Vergangenheit steil wächst, statt heute zu überwiegen. Mit größerer Norm wird z = 1–3 nur schlimmer.
+   Ω_X/Ω_c heute (Ω_DE/Ω_Mode gemessen 0.687/0.264 = 2.60):
+   10^8    (A) -0.4829   (B) (Ω_s + Ω_X,B)/Ω_c = 1.76
+   10^12   (A) 0.5553   (B) (Ω_s + Ω_X,B)/Ω_c = 2.17
+   Norm: (A) hängt an der Wahl des Flussmaßes (Kugel R_L, Geschwindigkeit H·R_L, Faktoren (4π/3)²) – aus dem Modell nicht fest;
+   μ_Fluss ∝ (a·ȧ)³ ist kein Liouville-Invariant (der Fluss ist kalt, keine freie Bewegung): X_A driftet mit der Epoche,
+   dX_A/dln a < 0 heute – das Vorzeichen setzt die Norm, nicht die Bindung. (A) ist keine tragfähige Zählung.
+   (B) ist normfrei, verlangt aber, dass das Maß je Baryon als Faktor (Produktraum) ganz ins Zellvolumen geht.
+
+================================================================================================================
+3  Verriegelung T² → T¹: Frequenzverhältnis der Bahnen und gesperrte Umläufe je Baryon
+================================================================================================================
+   Fast kreisförmig, Punktmasse: Ω_r/Ω_φ = κ/Ω (Kepler exakt 1: Radial- und Umlauf verriegelt, Bahn geschlossen, T¹)
+   r/r* =  0.03: 1.0000  0.3: 1.0599  1: 1.2578  3: 1.3574  10: 1.3967  30: 1.4083  100: 1.4124 
+   Tief → √2 (irrational): die Regel löst die Kepler-Verriegelung, die Bahn füllt einen T² (Rosette).
+   Gesperrte Umläufe je gebundenem Baryon (kugelsymmetrisch, 3 Freiheitsgrade): Newton 2 (Ebene + Kepler), Regel 1 (Ebene).
+   Gegenüber Newton gibt die Regel je Baryon einen Umlauf frei (−1), gegenüber dem ungebundenen Fluss (keine Umläufe)
+   schafft Bindung Umläufe, sie sperrt keine. Anzahl je Baryon heute: F(>M_min, 0) · 1:
+   M_min 10^8    F(0) = 0.828, dF/dln a (0) = 0.068;  als Rate dN/dt/N_b = 0.068·H₀
+   M_min 10^12   F(0) = 0.568, dF/dln a (0) = 0.155;  als Rate dN/dt/N_b = 0.155·H₀
+   Übersetzung in Ausdehnung braucht Wirkung oder Energie je Umlauf; das Modell setzt keine. Größenordnungen:
+   Wirkung je Masse: Bahn v_f·r* = 4.63e+25 m²/s gegen Atmen der Zelle H₀·Λ² = 3.65e+35 m²/s (Verhältnis 1.3e-10)
+   Energie: Ω_b·F·(v_f/c)² = 0.0492·0.57·3.29e-07 = 9.2e-09 gegen 0,442
+
+================================================================================================================
+4  Beobachterfehler und Doppelzählung
+================================================================================================================
+   μ ist das Maß des Zustandsraums eines Bereichs (G des Bereichs); über die Zelle summiert G. Nirgends eine Dichte am Ort.
+   Am Ort der Baryonen (Profil) ist die inaktive Flucht klein; groß wird sie nur im leeren Außenteil bis R_ta: das
+   Bereichsmaß ist eine Eigenschaft der Regel (Naht), kein Stoff.
+   Kac: 1 + Q = 6.364 zählt die Rückkehr in der inneren Richtung (I) und ist als Mode ξ schon als Staub (Ω_c) gebucht;
+   das Bahnmaß μ_R/μ_N (L/G des Bereichs) ist davon verschieden (Faktor 1–10³, massenabhängig). Wer μ_inakt zusätzlich ins
+   Atmen bucht, zählt die Bindung zweimal, falls sie dasselbe Maß ist wie q = 0.843; der Vakuumteil hängt nur an Λ (I).
+   𝒫 löscht keine Freiheitsgrade: die inaktiven Richtungen bleiben Richtungen desselben Bereichs (Rückkehr), sie
+   verlassen ihn nicht. Ein Übergang in die Rolle der Zelle ist zusätzlich gesetzt, nicht aus Liouville gefolgert.
+
+================================================================================================================
+5  Von Hand (Milchstraße, M_b = 6·10¹⁰ M☉, heute)
+================================================================================================================
+   r* = √(GM/a₀) = √(1.3271e+20·6e10/1,1e-10) = 2.691e+20 m = 8.72 kpc; R_ta = 580.1 kpc; R_ta/r* = 66.54
+   ∫₀¹u²(ln 1/u)^{3/2}du = Γ(5/2)/3^{5/2} = 1,32934/15,5885 = 0.08528
+   μ_R/μ_N ≈ (3/2)·0,08528·(R_ta/r*)^{3/2} = 0,12792·542.7 = 69.4  (Code, voller Kern-ν: 70.8)
+   Rest zur Tiefformel aus ν ≈ 1/s + ½ + …: v_R² = 2v_f²ln(R/r) + GM(1/r − 1/R) + …; relativ 1.9 %.
+   ln(μ_R/μ_N) = ln 70.8 = 4.259.
+   Rotation: κ/Ω tief = √(r·d(v_f²/r²)/dr/(v_f²/r²) + 4) = √(−2 + 4) = √2 = 1,4142.

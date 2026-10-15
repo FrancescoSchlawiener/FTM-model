@@ -1,0 +1,38 @@
+
+====================================================================================================
+1  Liouville des Ganzen: Jacobi-Determinante des Flusses (N = 2 Bereiche + L, 6 Dimensionen)
+====================================================================================================
+   det J(t = 200) = 0.99999999   (Ganzes Hamiltonsch: Maß erhalten)
+   Projektion ż = (I − Π⊥)F auf einem Teil hat div = −κ < 0;
+   im Hamiltonschen Ganzen gilt punktweise div_Teil + div_Rest = 0: wer im Teil zieht, muss im Rest dehnen.
+
+====================================================================================================
+2  Gebundenes Maß (Libration) bei festem und bei wanderndem Parameter; Ensemble gleichverteilt in ψ, |P| < 1,2
+====================================================================================================
+   k, L fest            t=   0: gebunden 0.2265 (16L√k/Band 0.2373)  t=1500: gebunden 0.2265 (16L√k/Band 0.2373)  t=3000: gebunden 0.2265 (16L√k/Band 0.2373)
+   k wächst, L fest     t=   0: gebunden 0.2265 (16L√k/Band 0.2373)  t=1500: gebunden 0.3280 (16L√k/Band 0.3355)  t=3000: gebunden 0.3980 (16L√k/Band 0.4109)
+   k fest, L wächst     t=   0: gebunden 0.2265 (16L√k/Band 0.2373)  t=1500: gebunden 0.3468 (16L√k/Band 0.3559)  t=3000: gebunden 0.4693 (16L√k/Band 0.4745)
+   Stichprobe ±0,007. Fester Parameter: gebundenes Maß zeitlich fest (Kac: was eintritt, tritt aus). Netto-Bindung nur, solange ein Parameter
+   wandert, und genau um den Zuwachs der Separatrixfläche. Richtung: Parameter (auch L = Atmen) → Bindung, nicht umgekehrt.
+
+====================================================================================================
+3  Rückwirkung der Bindung auf L (L dynamisch, geschlossen): Maß oder Energie?
+====================================================================================================
+   Kraft auf L: Σ P²/L³ (nur der kinetische Teil hängt an L). Vergleich jeweils gegen denselben Start mit k = 0.
+   A Start oben  (ψ≈π, P klein): gebunden 1.000  ⟨L⟩ k=0: 1.08821  k=0,02: 1.74734  Δ⟨L⟩ = +0.65913   ⟨E_kin⟩/Bereich 0.00104 → 0.01105
+   B Start unten (ψ≈0, P mittel): gebunden 0.961  ⟨L⟩ k=0: 1.61205  k=0,02: 1.46472  Δ⟨L⟩ = -0.14733   ⟨E_kin⟩/Bereich 0.00769 → 0.00568
+   C gleichverteilt, |P| < 0,1: gebunden 1.000  ⟨L⟩ k=0: 1.11435  k=0,02: 1.51445  Δ⟨L⟩ = +0.40010   ⟨E_kin⟩/Bereich 0.00136 → 0.00704
+   L wird verschoben, sobald die Bindung die Energie an L ändert; das Vorzeichen folgt ΔE_kin (A +, B −), nicht dem
+   gebundenen Maß (A und B fast ganz gebunden, Verschiebung entgegengesetzt). Liouville legt die Verschiebung nicht fest.
+
+====================================================================================================
+4  Verriegelung: κ/Ω der Kern-Regel (Punktmasse, nur x = r/r* zählt) und Radien mit rationalem Verhältnis
+====================================================================================================
+   x=0.01: 1.0000  x=0.1: 1.0002  x=0.5: 1.1459  x=1: 1.2578  x=2: 1.3307  x=5: 1.3796  x=20: 1.4054  x=100: 1.4124  x=1000: 1.4140
+   κ/Ω = 9/8 = 1.1250 bei r/r* = 0.445 (geschlossene Rosette: 9 Radialschwingungen je 8 Umläufe)
+   κ/Ω = 6/5 = 1.2000 bei r/r* = 0.682 (geschlossene Rosette: 6 Radialschwingungen je 5 Umläufe)
+   κ/Ω = 5/4 = 1.2500 bei r/r* = 0.945 (geschlossene Rosette: 5 Radialschwingungen je 4 Umläufe)
+   κ/Ω = 4/3 = 1.3333 bei r/r* = 2.069 (geschlossene Rosette: 4 Radialschwingungen je 3 Umläufe)
+   κ/Ω = 7/5 = 1.4000 bei r/r* = 12.331 (geschlossene Rosette: 7 Radialschwingungen je 5 Umläufe)
+   Von Hand: Kepler Ω² ∝ r⁻³ → κ² = −3Ω² + 4Ω² → κ/Ω = 1 (alle Bahnen geschlossen, Entartung = Verriegelung);
+   flach Ω² ∝ r⁻² → κ² = 2Ω² → √2. Dazwischen durchläuft κ/Ω stetig jedes Verhältnis in (1, √2).

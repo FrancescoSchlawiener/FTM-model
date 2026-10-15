@@ -1,0 +1,48 @@
+0) Eingaben [G/A]: M (Υ = 2), R_e, Nachbar M_h, projizierter Abstand D, σ gemessen
+   DF2: M = 2.0e+08 M☉, R_e = 2.2 kpc, M_h = 1e+11 M☉, D = 80.0 kpc  ->  g_Ne = 0.0181 a₀, ν(g_Ne) = 7.93;  r* = 0.482 kpc;  σ_obs = 8.5 +2.3/−3.1 km/s
+   DF4: M = 1.5e+08 M☉, R_e = 1.6 kpc, M_h = 1e+11 M☉, D = 165.0 kpc  ->  g_Ne = 0.0043 a₀, ν(g_Ne) = 15.82;  r* = 0.417 kpc;  σ_obs = 4.2 +4.4/−2.2 km/s
+
+1) Rekonstruktion der bisherigen Zahl: Wolf-Schätzer σ² = r_½·g(r_½)/3, r_½ = 4/3·R_e, M(<r_½) = M/2 als Punktmasse,
+   äußeres Feld = Newton-Feld des Nachbarn (Punktmasse 10¹¹ M☉ im projizierten Abstand), keine Glättung des Zwergs (Sterne ℓ ≪ Zwerg)
+        Newton  isoliert  gleichger.  senkrecht  Flussmittel(=Feldform)   [km/s]
+   DF2     6.99    21.11    17.32    18.71    17.97
+   DF4     7.10    19.75    18.85    19.64    19.66
+   Das Flussmittel ist der Monopol der Feldform (Satz von Gauß): die 18,0/19,7 km/s sind schon die Feldform, im Wolf-Schätzer.
+
+   Probe Glättung: Plummer-Kern auf Punktmasse, Anteil in r = ℓ: geschlossen 0.35355, erwartet 2^(-3/2) = 0.35355
+
+2) Löser: Gitter 220 × 440 Zellen, R ≤ 500 kpc, |z| ≤ 500 kpc, erste Zelle 0,03 kpc; Rand: Fernfeld
+   φ_Rand = −ν_e·GM/r·[1 + (L/2)·sin²θ],  L = d ln ν/d ln g_N bei g_Ne,  θ gegen die Feldrichtung (linearisiert, exakt für r → ∞)
+   a) DF2 isoliert, Feldform auf dem Gitter / exakt ν(g_N)·g_N:  r = 0.5: 0.9993,  r = 1: 0.9996,  r = 2.2: 0.9997,  r = 5: 0.9999,  r = 10: 1.0000,  r = 30: 1.0000
+   b) DF2 bei g_Ne = 0.0181 a₀, Monopol Gitter / Flussidentität:  r = 0.5: 0.9995,  r = 1: 0.9995,  r = 2.2: 0.9997,  r = 5: 1.0002,  r = 10: 1.0005,  r = 30: 1.0007
+
+3) Streuung im projizierten Abstand (Plummer, b = R_e [A]; isotrope Jeans-Gleichung, σ_los im Fenster R < R_e) [km/s]
+        Newton  isoliert  gleichger.  senkrecht  Feldform(Gitter)  Feldform(Fluss)   längs Feld  quer Feld   Virial  Wolf   gemessen [G]
+   DF2    7.04    21.13      17.31      18.68          18.06           18.06       16.97      18.58    15.92  18.15   8.5 +2.3/−3.1
+   DF4    7.15    19.77      18.81      19.60          19.60           19.60       19.19      19.80    18.26  19.68   4.2 +4.4/−2.2
+   längs/quer: Blickrichtung parallel bzw. senkrecht zum äußeren Feld, Verhältnis aus dem Tensor-Virialsatz (σ_zz²/σ_xx² = DF2 0.835, DF4 0.939)
+
+4) Abhängigkeit vom 3D-Abstand (≥ projiziert), Nachbar 10¹¹ M☉ [A]; σ_los(R < R_e) [km/s]
+        D/D_proj   D[kpc]   g_Ne/a₀   gleichger.  senkrecht  Feldform(Gitter)
+   DF2     1.0        80     0.0181       17.31      18.68         18.06
+   DF2     1.5       120     0.0081       18.88      20.25         20.18
+   DF2     2.0       160     0.0045       19.68      20.76         20.76
+   DF2     3.0       240     0.0020       20.40      21.04         21.04
+   DF4     1.0       165     0.0043       18.81      19.60         19.60
+   DF4     1.5       248     0.0019       19.30      19.73         19.73
+   DF4     2.0       330     0.0011       19.50      19.76         19.76
+   DF4     3.0       495     0.0005       19.65      19.77         19.77
+   Vergleich DF2: ein Feld vom Betrag des verstärkten Nachbarfelds ν·g_Ne = 0.144 a₀ im Argument gäbe 11.64 km/s
+
+5) Glättung ℓ des Zwergs im kollektiven Feld (Hierarchie E0: Argument, Quelle und gespürte Struktur über ℓ geglättet), projizierter Abstand
+   Kriterium des Modells: Der Zwerg ist kollektiv (g_N(r_½)/a₀ = DF2 0.014, DF4 0.020); geglättet werden nur seine Sterne (ℓ eines Sterns von 1 M☉ bei r_½: DF2 2.7 pc, DF4 2.2 pc), also gilt ℓ = 0.
+   DF2 (r_½ = 2.87 kpc, ℓ_J = 3.97 kpc):  ℓ = 0.00 kpc: 18.06,  ℓ = 1.44 kpc: 12.33,  ℓ = 2.87 kpc: 9.38,  ℓ = 3.97 kpc: 8.39,  ℓ = 7.94 kpc: 7.34,  ℓ = 19.84 kpc: 7.07;  Newton 7.04 km/s
+   DF4 (r_½ = 2.09 kpc, ℓ_J = 5.94 kpc):  ℓ = 0.00 kpc: 19.60,  ℓ = 1.04 kpc: 14.79,  ℓ = 2.09 kpc: 11.38,  ℓ = 5.94 kpc: 7.74,  ℓ = 11.88 kpc: 7.25,  ℓ = 29.70 kpc: 7.16;  Newton 7.15 km/s
+
+6) Was für die gemessenen Werte nötig wäre (Feldform, Jeans, Fenster R < R_e)
+   DF2 oberer Rand 10.8 km/s: g_Ne ≥ 0.213 a₀ (= 11.7·heute; bei 10¹¹ M☉: D ≤ 23.4 kpc; bei D = 80 kpc: M_h ≥ 1.2e+12 M☉);  oder M ≤ 7.03e+07 M☉ (Υ ≤ 0.70);  oder ℓ ≥ 2.0 kpc
+   DF2 Mittelwert 8.5 km/s: g_Ne ≥ 0.931 a₀ (= 51.3·heute; bei 10¹¹ M☉: D ≤ 11.2 kpc; bei D = 80 kpc: M_h ≥ 5.1e+12 M☉);  oder M ≤ 4.35e+07 M☉ (Υ ≤ 0.43);  oder ℓ ≥ 3.8 kpc
+   DF4 oberer Rand 8.6 km/s: g_Ne ≥ 0.957 a₀ (= 224.3·heute; bei 10¹¹ M☉: D ≤ 11.0 kpc; bei D = 165 kpc: M_h ≥ 2.2e+13 M☉);  oder M ≤ 1.65e+07 M☉ (Υ ≤ 0.22);  oder ℓ ≥ 4.0 kpc
+   DF4 Mittelwert 4.2 km/s: liegt unter Newton (7.15); schon Newton verlangt M ≤ 5.17e+07 M☉ (Υ ≤ 0.69)
+   Gegenprobe Crater II [G] (3,2·10⁵ M☉, R_e = 1,07 kpc, Milchstraße 6·10¹⁰ M☉ bei 117,5 kpc, σ = 2,7 ± 0,3): Newton 0.40, Feldform ℓ = 0: 1.42, ℓ = ℓ_J = 0.66 kpc: 0.93 km/s
+   Probe Gitter bei g_Ne = 0,30 a₀ (DF2): 10.15 km/s, Flussidentität 10.15 km/s

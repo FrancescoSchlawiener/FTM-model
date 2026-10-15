@@ -1,0 +1,2 @@
+Planck PR4 (NPIPE), Linsenpotential, über die CMB-Spektren gemittelt (Carron, Mirmelstein, Lewis 2022): 9 Bandleistungen [L(L + 1)]²C_L^φφ/2π für L = 8–400, Kovarianz, Fenster je Bin (win1–9.dat = ..._window/window1–9.dat) und Fenster der linearen Korrektur (kor1–9.dat = ..._CMBmarged_lens_delta_window/window1–9.dat) mit ihrem Bezugswert; dazu die beiden .dataset-Beschreibungen.
+https://github.com/carronj/planck_PR4_lensing, planckpr4lensing/data_pr4/pp_consext8_npipe_smicaed_TiPi_jTP_pre30T_kfilt_rdn0cov_PS1*, geladen 2026-10-12, unverändert (nur die Fenster umbenannt).

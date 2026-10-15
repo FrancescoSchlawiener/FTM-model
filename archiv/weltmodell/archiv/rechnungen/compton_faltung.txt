@@ -1,0 +1,26 @@
+1) Die beiden Kopplungskonstanten als Längenverhältnisse
+   Gravitation:  3·Δs_p/λ̄_p = 5.906149e-39   α_G = G m_p²/(ħc) = 5.906149e-39
+   Elektromagn.: r_e/λ̄_e    = 0.0072973526   α = 0.0072973526
+   Δs_p = 4.1404e-55 m,  λ̄_p = 2.1031e-16 m,  r_e = 2.8179e-15 m,  λ̄_e = 3.8616e-13 m
+   -> α_G ist die Faltungstiefe des Protons in Einheiten seiner Compton-Länge (×3);
+      α ist der elektromagnetische Radius des Elektrons in Einheiten seiner Compton-Länge.
+
+2) Carters Koinzidenz als reine Längenbeziehung
+   3·Δs_p·λ̄_e¹⁶ = 3.0369e-253 m¹⁷    r_e¹²·λ̄_p⁵ = 1.0315e-253 m¹⁷    Verhältnis = 2.944
+   (gleichwertig zu α_G = α¹²(m_e/m_p)⁴, Verhältnis 2,94)
+
+3) Die Kreuzung als Gleichheit zweier Raten
+   Compton-Takt des Protons ω_p = m_p c²/ħ = 1.4255e+24 1/s
+   Faltungsrate Γ_G = α_G·ω_p = g_p(λ̄_p)/c = 8.4191e-15 1/s   (Probe G m_p³ c/ħ² = 8.4191e-15)
+   Atemrate pro Radiant H/2π = Γ_G bei z = 1119.2  (kT = 0.2631 eV)
+   -> Die Kreuzung ist: Das Universum atmet pro Radiant so schnell, wie das Proton pro Compton-Takt faltet.
+
+4) Dasselbe für das Elektron und die Elektromagnetik (zum Vergleich)
+   Faltungsrate des Elektrons α_G,e·ω_e = G m_e³ c/ħ² = 1.360e-24 1/s  <  H_Λ/2π = 2.875e-19 1/s  -> nie
+   EM-Rate des Elektrons α·ω_e = 5.665e+18 1/s  (Größenordnung Atomphysik)
+
+5) Was die Kreuzung mit der Rekombination verbindet (Kette aus Notiz 19, in Raten):
+   ħ·Γ_G-Temperatur bei Kreuzung      : kT = 0.2631 eV
+   m_p c²·α_G^(1/4)                   : 0.2601 eV
+   α³ m_e c²                          : 0.1986 eV
+   kT(z = 1090, letzte Streuung)      : 0.2562 eV

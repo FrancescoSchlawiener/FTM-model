@@ -1,0 +1,3 @@
+Planck 2018, plik_lite v22 (Planck Collaboration 2020, Likelihood-Bericht V und Parameter VI): gebinnte Spektren TT (ℓ = 30–2508, 215 Bins), TE und EE (ℓ = 30–1996, je 199 Bins), C_b in µK², volle Kovarianz (Fortran, 613 × 613), Bingrenzen und Gewichte: cl_cmb_plik_v22.dat, c_matrix_plik_v22.dat, blmin.dat, blmax.dat, bweight.dat.
+TT unter ℓ = 30 als zwei nahezu gaußische Bins (ℓ = 2–15, 16–29; Prince und Dunkley 2019): CTT_bin_low_ell_2018.dat, blmin_low_ell.dat, blmax_low_ell.dat, bweight_low_ell.dat.
+https://github.com/heatherprince/planck-lite-py, data/planck2018_plik_lite/ und data/planck2018_low_ell/, geladen 2026-10-12, unverändert (Ursprung: Planck Legacy Archive).

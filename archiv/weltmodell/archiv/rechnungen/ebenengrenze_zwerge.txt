@@ -1,0 +1,82 @@
+
+==============================================================================================================
+1   Formel und zweiter Weg
+==============================================================================================================
+   D·G'' = Γ·G, G(0) = 1, G beschränkt; unter ϖ = ℓ: D, darüber μD (Faltungen je Ebene additiv, D_Ebene = GM_Ebene/c), Γ gleich.
+   Stetig: G und Fluss D·G′ (Schritte mit c). Unten G = A e^{−kϖ} + B e^{kϖ}, oben C e^{−kϖ/√μ}:
+   B/A = R e^{−2kℓ}, R = (1 − √μ)/(1 + √μ);  q = G(L) = e^{−kL}(1 + R e^{−2k(ℓ−L)})/(1 + R e^{−2kℓ}),  k = s/L,  L = ϖ_R = r*
+   Tiefe der Grenze: ℓ = d·(M/3M_p)^{1/3} (ℓ³ = GM/T, T = 3GM_p/d³, Elternmasse als Punkt). Mit s = r*/r (Punktmasse) ist kℓ = ℓ/r.
+   Tief (s ≪ 1): ν_b/ν = (1 + R e^{−2ℓ/r})/(1 − R e^{−2ℓ/r});  R → −1: ν_b/ν → tanh(ℓ/r)
+   Prüfung Formel gegen Schießen (solve_ivp, unabhängig vom Finite-Volumen-Code in halbgerade_hierarchie.py):
+       s      ℓ/L     μ        q Formel       q Schießen     rel. Abw.
+     0.70     5.0      100   0.4954525224   0.4954525224   +7.6e-14
+     0.10     3.0      600   0.6998352854   0.6998352854   -5.1e-15
+     0.05    30.0    10000   0.9460967938   0.9460967938   +2.2e-13
+     1.50     2.0        4   0.2196086131   0.2196086131   -1.5e-13
+     0.30     1.2  1000000   0.1654625181   0.1654625181   -1.5e-14
+   max. Abweichung 2.2e-13
+   Grenzfälle von Hand: μ = 1 ⇒ R = 0 ⇒ q = e^{−s} (keine Grenze);  μ → ∞ ⇒ R = −1, G(ℓ) = 0 (Spiegelladung mit Vorzeichen −):
+      q(μ = 1) = 0.67032005, e^{−s} = 0.67032005;  q(μ = 10¹²) = 0.58835972, sinh(k(ℓ − L))/sinh(kℓ) = 0.58835954  (s = 0,4, ℓ = 3L)
+
+==============================================================================================================
+2   Sieben Systeme: Abstand, ℓ, Tiefe ℓ/ϖ_R, R, Verstärkung, σ
+==============================================================================================================
+   Eingaben [G]: M (Υ = 2), R_e, Wirt Milchstraße 6·10¹⁰ bzw. NGC 1052 10¹¹ M☉ [A], Abstand; r½ = 1,305·R_e (Plummer)
+   System      d[kpc]         μ        R  r*[pc]  ℓ[kpc]   ℓ/ϖ_R   ℓ/r½  g_e/a₀ ν_b/ν(r½)      σ_N  isol. bisher Grenze Gr.+iso     gemessen
+   Pal 14        71.0     3e+06  -0.9988     5.0   0.341    67.8  10.59  0.0151   1.00000     0.66   2.06   1.78   1.78    2.06   0.38 ± 0.12
+   NGC 2419      90.0  6.67e+04  -0.9923    33.8   1.539    45.6  62.07  0.0094   1.00000     5.09   6.49   6.49   6.49    6.49   4.10 ± 0.50
+   Crater II    117.5  1.88e+05  -0.9954    20.1   1.423    70.7   1.02  0.0055   0.99994     0.40   4.03   1.39   1.39    3.15   2.70 ± 0.30
+   Draco         76.0  1.03e+05  -0.9938    27.1   1.123    41.4   3.89  0.0132   0.99988     1.20   4.74   3.33   3.33    4.70   9.10 ± 1.20
+   Fornax       147.0   1.5e+03  -0.9497   225.1   8.904    39.5   9.61  0.0035   1.00000     5.55  14.01  13.96  13.96   14.00  11.70 ± 0.90
+   DF2           80.0       500  -0.9144   503.4   6.989    13.9   2.43  0.0198   0.97584     7.04  20.70  17.70  17.55   19.93   8.50 ± 2.30
+   DF4          165.0       667  -0.9254   436.0  13.096    30.0   6.27  0.0047   0.99975     7.15  19.38  19.21  19.20   19.36   4.20 ± 2.20
+   σ in km/s. bisher = Regel mit äußerem Feld (Monopol); Grenze = dieselbe mit Ebenengrenze; Gr.+iso = Ebenengrenze ohne äußeres Feld.
+   ν_b/ν(r½): Verhältnis der Verstärkung am Halbmassenradius (Gesamtfeld im Argument).
+
+   Varianten (σ mit äußerem Feld und Grenze, km/s): Tiefe 0,75·ℓ (Poisson) / R = (1 − μ)/(1 + μ) / ℓ aus wirksamer Gezeit / alle drei
+   Pal 14     bisher   1.78:    1.78 /   1.78 /   1.78 (ℓ_w = 0.188 kpc) /   1.78   gemessen 0.38
+   NGC 2419   bisher   6.49:    6.49 /   6.49 /   6.49 (ℓ_w = 0.790 kpc) /   6.49   gemessen 4.1
+   Crater II  bisher   1.39:    1.39 /   1.39 /   1.39 (ℓ_w = 0.672 kpc) /   1.38   gemessen 2.7
+   Draco      bisher   3.33:    3.33 /   3.33 /   3.33 (ℓ_w = 0.607 kpc) /   3.31   gemessen 9.1
+   Fornax     bisher  13.96:   13.96 /  13.96 /  13.89 (ℓ_w = 3.917 kpc) /  13.73   gemessen 11.7
+   DF2        bisher  17.70:   17.21 /  17.54 /  16.60 (ℓ_w = 4.020 kpc) /  15.42   gemessen 8.5
+   DF4        bisher  19.21:   19.16 /  19.20 /  18.83 (ℓ_w = 6.023 kpc) /  18.20   gemessen 4.2
+
+   Verlangte Richtung (σ_gem/σ_bisher)² gegen die Wirkung der Grenze (σ_Grenze/σ_bisher)², nach ℓ/r½ geordnet:
+      Crater II  ℓ/r½ =   1.02   verlangt  3.790   Grenze  1.0001
+      DF2        ℓ/r½ =   2.43   verlangt  0.231   Grenze  0.9834
+      Draco      ℓ/r½ =   3.89   verlangt  7.458   Grenze  1.0002
+      DF4        ℓ/r½ =   6.27   verlangt  0.048   Grenze  0.9990
+      Fornax     ℓ/r½ =   9.61   verlangt  0.702   Grenze  0.9999
+      Pal 14     ℓ/r½ =  10.59   verlangt  0.046   Grenze  1.0000
+      NGC 2419   ℓ/r½ =  62.07   verlangt  0.400   Grenze  1.0000
+
+==============================================================================================================
+3   Schranken: unter Newton, über isoliert
+==============================================================================================================
+   G ist auf der ganzen Halbgeraden positiv (Γ > 0, Maximumprinzip), also 0 < q_b < 1 und ν_b > 1: nie unter Newton.
+   Für μ ≥ 1 ist R ≤ 0 und q_b ≤ e^{−s}: ν_b ≤ ν, die Grenze hebt nie über den Wert ohne Grenze. Heben (R > 0) verlangte μ < 1.
+   Gitter s = 10⁻³…30, ℓ/L = 1…100, μ = 1…10¹²: min ν_b = 1.000000 (> 1), max ν_b/ν = 1.000000 (≤ 1)
+   Pal 14   : σ_N = 0.66, mit Grenze 1.78 (≥ σ_N), gemessen 0.38;  isoliert 2.06, Grenze allein 2.06
+   NGC 2419 : σ_N = 5.09, mit Grenze 6.49 (≥ σ_N), gemessen 4.1;  isoliert 6.49, Grenze allein 6.49
+   DF4      : σ_N = 7.15, mit Grenze 19.20 (≥ σ_N), gemessen 4.2;  isoliert 19.38, Grenze allein 19.36
+   Draco    : σ_N = 1.20, mit Grenze 3.33 (≥ σ_N), gemessen 9.1;  isoliert 4.74, Grenze allein 4.70
+   Selbst R = −1 (Grenze absorbierend) und Tiefe ℓ → L (Grenze an ϖ_R): σ bleibt ≥ σ_N:
+      Pal 14    ℓ = 1,0·ϖ_R, μ = 10¹²: σ = 0.665 km/s  (σ_N = 0.665, gemessen 0.38)
+      NGC 2419  ℓ = 1,0·ϖ_R, μ = 10¹²: σ = 5.085 km/s  (σ_N = 5.085, gemessen 4.1)
+      DF4       ℓ = 1,0·ϖ_R, μ = 10¹²: σ = 7.154 km/s  (σ_N = 7.154, gemessen 4.2)
+
+==============================================================================================================
+4   Verlangte Tiefe (Fornax, DF2: gemessen über σ_N, unter der Regel)
+==============================================================================================================
+   Fornax: verlangt ℓ = 1.173 kpc = 5.2·ϖ_R = 1.27·r½ (Formel: 8.90 kpc); bei festem Wirt Abstand 19.4 kpc statt 147.0 (g_e dann 0.203 a₀)
+   DF2: verlangt ℓ = 0.605 kpc = 1.2·ϖ_R = 0.21·r½ (Formel: 6.99 kpc); bei festem Wirt Abstand 6.9 kpc statt 80.0 (g_e dann 2.638 a₀)
+   NGC 2419: gemessen unter σ_N, keine Tiefe reicht.
+
+==============================================================================================================
+5   Von Hand (zweiter Weg)
+==============================================================================================================
+   Crater II: μ = 6·10¹⁰/3,2·10⁵ = 1.875e+05, √μ = 433.01, R = (1 − 433,0)/(1 + 433,0) = -0.99539
+      ℓ = 117,5·(3,2·10⁵/1,8·10¹¹)^{1/3} = 117,5·0.01211 = 1.423 kpc (Skript 1.423)
+   Draco, tief, Punktmasse bei r½ = 0,288 kpc, ℓ = 1,12 kpc: e^{−2ℓ/r} = e^{−7,78} = 4,2·10⁻⁴, ν_b/ν ≈ 1 − 2·|R|·4,2·10⁻⁴ = 0,99917
+      Skript: ℓ/r½ = 3.892, (1 + R e)/(1 − R e) = 0.999173

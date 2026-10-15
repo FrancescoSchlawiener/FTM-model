@@ -1,0 +1,32 @@
+A) ν(s) = Σ_{n≥0} e^{−ns} = 1/s + (1 + ζ(0)) + Σ_{k≥1} ζ(−k)(−s)^k/k!   (Ramanujan-Summen Σ1, Σn, Σn³ …)
+   s =  0.1:  exakt 10.508331944775049   Reihe 10.508331944775049
+   s =  0.5:  exakt 2.541494082536798   Reihe 2.541494082536798
+   s =  1.0:  exakt 1.581976706869326   Reihe 1.581976706869326
+   Glieder: 1 + ζ(0) = 0.5,  −ζ(−1) = 0.083333 = 1/12,  ζ(−3)/3!·(−1) = -1.389e-03 = −1/720
+   M_schein/M = r/r* + ½ + r*/(12r) − (r*/r)³/720 + …: das erste Korrekturglied ist Ramanujans 1 + 2 + 3 + … = −1/12.
+
+B) Lambert-Reihe über alle Harmonischen: L(s) = Σσ₁(n)e^{−ns} = (1 − E₂)/24 bei q = e^{−s}
+   s =  0.30:  L =      16.6520   π²/(6s²) − 1/(2s) + 1/24 =      16.6520   a/a₀ = s²(1+L) = 1.5887
+   s =  0.10:  L =     159.5351   π²/(6s²) − 1/(2s) + 1/24 =     159.5351   a/a₀ = s²(1+L) = 1.6054
+   s =  0.03:  L =    1811.0795   π²/(6s²) − 1/(2s) + 1/24 =    1811.0795   a/a₀ = s²(1+L) = 1.6309
+   → alle Harmonischen gleich gewichtet: a → (π²/6)·a₀ = 1.6449·a₀, konstant, ohne Tully-Fisher; nur die Grundschwingung (Σqⁿ) gibt a → √(a_N a₀).
+
+C) Ramanujans 1ψ1: Σ_{n∈ℤ} (a;q)_n/(b;q)_n zⁿ = (q, b/a, az, q/(az); q)_∞ / (b, q/a, z, b/(az); q)_∞
+   a = 0,9, b = 0,3, q = 0,6, z = 0,8 (|b/a| < |z| < 1):  Summe 0.252956080128   Produkt 0.252956080128
+   b = q: Glieder n < 0 haben den Faktor 1/(q;q)_n mit (1 − q⁰) = 0 im Nenner der Umkehrung → Summe der n < 0: -1.8e-31
+   Mit a = q wird die einseitige Reihe zu Σ_{n≥0} zⁿ = 1/(1 − z); beidseitig verlangt |b/a| < |z| < 1 und endet für b = q von selbst bei n = 0.
+
+D) Ramanujan-Summen c_q(n) = Σ_{(a,q)=1} e^{2πian/q}: Projektoren auf genaue Periode q
+   N = 12, Teiler q = [1, 2, 3, 4, 6, 12]:  ‖Σ E_q − I‖ = 3.4e-15,  max ‖E_q² − E_q‖ = 3.8e-15,  max ‖E_pE_q‖ (p≠q) = 1.6e-15
+   Rang E_q = φ(q): [1, 1, 2, 2, 2, 4]
+   E₁ = (1/N)ΣTⁿ ist der Schließungsprojektor 𝒫; die übrigen E_q trennen die geschlossenen Bahnen nach genauer Periode q (Resonanz p/q, Sternvieleck).
+   Filterprobe (Signal mit Perioden 5 und 3 plus Rauschen, Länge 60), Energie je genaue Periode:
+   q=1: 0.0  q=2: 0.0  q=3: 7.5  q=4: 0.1  q=5: 30.8  q=6: 0.2  q=10: 0.2  q=12: 0.3  q=15: 1.1
+
+E) Ramanujans Theorien zu den Basen r = 2, 3, 4, 6 und die Drehordnungen des Kaleidoskops
+   2cos(2π/r) ganzzahlig ⇔ r ∈ {1, 2, 3, 4, 6}:  r=1: +2.000, r=2: -2.000, r=3: -1.000, r=4: +0.000, r=5: +0.618, r=6: +1.000, r=7: +1.247, r=8: +1.414
+   q = 0.2:  a³ = 11.5088365697   b³ + c³ = 11.5088365697   (kubische Identität)
+   q = 0.5:  a³ = 143.3446155892   b³ + c³ = 143.3446155892   (kubische Identität)
+   Bilder im Abstand² = k (Zellmaß 1): Quadratzelle r₂(k) = [1, 4, 4, 0, 4, 8, 0, 0, 4, 4, 8, 0, 0, 8]
+                                       Sechseckzelle     = [1, 6, 0, 6, 6, 0, 0, 12, 0, 6, 0, 0, 6, 12]
+   Die Thetareihen Σq^{m²+n²} und a(q) = Σq^{m²+mn+n²} zählen die Bilder je Abstand; 4 bzw. 6 nächste Bilder = Drehordnung.

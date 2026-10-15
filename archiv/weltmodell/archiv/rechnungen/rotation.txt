@@ -1,0 +1,338 @@
+====================================================================================================
+1) DREHFALTUNG — Kerr-Metrik in FTM-Größen (GM/c² = 3Δs, a = J/(Mc), χ = a/(3Δs))
+====================================================================================================
+   Horizonte r± = 3Δs ± sqrt(9Δs² − a²);  Ergofläche r_E(θ) = 3Δs + sqrt(9Δs² − a² cos²θ)
+   [OK] χ=0.3: Δ_K(r+) = 0  (r+ = 1.953939·3Δs): 1 vs 1  (rel. Abw. 2.2e-16)
+   [OK] χ=0.3: Δ_K(r−) = 0  (r− = 0.046061·3Δs): 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.3: g_tt(r_E(θ=30°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.3: g_tt(r_E(θ=60°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.3: g_tt(r_E(θ=90°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.3: r_E(Äquator) = 2·(3Δs) = 6Δs = r0: 2 vs 2  (rel. Abw. 0.0e+00)
+   [OK] χ=0.3: r_E(Pol) = r+: 1.953939201 vs 1.953939201  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: Δ_K(r+) = 0  (r+ = 1.435890·3Δs): 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: Δ_K(r−) = 0  (r− = 0.564110·3Δs): 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: g_tt(r_E(θ=30°)) = 0: 1 vs 1  (rel. Abw. 2.2e-16)
+   [OK] χ=0.9: g_tt(r_E(θ=60°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: g_tt(r_E(θ=90°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: r_E(Äquator) = 2·(3Δs) = 6Δs = r0: 2 vs 2  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9: r_E(Pol) = r+: 1.435889894 vs 1.435889894  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: Δ_K(r+) = 0  (r+ = 1.063214·3Δs): 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: Δ_K(r−) = 0  (r− = 0.936786·3Δs): 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: g_tt(r_E(θ=30°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: g_tt(r_E(θ=60°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: g_tt(r_E(θ=90°)) = 0: 1 vs 1  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: r_E(Äquator) = 2·(3Δs) = 6Δs = r0: 2 vs 2  (rel. Abw. 0.0e+00)
+   [OK] χ=0.998: r_E(Pol) = r+: 1.063213923 vs 1.063213923  (rel. Abw. 0.0e+00)
+
+   Takt ruhender Uhren (dτ/dt = sqrt(−g_tt)) am Äquator = FTM-Formel sqrt(1 − 6Δs/r), für jedes a:
+   [OK] χ=0.5, r=2.5·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.4472135955 vs 0.4472135955  (rel. Abw. 0.0e+00)
+   [OK] χ=0.5, r=4.0·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.7071067812 vs 0.7071067812  (rel. Abw. 0.0e+00)
+   [OK] χ=0.5, r=10.0·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.894427191 vs 0.894427191  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9, r=2.5·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.4472135955 vs 0.4472135955  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9, r=4.0·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.7071067812 vs 0.7071067812  (rel. Abw. 0.0e+00)
+   [OK] χ=0.9, r=10.0·3Δs: sqrt(−g_tt(θ=90°)) = sqrt(1−2/r): 0.894427191 vs 0.894427191  (rel. Abw. 0.0e+00)
+
+   Mitnahme ω = −g_tφ/g_φφ (exakt) gegen schwaches Feld 2GJ/(c²r³) = 6cΔs·a/r³ (Einheiten: 2χ/r³):
+   r =      10·3Δs   ω_exakt/ω_schwach = 0.99037357
+   r =     100·3Δs   ω_exakt/ω_schwach = 0.99991739
+   r =    1000·3Δs   ω_exakt/ω_schwach = 0.99999919
+   [OK] ω(r=1000)/ω_schwach → 1: 0.9999991884 vs 1  (rel. Abw. 8.1e-07)
+
+   Verwindung als Uhrzeit: T_φ = 2π(r^{3/2} ± χ)·GM/c³  ⇒  T_pro − T_retro = 4πa/c (unabhängig von r)
+   [OK] r=6: (T_pro − T_retro)/(GM/c³) = 4πχ: 11.30973355 vs 11.30973355  (rel. Abw. 6.3e-16)
+   [OK] r=20: (T_pro − T_retro)/(GM/c³) = 4πχ: 11.30973355 vs 11.30973355  (rel. Abw. 1.1e-14)
+   [OK] r=10000: (T_pro − T_retro)/(GM/c³) = 4πχ: 11.30973355 vs 11.30973355  (rel. Abw. 5.7e-12)
+
+   Körper: Faltungstiefe Δs, Verwindung a = J/(Mc), χ = a/(3Δs), GJ/c³ = 3Δs·a [m²], Uhreffekt 4πa/c
+   Körper            Δs [m]   3Δs=GM/c²  J [kg m²/s]       a [m]         χ  GJ/c³ [m²]   4πa/c [s]
+   Erde          1.4782e-03  4.4347e-03   5.8600e+33  3.2731e+00     738.1  1.4515e-02  1.3720e-07
+   [OK] Erde: GJ/c³ = 3Δs·a: 0.01451515606 vs 0.01451515606  (rel. Abw. 0.0e+00)
+   Sonne         4.9233e+02  1.4770e+03   1.9200e+41  3.2199e+02     0.218  4.7558e+05  1.3497e-05
+   [OK] Sonne: GJ/c³ = 3Δs·a: 475581.9051 vs 475581.9051  (rel. Abw. 1.2e-16)
+   Sgr A*        2.1170e+09  6.3511e+09   1.4656e+55  5.7160e+09       0.9  3.6303e+19  2.3960e+02
+   [OK] Sgr A*: GJ/c³ = 3Δs·a: 3.6302671e+19 vs 3.6302671e+19  (rel. Abw. 1.1e-16)
+   M87*          3.2002e+12  9.6005e+12   3.3489e+61  8.6404e+12       0.9  8.2952e+25  3.6218e+05
+   [OK] M87*: GJ/c³ = 3Δs·a: 8.295229041e+25 vs 8.295229041e+25  (rel. Abw. 2.1e-16)
+   Milchstraße   2.9540e+13  8.8620e+13   4.2128e+66  1.1775e+17      1329  1.0435e+31  4.9357e+09
+   [OK] Milchstraße: GJ/c³ = 3Δs·a: 1.04349375e+31 vs 1.04349375e+31  (rel. Abw. 2.2e-16)
+   Hinweis: GJ/c³ ist eine Fläche. Die Verwindungs-LÄNGE ist a = J/(Mc); a/Δs = 3χ.
+
+   Erde: Kerr-Quadrupol J2_Kerr = (a/R)² = 2.639e-13  gegen gemessen J2 = 1.0826e-3
+   -> Erde/Sonne sind keine Kerr-Körper; universell ist nur der Dipolanteil (Lense-Thirring), Ordnung a¹.
+   Sonne: J2_Kerr = (a/R)² = 2.142e-13  gegen helioseismisch J2 ≈ 2.2e-7
+
+   Schwarze Löcher (χ = 0.9 angenommen):
+   Sgr A*: 3Δs = 6.3511e+09 m,  r+ = 9.1195e+09 m (1.4359·3Δs), r− = 3.5827e+09 m, r_E(Äq) = 6Δs = 1.2702e+10 m, r_E(Pol) = r+
+          Ω_H = 1.4793e-02 rad/s (Periode 7.08 min), ISCO pro/retro = 2.3209 / 8.7174 ·3Δs,  f_φ(ISCO) = 1.6937e-03 Hz (Periode 9.84 min)
+   [OK] Sgr A*: κ²(ISCO) = 0 (BPT-ISCO ist Nullstelle der Radialfrequenz): 1 vs 1  (rel. Abw. 2.2e-16)
+   M87*: 3Δs = 9.6005e+12 m,  r+ = 1.3785e+13 m (1.4359·3Δs), r− = 5.4157e+12 m, r_E(Äq) = 6Δs = 1.9201e+13 m, r_E(Pol) = r+
+          Ω_H = 9.7863e-06 rad/s (Periode 10700.63 min), ISCO pro/retro = 2.3209 / 8.7174 ·3Δs,  f_φ(ISCO) = 1.1204e-06 Hz (Periode 14875.33 min)
+   [OK] M87*: κ²(ISCO) = 0 (BPT-ISCO ist Nullstelle der Radialfrequenz): 1 vs 1  (rel. Abw. 2.2e-16)
+
+   Lense-Thirring und geodätische Präzession (schwaches Feld):
+   [OK] GP-B geodätisch: (3/2)(GM)^{3/2}/(c²r^{5/2}) = (9/2)(Δs/r)·Ω_Kepler: 1.014430199e-12 vs 1.014430199e-12  (rel. Abw. 0.0e+00)
+   GP-B (r = 7027.4 km, polar): geodätisch         6603.2 mas/Jahr  (gemessen 6601.8 ± 18.3)
+                                Mitnahme GJ/(2c²r³)     40.8 mas/Jahr (Bahnmittel, Kreiselrichtung ⊥ Erdachse)
+                                × cos(16.84°) (Leitstern IM Peg) =   39.1 mas/Jahr  (Vorhersage 39.2; gemessen 37.2 ± 7.2)
+   [OK] Mitnahme-Rate = 3cΔs·a/(2r³): 6.269434853e-15 vs 6.269434853e-15  (rel. Abw. 2.5e-16)
+   LAGEOS    Knoten: 2GJ/(c²a³(1−e²)^{3/2}) =  30.67 mas/Jahr
+   LAGEOS 2  Knoten: 2GJ/(c²a³(1−e²)^{3/2}) =  31.49 mas/Jahr
+   Gravitomagnetischer Uhreffekt Erde: T_pro − T_retro = 4πJ/(Mc²) = 137.2 ns pro Umlauf
+   [OK] Merkur: 6πGM/(c²a(1−e²)) = 18πΔs/(a(1−e²)): 5.019866442e-07 vs 5.019866442e-07  (rel. Abw. 2.1e-16)
+   Merkur Perihel (Schwarzschild): 42.99 ″/Jhdt
+   Merkur Lense-Thirring: Knoten 1.020 mas/Jhdt, Perihellänge −2× = -2.040 mas/Jhdt
+   Sonnenoberfläche: ω = 2GJ/(c²R³) = 8.469e-13 rad/s = 5512.4 mas/Jahr
+   Milchstraße, r =  8.2 kpc: 2GJ/(c²r³) = 1.192e-05 km/s/kpc  (Gaia-Warp-Präzession ≈ 10.9 km/s/kpc)
+   Milchstraße, r = 15.0 kpc: 2GJ/(c²r³) = 1.947e-06 km/s/kpc  (Gaia-Warp-Präzession ≈ 10.9 km/s/kpc)
+   Milchstraße, r = 25.0 kpc: 2GJ/(c²r³) = 4.205e-07 km/s/kpc  (Gaia-Warp-Präzession ≈ 10.9 km/s/kpc)
+
+   Takt rotierender Trichter, χ = 0.9 (r in 3Δs; dimensionslos, gilt für Sgr A* und M87*):
+   statisch: dτ/dt = sqrt(1 − 6Δs·r/(r²+a²cos²θ));  ZAMO: α = sqrt(ΣΔ_K/A)
+     r/3Δs  stat. Äquator  stat. Pol  ZAMO Äquator   ZAMO Pol  Pol/Äq (stat.)
+      1.50            nan   0.140028      0.120386   0.140028             nan
+      2.00            nan   0.410365      0.379642   0.410365             nan
+      2.50       0.447214   0.540171      0.516967   0.540171        1.207859
+      3.00       0.577350   0.623201      0.606726   0.623201        1.079415
+      4.00       0.707107   0.723943      0.715376   0.723943        1.023809
+      6.00       0.816497   0.820976      0.817982   0.820976        1.005486
+     10.00       0.894427   0.895325      0.894607   0.895325        1.001004
+     20.00       0.948683   0.948790      0.948694   0.948790        1.000112
+   [OK] Pol: ZAMO-Lapse = statischer Takt (g_tφ = 0 auf der Achse): 0.6232007741 vs 0.6232007741  (rel. Abw. 1.8e-16)
+
+   Takt an der Erdoberfläche (Äquator gegen Pol), mitrotierende Uhren:
+   W_Äq = 62636796.0 m²/s²   W_Pol = 62636701.4 m²/s²   (Potential inkl. J2 und Fliehkraft)
+   1 − dτ/dt: Äquator 6.969283e-10  Pol 6.969273e-10  Differenz 1.05e-15
+   Einzelbeiträge: Fliehkraft Ω²R²/2c² = 1.203e-12,  Abplattung GM(1/Rp−1/Re)/c² = 2.339e-12
+   Kerr-eigene Beiträge: Mitnahme 6Δs·a·Ω/(cR) = 1.11e-21,  a²-Term 3Δs·a²/R³ = 1.83e-22
+   -> Das Geoid ist Äquipotentialfläche: die Uhren gehen gleich (Rest = vernachlässigtes J4/Geoidhöhe).
+
+====================================================================================================
+2) PRÄZEDIERENDE EIGENFREQUENZEN — Ω_φ, Ω_r, Ω_θ (Kerr, äquatoriale Kreisbahn)
+====================================================================================================
+   Ω_φ = c³/(GM(r̃^{3/2}+χ)),  Ω_r² = Ω_φ²(1 − 6/r̃ + 8χ r̃^{-3/2} − 3χ²/r̃²),  Ω_θ² = Ω_φ²(1 − 4χ r̃^{-3/2} + 3χ²/r̃²)
+   Prüfung A: Ω_φ aus der Kreisbahnbedingung ∂_r g_tt + 2Ω ∂_r g_tφ + Ω² ∂_r g_φφ = 0 (numerisch)
+   Prüfung B: Ω_r, Ω_θ aus Linearisierung der Geodätengleichung (Hamilton, V'' numerisch, /u^t)
+   [OK] χ=+0.0, r̃=8.0: Ω_φ: 0.04419417383 vs 0.04419417382  (rel. Abw. 4.7e-11)
+   [OK] χ=+0.0, r̃=8.0: Ω_r: 0.02209709059 vs 0.02209708691  (rel. Abw. 1.7e-07)
+   [OK] χ=+0.0, r̃=8.0: Ω_θ: 0.04419417381 vs 0.04419417382  (rel. Abw. 2.7e-10)
+   [OK] χ=+0.0, r̃=8.0: Normierung g^{μν}p_μp_ν = −1: -1 vs -1  (rel. Abw. 2.2e-16)
+   [OK] χ=+0.5, r̃=7.0: Ω_φ: 0.05257551912 vs 0.05257551912  (rel. Abw. 4.4e-11)
+   [OK] χ=+0.5, r̃=7.0: Ω_r: 0.03081529774 vs 0.03081529707  (rel. Abw. 2.2e-08)
+   [OK] χ=+0.5, r̃=7.0: Ω_θ: 0.05007984386 vs 0.05007983849  (rel. Abw. 1.1e-07)
+   [OK] χ=+0.5, r̃=7.0: Normierung g^{μν}p_μp_ν = −1: -1 vs -1  (rel. Abw. 2.2e-16)
+   [OK] χ=+0.9, r̃=5.0: Ω_φ: 0.08277912785 vs 0.08277912785  (rel. Abw. 5.6e-11)
+   [OK] χ=+0.9, r̃=5.0: Ω_r: 0.04874753326 vs 0.04874752968  (rel. Abw. 7.3e-08)
+   [OK] χ=+0.9, r̃=5.0: Ω_θ: 0.07288354583 vs 0.07288354166  (rel. Abw. 5.7e-08)
+   [OK] χ=+0.9, r̃=5.0: Normierung g^{μν}p_μp_ν = −1: -1 vs -1  (rel. Abw. 0.0e+00)
+   [OK] χ=+0.9, r̃=12.0: Ω_φ: 0.02354646529 vs 0.02354646529  (rel. Abw. 4.7e-11)
+   [OK] χ=+0.9, r̃=12.0: Ω_r: 0.01907598243 vs 0.01907598078  (rel. Abw. 8.6e-08)
+   [OK] χ=+0.9, r̃=12.0: Ω_θ: 0.02271071511 vs 0.02271071481  (rel. Abw. 1.3e-08)
+   [OK] χ=+0.9, r̃=12.0: Normierung g^{μν}p_μp_ν = −1: -1 vs -1  (rel. Abw. 0.0e+00)
+   [OK] χ=-0.7, r̃=12.0: Ω_φ: 0.02446829216 vs 0.02446829216  (rel. Abw. 4.9e-11)
+   [OK] χ=-0.7, r̃=12.0: Ω_r: 0.01458023999 vs 0.01458024045  (rel. Abw. 3.1e-08)
+   [OK] χ=-0.7, r̃=12.0: Ω_θ: 0.02539951959 vs 0.02539952355  (rel. Abw. 1.6e-07)
+   [OK] χ=-0.7, r̃=12.0: Normierung g^{μν}p_μp_ν = −1: -1 vs -1  (rel. Abw. 0.0e+00)
+
+   Prüfung C: volle nichtlineare Geodäte (RK4), χ = 0.9, r̃ = 8, Auslenkung 1e-4, Frequenzen aus Nulldurchgängen
+   [OK] RK4: Ω_φ (mittlere Winkelrate): 0.04250365895 vs 0.04250360335  (rel. Abw. 1.3e-06)
+   [OK] RK4: Ω_r (Radialschwingung): 0.03094978245 vs 0.03094978326  (rel. Abw. 2.6e-08)
+   [OK] RK4: Ω_θ (Vertikalschwingung): 0.03984620069 vs 0.03984630015  (rel. Abw. 2.5e-06)
+   -> Bahn auf T³ mit (Ω_φ, Ω_r, Ω_θ) = (0.042504, 0.030950, 0.039846) c³/GM; Knoten 0.002657, Periapsis 0.011554
+
+   Grenzfälle:
+   [OK] χ=0, r̃=6.0: Ω_θ = Ω_φ (Entartung: Vertikalzyklus = Azimutzyklus): 0.06804138174 vs 0.06804138174  (rel. Abw. 0.0e+00)
+   [OK] χ=0, r̃=10.0: Ω_θ = Ω_φ (Entartung: Vertikalzyklus = Azimutzyklus): 0.0316227766 vs 0.0316227766  (rel. Abw. 0.0e+00)
+   [OK] χ=0, r̃=50.0: Ω_θ = Ω_φ (Entartung: Vertikalzyklus = Azimutzyklus): 0.002828427125 vs 0.002828427125  (rel. Abw. 0.0e+00)
+   r̃ = 1e+03: (Ω_φ−Ω_θ)/(2χ/r̃³) = 0.978654   (Ω_φ−Ω_r)/(3/r̃^{5/2}) = 0.963824
+   r̃ = 1e+04: (Ω_φ−Ω_θ)/(2χ/r̃³) = 0.993250   (Ω_φ−Ω_r)/(3/r̃^{5/2}) = 0.988186
+   r̃ = 1e+05: (Ω_φ−Ω_θ)/(2χ/r̃³) = 0.997865   (Ω_φ−Ω_r)/(3/r̃^{5/2}) = 0.996224
+   Die Abweichung von 1 fällt wie r̃^{-1/2}: nächste Ordnung 1 − (3/4)χ r̃^{-1/2} (Knoten), 1 − (4/3)χ r̃^{-1/2} (Periapsis)
+   [OK] r̃=1e+04: Knoten/(2χ/r̃³) = 1 − (3/4)χ/√r̃: 0.993249994 vs 0.99325  (rel. Abw. 6.1e-09)
+   [OK] r̃=1e+04: Periapsis/(3/r̃^{5/2}) = 1 − (4/3)χ/√r̃: 0.9881860877 vs 0.988  (rel. Abw. 1.9e-04)
+   [OK] r̃=1e+05: Knoten/(2χ/r̃³) = 1 − (3/4)χ/√r̃: 0.9978654607 vs 0.9978654626  (rel. Abw. 1.8e-09)
+   [OK] r̃=1e+05: Periapsis/(3/r̃^{5/2}) = 1 − (4/3)χ/√r̃: 0.9962241754 vs 0.9962052668  (rel. Abw. 1.9e-05)
+   [OK] r̃=1e+06: Knoten/(2χ/r̃³) = 1 − (3/4)χ/√r̃: 0.9993249401 vs 0.999325  (rel. Abw. 6.0e-08)
+   [OK] r̃=1e+06: Periapsis/(3/r̃^{5/2}) = 1 − (4/3)χ/√r̃: 0.9988019005 vs 0.9988  (rel. Abw. 1.9e-06)
+
+   Frequenzverhältnisse und Knotenzahl ζ = (Ω_φ−Ω_θ)/Ω_φ, χ = 0.9 (prograd) und χ = 0:
+        r̃  Ω_r/Ω_φ(0.9)  Ω_θ/Ω_φ(0.9)      ζ(0.9)   2χr̃^-3/2   Ω_r/Ω_φ(0)   Ω_θ/Ω_φ(0)
+     2.321      0.000000      0.657991    0.342009    0.509088          nan     1.000000
+     3.000      0.340060      0.759723    0.240277    0.346410          nan     1.000000
+     4.000      0.498121      0.837780    0.162220    0.225000          nan     1.000000
+     6.000      0.649921      0.906946    0.093054    0.122474          nan     1.000000
+    10.000      0.776778      0.954179    0.045821    0.056921     0.632456     1.000000
+    20.000      0.880013      0.982764    0.017236    0.020125     0.836660     1.000000
+   100.000      0.973117      0.998320    0.001680    0.001800     0.969536     1.000000
+   [OK] 3:2-Resonanz Ω_θ:Ω_r = 3:2 bei χ=0.9: 1.5 vs 1.5  (rel. Abw. 0.0e+00)
+   Radius der 3:2-Resonanz (χ=0.9): r̃ = 4.96263  (Ω_r/Ω_φ = 0.58615, Ω_θ/Ω_φ = 0.87922)
+   Sgr A*: bei 3:2: f_θ = 5.5250e-04 Hz, f_r = 3.6833e-04 Hz;  f_Knoten = 7.5897e-05 Hz;  f_φ = 6.2840e-04 Hz
+   M87*: bei 3:2: f_θ = 3.6550e-07 Hz, f_r = 2.4367e-07 Hz;  f_Knoten = 5.0208e-08 Hz;  f_φ = 4.1571e-07 Hz
+
+   Knotenzahl an der Schwelle r* (schwaches Feld): ζ* = 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³
+   Erde         r* = 1.822e+12 m   v_flach =     0.01 km/s   χ =     738.1   ζ* = 1.772e-19
+   [OK] Erde: 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³: 1.771845463e-19 vs 1.771845463e-19  (rel. Abw. 2.7e-16)
+   Sonne        r* = 1.052e+15 m   v_flach =     0.36 km/s   χ =     0.218   ζ* = 7.256e-19
+   [OK] Sonne: 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³: 7.255807022e-19 vs 7.255807022e-19  (rel. Abw. 2.7e-16)
+   Sgr A*       r* = 2.181e+18 m   v_flach =    16.18 km/s   χ =       0.9   ζ* = 2.829e-13
+   [OK] Sgr A*: 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³: 2.828547079e-13 vs 2.828547079e-13  (rel. Abw. 3.6e-16)
+   M87*         r* = 8.480e+19 m   v_flach =   100.87 km/s   χ =       0.9   ζ* = 6.857e-11
+   [OK] M87*: 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³: 6.857204278e-11 vs 6.857204278e-11  (rel. Abw. 1.9e-16)
+   Milchstraße  r* = 2.576e+20 m   v_flach =   175.83 km/s   χ =      1329   ζ* = 5.361e-07
+   [OK] Milchstraße: 2χ(3Δs/r*)^{3/2} = 2χ(v_flach/c)³: 5.361189895e-07 vs 5.361189895e-07  (rel. Abw. 0.0e+00)
+
+====================================================================================================
+3) SIEGEL-PERIODENMATRIX Ω ∈ ℍ₂ UND IGUSA-SPITZENFORM χ10 = −2^{-14} ∏_{10 gerade m} θ_m(Ω)²
+====================================================================================================
+   Anzahl gerader Charakteristiken: 10
+   Geschlecht 1 (Grundlage):
+   [OK] τ=(0.1+1.1j): θ2θ3θ4 = 2η³: 0.83848336+0.064504553j vs 0.83848336+0.064504553j  (rel. Abw. 5.3e-16)
+   [OK] τ=(0.1+1.1j): θ1'(0) = 2πη³: 2.6341732+0.20264703j vs 2.6341732+0.20264703j  (rel. Abw. 5.4e-12)
+   [OK] τ=(0.1+1.1j): Δ(−1/τ) = τ¹²Δ(τ): 0.0028672303-0.0014697838j vs 0.0028672303-0.0014697838j  (rel. Abw. 4.7e-15)
+   [OK] τ=(0.1+1.1j): d log Δ/dτ = 2πi E2: 0.088731895+6.1615063j vs 0.088731895+6.1615063j  (rel. Abw. 4.1e-11)
+   [OK] τ=(-0.3+0.7j): θ2θ3θ4 = 2η³: 1.1445262-0.23311819j vs 1.1445262-0.23311819j  (rel. Abw. 5.7e-16)
+   [OK] τ=(-0.3+0.7j): θ1'(0) = 2πη³: 3.5956351-0.73236239j vs 3.5956351-0.73236239j  (rel. Abw. 3.9e-12)
+   [OK] τ=(-0.3+0.7j): Δ(−1/τ) = τ¹²Δ(τ): -0.00051207262-5.6374587e-05j vs -0.00051207262-5.6374587e-05j  (rel. Abw. 4.7e-15)
+   [OK] τ=(-0.3+0.7j): d log Δ/dτ = 2πi E2: -1.7230262+6.9107541j vs -1.7230262+6.9107541j  (rel. Abw. 1.7e-10)
+
+   Modularität von χ10 (Gewicht 10) unter Sp(4,ℤ):
+   χ10(Ω0) = -4.9528973416e-06+1.2155906869e-06j
+   [OK] J: χ10(−Ω⁻¹) = det(Ω)^10 χ10(Ω): -3.0129748e-06+2.3038681e-06j vs -3.0129748e-06+2.3038681e-06j  (rel. Abw. 5.6e-16)
+   [OK] Translation Ω + [[1,0],[0,0]]: -4.9528973e-06+1.2155907e-06j vs -4.9528973e-06+1.2155907e-06j  (rel. Abw. 1.4e-15)
+   [OK] Translation Ω + [[0,1],[1,0]] (Nebendiagonale + 1): -4.9528973e-06+1.2155907e-06j vs -4.9528973e-06+1.2155907e-06j  (rel. Abw. 6.0e-16)
+   [OK] GL(2,ℤ): χ10(UΩUᵀ) = χ10(Ω), U = [[1,0],[1,1]]: -4.9528973e-06+1.2155907e-06j vs -4.9528973e-06+1.2155907e-06j  (rel. Abw. 8.6e-16)
+   [OK] Spiegelung U = diag(1,−1): Nebendiagonale z → −z, χ10 unverändert: -4.9528973e-06+1.2155907e-06j vs -4.9528973e-06+1.2155907e-06j  (rel. Abw. 5.3e-16)
+
+   Diagonaler Rand Ω = diag(τ1, τ2):
+   θ[11;11](diag) = 1.42e-16  (verschwindet exakt: ungerade × ungerade)
+   [OK] Produkt der 9 übrigen θ² = 2¹² η(τ1)¹⁸ η(τ2)¹⁸: 0.66582879-0.3722165j vs 0.66582879-0.3722165j  (rel. Abw. 4.9e-15)
+
+   Nähe des Randes: Ω = diag(τ1,τ2) + ε·[[0,1],[1,0]] ;  Q(ε) := χ10/(π² Δ(τ1) Δ(τ2))
+   ε =   1e-01   Q/ε² = 0.971699933777+0.001776887618j   (1 − Q/ε²)/ε² = 2.83000662-0.17768876j
+   ε =   3e-02   Q/ε² = 0.997443170560+0.000167826608j   (1 − Q/ε²)/ε² = 2.84092160-0.18647401j
+   ε =   1e-02   Q/ε² = 0.999715818128+0.000018725610j   (1 − Q/ε²)/ε² = 2.84181872-0.18725610j
+   ε =   3e-03   Q/ε² = 0.999974422719+0.000001686106j   (1 − Q/ε²)/ε² = 2.84192010-0.18734515j
+   ε =   1e-03   Q/ε² = 0.999997158071+0.000000187353j   (1 − Q/ε²)/ε² = 2.84192909-0.18735298j
+   ε =   1e-04   Q/ε² = 0.999999971580+0.000000001875j   (1 − Q/ε²)/ε² = 2.84203570-0.18745659j
+   [OK] führende Ordnung: χ10 = π² ε² Δ(τ1)Δ(τ2) (ε = 1e-4): 0.99999997+1.874566e-09j vs 1  (rel. Abw. 2.8e-08)
+   [OK] nächste Ordnung: χ10 = π²ε²Δ1Δ2 [1 − (π²/3) E2(τ1) E2(τ2) ε² + O(ε⁴)]: 2.8419304-0.18735392j vs 2.8419301-0.18735396j  (rel. Abw. 1.2e-07)
+   [OK] gerade in ε: χ10(+ε) = χ10(−ε): 1.3171502e-06-1.0577979e-06j vs 1.3171502e-06-1.0577979e-06j  (rel. Abw. 2.8e-15)
+   [OK] periodisch in ε: χ10(ε+1) = χ10(ε): 1.3171502e-06-1.0577979e-06j vs 1.3171502e-06-1.0577979e-06j  (rel. Abw. 2.3e-15)
+   ε = 1 (ganzzahlig): |χ10| = 1.26e-37   (Rand, zerfällt wieder)
+
+   Spitze (q → 0): χ10 = q1 q2 sin²(πε) + O(q³);  hier Im τ = 3:
+   [OK] ε=0.1: χ10/(q1 q2) = sin²(πε): 0.095491487-5.2492859e-09j vs 0.09549150281  (rel. Abw. 1.8e-07)
+   [OK] ε=0.3: χ10/(q1 q2) = sin²(πε): 0.65450841-2.905441e-08j vs 0.6545084972  (rel. Abw. 1.4e-07)
+   [OK] ε=0.5: χ10/(q1 q2) = sin²(πε): 0.99999988-3.7852364e-08j vs 1  (rel. Abw. 1.2e-07)
+
+   Fourier-Jacobi-Rand (ein Zyklus fällt weg, q2 → 0): χ10 → ¼ q2 η(τ1)¹⁸ θ1(τ1,z)²
+   [OK] z=0.05: χ10/(q2 η¹⁸ θ1²): 0.25-4.2592963e-11j vs 0.25  (rel. Abw. 2.9e-10)
+   [OK] z=(0.2+0.1j): χ10/(q2 η¹⁸ θ1²): 0.25-3.2735113e-11j vs 0.25  (rel. Abw. 2.6e-10)
+
+   Genauigkeit im Fernfeld (kleines Im Ω): Q(ε)/ε² bei τ1 = 1.41+iη, τ2 = 1+iη, Erwartung 1 − (π²/3)E2E2ε²
+   η = 0.30, ε = 1e-03: Q/ε² = 1.00005272-0.00001123j   Vorhersage 1.00005272-0.00001123j   (π²/3)|E2E2| = 5.390e+01
+   η = 0.30, ε = 1e-04: Q/ε² = 1.00000053-0.00000011j   Vorhersage 1.00000053-0.00000011j   (π²/3)|E2E2| = 5.390e+01
+   [OK] η=0.3, ε=1e-4: Fernfeld-Numerik: 1.0000005-1.123223e-07j vs 1.0000005-1.1232366e-07j  (rel. Abw. 2.2e-12)
+   η = 0.10, ε = 1e-03: Q/ε² = 1.00241141+0.00113029j   Vorhersage 1.00240750+0.00112739j   (π²/3)|E2E2| = 2.658e+03
+   η = 0.10, ε = 1e-04: Q/ε² = 1.00002408+0.00001127j   Vorhersage 1.00002408+0.00001127j   (π²/3)|E2E2| = 2.658e+03
+   [OK] η=0.1, ε=1e-4: Fernfeld-Numerik: 1.0000241+1.127418e-05j vs 1.0000241+1.127393e-05j  (rel. Abw. 3.9e-10)
+   η = 0.05, ε = 1e-03: Q/ε² = 1.02580415+0.00497971j   Vorhersage 1.02546785+0.00493220j   (π²/3)|E2E2| = 2.594e+04
+   η = 0.05, ε = 1e-04: Q/ε² = 1.00025490+0.00004916j   Vorhersage 1.00025468+0.00004932j   (π²/3)|E2E2| = 2.594e+04
+   [OK] η=0.05, ε=1e-4: Fernfeld-Numerik: 1.0002549+4.9162223e-05j vs 1.0002547+4.9322031e-05j  (rel. Abw. 2.7e-07)
+   -> Die Entwicklung gilt nur für ε² ≪ 3/(π²|E2E2|); im Fernfeld wird |E2| ~ 1/η² groß.
+
+   Δ(τ) im Fernfeld mit Realteil: τ = iη (Notiz 01) gegen τ = √2 + iη (flache Kurve, κ/Ω = √2):
+        η     |Δ(iη)|   |Δ(√2+iη)|   η⁶|Δ(√2+iη)|  η⁶|Δ(1.3+iη)|
+     1.00   1.785e-03    1.941e-03      1.941e-03      1.894e-03
+     0.50   1.428e-02    1.019e-01      1.593e-03      9.802e-04
+     0.30   1.509e-03    2.352e+00      1.715e-03      6.072e-04
+     0.20   5.545e-06    2.762e+01      1.767e-03      8.408e-04
+     0.10   5.158e-16    1.049e+03      1.049e-03      1.785e-03
+     0.05   1.090e-39    9.259e+04      1.447e-03      8.408e-04
+     0.03   2.071e-73    2.396e+06      1.747e-03      6.225e-04
+   [OK] Invariante Im(τ)⁶|Δ(τ)| unter τ → −1/τ: 7.619928341e-05 vs 7.619928341e-05  (rel. Abw. 1.1e-15)
+
+   Kerr-Periodenmatrix (Setzung): τ_r = Ω_r/Ω_φ + iη, τ_θ = Ω_θ/Ω_φ + iη, Ω12 = ζ = 1 − Ω_θ/Ω_φ
+   Für Schwarze Löcher ist η = r*/(2πr) astronomisch groß (q ≈ 0) ⇒ Q = sin²(πζ)/π² exakt bis e^{−2πη}:
+   Sgr A* r̃ =    2.321: η = 2.355e+07, Re τ_r = 0.00000, Re τ_θ = 0.65799, ζ = 3.420e-01, Q = sin²(πζ)/π² = 7.834e-02
+   Sgr A* r̃ =    6.000: η = 9.109e+06, Re τ_r = 0.64992, Re τ_θ = 0.90695, ζ = 9.305e-02, Q = sin²(πζ)/π² = 8.415e-03
+   Sgr A* r̃ =   20.000: η = 2.733e+06, Re τ_r = 0.88001, Re τ_θ = 0.98276, ζ = 1.724e-02, Q = sin²(πζ)/π² = 2.968e-04
+   Sgr A* r̃ = 1000.000: η = 5.465e+04, Re τ_r = 0.99711, Re τ_θ = 0.99994, ζ = 5.571e-05, Q = sin²(πζ)/π² = 3.103e-09
+   Numerischer Beleg bei moderatem η = 2 (sonst Unterlauf):
+   r̃ =  2.321: ζ = 0.34201, Q = 7.834434e-02-1.4e-06i, sin²(πζ)/π² = 7.834357e-02
+   r̃ =  6.000: ζ = 0.09305, Q = 8.415176e-03-2.7e-08i, sin²(πζ)/π² = 8.415171e-03
+
+====================================================================================================
+4) FOLGERUNGEN FÜR SCHEIBEN — exponentielle Scheibe, M = 6e10 M☉, R_d = 2.6 kpc, Höhe h
+====================================================================================================
+   [OK] I0(1): 1.266065878 vs 1.266065878  (rel. Abw. 1.8e-16)
+   [OK] I1(1): 0.565159104 vs 0.565159104  (rel. Abw. 2.0e-16)
+   [OK] K0(1): 0.4210244382 vs 0.4210244382  (rel. Abw. 0.0e+00)
+   [OK] K1(1): 0.6019072302 vs 0.6019072302  (rel. Abw. 0.0e+00)
+   [OK] I0(2.5) gegen numpy.i0: 3.289839144 vs 3.289839144  (rel. Abw. 1.3e-16)
+
+   Feldform (QUMOND-artig): ∇²Φ = ∇·[ν ∇Φ_N]. In der Mittelebene mit g_R = ν g_N,R folgt exakt ν_z² = ν·ν_z,N²:
+   [OK] R = 6 kpc: ∇²Φ − (1/R)∂_R(R g_R) = ν·ν_z,N²: 1.833691266e-29 vs 1.833691239e-29  (rel. Abw. 1.5e-08)
+   [OK] R = 12 kpc: ∇²Φ − (1/R)∂_R(R g_R) = ν·ν_z,N²: 2.835391838e-30 vs 2.835391888e-30  (rel. Abw. 1.8e-08)
+   [OK] R = 20 kpc: ∇²Φ − (1/R)∂_R(R g_R) = ν·ν_z,N²: 2.989419351e-31 vs 2.989420625e-31  (rel. Abw. 4.3e-07)
+
+   Kernform (radialer Projektor e_r⊗e_r, Kugel-Radialrichtung): ν_z² = ν_z,N² + (ν−1)Ω_N²
+   Beide Formen haben dieselbe Rotationskurve (Ω², κ²) und unterscheiden sich NUR vertikal.
+
+   h = 0.15 kpc   (Ω, ν_z, Ω_p = Ω − ν_z in km/s/kpc; ν = Rückkopplungsfaktor 1/(1−q))
+       R       y      ν      v       Ω    κ/Ω  ν_z/Ω N  ν_z/Ω K  ν_z/Ω F    Ω_p N    Ω_p K    Ω_p F
+     4.0   2.421  1.267  213.2   53.30  1.589    4.897    4.374    4.897  -184.52  -179.85  -207.73
+     8.2   1.145  1.522  230.0   28.05  1.378    4.641    3.807    4.641   -82.80   -78.76  -102.15
+    12.0   0.581  1.874  220.1   18.34  1.289    3.879    2.915    3.879   -38.57   -35.11   -52.80
+    16.0   0.316  2.325  208.7   13.04  1.274    2.931    2.065    2.931   -16.52   -13.89   -25.18
+    20.0   0.193  2.812  200.5   10.03  1.293    2.111    1.493    2.111    -6.64    -4.94   -11.14
+    25.0   0.119  3.431  194.2    7.77  1.323    1.454    1.151    1.454    -1.90    -1.17    -3.53
+    30.0   0.081  4.045  190.4    6.35  1.345    1.160    1.042    1.160    -0.50    -0.27    -1.02
+   [OK] h=0.15: F erhält ν_z/Ω aus Newton: 2.110944637 vs 2.110944637  (rel. Abw. 2.1e-16)
+   [OK] h=0.15: K erhält ν_z² − Ω² aus Newton: 1.297531985e-31 vs 1.297531985e-31  (rel. Abw. 1.7e-16)
+
+   h = 0.3 kpc   (Ω, ν_z, Ω_p = Ω − ν_z in km/s/kpc; ν = Rückkopplungsfaktor 1/(1−q))
+       R       y      ν      v       Ω    κ/Ω  ν_z/Ω N  ν_z/Ω K  ν_z/Ω F    Ω_p N    Ω_p K    Ω_p F
+     4.0   2.421  1.267  213.2   53.30  1.589    3.434    3.085    3.434  -115.24  -111.12  -129.73
+     8.2   1.145  1.522  230.0   28.05  1.378    3.322    2.756    3.322   -52.80   -49.25   -65.14
+    12.0   0.581  1.874  220.1   18.34  1.289    2.833    2.179    2.833   -24.56   -21.63   -33.62
+    16.0   0.316  2.325  208.7   13.04  1.274    2.212    1.635    2.212   -10.37    -8.29   -15.81
+    20.0   0.193  2.812  200.5   10.03  1.293    1.683    1.285    1.683    -4.08    -2.86    -6.84
+    25.0   0.119  3.431  194.2    7.77  1.323    1.277    1.088    1.277    -1.16    -0.68    -2.15
+    30.0   0.081  4.045  190.4    6.35  1.345    1.105    1.027    1.105    -0.33    -0.17    -0.67
+   [OK] h=0.3: F erhält ν_z/Ω aus Newton: 1.682661708 vs 1.682661708  (rel. Abw. 0.0e+00)
+   [OK] h=0.3: K erhält ν_z² − Ω² aus Newton: 6.875508553e-32 vs 6.875508553e-32  (rel. Abw. 0.0e+00)
+
+   h = 0.6 kpc   (Ω, ν_z, Ω_p = Ω − ν_z in km/s/kpc; ν = Rückkopplungsfaktor 1/(1−q))
+       R       y      ν      v       Ω    κ/Ω  ν_z/Ω N  ν_z/Ω K  ν_z/Ω F    Ω_p N    Ω_p K    Ω_p F
+     4.0   2.421  1.267  213.2   53.30  1.589    2.387    2.169    2.387   -65.66   -62.32   -73.91
+     8.2   1.145  1.522  230.0   28.05  1.378    2.404    2.035    2.404   -31.94   -29.04   -39.40
+    12.0   0.581  1.874  220.1   18.34  1.289    2.125    1.696    2.125   -15.07   -12.76   -20.64
+    16.0   0.316  2.325  208.7   13.04  1.274    1.745    1.371    1.745    -6.37    -4.84    -9.72
+    20.0   0.193  2.812  200.5   10.03  1.293    1.421    1.167    1.421    -2.52    -1.68    -4.22
+    25.0   0.119  3.431  194.2    7.77  1.323    1.179    1.055    1.179    -0.75    -0.43    -1.39
+    30.0   0.081  4.045  190.4    6.35  1.345    1.076    1.019    1.076    -0.24    -0.12    -0.48
+   [OK] h=0.6: F erhält ν_z/Ω aus Newton: 1.420908867 vs 1.420908867  (rel. Abw. 0.0e+00)
+   [OK] h=0.6: K erhält ν_z² − Ω² aus Newton: 3.825602906e-32 vs 3.825602906e-32  (rel. Abw. 2.9e-16)
+
+   Aufwickelzeit einer Verbiegung (Warp) zwischen 12 und 20 kpc: t = 2π/|Ω_p(12) − Ω_p(20)|  (h = 0.3 kpc)
+   N: Ω_p(12) = -24.557, Ω_p(20) =  -4.082 km/s/kpc  ->  t_wind =   0.30 Gyr
+   K: Ω_p(12) = -21.627, Ω_p(20) =  -2.857 km/s/kpc  ->  t_wind =   0.33 Gyr
+   F: Ω_p(12) = -33.621, Ω_p(20) =  -6.845 km/s/kpc  ->  t_wind =   0.23 Gyr
+   Verhältnis t_wind(K)/t_wind(F) = 1.43
+
+   Vertikale Dynamikmasse am Sonnenort (|z| < 1.1 kpc), Σ_bar = 47.1 M☉/pc² (McKee+2015):
+   Scheibenmodell  : g_N,R = 1.374e-10 m/s²  ->  Σ_dyn(K) =  58.1,  Σ_dyn(F) =  70.8 M☉/pc²   (gemessen 71 ± 6, Kuijken & Gilmore 1991)
+   Punktmasse (07) : g_N,R = 1.244e-10 m/s²  ->  Σ_dyn(K) =  57.9,  Σ_dyn(F) =  72.6 M☉/pc²   (gemessen 71 ± 6, Kuijken & Gilmore 1991)
+
+   Siegel-Größen der Scheibe (h = 0.3 kpc): τ_r = κ/Ω + iη, τ_θ = ν_z/Ω + iη, ζ = 1 − ν_z/Ω, η = r*/(2πR)
+   r* = 8.349 kpc
+       R      η      ζ_K         Q_K   sin²/π² K      ζ_F         Q_F   sin²/π² F
+     4.0  0.332  -2.0847   8.100e-03   7.014e-03  -2.4340   8.461e-04   9.703e-02
+     8.2  0.162  -1.7556   1.475e-02   4.889e-02  -2.3219   4.217e-06   7.277e-02
+    12.0  0.111  -1.1793   1.633e-05   2.890e-02  -1.8333   3.257e-02   2.533e-02
+    16.0  0.083  -0.6353   4.914e-04   8.408e-02  -1.2120   2.126e-10   3.868e-02
+    20.0  0.066  -0.2850   2.965e-17   6.171e-02  -0.6827   2.773e-04   7.146e-02
+
+====================================================================================================
+PRÜFUNGEN: 121 durchgeführt, 0 fehlgeschlagen
+====================================================================================================

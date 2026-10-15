@@ -1,0 +1,34 @@
+A) Mock-Theta f(q) = Σ q^{n²}/(−q;q)_n²  (letzter Brief 1920). Ramanujans Behauptung: an einer Einheitswurzel
+   gerader Ordnung 2k bleibt f(q) − (−1)^k·b(q) beschränkt, b(q) = (q;q²)_∞·(1 − 2q + 2q⁴ − 2q⁹ + …).
+   q = −r (radial gegen −1, Ordnung 2, k = 1):
+       r        f(q)              b(q)              f(q) + b(q)
+    0.900     -2.657402e+02      2.694188e+02      3.67862743
+    0.970     -7.406748e+06      7.406752e+06      3.88922971
+    0.990     -1.041117e+19      1.041117e+19      3.96113346
+    0.995     -1.067510e+37      1.067510e+37      3.98029136
+   f und b wachsen ohne Grenze, ihre Summe bleibt beschränkt: die Behauptung hält.
+
+B) σ(q) = Σ_{n≥0} q^{n(n+1)/2}/(−q;q)_n  (verlorenes Notizbuch): Koeffizienten
+   erste Koeffizienten: [1, 1, -1, 2, -2, 1, 0, 1, -2, 0, 2, 0, -1, -2, 2, 1]
+   bis q^1500: 867 von 1500 Koeffizienten sind 0, größter Betrag 4
+
+C) Partielle Theta-Identität (verlorenes Notizbuch):
+   Σ qⁿ/((aq;q)_n(q/a;q)_n) = (1−a)Σ(−1)ⁿa^{3n}q^{n(3n+1)/2}(1 − a²q^{2n+1}) + Σ(−1)ⁿa^{2n+1}q^{n(n+1)/2} / ((aq;q)_∞(q/a;q)_∞)
+   a = 0.4, q = 0.3:  links 3.167629970711511   rechts 3.167629970711511
+   a = 0.7, q = 0.55:  links 21.374627111904704   rechts 21.374627111904704
+   Die rechte Seite enthält eine einseitige Thetareihe Σ_{n≥0}(−1)ⁿa^{2n+1}q^{n(n+1)/2}: nur n ≥ 0, nicht modular.
+
+D) Seite mit 1729: Beinahe-Lösungen von a³ + b³ = c³
+   9³ + 10³ − 12³ = +1
+   64³ + 94³ − 103³ = +1
+   73³ + 144³ − 150³ = +1
+   135³ + 138³ − 172³ = -1
+   11161³ + 11468³ − 14258³ = +1
+   65601³ + 67402³ − 83802³ = +1
+
+E) Die Strukturwirkung als Summe unvollständiger Gammafunktionen:
+   Q̃(s) = −4[s³Li₁ + 3s²Li₂ + 6sLi₃ + 6Li₄](e^{−s}) = −4∫_s^∞ x³/(eˣ−1)dx = −4·Σ_{n≥1} Γ(4, ns)/n⁴
+   s = 0.3:  -25.943645782349989  -25.943645782349989  -25.943645782349989
+   s = 1.0:  -25.076536856963564  -25.076536856963564  -25.076536856963564
+   s = 3.0:  -15.766883795904109  -15.766883795904109  -15.766883795904109
+   Γ(1−k, 4π|n|y) ist die Bauart des nichtholomorphen Teils harmonischer Maaß-Formen, deren holomorpher Teil die Mock-Theta sind.

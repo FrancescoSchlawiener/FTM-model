@@ -1,0 +1,156 @@
+Torus-Dynamik-Schicht (FTM) - Rechenbeispiel
+numpy 2.5.1
+
+==============================================================================
+TEIL 1  Stabilitätssignatur auf M = T^2 x S
+==============================================================================
+Parameter: c=0.10  g0=1.00  g1=0.50  D=0.50  s0=g0/D=2.00  φ=0.00
+K_1 = k11 sin(θ2-θ1-φ) + k32 sin(2θ2-3θ1-φ)
+K_2 = k11 sin(θ1-θ2-φ) + k32 sin(3θ1-2θ2-φ)
+(k11: Kanal-A-Form des Autors; k32: Fourier-Anteil von K(θ,s) an der Resonanz 3:2)
+
+Fall | Beschreibung                          | λ1        λ2        λ3       | Σλ       <tr J>
+  A  | inkommensurabel ω2/ω1 = golden        | +0.00003  +0.00011  -0.49906 | -0.4989  -0.4989
+  B  | nahe rational 1:1, ω2 = 1.02          | -0.00007  -0.09792  -0.49979 | -0.5978  -0.5978
+  C  | exakt rational 3:2, ungekoppelt       | +0.00009  -0.00003  -0.50006 | -0.5000  -0.5000
+  D  | nahe rational 3:2, ω2 = 1.505         | -0.00012  -0.09493  -0.49901 | -0.5941  -0.5941
+  E  | inkommensurabel, Kopplung zu stark    | -0.00013  -0.49177  -0.49245 | -0.9843  -0.9843
+
+Fall | Ω1       Ω2       W=Ω2/Ω1    nächstes p/q (q<=12)  |W-p/q|     neutral  kontrah.  Dim. Invariante
+  A  | 1.00720  1.60919  1.59769398  8/5                   2.31e-03    2        1         T^2
+  B  | 1.05931  1.05931  1.00000001  1                     1.23e-08    1        2         S^1
+  C  | 0.99940  1.49909  1.50000000  3/2                   3.24e-14    2        1         T^2
+  D  | 1.00239  1.50332  1.49973327  3/2                   2.67e-04    1        2         S^1
+  E  | 1.34859  1.34859  0.99999978  1                     2.15e-07    1        2         S^1
+
+Umlaufschnitt θ1 ≡ 0 (mod 2π): Werte von θ2 bei jedem Umlauf von θ1
+Fall | Durchgänge  belegte Bins (von 60)  Schließungsabstand min_n |θ2(n)-θ2(0)|  Abstand letzter Umläufe
+  A  |   240         60                    2.627e-02                              120 distinkte Werte
+  B  |   253          1                    8.384e-10                              1 distinkte Werte
+  C  |   239          2                    1.421e-14                              2 distinkte Werte
+  D  |   240          2                    2.520e-09                              2 distinkte Werte
+  E  |   322          1                    1.686e-10                              1 distinkte Werte
+
+Strukturvariable s (transversal): Schwankungsbreite [min, max] nach Einschwingen
+  A  | s in [1.5642, 2.4083]
+  B  | s in [2.3737, 2.6034]
+  C  | s in [1.5421, 2.4458]
+  D  | s in [1.6089, 2.4111]
+  E  | s in [2.2112, 2.3938]
+
+Analytische Kontrolle (Fall B, 1:1): ψ = θ2-θ1, dψ/dt = Δω - 2 k11 sin ψ,
+  Rastbedingung |Δω| <= 2 k11 = 0.100, erfüllt (Δω = 0.020);  λ_ψ = -2 k11 cos ψ* = -0.09798
+Analytische Kontrolle (Fall D, 3:2): ψ = 2θ2-3θ1, dψ/dt = Δ - 5 k32 sin ψ, Δ = 2ω2-3ω1
+  Rastbedingung |Δ| <= 5 k32 = 0.100, erfüllt (Δ = 0.010);  λ_ψ ≈ -5 k32 cos ψ* = -0.09950
+Analytische Kontrolle (Fall E): Δω = 0.618 <= 2 k11 = 0.800 -> Einrastung trotz inkommensurabler Eigenfrequenzen
+Transversale Rate: λ_perp ≈ -D = -0.500
+
+==============================================================================
+TEIL 2  Mode-Locking im Parameterraum (Arnold-Zunge an 3:2, k11 = 0.05)
+==============================================================================
+Rastbreite analytisch (ohne s-Modulation und ohne k11-Anteil): |2ω2 - 3| <= 5 k32  ->  Breite in ω2 = 5 k32
+k32    | gerastete ω2-Breite (3:2)  analytisch 5*k32  | Anteil gerastet im Fenster [1.30,1.75] | ω2=golden gerastet?
+0.000  | 0.0010                     0.0000             | 0.002                              | nein (W=1.609047)
+0.010  | 0.0470                     0.0500             | 0.104                              | nein (W=1.606364)
+0.020  | 0.0935                     0.1000             | 0.208                              | nein (W=1.597466)
+0.040  | 0.1865                     0.2000             | 0.414                              | nein (W=1.549747)
+
+Wicklungszahl W(ω2) für k32 = 0.02 (Treppenstufe = Rastplateau):
+   ω2 = 1.4000   W = 1.395497
+   ω2 = 1.4400   W = 1.444691
+   ω2 = 1.4600   W = 1.480124
+   ω2 = 1.4800   W = 1.500062
+   ω2 = 1.5000   W = 1.499710
+   ω2 = 1.5200   W = 1.499738
+   ω2 = 1.5400   W = 1.499960
+   ω2 = 1.5600   W = 1.513387
+   ω2 = 1.6000   W = 1.576466
+   ω2 = 1.6180   W = 1.597464
+   ω2 = 1.7000   W = 1.685307
+
+==============================================================================
+TEIL 3  Kopplungsfenster k_eff(ρ,T) = k0 R(ρ) C(T)
+==============================================================================
+Rechenannahmen (Parametrisierung der Autoraussagen):
+  R(ρ) = ρ^2/(ρ^2 + ρ*^2), ρ* = 1.0          (monoton, sigmoidal, gesättigt)
+  C(T) = (1 - exp(-T/T_a)) exp(-T/T_d), T_a = 0.3, T_d = 1.5   (Maximum bei T*)
+  T* = T_a ln(1 + T_d/T_a) = 0.538
+  1:1-Paar mit Δω = 0.10  ->  Verriegelung für k_eff >= Δω/2 = 0.050
+  Querbegrenzung bricht weg für k_eff < k_min = 0.010
+
+Karte (Zeilen T, Spalten ρ):  V = verriegelt (T^2->S^1),  o = moduliert (Fenster),  . = zerfasert
+   T \ ρ   0.10  0.15  0.22  0.32  0.46  0.68  1.00  1.47  2.15  3.16  4.64  6.81 10.00
+   0.030    .     .     .     .     .     .     o     o     o     o     o     o     o  
+   0.047    .     .     .     .     .     o     o     o     o     o     o     o     o  
+   0.073    .     .     .     .     o     o     o     o     V     V     V     V     V  
+   0.113    .     .     .     .     o     o     o     V     V     V     V     V     V  
+   0.175    .     .     .     o     o     o     V     V     V     V     V     V     V  
+   0.273    .     .     .     o     o     o     V     V     V     V     V     V     V  
+   0.424    .     .     .     o     o     V     V     V     V     V     V     V     V  
+   0.660    .     .     .     o     o     V     V     V     V     V     V     V     V  
+   1.026    .     .     .     o     o     o     V     V     V     V     V     V     V  
+   1.595    .     .     .     .     o     o     V     V     V     V     V     V     V  
+   2.481    .     .     .     .     o     o     o     o     o     V     V     V     V  
+   3.858    .     .     .     .     .     .     o     o     o     o     o     o     o  
+   6.000    .     .     .     .     .     .     .     .     .     .     .     .     .  
+
+Numerische Kontrolle der Grenze k_eff = Δω/2 (Simulation aller 169 Gitterpunkte): Übereinstimmung 100.0 %
+
+==============================================================================
+TEIL 4  FGMS-Krümmungszyklus: Kompression -> Krümmung -> Flussänderung
+==============================================================================
+n = 12 Regionen, η = 0.05, β = 1, K in [0.05, 20], g = -log K, R = 0,
+π = RowSoftmax(-βg), m_{t+1} = m_t π, C = log m - μ_C, D = L_K C,
+K <- clip(K exp(η(C_i+C_j) - ζ(D_i+D_j)))
+χ = max_i Σ_j F_ij (Zentrierung), H_K = mittlere normierte Zeilenentropie von K,
+λ_max = größter Eigenwert von log K, 'gekappt' = Anteil der K-Einträge an K_min/K_max
+
+ζ = 0.000   (ζ/η = 0.00)
+    t    χ        H_K      λ_max     K_max     gekappt
+     0   0.0894   1.0000     0.000     1.000   0.000
+   100   0.1302   0.9904     2.465     2.520   0.000
+   200   0.1405   0.8401    28.413    20.000   0.792
+   400   0.1114   0.9149    32.765    20.000   1.000
+   600   0.1113   0.9149    32.765    20.000   1.000
+  1000   0.1116   0.9149    32.765    20.000   1.000
+
+ζ = 0.030   (ζ/η = 0.60)
+    t    χ        H_K      λ_max     K_max     gekappt
+     0   0.0894   1.0000     0.000     1.000   0.000
+   100   0.0844   1.0000     0.061     1.020   0.000
+   200   0.0894   0.9998     0.432     1.154   0.000
+   400   0.1420   0.8836    25.404    20.000   0.354
+   600   0.0920   0.9659    35.247    20.000   0.965
+  1000   0.0914   0.9685    35.516    20.000   1.000
+
+ζ = 0.045   (ζ/η = 0.90)
+    t    χ        H_K      λ_max     K_max     gekappt
+     0   0.0894   1.0000     0.000     1.000   0.000
+   100   0.0836   1.0000     0.007     1.001   0.000
+   200   0.0835   1.0000     0.009     1.002   0.000
+   400   0.0836   1.0000     0.021     1.004   0.000
+   600   0.0840   1.0000     0.052     1.010   0.000
+  1000   0.0865   0.9998     0.407     1.082   0.000
+
+ζ = 0.050   (ζ/η = 1.00)
+    t    χ        H_K      λ_max     K_max     gekappt
+     0   0.0894   1.0000     0.000     1.000   0.000
+   100   0.0836   1.0000     0.005     1.000   0.000
+   200   0.0835   1.0000     0.005     1.000   0.000
+   400   0.0836   1.0000     0.005     1.000   0.000
+   600   0.0836   1.0000     0.005     1.000   0.000
+  1000   0.0838   1.0000     0.005     1.000   0.000
+
+ζ = 0.070   (ζ/η = 1.40)
+    t    χ        H_K      λ_max     K_max     gekappt
+     0   0.0894   1.0000     0.000     1.000   0.000
+   100   0.0836   1.0000     0.006     1.001   0.000
+   200   0.0835   1.0000     0.006     1.001   0.000
+   400   0.0836   1.0000     0.007     1.001   0.000
+   600   0.0836   1.0000     0.006     1.001   0.000
+  1000   0.0838   1.0000     0.006     1.001   0.000
+
+Gleichverteilung: χ = 1/12 = 0.0833
+Linearisierung um K = 1, m = 1/n: D_i = C_i - <C> ≈ C_i, also
+  δ log K_ij ≈ (η - ζ)(C_i + C_j) pro Schritt  ->  kritische Linie ζ = η
+

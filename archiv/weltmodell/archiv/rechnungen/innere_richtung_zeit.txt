@@ -1,0 +1,89 @@
+==============================================================================
+0  Grundgrößen
+a₀ = 1.100e-10 m/s²,  Λ = c²/(2a₀) = 4.0853e+26 m = 13.239 Gpc
+τ_D = c/a₀ = 2Λ/c = 2.7254e+18 s = 86.36 Mrd. J.;   2π/H₀ = 91.15 Mrd. J.
+==============================================================================
+1  T_I = ħc/(2Λk) = ħa₀/(ck) gegen T_GH = ħH/(2πk);  T_I/T_GH = 2πa₀/(cH) = Θ
+T_I (a₀ fest) = 2.8026e-30 K;   T_GH(H₀) = 2.6554e-30 K;   Θ₀ = 1.0555
+Probe: T_I/T_GH − Θ = 2.2e-16
+
+Epoche                            H/H₀  a₀(z)/a₀     T_I [K]    T_GH [K]  Θ=T_I/T_GH
+z = 0                                1    0.9997  2.8018e-30  2.6554e-30       1.055
+z = 1                            1.788    0.9994  2.8010e-30  4.7465e-30      0.5901
+z = 10                           20.47    0.9968  2.7937e-30  5.4364e-29     0.05139
+z = 1090                     2.316e+04    0.7586  2.1261e-30  6.1503e-26   3.457e-05
+Zukunft H → H_s (Vakuumteil)    0.4943    1.0000  2.8026e-30  1.3125e-30       2.135
+Zukunft H → H₀√Ω_DE             0.8286    1.0000  2.8026e-30  2.2001e-30       1.274
+Θ_s = √45/π = 2.1353 = 1/√k_s (exakt, unabhängig von a₀)
+Θ = 1 bei z = 0.1083;  |Θ − 1| ≤ 10 % für z ≤ 0.299 (Vergangenheit)
+Θ = 1,1 in der Zukunft bei Skalenfaktor a = 1.102
+Blickrichtung: T_GH gehört zum Horizont des Beobachters (G, fällt mit H); T_I zur inneren
+Richtung (I, fest wie Λ). Gleich sind sie nur, solange Θ ≈ 1.
+==============================================================================
+2  Folgt ν = 1 + n_B(s) aus T_I?  Nötig: ħω/(kT_I) = s  ⇔  ω* = s·a₀/c = √(a_N a₀)/c = √(Γ/τ_D)
+Milchstraße 6·10¹⁰ M☉: r* = 8.719 kpc, v∞ = 172.0 km/s
+Ort                 s   ω* [1/s]     Γ/ω*     Ω/ω*   (c/r)/ω*  (a/c)/ω*  (a₀/c)/ω*    H₀/ω*
+MW 0,3 r*        3.33  1.223e-18     3.33 3.24e+03  3.037e+06     3.457        0.3     1.79
+MW r*               1  3.669e-19        1 2.19e+03  3.037e+06     1.582          1     5.95
+MW 3 r*         0.333  1.223e-19    0.333 1.89e+03  3.037e+06     1.176          3     17.9
+MW 30 r*       0.0333  1.223e-20   0.0333 1.76e+03  3.037e+06     1.017         30      179
+Sonne 1 AE    7.34e+03  2.694e-15 7.34e+03 7.39e+07  7.439e+11      7342   0.000136 0.000811
+Γ/ω* = s, (a₀/c)/ω* = 1/s: keine der Raten ist konstant ω*, außer a/c im Tiefbereich (a → √(a_N a₀)).
+a/c = ω* gilt nur für s → 0; exakt ist (a/c)/ω* = s·ν = s/(1 − e^{−s}) (Newton-Grenze → s).
+Sattelpunkt der Rückkehr t* = ½√(τ_D/Γ) gibt ω* = 1/(2t*): hängt selbst an s, keine Eigenfrequenz des Orts.
+
+Räumliche Lesung (Welle in ϖ mit c, Mode k = 1/r der Kreisbahn): s = k·ϖ_R = r*/r (Punktmasse),
+also Periode r* in ϖ, kT_r* = ħc/r*, nicht 2Λ.  r*² = r₀·Λ (r₀ = 6Δs):
+  r* = 2.69051e+20 m,  √(r₀Λ) = 2.69051e+20 m;  T_r* = 8.511e-24 K,  T_r*/T_I = 2Λ/r* = 3.037e+06
+  Sonne: T_r*/T_I = 7.439e+11  (massenabhängig ∝ M^(−1/2))
+==============================================================================
+3  Unruh: T_U(a) = ħa/(2πck) = T_I  ⇔  a_U = 2π·a₀
+a_U = 6.9115e-10 m/s² = 6.2832·a₀ (2π = 6.2832)
+T_U(a₀) = 4.4605e-31 K = T_I/6.2832
+Hubble-Kugel-Neigung cH₀/2 = 3.2742e-10 = 2.9765·a₀ = (π/Θ₀)·a₀;  a_U/(cH₀/2) = 2Θ₀ = 2.1109
+T_U(cH) = T_GH exakt; a_U = Θ·cH₀ = 1.0555·cH₀
+Die Regel bei a_N = 2πa₀: s = 2.5066, ν = 1.0888, χ = 0.2225 (kein ausgezeichneter Punkt)
+a₀ selbst ist kT_I·c/ħ = c/τ_D (Rate der Rückkehr), nicht die Unruh-Beschleunigung von T_I (Faktor 2π).
+Unruh-Lesung mit ω = Γ = a_N/c: ħΓ/(kT_I) = a_N/a₀ = s², n_B(s²): bei a_N = a₀ ν = 1.5820 (gleich),
+   a_N = 0.1a₀: ν(s²) = 10.508 gegen ν(s) = 3.689;  a → a_N + a₀ statt √(a_N a₀)
+   a_N = 0.01a₀: ν(s²) = 100.501 gegen ν(s) = 10.508;  a → a_N + a₀ statt √(a_N a₀)
+==============================================================================
+4  Kac und Periode: Rückkehr-Laplace-Transformierte  E[e^{−ΓT}], k = √(Γ/D)
+Intervall [0,Λ] reflektierend = Kreis 2Λ ohne Drift = euklidischer Propagator mit β = 2Λ: max. Abweichung 5.6e-16
+Beispiel kΛ = 1, ϖ = Λ/2: 0.730763 / 0.730763 / 0.730763
+Also: streng periodisch (Kreis) ändert gegenüber reflektierend nichts, solange kein Umlauf (Drift).
+
+Rückkehranteil mit ϖ_R = r*, k = 1/r (Punktmasse): q_Λ = cosh(s(Λ/r* − 1))/cosh(sΛ/r*)
+   = e^{−s} + thermische Beimischung mit n_B(2Λ/r) = n_B(T_r/T_I)-artig, T_r = ħc/(kr)
+ Λ/r* = 10:
+   s = 3     1−q_Λ = 9.5021e-01  (1−q_∞ = 9.5021e-01),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 8.757e-27
+   s = 1     1−q_Λ = 6.3212e-01  (1−q_∞ = 6.3212e-01),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 2.061e-09
+   s = 0.3   1−q_Λ = 2.5768e-01  (1−q_∞ = 2.5918e-01),  ν_Λ/ν_∞ = 1.0058,  n_B(2sΛ/r*) = 2.485e-03
+   s = 0.1   1−q_Λ = 7.1282e-02  (1−q_∞ = 9.5163e-02),  ν_Λ/ν_∞ = 1.3350,  n_B(2sΛ/r*) = 1.565e-01
+   s = 0.03  1−q_Λ = 8.2907e-03  (1−q_∞ = 2.9554e-02),  ν_Λ/ν_∞ = 3.5648,  n_B(2sΛ/r*) = 1.216e+00
+   s = 0.01  1−q_Λ = 9.4670e-04  (1−q_∞ = 9.9502e-03),  ν_Λ/ν_∞ = 10.5104,  n_B(2sΛ/r*) = 4.517e+00
+ Λ/r* = 100:
+   s = 3     1−q_Λ = 9.5021e-01  (1−q_∞ = 9.5021e-01),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 2.650e-261
+   s = 1     1−q_Λ = 6.3212e-01  (1−q_∞ = 6.3212e-01),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 1.384e-87
+   s = 0.3   1−q_Λ = 2.5918e-01  (1−q_∞ = 2.5918e-01),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 8.757e-27
+   s = 0.1   1−q_Λ = 9.5163e-02  (1−q_∞ = 9.5163e-02),  ν_Λ/ν_∞ = 1.0000,  n_B(2sΛ/r*) = 2.061e-09
+   s = 0.03  1−q_Λ = 2.9406e-02  (1−q_∞ = 2.9554e-02),  ν_Λ/ν_∞ = 1.0050,  n_B(2sΛ/r*) = 2.485e-03
+   s = 0.01  1−q_Λ = 7.5661e-03  (1−q_∞ = 9.9502e-03),  ν_Λ/ν_∞ = 1.3151,  n_B(2sΛ/r*) = 1.565e-01
+ Milchstraße heute: Λ/r* = 1.518e+06; bei 100 kpc 2Λ/r = 2.648e+05, n_B ≈ e^(−2.648e+05) (unmessbar)
+ 10 % Abweichung (Kac-Budget) erst bei r ≈ 0,657·Λ = 8.70 Gpc, dort 2Λ/r = 3.04, n_B = 0.050
+
+Mit Umlauf (Drift v, Pe = vϖ_R/D) auf dem Kreis 2Λ, Λ/ϖ_R = 1000: lokale Steigung d ln(1−q)/d ln s
+  Pe = 0      s = 1 / 0,1 / 0,01 / 0,001:   0.582   0.951   0.995   1.551
+  Pe = 0.01   s = 1 / 0,1 / 0,01 / 0,001:   0.577   0.901   0.548   1.821
+  Pe = 0.1    s = 1 / 0,1 / 0,01 / 0,001:   0.537   0.509   0.651   1.980
+  Pe = 1      s = 1 / 0,1 / 0,01 / 0,001:   0.221   0.011   1.807   1.998
+  Pe = 10     s = 1 / 0,1 / 0,01 / 0,001:   0.000   0.627   1.980   2.000
+Pe = 0: Wurzel (Steigung 1) bis s ≈ ϖ_R/Λ, danach 2 (Kac-Budget). Drift bricht die Wurzel ab s ≲ Pe.
+Kac: mittlere Rückkehr 2Λ/c ist bei Diffusion ein Mittel über eine breite Verteilung (∝ T^{−3/2}),
+bei Umlauf wäre sie eine feste Periode – dann aber keine Wurzel. Die Periode 2Λ/c ist Geometrie (Umfang), kein Takt.
+==============================================================================
+5  Wick-Drehung: □δσ = (−∂_t²/c² + ∇²)δσ, t = −iϖ/c  ⇒  (∇² + ∂_ϖ²)δσ = 0 (erweiterte Faltungsgleichung)
+Probe: Laplace-Rest 0.0e+00;  Welle bei t = −iϖ/c minus Glättungsmode: 2.8e-17
+Die Glättung e^{−|k|ϖ} ist die Welle ω = c|k| in imaginärer Zeit ϖ/c. Reelle Zeit (hyperbolisch) im Raum,
+imaginäre (elliptisch) in der Rückkehr; V1 der Halbgeraden (ϖ raumartig) ist genau diese Signatur.
+Bahntorus: q = e^{2πiτ_M} = e^{2πi·Re τ_M}·e^{−s}: Phase aus dem Umlauf (reelle Zeit), Betrag aus der Rückkehr.

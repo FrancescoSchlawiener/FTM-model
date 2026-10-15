@@ -1,0 +1,152 @@
+0) Einzelwert von Hand: a_N = 0,873 a₀ → s = 0,93434, e^{−s} = 0,39284, ν = 1,6470, a = 1,4378 a₀
+   im Skript: ν(0,873) = 1.64702, a = 1.43785 a₀
+
+1) Daten: Auswahl Q ≤ 2, Neigung ≥ 30°: 153 Galaxien, 3166 verwendbare Punkte; Primärabstand (f_D = 2–5) 70 Galaxien, Hubble-Fluss (f_D = 1) 83
+   Gas zurückgerechnet: Vgas-Abweichung je Galaxie Median 0.07 km/s; Punkte mit x = 2πGΣ/g_R ≥ 1 (Υ_d = 0,5): 903, ≥ 3: 174
+   e_D/D Median: Primärabstand 0.083, Hubble-Fluss 0.295;  e_Inc Median 3.0°
+
+2) Begründete Werte von f: Vertikalfeld einer symmetrischen Schicht g_z(z) = 2πGΣ·F(z), F = Anteil der Säule innerhalb |z|
+   Über die Dichte gemittelt ist F gleichverteilt auf [0, 1]; daher ⟨|g_z|⟩ = πGΣ (f = 1/4) und ⟨g_z²⟩ = (2πGΣ)²/3 (f = 1/3) für jedes Profil.
+   gleichförmig : ⟨F⟩² = 0.2500,  ⟨F²⟩ = 0.3333
+   sech²        : ⟨F⟩² = 0.2500,  ⟨F²⟩ = 0.3333
+   exponentiell : ⟨F⟩² = 0.2500,  ⟨F²⟩ = 0.3333
+   Gas in eigener sech²-Schicht mit h_gas = 0.5 z₀ im Feld der Sterne: ⟨F⟩² = 0.0942, ⟨F²⟩ = 0.1416 [A]
+   Gas in eigener sech²-Schicht mit h_gas = 0.25 z₀ im Feld der Sterne: ⟨F⟩² = 0.0279, ⟨F²⟩ = 0.0455 [A]
+   Tiefe ln[ν(g_R)/ν(√(g_R² + f(2πGΣ)²))] relativ zu f = 1, f = ¼ / ⅓ bei (g_R/a₀, x): (0.3, 1) 0.33 / 0.42  (0.3, 3) 0.54 / 0.63  (0.3, 5) 0.65 / 0.73  (1.0, 1) 0.33 / 0.43  (1.0, 3) 0.57 / 0.66  (1.0, 5) 0.70 / 0.77  
+   Regel über die Dichte gemittelt, ⟨ν(√(g_R² + (2πGΣF)²))⟩: wirksames f an den Punkten mit x ≥ 1 (Υ_d = 0,5, a₀ = 1,2) Median 0.255, 5–95 % 0.154–0.291
+
+3) Anpassung. Modell: ln g_obs = ln[ν(√(g_R² + f·(2πGΣ)²)/a₀)·g_R] + δ_D + 2·ln[sin(i + δ_i)/sin i],  g_R und Σ mit Υ·e^{δ_Υ}
+   Zwei Fehlerbehandlungen für Abstand, Neigung und Υ (Vorgabe σ(ln D) = e_D/D und σ(i) = e_Inc aus der Tabelle, σ(ln Υ) = 0,1 dex [A]):
+   P  Fehler je Punkt: σ² = (2errV/V)² + (e_D/D)² + (2e_i·cot i)² + (∂ln a/∂ln Υ·0,23)², δ_D = δ_i = δ_Υ = 0;
+   N  je Galaxie mitgeschätzt: σ = 2errV/V, δ_D, δ_i, δ_Υ je Galaxie frei mit diesen Vorgaben (|δ_Υ| ≤ 0,3 dex).
+   Grenzen in beiden Fällen durch Ziehen ganzer Galaxien, weil die drei Anteile je Galaxie gemeinsam wirken.
+   Prüfung gegen scipy least_squares je Galaxie: (Υ_d 0.4, a₀ 0.8, f 0.0) Σχ² 18694.8, größte Abweichung +0.001, kleinste -0.000; ln Υ am Rand ±0,3 dex: 35 Galaxien.  (Υ_d 0.5, a₀ 1.2, f 0.5) Σχ² 18456.3, größte Abweichung +0.000, kleinste -0.000; ln Υ am Rand ±0,3 dex: 36 Galaxien.  
+   Gegenprobe nur errV, Υ fest 0,5: bestes a₀ bei f = 0 / 1: alle 1.339 / 1.472; Primär 1.095 / 1.236; Hubble 1.523 / 1.644
+   nur errV: bestes f alle +0.06, Primär +0.25, Hubble -0.19 (χ²/FG 49.7)
+   f < 0 ist das Spiegelbild in ln ν (die eigene Flächendichte höbe ν) und dient nur als Maß der Richtung.
+
+4a) Verlangtes f, Fehler je Punkt: bestes f (± durch Ziehen ganzer Galaxien, 1000-mal) | χ²/FG | Abstand der Werte f = 0, ¼, ⅓, 1, ⟨ν⟩ in χ²/(χ²/FG)
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Primär   1300 | f = +0.12  (16–84 % +0.00 … +0.40; 2,5–97,5 % -0.04 … +0.78; f ≤ 0 in 16 %) | χ²/FG 2.83 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 19.3 5.6 12.9 88.3 -4.3
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Hubble   1866 | f = -0.04  (16–84 % -0.17 … +0.00; 2,5–97,5 % -0.40 … +0.05; f ≤ 0 in 83 %) | χ²/FG 1.23 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 6.0 129.6 161.9 351.8 112.7
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          alle     3166 | f = +0.03  (16–84 % -0.01 … +0.16; 2,5–97,5 % -0.04 … +0.39; f ≤ 0 in 24 %) | χ²/FG 1.92 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 4.8 60.7 91.2 318.7 34.9
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Primär   1090 | f = +0.15  (16–84 % -0.02 … +0.45; 2,5–97,5 % -0.20 … +0.88; f ≤ 0 in 20 %) | χ²/FG 2.58 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 15.7 3.0 8.0 70.1 0.8
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Hubble   1617 | f = -0.22  (16–84 % -0.45 … -0.07; 2,5–97,5 % -0.85 … +0.02; f ≤ 0 in 95 %) | χ²/FG 1.03 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 21.8 109.1 134.9 295.3 104.8
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   alle     2707 | f = +0.05  (16–84 % -0.07 … +0.21; 2,5–97,5 % -0.21 … +0.49; f ≤ 0 in 34 %) | χ²/FG 1.69 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 6.7 36.4 58.9 246.5 30.1
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Primär   1300 | f = +0.21  (16–84 % +0.01 … +0.56; 2,5–97,5 % -0.03 … +1.06; f ≤ 0 in 10 %) | χ²/FG 2.64 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 33.3 0.5 3.5 56.6 -6.9
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Hubble   1866 | f = -0.03  (16–84 % -0.13 … +0.01; 2,5–97,5 % -0.36 … +0.08; f ≤ 0 in 73 %) | χ²/FG 1.15 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 2.2 96.2 122.7 283.6 83.5
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          alle     3166 | f = +0.07  (16–84 % -0.00 … +0.25; 2,5–97,5 % -0.03 … +0.53; f ≤ 0 in 16 %) | χ²/FG 1.79 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 18.5 28.2 49.0 227.4 8.9
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Primär   1090 | f = +0.21  (16–84 % +0.01 … +0.56; 2,5–97,5 % -0.16 … +1.06; f ≤ 0 in 14 %) | χ²/FG 2.40 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 22.1 0.4 2.8 50.0 -1.0
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Hubble   1617 | f = -0.19  (16–84 % -0.42 … -0.03; 2,5–97,5 % -0.82 … +0.08; f ≤ 0 in 88 %) | χ²/FG 0.93 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 13.7 81.4 103.0 241.7 79.4
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   alle     2707 | f = +0.09  (16–84 % -0.03 … +0.28; 2,5–97,5 % -0.17 … +0.63; f ≤ 0 in 23 %) | χ²/FG 1.54 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 14.1 18.5 34.8 188.8 15.1
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Primär   1300 | f = +0.30  (16–84 % +0.03 … +0.71; 2,5–97,5 % -0.02 … +1.31; f ≤ 0 in 7 %) | χ²/FG 2.59 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 45.2 0.4 0.2 35.0 -4.8
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Hubble   1866 | f = -0.01  (16–84 % -0.11 … +0.03; 2,5–97,5 % -0.34 … +0.12; f ≤ 0 in 62 %) | χ²/FG 1.11 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 0.0 70.8 92.2 226.0 61.1
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          alle     3166 | f = +0.12  (16–84 % +0.01 … +0.35; 2,5–97,5 % -0.03 … +0.74; f ≤ 0 in 11 %) | χ²/FG 1.74 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 33.1 10.0 23.0 158.2 -4.1
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Primär   1090 | f = +0.27  (16–84 % +0.03 … +0.68; 2,5–97,5 % -0.11 … +1.26; f ≤ 0 in 11 %) | χ²/FG 2.36 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 26.7 0.0 0.6 35.3 -0.7
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Hubble   1617 | f = -0.15  (16–84 % -0.40 … +0.01; 2,5–97,5 % -0.76 … +0.13; f ≤ 0 in 80 %) | χ²/FG 0.88 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 7.6 58.9 76.4 192.9 58.2
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   alle     2707 | f = +0.13  (16–84 % +0.00 … +0.36; 2,5–97,5 % -0.14 … +0.80; f ≤ 0 in 16 %) | χ²/FG 1.49 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 21.1 7.9 18.8 141.4 6.3
+
+4b) Verlangtes f, Abstand, Neigung, Υ je Galaxie mitgeschätzt (gleiche Spalten)
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Primär   1300 | f = +0.05  (16–84 % +0.02 … +0.08; 2,5–97,5 % -0.02 … +0.13; f ≤ 0 in 6 %) | χ²/FG 3.13 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 53.5 64.6 94.1 272.1 50.1
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Hubble   1866 | f = -1.00  (16–84 % -1.00 … -1.00; 2,5–97,5 % -1.00 … -0.81; f ≤ 0 in 100 %) | χ²/FG 6.13 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 349.8 612.9 685.1 1113.1 623.6
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  alle     3166 | f = +0.01  (16–84 % -1.00 … +0.03; 2,5–97,5 % -1.00 … +0.04; f ≤ 0 in 53 %) | χ²/FG 5.62 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 0.0 293.5 389.0 958.1 297.3
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Primär   1090 | f = +0.03  (16–84 % -0.01 … +0.08; 2,5–97,5 % -0.17 … +0.17; f ≤ 0 in 18 %) | χ²/FG 2.80 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 3.9 36.7 55.1 180.7 29.5
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Hubble   1617 | f = -1.00  (16–84 % -1.00 … -1.00; 2,5–97,5 % -1.00 … -1.00; f ≤ 0 in 100 %) | χ²/FG 5.63 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 398.9 642.3 711.7 1135.8 661.5
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt alle     2707 | f = -1.00  (16–84 % -1.00 … -0.32; 2,5–97,5 % -1.00 … -0.06; f ≤ 0 in 100 %) | χ²/FG 4.93 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 217.4 512.5 602.3 1160.7 530.4
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Primär   1300 | f = +0.09  (16–84 % +0.04 … +0.15; 2,5–97,5 % -0.00 … +0.22; f ≤ 0 in 4 %) | χ²/FG 3.03 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 79.3 28.1 47.8 169.5 17.9
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Hubble   1866 | f = -1.00  (16–84 % -1.00 … -0.84; 2,5–97,5 % -1.00 … -0.32; f ≤ 0 in 100 %) | χ²/FG 5.81 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 218.1 420.1 476.9 816.1 428.5
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  alle     3166 | f = +0.02  (16–84 % -0.34 … +0.04; 2,5–97,5 % -1.00 … +0.06; f ≤ 0 in 33 %) | χ²/FG 5.13 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 9.3 208.3 284.7 745.1 212.0
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Primär   1090 | f = +0.07  (16–84 % +0.02 … +0.14; 2,5–97,5 % -0.09 … +0.29; f ≤ 0 in 10 %) | χ²/FG 2.72 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 11.0 18.2 29.8 109.9 10.5
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Hubble   1617 | f = -1.00  (16–84 % -1.00 … -1.00; 2,5–97,5 % -1.00 … -0.57; f ≤ 0 in 100 %) | χ²/FG 5.25 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 279.2 470.5 525.8 865.8 486.0
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt alle     2707 | f = -0.45  (16–84 % -1.00 … -0.10; 2,5–97,5 % -1.00 … +0.01; f ≤ 0 in 96 %) | χ²/FG 4.63 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 88.3 307.5 376.9 812.2 320.4
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Primär   1300 | f = +0.14  (16–84 % +0.05 … +0.23; 2,5–97,5 % +0.01 … +0.39; f ≤ 0 in 2 %) | χ²/FG 3.02 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 102.2 9.3 21.0 106.7 5.2
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Hubble   1866 | f = -1.00  (16–84 % -1.00 … -0.43; 2,5–97,5 % -1.00 … -0.01; f ≤ 0 in 98 %) | χ²/FG 5.76 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 117.5 268.9 312.9 576.2 274.5
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  alle     3166 | f = +0.03  (16–84 % -0.01 … +0.06; 2,5–97,5 % -0.53 … +0.10; f ≤ 0 in 22 %) | χ²/FG 4.91 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 21.0 140.9 199.9 564.5 145.2
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Primär   1090 | f = +0.12  (16–84 % +0.04 … +0.22; 2,5–97,5 % -0.05 … +0.94; f ≤ 0 in 6 %) | χ²/FG 2.72 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 19.1 7.6 14.9 69.5 -0.2
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Hubble   1617 | f = -1.00  (16–84 % -1.00 … -0.72; 2,5–97,5 % -1.00 … -0.34; f ≤ 0 in 100 %) | χ²/FG 5.16 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 182.6 328.1 371.1 636.5 339.3
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt alle     2707 | f = -0.23  (16–84 % -0.54 … -0.00; 2,5–97,5 % -1.00 … +0.04; f ≤ 0 in 84 %) | χ²/FG 4.49 | Δχ²/(χ²/FG) bei f = 0, ¼, ⅓, 1, ⟨ν⟩: 29.7 187.6 241.1 580.1 195.6
+
+4c) Vorlieben je Galaxie (beim gemeinsamen a₀) und größte Beiträge zu χ²(f = 0) − χ²(f = ¼)
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.06 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 31 / 0 / 39 | χ²(0) − χ²(¼) Summe +70, größte: IC2574 +227, UGC06667 -105, UGC08286 -63
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 44 / 4 / 35 | χ²(0) − χ²(¼) Summe -184, größte: UGC12506 -40, UGC00731 -39, F583-1 -29
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 79 / 2 / 72 | χ²(0) − χ²(¼) Summe -151, größte: IC2574 +227, UGC06667 -105, UGC08286 -63
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.05 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 30 / 0 / 40 | χ²(0) − χ²(¼) Summe -40, größte: IC2574 +197, NGC0247 -114, UGC06667 -80
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.70 / +0.60; Galaxien mit f < 0 / = 0 / > 0: 55 / 1 / 27 | χ²(0) − χ²(¼) Summe -1771, größte: UGC00128 -416, NGC6015 -254, UGC05764 -184
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.15 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 85 / 1 / 67 | χ²(0) − χ²(¼) Summe -1685, größte: UGC00128 -404, NGC6015 -217, IC2574 +197
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.11 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 32 / 1 / 37 | χ²(0) − χ²(¼) Summe +43, größte: IC2574 +164, NGC0024 -58, NGC2403 -41
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.05 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 47 / 0 / 36 | χ²(0) − χ²(¼) Summe -120, größte: F583-1 -30, UGC04278 -20, UGC12506 -20
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.10 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 79 / 2 / 72 | χ²(0) − χ²(¼) Summe -90, größte: IC2574 +164, NGC0024 -58, NGC2403 -41
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.00 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 34 / 2 / 34 | χ²(0) − χ²(¼) Summe -93, größte: NGC0247 -51, NGC3109 +36, UGC08286 -29
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -1.00 / +0.79; Galaxien mit f < 0 / = 0 / > 0: 60 / 0 / 23 | χ²(0) − χ²(¼) Summe -1512, größte: UGC00128 -405, NGC6015 -267, UGC05764 -145
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.70 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 94 / 2 / 57 | χ²(0) − χ²(¼) Summe -1533, größte: UGC00128 -396, NGC6015 -237, UGC05764 -143
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.17 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 26 / 1 / 43 | χ²(0) − χ²(¼) Summe +105, größte: IC2574 +199, UGC06667 -97, NGC0055 +52
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 42 / 5 / 36 | χ²(0) − χ²(¼) Summe -136, größte: UGC00731 -37, UGC12506 -35, KK98-251 +23
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 71 / 3 / 79 | χ²(0) − χ²(¼) Summe -46, größte: IC2574 +199, UGC06667 -97, NGC0055 +52
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.20 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 23 / 3 / 44 | χ²(0) − χ²(¼) Summe +153, größte: IC2574 +257, NGC0247 -98, UGC06667 -67
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.50 / +1.16; Galaxien mit f < 0 / = 0 / > 0: 49 / 3 / 31 | χ²(0) − χ²(¼) Summe -1310, größte: UGC00128 -295, NGC6015 -189, UGC05764 -154
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 71 / 5 / 77 | χ²(0) − χ²(¼) Summe -1038, größte: UGC00128 -284, IC2574 +257, NGC6015 -154
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.85 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 26 / 1 / 43 | χ²(0) − χ²(¼) Summe +81, größte: IC2574 +144, NGC0024 -47, UGC08286 -30
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.10 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 44 / 0 / 39 | χ²(0) − χ²(¼) Summe -80, größte: F583-1 -23, UGC12506 -16, KK98-251 +15
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.15 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 70 / 1 / 82 | χ²(0) − χ²(¼) Summe +1, größte: IC2574 +144, NGC0024 -47, UGC08286 -30
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.07 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 33 / 1 / 36 | χ²(0) − χ²(¼) Summe -19, größte: NGC0247 -46, NGC3109 +37, NGC2403 +32
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.70 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 54 / 0 / 29 | χ²(0) − χ²(¼) Summe -1131, größte: UGC00128 -287, NGC6015 -203, NGC5985 -128
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.25 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 87 / 0 / 66 | χ²(0) − χ²(¼) Summe -1076, größte: UGC00128 -278, NGC6015 -175, UGC05764 -123
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.65 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 18 / 3 / 49 | χ²(0) − χ²(¼) Summe +183, größte: IC2574 +187, UGC06667 -89, NGC0055 +48
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.03 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 37 / 4 / 42 | χ²(0) − χ²(¼) Summe -98, größte: UGC00731 -35, UGC12506 -30, KK98-251 +21
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.10 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 57 / 6 / 90 | χ²(0) − χ²(¼) Summe +44, größte: IC2574 +181, UGC06667 -90, NGC0055 +46
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.29 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 21 / 1 / 48 | χ²(0) − χ²(¼) Summe +282, größte: IC2574 +305, NGC0247 -91, UGC06667 -58
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.15 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 44 / 4 / 35 | χ²(0) − χ²(¼) Summe -980, größte: UGC00128 -219, NGC5985 -146, NGC6015 -139
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.07 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 63 / 3 / 87 | χ²(0) − χ²(¼) Summe -605, größte: IC2574 +305, UGC00128 -210, NGC5985 -130
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +1.35 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 23 / 1 / 46 | χ²(0) − χ²(¼) Summe +90, größte: IC2574 +127, NGC0024 -39, NGC0055 +25
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.05 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 42 / 0 / 41 | χ²(0) − χ²(¼) Summe -57, größte: F583-1 -19, KK98-251 +13, UGC12506 -13
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   alle    | je Galaxie bestes f: 16/50/84 % -1.00 / +0.60 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 64 / 2 / 87 | χ²(0) − χ²(¼) Summe +42, größte: IC2574 +127, NGC0024 -39, NGC0055 +25
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Primär  | je Galaxie bestes f: 16/50/84 % -1.00 / +0.10 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 30 / 1 / 39 | χ²(0) − χ²(¼) Summe +31, größte: NGC0247 -43, NGC3109 +38, IC2574 +38
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | je Galaxie bestes f: 16/50/84 % -1.00 / -0.50 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 52 / 0 / 31 | χ²(0) − χ²(¼) Summe -873, größte: UGC00128 -214, NGC6015 -160, NGC5985 -128
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt alle    | je Galaxie bestes f: 16/50/84 % -1.00 / -0.10 / +2.00; Galaxien mit f < 0 / = 0 / > 0: 82 / 3 / 68 | χ²(0) − χ²(¼) Summe -750, größte: UGC00128 -204, NGC6015 -128, NGC5985 -113
+
+4d) Ohne die Galaxie mit dem größten Beitrag zu χ²(f = 0) − χ²(f = ¼) (Υ_d = 0,5, alle Punkte)
+   Fehler je Punkt          Primär  ohne IC2574 (+187): f = +0.02 (16–84 % -0.01 … +0.14; 2,5–97,5 % -0.05 … +0.44; f ≤ 0 in 28 %), a₀ bei f = 0 / ¼ / 1: 1.099 / 1.195 / 1.357
+   Fehler je Punkt          Hubble  ohne UGC00731 (-36): f = -0.00 (16–84 % -0.08 … +0.04; 2,5–97,5 % -0.29 … +0.10; f ≤ 0 in 54 %), a₀ bei f = 0 / ¼ / 1: 1.180 / 1.278 / 1.436
+   Fehler je Punkt          alle    ohne IC2574 (+193): f = +0.01 (16–84 % -0.02 … +0.05; 2,5–97,5 % -0.07 … +0.12; f ≤ 0 in 38 %), a₀ bei f = 0 / ¼ / 1: 1.123 / 1.221 / 1.383
+   je Galaxie mitgeschätzt  Primär  ohne IC2574 (+257): f = +0.04 (16–84 % +0.01 … +0.10; 2,5–97,5 % -0.03 … +0.22; f ≤ 0 in 12 %), a₀ bei f = 0 / ¼ / 1: 1.209 / 1.158 / 1.074
+   je Galaxie mitgeschätzt  Hubble  ohne UGC00128 (-286): f = -1.00 (16–84 % -1.00 … -0.55; 2,5–97,5 % -1.00 … -0.16; f ≤ 0 in 99 %), a₀ bei f = 0 / ¼ / 1: 1.272 / 1.140 / 0.972
+   je Galaxie mitgeschätzt  alle    ohne UGC00128 (-284): f = +0.03 (16–84 % -0.06 … +0.04; 2,5–97,5 % -0.50 … +0.07; f ≤ 0 in 27 %), a₀ bei f = 0 / ¼ / 1: 1.241 / 1.146 / 1.008
+
+5) a₀ [10⁻¹⁰ m/s²] als Funktion von f, getrennt nach Abstandsmethode
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Primär  | a₀ bei f = 0: 1.254, ¼: 1.383, ⅓: 1.414, 1: 1.598, ⟨ν⟩: 1.388 | beim besten f 1.329 (16–84 % 1.223–1.453) | ln[a₀(1)/a₀(0)] = +0.243 (+0.209 … +0.276)
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          Hubble  | a₀ bei f = 0: 1.486, ¼: 1.623, ⅓: 1.655, 1: 1.838, ⟨ν⟩: 1.627 | beim besten f 1.455 (16–84 % 1.297–1.579) | ln[a₀(1)/a₀(0)] = +0.213 (+0.191 … +0.239)
+   Υ_d = 0.4, alle Punkte, Fehler je Punkt          alle    | a₀ bei f = 0: 1.315, ¼: 1.447, ⅓: 1.478, 1: 1.663, ⟨ν⟩: 1.452 | beim besten f 1.340 (16–84 % 1.268–1.460) | ln[a₀(1)/a₀(0)] = +0.233 (+0.208 … +0.258)
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Primär  | a₀ bei f = 0: 1.280, ¼: 1.224, ⅓: 1.204, 1: 1.100, ⟨ν⟩: 1.230 | beim besten f 1.273 (16–84 % 1.103–1.442) | ln[a₀(1)/a₀(0)] = -0.143 (-0.212 … -0.081)
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  Hubble  | a₀ bei f = 0: 1.305, ¼: 1.147, ⅓: 1.113, 1: 0.942, ⟨ν⟩: 1.142 | beim besten f 1.657 (16–84 % 1.290–1.811) | ln[a₀(1)/a₀(0)] = -0.305 (-0.388 … -0.217)
+   Υ_d = 0.4, alle Punkte, je Galaxie mitgeschätzt  alle    | a₀ bei f = 0: 1.294, ¼: 1.179, ⅓: 1.150, 1: 1.003, ⟨ν⟩: 1.178 | beim besten f 1.290 (16–84 % 1.131–1.564) | ln[a₀(1)/a₀(0)] = -0.248 (-0.307 … -0.194)
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Primär  | a₀ bei f = 0: 1.284, ¼: 1.385, ⅓: 1.412, 1: 1.576, ⟨ν⟩: 1.394 | beim besten f 1.350 (16–84 % 1.233–1.474) | ln[a₀(1)/a₀(0)] = +0.205 (+0.175 … +0.235)
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   Hubble  | a₀ bei f = 0: 1.491, ¼: 1.588, ⅓: 1.613, 1: 1.766, ⟨ν⟩: 1.596 | beim besten f 1.406 (16–84 % 1.267–1.543) | ln[a₀(1)/a₀(0)] = +0.169 (+0.151 … +0.192)
+   Υ_d = 0.4, ohne innerste drei, Fehler je Punkt   alle    | a₀ bei f = 0: 1.339, ¼: 1.439, ⅓: 1.465, 1: 1.627, ⟨ν⟩: 1.448 | beim besten f 1.363 (16–84 % 1.278–1.469) | ln[a₀(1)/a₀(0)] = +0.193 (+0.171 … +0.217)
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Primär  | a₀ bei f = 0: 1.254, ¼: 1.216, ⅓: 1.202, 1: 1.126, ⟨ν⟩: 1.219 | beim besten f 1.251 (16–84 % 1.111–1.389) | ln[a₀(1)/a₀(0)] = -0.098 (-0.172 … -0.031)
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | a₀ bei f = 0: 1.386, ¼: 1.222, ⅓: 1.185, 1: 1.007, ⟨ν⟩: 1.213 | beim besten f 1.745 (16–84 % 1.424–1.865) | ln[a₀(1)/a₀(0)] = -0.299 (-0.389 … -0.202)
+   Υ_d = 0.4, ohne innerste drei, je Galaxie mitgeschätzt alle    | a₀ bei f = 0: 1.325, ¼: 1.219, ⅓: 1.192, 1: 1.054, ⟨ν⟩: 1.215 | beim besten f 1.441 (16–84 % 1.219–1.640) | ln[a₀(1)/a₀(0)] = -0.222 (-0.291 … -0.162)
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Primär  | a₀ bei f = 0: 1.044, ¼: 1.145, ⅓: 1.170, 1: 1.315, ⟨ν⟩: 1.150 | beim besten f 1.132 (16–84 % 1.035–1.240) | ln[a₀(1)/a₀(0)] = +0.231 (+0.199 … +0.263)
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          Hubble  | a₀ bei f = 0: 1.184, ¼: 1.287, ⅓: 1.311, 1: 1.449, ⟨ν⟩: 1.291 | beim besten f 1.168 (16–84 % 1.050–1.268) | ln[a₀(1)/a₀(0)] = +0.202 (+0.180 … +0.226)
+   Υ_d = 0.5, alle Punkte, Fehler je Punkt          alle    | a₀ bei f = 0: 1.081, ¼: 1.184, ⅓: 1.208, 1: 1.351, ⟨ν⟩: 1.188 | beim besten f 1.121 (16–84 % 1.057–1.220) | ln[a₀(1)/a₀(0)] = +0.221 (+0.197 … +0.246)
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Primär  | a₀ bei f = 0: 1.198, ¼: 1.154, ⅓: 1.140, 1: 1.071, ⟨ν⟩: 1.162 | beim besten f 1.184 (16–84 % 1.034–1.347) | ln[a₀(1)/a₀(0)] = -0.109 (-0.161 … -0.060)
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  Hubble  | a₀ bei f = 0: 1.235, ¼: 1.097, ⅓: 1.064, 1: 0.917, ⟨ν⟩: 1.089 | beim besten f 1.516 (16–84 % 1.183–1.706) | ln[a₀(1)/a₀(0)] = -0.292 (-0.368 … -0.210)
+   Υ_d = 0.5, alle Punkte, je Galaxie mitgeschätzt  alle    | a₀ bei f = 0: 1.219, ¼: 1.120, ⅓: 1.094, 1: 0.974, ⟨ν⟩: 1.119 | beim besten f 1.211 (16–84 % 1.048–1.412) | ln[a₀(1)/a₀(0)] = -0.221 (-0.278 … -0.174)
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Primär  | a₀ bei f = 0: 1.077, ¼: 1.157, ⅓: 1.178, 1: 1.307, ⟨ν⟩: 1.164 | beim besten f 1.146 (16–84 % 1.044–1.258) | ln[a₀(1)/a₀(0)] = +0.193 (+0.165 … +0.222)
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   Hubble  | a₀ bei f = 0: 1.193, ¼: 1.265, ⅓: 1.283, 1: 1.399, ⟨ν⟩: 1.271 | beim besten f 1.138 (16–84 % 1.028–1.249) | ln[a₀(1)/a₀(0)] = +0.159 (+0.141 … +0.180)
+   Υ_d = 0.5, ohne innerste drei, Fehler je Punkt   alle    | a₀ bei f = 0: 1.108, ¼: 1.186, ⅓: 1.206, 1: 1.332, ⟨ν⟩: 1.193 | beim besten f 1.139 (16–84 % 1.068–1.233) | ln[a₀(1)/a₀(0)] = +0.182 (+0.161 … +0.205)
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Primär  | a₀ bei f = 0: 1.174, ¼: 1.146, ⅓: 1.136, 1: 1.096, ⟨ν⟩: 1.152 | beim besten f 1.168 (16–84 % 1.041–1.303) | ln[a₀(1)/a₀(0)] = -0.066 (-0.118 … -0.022)
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | a₀ bei f = 0: 1.299, ¼: 1.160, ⅓: 1.125, 1: 0.972, ⟨ν⟩: 1.150 | beim besten f 1.643 (16–84 % 1.312–1.763) | ln[a₀(1)/a₀(0)] = -0.286 (-0.368 … -0.201)
+   Υ_d = 0.5, ohne innerste drei, je Galaxie mitgeschätzt alle    | a₀ bei f = 0: 1.245, ¼: 1.154, ⅓: 1.130, 1: 1.016, ⟨ν⟩: 1.151 | beim besten f 1.335 (16–84 % 1.136–1.507) | ln[a₀(1)/a₀(0)] = -0.201 (-0.262 … -0.148)
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Primär  | a₀ bei f = 0: 0.888, ¼: 0.971, ⅓: 0.991, 1: 1.109, ⟨ν⟩: 0.975 | beim besten f 0.983 (16–84 % 0.893–1.077) | ln[a₀(1)/a₀(0)] = +0.222 (+0.191 … +0.254)
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          Hubble  | a₀ bei f = 0: 0.966, ¼: 1.046, ⅓: 1.065, 1: 1.172, ⟨ν⟩: 1.049 | beim besten f 0.961 (16–84 % 0.865–1.046) | ln[a₀(1)/a₀(0)] = +0.193 (+0.173 … +0.217)
+   Υ_d = 0.6, alle Punkte, Fehler je Punkt          alle    | a₀ bei f = 0: 0.909, ¼: 0.992, ⅓: 1.011, 1: 1.127, ⟨ν⟩: 0.995 | beim besten f 0.957 (16–84 % 0.896–1.041) | ln[a₀(1)/a₀(0)] = +0.212 (+0.189 … +0.236)
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Primär  | a₀ bei f = 0: 1.144, ¼: 1.093, ⅓: 1.081, 1: 1.022, ⟨ν⟩: 1.102 | beim besten f 1.114 (16–84 % 0.976–1.272) | ln[a₀(1)/a₀(0)] = -0.110 (-0.163 … -0.062)
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  Hubble  | a₀ bei f = 0: 1.199, ¼: 1.073, ⅓: 1.041, 1: 0.902, ⟨ν⟩: 1.066 | beim besten f 1.421 (16–84 % 1.125–1.617) | ln[a₀(1)/a₀(0)] = -0.273 (-0.340 … -0.196)
+   Υ_d = 0.6, alle Punkte, je Galaxie mitgeschätzt  alle    | a₀ bei f = 0: 1.176, ¼: 1.081, ⅓: 1.057, 1: 0.946, ⟨ν⟩: 1.081 | beim besten f 1.164 (16–84 % 1.005–1.325) | ln[a₀(1)/a₀(0)] = -0.210 (-0.259 … -0.167)
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Primär  | a₀ bei f = 0: 0.923, ¼: 0.988, ⅓: 1.005, 1: 1.111, ⟨ν⟩: 0.994 | beim besten f 0.992 (16–84 % 0.903–1.091) | ln[a₀(1)/a₀(0)] = +0.185 (+0.157 … +0.213)
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   Hubble  | a₀ bei f = 0: 0.976, ¼: 1.031, ⅓: 1.046, 1: 1.135, ⟨ν⟩: 1.037 | beim besten f 0.940 (16–84 % 0.849–1.033) | ln[a₀(1)/a₀(0)] = +0.151 (+0.134 … +0.171)
+   Υ_d = 0.6, ohne innerste drei, Fehler je Punkt   alle    | a₀ bei f = 0: 0.938, ¼: 1.000, ⅓: 1.016, 1: 1.117, ⟨ν⟩: 1.006 | beim besten f 0.972 (16–84 % 0.907–1.056) | ln[a₀(1)/a₀(0)] = +0.174 (+0.154 … +0.196)
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Primär  | a₀ bei f = 0: 1.123, ¼: 1.088, ⅓: 1.079, 1: 1.037, ⟨ν⟩: 1.094 | beim besten f 1.105 (16–84 % 0.979–1.238) | ln[a₀(1)/a₀(0)] = -0.077 (-0.128 … -0.032)
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt Hubble  | a₀ bei f = 0: 1.264, ¼: 1.132, ⅓: 1.099, 1: 0.953, ⟨ν⟩: 1.122 | beim besten f 1.550 (16–84 % 1.234–1.696) | ln[a₀(1)/a₀(0)] = -0.269 (-0.338 … -0.196)
+   Υ_d = 0.6, ohne innerste drei, je Galaxie mitgeschätzt alle    | a₀ bei f = 0: 1.204, ¼: 1.114, ⅓: 1.091, 1: 0.985, ⟨ν⟩: 1.110 | beim besten f 1.253 (16–84 % 1.078–1.406) | ln[a₀(1)/a₀(0)] = -0.193 (-0.246 … -0.146)
+
+(Rechenzeit 989 s)

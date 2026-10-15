@@ -1,0 +1,25 @@
+1) Die drei Energieskalen bei z ≈ 1100
+   m_p c²·α_G^(1/4)  = 0.2601 eV   (Gravitation + Nukleonmasse)
+   α³·m_e c²         = 0.1986 eV   (Elektromagnetismus + Elektronmasse)
+   kT bei z = 1100   = 0.2586 eV   (gemessene Rekombination)
+
+2) Carters Koinzidenz  α_G ≈ α¹²·(m_e/m_p)⁴  (Carter 1974; Bedingung für konvektive Sternhüllen)
+   α_G = 5.9061e-39   α¹²(m_e/m_p)⁴ = 2.0061e-39   Verhältnis = 2.944
+   Vierte Wurzel des Verhältnisses = 1.3099  =  (m_p α_G^(1/4)) / (α³ m_e)  = 1.3099
+   -> 'Proton-Neigung an der Compton-Grenze = Schwelle zur Rekombination' ist gleichbedeutend mit
+      m_p α_G^(1/4) ≈ α³ m_e, also mit Carters Koinzidenz (bis Faktor 1,3 in der Energie).
+
+3) Warum liegt die Rekombination bei ≈ α³ m_e c²?  Saha: kT_rec ≈ B/L, B = α² m_e c²/2 = 13,6 eV
+   B = 13.606 eV,  L = B/kT_rec = 52.6;   1/(2α) = 68.5
+   ln(1/η) = 21.2  (+ 1,5·ln(m_e c²/kT) = 21.7) -> L_Saha ≈ 43.0
+   -> kT_rec ≈ α³ m_e c² gilt, weil der Saha-Logarithmus (≈ 50) zufällig nahe 1/(2α) (≈ 69) liegt.
+
+4) Warum ist die Neigungs-Schwelle bei der Rekombination m_p α_G^(1/4)?
+   Bedingung H(T) = 2π G m_p³ c/ħ²; nahe der Gleichheit Materie/Strahlung gilt H ~ T²/(m_Pl c²)·(c/ħ)·Zahl
+   => T² ~ m_p³/m_Pl  =>  T ~ m_p·(m_p/m_Pl)^(1/2) = m_p·α_G^(1/4)
+   Dazu gehört: Gleichheit (z_eq = 3387) liegt nahe der Rekombination (z = 1090); Verhältnis 3.11
+
+5) Zusammenfassung der Kette (jede Stufe mit ihrem Zahlenfaktor):
+   a) Kreuzung ⇔ T_cross ≈ m_p c² α_G^(1/4) · (Faktoren aus η, R, 2π)      T_cross = 0.263 eV (z=1119)
+   b) m_p α_G^(1/4) = α³ m_e · (α_G/α¹²μ⁴)^(1/4)                             Faktor 1.310
+   c) α³ m_e c² ≈ kT_rec, weil L_Saha ≈ 1/(2α)                                Faktor 1.302

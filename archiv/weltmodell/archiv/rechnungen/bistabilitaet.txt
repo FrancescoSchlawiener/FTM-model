@@ -1,0 +1,262 @@
+
+==============================================================================
+TEIL 1  Torus-Geburt im Labor: VO2-Element auf einer Mikrobrücke im Magnetfeld
+==============================================================================
+
+--- 1a Parameter und lineare Stabilität des Fixpunkts
+VO2: T_C = 340 K, Breite 1.5 K, R_isol = 20 kΩ, R_met = 0.4 kΩ, C_th = 5 pJ/K, G = 5 µW/K, τ_th = 1.0 µs
+Kreis: R_L = 10 kΩ, C = 20 pF;  Brücke: f_m = 0.50 MHz, Q = 1000, D_tr = 0.20 µm, κ = -0.10 K/µm, x_D = 0.30 µm
+Lorentz: λ_B = 0.063 µm/(mA·T), Γ = 1e-04 V·s/m pro T
+Vs [V] |  T* [K] | x* [µm] | elektrothermisches Paar        | mechanisches Paar
+ 2.60  |  330.10 | 0.0058  | (reelle Eigenwerte)
+ 3.00  |  339.19 | 0.0865  | Re  +3.5989 /µs, f = 1.857 MHz | Re +0.00035 /µs, f = 0.5008 MHz
+ 3.40  |  339.97 | 0.1157  | Re  +1.2840 /µs, f = 2.962 MHz | Re -0.00036 /µs, f = 0.5008 MHz
+ 3.50  |  340.12 | 0.1214  | Re  +0.4350 /µs, f = 3.166 MHz | Re -0.00044 /µs, f = 0.5008 MHz
+ 3.54  |  340.17 | 0.1236  | Re  +0.0752 /µs, f = 3.241 MHz | Re -0.00046 /µs, f = 0.5008 MHz
+ 3.55  |  340.19 | 0.1241  | Re  -0.0164 /µs, f = 3.260 MHz | Re -0.00047 /µs, f = 0.5008 MHz
+ 3.60  |  340.25 | 0.1267  | Re  -0.4840 /µs, f = 3.348 MHz | Re -0.00050 /µs, f = 0.5008 MHz
+ 4.00  |  340.73 | 0.1452  | Re  -4.7068 /µs, f = 3.886 MHz | Re -0.00066 /µs, f = 0.5007 MHz
+ 5.00  |  341.73 | 0.1807  | Re -17.8500 /µs, f = 3.932 MHz | Re -0.00085 /µs, f = 0.5006 MHz
+Hopf-Punkt (elektrothermisches Paar, Re λ = 0): V_H = 3.5482 V, f_H = 3.256 MHz
+   Arbeitspunkt am Hopf-Punkt: T* = 340.18 K, R = 2.489 kΩ, I = 0.284 mA
+stationär bistabiles Fenster bei R_L = 10 kΩ (ohne Brücke): 2.7374 V < Vs < 2.7509 V
+
+--- 1b Lyapunov-Spektren (Benettin, RK4, dt = 0,01 µs, Einschwingen 2500 µs, Mittelung 3000 µs)
+(Rechenzeit 88 s)
+Lauf            | λ1       λ2       λ3       λ4   [1/µs] | Δx [µm] ΔV [V] | f_x [MHz] f_V [MHz] f_x/f_V | Zustand
+Vs=3.60 B=1     | -0.0016  -0.0025  -0.4823  -0.4827 |  0.0296 0.0002 |   0.5009       nan      nan | Fixpunkt
+Vs=3.47 B=1     | +0.0009  -0.0012  -0.0009  -1.5076 |  0.1298 0.5912 |   0.5148    2.9514   0.1744 | Torus T²
+Vs=3.46 B=1     | +0.0015  -0.0003  -0.0016  -1.7110 |  0.2625 0.6328 |   0.5248    2.9121   0.1802 | Torus T²
+Vs=3.44 B=1     | +0.0088  -1.0916  -1.0950  -2.8848 |  4.0366 1.1077 |   2.7031    2.7031   1.0000 | eingerastet 1:1
+Vs=3.40 B=1     | +0.0007  -1.4898  -1.4900  -5.0521 |  3.7385 1.1010 |   2.5495    2.5495   1.0000 | eingerastet 1:1
+Vs=3.20 B=1     | +0.0011  -0.4253  -0.4238  -8.8293 |  2.7248 1.4352 |   1.8256    1.8256   1.0000 | eingerastet 1:1
+Vs=2.95 B=1     | +0.0011  -0.0748  -0.0737  -6.6412 |  1.5238 1.6059 |   1.0610    1.0610   1.0000 | eingerastet 1:1
+Vs=2.87 B=1     | +0.0007  -0.0328  -0.0313  -5.1076 |  0.9933 1.5697 |   0.7745    0.7745   1.0000 | eingerastet 1:1
+Vs=2.80 B=1     | +0.0004  -0.0029  -0.0024  -4.1881 |  0.3957 1.4579 |   0.5508    0.4406   1.2500 | eingerastet 5:4
+Vs=2.70 B=1     | -0.0033  -0.0040  -0.8437  -7.0720 |  0.0019 0.0000 |   0.5000       nan      nan | Fixpunkt
+Vs=3.47 B=0     | +0.0005  -0.0004  -0.0013  -1.5111 |  0.0860 0.5908 |   0.5086    2.9511   0.1723 | Grenzzyklus
+Vs=3.47 B=2     | +0.0011  -0.0001  -0.0008  -1.5050 |  0.2887 0.5941 |   0.5279    2.9518   0.1788 | Torus T²
+Vs=3.47 B=4     | +0.0092  -0.7448  -0.7508  -2.8189 |  4.4239 1.0063 |   2.8558    2.8558   1.0000 | eingerastet 1:1
+steif Vs=2.90   | +0.3344  -0.0540  -0.9248  -5.4901 |  1.2549 1.5821 |   8.9632    0.8963  10.0000 | Chaos
+steif Vs=2.80   | +0.9438  -0.0006  -1.0143  -4.1825 |  1.0235 1.4582 |   0.4398    0.4398   1.0000 | Chaos
+Hinweis: Ein Lyapunov-Exponent gilt hier als null, wenn |λ| < 0,01/µs (endliche Mittelungszeit).
+
+--- 1c Mechanische Mode auf dem elektrothermischen Grenzzyklus: Floquet-Rate (Neimark-Sacker)
+Vs = 3.52 V: Amplitude der Brücke je 1000 µs: 0.1010 0.0727 0.0518 0.0371 0.0264 0.0190  -> Floquet-Rate -0.00034 /µs
+Vs = 3.50 V: Amplitude der Brücke je 1000 µs: 0.1013 0.0828 0.0673 0.0545 0.0439 0.0354  -> Floquet-Rate -0.00021 /µs
+Vs = 3.48 V: Amplitude der Brücke je 1000 µs: 0.1025 0.0968 0.0921 0.0876 0.0831 0.0785  -> Floquet-Rate -0.00005 /µs
+lineare Extrapolation der Rate auf null: V_NS ≈ 3.472 V (Neimark-Sacker, Geburt des T²)
+mechanische Dämpfung am Fixpunkt: -ω_m/(2Q) = -0.00157 /µs
+
+==============================================================================
+TEIL 2  Kippstelle = Divergenz der Rückkopplungssumme
+==============================================================================
+
+--- 2a Identität: statische Antwort = Quelle · Σ q^n (isolierender Ast, R_L = 0,8 R_c)
+Vs = Vs_f - 30.0 mV: T* = 333.054 K, q = 0.3083, dT*/dVs numerisch = 36.805 K/V, (∂P/∂Vs)/G/(1-q) = 36.806 K/V
+      Teilsummen (∂P/∂Vs)/G·Σ_{n≤N} q^n, N = 0, 1, 5, 50, 500: 25.457, 33.307, 36.774, 36.806, 36.806
+Vs = Vs_f - 3.0 mV: T* = 334.425 K, q = 0.7286, dT*/dVs numerisch = 96.654 K/V, (∂P/∂Vs)/G/(1-q) = 96.670 K/V
+      Teilsummen (∂P/∂Vs)/G·Σ_{n≤N} q^n, N = 0, 1, 5, 50, 500: 26.241, 45.358, 82.214, 96.670, 96.670
+Vs = Vs_f - 0.3 mV: T* = 334.813 K, q = 0.9095, dT*/dVs numerisch = 292.941 K/V, (∂P/∂Vs)/G/(1-q) = 292.908 K/V
+      Teilsummen (∂P/∂Vs)/G·Σ_{n≤N} q^n, N = 0, 1, 5, 50, 500: 26.509, 50.619, 127.125, 290.588, 292.908
+
+--- 2b Spitze (Cusp) und Hysterese-Breite
+Spitze bei R_c = 10.96694 kΩ;  größter negativer differentieller Widerstand des Elements max(-dV/dI) = 10.96694 kΩ
+=> bistabil genau dann, wenn R_L < max|R_d| (Lastgerade flacher als der steilste NDR-Abschnitt)
+R_L = 0,8 R_c = 8.774 kΩ: Falten bei
+    T = 334.988 K, Vs = 2.62683 V, Schleifenverstärkung q = 1.00001
+    T = 337.668 K, Vs = 2.57738 V, Schleifenverstärkung q = 0.99977
+ε = 1 - R_L/R_c | Breite ΔVs [mV] | Temperatursprung [K]
+   1.00e-03     |      0.01564   |  0.2727
+   1.78e-03     |      0.03711   |  0.3623
+   3.16e-03     |      0.08807   |  0.4808
+   5.62e-03     |      0.20911   |  0.6375
+   1.00e-02     |      0.49703   |  0.8441
+   1.78e-02     |      1.18350   |  1.1155
+   3.16e-02     |      2.82726   |  1.4721
+Exponenten (Anpassung log-log): Breite 1.504 (Normalform 3/2), Sprung 0.488 (Normalform 1/2)
+
+--- 2c Kritische Verlangsamung vor der Falte
+isolierender Ast endet bei Vs_f = 2.62683 V
+Vs_f - Vs [mV] | q       | λ = G(1-q)/C_th [1/µs] | λ aus Simulation [1/µs]
+   100.000     | 0.07493 | 0.92507                | 0.92973
+    30.000     | 0.30833 | 0.69167                | 0.69520
+    10.000     | 0.54029 | 0.45971                | 0.46215
+     3.000     | 0.72856 | 0.27144                | 0.27286
+     1.000     | 0.83789 | 0.16211                | 0.16312
+     0.300     | 0.90950 | 0.09050                | 0.09097
+     0.100     | 0.94727 | 0.05273                | 0.05305
+     0.030     | 0.97096 | 0.02904                | 0.02932
+Exponent (Abstände ≤ 1 mV) λ ∝ (Vs_f - Vs)^0.490 (Normalform 1/2);  Relaxationszeit bei 0,3 mV Abstand: 11.0 µs, bei 0,03 mV: 34.1 µs, gegen τ_th = 1.0 µs
+
+--- 2d Normalform x^3 - a x - b = 0
+a = 0.1: Falten bei b = ±0.01217, Breite 4(a/3)^{3/2} = 0.02434, Sprung 3·sqrt(a/3) = 0.54772
+a = 1.0: Falten bei b = ±0.38490, Breite 4(a/3)^{3/2} = 0.76980, Sprung 3·sqrt(a/3) = 1.73205
+a = 4.0: Falten bei b = ±3.07920, Breite 4(a/3)^{3/2} = 6.15840, Sprung 3·sqrt(a/3) = 3.46410
+Relaxationsrate am stabilen Ast vor der Falte (a = 1): 1-q = 3x²-a gegen 2(3a)^{1/4}(b_f-b)^{1/2}
+   b_f - b = 1e-02: 1-q = 0.274344, Formel 0.263215
+   b_f - b = 1e-03: 1-q = 0.084377, Formel 0.083236
+   b_f - b = 1e-04: 1-q = 0.026437, Formel 0.026321
+
+--- 2e Galaxien: q = exp(-sqrt(y)), y = g_N/a0
+q < 1 für alle y > 0: max q im Gitter = 0.990050 (bei y = 1e-4);  d ln g/d ln g_N liegt in [0.5025, 0.9998]
+=> g(g_N) ist streng monoton, keine Falte, keine Bistabilität, kein Hysterese-Ast in der RAR
+kleines y: 1 - q = 0.00995 bei y = 1e-4 gegen sqrt(y) = 0.01000
+Milchstraße: M_b = 6·10^10 M☉, Hernquist a = 3 kpc (Annahmen)
+r [kpc] | y       | q      | ν=1/(1-q) | dlng/dlng_N | dg/dg_N | v_c [km/s] | t_dyn=r/v_c [Myr] | τ_rel=ν·t_dyn [Myr] | ν·r/c [Myr]
+   10   | 0.4125  | 0.5261 |  2.110    | 0.6435      |  1.358  |   179.5    |    54.5           |    114.9            | 0.0688
+   20   | 0.1318  | 0.6956 |  3.285    | 0.5853      |  1.923  |   179.0    |   109.2           |    358.8            | 0.2143
+   30   | 0.0640  | 0.7765 |  4.474    | 0.5606      |  2.508  |   178.4    |   164.5           |    735.7            | 0.4377
+   40   | 0.0377  | 0.8235 |  5.666    | 0.5470      |  3.099  |   177.9    |   219.9           |   1245.8            | 0.7392
+   50   | 0.0248  | 0.8543 |  6.861    | 0.5383      |  3.694  |   177.5    |   275.3           |   1889.1            | 1.1188
+Antwort der äußeren Beschleunigung auf eine Massenänderung δM/M = 1 % (nach der Relaxation): δg/g = dlng/dlng_N · 1 %:
+   r = 10 kpc: 0.643 %, r = 20 kpc: 0.585 %, r = 30 kpc: 0.561 %, r = 40 kpc: 0.547 %, r = 50 kpc: 0.538 %
+Nachlauf nach einer sprunghaften Änderung: δg(t)/δg(∞) = 1 - exp(-t/τ_rel);  nach t = t_dyn noch Rest exp(-1/ν) = 0.623, 0.738, 0.800, 0.838, 0.864
+
+==============================================================================
+TEIL 3  Hysterese als Gedächtnis ohne Speicher: Preisach gegen Gedächtniskern
+==============================================================================
+Hysteronen: 7260 (Gitter 120×120, α ≥ β), μ ∝ exp(-c²/2·0,3² - (h-0,25)²/2·0,15²)
+
+--- 3a Rückkehrpunkt-Gedächtnis und Auslöschung
+Geschichte A (Extremwerte): [-1.0, 0.8, -0.6, 0.5, -0.3, 0.2]
+Geschichte B (Extremwerte): [-1.0, 0.8, -0.6, 0.4, -0.2, 0.35, -0.1, 0.5, -0.3, 0.2]
+Extremwertstapel A: [-1.0, 0.8, -0.6, 0.5, -0.3, 0.2]
+Extremwertstapel B: [-1.0, 0.8, -0.6, 0.5, -0.3, 0.2]
+Zustand aller Hysteronen gleich: True;  Ausgang A = 0.0987617341, B = 0.0987617341
+gleiche Zukunft (30 zufällige Umkehrpunkte): max |y_A - y_B| = 0.00e+00
+Rückkehrpunkt: y(0,5) vor Nebenschleife = 0.5468901531, nach 0,5 → -0,2 → 0,5 = 0.5468901531, Zustand gleich: True
+Zufallsweg: 200000 Schritte, 100054 Umkehrpunkte; Stapel am Ende 6 Werte (Maximum unterwegs 17)
+Zustand aus nur 6 Stapelwerten = Zustand aus 200000 Eingangswerten: True (7260 Hysteronen verglichen)
+
+--- 3b Ratenunabhängigkeit: Preisach gegen linearen Kern K(τ) = e^{-τ/τ0}/τ0
+Geschichte A mit  40 Schritten je Ast: Preisach-Endwert 0.098762, Kern-Endwert (τ0 = 50) 0.007383
+Geschichte A mit 400 Schritten je Ast: Preisach-Endwert 0.098762, Kern-Endwert (τ0 = 50) 0.138177
+Kern-Endwert A = 0.007383, B = 0.038318 (Preisach: gleich, s. o.)
+
+--- 3c Thermisch aktivierte Hysteronen: wann wird Preisach zum Kern?
+Ensemble: 576 Hysteronen, ν0 = 1e6 pro Zeiteinheit, Barriere E_b = 40·h·(1∓(u-c)/h)², Rampen mit 200 Schritten der Dauer 1
+Grenze aktiv/eingefroren: E_b(u=c) = kT·ln(ν0·t_obs), t_obs = 1e3 -> kT·20.7
+kT   | eingefroren | Remanenz y(0|von +1) - y(0|von -1) | Rückkehrpunkt-Fehler | Ratenabhängigkeit (Rampe 10× langsamer)
+0.2  | 0.833       | +0.6385                             | 2.99e-03             | 9.61e-03
+1.0  | 0.167       | +0.0355                             | 1.09e-03             | 2.84e-03
+3.0  | 0.000       | +0.0000                             | 0.00e+00             | 0.00e+00
+Prony-Kern K(τ) = Σ_i 2 w_i s_i e^{-K_i τ}, kT = 3.0 (Gleichgewicht): Raten K_i 9.55e+02 … 1.14e+06
+   relative Abweichung nichtlinear gegen Kern bei Amplitude 0,003 / 0,03 / 0,3: 0.0020 / 0.0965 / 0.1403
+   Glättungsbreite der Schaltkante kT/|∂E_b/∂u| = kT/(2 E0) = 0.0375
+Prony-Kern K(τ) = Σ_i 2 w_i s_i e^{-K_i τ}, kT = 1.0 (nach Vorgeschichte -1 -> +0,5 -> 0): Raten K_i 5.65e-04 … 1.00e+06
+   relative Abweichung nichtlinear gegen Kern bei Amplitude 0,003 / 0,03 / 0,3: 0.0553 / 0.9159 / 0.9067
+   Glättungsbreite der Schaltkante kT/|∂E_b/∂u| = kT/(2 E0) = 0.0125
+
+--- 3d Schließungsregel w(θ) als Preisach-Operator: Kugelkollaps
+Kugelkollaps R = A(1-cos η), t = B(η - sin η); θ/(3H_bg) mit H_bg = 2/(3t) (Einstein-de Sitter)
+η/π   | R/R_ta | θ/(3H_bg)
+0.50  | 0.5000 | +0.8562
+0.90  | 0.9755 | +0.3067
+1.00  | 1.0000 | +0.0000
+1.10  | 0.9755 | -0.4584
+1.25  | 0.8536 | -1.6866
+1.40  | 0.6545 | -4.4535
+1.50  | 0.5000 | -8.5686
+Virialisierung (η = 3π/2, R = R_ta/2): θ_min/(3H_bg) = -8.5686, unabhängig von der Masse
+Preisach-Gewicht: Hysteronen mit Schwellen β (Entkopplung) gleichverteilt in [θ_vir, 0], α = 1 (Wiedereinkopplung nur im Hubble-Fluss)
+=> w = 1 - θ_min/θ_vir für θ_vir ≤ θ_min ≤ 0;  Beitrag des projizierten Flusses (lineare Interpolation, Annahme): δg/g = Q·w/ν, Q = 5.364
+   Schale bei η = 1.00π (R/R_ta = 1.000): θ_min = +0.000 -> w = 1.000;  δg/g bei ν = 3: 1.788, bei ν = 10: 0.536
+   Schale bei η = 1.10π (R/R_ta = 0.976): θ_min = -0.458 -> w = 0.946;  δg/g bei ν = 3: 1.692, bei ν = 10: 0.508
+   Schale bei η = 1.25π (R/R_ta = 0.854): θ_min = -1.687 -> w = 0.803;  δg/g bei ν = 3: 1.436, bei ν = 10: 0.431
+   Schale bei η = 1.40π (R/R_ta = 0.655): θ_min = -4.454 -> w = 0.480;  δg/g bei ν = 3: 0.859, bei ν = 10: 0.258
+   Schale bei η = 1.50π (R/R_ta = 0.500): θ_min = -8.569 -> w = 0.000;  δg/g bei ν = 3: 0.000, bei ν = 10: 0.000
+RAR-Streuung (intrinsisch ≲ 0.057 dex, aus dem Gedächtnis) -> δg/g < 0.140 -> w < 0.140·ν/Q:
+   ν = 1: w < 0.0261
+   ν = 2: w < 0.0523
+   ν = 3: w < 0.0784
+   ν = 6: w < 0.1569
+Auslöschung: ein späterer Verschmelzungsstoß mit θ > θ_min ändert w nicht; nur ein tieferer Kollaps senkt w weiter.
+   früher, ungestörter Kollaps        θ-Extremwerte [1.0, -8.57, 0.0, -0.5, 0.2, 0.0] -> Stapel-Minimum -8.569 -> w = 0.000;  δg/g bei ν = 3: 0.000
+   derselbe + späte Verschmelzung     θ-Extremwerte [1.0, -8.57, 0.0, -4.0, 0.3, 0.0] -> Stapel-Minimum -8.569 -> w = 0.000;  δg/g bei ν = 3: 0.000
+   abgebrochener Kollaps (Gezeiten)   θ-Extremwerte [1.0, -3.0, 0.0, -1.0, 0.0] -> Stapel-Minimum -3.000 -> w = 0.650;  δg/g bei ν = 3: 1.162
+Rückkopplungssumme im Einfallsbereich eines Systems mit M_b = 6·10^10 M☉ (Punktmasse) und δg/g = Q·w/ν:
+   r =  100 kpc: y = 6.97e-03, ν =   12.48;  w = 0,803 -> δg/g = 0.3450;  w = 0,480 -> δg/g = 0.2062
+   r =  300 kpc: y = 7.75e-04, ν =   36.43;  w = 0,803 -> δg/g = 0.1182;  w = 0,480 -> δg/g = 0.0707
+   r = 1000 kpc: y = 6.97e-05, ν =  120.27;  w = 0,803 -> δg/g = 0.0358;  w = 0,480 -> δg/g = 0.0214
+
+==============================================================================
+TEIL 4  Thermoelektrischer Transport im Magnetfeld: Onsager-Casimir
+==============================================================================
+
+B = 0.0 T:
+   Onsager-Casimir |L^T(B) - L(-B)|/|L| = 0.0e+00;  L_s gerade: 0.0e+00, L_a ungerade: 0.0e+00
+   Eigenwerte L_s > 0: True
+   Entropieproduktion (20000 Zufallskräfte): max|X·L_a X|/max(X·L_s X) = 0.0e+00, min X·L_s X > 0: True
+   ρ_xx = 1.2844e-06 Ωm, Hall ρ_yx = 0.000e+00 Ωm, tan θ_H = σ_xy/σ_xx = +0.0000
+   Seebeck S_xx = -66.67 µV/K,  Nernst E_y/∂_xT = +0.000 µV/K  (Koeffizient -)
+   κ_xx(J=0) = 9.573 W/mK, Righi-Leduc κ_yx/κ_xx = +0.0000
+   Kraft entlang x: |J_a|/|J_s| = 0.0000, X·J_a = 0.0e+00, X·J_s = 2.336e+02
+
+B = 0.1 T:
+   Onsager-Casimir |L^T(B) - L(-B)|/|L| = 0.0e+00;  L_s gerade: 0.0e+00, L_a ungerade: 0.0e+00
+   Eigenwerte L_s > 0: True
+   Entropieproduktion (20000 Zufallskräfte): max|X·L_a X|/max(X·L_s X) = 4.0e-18, min X·L_s X > 0: True
+   ρ_xx = 1.2937e-06 Ωm, Hall ρ_yx = -7.706e-08 Ωm, tan θ_H = σ_xy/σ_xx = -0.0596
+   Seebeck S_xx = -66.67 µV/K,  Nernst E_y/∂_xT = -7.600 µV/K  (Koeffizient -76.00 µV/(K·T))
+   κ_xx(J=0) = 9.512 W/mK, Righi-Leduc κ_yx/κ_xx = +0.0353
+   Magnetowiderstand Δρ_xx/ρ_xx = 0.007
+   Kraft entlang x: |J_a|/|J_s| = 0.0597, X·J_a = 0.0e+00, X·J_s = 2.311e+02
+
+B = 1.0 T:
+   Onsager-Casimir |L^T(B) - L(-B)|/|L| = 0.0e+00;  L_s gerade: 0.0e+00, L_a ungerade: 0.0e+00
+   Eigenwerte L_s > 0: True
+   Entropieproduktion (20000 Zufallskräfte): max|X·L_a X|/max(X·L_s X) = 2.8e-17, min X·L_s X > 0: True
+   ρ_xx = 2.2092e-06 Ωm, Hall ρ_yx = -7.706e-07 Ωm, tan θ_H = σ_xy/σ_xx = -0.3488
+   Seebeck S_xx = -66.67 µV/K,  Nernst E_y/∂_xT = -76.000 µV/K  (Koeffizient -76.00 µV/(K·T))
+   κ_xx(J=0) = 6.828 W/mK, Righi-Leduc κ_yx/κ_xx = +0.1509
+   Magnetowiderstand Δρ_xx/ρ_xx = 0.720
+   Kraft entlang x: |J_a|/|J_s| = 0.3501, X·J_a = 0.0e+00, X·J_s = 1.211e+02
+
+B = 3.0 T:
+   Onsager-Casimir |L^T(B) - L(-B)|/|L| = 0.0e+00;  L_s gerade: 0.0e+00, L_a ungerade: 0.0e+00
+   Eigenwerte L_s > 0: True
+   Entropieproduktion (20000 Zufallskräfte): max|X·L_a X|/max(X·L_s X) = 1.7e-17, min X·L_s X > 0: True
+   ρ_xx = 9.6073e-06 Ωm, Hall ρ_yx = -2.312e-06 Ωm, tan θ_H = σ_xy/σ_xx = -0.2406
+   Seebeck S_xx = -66.67 µV/K,  Nernst E_y/∂_xT = -228.000 µV/K  (Koeffizient -76.00 µV/(K·T))
+   κ_xx(J=0) = 4.594 W/mK, Righi-Leduc κ_yx/κ_xx = +0.0377
+   Magnetowiderstand Δρ_xx/ρ_xx = 6.480
+   Kraft entlang x: |J_a|/|J_s| = 0.2515, X·J_a = 0.0e+00, X·J_s = 2.952e+01
+
+Bridgman (B = 0,01 T): Ettingshausen P = -2.3819e-03 K·m/(A·T), T·N/κ = -2.3819e-03, Verhältnis 1.00000
+
+==============================================================================
+TEIL 5  Anwendungen
+==============================================================================
+
+--- 5a Curie-Punkt als stabile Randlage (P = P0 (1 - T/T_C)^{2β}, 2β = 0,72)
+T_C = 493 K, T0 = 293 K, C = 0.75 J/K, G = 0.010 W/K (τ0 = C/G = 75 s)
+P0/G [K] | T* [K]   | T_C-T* [K] | q        | 1/(1-q) | dT*/dlnP0 [K] | τ = τ0/(1-q) [s] | σ_T thermisch [K] | δT bei 1 % Leistungsrauschen [K]
+     100 |  336.727 |   156.2733 |    -0.20 |  0.8323 |       36.3946 |           62.424 | 1.32e-09          | 0.3639
+    1000 |  453.990 |    39.0102 |    -2.97 |  0.2518 |       40.5379 |           18.885 | 9.78e-10          | 0.4054
+   10000 |  490.878 |     2.1219 |   -67.14 |  0.0147 |        2.9039 |            1.101 | 2.55e-10          | 0.0290
+  100000 |  492.912 |     0.0879 | -1637.42 |  0.0006 |        0.1220 |            0.046 | 5.23e-11          | 0.0012
+
+--- 5b Kramers-Verweilzeiten und Kac-Budget im bistabilen VO2-Element (R_L = 0,8 R_c)
+bistabiles Fenster: 2.57738 V < Vs < 2.62683 V (Breite 49.45 mV)
+
+Vs = 2.60629 V: Mulden T1 = 333.426 K, T2 = 338.403 K, Sattel 336.398 K; Barrieren ΔU1 = 1.0635, ΔU2 = 1.0635 K²/µs
+   Krümmungen U''(T1) = 0.6075, U''(T2) = 2.7047, |U''(Sattel)| = 0.7674 /µs
+   Eigenrauschen D_th = k_B T² G/C² = 3.071e-07 K²/µs -> ΔU1/D_th = 3.46e+06 (spontane Sprünge praktisch nie)
+   D = ΔU1/3.0 = 0.3545 K²/µs: Verweilzeit Mulde 1 sim 211.2 µs / Kramers 184.8 µs; Mulde 2 sim 110.0 µs / Kramers 87.6 µs (6006 bzw. 6034 Sprünge)
+      Kac: <τ_ret,1> = 1.4886, <τ_ret,2> = 2.9346 Abtastschritte (1 µs); 1/<τ1> + 1/<τ2> = 1.01254; Anteile p1 = 0.6680, p2 = 0.3320
+      Verhältnis der Verweilzeiten sim 1.919, Kramers 2.110
+   D = ΔU1/4.0 = 0.2659 K²/µs: Verweilzeit Mulde 1 sim 530.3 µs / Kramers 502.4 µs; Mulde 2 sim 281.6 µs / Kramers 238.1 µs (2244 bzw. 2271 Sprünge)
+      Kac: <τ_ret,1> = 1.4798, <τ_ret,2> = 2.8041 Abtastschritte (1 µs); 1/<τ1> + 1/<τ2> = 1.03239; Anteile p1 = 0.6662, p2 = 0.3338
+      Verhältnis der Verweilzeiten sim 1.883, Kramers 2.110
+   nötiges eingespeistes Leistungsrauschen für D = ΔU1/4: S_P = 2 D C² = 1.33e-17 W²/Hz (√S_P = 3.65e-09 W/√Hz)
+
+Vs = 2.61143 V: Mulden T1 = 333.654 K, T2 = 338.456 K, Sattel 336.202 K; Barrieren ΔU1 = 0.6872, ΔU2 = 1.3813 K²/µs
+   Krümmungen U''(T1) = 0.5459, U''(T2) = 2.9929, |U''(Sattel)| = 0.6855 /µs
+   Eigenrauschen D_th = k_B T² G/C² = 3.075e-07 K²/µs -> ΔU1/D_th = 2.24e+06 (spontane Sprünge praktisch nie)
+   D = ΔU1/3.0 = 0.2291 K²/µs: Verweilzeit Mulde 1 sim 246.4 µs / Kramers 206.3 µs; Mulde 2 sim 1555.0 µs / Kramers 1823.4 µs (861 bzw. 784 Sprünge)
+      Kac: <τ_ret,1> = 6.7878, <τ_ret,2> = 1.1219 Abtastschritte (1 µs); 1/<τ1> + 1/<τ2> = 1.03863; Anteile p1 = 0.1134, p2 = 0.8866
+      Verhältnis der Verweilzeiten sim 0.158, Kramers 0.113
+   nötiges eingespeistes Leistungsrauschen für D = ΔU1/4: S_P = 2 D C² = 8.59e-18 W²/Hz (√S_P = 2.93e-09 W/√Hz)
+
+Gesamtrechenzeit 238 s

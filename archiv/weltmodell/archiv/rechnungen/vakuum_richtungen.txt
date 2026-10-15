@@ -1,0 +1,62 @@
+A) Q̃(s) = −4∫_s^∞ x³ n_B(x) dx (aus n_B des Kerns; Q̃ selbst steht nicht im Kern)
+   s = 0.3: Integral -25.94364578, Polylog-Form (07) -25.94364578
+   s = 1.0: Integral -25.07653686, Polylog-Form (07) -25.07653686
+   s = 3.0: Integral -15.76688380, Polylog-Form (07) -15.76688380
+   Q̃(0) = -25.97575761;  −4π⁴/15 = -25.97575761;  Γ(4)ζ(4) = 6.49393940
+   Bose-Leiter ∫₀^∞ s^d n_B ds = Γ(d+1)ζ(d+1) (Kern-n_B):
+     d = 1: 1.644934  Γ(d+1)ζ(d+1) = 1.644934
+     d = 2: 2.404114  Γ(d+1)ζ(d+1) = 2.404114
+     d = 3: 6.493939  Γ(d+1)ζ(d+1) = 6.493939
+   Planck-Lesart von d = 3: ∫d³k |k| n_B(|k|) = 4π·∫k³n_B dk; die drei Richtungen sind in x² (Zustandsdichte) und 4π schon integriert.
+   Allgemein ∫d^dk |k| n_B = S_{d−1}·Γ(d+1)ζ(d+1):
+     d = 1: S_(d−1) = 2.0000,  Γ(d+1)ζ(d+1) = 1.6449
+     d = 2: S_(d−1) = 6.2832,  Γ(d+1)ζ(d+1) = 2.4041
+     d = 3: S_(d−1) = 12.5664,  Γ(d+1)ζ(d+1) = 6.4939
+   Je Richtung (d = 1) gezählt: 3·Γ(2)ζ(2) = 4.9348 = π²/2, nicht 3·π⁴/15 = 19.4818.
+   ⇒ 3·(π⁴/15) wäre die dreidimensionale Größe dreimal, also die Richtungen doppelt gezählt.
+   Herkunft der Potenz: s⁴ = ℓ₀²Y (Y quadratisch im Gradienten, s² = a_N/a₀) ⇒ dQ̃/ds = 4s³n_B; Gewicht 1/n⁴ = 1/n^(d+1), d = 3.
+
+B) Friedmann: H² = (8πG/3)ρ + Λc²/3; G₀₀ = 3(ȧ/a)²/c² ist die Summe der drei Raumrichtungen.
+   a₀ = 1.10e-10: Λ = 13.239 Gpc, Λ_s = 3.8911e-53 m⁻², Ω_s = Λ_s c²/(3H₀²) = 0.2443  (Kern omega_vakuum: 0.2443)
+   3Ω_s = Λ_s c²/H₀² = 0.7330: der Faktor 3 hebt genau die 3 aus G₀₀ auf (die Spur über die drei Richtungen).
+   Vakuumterm T_μν = −ρ_s g_μν: je Richtung Druck p = −ρ_s; die Richtungen stehen schon in ρ + 3p = −2ρ_s (ä/a = +(8πG/3)ρ_s).
+   Die Energie ρ_s ist die 00-Komponente, einmal; 3 Druckkomponenten als 3 Energien zu zählen ist die Spur statt der Dichte.
+
+C) Topologie (Betti aus topologie_ganzes: T³ [1, 3, 3, 1], T³ × [0, Λ] [1, 3, 3, 1, 0]).
+   ℒ_𝒮 enthält (2/ℓ₀²)·Q̃(0) als Faktor der Volumenform √−g d⁴x: eine Zahl je Punkt, integriert über V = L₁L₂L₃;
+   die drei Schleifen gehen nur über das Volumen ein, der Term ist eine 0-Form (Skalar), keine 1-Form.
+   b₁ = 3 zählt harmonische 1-Formen (gleichförmige Vektorfelder, Verschiebungen) = Hintergrund der Triade, nicht die Rückstellung.
+   Rückstellung = gleichförmige Dehnung = Volumenmode (1 von 6 metrischen Nullmoden; 5 Scherung < 10⁻⁶ der Atemrate).
+   Die innere Richtung bringt keine Klasse (zusammenziehbar, H¹ = 0): Λ ist eine Länge, einmal; tiefste Mode des Ganzen k = 0 im Raum.
+
+D) Alternative: je Schleife L_i eine eigene Rückkehr mit eigenem Schluss Λ_i.
+   (a) Λ_i ∝ L_i ∝ a (Schluss an der Raumschleife): Vakuumteil wirkt wie w_s = −⅓; heute 3·Ω_s = 0.733 als Krümmung (gemessen Ω_K = 0.0007 ± 0.0037) – ausgeschlossen.
+   (b) Λ_i = Λ fest, drei gleiche Kopien: verlangt drei innere Richtungen. Die Rückkehr ist aber weder Querrichtung noch Wicklung
+       des Torus (07: irrationale Drehung gibt höchstens drei Rückkehrzeiten, keine Wurzel; SPARC d_s = 1,03 ± 0,07 ⇒ eine eindimensionale Rückkehr).
+       Die innere Richtung ist orthogonal zum ganzen Raum, nicht zu einer Schleife: eine Richtung, ein Λ = ν_kosm·ΣΔs_b (nur das Volumen).
+   (c) je Falte eine Halbgerade: alle bis dasselbe Λ; der Vakuumterm hängt an keinem einzelnen Trichter (sonst ∝ Zahl der Falten).
+   Nebenbefund: c²/L_min = 1.064e-10 m/s² (L_min = 27.37 Gpc) – Λ = L/2 wäre zahlengleich, aber L atmet, Λ nicht.
+
+E) Zahlen, falls Ω_DE = 3Ω_s (nur zur Prüfung).
+   Ω_DE (Kern, Planck-Flachheit) = 0.6865;  ω_m = (1+Q)ω_b = 0.14237
+   a₀ = 1.00e-10: Θ = 0.9595, Ω_s = 0.2019, 3Ω_s = 0.6058  (H₀ = 67.4)
+   a₀ = 1.06e-10: Θ = 1.0171, Ω_s = 0.2269, 3Ω_s = 0.6806  (H₀ = 67.4)
+   a₀ = 1.10e-10: Θ = 1.0555, Ω_s = 0.2443, 3Ω_s = 0.7330  (H₀ = 67.4)
+   a₀ = 1.13e-10: Θ = 1.0842, Ω_s = 0.2578, 3Ω_s = 0.7735  (H₀ = 67.4)
+   a₀ = 1.20e-10: Θ = 1.1514, Ω_s = 0.2908, 3Ω_s = 0.8723  (H₀ = 67.4)
+   verlangt: 3Ω_s = Ω_DE ⇒ a₀ = 1.0646e-10, Θ = 1.0215
+   Flachheit mit ω_m fest: H₀² = H₁₀₀²(ω_m + ω_r) + (4π⁴/15)(a₀/c)²  [1× Vakuumteil: 4π⁴/45]
+   a₀ = 1.00e-10: H₀(3Ω_s) = 64.62 km/s/Mpc, Ω_m = 0.3409;   H₀(nur Ω_s) = 48.39
+   a₀ = 1.06e-10: H₀(3Ω_s) = 67.20 km/s/Mpc, Ω_m = 0.3152;   H₀(nur Ω_s) = 49.55
+   a₀ = 1.10e-10: H₀(3Ω_s) = 68.95 km/s/Mpc, Ω_m = 0.2995;   H₀(nur Ω_s) = 50.34
+   a₀ = 1.13e-10: H₀(3Ω_s) = 70.27 km/s/Mpc, Ω_m = 0.2883;   H₀(nur Ω_s) = 50.95
+   SPARC a₀ = 1,06 ± 0,10: H₀ = 67.2 (+4.3 / −4.2) km/s/Mpc – eine Gleichung, zwei Unbekannte: gibt H₀(a₀) oder a₀(H₀), nicht beide.
+   Die CMB-Winkel legen bei konstantem Ω_DE H₀ = 67,4 fest (ΛCDM); dann a₀ = 1.0646e-10. Unabhängige Vorhersage entsteht nur mit a₀ aus Galaxien (±9 %).
+   Q-Fenster (a₀ = 1,1): Q ∈ [5.00, 5.52]; mit a₀ = 1.065e-10: Q ≤ 5.74; Q = 5.364 liegt drin.
+   (1+Q)a₀ = 6.775e-10 ≤ 7,17·10⁻¹⁰: erfüllt. Faktor 3 berührt Λ, Q, Zelle nicht (Λ = ν ΣΔs_b ist unabhängig von der Zählung).
+   a₀ fest seit z ≈ 10 ⇒ w = −1 exakt, Hintergrund = ΛCDM mit Ω_DE; Ω_DE(z = 1090)/Ω_m-Verhältnis wie ΛCDM. Gegen w₀ > −1 [G] kein Raum für die Bindungsrate.
+
+Handprobe: a₀ = 1,06e-10, H₀ = 67,4 ⇒ H = 2,1843e-18 s⁻¹, cH = 6,5484e-10, 2πa₀ = 6,6602e-10, Θ = 1,0171, Θ² = 1,0345,
+           Ω_s = 0,21932·1,0345 = 0,2269, 3Ω_s = 0,6807.  Code: 0.6806
+Handprobe H₀: ω_m H₁₀₀² = 0,14237·(3,2408e-18)² = 1,4953e-36; (4π⁴/15)(1,1e-10/c)² = 25,976·1,3463e-37 = 3,4971e-36;
+           Summe 4,992e-36 ⇒ H₀ = 2,2344e-18 s⁻¹ = 68,95 km/s/Mpc.

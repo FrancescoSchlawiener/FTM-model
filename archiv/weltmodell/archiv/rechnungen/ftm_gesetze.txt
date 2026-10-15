@@ -1,0 +1,160 @@
+Teil | Gesetz                                                                         |      Modell |   Vergleich |                Maß | Urteil | Quelle
+A    | Schwarzschild-Radius 2GM/c² = r₀ = 6Δs                                         |      2953.3 |      2953.3 |            0.0e+00 | OK     | Schwarzschild 1916
+A    | Zeitdilatation √(1 − 2GM/rc²)                                                  |           1 |           1 |            0.0e+00 | OK     | Einstein 1911/1916
+A    | Lichtablenkung 4GM/(c²b) = 12Δs/b                                              |    8.49e-06 |    8.49e-06 |            2.2e-16 | OK     | Einstein 1915
+A    | Periheldrehung 6πGM/(c²a(1−e²)) = 18πΔs/(a(1−e²))                              |  5.0186e-07 |  5.0186e-07 |            0.0e+00 | OK     | Einstein 1915
+A    | Photonensphäre 3GM/c² = 9Δs                                                    |      4429.9 |      4429.9 |            0.0e+00 | OK     | Schwarzschild
+A    | Schattenradius 3√3·GM/c²                                                       |      7672.8 |      7672.8 |            0.0e+00 | OK     | Synge 1966
+A    | ISCO Kerr j = 0.0 mitläufig (Minimum der Bahnenergie)                          |           6 |           6 |            3.6e-08 | OK     | Bardeen, Press, Teukolsky 1972
+A    | ISCO Kerr j = 0.9 mitläufig (Minimum der Bahnenergie)                          |      2.3209 |      2.3209 |            2.0e-07 | OK     | Bardeen, Press, Teukolsky 1972
+A    | ISCO Kerr j = 0,9 gegenläufig                                                  |      8.7174 |      8.7174 |            6.0e-09 | OK     | Bardeen, Press, Teukolsky 1972
+A    | Hawking-Temperatur ħc³/(8πGMk) = ħc/(24πkΔs)                                   |  6.1703e-08 |  6.1703e-08 |            2.2e-16 | OK     | Hawking 1974
+A    | Bekenstein-Hawking S = 4πkGM²/(ħc) = 36πk(Δs/ℓ_P)²                             |  1.0489e+77 |  1.0489e+77 |            0.0e+00 | OK     | Bekenstein 1973
+A    | Hawking-Lebensdauer 5120πG²M³/(ħc⁴)                                            |  6.6129e+74 |  6.6129e+74 |            3.3e-16 | OK     | Page 1976
+A    | Eddington-Grenze 4πGMm_pc/σ_T                                                  |  1.2571e+31 |  1.2571e+31 |            0.0e+00 | OK     | Eddington 1926
+A    | Gibbons-Hawking ħH/(2πk) = ħc/(12πkΔs_H), Δs_H = c/6H                          |  2.6554e-30 |  2.6554e-30 |            2.2e-16 | OK     | Gibbons, Hawking 1977
+A    | Kepler T² = 4π²a³/(GM) = 4π²a³/(3c²Δs)                                         |  3.1558e+07 |  3.1558e+07 |            0.0e+00 | OK     | Kepler 1619, Newton
+A    | Quadrupolleistung (32/5)G⁴(m₁m₂)²M/(c⁵r⁵)                                      |  1.4579e+40 |  1.4579e+40 |            0.0e+00 | OK     | Peters, Mathews 1963
+A    | Hulse-Taylor Ṗ (Peters-Mathews)                                                | -2.4026e-12 | -2.4026e-12 |            8.9e-16 | OK     | Peters 1964
+A    | geodätische Präzession (3/2)(GM/c²r)ω = (9/2)(Δs/r)ω                           |  1.0145e-12 |  1.0145e-12 |            2.2e-16 | OK     | de Sitter 1916
+A    | Mitführung im Polarorbit GJ/(2c²a³) = 3Δs·a_J·c/(2a³)                          |  6.2681e-15 |  6.2681e-15 |            1.1e-16 | OK     | Lense, Thirring 1918; Schiff 1960
+A    | Sternmasse m_Pl³/m_p² (Landau-Chandrasekhar-Skala)                             |   3.685e+30 |   3.685e+30 |            0.0e+00 | OK     | Landau 1932
+A    | α_G(M) = 3Δs/λ̄ = (M/m_Pl)²                                                    |  2.1111e-25 |  2.1111e-25 |            0.0e+00 | OK     | Dirac, Eddington
+B    | Beschleunigungsrelation: Form g/(1 − e^{−√(g/g†)})                             |           1 |           1 |            4.6e-15 | OK     | McGaugh, Lelli, Schombert 2016 (PRL 117, 201101)
+B    | Tiefbereich skaleninvariant: a(λr)·λ = a(r) (a_N = 10⁻⁴·a₀)                    |           1 |     0.99962 |            3.8e-04 | OK     | Milgrom 2009 (ApJ 698, 1630)
+B    | Virialsatz im Tiefbereich σ⁴ = (4/81)GMa₀ (Plummer, örtliche Regel)            |  8.4906e+06 |  8.4917e+06 |            1.2e-04 | OK     | Milgrom 1995; McGaugh, Milgrom 2013
+B    | Baryonische Tully-Fisher: v⁴ = GMa₀ (Steigung 4 exakt im Grenzfall)            |           4 |        3.85 |              +1.7σ | OK     | Lelli et al. 2019 (MNRAS 484, 3267): Steigung 3,85 ± 0,09
+B    | Toomre: (1/2πG)∫V²/R² dR = Σ(0) für die Exponentialscheibe (Newton)            |     0.99997 |           1 |            2.5e-05 | OK     | Toomre 1963, Freeman 1970
+B    | Zentrale Flächendichte: Steigung β der Doppelpotenz (α = 1), örtliche Regel    |     0.53936 |        0.62 |              -2.0σ | SPANNUNG | Lelli et al. 2016 (ApJL 827, L19): β = 0,62 ± 0,04
+B    | Zentrale Flächendichte: Modell gegen Lelli-Fit bei Σ₀ = 10 / 100 / 1000 M☉/pc² |     0.22434 |           0 | +0.22 / +0.14 / +0.08 | SPANNUNG | Lelli et al. 2016: Streuung 0,21 dex
+B    | Crater II im Außenfeld: Plummer-Virial / Schätzer McGaugh (σ² ∝ M statt M/2) [ |      1.3313 |      2.1244 |  Faktor 2.55 in σ² | HINWEIS | McGaugh 2016 (ApJL 832, L8): 2,1 (+0,9/−0,6)
+B    | Äußeres Feld senkt ν (Richtung zählt): ν frei / senkrecht / gleichgerichtet (M |      6.2489 |      5.3555 |               4.59 | OK     | Chae et al. 2020 (ApJ 904, 51): nachgewiesen, 4–11σ
+C    | Rückkehr mit Verlust: q = e^{−L√(Γ/D)} (Irrfahrt, D = ½, Γ = p)                |     0.34187 |     0.34323 |            4.0e-03 | OK     | Laplace-Transformierte der Erstrückkehrzeit (Lévy)
+C    | diskret exakt: [(1 − √(1 − (1−p)²))/(1 − p)]^L gegen e^{−L√(2p)}               |     0.34126 |     0.34187 |            1.8e-03 | OK     | Feller, Kap. XIV
+C    | Kac: mittlere Rückkehrzeit auf der bei N geschlossenen Halbgeraden = 2N (N = 1 |          30 |      29.735 |            8.8e-03 | OK     | Kac 1947
+C    | Watson-Integral W₃ = ∫e^{−t}I₀(t/3)³dt = 1/(1 − p₃)                            |      1.5164 |      1.5164 |            4.9e-07 | OK     | Watson 1939; Pólya 1921
+C    | Bose-Leiter ∫s^1n_B ds = Γ(1+1)ζ(1+1)                                          |      1.6449 |      1.6449 |            2.2e-16 | OK     | Planck 1900; Stefan-Boltzmann (d = 3)
+C    | Bose-Leiter ∫s^2n_B ds = Γ(2+1)ζ(2+1)                                          |      2.4041 |      2.4041 |            2.2e-16 | OK     | Planck 1900; Stefan-Boltzmann (d = 3)
+C    | Bose-Leiter ∫s^3n_B ds = Γ(3+1)ζ(3+1)                                          |      6.4939 |      6.4939 |            1.2e-15 | OK     | Planck 1900; Stefan-Boltzmann (d = 3)
+C    | Wien: Maximum von s³n_B bei s = 2,821439                                       |      2.8214 |      2.8214 |            1.3e-07 | OK     | Wien 1893 (Verschiebungsgesetz)
+C    | Kippstelle: Hysteresefenster ∝ b^{3/2} (Verhältnis b = 0,4 zu 0,1 = 8)         |           8 |           8 |            0.0e+00 | OK     | Thom 1972 (Spitzenkatastrophe)
+C    | Fluktuation-Dissipation ⟨x²⟩ = kT/k, Dämpfung γ = 1                            |         0.5 |     0.50519 |            1.0e-02 | OK     | Einstein 1905; Kubo 1966
+C    | Fluktuation-Dissipation ⟨x²⟩ = kT/k, Dämpfung γ = 10                           |         0.5 |     0.50465 |            9.3e-03 | OK     | Einstein 1905; Kubo 1966
+C    | Onsager-Casimir: X·(L_s + L_a)·X = X·L_s·X                                     |      14.683 |      14.683 |            1.1e-16 | OK     | Onsager 1931; Casimir 1945
+C    | Ramanujan τ(n): Werte, Multiplikativität, Hecke, Kongruenz mod 691, Deligne-Sc |         -24 |         -24 |               alle | OK     | Ramanujan 1916; Mordell 1917; Deligne 1974
+C    | Bilder im Kaleidoskop: r₂(n) = 4(d₁ − d₃), Sechseck 6(d₁ − d₂) mod 3, n ≤ 25   |           8 |           8 |           n = 1…25 | OK     | Jacobi 1829; Eisenstein
+C    | Barkhausen: Amplitude des Grenzzyklus A* = 2 (van der Pol, μ = 0,05)           |           2 |      1.9999 |            6.5e-05 | OK     | van der Pol 1926; Barkhausen 1935
+C    | Kac für eine Zerlegung: Σ 1/⟨T_i⟩ = 1 (geschlossene Kette, 5 Zustände)         |           1 |           1 |            1.2e-05 | OK     | Kac 1947
+Z    | Poynting ∂u/∂t + ∇·S = −J·E: Feldverlust = Joule-Wärme (81% umgesetzt)         |      15.278 |      15.278 |            8.3e-11 | OK     | Autor, Zustandsraum (Tafel 3, II/III)
+Z    | Maxwell: ∇·B = 0 und ∇·D = ρ bleiben erhalten (Gitter 12³, 40 Schritte mit Zuf |          ja |          ja |              4e-15 | OK     | Autor, Zustandsraum (Tafel 3, I)
+Z    | Lorentzkraft f = ρE + J×B tangential: |v| im Magnetfeld erhalten               |       1.063 |       1.063 |            6.0e-15 | OK     | Autor, Zustandsraum (Tafel 3, Lorentz; 09)
+Z    | Schließung: Ring hat einen Nullmode (Gesamtmenge bleibt), Strecke mit Rand kei |          ja |          ja |       2e-11 / 9.87 | OK     | Autor, Zustandsraum (Tafel 4)
+Z    | Spektrallücke des geschlossenen Kreises 4π²D/L²                                |      39.478 |      39.478 |            2.1e-05 | OK     | Autor, Zustandsraum (Tafel 4); 05
+Z    | Fluchtrate der aufgeschnittenen Strecke π²D/L²                                 |      9.8696 |      9.8696 |            5.1e-06 | OK     | Autor, Zustandsraum (Tafel 4); 05
+Z    | Vorspannung verschiebt Resonanz: ω²(P)/ω²(0) = 1 − P/P_E (P = P_E/2; Knicken b |         0.5 |         0.5 |            9.1e-06 | OK     | Autor, Zustandsraum (Tafel 1, Gravitation; 05)
+Z    | Parametrisch: Wirkung E/ω bleibt bei langsamer Änderung von g (g × 4 über ≈ 70 |         0.5 |         0.5 |            2.4e-07 | OK     | Autor, Zustandsraum (Tafel 4, Faserbündel); 05
+Z    | Thermisches Durchgehen bei Schleifenverstärkung q = 1: I²R₀α/G = 1/e (R = R₀e^ |     0.36788 |     0.36788 |            5.7e-10 | OK     | Autor, Zustandsraum (Tafel 3, Wärme; 09)
+Z    | Verstärkung ist Verlangsamung: τ = τ₀/(1 − q) (q = 0.259)                      |      1.3498 |      1.3498 |            2.3e-07 | OK     | 05
+Z    | GENERIC: 𝓛 = −𝓛ᵀ, 𝓛∇S = 0, 𝓜 = 𝓜ᵀ ≥ 0, 𝓜∇E = 0; E fest, S steigt (gedämpfter O |          ja |          ja | ΔE 6e-13, ΔS +0.405 | OK     | Autor, Zustandsraum (Tafel 2, drei Rollen); 05; Öttinger 2005
+Z    | Einrasten genau für |Δω| ≤ 2k|cos φ|; bei φ = π/2 nie (156 Paare Δω, φ)        |          ja |          ja |        40 gerastet | OK     | 06; Adler 1946
+Z    | Rate am Rastpunkt −√((2k cos φ)² − Δω²) (Δω = 0,6, k = 0,5, φ = 0; Abklingen e |        -0.8 |        -0.8 |            1.7e-06 | OK     | 06
+Z    | Einrastzunge 3:2: Rand bei |nω₂ − mω₁| = (m + n)k (k = 0,02)                   |           1 |        1.01 |            1.0e-02 | OK     | 06; Arnold 1965
+Z    | Einrastzunge 3:2: Rand bei |nω₂ − mω₁| = (m + n)k (k = 0,04, Breite linear)    |           1 |        1.01 |            1.0e-02 | OK     | 06; Arnold 1965
+Z    | Kuramoto N = 40: volles Einrasten (N − 1)k/W, Simulation gegen Selbstkonsisten |     0.63541 |      0.6375 |            3.3e-03 | OK     | 06; Kuramoto 1975
+Z    | Grenze N_max ≈ 1 + 2W/(πk): (N − 1)k_c/W → 2/π (N = 4000)                      |     0.63662 |     0.63662 |            1.9e-06 | OK     | 06; Kuramoto: K_c = 2/(πg(0))
+Z    | Koexistenz genau für θ₁₂/β₂ < α₁/α₂ < β₁/θ₂₁ (5 Verhältnisse)                  |          ja |          ja |               alle | OK     | 06
+Z    | Amplitudentod genau für K_d > μ und |Δω| > 2√(μ(2K_d − μ)) (3 Punkte)          |          ja |          ja |               alle | OK     | 06; Aronson, Ermentrout, Kopell 1990
+Z    | Gedächtniskern bindet: Umkehrpunkt aus der Erhaltung H = v²/2 − 1/x + γy²/2    |      9.7475 |      9.7475 |            1.7e-12 | OK     | 05
+Z    | Gedächtniskern bindet: Umkehrpunkt x = 9,75                                    |        9.75 |      9.7475 |            2.6e-04 | OK     | 05
+Z    | Maxwell-Element ωt_K = 0.5: Speicheranteil                                     |         0.2 |         0.2 |            1.1e-16 | OK     | 05
+Z    | Maxwell-Element ωt_K = 0.5: Verlustanteil                                      |         0.4 |         0.4 |            2.2e-16 | OK     | 05
+Z    | Maxwell-Element ωt_K = 2.0: Speicheranteil                                     |         0.8 |         0.8 |            2.2e-16 | OK     | 05
+Z    | Maxwell-Element ωt_K = 2.0: Verlustanteil                                      |         0.4 |         0.4 |            2.2e-16 | OK     | 05
+Z    | Preisach: gleiche Folge der Extremwerte ⇒ gleicher Zustand; Rückkehrpunkt-Gedä |          ja |          ja | Ausgang 511.098 = 511.098 | OK     | 06; Preisach 1935
+Z    | Kippstelle: 1 − q = 2(3a)^{1/4}δ^{1/2} vor der Falte (a = 1, δ = 10⁻⁸)         |  0.00026321 |  0.00026323 |            4.4e-05 | OK     | 06
+Z    | Kippstelle: Sprung an der Falte √(3a)                                          |      1.7321 |      1.7321 |            3.3e-16 | OK     | 06
+Z    | Oszillatorischer Einsatz im Dreieck, Zeiten (1.0, 1.0, 1.0): |q₃| = (Σt)(Σ1/t) |           8 |           8 |            0.0e+00 | OK     | 06
+Z    | Oszillatorischer Einsatz im Dreieck, Zeiten (0.1, 1.0, 30.0): |q₃| = (Σt)(Σ1/t |      342.14 |      342.14 |            2.2e-16 | OK     | 06
+Z    | Rückläufe im Netz: (I − A)⁻¹ = ΣAⁿ (Spektralradius 0,9)                        |      59.621 |      59.621 |            4.4e-16 | OK     | 05; Leontief, Hawkins-Simon
+Z    | Linsen-Test Kugel: Linsenmasse / dynamische Masse η = 1 (b = 0.3 r*)           |      7.7632 |      7.7632 |            3.3e-10 | OK     | Autor, Zustandsraum (Tafel 6, Test 1); 05
+Z    | Linsen-Test Kugel: Linsenmasse / dynamische Masse η = 1 (b = 1.0 r*)           |      4.2709 |      4.2709 |            1.1e-09 | OK     | Autor, Zustandsraum (Tafel 6, Test 1); 05
+Z    | Linsen-Test Kugel: Linsenmasse / dynamische Masse η = 1 (b = 5.0 r*)           |      3.3468 |      3.3468 |            1.2e-09 | OK     | Autor, Zustandsraum (Tafel 6, Test 1); 05
+Z    | Ablenkung weit außen: α → 2π(v_f/c)² + 6Δs/b (b = 200 r*)                      |      3.1466 |      3.1466 |            1.0e-06 | OK     | 08
+M    | (A1) g = x/y²·g⊕ gegen GM/R² (Sonne)                                           |      273.91 |       274.2 |            1.0e-03 | OK     | 01
+M    | Zeitdifferential einer Bahn δ = 3Δs/r = v²/c² (Erdbahn, v aus dem Jahr)        |  9.8706e-09 |  9.8707e-09 |            2.9e-06 | OK     | 01
+M    | Brechzahl n = 1 + 6Δs/r als Strahlintegral: α = 12Δs/b (Takt + Faltung je die  |    8.49e-06 |    8.49e-06 |            0.0e+00 | OK     | 08
+M    | Schnitt 3Δs = λ̄ bei m_Pl (Nullstelle)                                         |  2.1764e-08 |  2.1764e-08 |            1.6e-15 | OK     | 02; 72
+M    | Schnitt r* = λ̄ bei M_c = (ħ²a₀/(Gc²))^{1/3} (Nullstelle)                      |  5.8862e-29 |  5.8862e-29 |            1.3e-15 | OK     | 08; 72
+M    | Schnitt r* = 3Δs bei M_U = c⁴/(Ga₀) (Nullstelle)                               |  1.1002e+54 |  1.1002e+54 |            1.3e-15 | OK     | 08; 72
+M    | Längenleiter M_c³·M_U = m_Pl⁴ (aus den Nullstellen)                            |  2.2438e-31 |  2.2438e-31 |            1.5e-14 | OK     | 08
+M    | r*²·λ̄ = ℓ_P²·ℓ₀ für jede Masse (Stichprobe 10⁻²⁰ … 10⁴² kg)                   |           1 |           1 |            2.2e-16 | OK     | 08; 72
+M    | Geometrisches Mittel λ̄_e² = r_e·a_B (CODATA-Werte)                            |  1.4912e-25 |  1.4912e-25 |            7.6e-12 | OK     | 08
+M    | Sternskala: Δs_*²·Δs_p = (λ̄_p/3)³ ⇒ M_* = m_Pl³/m_p²                          |   3.685e+30 |   3.685e+30 |            0.0e+00 | OK     | 02
+M    | Nullfläche des Takts r_E(θ) = 3Δs + √(9Δs² − a_J²cos²θ) (Nullstelle von g_tt,  |      1.8885 |      1.8885 |            3.1e-15 | OK     | 08
+M    | T_mitläufig − T_gegenläufig = 4πa_J/c unabhängig von r (Metrik, r = 10 GM/c²)  |      7.5398 |      7.5398 |            5.6e-15 | OK     | 08
+M    | T_mitläufig − T_gegenläufig = 4πa_J/c unabhängig von r (Metrik, r = 1000 GM/c² |      7.5398 |      7.5398 |            8.4e-12 | OK     | 08
+M    | Spin ½: a_J·Δs = ℓ_P²/6 (Elektron)                                             |  4.3538e-71 |  4.3538e-71 |            2.2e-16 | OK     | 09
+M    | Magnetisches Moment g_F·e·c·a_J/2 = μ_B (CODATA 9,2740100783·10⁻²⁴ J/T)        |   9.274e-24 |   9.274e-24 |            6.7e-12 | OK     | 09
+M    | Rückkehr bei Λ geschlossen: G(x) = cosh((L − x)/λ)/cosh(L/λ) (L = 3λ, x = 1λ)  |     0.37369 |     0.37369 |            4.4e-08 | OK     | 07; 71 (Kabel, Thiele)
+M    | Rückkehr offen: q = e^{−s} (x = 1λ)                                            |     0.36788 |     0.36788 |            4.2e-08 | OK     | 07
+M    | d ln a/d ln a₀ = χ/2 (s = 0.3)                                                 |     0.42874 |     0.42874 |            6.0e-11 | OK     | 03; 07
+M    | d ln a/d ln a_N = 1 − χ/2, Flussdimension 3 − χ (s = 0.3)                      |     0.57126 |     0.57126 |            8.1e-11 | OK     | 03; 72
+M    | d ln a/d ln a₀ = χ/2 (s = 1.0)                                                 |     0.29099 |     0.29099 |            1.1e-10 | OK     | 03; 07
+M    | d ln a/d ln a_N = 1 − χ/2, Flussdimension 3 − χ (s = 1.0)                      |     0.70901 |     0.70901 |            5.7e-11 | OK     | 03; 72
+M    | d ln a/d ln a₀ = χ/2 (s = 3.0)                                                 |    0.078594 |    0.078594 |            1.1e-09 | OK     | 03; 07
+M    | d ln a/d ln a_N = 1 − χ/2, Flussdimension 3 − χ (s = 3.0)                      |     0.92141 |     0.92141 |            1.9e-11 | OK     | 03; 72
+M    | Spektraldimension d_s = 2·d ln a/d ln a_N → 1 im Tiefbereich (s = 10⁻³)        |      1.0005 |           1 |            5.0e-04 | OK     | 71 (Pólya)
+M    | Zusatz der Rückkehr a − a_N = χ·(Δs/r)(3c²/r*) (Sonne, s = 0,7)                |  5.3169e-11 |  5.3169e-11 |            2.2e-16 | OK     | 07
+M    | Φ_X = v_f²·ln ν(s) als Integral von a − a_N (Punktmasse, s = 0.5)              |     0.93275 |     0.93275 |            8.9e-16 | OK     | 08
+M    | Φ_X = v_f²·ln ν(s) als Integral von a − a_N (Punktmasse, s = 2.0)              |     0.14541 |     0.14541 |            2.9e-15 | OK     | 08
+M    | Φ_X Hernquist = v_f²·ln[ν(s)/ν(s₀)] (b_H = 0,4 r*, r = 1,5 r*)                 |     0.80785 |     0.80785 |            2.2e-16 | OK     | 08
+M    | (Re τ_M)² = 1 + χ, Punktmasse (r = 0.5 r*)                                     |       1.313 |       1.313 |            2.5e-08 | OK     | 07; 72
+M    | (Re τ_M)² = 1 + χ, Punktmasse (r = 2.0 r*)                                     |      1.7707 |      1.7707 |            9.8e-09 | OK     | 07; 72
+M    | (Re τ_M)² = 3 + γ_N(1 − χ/2), Hernquist (r = 1 r*)                             |      2.0607 |      2.0607 |            3.6e-09 | OK     | 07
+M    | Entropie der Rücklaufzahl H = ln ν + χ (s = 0.3)                               |      2.2077 |      2.2077 |            0.0e+00 | OK     | 71 (Jaynes)
+M    | Entropie der Rücklaufzahl H = ln ν + χ (s = 1.0)                               |      1.0407 |      1.0407 |            0.0e+00 | OK     | 71 (Jaynes)
+M    | Kritische Verzweigung (Borel): Summe über P(S = n) gegen die Fixpunktgleichung |    0.014076 |    0.014076 |            2.5e-13 | OK     | 71
+M    | Kritische Verzweigung: 1 − E[e^{−ΓS}] = √(2Γ) (Γ = 10⁻⁸), der Exponent ½ der R |  0.00014142 |  0.00014141 |            4.7e-05 | OK     | 71; 07
+M    | Kritische Verzweigung: P(S = n)·n^{3/2}·√(2π) → 1 (n = 10⁷)                    |           1 |           1 |            2.2e-08 | OK     | 71
+M    | Mittlere Sehne im Kreis πA/P (η₂ = π)                                          |      1.5708 |      1.5705 |            2.1e-04 | OK     | 71; 72 (Cauchy)
+M    | Mittlere Sehne in der Kugel 4V/S (η₃ = 4)                                      |      1.3333 |      1.3333 |            2.1e-05 | OK     | 71; 72 (Cauchy)
+M    | V/(S·R) = 1/d für die d-Kugel ⇒ Δs = GM/(3c²) für d = 3                        |     0.33333 |     0.33333 |            0.0e+00 | OK     | 72
+M    | Modulformen: q dP/dq = (P² − Q)/12 usw., Δ = (Q³ − R²)/1728 = q∏(1 − qⁿ)²⁴, D₁ |          ja |          ja |               alle | OK     | 05; Ramanujan 1916
+M    | Herkunft der Zahlen: 24, 240, 504 = (2π)^k/(Γ(k)ζ(k)), 1728 = 3·240 + 2·504, 1 |          ja |          ja |               alle | OK     | 05
+M    | Lambert-Reihe Σσ₁(n)e^{−ns} = π²/(6s²) − 1/(2s) + 1/24 (Modultransformation, s |      159.54 |      159.54 |            2.2e-16 | OK     | 05
+M    | Hecke: Σσ₁(pm)q^m = (1 + p)ℓ(q) − p·ℓ(q^p) (p = 2, 3, 5)                       |          ja |          ja |               alle | OK     | 05
+M    | Rogers-Ramanujan Σq^{n²}/(q;q)_n = ∏1/((1 − q^{5n+1})(1 − q^{5n+4})) (q = ½)   |      2.1727 |      2.1727 |            6.7e-16 | OK     | 05
+M    | Ausschlussregel Abstand ≥ 2: Zustände je Platz → φ (Fibonacci)                 |       1.618 |       1.618 |            0.0e+00 | OK     | 05
+M    | Ramanujan-Summen: E_q Projektoren, ΣE_q = I, E_qE_q' = 0, E₁ = 𝒫 (Z₁₂)         |          ja |          ja |               alle | OK     | 05
+M    | 𝒫_q = (1 − q)(I − qT)⁻¹: Eigenwerte auf dem Kreis um 1/(1 + q) mit Radius q/(1 |     0.27007 |     0.27007 |            6.0e-15 | OK     | 05
+M    | Goldene Wicklung: n·‖nφ‖ → 1/√5 (n = F₂₀)                                      |     0.44721 |     0.44721 |            1.4e-08 | OK     | 01
+M    | Drei-Abstände-Satz: Rückkehrzeiten nehmen ≤ 3 Werte an, der größte = Summe; Mi |          ja |          ja | Kac 1.0000/1.0000/1.0001 | OK     | 71; 01; Slater 1967
+M    | Kapitza-Pendel: zeitgemitteltes Einschließen oben genau für (Aω)² > 2gℓ ((Aω)² |          ja |          ja |               alle | OK     | 05 (Paul-Falle); Kapitza 1951
+M    | Äquivalenzschicht: Schale und Vollkugel geben außen dasselbe Feld GM/r²        |          ja |          ja | 1.0000000000 / 1.0000000000 | OK     | 05; 71
+M    | Kreuzterm beim Verschmelzen 8πG·M₁M₂k/(ħc) (aus der Horizontfläche)            |  6.0822e+55 |  6.0822e+55 |            3.3e-16 | OK     | 04
+M    | Gleiche Massen: Kreuzterm = ½ der Endentropie                                  |         0.5 |         0.5 |            0.0e+00 | OK     | 04
+M    | Lebensdauer t = 3840·(S/k)·Δs/c = 5120πG²M³/(ħc⁴)                              |  6.6129e+74 |  6.6129e+74 |            3.3e-16 | OK     | 04
+M    | Rückgabe dM/dt = −ħc⁴/(15360πG²M²) (Ableitung von M(t))                        | -3.9628e-09 | -3.9628e-09 |            3.3e-07 | OK     | 04
+M    | Horizont bei gleichem Radius doppelt so heiß: (ħH/2πk)/(ħc/(4πk·r₀)), r₀ = c/H |           2 |           2 |            1.1e-16 | OK     | 04
+M    | Größte mögliche Falte (Nariai-Grenze, numerisch) hat ⅓ der Horizontentropie    |     0.33333 |     0.33333 |            1.5e-10 | OK     | 04
+M    | Alle Falten zusammen höchstens Ω_m²·S_H (eine Falte aus Ω_m·M_H)               |    0.098219 |    0.098219 |            5.6e-16 | OK     | 04
+M    | Kein Endzustand: −Ḣ ≥ ℓ_P²H³Ṡ_i/(2πc²k) aus Ṡ_H ≥ Ṡ_i                          |  3.4918e-28 |  3.4918e-28 |            0.0e+00 | OK     | 04
+M    | Λ_s = π⁴/(15Λ²) ⇒ Ω_s = (π²/45)·Θ², Θ = 2πa₀/(cH)                              |     0.24433 |     0.24433 |            4.4e-16 | OK     | 03
+M    | S_max = πkc²/(ℓ_P²H²) = (45/π³)k(Λ/ℓ_P)² bei H² = Λ_s c²/3                     | 1.2802e+100 | 1.2802e+100 |            1.1e-16 | OK     | 03
+M    | Strukturwirkung: Q̃(s) + 4π⁴/15 = Q_s(s⁴), der Vakuumteil ist ihre Konstante ( |     0.13749 |     0.13749 |            3.6e-14 | OK     | 07; 03
+M    | Strukturwirkung: Q̃(s) + 4π⁴/15 = Q_s(s⁴), der Vakuumteil ist ihre Konstante ( |     0.89922 |     0.89922 |            1.3e-14 | OK     | 07; 03
+M    | Strukturwirkung: Q̃(s) + 4π⁴/15 = Q_s(s⁴), der Vakuumteil ist ihre Konstante ( |      10.209 |      10.209 |            3.1e-13 | OK     | 07; 03
+M    | Spaltbarkeit: Rückstellung ∝ (1 − x), Kippstelle bei x = E_C/(2E_S) = 1 (Ellip |           1 |           1 |            4.3e-08 | OK     | 06; Bohr, Wheeler 1939
+M    | Größte Bindung je Nukleon (Oberfläche + Coulomb) bei x = ¼, E_C = E_S/2        |        0.25 |        0.25 |            2.6e-08 | OK     | 06
+M    | Aufbauzeit der Rückkehr τ(x) = x/(2√(Dk)) = τ_D/(2s) (x = 3λ)                  |         1.5 |      1.4985 |            9.8e-04 | OK     | 71 (Morphogen)
+E    | Schwelle a₀ gegen die gemessene Relation g† (systematischer Fehler)            |         1.1 |         1.2 |              -0.4σ | OK     | McGaugh, Lelli, Schombert 2016: 1,20 ± 0,24 (sys)
+E    | Zelle ohne Kreispaare: a₀ ≤ 1,13·10⁻¹⁰ (L ≥ 0,985·d_LSS)                       |         1.1 |       1.127 |              -1.4σ | OK     | COMPACT, Petersen et al. 2023 (JCAP 01, 030)
+E    | N_eff (Vakuumteil früh null)                                                   |       3.046 |        2.99 |              +0.3σ | OK     | Planck 2018 + BAO: 2,99 ± 0,17
+E    | Krümmung Ω_K (Zelle atmet, Λ fest)                                             |           0 |      0.0007 |              -0.4σ | OK     | Planck 2018 + BAO: 0,0007 ± 0,0037 (95 %)
+E    | Crater II σ, örtliche Regel (Jeans, Außenfeld)                                 |        1.39 |         2.7 |              -4.4σ | WIDERSPRUCH | Caldwell et al. 2017: 2,7 ± 0,3 km/s
+E    | Gravity Probe B geodätisch [mas/Jahr]                                          |      6603.9 |      6601.8 |              +0.1σ | OK     | Everitt et al. 2011: 6601,8 ± 18,3
+E    | Gravity Probe B Mitführung [mas/Jahr]                                          |        40.8 |        37.2 |              +0.5σ | OK     | Everitt et al. 2011: 37,2 ± 7,2
+E    | Hulse-Taylor Ṗ gemessen / Theorie                                              |           1 |      0.9983 |              +1.1σ | OK     | Weisberg, Huang 2016: 0,9983 ± 0,0016
+E    | Schatten M87* (6,5·10⁹ M☉, 16,8 Mpc) [μas]                                     |      39.688 |          42 |              -0.8σ | OK     | EHT 2019: 42 ± 3
+
+157 Gesetze geprüft: HINWEIS 1, OK 153, SPANNUNG 2, WIDERSPRUCH 1   (Rechenzeit 27 s)

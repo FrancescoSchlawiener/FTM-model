@@ -1,0 +1,185 @@
+TRIADE AUF ALLEN EBENEN – Hintergrund / Wirbel / gefaltetes Zentrum
+Kern: a₀ = 1.10e-10 m/s², ℓ₀ = c²/a₀ = 26.48 Gpc, Λ = 13.24 Gpc, τ_D = c/a₀ = 86.4 Mrd. J., H₀τ_D = 5.953, Q = 5.3643, q = 0.8429, Ω_m = 0.3134
+Elterngezeit am Sonnenort T = a₀/(642 pc) = 5.553e-30 s⁻² (aus 07); Milchstraße als Punktmasse 6·10¹⁰ M☉ mit der Regel
+SPARC (175 Galaxien, 171 mit R_HI; Υ_d = 0,5, Gas 1,33·M_HI [A]): Median M_b = 5.208e+09 M☉, R_HI = 23.47 kpc
+Zelle: L = zelle_aus_a0(a₀); Masse ρ_m·L³ (mit Rückläufen gezählt), R = Radius der volumengleichen Kugel
+
+1) DIE DREI GLIEDER JE EBENE (SI; Längen in m)
+   Zentrum: Δs = GM/3c², r₀ = 6Δs, Tiefe an der Hülle δ = 3Δs/R
+   Ebene               M [kg]         Δs         r₀       δ(R)
+   Proton          1.673e-27 4.140e-55 2.484e-54 1.476e-39
+   H-Atom          1.674e-27 4.143e-55 2.486e-54 2.349e-44
+   Erde            5.972e+24 1.478e-03 8.870e-03 6.961e-10
+   Sonne           1.988e+30 4.922e+02 2.953e+03 2.123e-06
+   KSH dicht [A]   1.988e+35 4.922e+07 2.953e+08 9.571e-10
+   KSH dünn [A]    3.977e+34 9.844e+06 5.907e+07 3.828e-11
+   SPARC-Median    1.035e+40 2.563e+12 1.538e+13 1.062e-08
+   Milchstraße     1.193e+41 2.953e+13 1.772e+14 1.914e-07
+   Haufen          3.380e+44 8.368e+16 5.021e+17 8.135e-06
+   Kosmos-Zelle    1.650e+54 4.085e+26 2.451e+27 2.320e+00
+   Wirbel: Hülle R, Neigung g(R), Umlauf v, ω an R (kompakt Newton; kollektiv mit ν(g(R)); Atom EM; Proton Compton-Takt; Zelle H₀)
+   Ebene                    R    g(R)/a₀    ν(R)    v [m/s]    ω [1/s]  Träger
+   Proton          8.414e-16 1.434e+03   1.000 2.998e+08 1.425e+24  Compton-Takt (QCD-Bindung)
+   H-Atom          5.292e-11 3.626e-07   1.000 2.188e+06 4.134e+16  Hülle EM, v/c = α
+   Erde            6.371e+06 8.928e+10   1.000 7.910e+03 1.242e-03  Umlauf an R (Newton, geglättet)
+   Sonne           6.957e+08 2.493e+12   1.000 4.368e+05 6.278e-04  Umlauf an R (Newton, geglättet)
+   KSH dicht [A]   1.543e+17 5.068e+00   1.118 9.805e+03 6.355e-14  Umlauf an R (mit Regel)
+   KSH dünn [A]    7.714e+17 4.055e-02   5.483 4.343e+03 5.630e-15  Umlauf an R (mit Regel)
+   SPARC-Median    7.242e+20 1.198e-02   9.646 9.594e+04 1.325e-16  Umlauf an R (mit Regel)
+   Milchstraße     4.629e+20 3.379e-01   2.268 1.976e+05 4.268e-16  Umlauf an R (mit Regel)
+   Haufen          3.086e+22 2.154e-01   2.693 1.403e+06 4.548e-17  Umlauf an R (mit Regel)
+   Kosmos-Zelle    5.282e+26 3.590e+00   1.000 1.154e+09 2.184e-18  Atmen H₀
+   Hintergrund und Übergänge: Schwellenradius r*, Glättungslänge ℓ = (GM/T)^{1/3}, Bilanzradius R_Q = r*/(−ln q), Umkehrradius r_ta (1+Δ = 10–12)
+   Ebene                   r*          ℓ        R_Q   r_ta(11)       r*/R       ℓ/r*  δ*=(v_f/c)²
+   Proton          3.186e-14 2.719e-03 1.864e-13 – 3.786e+01 8.535e+10 3.899e-41
+   H-Atom          3.187e-14 2.720e-03 1.864e-13 – 6.022e-04 8.535e+10 3.900e-41
+   Erde            1.904e+12 4.156e+14 1.114e+13 – 2.988e+05 2.183e+02 2.330e-15
+   Sonne           1.098e+15 2.881e+16 6.426e+15 – 1.579e+06 2.622e+01 1.344e-12
+   KSH dicht [A]   3.473e+17 2.290e+18 2.032e+18 – 2.251e+00 6.592e+00 4.251e-10
+   KSH dünn [A]    1.553e+17 5.758e+18 9.087e+17 – 2.014e-01 3.707e+01 1.901e-10
+   SPARC-Median    7.926e+19 – 4.637e+20 8.132e+21 1.094e-01 – 9.701e-08
+   Milchstraße     2.691e+20 – 1.574e+21 1.837e+22 5.813e-01 – 3.293e-07
+   Haufen          1.432e+22 – 8.378e+22 2.599e+23 4.641e-01 – 1.753e-05
+   Kosmos-Zelle    1.001e+27 – 5.854e+27 – 1.895e+00 – 1.225e+00
+   Zustand: Tiefe δ_eff = a(R)·R/c² (Regel), Temperatur als Tiefe kT = f·δ_eff·μm_pc² (f = 0,5–0,85 aus 02/03, μ = 0,6 [A]);
+            Eigenfrequenz ω_orb = √(GM/R³), Übergabe 1/λ_m = N*/ω_orb (N* = 0,3–2,4) nur wo ξ in die Regel übergeht
+   Ebene                δ_eff  T_δ(0,5) K T_δ(0,85) K      ω_orb    1/λ_m [Mrd J]  Gedächtnis
+   Proton          1.476e-39           –           – 1.369e+04                –  Windungszahl n (Ladung), Chern-Zahl
+   H-Atom          2.349e-44           –           – 8.682e-04                –  Schalenschluss (Zählregel)
+   Erde            6.961e-10           –           – 1.242e-03                –  Knickspur (fest: Gitter als Identifikation)
+   Sonne           2.123e-06    6.93e+06    1.18e+07 6.278e-04                –  Zusammensetzung = größte Wärmetiefe δ_W
+   KSH dicht [A]   1.070e-09    3.49e+03    5.94e+03 6.011e-14                –  w = 0 (tiefster Kollaps)
+   KSH dünn [A]    2.099e-10    6.86e+02    1.17e+03 2.405e-15                –  w = 0 (tiefster Kollaps)
+   SPARC-Median    1.024e-07    3.35e+05    5.69e+05 4.266e-17       0.223–1.78  w = 0, ξ übergeben
+   Milchstraße     4.342e-07    1.42e+06    2.41e+06 2.834e-16     0.0335–0.268  w = 0, ξ übergeben bis ~100 kpc
+   Haufen          2.191e-05    7.16e+07    1.22e+08 2.771e-17       0.343–2.74  w = 0, ξ nur zu 20–68 % übergeben
+   Kosmos-Zelle    2.320e+00           –           – 8.647e-19                –  Λ = ν_kosm·ΣΔs_b (gesamte Faltung, fest)
+   Zelle: Periode der inneren Richtung 2Λ/c = τ_D, als Temperatur geschrieben ħa₀/(ck) = 2.803e-30 K (keine Wärme); Sonne: δ(R) ist Oberflächentiefe (Kern nach 02 höher)
+   Umkehrradius Milchstraße (1+Δ = 10–12): 0.613–0.577 Mpc (03: 0,58 Mpc); zwischen R_Q und r_ta ist der Übergang der Zählung offen (03)
+
+2) VERHÄLTNISSE ÜBER DIE EBENEN
+2a) Identitäten (auf jeder Ebene exakt gleich, jede Masse):
+   Ebene            3Δs/(r*δ*)   r*/(ℓ₀δ*)    ν(r*)  Reτ(r*)   R_Q/r*  ω_N(r*)τ_D√δ*  r*²λ̄/ℓ_P²ℓ₀ δ_Bahn/(v/c)²
+   Proton           1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   H-Atom           1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   Erde             1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   Sonne            1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   KSH dicht [A]    1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   KSH dünn [A]     1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   SPARC-Median     1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   Milchstraße      1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   Haufen           1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   Kosmos-Zelle     1.00000000  1.00000000  1.58198  1.25777   5.8501     1.00000000    1.00000000    1.00000000
+   (3Δs : r* : ℓ₀ = δ*² : δ* : 1 – geometrische Leiter mit dem Schritt δ* = (v_flach/c)² auf jeder Ebene;
+    Atom in derselben Form: r_e : a_B = α² = (v/c)², Übergangslänge λ̄_e² = r_e·a_B wie r*² = 3Δs·ℓ₀)
+   Atom: r_e/a_B = 5.325135e-05, α² = 5.325135e-05;  λ̄_e²/(r_e·a_B) = 1.00000000
+
+2b) Skalengesetze (Form gleich, Zahl wandert mit M; Exponenten numerisch über 10⁻²⁷–10⁵³ kg):
+   d ln r*/d ln M = 0.5000 (½),  d ln v_flach/d ln M = 0.2500 (¼),  d ln δ*/d ln M = 0.5000 (½)
+   d ln ω_N(r*)/d ln M = -0.2500 (−¼),  d ln ℓ/d ln M (feste Gezeit) = 1/3,  d ln r_ta/d ln M = 1/3,  d ln (Δs·λ̄)/d ln M = -1.85e-16 (0)
+
+2c) Brüche: Größen, die zwischen den Ebenen springen
+   kompakt/EM : M ∝ R^k, k = 2.58;  r*/R = 0.000602 … 1.58e+06;  g(R)/a₀ = 3.63e-07 … 2.49e+12;  δ(R) = 2.35e-44 … 2.12e-06
+   kollektiv  : M ∝ R^k, k = 1.83;  r*/R = 0.109 … 2.25;  g(R)/a₀ = 0.012 … 5.07;  δ(R) = 3.83e-11 … 8.14e-06
+   SPARC (171 Galaxien, R = R_HI): M_b ∝ R^2.24;  g(R_HI)/a₀: Median 0.043, 16–84 % 0.025–0.133, Streuung 0.38 dex über 3.7 Dekaden in M_b
+                      r*/R_HI: Median 0.207, 16–84 % 0.157–0.365
+   SPARC V_flat²/√(GM_b a₀): Median 1.177, Streuung 0.18 dex (133 mit V_flat; enthält das Randglied ≈ 1 + r*/2r, keine Lesung von a₀)
+   SPARC zentrale Sternflächendichte Σ₀ = 0,5·SB_disk gegen a₀/(πG) = 251 M☉/pc²: Median 0.619, 16–84 % 0.145–4.090, Streuung 0.70 dex
+   (R_HI ist eine Isophote (1 M☉/pc²): M ∝ R² dort teils durch die Definition; Σ₀ ist davon frei)
+
+   Wirbeltakt gegen Rückkehrzeit: Umläufe je τ_D, ω·τ_D/2π (ω = Wirbelfrequenz aus Tabelle 1)
+   Proton          6.183e+41
+   H-Atom          1.793e+34
+   Erde            5.385e+14
+   Sonne           2.723e+14
+   KSH dicht [A]   2.757e+04
+   KSH dünn [A]    2.442e+03
+   SPARC-Median    5.746e+01
+   Milchstraße     1.851e+02
+   Haufen          1.973e+01
+   Kosmos-Zelle    9.475e-01
+   Zelle: H₀τ_D/2π = 0.9475 = 1/Θ (Θ = 2πa₀/cH₀ = 1.0555): ein Atemtakt je Rückkehr, heute; alle kleineren Ebenen laufen vielfach um
+   Zwei Ähnlichkeitsgruppen der Formeln (04): M ∝ R² hält g (und g/a₀), M ∝ R hält δ. Beide zugleich nur für λ = 1.
+   Kollektive Ebenen (Sternhaufen bis Zelle, 19 Dekaden in M) folgen näherungsweise der ersten: g(R)/a₀ = 0,01–5, r*/R = 0,1–2,3;
+   kompakte keiner (g(R)/a₀ = 10⁻⁷–10¹², r*/R = 6·10⁻⁴–1,6·10⁶). Selbstähnlich ist das Regime der kollektiven Ebenen, nicht die Tiefe δ.
+
+3) UNVOLLSTÄNDIGE ODER ANDERE TRIADEN
+   Schnittmasse M_c (r* = λ̄) = 5.886e-29 kg;  Proton/M_c = 28.42, Elektron/M_c = 0.0155
+   Elektron: r* = 7.434e-16 m, λ̄_e = 3.862e-13 m, r*/λ̄ = 1.925e-03  → Schwelle innerhalb der eigenen Quantenlänge;
+             Spinzahl j = (1/2)/α_G = 2.854e+44: Verwindung ≫ Faltung, Triade nur in der inneren Richtung (I)
+   Proton:   r*/λ̄ = 151.5, r*/R_p = 37.9, j = 8.466e+37; Wirbel (Quarks) ist QCD, Faltung α_G = 5.906e-39
+   H-Atom:   a_B/r*_p = 1661 (Hülle formal im Tiefbereich des Protons), Glättungslänge ℓ = 2.72 mm ≫ a_B → Newton;
+             Bindung EM: α/α_G = 1.2356e+36; EM-Tiefe α² = 5.325e-05 gegen Faltungstiefe 3Δs/a_B = 2.347e-44
+   Kompakte Ebenen (Erde, Sonne): r* weit außen (r*/R = 2.99e+05, 1.58e+06), ℓ/r* = 218, 26.2: der Hintergrund ist nicht flach, sondern der Wirbel der Elternebene
+             Glättungskette in derselben Gezeit: ℓ_Erde = 2778 AE < ℓ_Sonne = 0.934 pc; ℓ ∝ M^(1/3)
+   Haufen:   R_Q/R = 2.72; M_Q (R_Q = R₂₀₀) = 2.833e+14 M☉ → Rückführung (Übergabe ξ) nicht ganz im Bereich
+   Kosmos:   M_Zelle/M_U = 1.5000 (M_U = c⁴/Ga₀, oberste Schnittmasse: r* = 3Δs = ℓ₀);  Δs_Zelle/Λ = 1.0000
+             in Λ: 3Δs = 3.000, ℓ₀ = 2.000, r* = 2.449 (√6 = 2.449), L = 2.084, r₀ = 6.000
+             Zentrum, Wirbel, Schwelle fallen auf eine Länge (Faktor ≤ 1.50); L < r₀: kein Außenraum
+             g(R_Zelle)/a₀ = 3.590; Randneigung der Hubble-Kugel cH₀/2 = 2.977·a₀
+
+4) VORHERSAGEN AUS DER SELBSTÄHNLICHKEIT
+4a) Sternhaufen im Feld der Milchstraße (Punktmasse 6·10¹⁰ M☉ mit Regel). Eigene Triade vollständig (eigener Tiefbereich zwischen r* und
+    r_e = √(GM/g_e), innerhalb ℓ = (GM/T)^{1/3}) genau wenn g_e < a₀; Fenster r_e/r* = √(a₀/g_e), unabhängig von M.
+    g_e = a₀ bei R_gc = 12.20 kpc (a_N/a₀ dort 0.511)
+      R_gc   g_e/a₀  r_e/r*     M×[M☉] | M = 10⁴ M☉:  r*[pc]  r_e[pc]   ℓ[pc] | 10⁵:     r*     r_e       ℓ | 10⁶:     r*     r_e       ℓ
+         5    3.685   0.521  2.099e+08 |             3.56     1.85   18.70 |  11.26    5.86   40.28 |  35.60   18.54   86.78 |
+        10    1.307   0.875  8.206e+09 |             3.56     3.11   34.44 |  11.26    9.85   74.20 |  35.60   31.14  159.87 |
+        20    0.538   1.363  2.250e+11 |             3.56     4.85   59.81 |  11.26   15.35  128.85 |  35.60   48.54  277.61 |
+        50    0.190   2.294  1.257e+13 |             3.56     8.17  116.94 |  11.26   25.82  251.95 |  35.60   81.66  542.80 |
+       100    0.091   3.314  2.281e+14 |             3.56    11.80  189.57 |  11.26   37.31  408.41 |  35.60  117.97  879.88 |
+       200    0.045   4.738  3.891e+15 |             3.56    16.86  304.15 |  11.26   53.33  655.27 |  35.60  168.64 1411.73 |
+    Folge: Innerhalb R_gc ≈ 12.2 kpc hat kein Sternhaufen einen eigenen Tiefbereich (Hintergrund = Newton-Feld der Galaxie);
+    außerhalb wächst das Fenster wie √(a₀/g_e). Das ist die Form, die 03 für Pal 14/NGC 2419 rechnet (dort gemessen weniger): keine neue Aussage.
+
+4b) Planetensysteme (kompakte Zentren, Gezeit Sonnenort): Stern-Masse, r*, ℓ, ℓ/r*
+      0.1 M☉: r* =     2322 AE, ℓ =    89374 AE, ℓ/r* =  38.49  (M× = 3.253e+08 M☉)
+      1.0 M☉: r* =     7342 AE, ℓ =   192550 AE, ℓ/r* =  26.22  (M× = 3.253e+08 M☉)
+     10.0 M☉: r* =    23218 AE, ℓ =   414836 AE, ℓ/r* =  17.87  (M× = 3.253e+08 M☉)
+    Mond um Erde: a_Mond/r*_Erde = 2.02e-04 [A: 3,844·10⁸ m]; jedes Planetensystem liegt tief im Newton-Bereich seines Zentrums
+    und bis ℓ geglättet: kein eigener Tiefbereich, Hintergrund = Wirbel der Galaxie. Vorhersage: Newton bis ℓ (wie 03, weite Doppelsterne).
+
+4c) Filamente und Wände (Flussgeometrie d = 3 Kugel, 2 Zylinder, 1 Platte):
+    a_N ∝ r^{−(d−1)}; mit der Regel d ln a/d ln r = −(d−1)(1 − χ/2) ⇒ Flussdimension d_eff = 1 + (d−1)(1 − χ/2)
+    d = 3: Newton d_eff = 3, tief (χ = 1) d_eff = 2.0, verlorene Dimension (d−1)χ/2 = 1.0
+    d = 2: Newton d_eff = 2, tief (χ = 1) d_eff = 1.5, verlorene Dimension (d−1)χ/2 = 0.5
+    d = 1: Newton d_eff = 1, tief (χ = 1) d_eff = 1.0, verlorene Dimension (d−1)χ/2 = 0.0
+    Numerisch (Zylinder, a_N = 2Gμ/r): d ln a/d ln r bei s² = a_N/a₀:
+      a_N/a₀ =   1e+02: χ = 0.0005, Steigung -0.9998, −(1 − χ/2) = -0.9998
+      a_N/a₀ =   1e+00: χ = 0.5820, Steigung -0.7090, −(1 − χ/2) = -0.7090
+      a_N/a₀ =   1e-02: χ = 0.9508, Steigung -0.5246, −(1 − χ/2) = -0.5246
+      a_N/a₀ =   1e-04: χ = 0.9950, Steigung -0.5025, −(1 − χ/2) = -0.5025
+    Schwelle des Zylinders r*_fil = 2Gμ/a₀; μ = 10¹² M☉/Mpc [A]: r*_fil = 2.53 kpc; tief v_c² = a·r = √(2Gμa₀r) ∝ r^½:
+      r = 0.1 Mpc: a_N/a₀ = 2.534e-02, ν = 6.79, v_c =  241.8 km/s (Newton  92.7)
+      r = 0.5 Mpc: a_N/a₀ = 5.068e-03, ν = 14.55, v_c =  353.8 km/s (Newton  92.7)
+      r = 1.0 Mpc: a_N/a₀ = 2.534e-03, ν = 20.37, v_c =  418.6 km/s (Newton  92.7)
+      r = 2.0 Mpc: a_N/a₀ = 1.267e-03, ν = 28.60, v_c =  496.0 km/s (Newton  92.7)
+    Gewicht der Schließungsregel: w = ½ bei Ausdehnungsrate θ_c = a₀/c = 0.1680·H₀. Die Regel greift erst, wenn das Volumen langsamer atmet:
+      Filament (1 Achse mit H₀): Querrate je kollabierende Richtung ≤ -0.416·H₀ für w ≤ ½
+      Wand (2 Achsen mit H₀): Querrate je kollabierende Richtung ≤ -1.832·H₀ für w ≤ ½
+      θ = 1.000·H₀: w = 0.9128
+      θ = 0.500·H₀: w = 0.8219
+      θ = 0.300·H₀: w = 0.7372
+      θ = 0.168·H₀: w = 0.6321
+      θ = 0.100·H₀: w = 0.5377
+      θ = 0.000·H₀: w = 0.0000
+    Folge: Filamente mit Querschnitt, der langsamer als 0,42·H₀ schrumpft (bei axialer Dehnung H₀), sind mitatmend (w > ½):
+    sie tragen die Mode ξ wie Staub mit 1+Q (Standardform); erst danach gilt quer das Zylindergesetz d_eff = 2 − χ/2.
+
+4d) Oberste Ebene mit vollständiger Triade:
+    1+Δ = 10: R_Q = r_ta bei M_b = 1.813e+17 M☉ (M = (1+Q)M_b = 1.154e+18); r* = r_ta bei M_b = 7.268e+21 M☉
+    1+Δ = 12: R_Q = r_ta bei M_b = 1.259e+17 M☉ (M = (1+Q)M_b = 8.013e+17); r* = r_ta bei M_b = 5.047e+21 M☉
+    M_Q (R_Q = R₂₀₀, 03) = 2.833e+14 M☉ (gesamt);  Baryonen der Zelle ΣM_b = 1.304e+23 M☉
+    Folge: Jede gebundene Masse schließt ihre Rückführung (R_Q) innerhalb ihres Umkehrradius; nur über M_Q liegt R_Q außerhalb des
+    virialisierten Teils (Haufen). r* = r_ta erst bei M_b ≈ 5–7·10²¹ M☉ (r* = 2.8 Gpc), weit über jeder gebundenen Struktur;
+    nur die Zelle hat ihre Schwelle am eigenen Rand (r*/L = 1.175).
+
+5) WERTE FÜR DIE PRÜFUNG VON HAND
+   r*(Proton) = √(G m_p/a₀) = 3.185704e-14 m
+   ν(r*) = 1/(1 − e⁻¹) = 1.581977
+   M_Zelle/M_U = 1.500000;  r*_Zelle/Λ = 2.449490;  H₀τ_D = 5.953020;  θ_c/H₀ = 0.167982
+   R_gc(g_e = a₀) = 12.2025 kpc;  M_Q = 2.8334e+14 M☉;  M_b(R_Q = r_ta, 1+Δ = 10) = 17.2584 (log₁₀ M☉)
+   Von Hand (unabhängig, Taschenrechner-Weg): r*_p = √(6,6743e-11·1,67262e-27/1,1e-10) = √(1,01487e-27) = 3,18570e-14 m;
+   ν(r*) = 1/(1 − 0,367879) = 1,581977;  M_Zelle = 3c⁴/(2Ga₀) aus Λ = Gρ_mL³/3c² und a₀ = c²/2Λ ⇒ 1,5·M_U, r* = √(3/2)·2Λ = √6·Λ;
+   R_gc: x = 0,511, x/(1 − e^{−√x}) = 1,0006, R = r*_MW/√x = 2,6905e20/0,7148 m = 12,20 kpc;  M_Q = 257,8·2,49e-5·1,331e-30/(6,674e-7·2,276e-71) kg = 2,83e14 M☉;
+   R_Q = r_ta (1+Δ = 10): GM_b = a₀³ln⁶q·(2(1+Q)/((1+Δ)Ω_mH₀²))² = 1,331e-30·2,4948e-5·16,49/2,2763e-71 ⇒ M_b = 1,813e17 M☉

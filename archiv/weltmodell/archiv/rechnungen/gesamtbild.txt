@@ -1,0 +1,242 @@
+
+====================================================================================================
+0) Grundgrößen
+====================================================================================================
+H0 = 67.36 km/s/Mpc, R_H = c/H0 = 1.3733e+26 m = 4.4506 Gpc
+a0 = cH0/2π = c²/(2πR_H) = 1.0416e-10 m/s²   (a0_fit = 1.20e-10; Verhältnis a0_fit/a0 = 1.1521)
+a0_fit = 1,20 ± 0,02 (stat) ± 0,24 (sys) ·1e-10 m/s² (McGaugh, Lelli, Schombert 2016, Eingabe)
+Ω_s/Ω_Λ(0,6847) = 0.320;  kosmische Varianz σ(C2)/C2 = √(2/5) = 0.632;  Bedarf Nachlauf (Bullet Cluster, Eingabe): 1/λ ≥ 170–260 Mio a
+  r* mit a0_fit = 1,2e-10    : Milchstraße 8.35 kpc, Sonne 7031 AE = 0.111 Lj
+  r* mit cH0/2π, H0 = 70     : Milchstraße 8.79 kpc, Sonne 7403 AE = 0.117 Lj
+  r* mit cH0/2π, H0 = 67,36  : Milchstraße 8.96 kpc, Sonne 7547 AE = 0.119 Lj
+a0 mit H0 = 70: 1.0824e-10;  mit H0 = 73: 1.1288e-10
+ℓ_P = 1.61626e-35 m, m_Pl = 2.17643e-08 kg, α_G = G m_p²/(ħc) = 5.90615e-39, N = R_H/ℓ_P = 8.4969e+60
+
+====================================================================================================
+1) Die Längenleiter eines Trichters (a0 = cH0/2π)
+====================================================================================================
+Gezeitengrenzen: Erde (Hill, 1 AE) 0.0100 AE; Sonne (Oort A=15.3, B=-11.9) 1.372 pc = 2.8306e+05 AE; Milchstraße (Hill gegen M31, M_bar = 1,5e11 M☉, D = 765 kpc) 391 kpc
+
+Körper            λ̄ [m]      Δs [m]      r0=6Δs       R [m]      r* [m]     r_J [m]     R_H [m]
+Elektron       3.862e-13   2.255e-58   1.353e-57   2.818e-15   7.640e-16         nan   1.373e+26
+Proton         2.103e-16   4.140e-55   2.484e-54   8.409e-16   3.274e-14         nan   1.373e+26
+Erde           5.890e-68   1.478e-03   8.870e-03   6.371e+06   1.956e+12   1.496e+09   1.373e+26
+Sonne          1.769e-73   4.924e+02   2.954e+03   6.957e+08   1.129e+15   4.235e+16   1.373e+26
+Milchstraße    2.949e-84   2.953e+13   1.772e+14   4.730e+20   2.765e+20   1.206e+22   1.373e+26
+Haufen         1.040e-87   8.369e+16   5.022e+17   6.171e+22   1.472e+22         nan   1.373e+26
+Universum      2.345e-96   3.713e+25   2.228e+26   4.399e+26   3.100e+26         nan   1.373e+26
+
+Anschaulich:
+  Elektron     Δs =    2.255e-58 m r0 =    1.353e-57 m R =    2.818e-15 m r* =    7.640e-16 m r_J =              –
+  Proton       Δs =    4.140e-55 m r0 =    2.484e-54 m R =    8.409e-16 m r* =    3.274e-14 m r_J =              –
+  Erde         Δs =     0.001478 m r0 =      0.00887 m R =        6371 km r* =   1.956e+09 km r_J =   1.496e+06 km
+  Sonne        Δs =        492.4 m r0 =         2954 m R =   6.957e+05 km r* =        7547 AE r_J =       1.372 pc
+  Milchstraße  Δs =       197.4 AE r0 =        1184 AE R =      15.33 kpc r* =       8.96 kpc r_J =      390.8 kpc
+  Haufen       Δs =       2.712 pc r0 =       16.27 pc R =          2 Mpc r* =        477 kpc r_J =              –
+  Universum    Δs =       1203 Mpc r0 =       7220 Mpc R =  1.426e+04 Mpc r* =  1.005e+04 Mpc r_J =              –
+
+Universelle Beziehungen (für jeden Körper, Quotient links/rechts):
+Körper        Δs·λ̄/(ℓP²/3)  r*²/(r0πR_H)  3Δs/λ̄/α_G(M)  δ(r*)/(v/c)²  GM/v²/r*    q(r*)   ν(r*)
+Elektron       1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000000 (r0/r* = 1.771e-42)
+Proton         1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000000 (r0/r* = 7.588e-41)
+Erde           1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000000 (r0/r* = 4.534e-15)
+Sonne          1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000000 (r0/r* = 2.617e-12)
+Milchstraße    1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000000 (r0/r* = 6.408e-07)
+Haufen         1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.000009 (r0/r* = 3.412e-05)
+Universum      1.0000000000  1.0000000000   1.0000000000  1.0000000000  1.000000  0.36788  1.5820   exakt δ(r*)/(v/c)² = 1.306779 (r0/r* = 7.186e-01)
+  (Spalte δ(r*) in erster Ordnung 3Δs/r*; exakt δ = 1-√(1-6Δs/r*), rechts)
+
+Massenabhängige Verhältnisse (μ = M/m_Pl):
+Körper                 μ   α_G(M)=μ²       r*/λ̄        R/r0        r*/R    r_J/r*      R_H/r*     g(R)/a0       q(R)
+Elektron       4.185e-23   1.752e-45   1.979e-03   2.083e+42   2.711e-01       nan   1.798e+41   7.351e-02  7.625e-01
+Proton         7.685e-20   5.906e-39   1.557e+02   3.385e+38   3.893e+01       nan   4.195e+39   1.516e+03  1.235e-17
+Erde           2.744e+32   7.529e+64   3.321e+79   7.183e+08   3.071e+05  0.000765   7.020e+13   9.428e+10  0.000e+00
+Sonne          9.139e+37   8.352e+75   6.383e+87   2.355e+05   1.623e+06      37.5   1.216e+11   2.633e+12  0.000e+00
+Milchstraße    5.481e+48   3.005e+97  9.377e+103   2.669e+06   5.845e-01      43.6   4.967e+05   3.417e-01  5.574e-01
+Haufen         1.553e+52  2.413e+104  1.415e+109   1.229e+05   2.385e-01       nan   9.330e+03   5.689e-02  7.878e-01
+Universum      6.892e+60  4.750e+121  1.322e+122   1.975e+00   7.048e-01       nan   4.430e-01   4.967e-01  4.942e-01
+
+Leiter in Planck-Einheiten: λ̄ = ℓP/μ, Δs = ℓP·μ/3, r0 = 2ℓP·μ, r* = ℓP·√(2π·μ·N), R_H = N·ℓP
+  Elektron     log10(λ̄/ℓP) =   22.378  log10(Δs/ℓP) =  -22.855  log10(r*/ℓP) =   19.675  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Proton       log10(λ̄/ℓP) =   19.114  log10(Δs/ℓP) =  -19.591  log10(r*/ℓP) =   21.307  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Erde         log10(λ̄/ℓP) =  -32.438  log10(Δs/ℓP) =   31.961  log10(r*/ℓP) =   47.083  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Sonne        log10(λ̄/ℓP) =  -37.961  log10(Δs/ℓP) =   37.484  log10(r*/ℓP) =   49.844  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Milchstraße  log10(λ̄/ℓP) =  -48.739  log10(Δs/ℓP) =   48.262  log10(r*/ℓP) =   55.233  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Haufen       log10(λ̄/ℓP) =  -52.191  log10(Δs/ℓP) =   51.714  log10(r*/ℓP) =   56.959  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  Universum    log10(λ̄/ℓP) =  -60.838  log10(Δs/ℓP) =   60.361  log10(r*/ℓP) =   61.283  Probe r*/(ℓP√(2πμN)) = 1.0000000000
+  log10(R_H/ℓP) = 60.929
+
+Besondere Massen (Gleichheit zweier Längen):
+  λ̄ = r0          : μ = 1/√2,  M = 1.5390e-08 kg
+  λ̄ = r*          : M_c = (ħ²a0/(G c²))^(1/3) = 5.7800e-29 kg = 32.42 MeV/c² = 63.5 m_e = 0.0346 m_p (heute);  im de-Sitter-Endzustand 30.44 MeV/c²
+                     Weinberg-Form (ħ²H0/(Gc))^(1/3) = 59.83 MeV/c²  (Pion 139,57 MeV)
+  Proton heute: r*_p/λ̄_p = 155.668;  r*_p = λ̄_p ⟺ a0(z) = G m_p³c²/ħ² ⟺ H(z)/2π = α_G ω_p  (Probe: 5.2899e-14 = 2π·α_G·ω_p = 5.2899e-14)
+  r0 = R_H/π (r* = R_H): M = 2.9433e+52 kg;  r0 = R_H (Hubble-Masse M_H = c³/2GH0): 9.2465e+52 kg, r*(M_H)/R_H = 1.772454 = √π = 1.772454
+  r* = r0 ⟺ r0 = π·R_H: M = 2.9049e+53 kg
+  Beobachtbares Universum: r0/R_H = 1.6222, r*/r0 = 1.3916, r*/R_H = 2.2575
+
+Skalenleiter mit dem Lineal λ̄_p (3Δs/λ̄_p = (M/m_p)·α_G):
+  Proton             3Δs/λ̄_p =  5.906e-39   Exponent zur Basis α_G:   1.0000
+  Planck-Masse       3Δs/λ̄_p =  7.685e-20   Exponent zur Basis α_G:   0.5000
+  Sternskala M_*     3Δs/λ̄_p =  1.301e+19   Exponent zur Basis α_G:  -0.5000
+  Sonne              3Δs/λ̄_p =  7.023e+18   Exponent zur Basis α_G:  -0.4930
+  Milchstraße        3Δs/λ̄_p =  4.213e+29   Exponent zur Basis α_G:  -0.7749
+  Haufen             3Δs/λ̄_p =  1.194e+33   Exponent zur Basis α_G:  -0.8652
+  Hubble-Masse M_H   3Δs/λ̄_p =  3.265e+41   Exponent zur Basis α_G:  -1.0859
+  Universum (beob.)  3Δs/λ̄_p =  5.297e+41   Exponent zur Basis α_G:  -1.0914
+  Probe Δs_*²·Δs_p/(λ̄_p/3)³ = 1.0000000000;  M_* = 1.853 M☉, Δs_* = 912.2 m
+  R_H/λ̄_p = 6.5300e+41,  α_G^-1 = 1.6932e+38,  Quotient (Dirac) = 3856.7
+
+Entropie, Temperatur, Verwindung in Faltungsgrößen:
+  Elektron     S/k = 2.2014e-44 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 2.271e+43 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 5.075e+82 = R_H/(2r0)·[1.00000000]  Verwindung a = (J/ħ)λ̄ = 1.931e-13 m, a·Δs/(ℓP²/6) = 1.000000, Spinzahl χ = a/3Δs = 2.854e+44 = (J/ħ)/α_G(M) → 2.854e+44
+  Proton       S/k = 7.4219e-38 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 6.737e+36 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 2.764e+79 = R_H/(2r0)·[1.00000000]  Verwindung a = (J/ħ)λ̄ = 1.052e-16 m, a·Δs/(ℓP²/6) = 1.000000, Spinzahl χ = a/3Δs = 8.466e+37 = (J/ħ)/α_G(M) → 8.466e+37
+  Erde         S/k = 9.4615e+65 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 5.285e-67 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 7.742e+27 = R_H/(2r0)·[1.00000000]
+  Sonne        S/k = 1.0495e+77 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 4.764e-78 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 2.324e+22 = R_H/(2r0)·[1.00000000]
+  Milchstraße  S/k = 3.7757e+98 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 1.324e-99 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 3.875e+11 = R_H/(2r0)·[1.00000000]
+  Haufen       S/k = 3.0326e+105 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 1.649e-106 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 1.367e+08 = R_H/(2r0)·[1.00000000]
+  Universum    S/k = 5.9690e+122 = 4π·α_G(M)·[1.0000000000]  kT_H/(Mc²) = 8.377e-124 = 1/(8πα_G)·[1.00000000]  T_H/T_GH = 3.082e-01 = R_H/(2r0)·[1.00000000]
+  S = 1·k bei M = m_Pl/√(4π) = 6.1396e-09 kg;  1 bit (S = k ln2) bei 5.1116e-09 kg
+  Vereinigung zweier Falten (Δs additiv): S(M1+M2) - S(M1) - S(M2) = 8πG M1 M2/(ħc) = 2.0990e+77 k (2×1 M☉) = 50.0 % von S(M1+M2)
+
+====================================================================================================
+2) Die Zahl 2π: Zählung und Schließung
+====================================================================================================
+ζ(4) = 1.082323233711, π⁴/90 = 1.082323233711, (2π)⁴/1440 = 1.082323233711
+∫0^∞ 4t³ Σ_n e^(-nt) dt = 24ζ(4) = 25.9757576091 = 4π⁴/15 = 25.9757576091
+Λ_s = 24ζ(4)(a0/c²)² = 3.4887e-53 m⁻²,  Ω_s = Λ_s c²/(3H0²) = 0.2193245422 = π²/45 = 0.2193245422 = (2π)²/180 = 0.2193245422
+a0 · (2π/H0) = 2.997925e+08 m/s = c (2.997925e+08):  Die Schwelle baut in einer Periode 2π/H0 die Geschwindigkeit c auf.
+Gibbons-Hawking T_GH(H0) = ħH0/(2πk) = 2.6538e-30 K;  a0 = c·kT_GH/ħ: 1.0416e-10 = a0 1.0416e-10
+Oberflächenschwere des Hubble-Horizonts κ_dS = c²/R_H = 6.5444e-10;  κ_dS/2π = 1.0416e-10 = a0
+Unruh-Temperatur der Schwelle kT_U(a0) = ħa0/(2πc) → T_U/T_GH = 0.159155 = 1/2π = 0.159155
+Lichtumlauf auf Umfang L = 2πR_H: T = L/c = 2.8783e+18 s = 2π/H0 = 2.8783e+18 s; Grundfrequenz f1 = c/L = 3.4743e-19 Hz = H0/2π; a0 = c·f1 = 1.0416e-10
+Spektrallücke Kreis L: D(2π/L)²; mit L = 2πR:  D/R² (kein 2π, wenn der Radius R benutzt wird)
+Diffusions-Deutung a0 = c·κ_gap mit L = 2πR_H verlangt D = c·R_H/2π = 6.5526e+33 m²/s (aus denselben Größen gebaut)
+Wellenoperator -c²∂² auf L = 2πR_H: ω1 = 2πc/L = 2.1830e-18 = H0 = 2.1830e-18
+
+Γ_G = α_G ω_p = 8.4191e-15 1/s
+gemischte Zählung H/2π = α_G ω_p :  z = 1119.2, kT = 0.2631 eV
+einheitliche Zählung H = α_G ω_p  (≡ H/2π = α_G f_p):  z = 348.9, kT = 0.0822 eV
+Umlauf-Zählung (a0 pro Umlauf, volle Compton-Wellenlänge λ = 2πλ̄): H = α_G ω_p/2π:  z = 104.1, kT = 0.0247 eV
+Geometrische Form: r*_p = λ̄_p ⟺ gemischte Zählung (z = 1119.2);  G m_p R_H/c² = λ̄_p² ⟺ H = α_G ω_p (z = 348.9)
+Gleichheit Materie/Strahlung z_eq = Ω_m/Ω_r - 1 = 3448.7 (kT = 0.8102 eV); letzte Streuung z* = 1089.9 (kT = 0.2562 eV)
+m_p c² α_G^(1/4) = 0.2601 eV, α³ m_e c² = 0.1986 eV
+Nome: q = exp(-r*/r) enthält kein 2π; τ = i r*/(2πr) setzt es per Konvention. Selbstdualer Punkt τ = i: r = r*/2π, y = a_N/a0 = 4π² = 39.478
+  ν(y) um den selbstdualen Punkt (y = 19,7 / 39,5 / 79,0): 1.011902 / 1.001871 / 1.000138  (glatt, keine Signatur)
+
+====================================================================================================
+3) Querverbindungen
+====================================================================================================
+3a) Kac-Budget gegen Rückkopplungssumme
+  Q = Ω_c/Ω_b = 5.3643 ± 0.0646;  q = Q/(1+Q) = Ω_c/Ω_m = 0.84287 ± 0.00159;  1-q = f_b = Ω_b/Ω_m = 0.15713;  ν = 1/(1-q) = Ω_m/Ω_b = 6.3643
+  Kac mit zwei Zellen (Maß 1-q und q): ⟨τ_b⟩ = 6.3643, ⟨τ_S⟩ = 1.1864, Σ1/⟨τ⟩ = 1.000000
+  Geometrische Flucht mit Rückkehrwahrscheinlichkeit q: mittlere Zahl der Rückläufe vor der Flucht q/(1-q) = 5.3643 = Q
+  Rückkehrwahrscheinlichkeiten offener Gitter (Pólya): sc 3D 0,340537; bcc 0,282229; fcc 0,256318 (Literatur) — keine nahe q
+  Leck pro Umlauf 1-q = 0.1571 ⇒ Summe Σ qⁿ = 6.3643
+
+3b) Schleifenverstärkung Dreieck gegen q
+  τ = (1, 1, 1): |q3|_krit = 8.0000
+  τ = (1, 10, 100): |q3|_krit = 122.2100
+  statische Schwelle Σq ≥ 1; kosmisches q = 0.8429 < 1 (Reserve 1-q = 0.1571); |q3|_krit/q ≥ 9.49
+
+3c) Hecke-Leiter gegen Skalenleiter
+  T_n: q → qⁿ ⟺ √y → n√y ⟺ y → n²y ⟺ r*→n·r* bei festem r ⟺ M → n²M
+  Proton→Planck          Massenfaktor 1.301e+19 ⟹ Hecke-Index n = √Faktor = 3.607e+09
+  Planck→Sternskala      Massenfaktor 1.693e+38 ⟹ Hecke-Index n = √Faktor = 1.301e+19
+  Sonne→Milchstraße      Massenfaktor 5.998e+10 ⟹ Hecke-Index n = √Faktor = 2.449e+05
+  Milchstraße→Haufen     Massenfaktor 2.834e+03 ⟹ Hecke-Index n = √Faktor = 5.324e+01
+
+3d) eV-Ebene gegen Frequenzleiter
+  m_e c² α⁰            E =   5.1100e+05 eV   ω = E/ħ =  7.7634e+20 rad/s   log10(E/eV) =    5.708
+  m_e c² α¹            E =   3.7289e+03 eV   ω = E/ħ =  5.6653e+18 rad/s   log10(E/eV) =    3.572
+  m_e c² α² (ω2)       E =   2.7211e+01 eV   ω = E/ħ =  4.1341e+16 rad/s   log10(E/eV) =    1.435
+  m_e c² α³            E =   1.9857e-01 eV   ω = E/ħ =  3.0168e+14 rad/s   log10(E/eV) =   -0.702
+  m_e c² α⁴            E =   1.4490e-03 eV   ω = E/ħ =  2.2015e+12 rad/s   log10(E/eV) =   -2.839
+  m_p c² α_G⁰ (ω1)     E =   9.3827e+08 eV   ω = E/ħ =  1.4255e+24 rad/s   log10(E/eV) =    8.972
+  m_p c² α_G^1/4       E =   2.6011e-01 eV   ω = E/ħ =  3.9517e+14 rad/s   log10(E/eV) =   -0.585
+  m_p c² α_G^1/2       E =   7.2108e-11 eV   ω = E/ħ =  1.0955e+05 rad/s   log10(E/eV) =  -10.142
+  m_p c² α_G¹ (Γ_G)    E =   5.5416e-30 eV   ω = E/ħ =  8.4191e-15 rad/s   log10(E/eV) =  -29.256
+  ħ·10¹³ rad/s (ω3)    E =   6.5821e-03 eV   ω = E/ħ =  1.0000e+13 rad/s   log10(E/eV) =   -2.182
+  kT_rek (z*)          E =   2.5621e-01 eV   ω = E/ħ =  3.8926e+14 rad/s   log10(E/eV) =   -0.591
+  ħH0                  E =   1.4369e-33 eV   ω = E/ħ =  2.1830e-18 rad/s   log10(E/eV) =  -32.843
+  Born-Oppenheimer: α² m_e c²·(m_e/m_p)^(1/2) = 0.6350 eV; ·(m_e/m_p) = 14.820 meV;  ħω3 = 6.582 meV
+  Zufallsprüfung Carter: Paare (a,b), a∈[0,24], b∈[-12,12] mit α^a(m_e/m_p)^b innerhalb Faktor 3 von α_G: 8 → [(1, 11), (4, 9), (7, 7), (12, 4), (15, 2), (18, 0), (21, -2), (24, -4)]
+
+3e) Zufallsprüfung q = 0,8429
+  742 Kandidaten; im 1σ-Fenster [0.8413, 0.8445]: 4; im 2σ-Fenster: 11; erwartet bei gleicher Dichte (1σ): 4.2
+  1σ-Treffer: erf(1)=0.84270, 1-1/(11γ)=0.84250, exp(-ζ3/7)=0.84221, 16/19=0.84211
+  e^(-1/6) = 0.84648 (+2.3σ), 1-1/2π = 0.84085 (-1.3σ), erf(1) = 0.84270 (-0.1σ)
+  zugehöriges y = (ln q)² = 0.02922, r/r* = 5.850
+
+3f) Nachlaufzeit als Dynamikzeit an der Schwelle (Hypothese 1/λ = r*/v = v/a0)
+  Zwerggalaxie 1e8 M☉    v_flach =    34.3 km/s, r* =      0.37 kpc, r*/v = v/a0 =    10.4 Mio a, 2π r*/v =   0.07 Mrd a
+  Milchstraße 6e10       v_flach =   169.7 km/s, r* =      8.96 kpc, r*/v = v/a0 =    51.6 Mio a, 2π r*/v =   0.32 Mrd a
+  Gruppe 1e13            v_flach =   609.8 km/s, r* =    115.70 kpc, r*/v = v/a0 =   185.5 Mio a, 2π r*/v =   1.17 Mrd a
+  Haufen 1,7e14          v_flach =  1238.2 km/s, r* =    477.01 kpc, r*/v = v/a0 =   376.7 Mio a, 2π r*/v =   2.37 Mrd a
+  Haufen 1e15            v_flach =  1928.3 km/s, r* =   1156.97 kpc, r*/v = v/a0 =   586.7 Mio a, 2π r*/v =   3.69 Mrd a
+
+====================================================================================================
+4) a0 als Grundfrequenz einer Torus-Schleife: L = c²/a0 und die letzte Streufläche
+====================================================================================================
+χ*/R_H = I(Ω_m=0.3153) = 3.11592;  χ* = 13.8677 Gpc, d_LSS = 27.7354 Gpc;  I/π = 0.99183
+L = 2πR_H = 27.9639 Gpc;  L/d_LSS = π/I = 1.00824  (H0 kürzt sich; nur Ω_m und Ω_r h² gehen ein)
+
+Abhängigkeit von Ω_m bei festem h = 0,6736 (Ω_r = 9,14e-5):
+  Ω_m = 0.2000: I = χ*/R_H = 3.7265, L/d_LSS = π/I = 0.8430
+  Ω_m = 0.2500: I = χ*/R_H = 3.4157, L/d_LSS = π/I = 0.9197
+  Ω_m = 0.2800: I = χ*/R_H = 3.2664, L/d_LSS = π/I = 0.9618
+  Ω_m = 0.3000: I = χ*/R_H = 3.1782, L/d_LSS = π/I = 0.9885
+  Ω_m = 0.3153: I = χ*/R_H = 3.1159, L/d_LSS = π/I = 1.0082
+  Ω_m = 0.3300: I = χ*/R_H = 3.0597, L/d_LSS = π/I = 1.0268
+  Ω_m = 0.3500: I = χ*/R_H = 2.9885, L/d_LSS = π/I = 1.0512
+  Ω_m = 0.4000: I = χ*/R_H = 2.8320, L/d_LSS = π/I = 1.1093
+  Ω_m = 1.0000: I = χ*/R_H = 1.9366, L/d_LSS = π/I = 1.6222
+  Einstein-de-Sitter analytisch 2(1-1/√(1+z*)) = 1.9394
+  I = π bei Ω_m = 0.3089;  L/d_LSS = 0,985 (COMPACT-Grenze) bei Ω_m = 0.2974  → Deutung verlangt Ω_m ≥ 0.2974
+  Planck Ω_m = 0,3153 ± 0,0073: Abstand zu 0.2974 = 2.46 σ
+
+Feste Kombination Ω_m h² = 0,1430 (CMB), H0 variabel:
+  H0 = 64.00: Ω_m = 0.3491, I = 2.9902, L/d_LSS = 1.0506
+  H0 = 67.36: Ω_m = 0.3152, I = 3.1165, L/d_LSS = 1.0081
+  H0 = 70.00: Ω_m = 0.2918, I = 3.2144, L/d_LSS = 0.9773
+  H0 = 73.00: Ω_m = 0.2683, I = 3.3244, L/d_LSS = 0.9450
+  L/d_LSS = 0,985 bei H0 = 69.32 km/s/Mpc  → Deutung verlangt H0 ≤ 69.32
+
+Epochenabhängigkeit (Beobachter beim Skalenfaktor a_o, gleiche Entkopplung a* = 1/(1+z*)):
+  a_o = 0.25: 2πR_H(t)/d_LSS(t) = 1.6624;  feste Zelle 2πR_H,0/d_LSS(t) = 1.8994
+  a_o = 0.50: 2πR_H(t)/d_LSS(t) = 1.4917;  feste Zelle 2πR_H,0/d_LSS(t) = 1.3360
+  a_o = 1.00: 2πR_H(t)/d_LSS(t) = 1.0082;  feste Zelle 2πR_H,0/d_LSS(t) = 1.0082
+  a_o = 2.00: 2πR_H(t)/d_LSS(t) = 0.5036;  feste Zelle 2πR_H,0/d_LSS(t) = 0.8570
+  a_o = 4.00: 2πR_H(t)/d_LSS(t) = 0.2386;  feste Zelle 2πR_H,0/d_LSS(t) = 0.7925
+
+Diskrete Sachs-Wolfe-Modensumme im kubischen 3-Torus (P ∝ k^-3, ohne ISW):
+  Kontrolle L = 20·d_LSS: C2-Rest = 0.9999
+  0,25·d                     L =   6.93 Gpc, L/d = 0.2500, Kreisradius α =  75.5°, C2-Rest = 0.013, C3-Rest = 0.095, C4-Rest = 0.088  | grob (Abschneiden bei k_min) C2 = 0.020
+  0,5·d                      L =  13.87 Gpc, L/d = 0.5000, Kreisradius α =  60.0°, C2-Rest = 0.069, C3-Rest = 0.269, C4-Rest = 0.817  | grob (Abschneiden bei k_min) C2 = 0.088
+  0,875·d (a0 = 1,20e-10)    L =  24.27 Gpc, L/d = 0.8751, Kreisradius α =  28.9°, C2-Rest = 0.666, C3-Rest = 1.072, C4-Rest = 1.000  | grob (Abschneiden bei k_min) C2 = 0.339
+  a0 = 1,10e-10              L =  26.48 Gpc, L/d = 0.9547, Kreisradius α =  17.3°, C2-Rest = 0.795, C3-Rest = 1.042, C4-Rest = 0.981  | grob (Abschneiden bei k_min) C2 = 0.437
+  0,985·d (COMPACT)          L =  27.32 Gpc, L/d = 0.9850, Kreisradius α =   9.9°, C2-Rest = 0.830, C3-Rest = 1.028, C4-Rest = 0.989  | grob (Abschneiden bei k_min) C2 = 0.472
+  L = 2πR_H (a0 = cH0/2π)    L =  27.96 Gpc, L/d = 1.0082, Kreisradius α =   nan°, C2-Rest = 0.851, C3-Rest = 1.021, C4-Rest = 0.994  | grob (Abschneiden bei k_min) C2 = 0.498
+  a0 = 1,00e-10              L =  29.13 Gpc, L/d = 1.0502, Kreisradius α =   nan°, C2-Rest = 0.879, C3-Rest = 1.014, C4-Rest = 0.997  | grob (Abschneiden bei k_min) C2 = 0.542
+  1,2·d                      L =  33.28 Gpc, L/d = 1.2000, Kreisradius α =   nan°, C2-Rest = 0.935, C3-Rest = 1.004, C4-Rest = 0.999  | grob (Abschneiden bei k_min) C2 = 0.673
+  1,5·d                      L =  41.60 Gpc, L/d = 1.5000, Kreisradius α =   nan°, C2-Rest = 0.976, C3-Rest = 1.001, C4-Rest = 1.000  | grob (Abschneiden bei k_min) C2 = 0.831
+  2,0·d                      L =  55.47 Gpc, L/d = 2.0000, Kreisradius α =   nan°, C2-Rest = 0.993, C3-Rest = 1.000, C4-Rest = 1.000  | grob (Abschneiden bei k_min) C2 = 0.936
+  a0-Obergrenze aus L ≥ 0,985 d_LSS: a0 ≤ c²/(0,985 d_LSS) = 1.0661e-10 m/s²
+
+Zwei Lesarten von a0(z):
+  z = 0.5: Atmen a0 ∝ H(z): Faktor 1.323, tiefer Bereich g_obs/g_bar ∝ √a0: +15.0 %;  feste Zelle a0 = c²/L_phys ∝ (1+z): Faktor 1.500, +22.5 %
+  z = 1: Atmen a0 ∝ H(z): Faktor 1.791, tiefer Bereich g_obs/g_bar ∝ √a0: +33.8 %;  feste Zelle a0 = c²/L_phys ∝ (1+z): Faktor 2.000, +41.4 %
+  z = 2: Atmen a0 ∝ H(z): Faktor 3.034, tiefer Bereich g_obs/g_bar ∝ √a0: +74.2 %;  feste Zelle a0 = c²/L_phys ∝ (1+z): Faktor 3.000, +73.2 %
+  z = 3: Atmen a0 ∝ H(z): Faktor 4.570, tiefer Bereich g_obs/g_bar ∝ √a0: +113.8 %;  feste Zelle a0 = c²/L_phys ∝ (1+z): Faktor 4.000, +100.0 %
+
+Zufallsprüfung zu I ≈ π:
+  Ω_m ∈ [0,2; 0,4] überstreicht I ∈ [2.832; 3.727]
+  einfache Zahlen im Intervall: 3=3.0000, π=3.1416, √10=3.1623, e+1/2=3.2183, 2φ=3.2361
+  Unsicherheit von I aus σ(Ω_m) = 0,0073: ±0.0288;  |I-π| = 0.0257 = 0.89 σ
+
+====================================================================================================
+5) Parameterzählung
+====================================================================================================
+Naturkonstanten: G, c, ħ, k (+ m_p, m_e, α für Teilchen); Atmen: H0.
+Pro Körper: M (dazu R, J, Umgebung für r_J).
+Galaxien (stationär): 0 freie Parameter (a0 = cH0/2π, q = exp(-√(a_N/a0))).
+Kosmos: Q = 5,36 (bzw. q), Form von w(θ) (mind. 1 Übergangsgröße), λ (Nachlauf), Rest-Dunkle-Energie (≥1), Zellgröße L (+Orientierung).

@@ -1,0 +1,76 @@
+
+====================================================================================================
+1 Umkehrbedingung auf dem flachen T³
+====================================================================================================
+Ω_m = 0.3134, Ω_r = 9.14e-05, Ω_s = (π²/45)Θ² = 0.2443 (Λ = 13.24 Gpc), übrige Ω_x = 0.4422
+Jeder Summand ist ≥ 0: Ω_s ∝ Γ(4)Σ1/n⁴ > 0 (Zählung der Rückläufe), Materie und Strahlung ≥ 0, T³ ohne Krümmung.
+⇒ E² > 0 für alle a: H wechselt das Vorzeichen nie. Numerisch, min E² über a ∈ [1, 10⁶]:
+  Ω_x fest (w = −1)                min E² = 0.6865  → H∞ = 55.84 km/s/Mpc
+  Ω_x ∝ a⁻³·⁽¹⁺ʷ⁾, w = −0,9        min E² = 0.2513  → H∞ = 33.79 km/s/Mpc
+  Ω_x ∝ a⁻², Bindung eingefroren   min E² = 0.2443  → H∞ = 33.32 km/s/Mpc
+  Ω_x = 0 ab heute                 min E² = 0.2443  → H∞ = 33.32 km/s/Mpc
+Endrate bei festem Λ, Rest verklungen: H_s = H0·√Ω_s = 33.32 km/s/Mpc = π²c/(√45·Λ) = 33.32
+
+Was eine Umkehr bräuchte: einen Summanden Ω_n < 0 mit |Ω_n(a)| = Ω_m a⁻³ + Ω_s bei endlichem a.
+Bei festem Λ bleibt Ω_s; ein negativer Summand ∝ a^{−3(1+w_n)} holt ihn nur ein, wenn er wächst (w_n < −1).
+  Ω_n = −0.01, w_n = -0.5: keine Umkehr (min E² = 0.244)
+  Ω_n = −0.01, w_n = -1.0: keine Umkehr (min E² = 0.234)
+  Ω_n = −0.01, w_n = -1.1: Umkehr bei a = 42413.1
+Mit wachsendem Λ fällt Ω_s ∝ Λ⁻² gegen null, bleibt aber > 0: auch dann keine Umkehr, H → 0 von oben.
+Das Modell hat keinen negativen Summanden: die Rückstellung σ = 0 ist das Bremsglied (w = 0, ≥ 0), der Vakuumteil > 0.
+
+====================================================================================================
+2 Λ fest oder wachsend: Endzustand, Kac-Maß, Rate
+====================================================================================================
+Horizontentropie zum Vakuumteil S_Λ = (45/π³)(Λ/ℓ_P)² = 9.272e+122 k  (Probe πc²/(ℓ_P²H_s²) = 9.272e+122)
+Λ fest: Maß des Zustandsraums je Horizont endlich, e^{S_Λ}; Kac: Rückkehr des Zustands nach ~ e^{S_Λ} (log10 ≈ 4.03e+122). Das ist ein Endzustand (H = H_s fest) mit Rückkehr als Schwankung.
+Λ wächst mindestens mit ε = Λ̇/Λ = Ṡ_i/(2S_Λ) = 3.829e-37 s⁻¹ (1/ε = 8.28e+28 a) ⇒ dS_Λ/dt ≥ Ṡ_i:
+  das Maß wächst mindestens so schnell wie Entropie entsteht; Kac greift nicht, der Zustand kehrt nicht zurück (Spirale),
+  die Form kehrt zurück (flache Matrix → Wirbel → Faltung).
+Mit Ṡ_i je Horizont fest: Λ² = Λ0² + (π³ℓ_P²Ṡ_i/45)·t ⇒ Λ ∝ t^½ spät, H_s ∝ 1/Λ; H_s halbiert sich nach 1.24e+29 a
+  Rate: Ḣ_s/H_s = −ε,  q = −1 + ε/H_s = −1 + 3.55e-19;  w_s = −1 + (2/3)ε/H = −1 + 1.17e-19 (heute)
+  ⇒ Λ fest: H → H_s = const (Endzustand, verletzt 04). Λ wächst: H → 0 asymptotisch, ohne Umkehr.
+
+====================================================================================================
+3 Vorzeichen von Ḣ mit Λ(a) = Λ_m(1 + Ω_r/(Ω_m a)) (Kern) und neuer Faltung ε
+====================================================================================================
+Ḣ/H² = −(3/2)[Ω_m a⁻³ + (4/3)Ω_r a⁻⁴ + (1 + w_s)Ω_s]/E²,  1 + w_s = (2/3)·d ln Λ/d ln a,
+d ln Λ/d ln a = −(Ω_r/(Ω_m a))/(1 + Ω_r/(Ω_m a)) + ε/H   (Strahlung verliert Faltung; neue Faltung an der Engstelle)
+  (Rest Ω_x = 0, nur Ω_m, Ω_r, Ω_s(Λ(a)); bei a = 1 daher nicht der heutige Wert)
+  a =         1:  Ḣ/H² = -8.429e-01   q = -0.157054
+  a =        10:  Ḣ/H² = -1.892e-03   q = -0.998108
+  a =        50:  Ḣ/H² = -9.551e-06   q = -0.999990
+  a =        81:  Ḣ/H² = -1.790e-08   q = -1.000000
+  a =       100:  Ḣ/H² = +9.934e-07   q = -1.000001
+  a =     1e+03:  Ḣ/H² = +2.897e-07   q = -1.000000
+  a =     1e+06:  Ḣ/H² = +2.916e-10   q = -1.000000
+  a =     1e+12:  Ḣ/H² = +2.913e-16   q = -1.000000
+  a =     1e+14:  Ḣ/H² = +2.562e-18   q = -1.000000
+  a =     1e+15:  Ḣ/H² = -6.287e-20   q = -1.000000
+  a =     1e+16:  Ḣ/H² = -3.253e-19   q = -1.000000
+  Ḣ = 0 bei a₁ = 81.2 (Materie gegen Strahlungsverlust der Faltung, von Hand a² ≈ 1,5Ω_m²/(Ω_rΩ_s) = 81.2), t ≈ 125 Gyr nach heute
+  Ḣ = 0 bei a₂ = 8.23e+14 (neue Faltung überwiegt, von Hand a ≈ Ω_rH_s/(Ω_mε) = 8.22e+14), t ≈ 1.00e+12 a  [bei Ṡ_i fest]
+  dazwischen Ḣ > 0, Betrag: H steigt insgesamt um den Faktor 1 + Ω_r/(Ω_m a₁) = 1 + 3.6e-06
+  Mit Rest Ω_x (w_x ≥ −1) kommt nur ein negativer Beitrag zu Ḣ hinzu. Heute (Rest w = −1):
+  Ḣ0/H0² = -0.4702,  q0 = -0.5298; minimal (Rest weg, nur Ω_m + Ω_s): Beschleunigung ab Ω_m a⁻³ = 2Ω_s, z = 0.160
+
+====================================================================================================
+4 Kreislaufbedingung (04) −Ḣ ≥ ℓ_P²H³Ṡ_i/(2πc²k) bei fester Dunkler Energie (w = −1, Ω_DE = 0.687)
+====================================================================================================
+  verletzt ab a = 1048298.2, Weltalter t = 2.55e+11 a  (04: ≈ 2,5·10¹¹ a)
+  Mit wachsendem Λ (ε ≥ Ṡ_i/(2S_Λ)) gilt −Ḣ = εH am Ende: die Bedingung ist genau die Mindestrate aus 03, erfüllt ohne Umkehr.
+  Mit Λ(a) aus dem Kern (Strahlung verliert Faltung) verlangt dieselbe Bedingung im Fenster a₁ < a < a₂ mehr:
+  ε ≥ Ṡ_i/(2S_Λ) + (Ω_r/(Ω_m a))·H  (sonst Ḣ > 0, die Horizontfläche schrumpft):
+    a =      81.2: ε_nötig = 3.88e-24 s⁻¹ = 1.01e+13·ε_min
+    a =     1e+03: ε_nötig = 3.15e-25 s⁻¹ = 8.22e+11·ε_min
+    a =     1e+06: ε_nötig = 3.15e-28 s⁻¹ = 8.22e+08·ε_min
+    a =     1e+10: ε_nötig = 3.15e-32 s⁻¹ = 8.22e+04·ε_min
+    a =     1e+14: ε_nötig = 3.53e-36 s⁻¹ = 9.22e+00·ε_min
+    a =  8.23e+14: ε_nötig = 7.66e-37 s⁻¹ = 2.00e+00·ε_min
+
+====================================================================================================
+5 Von Hand
+====================================================================================================
+  Λ = c²/(2a₀) = 8,988·10¹⁶/2,2·10⁻¹⁰ = 4,085·10²⁶ m;  H_s = π²c/(√45Λ) = 9,870·2,998·10⁸/(6,708·4,085·10²⁶)
+      = 1,080·10⁻¹⁸ s⁻¹ = 33,3 km/s/Mpc;  H_s/H0 = 1,080/2,184 = 0,494 = √0,244 = √Ω_s.
+  Kern: 33.32 km/s/Mpc, √Ω_s = 0.4943

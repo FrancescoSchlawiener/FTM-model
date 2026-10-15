@@ -1,0 +1,15 @@
+1) Messwerte und Abstand zu ν = 2π  (ν = Ω_m/Ω_b = 1 + Ω_c/Ω_b)
+   Planck 2018 TT,TE,EE+lowE+lensing    ν = 6.3643 ± 0.0646   2π = 6.2832   Abstand +1.26 σ
+   Planck 2018 + BAO                    ν = 6.3225 ± 0.0525   2π = 6.2832   Abstand +0.75 σ
+
+   Folge bei ν = 2π:  q = 1 − 1/2π = 0.84085,  Ω_c/Ω_b = 2π − 1 = 5.2832,  Ω_b/Ω_m = 1/2π = 0.15915
+   Vorhersage Ω_c h² = (2π−1)·Ω_b h² = 0.11818 (bei Ω_b h² = 0,02237)
+
+2) Zufallsprüfung: 'natürliche' Kandidaten für ν im 2σ-Band des Planck+BAO-Werts [6,216 ; 6,428]
+   21 Kandidaten, z. B.: π+π, 19/3, 25/4, 32/5, 44/7, 51/8, 56/9, 2π+0, 3π-3, 2φ+3, 63/10, 69/11, 70/11, 77/12, e^2-1, φ^3+2
+   -> 2π ist einer von vielen Zahlentreffern. Es unterscheidet sich nur durch die Deutung (Kac-Rückkehr = ein Umlauf).
+
+3) Schärfe des Tests: Wie genau muss Ω_m/Ω_b gemessen werden, um 2π auf 5σ zu prüfen?
+   falls ν = 6.3224: Abstand zu 2π = 0.0392 -> nötige Unsicherheit σ ≤ 0.0078 (0.12 %)
+   falls ν = 6.3640: Abstand zu 2π = 0.0808 -> nötige Unsicherheit σ ≤ 0.0162 (0.25 %)
+   Heute: σ(ν)/ν ≈ 0,8 % (Planck+BAO). CMB-S4/LiteBIRD-Ziel für ω_c, ω_b: je ~0,2–0,3 % (aus dem Gedächtnis).

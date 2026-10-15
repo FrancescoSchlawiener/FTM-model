@@ -1,0 +1,105 @@
+==============================================================================
+1  Quellen (Suchergebnisse; Volltexte arXiv/Nature/A&A/MNRAS vom Netz gesperrt)
+==============================================================================
+   Poggio et al. 2020 (NatAs 4, 590): 12·10⁶ Riesensterne Gaia DR2; ω = +10,86 ± 0,03 (stat) ± 3,20 (sys)
+     km/s/kpc; Mittel über vier geometrische Warp-Modelle aus der Literatur; mittlere v_z-Karte, v_R = 0,
+     eine Rate für alle R; Amplitude zeitlich fest (∂h/∂t = 0) [G, Methoden nicht eingesehen].
+   Cheng et al. 2020 (ApJ 905, 49): Gaia DR2 + APOGEE, ω = 13,57 (+0,20/−0,18) km/s/kpc; jüngere Sterne
+     (3–6 Gyr) stärkere v_z-Störung als 6–9 Gyr.
+   Chrobáková & López-Corredoira 2021 (ApJ 912, 130): Amplitude je Sternalter (γ, γ̇ = −dγ/d Alter);
+     ω = 4 (+6/−4) km/s/kpc, verträglich mit 0: mit altersabhängiger Amplitude ist keine Präzession nötig.
+   Chrobáková et al. 2022 (A&A, Überriesen EDR3): Warp asymmetrisch, z_w = +0,66 / −0,72 kpc bei R = 19,5–20 kpc.
+   Dehnen, Semczuk & Schönrich 2023 (MNRAS 523, 1556), Cepheiden: Neigung ≈ 3° ab 14 kpc, rechtläufig
+     ≈ 12 km/s/kpc bei 12 kpc, ≈ 6 ab 14 kpc; Knotenlinie verdreht sich um ≈ 14°/kpc im Drehsinn
+     (−15° bei 11–12 kpc bis +45° bei 16,5 kpc).
+   Cabrera-Gadea et al. 2024 (MNRAS 528, 4409), Cepheiden Z und v_z gemeinsam: Z_w = 0,00019 R^3,08
+     sin(φ − (3,87R − 41,79 + 4,86 t)) kpc, ω = 4,86 ± 0,88 (stat) ± 2,14 (sys) km/s/kpc; Unsymmetrie (m = 2)
+     wichtig, Amplitudenänderung nicht.
+==============================================================================
+3  Kippsteifigkeit der örtlichen Regel: gekoppelte Ringe (a₀ = 1.10e-10 m/s²)
+==============================================================================
+   Ringe 0,125–39,9 kpc, ΔR = 0,25 kpc, Glättung ε = 0,3 kpc; Bulge kugelgemittelt
+   R    g_N/a0   ν      v[km/s]  Ω      ν_z,Stern  Ω−ν_z(Stern)  Ω−ν_z(Ring)  Newton: Ω  Ω−ν_z(Stern)
+    8.1   1.157  1.518   220.0   27.08    92.18      -65.10        -52.56      21.98     -52.84
+   12.1   0.599  1.856   213.8   17.64    56.27      -38.63        -31.34      12.94     -28.35
+   14.1   0.449  2.047   210.0   14.87    45.82      -30.96        -25.12      10.39     -21.64
+   16.1   0.347  2.245   206.6   12.81    38.32      -25.51        -20.69       8.55     -17.02
+   20.1   0.224  2.653   201.4   10.01    28.52      -18.51        -14.99       6.14     -11.36
+
+   Probe starre Kippung aller Ringe: max|ν(KZ) − Ω²R|/Ω²R = 9.2e-15 (Soll 0, Frequenz 0)
+
+   Eigenmoden, örtliche Regel: 160 langsame Zweigmoden (Re ω < Ω/2 am Maximum)
+     davon Re ω > +0,05 km/s/kpc (rechtläufig, ohne starre Kippung): 0; größtes Re ω = -0.466
+     größtes |Im ω| (Wachsen/Abklingen) im langsamen Zweig: 2.15e-13 km/s/kpc; Mode ω≈0: +3.37e-14
+     Moden mit Maximum bei 11,5–17 kpc: 20, Re ω von -38.94 bis -22.74 km/s/kpc
+     glatteste langsame Moden (Knoten in R, Re ω, Maximum): (0, +0.00, 39.9 kpc), (1, -0.47, 39.9 kpc), (2, -0.91, 39.9 kpc), (3, -1.34, 39.9 kpc), (4, -1.73, 39.9 kpc), (5, -2.09, 39.9 kpc)
+
+   Eigenmoden, Newton (nur Baryonen): 160 langsame Zweigmoden (Re ω < Ω/2 am Maximum)
+     davon Re ω > +0,05 km/s/kpc (rechtläufig, ohne starre Kippung): 0; größtes Re ω = -0.231
+     größtes |Im ω| (Wachsen/Abklingen) im langsamen Zweig: 2.17e-13 km/s/kpc; Mode ω≈0: +1.03e-15
+     Moden mit Maximum bei 11,5–17 kpc: 21, Re ω von -28.94 bis -14.67 km/s/kpc
+     glatteste langsame Moden (Knoten in R, Re ω, Maximum): (0, +0.00, 39.9 kpc), (1, -0.23, 39.9 kpc), (2, -0.46, 39.9 kpc), (3, -0.68, 39.9 kpc), (4, -0.88, 39.9 kpc), (5, -1.06, 39.9 kpc)
+------------------------------------------------------------------------------
+   Zeitentwicklung, anfangs ruhende Warpfläche (∂_tZ = 0), Knotenrate ω = −d arg Z/dt, Ȧ/A = d ln|Z|/dt
+   mittlere Knotenrate ω über 0–25 / 0–200 / 0–1000 Myr; Ȧ/A über 0–25 / 0–200 Myr [km/s/kpc]; momentan: Schritt 5 Myr
+   Cabrera-Gadea 0,00019 R^3,08 örtlich    | R12:  -0.2  -1.3  +0.4 ;  -0.6  -0.8 | R14:  -0.1  -1.1  +0.2 ;  -0.5  -0.3 | R16:  -0.1  -1.1  +0.1 ;  -0.4  -0.1 | Knoten 12/16 nach 1 Gyr 16° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +7.8 bei A/A₀ = 0.26, mit A > A₀/2 höchstens +1.3, Zeitanteil ω > 5 und A > A₀/2 0 %, kleinstes A/A₀ 0.25
+   (R − 10)² ab 10 kpc          örtlich    | R12:  +0.7  +1.8  +0.6 ;  +2.3  +3.1 | R14:  -0.1  -0.5  +0.2 ;  -0.4  -0.8 | R16:  -0.1  -1.2  -0.8 ;  -0.5  -0.5 | Knoten 12/16 nach 1 Gyr 87° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +7.7 bei A/A₀ = 0.49, mit A > A₀/2 höchstens +5.7, Zeitanteil ω > 5 und A > A₀/2 2 %, kleinstes A/A₀ 0.37
+   (R − 12)^1,5 ab 12 kpc       örtlich    | R12:  +9.8  +2.4  +0.8 ; +71.6 +18.5 | R14:  -0.1  +0.1  -0.3 ;  -0.2  -0.5 | R16:  -0.1  -1.5  -1.0 ;  -0.6  -0.7 | Knoten 12/16 nach 1 Gyr 102° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +7.7 bei A/A₀ = 0.40, mit A > A₀/2 höchstens +7.7, Zeitanteil ω > 5 und A > A₀/2 18 %, kleinstes A/A₀ 0.40
+   Cabrera-Gadea 0,00019 R^3,08 Newton     | R12:  -0.1  -0.9  +0.4 ;  -0.4  -0.4 | R14:  -0.0  -1.0  +0.3 ;  -0.2  -0.3 | R16:  -0.0  -0.8  -0.7 ;  -0.2  -0.3 | Knoten 12/16 nach 1 Gyr 65° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +5.6 bei A/A₀ = 0.34, mit A > A₀/2 höchstens +1.8, Zeitanteil ω > 5 und A > A₀/2 0 %, kleinstes A/A₀ 0.28
+   (R − 10)² ab 10 kpc          Newton     | R12:  +0.3  +2.5  +0.7 ;  +1.3  +1.2 | R14:  -0.0  -0.2  -0.2 ;  -0.2  -0.6 | R16:  -0.0  -0.9  -0.3 ;  -0.2  -0.5 | Knoten 12/16 nach 1 Gyr 59° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +4.0 bei A/A₀ = 0.94, mit A > A₀/2 höchstens +4.0, Zeitanteil ω > 5 und A > A₀/2 0 %, kleinstes A/A₀ 0.64
+   (R − 12)^1,5 ab 12 kpc       Newton     | R12:  +6.4  +3.8  +0.5 ; +53.3 +16.8 | R14:  -0.0  +0.6  -0.4 ;  -0.1  -0.6 | R16:  -0.0  -1.1  -0.4 ;  -0.3  -0.6 | Knoten 12/16 nach 1 Gyr 52° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +5.8 bei A/A₀ = 1.51, mit A > A₀/2 höchstens +5.8, Zeitanteil ω > 5 und A > A₀/2 6 %, kleinstes A/A₀ 0.63
+   Cabrera-Gadea 0,00019 R^3,08 örtl. ε0,2 | R12:  -0.2  -1.3  +0.3 ;  -0.7  -0.8 | R14:  -0.1  -1.2  +0.2 ;  -0.5  -0.3 | R16:  -0.1  -1.1  +0.0 ;  -0.4  -0.1 | Knoten 12/16 nach 1 Gyr 19° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +7.7 bei A/A₀ = 0.27, mit A > A₀/2 höchstens +1.5, Zeitanteil ω > 5 und A > A₀/2 0 %, kleinstes A/A₀ 0.26
+   Cabrera-Gadea 0,00019 R^3,08 örtl. ε0,5 | R12:  -0.2  -1.2  +0.4 ;  -0.6  -0.7 | R14:  -0.1  -1.1  +0.2 ;  -0.5  -0.3 | R16:  -0.1  -1.1  +0.1 ;  -0.3  -0.1 | Knoten 12/16 nach 1 Gyr 18° auseinander | 13–16 kpc in 1 Gyr: größte momentane Rate +7.8 bei A/A₀ = 0.26, mit A > A₀/2 höchstens +1.0, Zeitanteil ω > 5 und A > A₀/2 0 %, kleinstes A/A₀ 0.24
+   (bei R = 12 kpc und Form (R−12)^1,5 ist A(0) ≈ 0: Phase dort nicht bestimmt)
+------------------------------------------------------------------------------
+   Empfindlichkeit (Stern- und Ringwerte bei 14 kpc, Moden 11,5–17 kpc):
+   ε = 0,2 kpc   v(14) = 210.3 km/s, Ω = 14.89, Ω−ν_z Stern -40.58, Ring -29.28; langsame Moden mit Re ω > 0,05: 0, max Re ω -0.469, max|Im ω| 1.9e-13
+   ε = 0,5 kpc   v(14) = 209.4 km/s, Ω = 14.82, Ω−ν_z Stern -21.83, Ring -19.27; langsame Moden mit Re ω > 0,05: 0, max Re ω -0.459, max|Im ω| 1.7e-13
+   a₀ = 1,2e-10  v(14) = 213.3 km/s, Ω = 15.10, Ω−ν_z Stern -31.44, Ring -25.51; langsame Moden mit Re ω > 0,05: 0, max Re ω -0.475, max|Im ω| 1.5e-13
+==============================================================================
+2  Kinematik: v_z = Ȧ sin(φ−φ_w) + A(Ω − ω_p) cos(φ−φ_w)
+==============================================================================
+   Am Knoten (φ = φ_w) fällt der Ȧ-Term heraus: v_z,Knoten = A(Ω − ω_p), unabhängig von Ȧ.
+   Eine um den Knoten symmetrische Stichprobe mittelt den Ȧ-Term weg (ungerade in φ − φ_w).
+   Liegt die Mitte der Stichprobe um δ neben dem Knoten, gibt eine Anpassung mit Ȧ = 0:
+       ω_fit = ω_p − (Ȧ/A)·tan δ    →    Ȧ/A = (ω_p − ω_fit)/tan δ.
+   Ω(14 kpc) örtliche Regel = 14.87 km/s/kpc; Umlaufzeit 2π/Ω = 413 Myr
+   benötigtes Ȧ/A [km/s/kpc] (e-Zeit in Myr) für ω_fit = +10,86:
+   freie Präzession                      ω_p |  δ =  5°          δ = 15°          δ = 30°          δ = 45°        
+   einzelner Stern Ω−ν_z              -30.96 |   -477.9 (   2)   -156.1 (   6)    -72.4 (  14)    -41.8 (  23)
+   einzelner Ring Ω−ν_z               -25.12 |   -411.2 (   2)   -134.3 (   7)    -62.3 (  16)    -36.0 (  27)
+   Ring Feldform (38)                 -13.98 |   -283.9 (   3)    -92.7 (  11)    -43.0 (  23)    -24.8 (  39)
+   starrer Außenteil Feldform (38)     -1.19 |   -137.7 (   7)    -45.0 (  22)    -20.9 (  47)    -12.1 (  81)
+   statischer Warp                     +0.00 |   -124.1 (   8)    -40.5 (  24)    -18.8 (  52)    -10.9 (  90)
+
+   Alternative Lesart (Amplitude der Riesensterne ≠ geometrische Amplitude): v_z,Knoten gleich ⇒
+   A_kin/A_geo = (Ω − ω_fit)/(Ω − ω_p) bei Ω = 14.87:
+     einzelner Stern Ω−ν_z            0.087
+     einzelner Ring Ω−ν_z             0.100
+     Ring Feldform (38)               0.139
+     starrer Außenteil Feldform (38)  0.250
+     statischer Warp                  0.270
+==============================================================================
+4  Blickrichtung (Ruhesystem der Galaxie)
+==============================================================================
+   v_z = ∂Z/∂t + Ω∂Z/∂φ ist Geometrie im Ruhesystem der Galaxie; die Regel wirkt nur über ω_p und Ȧ.
+   Der Beobachter geht über die Eigenbewegung der Sonne W☉ ein (≈ 7,25 km/s [G], Schönrich et al. 2010)
+   und über Ω aus gemessenem v_φ.  Δω_fit = ΔW☉/A:
+     A = 0.5 kpc, ΔW☉ = 0.5 km/s → Δω = 1.0 km/s/kpc
+     A = 0.5 kpc, ΔW☉ = 1.0 km/s → Δω = 2.0 km/s/kpc
+     A = 1.0 kpc, ΔW☉ = 0.5 km/s → Δω = 0.5 km/s/kpc
+     A = 1.0 kpc, ΔW☉ = 1.0 km/s → Δω = 1.0 km/s/kpc
+   für ω_p = -30.96 statt +10,86 müsste v_z,Knoten um 41.8·A km/s (A in kpc) verschoben sein
+   für ω_p = -25.12 statt +10,86 müsste v_z,Knoten um 36.0·A km/s (A in kpc) verschoben sein
+   für ω_p = -13.98 statt +10,86 müsste v_z,Knoten um 24.8·A km/s (A in kpc) verschoben sein
+   für ω_p =  -1.19 statt +10,86 müsste v_z,Knoten um 12.0·A km/s (A in kpc) verschoben sein
+==============================================================================
+5  Proben
+==============================================================================
+   Rotationskurve bei a₀ = 1,2e-10 (Ringkern) gegen Gitterlösung warp_praezession (Feldform):
+     R = 8.12: v_N = 178.6 (Gitter 177.4), v örtlich = 222.8 (Gitter Feldform 220.0) km/s
+     R = 12.12: v_N = 157.0 (Gitter 157.1), v örtlich = 217.0 (Gitter Feldform 216.2) km/s
+     R = 14.12: v_N = 146.8 (Gitter 147.1), v örtlich = 213.3 (Gitter Feldform 213.0) km/s
+     R = 16.12: v_N = 137.9 (Gitter 138.2), v örtlich = 210.0 (Gitter Feldform 210.1) km/s
+   Hand: g_N/a₀ = 0.4495 → s = 0.6704, q = e^{−s} = 0.5115, ν = 1/(1−q) = 2.0470 (Kern 2.0470)
+   Hand: Ȧ/A = (-30.96 − 10,86)/tan 15° = -41.8/0,2679 = -156.1 km/s/kpc; 1/(Ȧ/A) = 6.3 Myr

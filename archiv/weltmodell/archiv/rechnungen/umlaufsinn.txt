@@ -1,0 +1,107 @@
+0) ν = a/a_N, s = √(a_N/a₀), q = e^{−s}
+   a_N/a₀   Σ_{m≥0}qᵐ   Σ_{m∈ℤ}q^|m| = coth(s/2)   ½(1 + coth(s/2))   coth s (gleicher TF-Nullpunkt)   1/(1 − 1/cosh s)
+       10      1.0442      1.0884      1.0442      1.0036      1.0923
+        3      1.2150      1.4299      1.2150      1.0646      1.5223
+        1      1.5820      2.1640      1.5820      1.3130      2.8413
+      0.3      2.3712      3.7423      2.3712      2.0048      7.5025
+      0.1      3.6886      6.3772      3.6886      3.2670     20.8342
+     0.01     10.5083     20.0167     10.5083     10.0333    200.8334
+   Tiefgrenze: 1/s + ½ (v⁴ = GMa₀) | 2/s (v⁴ = 4GMa₀) | = einseitig | 1/s | 2/s² (a → 2a₀)
+   Identität: 1/(1 − q) = ½ + ½·coth(s/2): ein Sinn mit vollem Gewicht = beide Sinne mit halbem Gewicht.
+
+1a) Operator: T = Verschiebung um einen Rücklauf, Symbol z (|z| = 1 ↔ reelle Frequenz, z = e^{iωτ_R}). s = 1
+   (I − qT)⁻¹ = Σ_{m≥0}: Koeffizienten m ≥ 0: max|c_m − qᵐ| = 4.1e-17;  m < 0: max|c_m| = 1.2e-17
+   Pol bei z = e^s = 2.718 (außerhalb |z| ≤ 1): analytisch in der Scheibe ⇔ Träger m ≥ 0 ⇔ in ω analytisch für Im ω > 0
+   (1 − q²)(I − qT)⁻¹(I − qT⁻¹)⁻¹ = Σ_{m∈ℤ} q^|m|Tᵐ: max|c_m − q^|m|| = 5.8e-17; Pole bei z = e^{±s}: beide Seiten
+   → einseitig = Green-Funktion des Operators erster Ordnung I − qT (kausaler Wiener-Hopf-Faktor);
+     beidseitig = Green-Funktion des symmetrischen Operators zweiter Ordnung (1+q²) − q(T + T⁻¹), diskret −D∂² + Γ
+   Die andere formale Inverse von I − qT, −Σ_{m≥1}(qT)^{−m}, divergiert: q^{−50} = 5.2e+21
+   Gerade/ungerade: max|Re R(z) − ½(1 + S(z))| = 4.4e-16;  ungerader Teil Im R bei z = 1: 0.0e+00
+   Statisch trägt nur der gerade (zeitumkehrsymmetrische) Teil: R(1) = 1.5820 = ½(1 + S(1)) = 1.5820
+
+1b) Explizites Modell: Diffusion mit Verlust Γ auf der Geraden (Überlagerung des Rings). Einheiten 1/Γ, L²/D = s², s = 1
+    Rücklauf m in einem Sinn = erstes Erreichen von +mL: f_m(t) = m s/√(4πt³)·exp(−m²s²/(4t) − t), t ≥ 0
+    ∫f_1 = 0.367879 (e^{−1s} = 0.367879),  ∫f_2 = 0.135335 (e^{−2s} = 0.135335),  ∫f_3 = 0.049787 (e^{−3s} = 0.049787)
+    Folgedichte r(t) = Σ_{m≥1} f_m, Träger t ≥ 0, ∫r = 0.58198 = q/(1 − q) = 0.58198
+    ω = 0.5Γ:  ∫r e^{iωt} = 0.504956 + 0.198056i;  geschlossen R(ω) − 1 = 0.504956 + 0.198056i,  R(ω) = 1/(1 − e^{−s√(1 − iω/Γ)})
+    ω = 2.0Γ:  ∫r e^{iωt} = 0.175063 + 0.290591i;  geschlossen R(ω) − 1 = 0.175063 + 0.290591i,  R(ω) = 1/(1 − e^{−s√(1 − iω/Γ)})
+    Oberhalb der Achse (0 ≤ Im ω ≤ 20Γ, |Re ω| ≤ 200Γ): min|1 − q(ω)| = 0.632 > 0; Singularitäten bei ω = −iΓ(1 + 4π²k²/s²), alle unten
+    ein Sinn, retardiert      : statisch 1.5820;  Kramers-Kronig Re F − 1 gegen (1/π)P∫Im F/(ω−ω₀):  ω₀=0: 0.58198 | 0.58198;  ω₀=Γ: 0.36752 | 0.36752
+    Ring, beide Sinne (Bilder): statisch 2.1640;  Kramers-Kronig Re F − 1 gegen (1/π)P∫Im F/(ω−ω₀):  ω₀=0: 1.16395 | 1.16395;  ω₀=Γ: 0.73504 | 0.73504
+    zeitsymmetrisch r(|t|)    : statisch 2.1640;  Kramers-Kronig Re F − 1 gegen (1/π)P∫Im F/(ω−ω₀):  ω₀=0: 1.16395 | 0.00000;  ω₀=Γ: 0.73504 | 0.00000
+    ω = 0.99iΓ:  |R| = 1.323,  |zeitsymmetrisch| = |R(ω) + R(−ω) − 1| = 10.8  (Pol bei +iΓ)
+    ω = 0.9999iΓ:  |R| = 1.321,  |zeitsymmetrisch| = |R(ω) + R(−ω) − 1| = 100.8  (Pol bei +iΓ)
+    → Die Windungssumme beider Sinne auf dem Ring ist ebenso retardiert wie die eines Sinnes; Kausalität trennt die Sinne nicht.
+      Zeitsymmetrisch und Ring (beide Sinne) haben denselben statischen Wert coth(s/2).
+
+1c) Aufbau in Echtzeit mit Γ = a_N/c, τ_D = L²/D = c/a₀ (Weltalter 13,8 Mrd. J. als Eingabe)
+    τ_D = 79.2 Mrd. J.;  t_U/τ_D = 0.174;  mittlere Laufzeit des m-ten Rücklaufs m·τ_D/(2s)
+    a_N/a₀ =     1: bis t_U eingetroffen ν(t_U) = 1.0807  gegen stationär ν = 1.5820;  erster Rücklauf nach 40 Mrd. J. im Mittel
+    a_N/a₀ =   0.1: bis t_U eingetroffen ν(t_U) = 1.0900  gegen stationär ν = 3.6886;  erster Rücklauf nach 125 Mrd. J. im Mittel
+    a_N/a₀ =  0.01: bis t_U eingetroffen ν(t_U) = 1.0909  gegen stationär ν = 10.5083;  erster Rücklauf nach 396 Mrd. J. im Mittel
+    → Als Vorgang in Echtzeit wäre die Summe heute nicht aufgebaut; sie muss stationär sein, und dann wählt kein Zeitpfeil einen Umlaufsinn.
+      Die Laufzeitdarstellung (D∂² − Γ)⁻¹ = ∫₀^∞ e^{t(D∂²−Γ)} dt ist stets einseitig in t (konvergiert für Γ > 0) und enthält doch beide Raumsinne.
+
+1d) Stationär, finite Differenzen (h = L/400, s = 1): D·G'' = Γ·G auf der Halbgeraden ab dem Ort gegen Quelle in der vollen Geraden
+    Halbgerade, G(0) = 1, beschränkt: Σ_{m≥0} G(mL) = 1.5820 (G(L) = 0.36788, e^{−s} = 0.36788); nur m ≥ 0 existiert, (∂ + √(Γ/D))G = 0
+    volle Gerade, Quelle am Ort: G(±L)/G(0) = 0.36788 / 0.36788;  Σ_{m∈ℤ} G(mL)/G(0) = 2.1640 = coth(½) = 2.1640
+    → Der eine Sinn ist stationär gleichwertig mit einer Halbgeraden der inneren Richtung, die am Ort beginnt (Wiener-Hopf-Faktor).
+
+2) Bildsumme im Kreis imaginärer Zeit (Oszillator ω = 1, Umfang β = x). G_β(τ) = Σ_{n∈ℤ} e^{−|τ+nβ|}/2
+   x = 1.0: Bildsumme 0.978772 = geschlossen 0.978772 = [(Σ_{n≥0})e^{−τ} + (Σ_{n≥1})e^{τ}]/2 = 0.978772
+      Σ_{n≥0} = 1.5820 = 1 + n_B,  Σ_{n≥1} = 0.5820 = n_B (Spur: 0.5820);  Verhältnis 2.7183 = e^x = 2.7183 (KMS)
+      Propagator gleichzeitig 2G_β(0) = 2.1640 = coth(x/2) = 1 + 2n_B;  Kommutator G^> − G^< = 1.0000;  statische Suszeptibilität ∫₀^β G_β = 1.0000 (unabhängig von β)
+   x = 0.316: Bildsumme 3.157724 = geschlossen 3.157724 = [(Σ_{n≥0})e^{−τ} + (Σ_{n≥1})e^{τ}]/2 = 3.157724
+      Σ_{n≥0} = 3.6908 = 1 + n_B,  Σ_{n≥1} = 2.6908 = n_B (Spur: 2.6908);  Verhältnis 1.3716 = e^x = 1.3716 (KMS)
+      Propagator gleichzeitig 2G_β(0) = 6.3817 = coth(x/2) = 1 + 2n_B;  Kommutator G^> − G^< = 1.0000;  statische Suszeptibilität ∫₀^β G_β = 1.0000 (unabhängig von β)
+   → Der Propagator ist beidseitig (coth), die Besetzung einseitig. + Windungen gehören zur positiven, − Windungen zur negativen Frequenz.
+     ν = 1/(1 − q) = 1 + n_B(s) = G^>/ρ (Emissionsgewicht einer Ordnung); Zusatz a − a_N = a_N·n_B(s), χ = s·n_B(s).
+     Die retardierte Antwort (Kommutator) trägt keinen Bose-Faktor; beide Ordnungen G^> + G^< geben coth(s/2); KMS: Gegensinn = q × Sinn.
+
+3) Torus: q = e^{2πiτ}, Im τ = s/2π. Holomorph f = Σ_{n≥0}qⁿ gegen reell-analytisch Σ_{n≥0}qⁿ + Σ_{n≥1}q̄ⁿ = (1 − |q|²)/|1 − q|²
+   Fourier in Re τ: f: n ≥ 0 max|c_n − e^{−ns}| = 4.4e-17, n < 0 max|c_n| = 2.1e-17;  reell-analytisch: c_{±n} = e^{−|n|s} (Fehler 4.2e-17)
+   Kramers-Kronig längs Re τ: max|Im f − H[Re f]| = 6.1e-16;  reell-analytisch: Im = 0, max|H[P]| = 0.851
+   → Holomorph in Im τ > 0 ⇔ Träger n ≥ 0 ⇔ Kramers-Kronig (Titchmarsh): dieselbe Struktur wie Kausalität, mit der Windungszahl als Zeit.
+   Auf der Achse Re τ = 0 (Bindung nur über |q|):  a_N/a₀   f   Re f = ½(f + f̄)   Σq + Σq̄ = coth(s/2)   dasselbe mit q² = coth s   |f|²
+           3     1.2150     1.2150     1.4299     1.0646      1.4761
+           1     1.5820     1.5820     2.1640     1.3130      2.5027
+         0.3     2.3712     2.3712     3.7423     2.0048      5.6224
+         0.1     3.6886     3.6886     6.3772     3.2670     13.6057
+        0.01    10.5083    10.5083    20.0167    10.0333    110.4250
+   Umkehr der Orientierung τ → −τ̄ (q → q̄): |f(q)| = 1.360709 = |f(q̄)| = 1.360709 bei Re τ = 0,1; auf der Achse gleich.
+   → Die Orientierung selbst ist in a unsichtbar; sichtbar ist nur, ob der zweite Sinn mit vollem Gewicht hinzukommt (coth).
+
+4a) Kern des Autors auf der Kreisbahn, beide Drehsinne (κ₀ = r = 1, λ_m = 0,3): a = −κ₀∫₀^∞ e^{−λτ} Π v(t−τ) dτ
+    ω = +1: e_r⊗e_r: a_r = -0.91743 (−ω²/(λ²+ω²) = -0.91743);  antisymmetrisch: a_r = -0.27523 (−λω/(λ²+ω²))
+    ω = -1: e_r⊗e_r: a_r = -0.91743 (−ω²/(λ²+ω²) = -0.91743);  antisymmetrisch: a_r = 0.27523 (−λω/(λ²+ω²))
+    → Der radiale Projektor gibt einen in ω geraden Term: gleich für mit- und gegenläufige Bahnen. Einen ungeraden Radialanteil
+      gäbe nur ein antisymmetrischer Projektor (Casimir-Typ, gekoppelt an den Drehsinn); er fehlt in der Gleichung.
+
+4b) Zwei Fälle, Punktmasse (a_N = a₀(r*/r)²). Z: Sinn = Zeit (universell). D: Sinn = Drehsinn der Scheibe
+    D1: nur Rückläufe im Drehsinn der Scheibe zählen, Gegenläufer Newton;  D2: getragen vom Nettodrehimpuls, ν = 1 + λ·q/(1 − q), λ = |L_netto|/Σ|L|
+    r/r*    ν (Z, alle)   v_gegen/v_mit (D1) = v(λ=0)/v(λ=1) (D2)   v(λ=0,4)/v(λ=1) (D2, Scheiben 70:30)
+      0.5      1.157      0.930      0.959
+        1      1.582      0.795      0.883
+        2      2.541      0.627      0.798
+        3      3.528      0.532      0.755
+        5      5.517      0.426      0.713
+       10     10.508      0.308      0.676
+    Tiefgrenze D2: v⁴ = λ²·GMa₀ (Tully-Fisher-Nullpunkt hängt am Drehanteil); Z: v⁴ = GMa₀ für jedes λ.
+
+4c) Druckgestützt (Plummer, isotrop): Virial ⟨v²⟩ = −(1/M)∫ρ r·a dV, σ₁ = √(⟨v²⟩/3). Z gegen D (λ = 0 → Newton)
+    M = 1e+07 M☉, b = 0.3 kpc: σ₁(Z) =   9.79 km/s,  σ₁(Newton = D, λ = 0) =   3.75 km/s (3π/32·GM/b: 3.75),  Verhältnis 2.61;  Tiefgrenze Z √((2/9)√(GMa₀)) = 9.42 km/s
+    M = 1e+09 M☉, b = 1.0 kpc: σ₁(Z) =  33.42 km/s,  σ₁(Newton = D, λ = 0) =  20.55 km/s (3π/32·GM/b: 20.55),  Verhältnis 1.63;  Tiefgrenze Z √((2/9)√(GMa₀)) = 29.78 km/s
+    M = 1e+11 M☉, b = 3.0 kpc: σ₁(Z) = 133.69 km/s,  σ₁(Newton = D, λ = 0) = 118.65 km/s (3π/32·GM/b: 118.65),  Verhältnis 1.13;  Tiefgrenze Z √((2/9)√(GMa₀)) = 94.18 km/s
+
+4d) Resolvente des Modells 1b (s = 1): Re R gerade in ω (reaktiv), Im R ungerade (absorptiv, dissipativ)
+    ω = 0.0Γ: Re R = 1.5820, Im R(+ω) = +0.0000, Im R(−ω) = +0.0000
+    ω = 0.3Γ: Re R = 1.5512, Im R(+ω) = +0.1304, Im R(−ω) = -0.1304
+    ω = 1.0Γ: Re R = 1.3675, Im R(+ω) = +0.2860, Im R(−ω) = -0.2860
+    ω = 3.0Γ: Re R = 1.0782, Im R(+ω) = +0.2496, Im R(−ω) = -0.2496
+    Verlust Γ → 1·Γ (s ∝ √Γ): q = 0.3679, ν = 1.6
+    Verlust Γ → 0.01·Γ (s ∝ √Γ): q = 0.9048, ν = 10.5
+    Verlust Γ → 0.0001·Γ (s ∝ √Γ): q = 0.9900, ν = 100.5
+    Summenregel (Kramers-Kronig bei ω₀ = 0): R(0) − 1 = 0.58198 = (1/π)P∫Im R/ω dω = 0.58198; Ring: Im R₂ = 2 Im R → 1.16395; zeitsymmetrisch: Im = 0 → 0.00000
+    → Bei Kausalität ist die statische Verstärkung das Integral des absorptiven Spektrums; ein Sinn hat Im R, zwei Sinne 2·Im R.
+      Γ > 0 (dS/dt ≥ 0) macht die Reihe konvergent (Γ → 0: ν → ∞) und wählt einen Zeitsinn, wenn T eine Zeitverschiebung ist.
+      Einen Raumsinn kann Γ nicht wählen (Diffusion ist spiegelsymmetrisch); das könnte nur ein Casimir-Anteil mit dem Drehsinn Ω, der fehlt (4a).

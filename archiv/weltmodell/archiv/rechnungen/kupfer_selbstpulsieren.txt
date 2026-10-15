@@ -1,0 +1,40 @@
+Kupferdraht: f_m0 = 1610.73 Hz, τ_th = C/G = 0.2867 s, R_m/R0 = 0.175
+belastete Güte Q_l = 851.0, Ringzeit der Amplitude τ_m = 2Q_l/ω = 0.1682 s, Verhältnis τ_th/τ_m = 1.705
+
+1) Stationäre Punkte, Weg Hüllkurve gegen Weg Impedanz (V = 10 mV):
+   f_d − f_m0 =  -40.0 Hz: Hüllkurve 0.606021 | Impedanz 0.606021
+   f_d − f_m0 =  -33.0 Hz: Hüllkurve 0.531032, 0.542045, 0.613727 | Impedanz 0.531032, 0.542045, 0.613727
+   f_d − f_m0 =  -20.0 Hz: Hüllkurve 0.616746 | Impedanz 0.616746
+
+2) Eigenwerte der Hüllkurve längs des heißen Asts (3. Lösung) bis zu seinem Faltpunkt, Raster 0,01·(V/V₁)² Hz;
+   Hopf = komplexes Paar mit Re > 0 (der Mittelast ist der Sattel). V₁ = 10 mV·√(851/Q_l): gleiche Schleifenverstärkung wie bei Q_m = 1000, 10 mV
+   Q_m    | τ_th/τ_m | V [mV] | Faltpunkt heißer Ast [Hz] | größtes Re λ (Paar) [1/s] | Hopf-Grenze [Hz] | Ringfrequenz dort [Hz]
+     1000 |    1.705 | 10.000 |     -35.08                |    -5.986                 | keine            | –
+     1000 |    1.705 | 20.000 |    -152.12                |    -5.940                 | keine            | –
+     2000 |    0.980 |  7.579 |     -19.66                |    -2.800                 | keine            | –
+     2000 |    0.980 | 15.159 |     -85.20                |    -2.708                 | keine            | –
+     3000 |    0.738 |  6.577 |     -14.61                |    -0.294                 | keine            | –
+     3000 |    0.738 | 13.155 |     -63.52                |    +1.029                 | -63.52           | 0.367
+    10000 |    0.399 |  4.838 |      -7.65                |    +1.290                 | -7.49            | 0.734
+    10000 |    0.399 |  9.676 |     -33.72                |    +2.380                 | -33.40           | 1.241
+    30000 |    0.302 |  4.211 |      -5.70                |    +1.479                 | -5.43            | 0.829
+    30000 |    0.302 |  8.422 |     -25.32                |    +2.603                 | -24.84           | 1.394
+   100000 |    0.269 |  3.968 |      -5.02                |    +1.541                 | -4.70            | 0.870
+   100000 |    0.269 |  7.937 |     -22.40                |    +2.693                 | -21.84           | 1.459
+
+3) Art der Hopf-Grenze (Hüllkurve integriert): 0,0005 Hz dahinter mit Störung 0,002 % über 12/Re λ;
+   0,002 Hz und 0,03 Hz davor mit Stößen 0,1 / 0,3 / 1 / 3 % über 8/|Re λ| (höchstens 3000 s). Endzustand heiß/kalt.
+   Q_m    | V [mV] | Hopf [Hz]  | Faltpunkt [Hz] | Ringfrequenz [Hz] | 0,0005 Hz dahinter | 0,002 Hz davor          | 0,03 Hz davor
+     3000 | 13.155 |  -63.4898  |   -63.524      |    0.740          | kalt               | kalt/kalt/kalt/kalt     | heiß/heiß/heiß/heiß
+    10000 |  4.838 |   -7.4868  |    -7.657      |    0.741          | kalt               | heiß/heiß/heiß/kalt     | heiß/heiß/heiß/heiß
+    10000 |  9.676 |  -33.3634  |   -33.727      |    1.323          | kalt               | heiß/heiß/kalt/kalt     | heiß/heiß/heiß/heiß
+    30000 |  4.211 |   -5.4230  |    -5.705      |    0.841          | kalt               | heiß/heiß/heiß/kalt     | heiß/heiß/heiß/heiß
+    30000 |  8.422 |  -24.8042  |   -25.350      |    1.459          | kalt               | heiß/heiß/heiß/kalt     | heiß/heiß/heiß/heiß
+   100000 |  3.968 |   -4.6977  |    -5.028      |    0.874          | kalt               | heiß/heiß/heiß/heiß     | heiß/heiß/heiß/heiß
+   100000 |  7.937 |  -21.8127  |   -22.435      |    1.505          | kalt               | heiß/heiß/heiß/kalt     | heiß/heiß/heiß/heiß
+
+4) Gegenprobe mit der vollen Schwingung (ohne Mittelung, RK4), Q_m = 10⁴, Störung 1 %
+   V = 9.676 mV, -33.30 Hz, 48 Schritte/Periode: Äste 0.5305, 0.5529, 0.5738 K, ΔT nach 12 s = 0.5738 K, Ringfrequenz 1.488 Hz (Hüllkurve 1.460 Hz, Re λ = -0.242/s)
+   V = 9.676 mV, -33.30 Hz, 96 Schritte/Periode: Äste 0.5305, 0.5529, 0.5738 K, ΔT nach 12 s = 0.5739 K, Ringfrequenz 1.487 Hz (Hüllkurve 1.460 Hz, Re λ = -0.242/s)
+   V = 9.676 mV, -33.42 Hz, 48 Schritte/Periode: Äste 0.5322, 0.5556, 0.5732 K, ΔT nach 12 s = 0.5320 K, Ringfrequenz 2.896 Hz (Hüllkurve 1.195 Hz, Re λ = +0.274/s)
+   V = 9.676 mV, -33.42 Hz, 96 Schritte/Periode: Äste 0.5322, 0.5556, 0.5732 K, ΔT nach 12 s = 0.5321 K, Ringfrequenz 2.912 Hz (Hüllkurve 1.195 Hz, Re λ = +0.274/s)

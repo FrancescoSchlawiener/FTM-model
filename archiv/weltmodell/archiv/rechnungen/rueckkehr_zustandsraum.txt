@@ -1,0 +1,116 @@
+1) Rückwärtsgleichung für q(ρ) = E[e^{−ΓT}], T = erste Rückkehr zum Torus (ρ = 0), Start im Abstand L
+   D q'' + b(ρ) q' − Γ q = 0,  q(0) = 1,  s² = ΓL²/D,  ν = 1/(1−q);  Tully-Fisher verlangt s·ν → 1 für s → 0
+
+1a) konstante Drift zum Torus hin, Pe = vL/2D (Pe < 0: vom Torus weg):  −ln q = √(Pe² + s²) − Pe
+      Pe       s·ν bei s = 1      0.1         0.01        0.001     |  Tiefgrenze
+    -0.100       1.4952      0.4662      0.0550      0.0055   |  a → 5.52·a_N (Newton mal Zahl)
+     0.000       1.5820      1.0508      1.0050      1.0005   |  a → √(a_N a0)
+     0.001       1.5829      1.0609      1.1100      2.4147   |  a → 2Pe·a0 = 0.002·a0 (Boden)
+     0.010       1.5912      1.1557      2.4192     20.0504   |  a → 2Pe·a0 = 0.02·a0 (Boden)
+     0.100       1.6794      2.4646     20.0549    200.0055   |  a → 2Pe·a0 = 0.2·a0 (Boden)
+     1.000       2.9486     20.0999    200.0100   2000.0010   |  a → 2Pe·a0 = 2·a0 (Boden)
+   Kontrolle Differenzenverfahren (Gitter 0.002 L):
+     Pe =  0.50, s = 1.0:  geschlossen 0.539003   numerisch 0.539003
+     Pe =  0.00, s = 0.1:  geschlossen 0.904837   numerisch 0.904837
+     Pe = -0.30, s = 0.3:  geschlossen 0.484681   numerisch 0.484681
+
+1b) Kontraktion quer zum Torus (Normalform ρ̇ = −κρ + Rauschen, κ = |λ_⊥|), Bandbreite σ² = D/κ, y = L/σ:
+    q = e^{y²/4}·D_{−Γ/κ}(y)/D_{−Γ/κ}(0)  (parabolische Zylinderfunktion),  Γ/κ = s²/y²
+      y = L/σ   s·ν bei s = 1      0.1         0.01        0.001     |  Boden a/a0 = τ_D/⟨T⟩   √(2/π)·y
+       0.01      1.5820      1.0536      1.2612      8.0663   |  8.0107e-03          7.9788e-03
+       0.10      1.5866      1.3326      8.3562     82.9713   |  8.2965e-02          7.9788e-02
+       1.00      2.0971     11.1899    110.8863   1108.7615   |  1.1088e+00          7.9788e-01
+       3.00      5.7402     50.5631    504.9573   5049.5059   |  5.0495e+00          2.3937e+00
+   Kontrolle Differenzenverfahren:
+     s = 1.0, y = 0.1:  Zylinderfunktion 0.369718   numerisch 0.369718
+     s = 0.1, y = 1.0:  Zylinderfunktion 0.991063   numerisch 0.991063
+     s = 1.0, y = 1.0:  Zylinderfunktion 0.523157   numerisch 0.523157
+   Die Wurzel gilt nur für s ≫ y = L/σ; darunter 1 − q ≈ Γ⟨T⟩ (linear), a läuft gegen den Boden a0·τ_D/⟨T⟩.
+
+1c) Wirkungsdiffusion zerfallener Tori (Standardabbildung, K ≫ 1): D_p gegen K²/4
+      K     D_p/(K²/4)   1 − 2J₂(K) + 2J₂(K)²
+     10.0    0.6485      0.6204
+     20.0    1.3534      1.3721
+     40.0    0.9858      1.0021
+     80.0    0.8683      0.8727
+   D ∝ K² ∝ (a0/a_N)² hängt selbst von a_N ab. Mit D ∝ a_N^α, Γ ∝ a_N^β gilt s ∝ a_N^{(β−α)/2};
+   die Wurzel verlangt β − α = 1. Wirkungsdiffusion mit Γ ∝ a_N gibt (β−α)/2 = 3/2.
+
+1d) Modellgrößen (Punktmasse 6e10 M☉, r = 8 kpc; a0 = c²/(2πR_H), R_H = c/H0)
+   einzige lokale, universelle Rate ∝ a_N: Γ = a_N/c = 3(Δs/r)(c/r) = 0.0138 /Gyr  (3Δs c/r²: 0.0138 /Gyr)
+   dann τ_D = L²/D = c/a0 = 2πR_H/c = 2π/H0 = 79.16 Gyr; L und D einzeln bleiben frei
+   s² = Γ·τ_D = 1.089190;  a_N/a0 = 1.089190;  6π(Δs/r)(R_H/r) = 1.089190
+   mittlere Dauer überlebender Rückkehren τ_D/(2s) = 37.9 Gyr bei s = 1.044; bei s = 1: 39.6 Gyr
+
+1e) Rückkehr in Echtzeit, seit der Zeit t gelaufen: q_t = E[e^{−ΓT}; T < t], τ_D = 2π/H0
+   Kontrolle (s = 0.1, tH0 = 1): Formel 0.076233, Integral 0.076233
+     t·H0     s·ν_t bei s = 1     0.1       0.01   |  q_t(s→0) = erfc(√(π/2tH0))   (verlangt: s·ν = 1.582, 1.051, 1.005)
+      0.5      1.0116     0.1012     0.0101   |  0.0122
+      1.0      1.0732     0.1083     0.0108   |  0.0763
+      2.0      1.2107     0.1265     0.0127   |  0.2101
+     10.0      1.5458     0.2336     0.0235   |  0.5751
+   s·ν bis auf 10 % bei s = 0.1 verlangt t·H0 = 420
+
+1f) Bahnkohärenz: Kern auf der Geschwindigkeit, K̂(p) = e^{−√((Γ+p)τ_D)}; Kreisbahn sieht K̂(−iω), Ruhe K̂(0) = e^{−s}
+    Punktmasse 6e10 M☉, r* = 8.35 kpc, v_f = 175.8 km/s, c/v_f = 1705
+     r/r*     s       v [km/s]   ω·τ_D = (c/v)s²ν     lg(|K̂(−iω)|/K̂(0))
+      0.3    3.333     326.9          10566.7             -30.14
+      1.0    1.000     221.2           2144.5             -13.79
+      3.0    0.333     190.7            616.3              -7.48
+     10.0    0.100     180.2            174.8              -4.02
+    100.0    0.010     176.3             17.1              -1.27
+   Der Kern hat bei Δt → 0 kein Gewicht (f(0) = 0) und liegt bei Δt ~ τ_D ≫ 1/ω: die Bahnphase mittelt ihn weg.
+
+2a) Lévy-Dichte f(u) = √(τ/4π)u^{−3/2}e^{−τ/4u}: ∫f(u)e^{−Γu}du gegen e^{−√(Γτ)} (τ = 1)
+   s = 0.1:  Integral 0.9048374180   e^{−s} 0.9048374180
+   s = 1.0:  Integral 0.3678794412   e^{−s} 0.3678794412
+   s = 3.0:  Integral 0.0497870684   e^{−s} 0.0497870684
+
+2b) Zwanzig-Mori: Kette y_1…y_N (Rate w je Richtung, keine Rückstellung), Schleife = Platz 0, Einspeisung bei n0 = 50
+    Kern K(u) = w·[e^{Au}]_{1,n0} = erste Rückkehrdichte; K̂(Γ) = w·[(Γ − A)⁻¹]_{1,n0}
+     u/τ     Kette K(u)·τ    Lévy f(u)·τ    Verhältnis
+     0.05    1.712229e-01   1.700073e-01   1.00715
+     0.25    8.300766e-01   8.302150e-01   0.99983
+     1.00    2.196961e-01   2.196956e-01   1.00000
+     4.00    3.312560e-02   3.312544e-02   1.00000
+    16.00    4.339402e-03   4.339396e-03   1.00000
+   K̂ aus Eigenmoden 0.36788557, aus Rückwärtsgleichung 0.36788557, e^{−1} 0.36787944
+    s·ν bei             s = 1       0.1        0.01
+   Maxwell-Element (eine Stufe, t_K = τ)       2.0000    10.1000   100.0100
+   Kette in Reihe, gerichtet (50 Stufen)       1.5912    10.0511   100.0051
+   Diffusionskette, offen (N = 2·10⁶)          1.5820     1.0508     1.0050
+   Regel e^{−s}                                1.5820     1.0508     1.0050
+   Endlich viele Stufen: K̂ rational, 1 − q ∝ Γ. Die Wurzel verlangt einen Verzweigungspunkt von K̂ bei Γ = 0,
+   also ein lückenloses Kontinuum eliminierter Moden: eine offene Kette ohne Drift und ohne Rückstellung.
+
+2c) Druckfreier Einfall (Einstein-de Sitter): δ̈ + (4/3t)δ̇ − (2/3t²)δ = 0, G(t,t') = (3/5)t'[(t/t')^{2/3} − t'/t]
+   t/t' =    10:  numerisch 2.724953   Formel 2.724953   G/t^(2/3) = 0.5871
+   t/t' =   100:  numerisch 12.920608   Formel 12.920608   G/t^(2/3) = 0.5997
+   t/t' =  1000:  numerisch 59.999400   Formel 59.999400   G/t^(2/3) = 0.6000
+   Der Kern wächst, ∫G dt divergiert: er liefert keine Schleifenverstärkung < 1.
+
+3a) Geschlossener Raum mit offener Unterrichtung: Schleife bei 0, Start L, reflektierend bei Λ
+    q = cosh((Λ−L)k)/cosh(Λk), k = s/L;  ⟨T⟩ = L(2Λ−L)/(2D) endlich (Kac);  Λ = L: 1/cosh s
+   Kette Λ/L = 10: q(s=0.1) = 0.928676, Formel 0.928676;  ⟨T⟩ = 23775.0, Formel 23775.0
+   Kette Λ/L = 100: q(s=0.1) = 0.904837, Formel 0.904837;  ⟨T⟩ = 248775.0, Formel 248775.0
+     Λ/L     s·ν bei s = 1     0.3       0.1       0.03      0.01      0.001  |  Boden a/a0 = 2/(2Λ/L−1)   s bei +10 %
+        1     2.8413    6.9169   20.0833   66.6917  200.0083  2000.0008  |          2.0000e+00        2.4718
+       10     1.5820    1.1643    1.4029    3.6185   10.5631  105.2668  |          1.0526e-01        0.1565
+      100     1.5820    1.1575    1.0508    1.0202    1.3217   10.0839  |          1.0050e-02        0.0153
+     1000     1.5820    1.1575    1.0508    1.0151    1.0050    1.3139  |          1.0005e-03        0.0015
+      inf     1.5820    1.1575    1.0508    1.0151    1.0050    1.0005  |    0 (Tully-Fisher)        –
+   Wurzel für s ≫ L/Λ; darunter a → Boden, v² ∝ r jenseits r ≈ r*·Λ/L.
+
+3b) Schließung 𝒫 = (1/M)Σ T_{mL} auf die abgeschirmte Ausbreitung (−D∂² + Γ): Ring der Länge L gegen Gerade
+    G_Ring(0)/G_Gerade(0) = Σ_{n∈ℤ} e^{−|n|s} = coth(s/2) = 1 + 2Σ_{n≥1}qⁿ = 2ν − 1,  s = L√(Γ/D)
+   s = 0.1:  Ring/Gerade 20.01666390   coth(s/2) 20.01666389   2ν−1 20.01666389   Γ·G_Ring·M = 1.00083 (Nullmode, Kac)
+   s = 1.0:  Ring/Gerade 2.16395341   coth(s/2) 2.16395341   2ν−1 2.16395341   Γ·G_Ring·M = 1.08198 (Nullmode, Kac)
+   s = 3.0:  Ring/Gerade 1.10479139   coth(s/2) 1.10479139   2ν−1 1.10479139   Γ·G_Ring·M = 1.65718 (Nullmode, Kac)
+   Gleicher Tiefgrenzfall (Windungslänge L/2): coth s gegen die Regel ν(s)
+      s      coth s     ν(s)      Verhältnis
+    0.10    10.0333    10.5083   0.9548
+    0.30     3.4327     3.8583   0.8897
+    0.50     2.1640     2.5415   0.8514
+    1.00     1.3130     1.5820   0.8300
+    2.00     1.0373     1.1565   0.8969
+    3.00     1.0050     1.0524   0.9549

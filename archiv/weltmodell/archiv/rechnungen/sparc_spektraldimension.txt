@@ -1,0 +1,51 @@
+=== 1) Tiefe Punkte (Q ≤ 2, Neigung ≥ 30°, Υ_d 0,5, Gasdruck σ = 8 km/s): 3166 Punkte, 153 Galaxien gesamt
+   s < 0.30 (a_N < 0.0900·a₀): 1095 Punkte, 111 Galaxien
+   s < 0.20 (a_N < 0.0400·a₀):  426 Punkte,  63 Galaxien
+   s < 0.15 (a_N < 0.0225·a₀):  131 Punkte,  34 Galaxien
+   s < 0.10 (a_N < 0.0100·a₀):   16 Punkte,  10 Galaxien
+   kleinstes s = 0.044; 1 %-Quantil 0.116
+
+=== 2a) Steigung zwischen Bin-Medianen (Bootstrap über Galaxien + Monte-Carlo Abstand/Neigung/Υ, 400 Ziehungen)
+   s(Mitte)  Steigung gem.   σ      Regel(gleiche Punkte)  1−χ/2   gem.−Regel (σ)     d_s gem.     d_s Regel   (Regel−½)/σ
+    0.155     0.307      0.289         0.538             0.538   -0.231 (0.289)    0.61±0.58    1.08         0.1
+    0.208     0.578      0.115         0.550             0.550   +0.027 (0.115)    1.16±0.23    1.10         0.4
+    0.297     0.599      0.067         0.571             0.571   +0.028 (0.067)    1.20±0.13    1.14         1.1
+    0.451     0.624      0.064         0.605             0.604   +0.019 (0.064)    1.25±0.13    1.21         1.6
+    0.687     0.605      0.080         0.653             0.652   -0.048 (0.080)    1.21±0.16    1.31         1.9
+    1.003     0.783      0.115         0.710             0.709   +0.073 (0.115)    1.57±0.23    1.42         1.8
+    1.493     0.775      0.116         0.784             0.784   -0.009 (0.116)    1.55±0.23    1.57         2.5
+    2.412     0.873      0.103         0.880             0.881   -0.007 (0.104)    1.75±0.21    1.76         3.7
+   Versatz ln(g_gem/g_Regel) je Bin (Median): 0.12:+0.121  0.17:-0.011  0.24:+0.006  0.37:+0.028  0.56:+0.045  0.84:+0.006  1.22:+0.058  1.94:+0.050  3.54:+0.042
+
+=== 2b) Steigung je Galaxie über ihre Punkte mit s < s_max (≥ 4 Punkte, ≥ 0,2 dex in a_N); frei von Abstand und Neigung
+   s < 0.30: n = 74 Galaxien; Median Steigung gem. 0.553 (d_s 1.11), Regel 0.551 (d_s 1.10); Median(gem.−Regel) -0.003 ± 0.062
+   s < 0.45: n = 114 Galaxien; Median Steigung gem. 0.563 (d_s 1.13), Regel 0.565 (d_s 1.13); Median(gem.−Regel) -0.008 ± 0.030
+
+=== 2c) Potenzgesetz a ∝ a_N^{d_s/2} über alle Punkte unter s_max (robust)
+   s < 0.30 (1095 Punkte): d_s gem. = 1.035 ± 0.192 (nur Bootstrap ± 0.171); Regel an denselben Punkten 1.090; gem.−Regel -0.055 ± 0.191; (Regel − 1)/σ = 0.5
+   s < 0.20 ( 426 Punkte): d_s gem. = 0.581 ± 0.348 (nur Bootstrap ± 0.319); Regel an denselben Punkten 1.066; gem.−Regel -0.485 ± 0.347; (Regel − 1)/σ = 0.2
+   s < 0.15 ( 131 Punkte): d_s gem. = 0.364 ± 0.504 (nur Bootstrap ± 0.553); Regel an denselben Punkten 1.051; gem.−Regel -0.687 ± 0.503; (Regel − 1)/σ = 0.1
+
+=== 2d) Familie ν = 1/(1 − e^{−(a_N/a₀)^{1−d_s/2}}) (d_s = 1: Bose-Form), d_s und a₀ frei, robust
+   alle Punkte  d_s = 1.031 ± 0.074 (a₀-Faktor 1.129 ± 0.278);  (d_s − 1)/σ = +0.4
+   s < 1        d_s = 1.029 ± 0.075 (a₀-Faktor 1.124 ± 0.264);  (d_s − 1)/σ = +0.4
+
+=== 3) Boden a = ν(a_N)·a_N + B
+   a₀ = 1,1 fest, s < 0,3   B/a₀ = +0.0023 ± 0.0122 (a₀-Faktor 1.000); 95 %: B < 0.0316·a₀ ⇒ Pe < 0.0158, b > 25·ϖ_R
+   a₀ = 1,1 fest, s < 0,45  B/a₀ = +0.0033 ± 0.0119 (a₀-Faktor 1.000); 95 %: B < 0.0320·a₀ ⇒ Pe < 0.0160, b > 25·ϖ_R
+   a₀ frei, s < 1           B/a₀ = -0.0037 ± 0.0223 (a₀-Faktor 1.076); 95 %: B < 0.0431·a₀ ⇒ Pe < 0.0216, b > 19·ϖ_R
+   a₀ frei, alle Punkte     B/a₀ = -0.0064 ± 0.0233 (a₀-Faktor 1.102); 95 %: B < 0.0429·a₀ ⇒ Pe < 0.0214, b > 19·ϖ_R
+   ohne Gasdruck (σ = 0), a₀ fest, s < 0,3: B/a₀ = -0.0108 ± 0.0102; 95 %: B < 0.0107·a₀
+   Gasdruck als Stellgröße (a₀ = 1,1 fest, s < 0,3, nur Nennwerte): σ =  0 km/s: B/a₀ = -0.0108  σ =  5 km/s: B/a₀ = -0.0054  σ =  8 km/s: B/a₀ = +0.0023  σ = 10 km/s: B/a₀ = +0.0093
+   Gasdruckterm σ²/R_d der Galaxien mit tiefen Punkten (σ = 8 km/s): Median 0.0091·a₀ (Spanne 16–84 %: 0.0041–0.0217)
+
+=== 4) Rückkehr in d Dimensionen gegen die tiefen Bins (s = 0,1–0,3; Bootstrap-Kovarianz)
+   G_1(1 − ε)·√(2ε) → 1: 1.0000 (ε = 10⁻⁶);  G_3(1) = 1.5163 (Watson 1,5164);  G_2(1 − 10⁻⁴) = 3.594, (1/π)·ln(8/ε) = 3.594
+   Bose, a₀ frei          χ² =       2.4 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      +0.0   Parameter 0.009
+   Bose, a₀ = 1,1         χ² =       2.4 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      +0.0   Parameter 0.0
+   Gitter d = 1, κ frei   χ² =       3.0 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      +0.7   Parameter -0.405
+   Gitter d = 2, κ frei   χ² =      18.1 (5 Bins)  Δχ² gegen Bose(a₀ frei) =     +15.8   Parameter -4.464
+   Gitter d = 3, κ frei   χ² =     652.7 (5 Bins)  Δχ² gegen Bose(a₀ frei) =    +650.3   Parameter -6.058
+   Gitter d = 2, κ, Amplitude frei χ² =       9.2 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      +6.8   Parameter [3.9 0.6]
+   Potenz frei            χ² =       2.6 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      +0.2   Parameter [0.58 0.36]
+   Bose + Boden B         χ² =       2.3 (5 Bins)  Δχ² gegen Bose(a₀ frei) =      -0.0   Parameter 0.003

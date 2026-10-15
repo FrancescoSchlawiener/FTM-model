@@ -1,0 +1,125 @@
+Λ = c²/(2a₀) = 13.24 Gpc (I, heute fest);  r*_MW = 8.72 kpc;  r*/Λ = 6.59e-07
+Punktmasse: k = √(Γ/D) = √(a_N/GM) = 1/r (Wellenzahl der Kreisbahnmode), k·ϖ_R = r*/r = s
+
+====================================================================================================
+1  Rückkehrstatistik je Topologie
+====================================================================================================
+(A)  q_i = cosh(k(Λ − ϖ_R))/cosh(kΛ); die Fasern sind unabhängig, jeder Rücklauf kommt am eigenen Ort an.
+(B1) Stern: u_e(ϖ) = [δ_ej·sinh(k_e(Λ−ϖ)) + U_j·sinh(k_eϖ)]/sinh(k_eΛ),
+     U_j = D_jk_j/sinh(k_jΛ) / Σ_e D_ek_e·coth(k_eΛ)   (Wert am Knoten für Ankunft bei j)
+     q_ii = sinh(k_i(Λ−ϖ_R))/sinh(k_iΛ) + U_i·sinh(k_iϖ_R)/sinh(k_iΛ),   q_ij = U_j·sinh(k_iϖ_R)/sinh(k_iΛ)
+     Summe Σ_j q_ij: Rückkehr irgendwohin; q_ii: Rückkehr an den eigenen Ort.
+
+1a) Prüfung der Formel (unabhängige Wege)
+   N = 1:  Stern 0.410194068427526   Halbgerade cosh(k(Λ−L))/cosh(kΛ) 0.410194068427526
+   N = 2 gleich = Strecke [0, 2Λ], beide Enden Orte:  q_11 = sinh(k(2Λ−L))/sinh(2kΛ), q_12 = sinh(kL)/sinh(2kΛ)
+        Stern q_11 0.402495756726117  Strecke 0.402495756726117
+        Stern q_12 0.007698311701409  Strecke 0.007698311701409
+   N = 3 verschieden (D = 1; 2,5; 0,4, k = 0,7; 0,2; 1,5, Λ = 4, L = 1,3), analytisch gegen Differenzen:
+        q_11  0.40007282   0.40007283
+        q_12  0.03475731   0.03475732
+        q_13  0.00018364   0.00018364
+   Kette (3 Fasern à 12 Schritte, Überleben je Schritt 0,995 / 0,999 / 0,97, Start 3 Schritte tief auf Faser 1):
+        exakt  0.70901  0.03516  0.01100
+        Monte-Carlo (2·10⁵)  0.70918  0.03561  0.01075
+
+1b) Milchstraße (6·10¹⁰ M☉) in (A) und (B1); Nachbarfasern: M31-artig (10¹¹ M☉ bei ihrem r*) und N_leer Fasern mit Γ = 0
+    ln(q/e^{−s}) als log10 des Betrags; e^{−2kΛ} = e^{−2Λ/r} setzt die Größe
+    r [kpc]    s      log10|ln(q_A/e^{−s})|   log10|ln(q_ii,B1/e^{−s})| (N_leer = 10⁶)   log10 q_ij (MW→M31)
+       8.7   1.000          -1318856.8                  -1318856.8                          -1170219.9
+      26.2   0.333           -439618.9                   -439618.9                           -730601.1
+      50.0   0.174           -229991.7                   -229991.7                           -625787.7
+    → (B1) gibt am Ort q = e^{−s}; Abweichung und Übertritt ∝ e^{−2Λ/r}, Bedingung Λ ≫ r (nicht nur Λ ≫ ϖ_R).
+
+1c) 10-%-Radius: |ν/ν_örtlich − 1| = 0,1
+    Milchstraße     (A) r₁₀ = 0.6569·Λ (ν größer)   (B1, N_leer → ∞) r₁₀ = 0.6792·Λ (ν kleiner)
+    Zwerg 10⁸ M☉    (A) r₁₀ = 0.6569·Λ (ν größer)   (B1, N_leer → ∞) r₁₀ = 0.6792·Λ (ν kleiner)
+    Handwert tief: ν/ν_örtlich = coth(Λ/r) bzw. tanh(Λ/r) ⇒ r₁₀ = Λ/artanh(1/1,1) = 0.6569·Λ bzw. Λ/artanh(0,9) = 0.6792·Λ
+    Weit außen (r ≫ Λ): (A) 1 − q → s²(2Λ/ϖ_R − 1)/2 … a → a₀-Boden; (B1, N_leer → ∞) 1 − q → ϖ_R/Λ, ν → Λ/r* = 1.52e+06 (Newton mal Konstante)
+
+====================================================================================================
+2  Homogene Verteilung, Netzwerk, kosmisches q
+====================================================================================================
+   N =    1 gleich:  Σ_j q_ij = 0.410194068428   (A) 0.410194068428   q_ii = 0.410194
+   N =    2 gleich:  Σ_j q_ij = 0.410194068428   (A) 0.410194068428   q_ii = 0.402496
+   N =   10 gleich:  Σ_j q_ij = 0.410194068428   (A) 0.410194068428   q_ii = 0.396337
+   N = 1000 gleich:  Σ_j q_ij = 0.410194068428   (A) 0.410194068428   q_ii = 0.394813
+   → Bei gleichen Fasern ist der Knoten für die Summe ein Spiegel: Σ_j q_ij = q_A für jedes N (analytisch: U_tot = 1/cosh kΛ).
+   Gesamtfeld, nicht additiv: In (A) und (B1) kommt es nur über Γ = |g_ges|/c am Ort herein; die Topologie erzeugt es nicht.
+   In (B3) ist der seitliche Ankunftsort die Poisson-Glättung des Modells (Abschnitt 4): Rückläufe aus der Tiefe ϖ mitteln
+   über ~ϖ seitlich, das ist der kollektive Trichter, der in die Nachbarn übergeht (Netzwerk).
+
+2b) Γ = 0 (homogener Hintergrund): (A) q = 1, ν = ∞.  (B1) q_ii = 1 − (L/Λ)(1 − 1/N): Ankunft woanders ohne Verlust.
+   N = 2, L/Λ = 0,157: Stern q_11 = 0.921500, Formel 0.921500
+   N = 10, L/Λ = 0,157: q_ii = 0.858700
+   N = 1000000, L/Λ = 0,157: q_ii = 0.843000
+   Gambler's ruin = Kac: 1 − q_ii (N → ∞) = L/Λ = Maß des Ortsstücks [0, L] / Maß der Faser.
+
+2c) Mit Verlust (s = k·L) und N → ∞: q_ii = sinh(k(Λ−L))/sinh(kΛ). Verlangtes L/Λ für q_ii = q_kosm = 0.8429:
+     s = 0.00:  L/Λ = 0.1571
+     s = 0.05:  L/Λ = 0.1529
+     s = 0.10:  L/Λ = 0.1386
+     s = 0.30:  keine Lösung (q_ii ≤ e^{−s} = 0.741 < q_kosm; Grenze s < −ln q_kosm = 0.171)
+   (s² = a_N/a₀ ≈ 0,01 im linearen Feld heute, Notiz 69: s ≈ 0,1)
+
+   Zelle = d_LSS (Annahme, gerechnet): L_Zelle = 27.79 Gpc, ΣΔs_b = 2.125 Gpc, ΣΔs_b/Λ = 0.1605 ⇒ q = 0.8395, ν = Λ/ΣΔs_b = 6.232  (gemessen ν_kosm = 6.364)
+   Zelle aus a₀ (zelle_aus_a0, benutzt ν_kosm): L_Zelle = 27.59 Gpc, ΣΔs_b = 2.080 Gpc, ΣΔs_b/Λ = 0.1571 ⇒ q = 0.8429, ν = Λ/ΣΔs_b = 6.364  (gemessen ν_kosm = 6.364)
+   Andere Startiefen des Kosmos: L = r*_Zelle = √(6ΣΔs_b·Λ) ⇒ 1 − q = √(6·ΣΔs_b/Λ) = 0.981;  L = r₀ = 6ΣΔs_b ⇒ 1 − q = 0.963
+   → Nur L = ΣΔs_b (die Faltung selbst) gibt q_kosm; das ist Λ = ν_kosm·ΣΔs_b umgeschrieben, keine Herleitung von ν.
+
+====================================================================================================
+3  Kac-Budget
+====================================================================================================
+   Kette mit c-Schritten, 3 Fasern (m = 10/20/40 Schritte, h = 3/1,5/0,75, Länge je 30):
+     ⟨T_1⟩ = 180.0000   2·Σℓ_e/c = 180.0000
+     ⟨T_2⟩ = 180.0000   2·Σℓ_e/c = 180.0000
+     ⟨T_3⟩ = 180.0000   2·Σℓ_e/c = 180.0000
+   Die Schrittzeit h/c macht das Maß zur Länge: ⟨T_i⟩ = 2·(Gesamtlänge des Netzes)/c, für jeden Ort gleich, unabhängig von der Masse.
+   (A): ⟨T⟩ = 2Λ/c = τ_D = c/a₀ (Modell).  (B1): ⟨T⟩ = 2NΛ/c = N·τ_D.
+   ⇒ Soll in (B) τ_D = ⟨T⟩ bleiben, ist Λ = c²/(2a₀) die Gesamtlänge des gemeinsamen Netzes, nicht die Tiefe jeder Faser.
+
+   Budget: Σ_i μ(Ort_i)/μ(X) ≤ 1.  Mit μ(Ort_i) = Δs_i, μ(X) = Λ: ΣΔs_b ≤ Λ (nur Ungleichung).
+     Zahlen (Zelle = d_LSS): ΣΔs_b/Λ = 0.1605 (Ortsmaß Δs), 0.4814 (Ortsmaß r₀/2 = 3Δs, Kette mit c-Schritten)
+     Gleichheit mit dem Faktor ν, Λ = ν·ΣΔs_b, verlangt zusätzlich 1 − q_kosm = μ(Orte)/μ(X) (Kac-Lesung des Modells); das Budget selbst liefert sie nicht.
+
+   Eigene Tiefe: Die örtliche Regel verlangt je Ort eine Faser, die bis ϖ_R = r* nicht mit anderen geteilt ist.
+   r*_i = √(6Δs_i·Λ) (r*² = r₀Λ) ⇒ Σ r*_i = √(6Λ)·Σ√Δs_i ≥ √(6Λ·ΣΔs_b) = Λ·√(6ΣΔs_b/Λ)
+     eine Masse mit allen Baryonen der Zelle: Σ r* = 0.981·Λ;  in Stücken der Milchstraße (N = 2.22e+12): Σ r* = 1.46e+06·Λ
+     Handwert: N·r*_MW/Λ = 1.46e+06
+   ⇒ Ein gemeinsames Netz der Gesamtlänge Λ kann die eigenen Tiefen nicht tragen (Faktor ~10⁶ zu kurz).
+     (B1) trägt die Regel, aber dann ist Λ Tiefe je Faser und ⟨T⟩ = N·τ_D; das Budget je Ort ist dasselbe wie in (A).
+
+====================================================================================================
+4  Knoten und Korrelation zweier Galaxien
+====================================================================================================
+   (B1) Übertritt MW → M31 (1b): q_ij ~ 10^(−2Λ/r·log10 e) ⇒ bei 50 kpc log10 q_ij ≈ -625787.
+   Obere Grenze ohne Verlust (Γ = 0 auf der Faser): Anteil woanders ≤ ϖ_R/Λ = r*/Λ = 6.6e-07; δν/ν ≤ ν·r*/Λ = 4.1e-06 bei 50 kpc (ν = 6.25)
+   Messgrenze Rotationskurven einige Prozent ⇒ (B1) um ≥ 10⁴ darunter, mit Verlust um e^{−10⁵}.
+   Der gemeinsame Knoten ist für alle Paare derselbe: Er unterscheidet kein verschränktes Paar. Die Verschränkung von 04
+   (d_innen = 0) ist ein Knoten in der Tiefe 0 für das Paar, nicht der Knoten bei Λ.
+
+   (B3) T³ × [0, Λ] isotrop: ϖ-Bewegung ist die 1D-Halbgerade (Produkt), also q bei festem Γ und ⟨T⟩ = 2Λ/c wie (A).
+   Neu ist nur der seitliche Ankunftsort. Ohne Verlust ist er der Poisson-Kern des Modells (Glättung e^{−|k|ϖ}):
+   P(ρ) ∝ ϖ/(ρ² + ϖ²)², Anteil innerhalb u = ρ/ϖ: F(u) = (2/π)[arctan u − u/(1+u²)]
+     F(1) = 0.1817 (Integral 0.1817);  Median u = 2.264;  Schwanz 1 − F ≈ 4/(πu)
+     Rücklauf aus ϖ_R = r*_MW, Ankunft jenseits M31 (d = 0,78 Mpc [G], u = 89): ohne Verlust 1.42e-02 (Formel 1.42e-02)
+     mit Verlust, s = 1 (Γ fest, seitlich gleiches D, Annahme): Überleben 0.3679 (e^{−1} = 0.3679), Anteil jenseits 1·ϖ_R 0.633
+     Gegenprobe Γ → 0: Anteil jenseits 1·ϖ_R 0.8183 (Poisson-Kern 1 − F(1) = 0.8183)
+     Beispiel Γ fest = Wert der MW bei 50 kpc (s = 0.174) auf dem ganzen Weg, jenseits 10·ϖ_R: 3.42e-02
+     Beispiel Γ fest = Wert der MW bei 50 kpc (s = 0.174) auf dem ganzen Weg, jenseits 89·ϖ_R: 1.01e-09
+   → In (B3) hängt der Übertritt zwischen Galaxien am seitlichen D und am Verlust auf dem Weg, die das Modell nicht festlegt;
+     zwischen 0 und 4r*/(πd). Die Regel des Modells (1D, Γ am Ort) ist (B3) mit seitlich gemitteltem Feld.
+
+====================================================================================================
+5  Blickrichtung der Größen
+====================================================================================================
+   Γ_i = a_N,ges/c          L  am Ort, Betrag des Gesamtfelds, Zustand gebunden/stationär, heute
+   D_i = GM_i/c, ϖ_R = r*   I  innere Richtung, je Masse
+   Λ = c²/(2a₀)             I  innere Richtung; G für die Zelle; heute fest (seit z ≈ 10)
+   Knoten bei Λ             I  (B1, B3) gemeinsam für alle Orte der Zelle
+   q_ii, ν                  L  am Ort gelesen (Beobachter an der Bahn)
+   q_ij                     I → L  Rücklauf über den Knoten, gelesen an einem anderen Ort
+   ⟨T_i⟩ (Kac)              I  Zeit in der inneren Richtung, gezählt mit c-Schritten
+   ΣΔs_b(Zelle), L_Zelle    G  Zelle, heute; d_LSS für unseren Horizont (Beobachter), Annahme L = d_LSS
+   q_kosm = 0,843           G  gelesen an der Hintergrundstrahlung (Planck [G]), zeitlich fest
+   Poisson-Ankunft          I → L  seitlicher Ankunftsort (B3)

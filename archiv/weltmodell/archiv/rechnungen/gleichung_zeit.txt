@@ -1,0 +1,88 @@
+
+==============================================================================================================
+1  Statik gleich, Zeitformen verschieden (Milchstraße 6·10¹⁰ M☉ bei 8 kpc; Sonne; Haufen 10¹⁴ M☉ bei 300 kpc)
+==============================================================================================================
+   D = r₀c/2 (Schritt r₀ = 6Δs mit c) gegen GM/c;  τ_D = ϖ_R²/D mit ϖ_R = r* gegen c/a₀;  Γ = Dk² (k = 1/r) gegen a_N/c
+   Sonne, 1000 AE       D = 4.4268e+11 (GM/c 4.4268e+11) m²/s   τ_D = 86.362 Gyr (c/a₀ 86.362)   Γ = 1.9781e-17 (a_N/c 1.9781e-17) s⁻¹
+   Milchstraße, 8 kpc   D = 2.6561e+22 (GM/c 2.6561e+22) m²/s   τ_D = 86.362 Gyr (c/a₀ 86.362)   Γ = 4.3587e-19 (a_N/c 4.3587e-19) s⁻¹
+   Haufen, 300 kpc      D = 4.4268e+25 (GM/c 4.4268e+25) m²/s   τ_D = 86.362 Gyr (c/a₀ 86.362)   Γ = 5.1659e-19 (a_N/c 5.1659e-19) s⁻¹
+
+   Stationär (p = θ = 0): alle Formen exp(−kϖ_R) = e^{−s};  FD-Randwert u'' = s²u, u(0) = 1, geschlossen bei X = 60 ϖ_R:
+      s = 0.3:  FD 0.740818   e^(−s) 0.740818
+      s = 1.0:  FD 0.367879   e^(−s) 0.367879
+      s = 3.0:  FD 0.049787   e^(−s) 0.049787
+
+   Gewicht (k = 0, θ = 3H₀, p = 0): 1 − w je Zeitform
+      Sonne, 1000 AE       [H] 1.461074e-02 (w = 0.98539)   [W] w = 2.401e-11 (∝ ϖ_R ∝ √M)   [T] w = 0.98539
+      Milchstraße, 8 kpc   [H] 1.461074e-02 (w = 0.98539)   [W] w = 5.881e-06 (∝ ϖ_R ∝ √M)   [T] w = 0.98539
+      Haufen, 300 kpc      [H] 1.461074e-02 (w = 0.98539)   [W] w = 2.401e-04 (∝ ϖ_R ∝ √M)   [T] w = 0.98539
+      Modellformel gewicht_w(3H₀) = 0.98539; nur [H]/[T] geben θ_c = D/ϖ_R² = a₀/c für jede Masse.
+
+   Kern bei Bahnfrequenz, |û(iΩ)|/û(0) (Milchstraße, v = 220 km/s):
+      [H]: 2.1623e-15
+      [W]: 1.0000e+00
+      [T]: 2.1623e-15
+      [W]: Verzögerung ϖ_R/c = 28439 Jahre (Laufzeit in ϖ mit c); [H]: Lévy-Kern, Modus τ_D/6 = 14.4 Gyr
+      Übergang Welle/Irrfahrt bei |p| ~ c²/D = 2c/r₀ = 3.384e-06 s⁻¹ (Milchstraße), 2.030e+05 s⁻¹ (Sonne)
+
+==============================================================================================================
+2  Summe der Verluste unter einer Wurzel (FD, [H]): u(ϖ_R) = exp(−√(Γτ_D + θτ_D))
+==============================================================================================================
+   Γτ_D =  1.00, θτ_D =   0.00:  FD 3.678795e-01   exp(−√Σ) 3.678794e-01   Produkt q·(1 − w) 3.678794e-01
+   Γτ_D =  0.00, θτ_D =  17.86:  FD 1.460917e-02   exp(−√Σ) 1.460912e-02   Produkt q·(1 − w) 1.460912e-02
+   Γτ_D =  1.00, θτ_D =  17.86:  FD 1.299999e-02   exp(−√Σ) 1.299995e-02   Produkt q·(1 − w) 5.374395e-03
+   Γτ_D =  0.10, θτ_D =   1.00:  FD 3.503548e-01   exp(−√Σ) 3.503548e-01   Produkt q·(1 − w) 2.681449e-01
+   Die Raumrichtung (∇² → Γ = Dk²) und die Zeitrichtung (∂_t + ∇·v → θ) addieren sich unter einer Wurzel, nicht als Produkt.
+
+==============================================================================================================
+3  Bereich mit Kollaps: Lösung in (t, ϖ) von [H] in reeller Zeit gegen w(θ) und Preisach w(θ̃)
+==============================================================================================================
+   Weltalter (ohne Strahlung) t₀ = 13.816 Gyr, τ_D = 86.362 Gyr
+   Hintergrund heute: [H] in reeller Zeit (rückwärts, wirkliches a(t)) w = 0.99334;  quasistatisch w(3H₀) = 0.98539;  Obergrenze bei wachsendem V: 1 − w ≤ P(T < t₀) = erfc(√(τ_D/4t₀)) = 0.07708
+
+   Kugel mit Kollaps bei z_c; Virial bei R_ta/2 (danach θ = 0).  w_Q = w(θ(t)), w_P = w(θ̃) (Preisach), w_H = [H] reell (Feynman-Kac).
+   z_c   t_ta   t_vir  t_c    | t(w_P=0,9) t(w_P=0,1) Δt [Mio. J.] | w_H bei: t_ta/2   t_ta    t_vir   t₀      | max(1−w_H) bis t₀
+   3.4  0.932  1.695  1.864 |  0.9175    0.9319      14.4      |        1.0000  1.0000  1.0000  0.8551 | 0.1449
+   2.0  1.641  2.984  3.281 |  1.5960    1.6406      44.6      |        1.0000  1.0000  0.9998  0.8051 | 0.1949
+   1.0  2.929  5.329  5.859 |  2.7864    2.9291     142.7      |        1.0000  1.0000  0.9894  0.7226 | 0.2774
+   0.5  4.302  7.831  8.603 |  3.9917    4.3011     309.3      |        1.0000  0.9998  0.9396  0.6577 | 0.3423
+   (Modell 03: w_P von 0,9 auf 0,1 in 14 / 45 / 143 / 309 Mio. J. bei z_c = 3,4 / 2 / 1 / 0,5)
+
+   Zweiter Weg (Crank-Nicolson auf (t, ϖ), Start t = 0,05 Gyr im stationären Zustand), z_c = 2:
+      t =  1.641 Gyr:  CN 1 − w = 0.00000   Feynman-Kac 0.00000
+      t =  2.984 Gyr:  CN 1 − w = 0.00021   Feynman-Kac 0.00019
+      t = 13.816 Gyr:  CN 1 − w = 0.19489   Feynman-Kac 0.19489
+
+   Nachgeschichte (z_c = 2, virialisiert): Preisach hält w = 0 in beiden Fällen.
+      Schwingung ΔV/V = 0,3 mit ω_orb(Δ=200):  t=5.0: w_H=0.9907   t=6.0: w_H=0.9759   t=8.0: w_H=0.9100   t=10.0: w_H=0.8124   t=13.8: w_H=0.8430
+      Wiederausdehnung mit 3H ab 6 Gyr:  t=5.0: w_H=0.9880   t=6.0: w_H=0.9696   t=8.0: w_H=0.9573   t=10.0: w_H=0.9599   t=13.8: w_H=0.9724
+      quasistatisch bei Wiederausdehnung heute: w(3H₀) = 0.9854
+      quasistatisch ohne Gedächtnis bei der Schwingung: θ zwischen ±0.217/Gyr ⇒ w(θ(t)) springt zwischen 0 und 0.9868
+
+==============================================================================================================
+4  Übergabe: Relaxationsraten der Gleichung [H] gegen λ_m = ω_orb/N*
+==============================================================================================================
+   Milchstraße 8 kpc: Γ = 4.359e-19, 1/τ_D = 3.669e-19, Dπ²/4Λ² = 3.927e-31 s⁻¹;  λ_m = (0,01–0,13)Ω = 8.91e-18–1.16e-16 s⁻¹
+   langsamste Rate der Gleichung am Ort (θ = 0): Γ + Dπ²/4Λ² = 4.359e-19 s⁻¹ = λ_m/20 … λ_m/266
+   Bereich Δ = 200: 1/ω_orb = 1.451 Gyr, 1/λ_m = 0.44–3.48 Gyr;  Zeitskalen der Gleichung: τ_D = 86.4, Modus τ_D/6 = 14.4 Gyr
+   Bereich Δ = 500: 1/ω_orb = 0.918 Gyr, 1/λ_m = 0.28–2.20 Gyr;  Zeitskalen der Gleichung: τ_D = 86.4, Modus τ_D/6 = 14.4 Gyr
+   Die Gleichung hat keine Rate ω_orb/N*: ihre Raten sind Γ, θ und D/Länge² in ϖ (alle ≤ 1/τ_D-Skala am Ort ϖ_R).
+
+==============================================================================================================
+5  Mode ξ: Eikonal einer in (t, x, ϖ) lichtartigen Phase S = ξ(t, x) + p_ϖ·ϖ (nur Zeitform [W]/[T])
+==============================================================================================================
+   (∂S)²₅ = (∂ξ)²₄ + p_ϖ² = 0  ⇒  (∂ξ)² = −p_ϖ²;  Flusslinien = Geodäten, druckfrei (Kaluza-Klein-Bild).
+   Neumann-Moden auf [0, Λ]: p_n = nπ/Λ;  n = 0 (Nullmode): (∂ξ)² = 0 (lichtartig), nicht −1;  n = 1: p₁ = π/Λ = 7.690e-27 m⁻¹, c·p₁ = 2.305e-18 s⁻¹ = 1.055 H₀
+   Mit G(0) = 1 und beschränkter Lösung (Halbgerade) gibt es stationär keine reelle ϖ-Welle (nur e^{−kϖ}): dort ist (∂ξ)² = +k² (raumartig).
+   In [H] gibt es kein Eikonal; in [T] gilt es erst oberhalb |p| ~ 2c/r₀ (Abschnitt 1).
+
+==============================================================================================================
+6  Handprüfungen
+==============================================================================================================
+   τ_D = c/a₀ = 2,99792458e8/1,1e-10 = 2,72539e18 s / 3,15576e16 = 86,362 Gyr (Kern 86.362)
+   Obergrenze 1 − w in reeller Zeit: erfc(√(τ_D/4t₀)), √(86,362/(4·13.816)) = 1.2501
+      erf(x) = 2/√π·Σ (−1)ⁿ x^{2n+1}/(n!(2n+1))  (Maclaurin, Glied für Glied)
+      Glieder: +1.25009, -0.65118, +0.30528, -0.11359, +0.03452, -0.00883, +0.00195, -0.00038, …
+      erfc = 1 − 2/√π·0.817917 = 0.07708   scipy 0.07708
+   Milchstraße, [W]-Gewicht: w ≈ ϖ_R·3H₀/c = r*·3H₀/c;  r* = 8,35 kpc·√(1,2/1,1) ≈ 8,72 kpc = 2,69e20 m;
+      3H₀/c = 3·2,1843e-18/2,9979e8 = 2,186e-26 m⁻¹ ⇒ w ≈ 5,9e-6   (Code 5.88e-06)

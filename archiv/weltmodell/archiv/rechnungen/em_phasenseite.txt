@@ -1,0 +1,80 @@
+================================================================================================
+A  Nome q = e^{2πiτ}: Re τ Kreis (Phase), Im τ Halbgerade (Betrag)
+================================================================================================
+A1 Re τ: 0 → 1 bei Im τ = 0.3: Windung von arg q = +1.0000, |q| konstant: max−min = 5.6e-17
+   Re τ: 0 → −1: Windung -1.0000  (beide Sinne; Verlust |q| unberührt)
+   Im τ ∈ (0, ∞): Halbgerade, ein Rand (|q| = 1), kein geschlossener Weg ⇒ keine Windung, ein Sinn.
+   Streifen / (τ ~ τ+1) = Kreis × Halbgerade: H¹ = ℤ nur vom Kreis. Phase = Windung, Betrag = Verlust.
+A2 Summe der Rückläufe  Σ q^n:
+   ein Sinn, Verlust s =  3.0, Phase 0: Σ_n≥0 e^(−ns) =   1.0524 = ν(a_N = s²a₀) =   1.0524
+   ein Sinn, Verlust s =  1.0, Phase 0: Σ_n≥0 e^(−ns) =   1.5820 = ν(a_N = s²a₀) =   1.5820
+   ein Sinn, Verlust s =  0.3, Phase 0: Σ_n≥0 e^(−ns) =   3.8583 = ν(a_N = s²a₀) =   3.8583
+   ein Sinn, Verlust s =  0.1, Phase 0: Σ_n≥0 e^(−ns) =  10.5083 = ν(a_N = s²a₀) =  10.5083
+   ein Sinn, s = 1e-02, φ = [0.5 1.  2. ]: Σ = 0.541+1.957i, 0.511+0.915i, 0.504+0.321i  (Imaginärteil ½cot(φ/2): kein reeller Zählwert)
+   ein Sinn, s = 1e-04, φ = [0.5 1.  2. ]: Σ = 0.500+1.958i, 0.500+0.915i, 0.500+0.321i  (Imaginärteil ½cot(φ/2): kein reeller Zählwert)
+   beide Sinne, s =  1.000: (1/2π)∫P_s(φ)f(φ)dφ = 0.46354  → Σ_m f(2πm) = 1.50000 (Kamm: nur ganze Windungen)
+   beide Sinne, s =  0.100: (1/2π)∫P_s(φ)f(φ)dφ = 1.24612  → Σ_m f(2πm) = 1.50000 (Kamm: nur ganze Windungen)
+   beide Sinne, s =  0.010: (1/2π)∫P_s(φ)f(φ)dφ = 1.47094  → Σ_m f(2πm) = 1.50000 (Kamm: nur ganze Windungen)
+   beide Sinne, s =  0.001: (1/2π)∫P_s(φ)f(φ)dφ = 1.49705  → Σ_m f(2πm) = 1.50000 (Kamm: nur ganze Windungen)
+   ⇒ Mit Verlust und einem Sinn: ν(s), Skala a₀ über s = √(a_N/a₀). Ohne Verlust ist nur die Zählung in beiden Sinnen reell;
+     sie gibt den Kamm Σδ(φ − 2πm): ganze Windungen, keine Kurve, keine Skala.
+
+================================================================================================
+B  dF = 0 und Quellengleichung
+================================================================================================
+B1 beliebige Phase je Glied: Σ_Rand F (ohne mod) max = 3.6e-15 (Bianchi dF = 0 exakt);
+   Winkel mod 2π: Fluss je Würfel/2π ganzzahlig: max|m − round m| = 3.3e-16, Würfel mit m ≠ 0: 259, Σm über den geschlossenen Raum = 0
+B1 glatte Phase: Σ_Rand F (ohne mod) max = 2.8e-16 (Bianchi dF = 0 exakt);
+   Winkel mod 2π: Fluss je Würfel/2π ganzzahlig: max|m − round m| = 4.4e-17, Würfel mit m ≠ 0: 0, Σm über den geschlossenen Raum = 0
+   ⇒ Ist A der Zusammenhang einer Phase (nur mod 2π bestimmt), ist der Fluss jeder geschlossenen Fläche 2π·ganz;
+     bei glatter Phase null: dF = 0 (∇·B = 0, ∇×E + ∂_tB = 0). m ≠ 0 nur, wo die Phase springt (Amplitude null).
+B2 Windungen +1, −1: Σρ·V = +0.0, Rest |−∇²φ − ρ|/max ρ = 5.89e-17  (lösbar)
+B2 Windungen +1, +1: Σρ·V = +2.0, Rest |−∇²φ − ρ|/max ρ = 6.10e-05  (nicht lösbar: k = 0 bleibt, keine Nullmode nimmt sie auf)
+   ⇒ Aus d⋆F = J auf dem geschlossenen Raum: ΣQ_el = 0; dJ = 0 (Ladungserhaltung) aus d² = 0.
+     d⋆F = J selbst braucht eine Wirkung für F (Metrik, Hodge-Stern): die niedrigste lokale, eichinvariante ist ∫F∧⋆F.
+
+================================================================================================
+C  g-Faktor: Faltung und Windung am selben komplexen Ort z = i·a_J
+================================================================================================
+C1 r =    20: Multipole c_l = +1.0000+0.0000i, -0.0000+1.0000i, -1.0000+0.0000i, +0.0000-1.0000i, +1.0000+0.0000i, -0.0000+1.0000i   Probe (ia)^l: (1+0j), 1j, (-1+0j), (-0-1j) …
+C1 r =   100: Multipole c_l = +1.0000-0.0000i, -0.0000+1.0000i, -1.0000+0.0000i, -0.0000-1.0000i, +1.0000+0.0000i, -0.0000+1.0000i   Probe (ia)^l: (1+0j), 1j, (-1+0j), (-0-1j) …
+   Realteil: Monopol Q, Quadrupol −Q a², …; Imaginärteil: Dipol Q·a ⇒ magnetisches Moment μ = Q·a (Gauß), SI μ = Q·c·a.
+   Dieselbe Verschiebung am Betrag (Faltung): Imaginärteil des Dipols = M·a = J/c, also a = J/(Mc) = a_J.
+   g ≡ 2Mμ/(Q J) = 2M·(Q c a_J)/(Q·M c a_J) = 2, für jedes M, Q, a_J.
+C2 Kerr-Newman r =     10: μ = 0.34965, J = 0.69929, g = 2Mμ/(QJ) = 2.00000
+C2 Kerr-Newman r =    100: μ = 0.35000, J = 0.69999, g = 2Mμ/(QJ) = 2.00000
+C2 Kerr-Newman r =   1000: μ = 0.35000, J = 0.70000, g = 2Mμ/(QJ) = 2.00000
+C3 klassisch starr: Kugelschale g = 1.000, Ring g = 1.000
+   (Ladung und Masse drehen im Raum; beim Knoten sitzen beide am selben imaginären Versatz ⇒ g = 2.)
+C4 Elektron: a_J = ħ/(2m_ec) = 1.93080e-13 m; μ = e·c·a_J = 9.27401e-24 J/T; μ_B = eħ/2m_e = 9.27401e-24
+   Probe GJ/c³ = 3Δs·a_J: 1.30614e-70 = 1.30614e-70 m²;  j = a_J/(3Δs) = 2.854e+44
+   Ladungslänge r_Q = √(G e²/(4πε₀c⁴)) = 1.381e-36 m; r_Q/3Δs = 2.041e+21, a_J/r_Q = 1.398e+23: überextremal,
+   ohne Horizont; der Multipolsatz M(ia)^l, Q(ia)^l hängt nicht an M, Q, a ⇒ g = 2 gilt auch dort.
+   Nicht aus dieser Rechnung: die Abweichung g − 2 (gemessen ≈ 2·0,00116, Literatur) und zusammengesetzte Knoten (Proton).
+
+================================================================================================
+D  Keine Schwelle auf der Phasenseite: qE/m < a₀
+================================================================================================
+D1 Elektron          : q/m = 1.759e+11 C/kg, qE/m = a₀ bei E* = a₀m/q = 6.254e-22 V/m
+D1 Proton            : q/m = 9.579e+07 C/kg, qE/m = a₀ bei E* = a₀m/q = 1.148e-18 V/m
+D1 Körper 1 g, 1 pC  : q/m = 1.000e-09 C/kg, qE/m = a₀ bei E* = a₀m/q = 1.100e-01 V/m
+D1 Körper 1 kg, 1 pC : q/m = 1.000e-12 C/kg, qE/m = a₀ bei E* = a₀m/q = 1.100e+02 V/m
+   zwei Elektronen: Coulomb-Beschleunigung = a₀ bei r = √(ke²/(m_e a₀)) = 1.517e+06 m
+D2 Das Modell: Das Argument der Regel ist das Taktgefälle der Faltung, Γ = c|∇ln(dτ/dt)| = a_N/c, nicht die Beschleunigung.
+   Eine Phase ändert |q| und damit den Takt nicht ⇒ qE/m geht nicht in s ein. Die Regel wirkt nur auf g_N:
+   g_N =  8.92e+10 a₀, qE/m = 0,1 a₀: EM-Anteil der Bahn = qE/m exakt (Faktor 1,000000), Regel ν(g_N) − 1 = 0.000e+00
+   g_N =         1 a₀, qE/m = 0,1 a₀: EM-Anteil der Bahn = qE/m exakt (Faktor 1,000000), Regel ν(g_N) − 1 = 5.820e-01
+   g_N =      0.01 a₀, qE/m = 0,1 a₀: EM-Anteil der Bahn = qE/m exakt (Faktor 1,000000), Regel ν(g_N) − 1 = 9.508e+00
+   Zum Vergleich, wäre ν auf qE/m angewandt (nicht das Modell):
+   qE/m =  1.00 a₀: Faktor ν = 1.582
+   qE/m =  0.10 a₀: Faktor ν = 3.689
+   qE/m =  0.01 a₀: Faktor ν = 10.508
+D3 Feldenergie einer Ladung 1.00e-06 C bei r = 1 m: Taktanteil r_Q²/r² = 7.43e-47, Gefälle c²r_Q²/r³ = 6.67e-30 m/s² (gravitativ, addiert sich zu g_N)
+D3 Feldenergie einer Ladung 1.60e-19 C bei r = 1e-10 m: Taktanteil r_Q²/r² = 1.91e-52, Gefälle c²r_Q²/r³ = 1.71e-25 m/s² (gravitativ, addiert sich zu g_N)
+   ⇒ Keine elektromagnetische Abweichung bei beliebig kleinen Feldern (Coulomb 1/r², Lorentzkraft unverändert);
+     die Schwelle kommt allein über den Verlust der Faltung. Vorhersage: kein elektromagnetischer MOND-Effekt,
+     auch nicht bei qE/m ≪ a₀ und nicht im tiefen Bereich (g_N ≪ a₀): dort ändert sich nur der gravitative Teil.
+
+================================================================================================
+Von Hand: μ = e·c·a_J = 1,602177e-19 · 2,997925e8 · 1,930796e-13 = 4,803205e-11 · 1,930796e-13 = 9,2740e-24 J/T
+          E* = a₀·m_e/e = 1,1e-10 · 9,10938e-31 / 1,602177e-19 = 1,00203e-40 / 1,602177e-19 = 6,254e-22 V/m

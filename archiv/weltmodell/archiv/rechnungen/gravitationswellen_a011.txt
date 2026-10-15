@@ -1,0 +1,213 @@
+FTM - Gravitationswellen und Starkfeld (alle Zahlen dieser Datei stammen aus diesem Skript)
+Konstanten: G = 6.6743e-11, c = 299792458.0, GM_sun = 1.32712440018e+20 m^3/s^2, a0 = 1.1e-10 m/s^2
+Ds_sun = GM_sun/(3c^2) = 492.2083 m,  GM_sun/c^2 = 3 Ds_sun = 1476.6250 m,  GM_sun/c^3 = 3 Ds_sun/c = 4.925491e-06 s
+   a0 aus Atmen: c*H0/2pi (H0 = 67.4) = 1.0422e-10 m/s^2
+   a0 aus Atmen: c*H0/2pi (H0 = 70.0) = 1.0824e-10 m/s^2
+   a0 aus Atmen: c*H0/2pi (H0 = 73.0) = 1.1288e-10 m/s^2
+
+====================================================================================================
+0) Wellengleichung des Faltungsfeldes: Pruefungen der Linearisierung
+====================================================================================================
+Statischer Grenzfall: hbar_00 = 12 Ds/r, h_00 = h_ii = 6 Ds/r  ->  dtau/dt = sqrt(1-h_00) ~ 1 - 3Ds/r
+   Sonne, 1 AE                h_00 = 1.974126e-08   1-sqrt(1-h_00) = 9.870629e-09   3Ds/r = 9.870629e-09
+   Sonne, Oberflaeche         h_00 = 4.245005e-06   1-sqrt(1-h_00) = 2.122505e-06   3Ds/r = 2.122503e-06
+   Neutronenstern 1.4, 12 km  h_00 = 3.445458e-01   1-sqrt(1-h_00) = 1.903988e-01   3Ds/r = 1.722729e-01
+   Gauss-Fluss von grad(12 Ds/r) durch Kugel: -7.422327e+04 m ;  -48 pi Ds = -7.422327e+04 m  (Quelle 48 pi sigma, sigma = G rho/(3c^2))
+Lichtablenkung am Sonnenrand aus h_00 + h_ij: alpha = 12 Ds/b = 8.490010e-06 rad = 1.7512 arcsec
+   nur Takt (h_00): 6 Ds/b = 0.8756 arcsec  (Hälfte, Wert von 1911)
+Freiheitsgrade: 10 (symm. Tensor) - 4 (Lorenz-Eichung) - 4 (Resteichung) = 2  -> h_+, h_x
+Quadrupolfaktor: P = (9/5) (c^5/G) <(dddQ_F/c^3)^2>,  c^5/G = 3.6283e+52 W
+
+====================================================================================================
+1) Operator im Starkfeld: q = exp(-sqrt(a/a0)) = exp(-r*/r)
+====================================================================================================
+GW150914: m1 = 36.0, m2 = 29.0, M = 65.0, M_f = 62.0, j_f = 0.67 (Quellsystem)
+   Ds(M) = 31993.5 m,  Ds(M_f) = 30516.9 m,  r0 = 6 Ds(M_f) = 183.10 km
+   r*(M_f) = sqrt(GM/a0) = 8.6488e+15 m = 57813.6 AE = 0.2803 pc
+   Horizont Schwarzschild r0 = 6 Ds(M_f)        r =       183.10 km  a_N = 2.454e+11 m/s^2  a_N/a0 = 2.231e+21  r*/r = 4.7235e+10  q = nu-1 = 10^(-2.0514e+10)
+   Horizont Kerr r+ (j=0.67) = 1.7424 GM/c^2    r =       159.51 km  a_N = 3.234e+11 m/s^2  a_N/a0 = 2.940e+21  r*/r = 5.4219e+10  q = nu-1 = 10^(-2.3547e+10)
+   Photonensphaere 9 Ds (Schwarzschild)         r =       274.65 km  a_N = 1.091e+11 m/s^2  a_N/a0 = 9.916e+20  r*/r = 3.1490e+10  q = nu-1 = 10^(-1.3676e+10)
+   ISCO Schwarzschild 18 Ds(M)                  r =       575.88 km  a_N = 2.601e+10 m/s^2  a_N/a0 = 2.365e+20  r*/r = 1.5377e+10  q = nu-1 = 10^(-6.6783e+09)
+   ISCO Kerr prograd, j = 0.67: r_ISCO = 3.5281 GM/c^2 = 10.584 Ds
+   ISCO Kerr (j=0.67, M_f)                      r =       323.00 km  a_N = 7.887e+10 m/s^2  a_N/a0 = 7.170e+20  r*/r = 2.6776e+10  q = nu-1 = 10^(-1.1629e+10)
+   Inspiral, f_gw = 20 Hz (Kepler-Abstand)      r =      1297.64 km  a_N = 5.123e+09 m/s^2  a_N/a0 = 4.657e+19  r*/r = 6.8243e+09  q = nu-1 = 10^(-2.9638e+09)
+   Inspiral, f_gw = 35 Hz (Kepler-Abstand)      r =       893.57 km  a_N = 1.080e+10 m/s^2  a_N/a0 = 9.821e+19  r*/r = 9.9103e+09  q = nu-1 = 10^(-4.3040e+09)
+   Inspiral, f_gw = 75 Hz (Kepler-Abstand)      r =       537.61 km  a_N = 2.985e+10 m/s^2  a_N/a0 = 2.713e+20  r*/r = 1.6472e+10  q = nu-1 = 10^(-7.1537e+09)
+   Inspiral, f_gw = 150 Hz (Kepler-Abstand)     r =       338.67 km  a_N = 7.521e+10 m/s^2  a_N/a0 = 6.837e+20  r*/r = 2.6148e+10  q = nu-1 = 10^(-1.1356e+10)
+   f_gw(ISCO, Schwarzschild) = c/(pi (18Ds)^(3/2)/sqrt(3Ds)) = 67.6 Hz  (Quellsystem)
+
+GW170817: m1 = 1.46, m2 = 1.27 M_sun, R_NS = 12 km
+   NS-Oberflaeche (1.46 M_sun, 12 km)           r =        12.00 km  a_N = 1.346e+12 m/s^2  a_N/a0 = 1.223e+22  r*/r = 1.1060e+11  q = nu-1 = 10^(-4.8033e+10)
+   Kontakt, Abstand 24 km                       r =        24.00 km  a_N = 6.290e+11 m/s^2  a_N/a0 = 5.718e+21  r*/r = 7.5619e+10  q = nu-1 = 10^(-3.2841e+10)
+   ISCO 18 Ds(M)                                r =        24.19 km  a_N = 6.193e+11 m/s^2  a_N/a0 = 5.630e+21  r*/r = 7.5034e+10  q = nu-1 = 10^(-3.2587e+10)
+   Inspiral, f_gw = 24 Hz                       r =       399.44 km  a_N = 2.271e+09 m/s^2  a_N/a0 = 2.064e+19  r*/r = 4.5435e+09  q = nu-1 = 10^(-1.9732e+09)
+   Inspiral, f_gw = 100 Hz                      r =       154.26 km  a_N = 1.523e+10 m/s^2  a_N/a0 = 1.384e+20  r*/r = 1.1765e+10  q = nu-1 = 10^(-5.1094e+09)
+   Inspiral, f_gw = 400 Hz                      r =        61.22 km  a_N = 9.667e+10 m/s^2  a_N/a0 = 8.788e+20  r*/r = 2.9645e+10  q = nu-1 = 10^(-1.2875e+10)
+   f_gw(ISCO) = 1611 Hz
+
+PSR B1913+16 (Hulse-Taylor): mittlere grosse Halbachse
+   grosse Halbachse                             r =   1949032.09 km  a_N = 9.880e+01 m/s^2  a_N/a0 = 8.982e+11  r*/r = 9.4772e+05  q = nu-1 = 10^(-4.1159e+05)
+
+Detektor LIGO im Erdfeld: a_N = 9.81 m/s^2 -> log10 q = -1.2969e+05
+LISA im Sonnenfeld (1 AE): a_N = 5.9301e-03 -> log10 q = -3.1887e+03
+Gezeitenbeschleunigung der Welle auf LIGO-Spiegel (f=150 Hz, h=1e-21, L=4 km): 1.777e-12 m/s^2 = 1.615e-02 a0
+   haette die Welle allein das Argument von nu: q = 0.8807, nu = 8.379  (tatsaechlich: Argument = Gesamtfeld |grad Phi_N|)
+Ordnung: q = exp(-eps^(-1/2)), eps = a0/a;  d^n q/d eps^n -> 0 fuer eps -> 0 fuer alle n  (jenseits aller PN-Ordnungen)
+   eps = 1e-02:  q = 4.540e-05   vgl. eps^10 = 1.0e-20
+   eps = 1e-04:  q = 3.720e-44   vgl. eps^10 = 1.0e-40
+   eps = 1e-06:  q = 10^(-4.3429e+02)   vgl. eps^10 = 1.0e-60
+
+====================================================================================================
+2) Ringdown: Eigenschwingungen des Faltungstrichters
+====================================================================================================
+(a) Leaver-Kettenbruch, Regge-Wheeler-Gleichung mit Takt (dtau/dt)^2 = 1-6Ds/r:
+    M omega (l=m=2, n=0, j=0) = 0.373672 -0.088962 i   (Literatur: 0.373672 - 0.088962 i)
+(b) Potentialmaximum l=2: r_max = 3.2808 GM/c^2 = 9.842 Ds (Photonensphaere: 9 Ds)
+    WKB 1. Ordnung (Schutz & Will): M omega = 0.3988 -0.0883 i
+(c) Eikonal: Omega_ph = c/(3 sqrt27 Ds) -> M Omega = 1/sqrt27 = 0.1925; Lyapunov lambda = Omega_ph
+    M omega ~ (l+1/2) Omega - i (n+1/2) lambda = 0.4811 - 0.0962 i  (l=2)
+    l =  2: Eikonal Re = 0.4811
+    l =  3: Eikonal Re = 0.6736
+    l =  5: Eikonal Re = 1.0585
+    l = 10: Eikonal Re = 2.0207
+(d) BCW-Fit: M omega_R = f1 + f2 (1-j)^f3, Q = q1 + q2 (1-j)^q3 ;  f = (f1,f2,f3) = (1.5251,-1.1568,0.1292), q = (0.7,1.4187,-0.499)
+    Probe j=0: F = 0.3683 (Leaver 0.3737),  Q = 2.1187 (Leaver 2.1002)
+    j = 0.00: F(j) = M omega_R = 0.3683,  Q = 2.1187,  M omega_I = F/(2Q) = 0.0869
+    j = 0.50: F(j) = M omega_R = 0.4674,  Q = 2.7050,  M omega_I = F/(2Q) = 0.0864
+    j = 0.67: F(j) = M omega_R = 0.5227,  Q = 3.1669,  M omega_I = F/(2Q) = 0.0825
+    j = 0.90: F(j) = M omega_R = 0.6660,  Q = 5.1760,  M omega_I = F/(2Q) = 0.0643
+    j = 0.99: F(j) = M omega_R = 0.8870,  Q = 14.8218,  M omega_I = F/(2Q) = 0.0299
+
+GW150914: M_f = 62.0 M_sun, j = 0.67, z = 0.09
+   Ds(M_f) = 30516.9 m,  3 Ds = GM/c^2 = 91.551 km,  GM/c^3 = 3 Ds/c = 0.30538 ms
+   f_QNM = c/(2 pi 3Ds) F(j) = 521.17 Hz x 0.5227 = 272.4 Hz (Quellsystem)
+   tau = Q/(pi f) = 3.701 ms (Quellsystem)
+   Detektorsystem (x 1/(1+z) bzw. x (1+z)): f = 249.9 Hz,  tau = 4.034 ms
+   Wellenlaenge lambda = c/f = 1101 km = 36.06 Ds = 6.01 r0
+   Dämpfung in Takt-Einheiten: tau / (3Ds/c) = 12.12
+   zum Vergleich j = 0: f = 194.7 Hz, tau = 3.433 ms
+   M_f = 58: f_det = 267.1 Hz, tau_det = 3.77 ms
+   M_f = 62: f_det = 249.9 Hz, tau_det = 4.03 ms
+   M_f = 66: f_det = 234.8 Hz, tau_det = 4.29 ms
+
+====================================================================================================
+2b) Quadrupolformel und Chirp in Faltungsgroessen
+====================================================================================================
+GW150914: M_c = 28.096 M_sun (Quelle), (1+z) M_c = 30.624 M_sun (Detektor), eta = 0.2471
+   Chirp-Faltung Ds_c = G M_c/(3c^2) = 13828.9 m (Quelle), 15073.5 m (Detektor)
+   f =    20 Hz: fdot = 1.0241e+01 Hz/s, t bis Verschmelzung = 0.7324 s, Zyklen = 23, h0(face-on) = 6.403e-22, Ds_c aus (f,fdot) = 15073.5 m
+   f =    35 Hz: fdot = 7.9703e+01 Hz/s, t bis Verschmelzung = 0.1647 s, Zyklen = 9, h0(face-on) = 9.299e-22, Ds_c aus (f,fdot) = 15073.5 m
+   f =   150 Hz: fdot = 1.6554e+04 Hz/s, t bis Verschmelzung = 0.0034 s, Zyklen = 1, h0(face-on) = 2.453e-21, Ds_c aus (f,fdot) = 15073.5 m
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei ISCO 18 Ds: (3Ds/r) = 0.1667, P = 1.823e+48 W
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei r = 12 Ds : (3Ds/r) = 0.2500, P = 1.385e+49 W
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei r = 9 Ds  : (3Ds/r) = 0.3333, P = 5.835e+49 W
+GW170817: M_c = 1.185 M_sun (Quelle), (1+z) M_c = 1.197 M_sun (Detektor), eta = 0.2488
+   Chirp-Faltung Ds_c = G M_c/(3c^2) = 583.2 m (Quelle), 589.0 m (Detektor)
+   f =    24 Hz: fdot = 8.9906e-02 Hz/s, t bis Verschmelzung = 100.1040 s, Zyklen = 3844, h0(face-on) = 3.334e-23, Ds_c aus (f,fdot) = 589.0 m
+   f =   100 Hz: fdot = 1.6840e+01 Hz/s, t bis Verschmelzung = 2.2268 s, Zyklen = 356, h0(face-on) = 8.634e-23, Ds_c aus (f,fdot) = 589.0 m
+   f =   400 Hz: fdot = 2.7158e+03 Hz/s, t bis Verschmelzung = 0.0552 s, Zyklen = 35, h0(face-on) = 2.176e-22, Ds_c aus (f,fdot) = 589.0 m
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei ISCO 18 Ds: (3Ds/r) = 0.1667, P = 1.848e+48 W
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei r = 12 Ds : (3Ds/r) = 0.2500, P = 1.404e+49 W
+   Leistung P = (32/5)(c^5/G) eta^2 (3Ds/r)^5 bei r = 9 Ds  : (3Ds/r) = 0.3333, P = 5.915e+49 W
+Vergleich: GW150914 Spitzenleistung (LIGO) 3.6e49 W;  Energie 3.0 M_sun c^2 = 5.361e+47 J
+PSR B1913+16: Ds_c = 605.78 m, f(e) = 11.8568, Pbdot = -(192pi/5)(2pi 3Ds_c/(c Pb))^(5/3) f(e) = -2.4021e-12 (Literatur GR: -2.40263e-12)
+Faltungsbilanz GW150914: Ds(65) - Ds(62) = 1476.6 m = Ds(3 M_sun) = 1476.6 m
+
+====================================================================================================
+3) Ausbreitung: GW170817 / GRB 170817A
+====================================================================================================
+dt = 1.74 s, D >= 26 Mpc:  c dt / D = 6.502e-16  (obere Grenze fuer c_gw > c)
+   mit angenommener Eigenverzögerung bis 10 s: (10-1.74) c/D = 3.087e-15
+   bei D = 40 Mpc: c dt/D = 4.226e-16
+   Literaturwert (Abbott et al. 2017, ApJL 848 L13): -3e-15 <= dv/c <= +7e-16
+Frequenzskala des Atmens: H0/2pi = a0/c = 3.611e-19 s^-1  (a0/c mit a0 = 1.2e-10: 3.669e-19 s^-1)
+   als Massenskala: hbar H0/2pi = 2.376e-34 eV   (LIGO-Grenze: m_g < 1.2e-22 eV (2016), 1.76e-23 eV (GWTC-3))
+   Dispersion bei f = 1e+02 Hz: |v_g - c|/c = (1/2)(omega_a/omega)^2 = 1.651e-43
+   Dispersion bei f = 1e-03 Hz: |v_g - c|/c = (1/2)(omega_a/omega)^2 = 1.651e-33
+   Dispersion bei f = 1e-08 Hz: |v_g - c|/c = (1/2)(omega_a/omega)^2 = 1.651e-23
+Shapiro-Anteil des logarithmischen Trichters (v_flach = 175.8 km/s, 8.2 -> 200 kpc): 1.172e+07 s = 136 Tage
+Shapiro-Anteil des logarithmischen Trichters (v_flach = 230.0 km/s, 8.2 -> 200 kpc): 2.007e+07 s = 232 Tage
+Newton-Anteil Milchstrasse 6 Ds/c = 5.911e+05 s = 6.8 Tage (mal Log-Faktor)
+
+====================================================================================================
+4) Gedaechtnis des Raumes = GW-Memory (Christodoulou)
+====================================================================================================
+Winkelfaktor k(Theta) = sin^2(17+cos^2)/96: Kante (90 Grad) = 0.1771, 150 Grad = 0.0462, 0 Grad = 0.0000
+In Faltungsgroessen: E_rad = 3 c^4 Ds_rad / G  ->  h_mem = 12 k(Theta) Ds_rad / D_L  (Kante: 2.125 Ds_rad/D_L)
+GW150914 (E_rad = 3.0 M_sun, D_L = 410 Mpc), Theta = 90: Ds_rad(1+z) = 1609.5 m, h_mem = 2.703e-22, Anteil an h_peak = 1.0e-21: 0.270
+GW150914 (E_rad = 3.0 M_sun, D_L = 410 Mpc), Theta = 150: Ds_rad(1+z) = 1609.5 m, h_mem = 7.057e-23, Anteil an h_peak = 1.0e-21: 0.071
+   bleibende Armverschiebung LIGO (L = 4 km): dL = h/2 L = 5.41e-19 m (Kante)
+   Verhaeltnis Memory/oszillierend bei gleichem x (Kante, fuehrende Ordnung): 17/96 = 0.177
+   effektives x = 2 E_rad/(eta M) = 0.374
+   Lasky et al.: SNR 3 mit ~35 Ereignissen -> SNR pro Ereignis ~ 0.51
+   Lasky et al.: SNR 5 mit ~90 Ereignissen -> SNR pro Ereignis ~ 0.53
+GW170817: x(Kontakt 24 km) = 0.168, E_rad(Inspiral) ~ 0.057 M_sun, h_mem(Kante, 40 Mpc) ~ 4.83e-23
+LISA: SMBH 1e6 M_sun (gleich), z = 1     D_L = 6.79 Gpc, E_rad = 4.8% M, h_mem(Kante) = 4.79e-19, Anstiegszeit ~100 GM_z/c^3 = 9.85e+02 s
+LISA: SMBH 1e7 M_sun, z = 3              D_L = 26.03 Gpc, E_rad = 4.8% M, h_mem(Kante) = 2.50e-18, Anstiegszeit ~100 GM_z/c^3 = 1.97e+04 s
+PTA: SMBH 1e10 M_sun, z = 0.2            D_L = 1.01 Gpc, E_rad = 4.8% M, h_mem(Kante) = 1.93e-14, Anstiegszeit ~100 GM_z/c^3 = 5.91e+06 s
+      Timing-Rest ~ h_mem * T_obs /2 (T = 15 a) = 4567 ns
+PTA: SMBH 1e9 M_sun, z = 0.05            D_L = 0.23 Gpc, E_rad = 4.8% M, h_mem(Kante) = 7.44e-15, Anstiegszeit ~100 GM_z/c^3 = 5.17e+05 s
+      Timing-Rest ~ h_mem * T_obs /2 (T = 15 a) = 1760 ns
+
+====================================================================================================
+5) Tief-a0-Regime: wo das FTM abweichen koennte
+====================================================================================================
+(a) Schwellenfrequenz eines Binaersystems: Bahnbeschleunigung = a0 bei r = r*:
+    f*_gw = (1/pi) sqrt(a0/r*) = a0^(3/4) / (pi (3 c^2 Ds)^(1/4))
+    M =    1e+00 M_sun: r* =     0.0356 pc, f*_gw = 1.007e-13 Hz, Umlaufzeit = 6.292e+05 a
+    M =    6e+01 M_sun: r* =     0.2757 pc, f*_gw = 3.619e-14 Hz, Umlaufzeit = 1.751e+06 a
+    M =    1e+06 M_sun: r* =    35.5966 pc, f*_gw = 3.185e-15 Hz, Umlaufzeit = 1.990e+07 a
+    M =    1e+09 M_sun: r* =  1125.6644 pc, f*_gw = 5.665e-16 Hz, Umlaufzeit = 1.119e+08 a
+    M =    1e+10 M_sun: r* =  3559.6634 pc, f*_gw = 3.185e-16 Hz, Umlaufzeit = 1.990e+08 a
+    Baender: PTA 1e-9..1e-7 Hz, LISA 1e-4..1e-1 Hz, LIGO 10..1e3 Hz, CMB-B-Moden ~1e-18..1e-16 Hz
+    PTA-Quelle M = 1e+09, f_gw = 1e-08 Hz: Abstand = 3425 AE, a = 5.056e-01 m/s^2 = 4.60e+09 a0, log10 q = -2.944e+04
+    PTA-Quelle M = 1e+10, f_gw = 1e-09 Hz: Abstand = 34246 AE, a = 5.056e-02 m/s^2 = 4.60e+08 a0, log10 q = -9.311e+03
+    PTA-Quelle M = 1e+09, f_gw = 1e-09 Hz: Abstand = 15896 AE, a = 2.347e-02 m/s^2 = 2.13e+08 a0, log10 q = -6.344e+03
+(b) Galaktisches Feld am Ort der Sonne (Pulsar-Beschleunigungen):
+    a_N(8.2 kpc, 6e10 M_sun) = 1.2438e-10 m/s^2 = 1.131 a0, q = 0.3453, nu = 1.5274, a = nu a_N = 1.8997e-10 m/s^2
+    Vergleich v_c = 233 km/s: v^2/R = 2.1456e-10 m/s^2
+    Periodenaenderung Pdot/P = a_los/c: Newton 4.149e-19 s^-1, FTM 6.337e-19 s^-1
+    Vertikal (fuehrende Ordnung): Sigma_eff = nu Sigma_b; fuer angenommenes Sigma_b = 50.0 M_sun/pc^2 -> 76 M_sun/pc^2
+(c) Wellen durch kollektive Trichter (Linseneffekt, gleich fuer Licht und GW):
+    Milchstrasse 6e10 : v_flach =   172.0 km/s, alpha_inf = 2 pi (v/c)^2 = 6 pi Ds/r* = 2.069e-06 rad = 0.427 arcsec
+        Probe 6 pi Ds/r* = 2.069e-06 rad
+        M_eff(<100 kpc) = b v^2/G = 6.881e+11 M_sun, Wellenoptik unterhalb f ~ c^3/(8 pi G M_eff) = 1.17e-08 Hz
+    Galaxie 2e11      : v_flach =   232.5 km/s, alpha_inf = 2 pi (v/c)^2 = 6 pi Ds/r* = 3.778e-06 rad = 0.779 arcsec
+        Probe 6 pi Ds/r* = 3.778e-06 rad
+        M_eff(<100 kpc) = b v^2/G = 1.256e+12 M_sun, Wellenoptik unterhalb f ~ c^3/(8 pi G M_eff) = 6.43e-09 Hz
+    Haufen 1.7e14     : v_flach =  1255.1 km/s, alpha_inf = 2 pi (v/c)^2 = 6 pi Ds/r* = 1.101e-04 rad = 22.716 arcsec
+        Probe 6 pi Ds/r* = 1.101e-04 rad
+        M_eff(<100 kpc) = b v^2/G = 3.663e+13 M_sun, Wellenoptik unterhalb f ~ c^3/(8 pi G M_eff) = 2.21e-10 Hz
+(d) Atmen als Hintergrund:
+    H0 = 67.4: H0 = 2.1843e-18 s^-1, H0/2pi = 3.4764e-19 Hz, 1/H0 = 14.51 Gyr
+    H0 = 70.0: H0 = 2.2685e-18 s^-1, H0/2pi = 3.6105e-19 Hz, 1/H0 = 13.97 Gyr
+    H0 = 73.0: H0 = 2.3658e-18 s^-1, H0/2pi = 3.7652e-19 Hz, 1/H0 = 13.39 Gyr
+    Omega_GW(f) = (2 pi^2/3H0^2) f^2 h_c^2 ; bei f = H0/2pi: Omega = h_c^2/6 = 0.166667 h_c^2
+    Verhaeltnis f_LIGO(100 Hz)/(H0/2pi) = 2.77e+20,  f_PTA(1e-8)/(H0/2pi) = 2.77e+10
+    Scherung (sigma/H)0 < 1.0e-06 (Tensor regulaer): Omega_sigma = (sigma/H)^2/3 < 3.3e-13
+    Scherung (sigma/H)0 < 4.7e-11 (Vektor): Omega_sigma = (sigma/H)^2/3 < 7.4e-22
+    Korrelationsmuster PTA:  Hellings-Downs (Tensor) vs. Atmen-Mode (3 + cos z)/8
+    zeta =   0 Grad: HD = +0.5000   Atmen (ST) = +0.5000
+    zeta =  30 Grad: HD = +0.2116   Atmen (ST) = +0.4833
+    zeta =  60 Grad: HD = -0.0824   Atmen (ST) = +0.4375
+    zeta =  90 Grad: HD = -0.1449   Atmen (ST) = +0.3750
+    zeta = 120 Grad: HD = -0.0111   Atmen (ST) = +0.3125
+    zeta = 180 Grad: HD = +0.2500   Atmen (ST) = +0.2500
+    Standard-Sirenen: Xi = d_L^GW/d_L^EM = 1 (Operator ohne Reibungsterm)
+
+====================================================================================================
+6) Schatten: Photonensphaere r = 9 Ds, Schattenradius b_c = 3 sqrt27 Ds
+====================================================================================================
+b(r) = r/(dtau/dt) minimal bei r = 9 Ds: b_c = 9 Ds/sqrt(1/3) = 15.5885 Ds = 3 sqrt27 Ds = 15.5885 Ds
+   dtau/dt an der Photonensphaere = sqrt(1/3) = 0.5774
+M87*: Ds = 3.1994e+12 m = 21.386 AE, r0 = 6Ds = 128.318 AE, Photonensphaere 9Ds = 192.477 AE
+   theta_g = 3Ds/D = 3.819 muas, Schattendurchmesser 2 x 3 sqrt27 Ds/D = 39.69 muas, Ring (alpha = 11 theta_g) = 42.0 muas   Ring 42 +- 3 muas (EHT 2019)
+   an 9 Ds: a_N = 1.040e+03 m/s^2, log10 q = -1.3357e+06
+Sgr A* (4.0e6, 8.2 kpc): Ds = 1.9688e+09 m = 0.013 AE, r0 = 6Ds = 0.079 AE, Photonensphaere 9Ds = 0.118 AE
+   theta_g = 3Ds/D = 4.815 muas, Schattendurchmesser 2 x 3 sqrt27 Ds/D = 50.04 muas, Ring (alpha = 11 theta_g) = 53.0 muas   Ring 51.8 +- 2.3 muas (EHT 2022)
+   an 9 Ds: a_N = 1.691e+06 m/s^2, log10 q = -5.3842e+07
+Sgr A* (4.297e6, 8.277 kpc, GRAVITY): Ds = 2.1150e+09 m = 0.014 AE, r0 = 6Ds = 0.085 AE, Photonensphaere 9Ds = 0.127 AE
+   theta_g = 3Ds/D = 5.124 muas, Schattendurchmesser 2 x 3 sqrt27 Ds/D = 53.25 muas, Ring (alpha = 11 theta_g) = 56.4 muas   
+   an 9 Ds: a_N = 1.574e+06 m/s^2, log10 q = -5.1948e+07
+
+Ende.

@@ -1,0 +1,52 @@
+1) Dichte erster Rückkehrzeiten, τ_D = 1:  E[e^{−pT}] numerisch gegen e^{−√p}
+   p =  0.01:  numerisch 0.90483742   geschlossen 0.90483742
+   p =  0.30:  numerisch 0.57826528   geschlossen 0.57826528
+   p =  1.00:  numerisch 0.36787944   geschlossen 0.36787944
+   p =  3.00:  numerisch 0.17692121   geschlossen 0.17692121
+   Norm ∫f = 1.000000 (Rückkehr sicher);  Modus T = τ_D/6;  Mittel unendlich (Schwanz T^{−3/2})
+   τ_D = c/a₀ = 2.7254e+18 s = 86.4 Mrd. Jahre;  Modus τ_D/6 = 14.4 Mrd. Jahre
+
+2) Kern mit Verlust Γ:  K(T) = f(T)e^{−ΓT},  K̂(p) = e^{−√((p+Γ)τ_D)}
+   s = 0.3:  K̂(0) numerisch 0.740818,  e^{−s} = 0.740818
+   s = 1.0:  K̂(0) numerisch 0.367879,  e^{−s} = 0.367879
+   s = 3.0:  K̂(0) numerisch 0.049787,  e^{−s} = 0.049787
+   Summe über Rückläufe ν̂(p) = 1/(1 − K̂(p)); für s → 0: ν̂·√((p+Γ)τ_D) →
+      √((p+Γ)τ_D) = 0.3:  1.15749  (1 + x/2 + …)
+      √((p+Γ)τ_D) = 0.1:  1.05083  (1 + x/2 + …)
+      √((p+Γ)τ_D) = 0.01:  1.00501  (1 + x/2 + …)
+   Tiefbereich: ν̂ ≈ ((p+Γ)τ_D)^{−1/2} ⇒ Zeitkern e^{−Γt}·t^{−1/2}/√(πτ_D): gedämpfte Halbintegration
+   (d/dt + Γ)^{−1/2}; exakt ist K̂ = exp[−√τ_D·(d/dt + Γ)^{1/2}], keine Mittag-Leffler-Form.
+   Der Exponentialfaktor des Kerns ist genau der Verlust: λ_K = Γ, aber mal der Lévy-Dichte, nicht allein.
+
+3) Sonnenkreis: Γ/Ω
+   a_N = 1.3067e-10 m/s² (1.188 a₀), s = 1.0899, Γ = a_N/c = 4.3587e-19 s⁻¹, Γτ_D = s² = 1.1879
+   Weg A (Kern): Ω Regel = 8.9303e-16 s⁻¹ (v = 220.4 km/s):  Γ/Ω = 4.881e-04;  mit Ω = 220 km/s/8 kpc: 4.891e-04
+   Weg B (Hand): Γ/Ω = v_N²/(c·v),  v_N² = GM/r = 3.2257e+10 m²/s²,  c·v = 6.6089e+13  →  4.881e-04
+   Tiefbereich allgemein: Γ/Ω = (v_N/v)²·v/c;  v/c = 7.353e-04
+   a_N, die 5,2·10⁻⁴ gäbe: 1.392e-10 m/s² (≈ 1.27 a₀, z. B. anderes Baryonenmodell)
+   Schranke 3,07·10⁻⁴ Ω: eigene Rechnung kern_gedaechtnis.py für den reinen Exponentialkern,
+   Hub der Radialbewegung nach 10 Mrd. Jahren ≥ 90 %; die Annahme 'alte Scheiben behalten ihre Radialstreuung'
+   und Ω = 220 km/s/8 kpc sind Messgrößen der Literatur (nicht aus eigenen Daten).
+
+4) Gewicht bei Bahnfrequenz, R = |K̂(iΩ)|/K̂(0) (Maxwell: λ/√(λ²+Ω²))
+   Ω Regel: Ωτ_D = 2433.9;  Weg A (komplexe Wurzel) Re = 34.8930, R = 2.087e-15;  Weg B (√((|z|+a)/2)) Re = 34.8930, R = 2.087e-15
+      Maxwell mit λ_K = Γ: R = 4.881e-04;  Schranke 3,07·10⁻⁴
+   Ω 220 km/s: Ωτ_D = 2428.9;  Weg A (komplexe Wurzel) Re = 34.8575, R = 2.162e-15;  Weg B (√((|z|+a)/2)) Re = 34.8575, R = 2.162e-15
+      Maxwell mit λ_K = Γ: R = 4.891e-04;  Schranke 3,07·10⁻⁴
+   Hand: Re ≈ √(Ωτ_D/2) = 34.884, minus s → e^{−33,8} ≈ 2·10⁻¹⁵.
+
+5) Anteil des Kerns bis zur Zeit t:  F(t)/q,  F(t) = ½[e^{−s}erfc(√(τ_D/4t) − √(Γt)) + e^{s}erfc(√(τ_D/4t) + √(Γt))]
+   s = 0.300, 13,8 Mrd. J.: numerisch 1.0276e-01, geschlossen 1.0276e-01  (Anteil an q)
+   s = 0.300, 10 Mrd. J.  : numerisch 5.0501e-02, geschlossen 5.0501e-02  (Anteil an q)
+   s = 0.300, Umlauf 2π/Ω : numerisch 6.7504e-44, geschlossen 6.7504e-44  (Anteil an q)
+   s = 1.000, 13,8 Mrd. J.: numerisch 1.8672e-01, geschlossen 1.8672e-01  (Anteil an q)
+   s = 1.000, 10 Mrd. J.  : numerisch 9.3914e-02, geschlossen 9.3914e-02  (Anteil an q)
+   s = 1.000, Umlauf 2π/Ω : numerisch 1.3562e-43, geschlossen 1.3562e-43  (Anteil an q)
+   s = 1.090, 13,8 Mrd. J.: numerisch 2.0002e-01, geschlossen 2.0002e-01  (Anteil an q)
+   s = 1.090, 10 Mrd. J.  : numerisch 1.0108e-01, geschlossen 1.0108e-01  (Anteil an q)
+   s = 1.090, Umlauf 2π/Ω : numerisch 1.4831e-43, geschlossen 1.4831e-43  (Anteil an q)
+
+Ergebnis: K(T) = √(τ_D/4π)T^{−3/2}e^{−τ_D/4T − ΓT}, K̂(p) = e^{−√((p+Γ)τ_D)}. λ_K = Γ ist der Dämpfungsfaktor,
+die Lévy-Dichte legt das Gewicht aber auf T ~ τ_D (Modus τ_D/6 ≈ 14 Mrd. J.); bei Bahnfrequenz ist der Kern um ~10⁻¹⁵
+unterdrückt. In Echtzeit gelesen hätte der Kern im Weltalter nur einen Bruchteil von q aufgebaut: T ist die Rückkehrzeit in
+der inneren Richtung (ϖ = c·imaginäre Zeit), der Kern wirkt stationär auf q, nicht auf ṙ; die Exponential-Schranke gilt nicht.

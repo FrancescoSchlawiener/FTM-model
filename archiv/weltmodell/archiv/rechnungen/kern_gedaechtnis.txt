@@ -1,0 +1,75 @@
+M = 6·10¹⁰ M☉, a₀ = 1.10e-10 m/s², r* = 8.719 kpc, Δs = 2.9533e+13 m, Zeiteinheit √(r*³/GM) = 49.56 Mio. Jahre
+
+1) Normierung κ₀ und Kreisbahnprobe (Kernintegral numerisch mit quad, nicht die Formel)
+   κ₀(r) = 3c²/(r*·v)·(ω + λ²/ω) mit v, ω der Regel am Ort r, λ = 0,01·ω(r*)
+   r/r*   κ₀ lokal [s⁻²]   v Regel [km/s]   v Kern, κ₀ lokal   Abw.        v Kern, κ₀ fest (Wert bei r*)   Abw.
+    0.5   7.4495e-24       261.641         261.641        -4.4e-16      252.634                        -0.034
+    1.0   3.7251e-24       216.378         216.378        -1.8e-15      216.378                        -0.000
+    2.0   1.8633e-24       193.929         193.929        +6.7e-16      245.784                        +0.267
+    5.0   7.4761e-25       180.704         180.704        -3.3e-16      373.489                        +1.067
+   κ₀ ∝ (ω + λ²/ω)/v ≈ 1/r: mit festem κ₀ trifft die Kreisbahn nur am Normierungsradius; κ₀ muss am Ort gelesen werden.
+
+2) Exzentrische Bahnen, Start im Perizentrum r_p = 1 r*, e = (Apo − Peri)/(Apo + Peri); 50 Radialperioden
+   Kern: B(0) aus der Vorgeschichte unter der Regel (exakt über eine Radialperiode aufsummiert)
+
+   e = 0.1: Apo = 1.2222 r*, Führungsradius r_g = 1.1015 r*, Ω_g = 1.1199, √(1+χ(r*/r_g)) = 1.27037
+   Regel:  Hub 0.22222 → 0.22222 r*,  κ/Ω = 1.27144,  Ω/Ω_g = 0.98907,  κ/Ω_g = 1.25754
+   λ_K/Ω_g   Hub Anfang   Hub nach 50 T_r   Abnahme je T_r   Rate Γ_Hub/λ   κ/Ω       Ω/Ω_g     κ/Ω_g     |L−L₀|/L₀
+     1e-01   0.19248      0.00707          4.268e-02         0.0688     0.99092   0.99998   0.99091   3.9e-13
+             Hub nach 20 T_r / Anfang = 0.084
+     1e-02   0.21896      0.01952          4.766e-02         0.9872     1.27038   0.99986   1.27019   5.8e-13
+             Hub nach 20 T_r / Anfang = 0.372
+     1e-03   0.22190      0.17384          4.959e-03         0.9987     1.27106   0.99294   1.26208   1.9e-12
+             Hub nach 20 T_r / Anfang = 0.905
+     1e-04   0.22219      0.21681          5.004e-04         1.0021     1.27139   0.98954   1.25809   2.5e-12
+             Hub nach 20 T_r / Anfang = 0.990
+
+   e = 0.3: Apo = 1.8571 r*, Führungsradius r_g = 1.3172 r*, Ω_g = 0.9070, √(1+χ(r*/r_g)) = 1.29150
+   Regel:  Hub 0.85714 → 0.85714 r*,  κ/Ω = 1.30180,  Ω/Ω_g = 0.90333,  κ/Ω_g = 1.17595
+   λ_K/Ω_g   Hub Anfang   Hub nach 50 T_r   Abnahme je T_r   Rate Γ_Hub/λ   κ/Ω       Ω/Ω_g     κ/Ω_g     |L−L₀|/L₀
+     1e-01   0.67630      0.11193          6.956e-03         0.0110     0.98836   0.99769   0.98607   2.0e-13
+             Hub nach 20 T_r / Anfang = 0.171
+     1e-02   0.83643      0.06637          5.063e-02         1.0671     1.29153   0.99903   1.29027   7.1e-12
+             Hub nach 20 T_r / Anfang = 0.310
+     1e-03   0.85506      0.64682          6.080e-03         1.1825     1.29791   0.93856   1.21817   6.1e-11
+             Hub nach 20 T_r / Anfang = 0.880
+     1e-04   0.85693      0.83221          6.490e-04         1.2204     1.30132   0.90758   1.18105   6.9e-11
+             Hub nach 20 T_r / Anfang = 0.987
+   2c) Variante χΔκ₀ am Ort t′ (Ẏ = K(r)ṙ − λY), λ = 0,01 Ω_g, Y(0) = 0, Rate aus T_r 20–50: Γ_Hub/λ = 0.4902, κ/Ω = 1.66848
+
+3) Unabhängige Prüfung ohne Simulation
+   a) Handformel (Störungsrechnung um die Kreisbahn r_g, Epizykel x = X cos κt, r_gφ₁ = −(2Ω/κ)X sin κt;
+      der Projektor dreht mit: im Inertialsystem schwingt die Bahn mit Ω ± κ, nicht mit κ):
+      Γ_X = −⟨P⟩/(κ²X²),  ⟨P⟩/X² = K[−λΩ²/(λ²+Ω²) + ½κλ(−A(Ω+κ)/(λ²+(Ω+κ)²) + B(Ω−κ)/(λ²+(Ω−κ)²))],
+      A = ½ − Ω/κ, B = ½ + Ω/κ;  1D-Maxwell (nur Frequenz κ, Verlustanteil κλ/(λ²+κ²)): Γ_X = Kλ/(2(λ²+κ²))
+   b) Eigenwerte des linearisierten Systems im mitrotierenden Rahmen (r, v_r, φ₁, B′), B′ = e^{−iΩt}B
+   r_g/r*   λ/Ω     Γ_X/λ Hand   Γ_X/λ Eigenwert   Γ_X/λ Simulation   Γ_X/λ 1D-Maxwell   Eigenfrequenzen/Ω (Im, Re)
+   1.1015   1e-01      0.9013        0.9429             0.0688             0.1255        0.0000/-3.96e-10  0.9909/-5.71e-03  1.2823/-9.43e-02
+   1.1015   1e-02      0.9848        0.9852             0.9872             0.1250        0.0000/+6.51e-10  0.9999/-1.48e-04  1.2705/-9.85e-03
+   1.1015   1e-03      0.9857        0.9857             0.9987             0.1250        0.0000/-3.45e-11  1.0000/-1.43e-05  1.2704/-9.86e-04
+   1.1015   1e-04      0.9857        0.9857             1.0021             0.1250        0.0000/+1.46e-10  1.0000/-1.43e-06  1.2704/-9.86e-05
+   1.3172   1e-01      0.9745        0.9972             0.0110             0.1409        0.0000/-2.67e-10  0.9884/-2.84e-04  1.3063/-9.97e-02
+   1.3172   1e-02      1.0502        1.0503             1.0671             0.1403        0.0000/-3.97e-10  0.9999/+5.03e-04  1.2917/-1.05e-02
+   1.3172   1e-03      1.0510        1.0510             1.1825             0.1403        0.0000/-1.63e-10  1.0000/+5.10e-05  1.2915/-1.05e-03
+   1.3172   1e-04      1.0510        1.0510             1.2204             0.1403        0.0000/-7.77e-11  1.0000/+5.10e-06  1.2915/-1.05e-04
+   Sonnenkreis r_g = 0.917 r*, λ/Ω = 1e-03: Γ_X/λ Hand = 0.9133, κ/Ω = 1.2458
+   Sonnenkreis r_g = 0.917 r*, λ/Ω = 1e-04: Γ_X/λ Hand = 0.9133, κ/Ω = 1.2458
+   Eigenfrequenzen: 0 = Drehung (Symmetrie); ≈ 1 Ω im mitrotierenden Rahmen = ruhender Versatz des Bahnmittelpunkts B im Inertialsystem;
+   ≈ κ/Ω = Epizykel. Re = Anwachsen (+) oder Abklingen (−) in Einheiten Ω.
+
+4) Hochrechnung auf 10 Mrd. Jahre am Sonnenkreis
+   Ω = 220 km/s / 8 kpc = 8.9121e-16 s⁻¹,  Ω·10 Mrd. Jahre = 281.2 rad (44.8 Umläufe)
+   Sonnenkreis im Modell: 8 kpc = 0.917 r* (Punktmasse 6·10¹⁰ M☉), v Regel = 220.4 km/s
+   Hub(t) = Hub₀·e^{−Γ t}, Γ = g·λ_K;  weniger als 10 % Abnahme: λ_K/Ω < −ln 0,9/(g·Ω t)
+   e = 0.1: g = Γ/λ = 1.002 (λ_K = 10⁻⁴ Ω)  →  λ_K/Ω < 3.74e-04,  1/λ_K > 95 Mrd. Jahre
+   e = 0.3: g = Γ/λ = 1.220 (λ_K = 10⁻⁴ Ω)  →  λ_K/Ω < 3.07e-04,  1/λ_K > 116 Mrd. Jahre
+   λ_K/Ω = 0,1: Epizykel nach ~10 T_r abgeklungen; übrig bleibt der Versatz des Bahnmittelpunkts (κ = Ω), Abklingrate 0,0057 Ω (e = 0,1)
+   λ_K/Ω =  1e-02: Hub nach 10 Mrd. Jahren (g = 1.22) = 3.231e-02 des Anfangs
+   λ_K/Ω =  1e-03: Hub nach 10 Mrd. Jahren (g = 1.22) = 7.095e-01 des Anfangs
+   λ_K/Ω =  1e-04: Hub nach 10 Mrd. Jahren (g = 1.22) = 9.663e-01 des Anfangs
+
+5) Übergaberate λ_m = ω_orb/N*, N* = 0,3–2,4
+   gebundener Bereich mit mittlerer Dichte 200·ρ_krit: ω_orb = 2.184e-17 s⁻¹, λ_m/Ω_Sonne = 0.0102 – 0.0817
+   gebundener Bereich mit mittlerer Dichte 500·ρ_krit: ω_orb = 3.454e-17 s⁻¹, λ_m/Ω_Sonne = 0.0161 – 0.1292
+   Bereich innerhalb des Sonnenkreises (Baryonen 6·10¹⁰ M☉ in 8 kpc): ω_orb = 7.276e-16 s⁻¹ = 0.816 Ω, λ_m/Ω = 0.34 – 2.72
+   Grenze aus 4): λ_K/Ω < 3.1e-04;  Verhältnis kleinstes λ_m / größtes λ_K = 33

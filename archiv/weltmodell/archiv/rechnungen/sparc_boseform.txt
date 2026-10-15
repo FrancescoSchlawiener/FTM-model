@@ -1,0 +1,28 @@
+=== Υ_d = 0.5, Gasdruck σ = 0 km/s: 3166 Punkte
+  Bose-Linearisierung y = ln(g/(g − g_N)) gegen s = √(g_N/a₀): Gerade y = 0.798·s +0.063 (Achsenabschnitt ± 0.015); durch 0: Steigung 0.906 ⇒ a₀ = 1.339·10⁻¹⁰; Krümmung (quadratisch) -0.093
+     Form Bose (Regel) : χ² =    165.8 für 15 Bins
+     Form einfach      : χ² =     60.8 für 15 Bins
+     Form Standard     : χ² =   3192.7 für 15 Bins
+  Zusatzbeschleunigung (g − g_N)/a₀, Median je Bin: 0.08:0.245  0.13:0.289  0.20:0.373  0.32:0.447  0.50:0.485  0.79:0.624  1.26:0.672  2.00:0.726  3.16:0.768  5.01:0.504  7.94:0.544  12.59:-0.048  19.95:0.891
+  Maximum (Parabel um den größten Bin): bei g_N = 11.95·a₀, Höhe -0.058·a₀   (Regel: 2,54·a₀, 0,648·a₀)
+=== Υ_d = 0.4, Gasdruck σ = 0 km/s: 3166 Punkte
+  Bose-Linearisierung y = ln(g/(g − g_N)) gegen s = √(g_N/a₀): Gerade y = 0.694·s +0.059 (Achsenabschnitt ± 0.007); durch 0: Steigung 0.797 ⇒ a₀ = 1.730·10⁻¹⁰; Krümmung (quadratisch) -0.028
+     Form Bose (Regel) : χ² =    470.2 für 15 Bins
+     Form einfach      : χ² =    278.3 für 15 Bins
+     Form Standard     : χ² =   5019.4 für 15 Bins
+  Zusatzbeschleunigung (g − g_N)/a₀, Median je Bin: 0.08:0.271  0.13:0.336  0.20:0.441  0.32:0.573  0.50:0.631  0.79:0.770  1.26:0.952  2.00:1.099  3.16:1.071  5.01:0.654  7.94:0.790  12.59:0.230  19.95:1.408
+  Maximum (Parabel um den größten Bin): bei g_N = 11.60·a₀, Höhe 0.203·a₀   (Regel: 2,54·a₀, 0,648·a₀)
+=== Υ_d = 0.6, Gasdruck σ = 0 km/s: 3166 Punkte
+  Bose-Linearisierung y = ln(g/(g − g_N)) gegen s = √(g_N/a₀): Gerade y = 0.827·s +0.088 (Achsenabschnitt ± 0.027); durch 0: Steigung 0.978 ⇒ a₀ = 1.149·10⁻¹⁰; Krümmung (quadratisch) -0.228
+     Form Bose (Regel) : χ² =    182.9 für 15 Bins
+     Form einfach      : χ² =    101.3 für 15 Bins
+     Form Standard     : χ² =   2349.3 für 15 Bins
+  Zusatzbeschleunigung (g − g_N)/a₀, Median je Bin: 0.08:0.217  0.13:0.270  0.20:0.316  0.32:0.372  0.50:0.411  0.79:0.464  1.26:0.540  2.00:0.466  3.16:0.550  5.01:0.118  7.94:0.076  12.59:-0.479  19.95:0.352
+  Maximum (Parabel um den größten Bin): bei g_N = 1.27·a₀, Höhe 0.540·a₀   (Regel: 2,54·a₀, 0,648·a₀)
+=== Υ_d = 0.5, Gasdruck σ = 8 km/s: 3166 Punkte
+  Bose-Linearisierung y = ln(g/(g − g_N)) gegen s = √(g_N/a₀): Gerade y = 0.823·s +0.038 (Achsenabschnitt ± 0.014); durch 0: Steigung 0.894 ⇒ a₀ = 1.377·10⁻¹⁰; Krümmung (quadratisch) -0.108
+     Form Bose (Regel) : χ² =    171.0 für 15 Bins
+     Form einfach      : χ² =     62.0 für 15 Bins
+     Form Standard     : χ² =   3285.5 für 15 Bins
+  Zusatzbeschleunigung (g − g_N)/a₀, Median je Bin: 0.08:0.256  0.13:0.298  0.20:0.381  0.32:0.455  0.50:0.496  0.79:0.635  1.26:0.676  2.00:0.731  3.16:0.773  5.01:0.508  7.94:0.550  12.59:-0.044  19.95:0.896
+  Maximum (Parabel um den größten Bin): bei g_N = 11.95·a₀, Höhe -0.054·a₀   (Regel: 2,54·a₀, 0,648·a₀)

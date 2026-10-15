@@ -1,0 +1,155 @@
+
+====================================================================================================
+Teil 1  Größen des Trichters in Faltungs- und EM-Längen
+====================================================================================================
+α_G = 3Δs_p/λ̄_p = 5.906149e-39     α = r_e/λ̄_e = 0.0072973526
+Carter-Verhältnis 𝒞 = α_G/(α¹²(m_e/m_p)⁴) = 2.9441
+Längenform 3Δs_p·λ̄_e¹⁶/(r_e¹²·λ̄_p⁵) = 2.9441
+Vierte Wurzel: (3Δs_p/λ̄_p)^(1/4) = 2.77221e-10   r_e³·λ̄_p/λ̄_e⁴ = 2.11635e-10   Verhältnis 1.3099 = 𝒞^(1/4)
+
+Sternmasse M_* = m_Pl³/m_p² = 3.6850e+30 kg = 1.8532 M☉;  Δs_* = 912.2 m;  3Δs_*/λ̄_p = 1.3012e+19 = α_G^(-1/2) = 1.3012e+19
+Teilchenzahl N_* = M_*/m_p = Δs_*/Δs_p = 2.2031e+57 = α_G^(-3/2) = 2.2031e+57
+Eddington-Leuchtkraft L_Edd = 4πcGMm_p/σ_T = (9/2)·m_p c³·Δs/r_e²:  Sonne 1.2571e+31 W  |  1.2571e+31 W   (L☉/L_Edd = 3.045e-05)
+Ionisationsskala α²m_ec² = ħc·r_e²/λ̄_e³: 27.2114 eV | 27.2114 eV;  Bohr-Radius a_B = λ̄_e²/r_e = 5.2918e-11 m
+Gamow-Energie p+p: E_G = π²α²m_pc² = π²·ħc·r_e²/(λ̄_e²λ̄_p) = 493.13 keV | 493.13 keV
+Faltungsdifferential an der Sonnenoberfläche ε = 3Δs/R = 2.1226e-06  (Rotverschiebung cε = 636 m/s)
+
+====================================================================================================
+Teil 2  Die Kette als Monom-Rechnung (natürliche Einheiten ħ = c = k = 1)
+====================================================================================================
+T_eff⁴ = 0.72566·α^2·m_e^2·m_p^3·m_Pl^-1·μ_M^1·f_nuc^2·θ^-2·κ̄/κ_T^-1·μ_mol^4·C_E^-2
+Bedingung T_eff = f_s α² m_e  =>  α_G = 1.899·α^12·m_e^4·m_p^-4·μ_M^-2·f_nuc^-4·f_s^8·θ^4·κ̄/κ_T^2·μ_mol^-8·C_E^4
+   Vorfaktor = (2π³/45)² = 1.89904  (Rechnung: 1.89904)
+   -> Exponent von α: 12,  von m_e: 4,  von m_p: -4
+
+Herkunft der Exponenten (Beitrag jedes Kettenglieds zum Exponenten in α_G):
+   Glied                                              α    m_e    m_p    μ_M
+   Photosphäre  (kT_eff = f_s α² m_e)⁻⁴              16      8      0      0
+   Zündung      (kT_c = f α² m_p)² aus R⁻²           -8      0     -4      0
+   Thomson      σ_T⁻¹ = (3/8π) m_e²/α²                4     -4      0      0
+   Gravitation  (G M m_p)⁻¹ θ⁻², M = μ_M M_*          0      0     -2      2
+   Strahlungsdruck 1-β                                0      0      0     -4
+   Opazität     κ_T/κ̄                                0      0      0      0
+   Geometrie    4π/(4π σ_SB)                          0      0      0      0
+   α_G = m_p²/m_Pl² (m_p²)                            0      0      2      0
+   Summe                                             12      4     -4     -2
+   Faktor 2 = 2/|v_mPl|: α_G tritt als m_p/m_Pl = α_G^(1/2) auf (G M_* m_p = m_Pl/m_p).
+   Massenabhängigkeit: T_eff⁴ ∝ μ_M^1  ->  M_div/M_* ∝ 𝒞^(-1/2)
+
+Variante Kramers-Opazität (frei-frei, Rosseland): κ̄/κ_T = C_K·α·n·λ̄_e³·(m_e/kT_c)^(7/2), n = D·M/(m_p R³)
+   κ̄/κ_T = 1·m_e^0.5·m_p^-0.5·μ_M^-2·f_nuc^-0.5·θ^-3·C_K·D^1   (α kürzt sich heraus)
+   α_G = 1.899·α^12·m_e^5·m_p^-5·μ_M^-6·f_nuc^-5·f_s^8·θ^-2·μ_mol^-8·C_E^4·C_K·D^2
+   -> α-Exponent 12, m_e-Exponent 5, m_p-Exponent -5;  T_eff⁴ ∝ μ_M^3  ->  M_div ∝ 𝒞'^(-1/6)
+   α¹²(m_e/m_p)⁵ = 1.0925e-42;  α_G/(α¹²(m_e/m_p)⁵) = 5405.9
+
+====================================================================================================
+Teil 3  Einfachste Form: optische Tiefe des Trichters = (T_c/T_ion)⁴
+====================================================================================================
+Diffusionsrate der Strahlung Γ_diff = c/(τ R), τ = N σ_T/R²  (transversal);
+Rate, mit der eine Oberfläche bei T_ion denselben Vorrat aT_c⁴R³ leert: Γ_surf = (c/R)(T_ion/T_c)⁴.
+   τ = 8.3776·α^6·m_e^-2·m_p^1·m_Pl^1·μ_M^-1·f_nuc^2·θ^-2
+   Γ_diff = Γ_surf  ⟺  τ = (T_c/T_ion)⁴  ⟺  α_G = 70.184·α^12·m_e^4·m_p^-4·μ_M^-2·f_nuc^-4·f_s^8·θ^-4
+   Sonne: τ_T = 3Nσ_T/(4πR²) = 3.901e+10;  (T_c/T_eff)⁴ = 5.474e+13;  Verhältnis 1403 (Strukturfaktor: Gradient, Opazität)
+   In Faltungslängen: τ = (Δs/Δs_p)·(8π/3)r_e²/R²;  T_c/T_ion = (f_nuc/f_s)·(λ̄_e/λ̄_p)
+
+====================================================================================================
+Teil 4  Polytrope n = 3 (Eddington-Standardmodell)
+====================================================================================================
+ξ₁ = 6.89685,  ξ₁²|θ'| = 2.01824,  ρ_c/ρ̄ = 54.182,  kT_c = 0.8543·μ_mol m_p GM/R
+Eddington-Quartik: M/M_* = C_E·μ_mol⁻²·√(1-β)/β²,  C_E = 4·ξ₁²|θ'|·√45/π^(3/2) = 9.7255  (18.02 M☉/μ_mol²)
+(n = 1,5: ξ₁ = 3.6538, ρ_c/ρ̄ = 5.991)
+   μ_mol = 0.60, M =   1.0 M☉:  1-β = 3.9833e-04   (Näherung (μ_M μ_mol²/C_E)² = 3.9896e-04)
+   μ_mol = 0.60, M =   1.3 M☉:  1-β = 6.7244e-04   (Näherung (μ_M μ_mol²/C_E)² = 6.7425e-04)
+   μ_mol = 0.60, M =  10.0 M☉:  1-β = 3.4648e-02   (Näherung (μ_M μ_mol²/C_E)² = 3.9896e-02)
+   μ_mol = 0.62, M =   1.0 M☉:  1-β = 4.5405e-04   (Näherung (μ_M μ_mol²/C_E)² = 4.5488e-04)
+   μ_mol = 0.62, M =   1.3 M☉:  1-β = 7.6639e-04   (Näherung (μ_M μ_mol²/C_E)² = 7.6875e-04)
+   μ_mol = 0.62, M =  10.0 M☉:  1-β = 3.8825e-02   (Näherung (μ_M μ_mol²/C_E)² = 4.5488e-02)
+   Strahlungsdruck = Gasdruck (β = 1/2) bei M = 133 M☉ = 72 M_* (μ_mol = 0,62)
+
+====================================================================================================
+Teil 5  Vorfaktor 2,94 mit Sonnenzahlen
+====================================================================================================
+f_s = kT_eff/(α²m_ec²) = 0.01828   f_nuc = kT_c/(α²m_pc²) = 0.02708   θ = kT_cR/(GMm_p) = 0.6793
+μ_M = M/M_* = Δs☉/Δs_* = 0.5396   λ = L/L_Edd = 3.0451e-05   ε☉ = 2.1226e-06   (f_nuc/θ)α² = 2.1226e-06
+
+Exakte Identität (nur L = 4πR²σT_eff⁴ umgeschrieben):
+   √𝒞 = (2π³/45)·f_s⁴·(Δs/Δs_*)·[(r_e/λ̄_e)²/(3Δs/R)]²/(L/L_Edd)  ->  𝒞 = 2.9441   (direkt: 2.9441)
+   (T_c kürzt sich: θ/f_nuc = α²/ε. Die Identität gilt für jeden Stern mit seinen eigenen Zahlen.)
+
+Zerlegung mit dem Eddington-Standardmodell (λ = (κ_T/κ̄)(1-β)):
+   Gamow-Logarithmus Λ_G = 3(E_G/4kT_c)^(1/3) = 13.50;  f_nuc = π²/(4(Λ_G/3)³) = 0.02708
+   f_s als Logarithmus: kT_eff = (Ry)/Λ_s mit Λ_s = 1/(2 f_s) = 27.4
+   μ_mol = 0.60: 1-β = 3.9833e-04,  erforderliches κ̄/κ_T = (1-β)/λ = 13.1  ->  κ̄ = 5.20 cm²/g  (κ_T = σ_T/m_p = 0.398 cm²/g)
+      Gruppen: A=2π³/45=1.378  B=C_E²=94.6  C=κ̄/κ_T=13.1  D=θ²/μ_mol⁴=3.561  E=f_s⁴/f_nuc²=1.5225e-04  F=1/μ_M=1.853
+      A·B·C·D·E·F = 1.7131;  mal (Näherung/exaktes 1-β) = 1.0016: 1.7158 = √𝒞 = 1.7158  (Kontrolle 1.7158)
+   μ_mol = 0.62: 1-β = 4.5405e-04,  erforderliches κ̄/κ_T = (1-β)/λ = 14.9  ->  κ̄ = 5.93 cm²/g  (κ_T = σ_T/m_p = 0.398 cm²/g)
+      Gruppen: A=2π³/45=1.378  B=C_E²=94.6  C=κ̄/κ_T=14.9  D=θ²/μ_mol⁴=3.123  E=f_s⁴/f_nuc²=1.5225e-04  F=1/μ_M=1.853
+      A·B·C·D·E·F = 1.7127;  mal (Näherung/exaktes 1-β) = 1.0018: 1.7158 = √𝒞 = 1.7158  (Kontrolle 1.7158)
+   Vergleich: Kramers frei-frei (reiner Wasserstoff, Rosseland) im Sonnenzentrum 0.63 cm²/g;
+   OPAL-Werte der Sonne: Zentrum rund 1,2 cm²/g, Unterkante der Konvektionszone rund 20 cm²/g.
+   Kompensation: A·B·D·F = 8.051e+02 (groß) gegen E = 1.523e-04 (Logarithmen)
+
+Empfindlichkeit:
+   𝒞 ∝ f_s⁸: Faktor 2,94 in 𝒞 = Faktor 1.1445 in T_crit
+   M_div ∝ 𝒞^(-1/2) (Thomson): Faktor 1.716;   M_div ∝ 𝒞'^(-1/6) (Kramers): Faktor 1.197
+   Reine Skala (alle Strukturzahlen = 1): T_eff(M_*) = [(45/2π³)·α²m_p³m_e²/m_Pl]^(1/4) = 28.7 eV = 1.056 α²m_ec²
+
+====================================================================================================
+Teil 6  Grenzmasse, Hayashi-Grenze, Massenfenster
+====================================================================================================
+Grenzmasse aus Homologie ab der Sonne (Strukturzahlen fest): T_eff ∝ M^(1/4) (Thomson), M^(3/4) (Kramers)
+   T_crit = 6200 K (f_s = 0.0196):  M_div = 1.33 M☉ (Thomson) = 0.72 M_*   |  1.10 M☉ (Kramers) = 0.59 M_*
+   T_crit = 6500 K (f_s = 0.0206):  M_div = 1.61 M☉ (Thomson) = 0.87 M_*   |  1.17 M☉ (Kramers) = 0.63 M_*
+   T_crit = 7000 K (f_s = 0.0222):  M_div = 2.16 M☉ (Thomson) = 1.17 M_*   |  1.29 M☉ (Kramers) = 0.70 M_*
+   Beobachtet: Hüllenkonvektion verschwindet oberhalb rund 1,2–1,4 M☉ (T_eff ≈ 6200–7000 K) -> M_div ≈ 0,7 M_*
+
+Hayashi-Grenze (voll konvektiv, n = 1,5; Photosphäre P = (2/3)g/κ, κ ∝ ρ^a T^b):
+   a = 0.5, b = 9.0:  T_eff ∝ M^0.13725 · L^0.00980   (7/51 = 0,13725; 1/102 = 0,00980)
+   H⁻-Bindung 0,754 eV = 0.0277·α²m_ec²;  Hayashi-T_eff 3000–4500 K -> f = 0.0095–0.0143
+
+Massenfenster der Sterne in Einheiten M_*:
+   untere Grenze (Entartung vor Zündung), Skala (f_nuc α² m_p/m_e)^(3/4) M_* = 0.0117 M_* = 0.022 M☉;  beobachtet 0,075 M☉ = 0.040 M_*
+   obere Grenze (β = 1/2): 72 M_*;  beobachtet rund 150 M☉ = 81 M_*
+   Schwache Form (M_div liegt im Fenster), Thomson-Skalierung: 2.2e-04 < 𝒞 < 8.8e+02  (Breite 6.6 Dekaden in α_G)
+
+====================================================================================================
+Teil 7  Wasserstoff-Ionisation und adiabatischer Gradient
+====================================================================================================
+n_H = 1e+23 m⁻³ (ρ ≈ 1.7e-07 g/cm³, Photosphärendichte):
+   T =   5000 K  (f = 0.0158):  x = 1.284e-05   ∇_ad = 0.399
+   T =   6500 K  (f = 0.0206):  x = 5.976e-04   ∇_ad = 0.371
+   T =   8000 K  (f = 0.0253):  x = 6.787e-03   ∇_ad = 0.258
+   T =  10000 K  (f = 0.0317):  x = 5.628e-02   ∇_ad = 0.131
+   T =  12000 K  (f = 0.0380):  x = 2.188e-01   ∇_ad = 0.100
+   T =  14000 K  (f = 0.0443):  x = 5.020e-01   ∇_ad = 0.104
+   T =  20000 K  (f = 0.0633):  x = 9.635e-01   ∇_ad = 0.269
+   Halbe Ionisation bei T = 13987 K, kT = Ry/11.3
+   ∇_rad = (λ/4)(κ/κ_T)(P_gas/P_rad): Faltung (λ, P_gas/P_rad ∝ (Δs_*/Δs)²) und EM-Opazität;
+   Konvektion setzt ein bei ∇_rad > ∇_ad, d. h. die Auftriebsfrequenz N² ∝ (∇_ad − ∇) geht durch null.
+
+====================================================================================================
+Teil 8  Torus-Dynamik: Faltungsrate gegen EM-Raten des Wasserstoffs
+====================================================================================================
+Γ_G = α_G ω_p = 8.4191e-15 1/s;  ω_p = 1.4255e+24;  ω_e = 7.7634e+20;  ω_a = α²ω_e = 4.1341e+16 1/s
+Ratenform der Carter-Beziehung: Γ_G·ω_p³ = 𝒞·(α³ω_e)⁴:  2.4387e+58 = 2.9441 × 8.2833e+57
+   (α_G^(1/4) ω_p = 3.9517e+14 1/s,  α³ω_e = α·ω_a = 3.0168e+14 1/s)
+
+Einrasten dΔθ/dt = Δω − K sin Δθ für ein einzelnes Atom, K = Γ_G, Δω ~ ω_a:  K/Δω = 2.036e-31
+
+Raten des Wasserstoffs als α^n (m_e/m_p)^k ω_e  (Carter als Γ_G = Γ_X verlangt n = 12, k = 3):
+   Umlauf (Rydberg)  α²ω_e/2                        n =  2, k = 0:  2.0671e+16 1/s   Γ_G/Γ = 4.073e-31
+   Feinstruktur 2p   α⁴ω_e/32                       n =  4, k = 0:  6.8796e+10 1/s   Γ_G/Γ = 1.224e-25
+   Lyman-α-Zerfall   (2/3)⁸α⁵ω_e                    n =  5, k = 0:  6.2683e+08 1/s   Γ_G/Γ = 1.343e-23
+   2s→1s, zwei Photonen (8,229 1/s)                 n =  8, k = 0:  8.2290e+00 1/s   Γ_G/Γ = 1.023e-15
+   Hyperfein 21 cm   (4/3)g_p α⁴(m_e/m_p)ω_e        n =  4, k = 1:  8.9148e+09 1/s   Γ_G/Γ = 9.444e-25
+   21-cm-Zerfall     (64/81)g_p³α¹³(m_e/m_p)³ω_e    n = 13, k = 3:  2.8689e-15 1/s   Γ_G/Γ = 2.935e+00
+   benötigt: α¹²(m_e/m_p)³ω_e = 2.8596e-15 1/s (mit 𝒞: 8.4191e-15)
+
+21-cm-Linie: A₁₀ (SI, gemessenes ν) = 2.8689e-15 1/s;  Monomform = 2.8735e-15 1/s
+   Γ_G/A₁₀ = 2.9346;  Zerlegung Γ_G/A₁₀ = 𝒞·81/(64 g_p³ α) = 2.9300
+   (64/81)·g_p³·α = 1.00483: g_p³ (QCD) liegt zufällig bei 81/(64α); Exponent 13 statt 12.
+
+Kollektiv: α_G tritt nur über G M m_p = μ_M·α_G^(-1/2)·ħc auf (N_* = α_G^(-3/2)).
+   N_*·Γ_G = α_G^(-1/2)ω_p = 1.855e+43 1/s  (kein Zyklus, reine Buchhaltung)
+   Sonne: dynamische Frequenz √(GM/R³) = 6.278e-04 1/s
+   Thomson-Diffusionszeit τR/c = 2.87e+03 a  (Rate 1.105e-11 1/s)

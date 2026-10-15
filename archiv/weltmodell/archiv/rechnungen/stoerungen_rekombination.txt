@@ -1,0 +1,109 @@
+====================================================================================================
+STÖRUNGEN BEI DER REKOMBINATION: wirkt die örtliche Regel auf lineare Störungen?
+====================================================================================================
+a₀ = 1.10e-10 (Modell), Literatur 1.20e-10;  a₀(z)/a₀ = 1/(1 + Ω_r(1+z)/Ω_m):
+   z =   1090:  a₀(z)/a₀ = 0.7586,  H = 5.059e-14 s⁻¹,  3Hc = 4.550e-05 m/s²  (Blick G)
+   z =    100:  a₀(z)/a₀ = 0.9714,  H = 1.259e-15 s⁻¹,  3Hc = 1.133e-06 m/s²  (Blick G)
+   z =     10:  a₀(z)/a₀ = 0.9968,  H = 4.472e-17 s⁻¹,  3Hc = 4.022e-08 m/s²  (Blick G)
+   z =      0:  a₀(z)/a₀ = 0.9997,  H = 2.184e-18 s⁻¹,  3Hc = 1.964e-09 m/s²  (Blick G)
+
+1a  Φ/c² = 10⁻⁵ fest, a_N = k_phys·Φ   (Blick L; a₀(z) Blick I)
+    Spalten: a_N/a₀(z) mit k = 1/λ (Lesart a_N ≈ Φ/λ_phys) | mit k = 2π/λ | ν(k=1/λ)
+   λ [Mpc] | z = 1090                      | z = 100                       | z = 10                        | z = 0                         
+         1  |       381  2.39e+03 ν= 1.000 |      27.5       173 ν= 1.005 |      2.92      18.4 ν= 1.221 |     0.265      1.66 ν= 2.486 
+         3  |       127       798 ν= 1.000 |      9.18      57.7 ν= 1.051 |     0.974      6.12 ν= 1.594 |    0.0883     0.555 ν= 3.890 
+        10  |      38.1       239 ν= 1.002 |      2.75      17.3 ν= 1.235 |     0.292      1.84 ν= 2.395 |    0.0265     0.166 ν= 6.658 
+        30  |      12.7      79.8 ν= 1.029 |     0.918      5.77 ν= 1.623 |    0.0974     0.612 ν= 3.730 |   0.00883    0.0555 ν=11.150 
+       100  |      3.81      23.9 ν= 1.166 |     0.275      1.73 ν= 2.449 |    0.0292     0.184 ν= 6.364 |   0.00265    0.0166 ν=19.935 
+       147  |      2.59      16.3 ν= 1.250 |     0.187      1.18 ν= 2.847 |    0.0199     0.125 ν= 7.605 |    0.0018    0.0113 ν=24.062 
+       300  |      1.27      7.98 ν= 1.480 |    0.0918     0.577 ν= 3.826 |   0.00974    0.0612 ν=10.641 |  0.000883   0.00555 ν=34.157 
+       500  |     0.762      4.79 ν= 1.718 |    0.0551     0.346 ν= 4.781 |   0.00584    0.0367 ν=13.587 |   0.00053   0.00333 ν=43.950 
+   Nachrechnung 147 Mpc, z = 1090: a_N = Φ/λ_phys = 2.1617e-10 m/s²;  /(0,76·1,2·10⁻¹⁰) = 2.375;  /(0,76·1,1·10⁻¹⁰) = 2.590;  mit 2π/λ: 16.28
+
+1b  Gemessenes Spektrum (CAMB): Δ_Φ(k) pro ln k, a_N = k_phys·Δ_Φ·c²   (Blick L, gelesen aus dem Feld des Ganzen G)
+   λ = 2π/k [Mpc] | z=1090  Δ_Φ   a_N/a₀(z) | z=100   Δ_Φ   a_N/a₀(z) | z=10    Δ_Φ   a_N/a₀(z) | z=0     Δ_Φ   a_N/a₀(z)
+              1   | 3.26e-09     0.781   | 2.62e-09    0.0453   | 2.56e-09    0.0047   | 2.00e-09  0.000333   
+              3   | 2.30e-08      1.83   | 1.85e-08     0.106   | 1.80e-08     0.011   | 1.41e-08  0.000783   
+             10   | 1.77e-07      4.24   | 1.43e-07     0.247   | 1.39e-07    0.0256   | 1.09e-07   0.00182   
+             30   | 9.87e-07      7.87   | 7.97e-07     0.459   | 7.79e-07    0.0477   | 6.09e-07   0.00338   
+            100   | 5.16e-06      12.3   | 3.98e-06     0.689   | 3.90e-06    0.0715   | 3.05e-06   0.00507   
+            147   | 7.11e-06      11.6   | 6.23e-06     0.734   | 6.10e-06    0.0762   | 4.77e-06   0.00541   
+            300   | 1.66e-05      13.2   | 1.21e-05     0.695   | 1.18e-05    0.0722   | 9.25e-06   0.00513   
+            500   | 2.35e-05      11.2   | 1.75e-05     0.606   | 1.72e-05    0.0631   | 1.35e-05   0.00448   
+   Effektivwert des Gradienten über alle k (bis 100/Mpc), √∫k_phys²Δ_Φ² dln k:
+      z =   1090:  a_N,rms = 1.870e-09 m/s² = 22.4·a₀(z);  Maximum pro ln k bei λ = 293 Mpc
+      z =    100:  a_N,rms = 1.377e-10 m/s² = 1.29·a₀(z);  Maximum pro ln k bei λ = 131 Mpc
+      z =     10:  a_N,rms = 1.467e-11 m/s² = 0.134·a₀(z);  Maximum pro ln k bei λ = 131 Mpc
+      z =      0:  a_N,rms = 1.045e-12 m/s² = 0.0095·a₀(z);  Maximum pro ln k bei λ = 131 Mpc
+   Nachrechnung: Δ_Φ(k = 2π/147 Mpc, z = 1090) = 7.11e-06; a_N = k·(1+z)·Δ_Φ·c²/Mpc = 9.660e-10 m/s²
+
+2  Schalter der Regel. w = θ̃²/(θ̃² + θ_c²), θ_c = a₀(z)/c (I), θ = Ausdehnungsrate des Bereichs (G am Ort L)
+   Lineare Störung: θ_lok = 3H − δ̇ = 3H(1 − f·δ/3), f = d ln D/d ln a; Γ = a_N/c (L); ρ̄/ρ_J = 1/(3δ) (ebene Welle, ρ_J = 3√(3/2)|E^TF|/4πG)
+   z =   1090:  3H·τ_D = 5.453e+05,  1 − w(3H) = 3.36e-12,  f = 0.947
+        λ =   10 Mpc: δ = 2.59e-03, θ_lok/3H = 0.999184, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 7.78e-06,  ρ̄/ρ_J = 1.29e+02,  ℓ/R = 5.05
+        λ =  147 Mpc: δ = 4.86e-04, θ_lok/3H = 0.999847, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 2.12e-05,  ρ̄/ρ_J = 6.86e+02,  ℓ/R = 8.82
+        λ =  500 Mpc: δ = 9.56e-05, θ_lok/3H = 0.999970, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 2.06e-05,  ρ̄/ρ_J = 3.49e+03,  ℓ/R = 15.16
+        Effektivwert: Γ/3H = 4.11e-05
+   z =    100:  3H·τ_D = 1.060e+04,  1 − w(3H) = 8.90e-09,  f = 0.982
+        λ =   10 Mpc: δ = 2.33e-02, θ_lok/3H = 0.992365, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 2.33e-05,  ρ̄/ρ_J = 1.43e+01,  ℓ/R = 2.43
+        λ =  147 Mpc: δ = 4.72e-03, θ_lok/3H = 0.998456, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 6.92e-05,  ρ̄/ρ_J = 7.07e+01,  ℓ/R = 4.13
+        λ =  500 Mpc: δ = 1.14e-03, θ_lok/3H = 0.999625, 1 − w(θ_lok) = 0.00e+00,  Γ/3H = 5.72e-05,  ρ̄/ρ_J = 2.91e+02,  ℓ/R = 6.63
+        Effektivwert: Γ/3H = 1.22e-04
+   z =     10:  3H·τ_D = 3.668e+02,  1 − w(3H) = 7.43e-06,  f = 0.995
+        λ =   10 Mpc: δ = 2.10e-01, θ_lok/3H = 0.930467, 1 − w(θ_lok) = 9.48e-09,  Γ/3H = 6.98e-05,  ρ̄/ρ_J = 1.59e+00,  ℓ/R = 1.17
+        λ =  147 Mpc: δ = 4.24e-02, θ_lok/3H = 0.985928, 1 − w(θ_lok) = 5.51e-09,  Γ/3H = 2.08e-04,  ρ̄/ρ_J = 7.85e+00,  ℓ/R = 1.99
+        λ =  500 Mpc: δ = 1.03e-02, θ_lok/3H = 0.996575, 1 − w(θ_lok) = 4.97e-09,  Γ/3H = 1.72e-04,  ρ̄/ρ_J = 3.23e+01,  ℓ/R = 3.18
+        Effektivwert: Γ/3H = 3.65e-04
+   z =      0:  3H·τ_D = 1.786e+01,  1 − w(3H) = 3.12e-03,  f = 0.526
+        λ =   10 Mpc: δ = 1.80e+00, θ_lok/3H = 0.683519, 1 − w(θ_lok) = 3.04e-02,  Γ/3H = 1.02e-04,  ρ̄/ρ_J = 1.85e-01,  ℓ/R = 0.57
+        λ =  147 Mpc: δ = 3.65e-01, θ_lok/3H = 0.935892, 1 − w(θ_lok) = 1.68e-02,  Γ/3H = 3.03e-04,  ρ̄/ρ_J = 9.12e-01,  ℓ/R = 0.97
+        λ =  500 Mpc: δ = 8.91e-02, θ_lok/3H = 0.984366, 1 − w(θ_lok) = 1.51e-02,  Γ/3H = 2.51e-04,  ρ̄/ρ_J = 3.74e+00,  ℓ/R = 1.55
+        Effektivwert: Γ/3H = 5.32e-04
+   Zum Vergleich gebundene Galaxie (Regel wirkt), a_N = a₀ bei r*: Γ/3H₀ = 0.056 < 1, θ_lok ≤ 0 ⇒ w = 0.
+   ⇒ Γ/3H ist nicht der Schalter (in Galaxien ebenfalls < 1); a_N/a₀ auch nicht (heute ≪ 1 und trotzdem Staub);
+     entscheidend ist θ_lok gegen θ_c: Die Regel greift erst, wenn der Bereich nicht mehr mitatmet (θ̃ ≲ θ_c).
+   Umrechnung: Γ/θ = (a_N/a₀)·(θ_c/θ) = s²·√((1 − w)/w).
+   ρ̄/ρ_J = 1/(3δ) ≫ 1 und Glättungslänge ℓ/R = (ρ̄/ρ_J)^{1/3} > 1: formal läge die Störung ganz in ihrer eigenen
+   Newton-Zone (Einzeltrichter); der kosmologische Grenzfall der Körperdefinition ist aber offen, entscheidend bleibt w.
+   (z = 0, λ = 10 Mpc: δ > 1, nichtlinear, die linearen Werte gelten dort nicht.)
+
+3  Gedachte Gegenprobe: ν(a_N) bei z = 1090 wirksam (Spektrum-Niveau, k = 2π/λ), Skalen der Peaks
+   Abstand zur letzten Streufläche (mitbewegt) 13893 Mpc; ℓ ≈ k·d
+   ℓ =    30: k = 0.0022/Mpc, λ =   2910 Mpc, a_N/a₀(z) =  2.455, ν = 1.264, ΔΦ/Φ = +26.4%
+   ℓ =   220: k = 0.0158/Mpc, λ =    397 Mpc, a_N/a₀(z) = 12.510, ν = 1.030, ΔΦ/Φ = +3.0%
+   ℓ =   540: k = 0.0389/Mpc, λ =    162 Mpc, a_N/a₀(z) = 11.612, ν = 1.034, ΔΦ/Φ = +3.4%
+   ℓ =   810: k = 0.0583/Mpc, λ =    108 Mpc, a_N/a₀(z) = 12.357, ν = 1.031, ΔΦ/Φ = +3.1%
+   ℓ =  1130: k = 0.0813/Mpc, λ =     77 Mpc, a_N/a₀(z) = 10.885, ν = 1.038, ΔΦ/Φ = +3.8%
+   ℓ =  1450: k = 0.1044/Mpc, λ =     60 Mpc, a_N/a₀(z) = 10.662, ν = 1.040, ΔΦ/Φ = +4.0%
+   Planck [G]: Peakhöhen auf ~1 %, 100θ* = 1,04109 ± 0,00030, r_d = 147,09 ± 0,26 Mpc.
+   Abschätzung: +3–4 % im Potential auf den Peaks (Antrieb, C_ℓ etwa doppelt: 6–8 %) und +26 % bei ℓ ≈ 30 (Sachs-Wolfe,
+   C_ℓ ~ +50 %) lägen weit über der Planck-Genauigkeit; r_d (Schallgeschwindigkeit, Hintergrund) bliebe, die BAO-Amplitude nicht.
+
+4  Einsatz: Ein Bereich verlässt das Atmen am Umkehrpunkt (δ_lin = 1,062); dort fällt w von 0,9 auf 0,1.
+   σ₈ (CAMB, A_s [G]) = 0.811
+   R_L [Mpc]   M [M☉]     σ(R,0)   z des Umkehrpunkts für ν_pk = 1 | 2 | 3
+        0.1    1.66e+08    5.6670     5.80  |  12.65  |  19.52 
+        0.3    4.47e+09    4.2357     4.07  |   9.19  |  14.31 
+        1.0    1.66e+11    2.8497     2.38  |   5.84  |   9.28 
+        3.0    4.47e+12    1.7923     1.06  |   3.28  |   5.45 
+       10.0    1.66e+14    0.9107     nie   |   1.10  |   2.24 
+       30.0    4.47e+15    0.3907     nie   |   nie   |   0.19 
+       73.5    6.57e+16    0.1571     nie   |   nie   |   nie  
+      147.0    5.26e+17    0.0674     nie   |   nie   |   nie  
+   Übergangsbreite (w 0,9 → 0,1) für eine Kugel, die bei z_c kollabiert (Zykloide, θ = 3Ṙ/R, t_c = Alter bei z_c):
+      z_c =  30.0 (Umkehr z = 47.97):  Breite     0.02 Mio. Jahre
+      z_c =  20.0 (Umkehr z = 32.23):  Breite     0.06 Mio. Jahre
+      z_c =  10.0 (Umkehr z = 16.44):  Breite     0.46 Mio. Jahre
+      z_c =   5.0 (Umkehr z =  8.52):  Breite     2.85 Mio. Jahre
+      z_c =   3.4 (Umkehr z =  5.99):  Breite     7.21 Mio. Jahre
+      z_c =   2.0 (Umkehr z =  3.79):  Breite    22.35 Mio. Jahre
+      z_c =   1.0 (Umkehr z =  2.24):  Breite    71.32 Mio. Jahre
+      z_c =   0.5 (Umkehr z =  1.49):  Breite   153.73 Mio. Jahre
+   (Zykloide ohne Rückstellung im Inneren; bei z_c ≤ 1 überschätzt sie die Breite leicht.)
+
+5  Von Hand (unabhängig vom Code oben):
+   a_N(147 Mpc, z = 1090) = 10⁻⁵·(2,998·10⁸)²/(147·3,0857·10²² m/1091) = 8,988·10¹¹/4,158·10²¹ = 2,162·10⁻¹⁰ m/s²;
+     /(0,759·1,2·10⁻¹⁰ = 9,11·10⁻¹¹) = 2,37;  /(0,759·1,1·10⁻¹⁰ = 8,35·10⁻¹¹) = 2,59
+   H(1090) = 2,184·10⁻¹⁸·√(0,3134·1,2986·10⁹ + 9,14·10⁻⁵·1,4168·10¹²) = 2,184·10⁻¹⁸·2,316·10⁴ = 5,06·10⁻¹⁴ s⁻¹;
+     θ_c/3H = (8,35·10⁻¹¹/2,998·10⁸)/(1,518·10⁻¹³) = 2,79·10⁻¹⁹/1,518·10⁻¹³ = 1,84·10⁻⁶ ⇒ 1 − w = 3,4·10⁻¹²
+   Γ/3H (147 Mpc, Φ/c² = 10⁻⁵, k = 1/λ) = 2,162·10⁻¹⁰/(2,998·10⁸·1,518·10⁻¹³ = 4,55·10⁻⁵) = 4,8·10⁻⁶

@@ -1,0 +1,91 @@
+A  Mode in ϖ (finite Differenzen, Einheit ϖ_R = 1): u(0) gegen m(k)
+   κϖ_R |  FD offen  | 1/(1−e^{−κϖ_R}) |  FD Λ=20ϖ_R | cosh-Form
+    0.05 |   20.50417 |   20.50417      |   27.14049  |   27.14049
+    0.30 |    3.85830 |    3.85830      |    3.85835  |    3.85835
+    1.00 |    1.58198 |    1.58198      |    1.58198  |    1.58198
+    3.00 |    1.05240 |    1.05240      |    1.05240  |    1.05240
+
+B  Punktmasse: Lesart (O) (harmonische Fortsetzung, ϖ_R = L) gegen örtliche Regel (R)
+   Einheit GM/L². Zusatz Reihe = Quadratur (Probe). Tiefgrenze (O): a → (2/π)·GM/(L·r)
+   r/L  | Zusatz Reihe | Zusatz Quadr. | (a−a_N)·r·L/GM | (2/π)
+     0.3 |     0.140015 |     0.140015  |    0.04200     | 0.63662
+       1 |     0.252286 |     0.252286  |    0.25229     | 0.63662
+       3 |     0.160611 |     0.160611  |    0.48183     | 0.63662
+      10 |    0.0587682 |    0.0587682  |    0.58768     | 0.63662
+      30 |     0.020669 |     0.020669  |    0.62007     | 0.63662
+     100 |    0.0063163 |    0.0063163  |    0.63163     | 0.63662
+   ⇒ Tully-Fisher-Nullpunkt der Lesart (O) mit ϖ_R = r*: v⁴ = (2/π)²GMa₀ = 0,405·GMa₀. Gleicher Nullpunkt verlangt ϖ_R = (2/π)·r*.
+
+   Form bei gleichem Nullpunkt (ϖ_R = (2/π)r*): a_O/a_R, r in r*
+   r/r* =   0.1: a_N/a₀ =      100  a_O/a₀ = 100.1928  a_R/a₀ = 100.0045  Verhältnis 1.0019
+   r/r* =   0.3: a_N/a₀ =    11.11  a_O/a₀ =  11.5936  a_R/a₀ =  11.5222  Verhältnis 1.0062
+   r/r* =   0.5: a_N/a₀ =        4  a_O/a₀ =   4.6050  a_R/a₀ =   4.6261  Verhältnis 0.9954
+   r/r* =     1: a_N/a₀ =        1  a_O/a₀ =   1.5699  a_R/a₀ =   1.5820  Verhältnis 0.9923
+   r/r* =     2: a_N/a₀ =     0.25  a_O/a₀ =   0.6335  a_R/a₀ =   0.6354  Verhältnis 0.9971
+   r/r* =     3: a_N/a₀ =   0.1111  a_O/a₀ =   0.3914  a_R/a₀ =   0.3920  Verhältnis 0.9985
+   r/r* =    10: a_N/a₀ =     0.01  a_O/a₀ =   0.1051  a_R/a₀ =   0.1051  Verhältnis 0.9999
+   r/r* =    30: a_N/a₀ = 0.001111  a_O/a₀ =   0.0339  a_R/a₀ =   0.0339  Verhältnis 1.0000
+
+C0 Ebenen-Multiplikator E(x) = m_eff − 1, x = kϖ_R: Probe x·E → 2/π für x → 0
+   x =  0.001: x·E = 0.63612
+   x =   0.01: x·E = 0.63166
+   x =    0.1: x·E = 0.58948
+   x =      1: x·E = 0.30022
+   x =      3: x·E = 0.06122
+   x =     10: x·E = 0.00011
+   Probe Hankel in der Ebene gegen 3D-Reihe (Punktmasse): r/L, Hankel, Reihe
+     0.3: 0.139999  0.140015
+       1: 0.252271  0.252286
+       3: 0.160609  0.160611
+      10: 0.058768  0.058768
+
+C  Exponentialscheibe (dünn), gleicher Nullpunkt ϖ_R = (2/π)r*: a_O/a_R in der Ebene (a_R = ν(g_R)g_R)
+   R_d = 0.3 r*: 0.25R_d:0.808  0.5R_d:0.858  1R_d:0.890  2R_d:0.905  3.5R_d:0.914  5R_d:0.927  8R_d:0.961  15R_d:0.990
+   R_d = 1.0 r*: 0.25R_d:0.460  0.5R_d:0.552  1R_d:0.653  2R_d:0.758  3.5R_d:0.840  5R_d:0.892  8R_d:0.954  15R_d:0.989
+   R_d = 3.0 r*: 0.25R_d:0.302  0.5R_d:0.412  1R_d:0.551  2R_d:0.703  3.5R_d:0.816  5R_d:0.882  8R_d:0.952  15R_d:0.989
+
+D  SPARC (Υ_d = 0,5, Υ_b = 0,7, a₀ = 1,1·10⁻¹⁰): χ²/N örtliche Regel (R) gegen Lesart (O)
+   (O1: ϖ_R = (2/π)·√(GM_t/a₀), O2: ϖ_R = √(GM_t/a₀); GM_t = V_bar²R am letzten Punkt)
+   Name       N  |  (R)    | (O1)    | (O2)    | a_O1/a_R innen, Mitte, außen
+   NGC3198    43 |    8.04 |   99.85 |  252.98 | 0.747, 0.668, 0.826
+   NGC2403    73 |  118.47 |  803.57 | 1874.33 | 0.518, 0.696, 0.858
+   NGC6503    31 |    4.30 |   59.11 |  367.73 | 0.692, 0.853, 0.903
+   NGC2841    50 |   99.90 |  177.68 |  344.19 | 0.910, 0.823, 0.877
+   NGC7331    36 |   26.71 |    6.86 |   44.24 | 0.951, 0.897, 0.934
+   UGC00128   22 |   95.15 |  756.91 | 1884.07 | 0.318, 0.704, 0.848
+   F568-3     18 |    2.63 |    9.81 |   15.89 | 0.242, 0.503, 0.720
+   NGC3109    25 |    5.93 |   29.24 |   58.80 | 0.199, 0.591, 0.706
+   DDO154     12 |   47.45 |  332.15 | 1383.09 | 0.341, 0.669, 0.782
+   DDO168     10 |   25.52 |   11.95 |   45.36 | 0.403, 0.680, 0.751
+   Summe      320 |   56.87 |  298.70 |  744.26
+
+   Υ_d frei (0,2 … 1,0, Schritt 0,1), je Galaxie bestes χ²/N und Υ_d: (R) gegen (O1)
+   NGC3198   | (R)    8.04 bei Υ_d = 0.5 | (O1)    7.65 bei Υ_d = 0.8
+   NGC2403   | (R)   20.81 bei Υ_d = 0.7 | (O1)   33.28 bei Υ_d = 1.0
+   NGC6503   | (R)    4.30 bei Υ_d = 0.5 | (O1)    4.53 bei Υ_d = 0.7
+   NGC2841   | (R)   12.21 bei Υ_d = 1.0 | (O1)   37.35 bei Υ_d = 1.0
+   NGC7331   | (R)    2.77 bei Υ_d = 0.4 | (O1)    6.86 bei Υ_d = 0.5
+   UGC00128  | (R)   77.95 bei Υ_d = 0.6 | (O1)  177.79 bei Υ_d = 1.0
+   F568-3    | (R)    2.60 bei Υ_d = 0.4 | (O1)    2.73 bei Υ_d = 1.0
+   NGC3109   | (R)    5.93 bei Υ_d = 0.5 | (O1)   18.17 bei Υ_d = 1.0
+   DDO154    | (R)   15.15 bei Υ_d = 0.2 | (O1)  171.54 bei Υ_d = 1.0
+   DDO168    | (R)   18.07 bei Υ_d = 0.2 | (O1)    6.53 bei Υ_d = 1.0
+   Summe     | (R)   15.57               | (O1)   36.10
+
+E  Projektion auf G
+   Λ = c²/(2a₀) = 13.24 Gpc (Länge der inneren Richtung),  τ_D = 2Λ/c = 86.4 Mrd. Jahre,  a₀ = c/τ_D = 1.100e-10
+   Periode 2Λ/c als Temperatur (keine Wärme): T_I = ħc/(2Λ k_B) = 2.803e-30 K
+   Raumzelle L = 27.6 Gpc: kleinste Mode k = 2π/L, kΛ = 3.01, DtN/k = tanh(kΛ) = 0.9952
+   Nullmode k = 0: u'' = 0, u(ϖ_R) = u(0) ⇒ m(0) = 1/(1 − 1): Erneuerung nur lösbar, wenn der Mittelwert keine Quelle ist (ρ − ρ̄).
+   Kac, Kette mit   10 Ebenen: ⟨T_Ort⟩·c/(2Λ) = 1.000000
+   Kac, Kette mit  100 Ebenen: ⟨T_Ort⟩·c/(2Λ) = 1.000000
+   Kac, Kette mit 1000 Ebenen: ⟨T_Ort⟩·c/(2Λ) = 1.000000
+   Abschluss bei Λ in (O), Punktmasse 6·10¹⁰ M☉ (ϖ_R = (2/π)r*): Tiefgrenze bleibt bis r ~ Λ; Faktor m_Λ/m_offen bei k = 1/r:
+     r =   1 Gpc: m_Λ/m_offen = 1.0000
+     r =   3 Gpc: m_Λ/m_offen = 1.0003
+     r =   8 Gpc: m_Λ/m_offen = 1.0758
+
+F  Handprobe (anderer Weg als der Code)
+   Erstes Glied n = 1 bei r = ϖ_R: (2/π)(arctan 1 − ½) = (2/π)(0,785398 − 0,5) = 0.18169
+   dasselbe als Fourier-Integral (2/π)∫x j₁(x)e^{−x}dx = 0.18169
+   Tiefgrenze: (2/π)∫₀^∞ j₁(x)dx = 2/π, da ∫j₁ = [−j₀]₀^∞ = 1  ⇒  a·r·L/GM → 0,63662

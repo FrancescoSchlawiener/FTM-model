@@ -1,0 +1,26 @@
+1) Bauart: nichtholomorpher Teil einer harmonischen Maaß-Form vom Gewicht k
+   F⁻ = Σ_{n≥1} c(n)·Γ(1−k, 4πny)·q^{−n};  auf Re τ = 0:  Σ c(n)·Γ(1−k, 4πny)·e^{2πny}
+   Q̃ auf Re τ = 0 (s = 2πy):  −4Σ Γ(4, 2πny)/n⁴.  Grad des Polynoms in Γ(a,x) = e^{−x}·Poly_{a−1}(x) erzwingt 1 − k = 4, k = −3.
+   Je Exponent e^{−2πny} müsste gelten: c(n)·[(4πny)³ + 3(4πny)² + 6(4πny) + 6] = d(n)·[(2πny)³ + 3(2πny)² + 6(2πny) + 6]
+   y³: c = d/8,  y²: c = d/4,  y¹: c = d/2,  y⁰: c = d  → unvereinbar für d ≠ 0.
+   beste Konstante c für n = 1: 0.2597, verbleibender Fehler 64.6% des Maximums → keine Gleichheit
+   Zweitens: Q̃ hängt nicht von Re τ ab; harmonisch vom Gewicht k ist eine solche Funktion nur als a + b·y^{1−k}.
+   Drittens: Der Schatten eines Gewichts −3 hätte Gewicht 2 − k = 5; auf SL(2,ℤ) gibt es keine Formen ungeraden Gewichts
+   (−I wirkt mit (−1)^k: f = −f). Ergebnis: Q̃ ist nicht der nichtholomorphe Teil einer Mock-Form auf SL(2,ℤ).
+
+2) Was gilt: der ξ-Operator verbindet Q̃ und die Rückkehrsumme
+   ξ_k F = 2i·y^k·conj(∂F/∂τ̄); für F(y) reell: ξ_k F = y^k·F'(y).  Mit k = −3 und s = 2πy:
+   s = 0.3:  y⁻³·dQ̃/dy = 17819.1364378381   4(2π)⁴·n_B(s) = 17819.1364378381
+   s = 1.0:  y⁻³·dQ̃/dy = 3628.1486092226   4(2π)⁴·n_B(s) = 3628.1486092226
+   s = 3.0:  y⁻³·dQ̃/dy = 326.6442988356   4(2π)⁴·n_B(s) = 326.6442988356
+   ξ₋₃ Q̃ = 4(2π)⁴·(ν − 1) auf der imaginären Achse: Strukturwirkung und Rückkehrsumme stehen wie nichtholomorpher Teil
+   und Schatten zueinander; der „Schatten“ Σqⁿ ist aber keine Modulform.
+
+3) Planck-Muster: Zusatzbeschleunigung und Strukturwirkung
+   a − a_N = a_N·n_B(s) = a₀·s²·n_B(s)       Form des Planck-Spektrums in 2 Dimensionen (Dichte s, Energie s)
+   dQ̃/ds = 4s³·n_B(s) = 4s·(a − a_N)/a₀     Form des Planck-Spektrums in 3 Dimensionen
+   Maximum von s^2·n_B (Wien-Stelle, d = 2): s = 1.5936,  a_N/a₀ = s² = 2.540,  Wert s^2n_B = 0.6476
+   Maximum von s^3·n_B (Wien-Stelle, d = 3): s = 2.8214,  a_N/a₀ = s² = 7.961,  Wert s^3n_B = 1.4214
+   → Die Zusatzbeschleunigung a − a_N ist am größten bei a_N = 2.540·a₀ und beträgt dort 0.6476·a₀;
+     Punktmasse bei r = r*/1.5936 = 0.628·r* (Milchstraße 8,35 kpc: 5.24 kpc).
+   Grenzen: a − a_N → a₀·s (s → 0, also √(a_N a₀)) und → a_N·e^{−s} (s → ∞).

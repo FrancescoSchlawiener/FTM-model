@@ -1,0 +1,4 @@
+NUBASE2020 (Begleitauswertung zu AME2020): Halbwertszeiten, Zerfallsarten, Spins aller Kerne.
+F.G. Kondev, M. Wang, W.J. Huang, S. Naimi, G. Audi, Chin. Phys. C45, 030001 (2021).
+Datei nubase_4.mas20.txt, unverändert aus dem PyPI-Paket pynucastro 3.1.0 (pynucastro/nucdata/AtomicMassEvaluation/),
+da die Server der IAEA und des IMP gesperrt waren. SHA-256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859

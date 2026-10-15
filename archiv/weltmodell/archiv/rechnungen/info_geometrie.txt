@@ -1,0 +1,48 @@
+1) Rücklaufzahl n ~ (1-q)q^n, q = e^{-s}: Exponentialfamilie, natürlicher Parameter -s, log-Partition psi(s) = ln nu
+   Fisher g(s) = Var(n) = n_B(1+n_B) = 1/(4 sinh²(s/2)) = -dnu/ds;  Mittel <n> = n_B = nu-1
+   s      g(Formel)   g(Summe über n, Score²)   chi      -dln nu/dln s   H=ln nu+chi  H(Summe)   L(s->inf)=-ln tanh(s/4)  L(Quadratur)
+    0.1   99.916708   99.916708                0.950833   0.950833       3.303002   3.303002   3.689088                 3.689088
+    0.5    3.917698    3.917698                0.770747   0.770747       1.703499   1.703499   2.084631                 2.084631
+    1.0    0.920674    0.920674                0.581977   0.581977       1.040652   1.040652   1.406829                 1.406829
+    2.0    0.181015    0.181015                0.313035   0.313035       0.458449   0.458449   0.771937                 0.771937
+    5.0    0.006830    0.006830                0.033918   0.033918       0.040679   0.040679   0.164540                 0.164540
+
+   Ist chi eine affine Koordinate einer alpha-Verbindung (dann chi' ∝ g^{(1-alpha)/2}, Exponent konstant)?
+   s      dln|chi'|/dln g   (alpha=1: 0, Levi-Civita: 0,5, alpha=-1: 1)
+    0.1     0.0172
+    0.5     0.0954
+    1.0     0.2060
+    2.0     0.4200
+    5.0     0.7554
+   10.0     0.8889
+   -> nicht konstant: chi ist keine Geodäte (kein affiner Parameter) und nicht die Metrik.
+   chi = s·<n> = Produkt der dualen Koordinaten (natürlich × Mittel) = -dln nu/dln s; H = psi + chi (Legendre); dH/ds = -s·g
+   Identitäten: g = nu(nu-1) = chi·nu/s;  ln nu = KL(Newton-Zustand n=0 || Verteilung bei s)
+   Kontrolle s=1: KL(delta_0||p) = -ln p(0) = 0.458675, ln nu = 0.458675
+
+   Zweite Familie: erste Rückkehrzeit t, Dichte f(t) ∝ t^{-3/2}e^{-tau/4t}, gekippt mit e^{-Gamma t}; log-Partition = -s
+   s=0.3: Laplace = 0.740818 (e^-s = 0.740818), Fisher in s = 3.333333 (1/s = 3.333333); Abstand 0->s = 2√s
+   s=1.0: Laplace = 0.367879 (e^-s = 0.367879), Fisher in s = 1.000000 (1/s = 1.000000); Abstand 0->s = 2√s
+   s=3.0: Laplace = 0.049787 (e^-s = 0.049787), Fisher in s = 0.333333 (1/s = 0.333333); Abstand 0->s = 2√s
+   -> auch hier ist chi weder Metrik (1/s) noch Abstand (2√s).
+
+2) Jacobson/Verlinde mit der Periode der inneren Richtung
+   Kac-Periode 2Λ/c = 2.7254e+18 s = tau_D = c/a0 = 2.7254e+18 s = hbar/kT_I = 2.7254e+18 s
+   T_I = hbar a0/(c k) = 2.8026e-30 K;  Gibbons-Hawking hbar H0/(2πk) = 2.6554e-30 K;  Verhältnis 1.0555
+   Verlust Gamma = a_N/c = 2π k T_U(a_N)/hbar (Unruh des ruhenden Beobachters, Fläche des lokalen Rindler-Horizonts)
+   a_N/a0=  0.01: s² = Gamma·tau_D = 0.01,  2π T_U/T_I = 0.01
+   a_N/a0=     1: s² = Gamma·tau_D = 1,  2π T_U/T_I = 1
+   a_N/a0=   100: s² = Gamma·tau_D = 100,  2π T_U/T_I = 100
+   Sattel s = min_t[Gamma t + tau_D/(4t)] (Verlust gegen Pfadentropie der Rückkehr):
+   a_N/a0=0.01: min = 0.100000, √(a_N/a0) = 0.100000
+   a_N/a0=1.0: min = 1.000000, √(a_N/a0) = 1.000000
+   Tiefbereich (Punktmasse 10^11 M☉): v⁴/(G M a0)
+   r=  100 kpc: Regel 1.1180;  Deser-Levin mit T_I (a = √(2·2πa0·a_N)): 12.5664;  Verlinde F=T ΔS/Δx mit √(T_U T_I): 6.2832;  Boltzmann e^(-2πT_U/T_I) ohne Wurzel: v²/(a0 r) = 1.0063
+   r=  300 kpc: Regel 1.0381;  Deser-Levin mit T_I (a = √(2·2πa0·a_N)): 12.5664;  Verlinde F=T ΔS/Δx mit √(T_U T_I): 6.2832;  Boltzmann e^(-2πT_U/T_I) ohne Wurzel: v²/(a0 r) = 1.0007
+   r= 1000 kpc: Regel 1.0113;  Deser-Levin mit T_I (a = √(2·2πa0·a_N)): 12.5664;  Verlinde F=T ΔS/Δx mit √(T_U T_I): 6.2832;  Boltzmann e^(-2πT_U/T_I) ohne Wurzel: v²/(a0 r) = 1.0001
+   Verlinde 2016 [G]: a_M = cH0/6 = 1.091e-10;  Modell cH0/2π = 1.042e-10;  Verhältnis 1.0472
+
+3) Entropie der Engstelle
+   Sonne: r_s/Δs = 6.000000; 36π(Δs/ℓ_P)² = 1.048891e+77; A/4ℓ_P² = 1.048891e+77; 4πα_G = 1.048891e+77; T = 6.1703e-08 K, Hawking 6.1703e-08 K
+   10 M☉: r_s/Δs = 6.000000; 36π(Δs/ℓ_P)² = 1.048891e+79; A/4ℓ_P² = 1.048891e+79; 4πα_G = 1.048891e+79; T = 6.1703e-09 K, Hawking 6.1703e-09 K
+   4·10^6 M☉: r_s/Δs = 6.000000; 36π(Δs/ℓ_P)² = 1.678226e+90; A/4ℓ_P² = 1.678226e+90; 4πα_G = 1.678226e+90; T = 1.5426e-14 K, Hawking 1.5426e-14 K

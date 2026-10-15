@@ -1,0 +1,93 @@
+====================================================================================================
+1  m_p/m_e an CM-Punkten
+====================================================================================================
+1a Was das Modell erzwingt (vor jeder Rechnung festgelegt)
+   Das Modell ordnet einem Körper genau einen Modulparameter zu: den des Bahntorus bzw. der Hülle,
+   τ = Re (Umlaufphase ω_rad/ω_azim oder Windungszahl n) + i·Im, Im τ = ln(r/Δs)/2π (P3) bzw. s/2π (P1).
+   Beide Teile sind Zustandsgrößen (Radius, Bahn, Feld); ein fester CM-Punkt (i, ρ, …) ist keinem Teilchen
+   zugeordnet. 02: Proton aus dem Nome der starken Kopplung, Elektron aus seiner Yukawa-Kopplung — zwei
+   Mechanismen, kein gemeinsamer Torus. Erzwungen sind daher nur die τ, die aus Δs und einer Länge folgen:
+   Proton, Hülle R_p (P3):       τ = 1 + 14.4051i   (|q| = Δs_p/R_p = 4.921e-40)
+   Proton, Quantenlänge λ̄_p:     τ = 14.1844i   (|q| = Δs_p/λ̄_p = α_G/3 = 1.9687e-39)
+   Elektron, Quantenlänge λ̄_e:   τ = 16.5767i   (|q| = Δs_e/λ̄_e = 5.8394e-46)
+   Elektron, Hülle: im Modell keine (Punktteilchen; 2ℓ_P/√α ist Ladungsradius, trägt die Masse nicht).
+   Diese τ liegen tief in der Spitze (Im τ ≈ 14–17), weit von jedem CM-Punkt kleiner Diskriminante.
+   An der Spitze Δ ≈ q, j ≈ 1/q:  Δ(τ_p)/Δ(τ_e) = (Δs_p/λ̄_p)/(Δs_e/λ̄_e) = (m_p/m_e)² = 3.371457e+06  ((m_p/m_e)² = 3.371457e+06)
+   → das erzwungene Verhältnis enthält m_p/m_e als Eingabe (Δs·λ̄ = ℓ_P²/3, Δs/λ̄ ∝ m²): Kreis, keine Bestimmung.
+   Ein CM-Punkt für Proton oder Elektron ist nicht erzwungen; jeder Treffer dort wäre gewählt.
+
+1b Suchraum (look-elsewhere): alle primitiven CM-Punkte mit |D| ≤ 20
+   D =   -3  Form (1, 1, 1)  τ = -0.5000+0.8660i  j = -3.13685e-121+3.3e-122i   |Δ| = 4.805138e-03
+   D =   -4  Form (1, 0, 1)  τ = +0.0000+1.0000i  j = 1728+0.0e+00i   |Δ| = 1.785370e-03
+   D =   -7  Form (1, 1, 2)  τ = -0.5000+1.3229i  j = -3375+1.7e-39i   |Δ| = 2.470349e-04
+   D =   -8  Form (1, 0, 2)  τ = +0.0000+1.4142i  j = 8000+0.0e+00i   |Δ| = 1.378855e-04
+   D =  -11  Form (1, 1, 3)  τ = -0.5000+1.6583i  j = -32768+1.4e-38i   |Δ| = 2.986666e-05
+   D =  -12  Form (1, 0, 3)  τ = +0.0000+1.7321i  j = 54000+0.0e+00i   |Δ| = 1.877007e-05
+   D =  -15  Form (1, 1, 4)  τ = -0.5000+1.9365i  j = -191658+8.0e-38i   |Δ| = 5.198132e-06
+   D =  -15  Form (2, 1, 2)  τ = -0.2500+0.9682i  j = 632.833+2.9e-38i   |Δ| = 2.280226e-03
+   D =  -16  Form (1, 0, 4)  τ = +0.0000+2.0000i  j = 287496+0.0e+00i   |Δ| = 3.487050e-06
+   D =  -19  Form (1, 1, 5)  τ = -0.5000+2.1794i  j = -884736+3.7e-37i   |Δ| = 1.129362e-06
+   D =  -20  Form (1, 0, 5)  τ = +0.0000+2.2361i  j = 1.26454e+06+0.0e+00i   |Δ| = 7.912527e-07
+   D =  -20  Form (2, 2, 3)  τ = -0.5000+1.1180i  j = -538.909+4.1e-40i   |Δ| = 9.087010e-04
+   Punkte: 12, von null verschiedene Grundwerte (|j|, |j−1728|, |Δ|, |E₄|, |E₆|, |E₂*|): 66
+   Probe (h = 1, j muss ganz sein): D-7: -3375.0000, D-8: 8000.0000, D-11: -32768.0000, D-12: 54000.0000, D-16: 287496.0000, D-19: -884736.0000
+   Exponenten e = ±p/q, p ≤ 4, q ∈ {1,2,3,4,6,12}: 26 Werte
+   Ziel m_p/m_e = 1836.15267, Toleranz 10⁻³ (relativ). Kontrolle: 400 Zufallsziele im Faktor 0,67–1,5 um das Ziel.
+   Klasse                         Anzahl  Treffer  erwartet (Zufall)  Anteil Zufallsziele ≥ 1 Treffer
+   K1  x^e                          1716        0               0.05                             0.04
+   K2  x^e1·y^e2                 1450020       32              43.10                             1.00
+   K3  n·x^e (n = 2…12)            18876        0               0.53                             0.41
+   bester K1: |j1728|(D-3,1)^+1.0000 = 1728.0000  (δ = 5.9e-02)
+   bester K2: |j|(D-12,1)^-0.1667 · |j1728|(D-15,2)^+1.3333 = 1836.1504  (δ = 1.3e-06)
+   Suchraum zusammen ≈ 1.47e+06 Ausdrücke; jeder Treffer auf 10⁻³ ist hier Zufall ohne erzwungene Wahl.
+
+====================================================================================================
+2  Q als Verhältnis von Phasenraumvolumina (Punktmasse)
+====================================================================================================
+   Einheiten: GM = 1, r* = 1 (a₀ = GM/r*² = 1). Regel: a(r) = (1/r²)/(1 − e^{−1/r}), Potential Φ mit Φ' = a.
+   Tiefer Ast Φ ≈ v_f² ln r → ∞: unter der Regel ist JEDE Bahn gebunden, einen offenen Kanal gibt es nicht.
+   Endlich wird ein Verhältnis nur mit einem Fenster r < R (Wahl):
+   V_R(R) = Vol{r < R, v²/2 + Φ(r) < Φ(R)} (Regel, bleibt in R),  V_N(R) = dasselbe mit Newton,
+   Q_ph(R) = V_R/V_N − 1 (zusätzlich geschlossen gegen Newton-geschlossen).
+       R/r*      V_R/V_N       Q_ph     Q lokal q/(1−q), q = e^(−r*/R)
+       0.10      1.00001     0.0000                             0.0000
+       0.30      1.01221     0.0122                             0.0370
+       1.00      1.36701     0.3670                             0.5820
+       2.00      2.27240     1.2724                             1.5415
+       3.00      3.42228     2.4223                             2.5277
+       5.00      6.24456     5.2446                             4.5167
+      10.00     15.57704    14.5770                             9.5083
+      30.00     74.41946    73.4195                            29.5028
+     100.00    439.80363   438.8036                            99.5008
+   Q_ph = 5.364 bei R = 5.0765 r*;  lokales Q = 5.364 bei R = r*/(−ln q_kosm) = 5.8501 r*
+   Skalenfreiheit (M und a₀ anders, R/r* fest): 
+   GM = 7.0, a₀ = 3.0: r* = 1.5275, R = 3r*:  V_R/V_N − 1 = 2.422284
+   GM = 0.2, a₀ = 11.0: r* = 0.1348, R = 3r*:  V_R/V_N − 1 = 2.422284
+   → Q_ph hängt nicht von M, a₀, nur von R/r*, einer Wahl; es wächst ohne Grenze (R → ∞: V_N ∝ R^{3/2},
+     V_R ∝ R³(ln R)^{3/2}). Keine ausgezeichnete Zahl. Ebenso andere Fenster (Energieschnitt, Drehimpuls).
+   Symplektische Kapazität: Dimension einer Wirkung (Fläche), nicht eines 6-dim. Volumens; Gromovs Satz ist eine
+   Ungleichung (Kugel nicht in schmaleren Zylinder), keine Verhältniszahl. Ein Kapazitätsverhältnis zweier
+   skalenfreier Gebiete ist wieder eine Funktion von R/r*.
+
+====================================================================================================
+3  Isotropie der Fixpunkte von PSL(2,ℤ)
+====================================================================================================
+   S·i = 0.000000+1.000000j (Fixpunkt), Ordnung von S in PSL = 2
+   ST·ρ = -0.500000+0.866025j = ρ, Ordnung von ST in PSL = 3
+   Stab(i) = ℤ₂, Stab(ρ) = ℤ₃: endliche zyklische Gruppen, 0-dimensional. SU(2), SU(3) sind zusammenhängende
+   Lie-Gruppen der Dimension 3 und 8. Gemeinsam ist nur: ℤ₂ = Zentrum von SU(2), ℤ₃ = Zentrum von SU(3);
+   ℤ₂ und ℤ₃ sind aber auch Untergruppen von U(1), SO(3), jeder Gruppe mit Elementen dieser Ordnung.
+   PSL(2,ℤ) = ℤ₂ * ℤ₃ (freies Produkt), Abelisierung ℤ₆; das Standardmodell hat (SU(3)×SU(2)×U(1))/ℤ₆.
+   Diese ℤ₆ folgt dort aus den Ladungen der Fermionen, nicht aus einer Wirkung; weder Lie-Algebra, Rang,
+   Dimension noch Darstellungen (3, 2, Hyperladung) folgen aus ℤ₂, ℤ₃. Ergebnis: Namensgleichheit der Zentren.
+   Im Modell: −I ∈ SL(2,ℤ) wirkt als z → −z, kehrt beide Windungen um (Vorzeichen der Ladung, Chiralität);
+   Q_el + t/3 ∈ ℤ (02) ist das ℤ₃-Zentrum der Farbe, gegeben, nicht aus Stab(ρ) abgeleitet.
+
+====================================================================================================
+5  Von Hand nachgerechnet
+====================================================================================================
+   Δ(i) = Γ(1/4)^24/(2^24·π^18):  ln = 24·1,288023 − 16,63553 − 20,60514 = −6,32812 → 1,7853·10⁻³
+   Reihe: q = e^{−2π} = 0,0018674; Δ ≈ q(1 − 24q + 252q²) = 0,0018674·0,956061 = 1,7853·10⁻³
+   Code: Δ(i) = 1.785370e-03,  Γ-Formel = 1.785370e-03,  j(i) = 1728.000000, E₆(i) = 0.0e+00
+   V_N(R) = (16π²/3)(2GM)^{3/2}·R^{3/2}·B(3/2, 5/2), B = Γ(1,5)Γ(2,5)/Γ(4) = 0,886227·1,329340/6 = 0,196350 = π/16
+   → V_N = (π³/3)(2GMR)^{3/2}; R = 3: 151.899113, Code (Quadratur) 151.899113

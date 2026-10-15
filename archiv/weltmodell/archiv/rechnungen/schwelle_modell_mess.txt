@@ -1,0 +1,24 @@
+1) Modellwert a0 = cH0/2π und das zum Messwert gehörige H0
+   H0 =  67.4 km/s/Mpc:  a0 = 1.0422e-10 m/s²   Abstand zu 1,2e-10 bei σ_sys = 0,24e-10: 0.66 σ
+   H0 =  70.0 km/s/Mpc:  a0 = 1.0824e-10 m/s²   Abstand zu 1,2e-10 bei σ_sys = 0,24e-10: 0.49 σ
+   H0 =  73.0 km/s/Mpc:  a0 = 1.1288e-10 m/s²   Abstand zu 1,2e-10 bei σ_sys = 0,24e-10: 0.30 σ
+   a0 = 1,2e-10 verlangt H0 = 77.6 km/s/Mpc
+
+2) Stellarer Anteil: Wahres g_bar = f_*·k·g + (1−f_*)·g (Sterne mit Faktor k skaliert, Gas fest).
+   Gesucht k, bei dem die Anpassung mit Υ_ann (k = 1) das Modell-a0 als 1,2e-10 erscheinen lässt.
+   H0 = 67.4: Sternanteil 1.0: a0_fit = 1,2e-10 bei k = 1.090  → Υ_ann = 0,50 entspricht Υ_wahr = 0.545
+   H0 = 67.4: Sternanteil 0.7: a0_fit = 1,2e-10 bei k = 1.129  → Υ_ann = 0,50 entspricht Υ_wahr = 0.565
+   H0 = 67.4: Sternanteil 0.5: a0_fit = 1,2e-10 bei k = 1.180  → Υ_ann = 0,50 entspricht Υ_wahr = 0.590
+   H0 = 70.0: Sternanteil 1.0: a0_fit = 1,2e-10 bei k = 1.066  → Υ_ann = 0,50 entspricht Υ_wahr = 0.533
+   H0 = 70.0: Sternanteil 0.7: a0_fit = 1,2e-10 bei k = 1.094  → Υ_ann = 0,50 entspricht Υ_wahr = 0.547
+   H0 = 70.0: Sternanteil 0.5: a0_fit = 1,2e-10 bei k = 1.131  → Υ_ann = 0,50 entspricht Υ_wahr = 0.566
+
+3) Äußeres Feld g_e: g = ν(√(g_N²+g_e²)/a0)·g_N erzeugt, mit ν(g_N/a0)·g_N angepasst (g_N = 1e-12 … 1e-9)
+   H0 = 67.4: g_e = 0.00 a0 → angepasstes a0 = 1.0422e-10  (1.000 × Modellwert)
+   H0 = 67.4: g_e = 0.01 a0 → angepasstes a0 = 9.8535e-11  (0.945 × Modellwert)
+   H0 = 67.4: g_e = 0.03 a0 → angepasstes a0 = 8.0047e-11  (0.768 × Modellwert)
+   H0 = 67.4: g_e = 0.10 a0 → angepasstes a0 = 4.5551e-11  (0.437 × Modellwert)
+   H0 = 70.0: g_e = 0.00 a0 → angepasstes a0 = 1.0824e-10  (1.000 × Modellwert)
+   H0 = 70.0: g_e = 0.01 a0 → angepasstes a0 = 1.0201e-10  (0.942 × Modellwert)
+   H0 = 70.0: g_e = 0.03 a0 → angepasstes a0 = 8.2322e-11  (0.761 × Modellwert)
+   H0 = 70.0: g_e = 0.10 a0 → angepasstes a0 = 4.6429e-11  (0.429 × Modellwert)

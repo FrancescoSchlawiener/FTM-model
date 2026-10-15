@@ -1,0 +1,60 @@
+
+================================================================================================================
+1  Laufzeit des Übergangs: Kandidaten aus dem Modell
+================================================================================================================
+   Rückkehrgleichung (07): ∂_t u + (Γ + θ)u = D∂_ϖ²u auf der Halbgeraden ϖ ≥ 0, Ort = Rand ϖ = 0 (Raum), Erneuerung
+   u(0) = g_N + u(ϖ_R), Schluss bei Λ. Erstdurchgang über die Strecke x: Lévy √(x²/4πD)·T^{−3/2}e^{−x²/4DT}, Skala x²/D.
+   τ_D = 2Λ/c = 86.36 Gyr, Λ = 13.239 Gpc.
+
+   Λ/ϖ_R je Masse (ϖ_R = r* = √(GM_b/a₀), M_b = M/(1 + Q)):
+     M = 10^8 M☉: ϖ_R =     0.14 kpc, Λ/ϖ_R = 9.38e+07, (Λ/ϖ_R)²τ_D = 7.6e+17 Gyr
+     M = 10^10 M☉: ϖ_R =     1.41 kpc, Λ/ϖ_R = 9.38e+06, (Λ/ϖ_R)²τ_D = 7.6e+15 Gyr
+     M = 10^12 M☉: ϖ_R =    14.11 kpc, Λ/ϖ_R = 9.38e+05, (Λ/ϖ_R)²τ_D = 7.6e+13 Gyr
+     M = 10^14 M☉: ϖ_R =   141.10 kpc, Λ/ϖ_R = 9.38e+04, (Λ/ϖ_R)²τ_D = 7.6e+11 Gyr
+
+   Kandidat  Skala/τ_D     Gipfel [Gyr]   angekommen nach 13,8 Gyr   K̂(0; Γ) für die Regel
+   K0   sofort beim Eintritt in I                                   0           –              1                          1 (keine Regel, q = 1)
+   K1   Erstdurchgang bis ϖ_R = Rückkehr zum Ort (Erneuerung)       1           14.39          0.07691                    e^{−1·s}
+   K2   hin und zurück 0 → ϖ_R → 0                                  4           57.57          0.0004034                  e^{−2·s}
+   K3   Erstdurchgang bis Λ (10¹² M☉)                               8.8e+11     1.267e+13      0                          e^{−9.4e+05·s}
+   K4   Durchquerung, Reflexion bei Λ, zurück zum Ort (10¹² M☉)     3.52e+12    5.069e+13      0                          e^{−1.9e+06·s}
+   Gegenprobe K2 = K1 * K1 (numerische Faltung der Talbot-Dichte) gegen Lévy 4τ_D bei T = 20, 40, 59 Gyr: 7.811e-04/7.811e-04, 2.392e-03/2.392e-03, 2.677e-03/2.677e-03
+
+   Zuordnung aus dem Modell:
+   – Die L_i sind Schleifen im Raum (01: die Rückführung erscheint als Dehnung der Raumschleifen). Der Raum ist der Rand
+     ϖ = 0 (07: Ort als unterste Ebene, G(0) = 1). Solange das Maß bei ϖ > 0 liegt, ist es in I, nicht in G: K0 und K3
+     (Ankunft beim Eintritt in I bzw. bei Λ) läsen eine Lage in I als Ankunft im Ganzen – Beobachterfehler.
+   – Ein Rücklauf ist ein Durchgang über die Tiefe ϖ_R, danach setzt die Erneuerung u(0) = g_N + u(ϖ_R) wieder am Ort ein;
+     'Rückkehr zum Ort' und 'Erstdurchgang bis ϖ_R' sind dasselbe Ereignis. Nur dieser Kern gibt K̂(0; Γ) = e^{−s} = q (07);
+     zwei Wege (K2) gäben e^{−2s}, also die Regel mit a₀/4. Das Maß geht in die Rückkehr über (05), also in diesen Kern: K1.
+   – Jeder stetige Weg von 0 nach Λ kreuzt ϖ_R vorher; an ϖ_R erneuert er sich am Ort. Λ setzt nicht die Laufzeit, sondern
+     die Kac-Zeit ⟨T⟩ = 2Λ/c = τ_D (über ϖ_R² = D·⟨T⟩) und macht den Durchgang vollständig (01: schließt bei Λ;
+     07: Halbgerade bei Λ geschlossen). Reflektierte Wege (K4) wiegen erst ab T ~ (Λ/ϖ_R)²τ_D (de_kanal_atmen: f/Lévy = 1).
+   – Die Kac-Rückkehr einer Irrfahrt mit Schritt h zum Randpunkt hat viele kurze Rückläufe; die Schrittlänge fällt in der
+     Regel heraus (07), gezählt wird der Durchgang bis zur Erneuerungstiefe: wieder K1.
+   ⇒ Erzwungen: K1, Lévy mit Skala τ_D (die bisher verwendete Dichte). Die Laufzeit ist kein freier Hebel.
+
+================================================================================================================
+2  Selbstkonsistent (Bildung, Umkehr und Übergang im eigenen Atmen, wie S2) je Kandidat [Messwerte nur Test, G]
+================================================================================================================
+   K1: 3 Runden (eigen), letzte Änderung max|ΔE/E| = 7.5e-07
+   K2: 2 Runden (eigen), letzte Änderung max|ΔE/E| = 9.9e-06
+   K0: 12 Runden (eigen), letzte Änderung max|ΔE/E| = 1.6e-05
+
+   Kand Ω_X(0) Ω_DE(0)  z=0,5   z=1     z=2      w(0)    w₀      w_a     H/H_Λ z=0    0,5    1      2      3     D_M(1090)  Q oben  fσ₈/Λ z=0   0,3    0,6    1,0   angek./X
+   K1        0.328   0.573   0.327   0.131   0.029   -0.978  -1.020  -0.579     0.941   0.949  0.951  0.976  0.989    1.021      5.13    1.135   1.110  1.102  1.084   0.052
+   K2        0.005   0.250   0.188   0.089   0.028   -1.039  -1.026   0.050     0.751   0.864  0.928  0.976  0.989    1.054      4.56    1.564   1.339  1.207  1.115   0.000
+   K0        1.284   1.528   0.784   0.777   0.735   -0.261  -0.270   0.250     1.357   1.677  1.876  1.868  1.881    0.702     17.81    0.215   0.196  0.196  0.194   0.856
+   K3, K4: bis heute nichts angekommen (erfc(√(10¹²)) = 0): Ω_DE = Ω_s = 0.244, w = −1, H/H_Λ(0) = 0.747.
+   Gemessen [G]: Ω_DE(0) = 0,687; Standardmodell Ω_DE-Anteil 0,394 / 0,215 / 0,068 bei z = 0,5 / 1 / 2.
+   K1 = S2 aus de_rest_anstieg (Ω_X(0) 0,328, z = 1: 0,131) – Gegenprobe der Neuimplementierung.
+
+================================================================================================================
+3  Verlust unterwegs: Γ = a_N/c im gebundenen Bereich (θ̃ = 0)
+================================================================================================================
+   Mit Γ: Dichte f(T)·e^{−ΓT}, gesamt ∫ = K̂(0; Γ) = e^{−s}, s² = Γτ_D = a_N/a₀; der Rest 1 − e^{−s} käme nie an.
+   Γ je Masse und Epoche der Bindung aus a_N = GM_b/r² an der Naht r = R_ta bzw. bei r = R_ta/2 (Baryonen, Newton).
+   a = 0.25: s (Naht / R_ta/2) für M = 10^8, 10^10, 10^12, 10^14: 0.012/0.024,  0.026/0.051,  0.055/0.110,  0.119/0.238
+   a = 0.50: s (Naht / R_ta/2) für M = 10^8, 10^10, 10^12, 10^14: 0.006/0.012,  0.013/0.027,  0.029/0.058,  0.062/0.124
+   a = 1.00: s (Naht / R_ta/2) für M = 10^8, 10^10, 10^12, 10^14: 0.004/0.008,  0.008/0.016,  0.018/0.035,  0.038/0.076
+   Γ-Naht: 3 Runden, max|ΔE/E| = 7.4e-07; auf Dauer ankommender Anteil ∫S·e^{−s}/∫S = 0.931

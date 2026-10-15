@@ -1,0 +1,22 @@
+Probe Punktmasse r = 1: 1.582
+MN (a, b) | R_eq | a_N/a0 Ebene / Achse | T_Achse/T_Ebene längs der Isobare | ν(g)·g-Wirbel: ∮F·dl / ∮|F|dl
+(0.25, 0.05) | 0.3 | 3.928 / 5.322 | 0.958 (größtes/kleinstes 1.044) | Umlaufarbeit +0.0218 bei Newton-Stufe 0.5080: +0.037
+(0.25, 0.05) | 1.0 | 0.879 / 0.916 | 0.988 (größtes/kleinstes 1.012) | Umlaufarbeit +0.0052 bei Newton-Stufe 0.3041: +0.009
+(0.25, 0.05) | 3.0 | 0.109 / 0.110 | 0.998 (größtes/kleinstes 1.002) | Umlaufarbeit +0.0007 bei Newton-Stufe 0.1099: +0.001
+(0.25, 0.15) | 0.3 | 2.400 / 3.200 | 0.946 (größtes/kleinstes 1.057) | Umlaufarbeit +0.0204 bei Newton-Stufe 0.3391: +0.048
+(0.25, 0.15) | 1.0 | 0.800 / 0.848 | 0.983 (größtes/kleinstes 1.018) | Umlaufarbeit +0.0072 bei Newton-Stufe 0.2843: +0.014
+(0.25, 0.15) | 3.0 | 0.108 / 0.109 | 0.997 (größtes/kleinstes 1.003) | Umlaufarbeit +0.0010 bei Newton-Stufe 0.1091: +0.002
+(0.25, 0.25) | 0.3 | 1.513 / 1.944 | 0.941 (größtes/kleinstes 1.062) | Umlaufarbeit +0.0166 bei Newton-Stufe 0.2284: +0.053
+(0.25, 0.25) | 1.0 | 0.716 / 0.766 | 0.979 (größtes/kleinstes 1.022) | Umlaufarbeit +0.0084 bei Newton-Stufe 0.2620: +0.017
+(0.25, 0.25) | 3.0 | 0.107 / 0.108 | 0.996 (größtes/kleinstes 1.004) | Umlaufarbeit +0.0013 bei Newton-Stufe 0.1079: +0.003
+Probe Freeman: v² bei 2,2 R_d (R_d = 1) = 0.38691 (Handwert 0,3864)
+R_d | Abschnitt | 2πGΣ/g_R | Umlaufarbeit / ∫ν(g_R)g_R dR
+0.3 | 0.25–1.0 R_d | 3.61–1.32 | 0.107
+0.3 | 1.0–3.0 R_d | 1.32–0.42 | 0.046
+0.3 | 3.0–6.0 R_d | 0.42–0.08 | 0.009
+1.0 | 0.25–1.0 R_d | 3.61–1.32 | 0.245
+1.0 | 1.0–3.0 R_d | 1.32–0.42 | 0.089
+1.0 | 3.0–6.0 R_d | 0.42–0.08 | 0.012
+3.0 | 0.25–1.0 R_d | 3.61–1.32 | 0.298
+3.0 | 1.0–3.0 R_d | 1.32–0.42 | 0.105
+3.0 | 3.0–6.0 R_d | 0.42–0.08 | 0.014

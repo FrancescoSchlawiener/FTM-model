@@ -1,0 +1,105 @@
+
+==============================================================================================================
+1  Irrfahrt mit Schritt h und Takt h/c: Diffusion, Kac, Wegfall von D
+==============================================================================================================
+   1D, N = 4000 Schritte: ⟨x²⟩/(N h²) = 0.9956 (Diffusion D = h·c/2: 1)
+   Kurtosis der Verteilung nach N Schritten (Gauß: 3): 3.019
+   ⇒ (1) folgt: eine Irrfahrt ist auf Skalen ≫ h parabolisch (Telegraph-Übergang bei |p| ~ 2c/h).
+   Normierung: bewegt sich jede Achse in jedem Takt, ist D = h c/2 je Achse; wählt jeder Takt eine von d Achsen,
+   ist D = h c/(2d) (Raum + ϖ, d = 4: h c/8). Die Irrfahrt legt D also nur bis auf die Geometrie fest.
+
+   Kac, Gitter 0…L reflektierend, Rückkehrzeit zum Ort (Monte-Carlo, 20000 Rückläufe):
+      L =   10: ⟨T⟩/(2L) = 0.9948 ± 0.0169   (Kac: 1; in Zeit 2L·h/c = 2Λ/c)
+      L =   40: ⟨T⟩/(2L) = 1.0395 ± 0.0377   (Kac: 1; in Zeit 2L·h/c = 2Λ/c)
+      L =  160: ⟨T⟩/(2L) = 1.0407 ± 0.0755   (Kac: 1; in Zeit 2L·h/c = 2Λ/c)
+
+   Verlust je Schritt = Taktgefälle über einen Schritt: p = h·|∇ln τ̇| = h·a_N/c²  ⇒  Rate p/(h/c) = a_N/c = Γ, für jedes h.
+   Tiefe ϖ_R² = D·⟨T⟩ mit D = hc/2, ⟨T⟩ = 2Λ/c ⇒ m = ϖ_R/h = √(Λ/h). Gitter exakt, Milchstraße 6·10¹⁰ M☉ bei 8 kpc:
+      h =    1e+00·r₀:  m =  1.5184e+06,  p = 2.5763e-13,  q = 0.336243
+      h =    1e+01·r₀:  m =  4.8016e+05,  p = 2.5763e-12,  q = 0.336243
+      h =    1e+03·r₀:  m =  4.8016e+04,  p = 2.5763e-10,  q = 0.336243
+      h =    1e+06·r₀:  m =  1.5184e+03,  p = 2.5763e-07,  q = 0.336243
+      Regel e^(−s) = 0.336243   (s = 1.089920)
+   ⇒ Die Schrittlänge fällt heraus: q, Gewicht und Kern hängen nur an Γ = c|∇ln τ̇| und ⟨T⟩ = 2Λ/c.
+     (3) wird nur gebraucht, um die Tiefe als Länge zu lesen (ϖ_R = r* bei h = r₀) und Γ = D k² mit k = 1/r zu schreiben:
+     Verlust je Schritt r₀ aus dem Takt p = r₀·a_N/c² = 2.576273e-13; Zerfall der Bahnmode je Schritt 1 − cos(r₀/r) = 2.576828e-13
+     mit dem vollen Takt √(1 − r₀/r) über einen Schritt: p = 2.575717e-13  (gleich: das Taktgefälle über r₀ ist die Glättung von k = 1/r über r₀)
+
+==============================================================================================================
+2  Eine Uhr (4) und ein Sinn (6): Monte-Carlo auf dem Gitter
+==============================================================================================================
+   Tiefe m = 25 Schritte, geschlossen bei L = 40·m; Verlust je Takt p_Γ (Takt) und p_θ (Ausdehnung) auf derselben Uhr
+      Γτ_D = 1.00, θτ_D = 0.00:  MC 0.3672 ± 0.0024   exp(−√Σ) 0.3679   Gitter 0.3678   Produkt 0.3679
+      Γτ_D = 0.00, θτ_D = 4.00:  MC 0.1319 ± 0.0017   exp(−√Σ) 0.1353   Gitter 0.1350   Produkt 0.1353
+      Γτ_D = 1.00, θτ_D = 4.00:  MC 0.1056 ± 0.0015   exp(−√Σ) 0.1069   Gitter 0.1065   Produkt 0.0498
+      Γτ_D = 0.25, θτ_D = 1.00:  MC 0.3273 ± 0.0023   exp(−√Σ) 0.3269   Gitter 0.3268   Produkt 0.2231
+   ⇒ (4) folgt: Ein Takt für beide Verluste, sie addieren sich je Schritt und stehen unter einer Wurzel.
+
+   Zahl der Rückläufe (nach jedem Rücklauf Erneuerung aus der Tiefe) bis zum Verlust, + 1 für den Ursprung:
+      s = 0.5:  MC 1 + ⟨n⟩ = 2.5286 ± 0.0098   1/(1−q) = 2.5413   (1+q)/(1−q) = 4.0827   Regel ν = 2.5415
+      s = 1.0:  MC 1 + ⟨n⟩ = 1.5797 ± 0.0048   1/(1−q) = 1.5817   (1+q)/(1−q) = 2.1633   Regel ν = 1.5820
+      s = 2.0:  MC 1 + ⟨n⟩ = 1.1570 ± 0.0021   1/(1−q) = 1.1560   (1+q)/(1−q) = 1.3121   Regel ν = 1.1565
+   ⇒ (6) folgt: Rückläufe sind Ereignisse einer Folge; gezählt wird jedes einmal (Erneuerungszahl 1/(1−q)).
+
+==============================================================================================================
+3  Warum die Tiefe (2) nicht aus der Irrfahrt folgt
+==============================================================================================================
+   Rückkehr vom Ort aus (erster Schritt, dann erster Rücklauf), Gitter exakt: Anteil 1 − √(1 − (1−p)²) ⇒ ν = 1/√(1−(1−p)²) ≈ r/r₀
+      Milchstraße 8 kpc : ν = 1.3931e+06   r/r₀ = 1.3931e+06   Regel ν = 1.5066
+      Sonne 1000 AE     : ν = 5.0655e+10   r/r₀ = 5.0655e+10   Regel ν = 1.0006
+   ⇒ a = c²/(2r), ohne a₀: Die Irrfahrt allein kennt nur r₀. Die Schwelle kommt erst mit der Tiefe ϖ_R² = D·⟨T⟩,
+     d. h. mit der Kac-Zeit der bei Λ geschlossenen Halbgeraden. Kac liefert ⟨T⟩ = 2Λ/c und die Massenfreiheit;
+     dass die Erneuerung aus der in einer Kac-Zeit erreichten Tiefe kommt, bleibt gesetzt.
+   Andere naheliegende Tiefen aus derselben Irrfahrt:
+      mittlere Durchgangszeit ϖ→0 auf [0,Λ] gleich ⟨T⟩: ϖ(2Λ − ϖ)/(2D) = 2Λ/c ⇒ ϖ ≈ 2D/c = h (ein Schritt, wie oben)
+      Anteil der Ausflüge bis ϖ (h/ϖ) gleich Anteil der Linie (ϖ/Λ) ⇒ ϖ = √(hΛ) = r* (bei h = r₀): dieselbe Gleichung, kein neuer Grund
+
+==============================================================================================================
+4  Warum lokal Γ/D (5): Raumschritt als Taktvergleich gegen Raumschritt als Transport (Punktmasse)
+==============================================================================================================
+   Einheiten r* = 1, τ_D = 1, D = 1 (ϖ_R = 1). Verlustrate am Ort Γτ_D = a_N/a₀ = 1/ρ², ρ = |x|/r*.
+   (R) Rückkehr in ϖ am festen Ort, Verlust = Taktgefälle am Ort;   (T) Rückkehr läuft zugleich im Raum (3D) und verliert
+   mit dem Takt am jeweiligen Ort, ∂_t u = D(∇² + ∂_ϖ²)u − Γ(x)u. Monte-Carlo, gleicher Code, (R) = Raumdiffusion aus.
+      ρ = r/r*   a_N/a₀  |  q (R) MC        e^(−1/ρ)  |  q (T) MC        |  ν (R)    ν (T)
+          0.05    400.00  |  0.0000 ± 0.0000   0.0000  |  0.0918 ± 0.0021  |  1.0000   1.1011
+          0.10    100.00  |  0.0001 ± 0.0000   0.0000  |  0.1375 ± 0.0027  |  1.0001   1.1594
+          0.30     11.11  |  0.0365 ± 0.0016   0.0357  |  0.2677 ± 0.0041  |  1.0379   1.3656
+          1.00      1.00  |  0.3712 ± 0.0060   0.3679  |  0.5209 ± 0.0054  |  1.5904   2.0872
+          3.00      0.11  |  0.7153 ± 0.0061   0.7165  |  0.7818 ± 0.0047  |  3.5119   4.5827
+   (T): q ∝ ρ^b bei kleinem ρ, b = 0.598;  radial u'' + 2u'/ρ − u/ρ² = 0 gibt b = (√5 − 1)/2 = 0.618
+   Erdbahn: ρ = 1 AE/r*☉ = 1.362e-04;  (T) ν − 1 ~ q(ρ=1)·ρ^b = 2.1e-03  gegen Regel 0.0e+00
+   ⇒ Läuft die Rückkehr im Raum mit (Transport), wandert sie in einer Kac-Zeit um r* vom Ort weg, liest dort kleineres Gefälle
+     und verliert die Newton-Grenze (Potenz statt Exponent). Ohne eigenen Verlust (nur ∇²) ist es die nichtlokale Lesart
+     mit v⁴ = (2/π)²GMa₀. Die Regel entsteht nur, wenn der Raumschritt nichts trägt, sondern den Takt über einen Schritt
+     vergleicht: Verlust p = r₀|∇ln τ̇| am Ort. Da r₀/r* = 2δ* ≪ 1 (Milchstraße 6,6·10⁻⁷), ist dieser Vergleich lokal.
+
+==============================================================================================================
+5  Gezählte Rückläufe gegen ν(g_N): Punktmasse und SPARC-Galaxien (Gitter exakt und Monte-Carlo)
+==============================================================================================================
+   Verlust je Schritt aus dem Taktgefälle des baryonischen Felds, p = h·g_N/c², Tiefe m = √(Λ/h); MC mit h so, dass m = 30.
+   Punktmasse Milchstraße 6·10¹⁰ M☉:
+      r =   2 kpc: ν Gitter(r₀) 1.0129   ν MC 1.0138 (q 0.0136 ± 0.0008)   Regel ν 1.0129
+      r =   8 kpc: ν Gitter(r₀) 1.5066   ν MC 1.5009 (q 0.3337 ± 0.0033)   Regel ν 1.5066
+      r =  20 kpc: ν Gitter(r₀) 2.8300   ν MC 2.8502 (q 0.6492 ± 0.0034)   Regel ν 2.8300
+      r =  50 kpc: ν Gitter(r₀) 6.2489   ν MC 6.2228 (q 0.8393 ± 0.0026)   Regel ν 6.2489
+   NGC3198 (Υ_d = 0,5, Υ_b = 0,7, N = 43): max|ν_Gitter/ν_Regel − 1| = 4.6e-10;  χ²/N Gitter 8.04, Regel 8.04
+      R =   0.32 kpc, g_N/a₀ =   1.843: ν MC 1.3453 (± 0.0028)   Gitter 1.3463   Regel 1.3463   v   51.9 (gemessen   24.4 ± 35.9) km/s
+      R =   4.82 kpc, g_N/a₀ =   0.482: ν MC 2.0011 (± 0.0071)   Gitter 1.9977   Regel 1.9977   v  125.5 (gemessen  127.0 ±  5.4) km/s
+      R =  16.07 kpc, g_N/a₀ =   0.132: ν MC 3.2866 (± 0.0176)   Gitter 3.2859   Regel 3.2859   v  153.6 (gemessen  153.0 ±  2.0) km/s
+      R =  44.08 kpc, g_N/a₀ =   0.028: ν MC 6.4547 (± 0.0533)   Gitter 6.4912   Regel 6.4912   v  164.9 (gemessen  149.0 ±  3.0) km/s
+   DDO154 (Υ_d = 0,5, Υ_b = 0,7, N = 12): max|ν_Gitter/ν_Regel − 1| = 1.0e-08;  χ²/N Gitter 47.45, Regel 47.45
+      R =   0.49 kpc, g_N/a₀ =   0.054: ν MC 4.8333 (± 0.0335)   Gitter 4.8240   Regel 4.8240   v   20.8 (gemessen   13.8 ±  1.6) km/s
+      R =   1.97 kpc, g_N/a₀ =   0.036: ν MC 5.7488 (± 0.0443)   Gitter 5.7507   Regel 5.7507   v   37.5 (gemessen   34.3 ±  0.5) km/s
+      R =   3.95 kpc, g_N/a₀ =   0.026: ν MC 6.6407 (± 0.0558)   Gitter 6.6943   Regel 6.6943   v   48.5 (gemessen   46.3 ±  0.2) km/s
+      R =   5.92 kpc, g_N/a₀ =   0.013: ν MC 9.1628 (± 0.0926)   Gitter 9.2305   Regel 9.2305   v   49.4 (gemessen   45.5 ±  1.3) km/s
+   ⇒ Die gezählten Rückläufe der Irrfahrt mit Taktverlust geben die Regel; MC-Abweichungen nur statistisch und Gitter m = 30.
+
+==============================================================================================================
+6  Handprüfung (anderer Weg)
+==============================================================================================================
+   Milchstraße 6·10¹⁰ M☉, r = 8 kpc = 2,4686e20 m: GM = 1,32712e20·6e10 = 7,9627e30 m³/s²
+   a_N = 7,9627e30/(2,4686e20)² = 7,9627e30/6,0940e40 = 1,3067e-10 m/s²;  s = √(1,3067/1,1) = √1,18791 = 1,08991
+   r₀ = 2GM/c² = 1,5925e31/8,98755e16 = 1,7719e14 m;  r* = √(7,9627e30/1,1e-10) = 2,6905e20 m;  m = r*/r₀ = 1,5184e6
+   Verlust je Schritt p = r₀a_N/c² = (r₀/r)²/2 = (7,1778e-7)²/2 = 2,5760e-13;  √(2p)·m = 7,1778e-7·1,5184e6 = 1,0899
+   q = e^{−1,0899} = 0,33625;  ν = 1/(1 − 0,33625) = 1,5066;  Γ = p/(r₀/c) = 2,5760e-13·2,99792e8/1,7719e14 = 4,358e-19 s⁻¹
+   Code: s = 1.08992, ν = 1.5066, Γ = 4.3587e-19

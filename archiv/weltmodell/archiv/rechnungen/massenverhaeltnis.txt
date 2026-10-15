@@ -1,0 +1,51 @@
+Ziele [G]: m_p/m_e = 1836.15267343 (±6e-11), 1/α = 137.035999177 (±1.5e-10), α_G = 5.906e-39
+
+1) Zufallsprobe. δ = |x/Ziel − 1|; erwartet N(δ) = Dichte·2δ; p = Anteil zufälliger Ziele (log-gleichverteilt, ×0,67…1,5) mit gleich gutem Treffer
+   Ziel m_p/m_e = 1836.15267343
+   Klasse                                  Werte      Dichte/ln   bester δ    Ausdruck(Wert)     N(10⁻⁴) erw.   N(10⁻⁵) erw.   N(10⁻⁶) erw.   p(bester)
+   A: 2^a·3^b·5^c·π^d, Wurzeln bis 4        1498821       39910   9.7e-06   1836.134841     9 /   7.98     1 /   0.80     0 /   0.08   0.59
+   B: Σ c_i·π^i (i ≤ 5, |c_i| ≤ 4)           265720       26825   2.3e-02   1793.784998     0 /   5.37     0 /   0.54     0 /   0.05   0.49
+   C: (p/q)·π^k (p,q ≤ 64)                    32755         978   1.9e-05   1836.118109     1 /   0.20     0 /   0.02     0 /   0.00   0.04
+   Auf die Messgenauigkeit (δ ≈ 6e-11) erwartet: 4.8e-06, 3.2e-06, 1.2e-07 Treffer je Klasse; gefunden: 0, 0, 0
+
+   Ziel 1/α = 137.035999177
+   Klasse                                  Werte      Dichte/ln   bester δ    Ausdruck(Wert)     N(10⁻⁴) erw.   N(10⁻⁵) erw.   N(10⁻⁶) erw.   p(bester)
+   A: 2^a·3^b·5^c·π^d, Wurzeln bis 4        1498821       59715   1.2e-05   137.034321    12 /  11.94     0 /   1.19     0 /   0.12   0.85
+   B: Σ c_i·π^i (i ≤ 5, |c_i| ≤ 4)           265720       26390   2.2e-06   137.036304     6 /   5.28     2 /   0.53     0 /   0.05   0.11
+   C: (p/q)·π^k (p,q ≤ 64)                    32755        2075   4.0e-04   136.981534     0 /   0.42     0 /   0.04     0 /   0.00   0.87
+   Auf die Messgenauigkeit (δ ≈ 1e-10) erwartet: 1.8e-05, 7.9e-06, 6.2e-07 Treffer je Klasse; gefunden: 0, 0, 0
+
+   Bekannte Beispiele: 6π⁵ = 1836.1181 (δ = 1.9e-05);  4π³ + π² + π = 137.03630 (δ = 2.2e-06)
+   Kleinstes p aller 6 Prüfungen (3 Klassen × 2 Ziele): 0.04; Wahrscheinlichkeit, dass mindestens eine Prüfung so klein ausfällt: 0.21
+   → Beide liegen in ihrer Klasse im Bereich zufälliger Treffer (p in der Tabelle). Eine Beziehung zählt erst, wenn sie aus einer Gleichung
+     des Modells folgt und weit unter dem zufällig erreichbaren δ liegt; auf Messgenauigkeit ist in keiner Klasse ein Zufallstreffer zu erwarten.
+
+2) Kopplungen als Längenverhältnisse (symbolisch)
+   Δs·λ̄ = G*hbar/(3*c**3) = ℓ_P²/3: Masse kürzt sich (1/3·ℓ_P²)
+   a_J·Δs (Spin ½, a_J = ħ/2mc) = G*hbar/(6*c**3) = 1/6·ℓ_P²: Masse kürzt sich
+   α_G = 3Δs_p/λ̄_p = G*m_p**2/(c*hbar);  m_p/m_e = λ̄_e/λ̄_p = m_p/m_e
+   → Die Beziehungen sind für jede Masse erfüllt; sie verbinden nur eine Masse mit ihrer eigenen Länge.
+     Zwischen α, α_G und m_p/m_e liefern sie keine Gleichung (drei Zahlen, null Beziehungen).
+
+3) Carter-Kette: α_G = 𝒞·α¹²·(m_e/m_p)⁴ (Thomson) bzw. 𝒞'·α¹²·(m_e/m_p)⁵ (Kramers); 𝒞, 𝒞' nicht hergeleitet
+   Mit den Messwerten: 𝒞 = 2.9440, 𝒞' = 5406
+   𝒞 = 1.000:  m_p/m_e = (𝒞α¹²/α_G)^{1/4} = 1401.76;  1/α aus α_G und m_p/m_e = 125.244
+   𝒞 = 2.944:  m_p/m_e = (𝒞α¹²/α_G)^{1/4} = 1836.15;  1/α aus α_G und m_p/m_e = 137.036
+   Kramers, 𝒞' = 1: m_p/m_e = (α¹²/α_G)^{1/5} = 329.11
+   Empfindlichkeit: δμ/μ = ¼·δ𝒞/𝒞. Für m_p/m_e auf 10⁻¹⁰ müsste 𝒞 auf 4·10⁻¹⁰ bekannt sein; 𝒞 enthält Saha- und Gamow-Logarithmen
+   und die mittlere Opazität der Sterne. Die Kette legt Exponenten fest, keinen Zahlenwert von m_p/m_e.
+
+4) Nome-Darstellung |q| = e^{−2π Im τ}
+   α_G = e^{−2π Im τ_G}: Im τ_G = 14.0096;   α_G = |q|² (Kern-Nome der Kopplung): Im τ = 7.0048
+   α = e^{−2π Im τ_α}: Im τ_α = 0.7831;   Kern-Nome Δs/λ̄ an der eigenen Quantenlänge: Proton Im τ_p = 14.1844, Elektron Im τ_e = 16.5767
+   m_p/m_e = e^{π(Im τ_e − Im τ_p)} = 1836.15267: Umschreibung, keine Bestimmung
+   Carter in Nome-Form: Im τ_G = 12·Im τ_α + (2/π)·ln(m_p/m_e) − ln𝒞/2π = 9.3970 + 4.7845 − 0.1719 = 14.0096
+   Eine Zahl Im τ_X für α und α_G verlangte eine Gleichung α = f(Im τ_X) neben α_G = e^{−2π Im τ_X}; das Modell hat keine.
+   Selbst dann bliebe m_p/m_e über Carter an 𝒞 gebunden (μ = exp[(π/2)(Im τ_G − 12 Im τ_α)]·𝒞^{1/4}).
+   Im τ_G liegt 0.0096 neben der ganzen Zahl 14 (relativ 6.8e-04). Zufall: Abstand ≤ 0.0096 zur nächsten ganzen Zahl mit Wahrscheinlichkeit 0.019; geprüft wurden hier mindestens vier Im-τ-Werte (14.010, 7.005, 14.184, 16.577), also ≈ 0.07.
+   ln α_G/ln α = Im τ_G/Im τ_α = 17.8903 (keine Gleichung des Modells liefert diese Zahl)
+   Im τ_G = 14.00959: bester Ausdruck der Klasse A 14.00978 (δ = 1.3e-05), p = 0.92
+   Im τ_G/Im τ_α = 17.89034: bester Ausdruck der Klasse A 17.89035 (δ = 3.9e-07), p = 0.06
+   (1/α)/Im τ_G = 9.78159: bester Ausdruck der Klasse A 9.78156 (δ = 2.8e-06), p = 0.37
+
+Ergebnis: Keine Gleichung des Modells bestimmt m_p/m_e oder verbindet α und α_G über eine Zahl; alle Treffer liegen im Zufallsbereich.

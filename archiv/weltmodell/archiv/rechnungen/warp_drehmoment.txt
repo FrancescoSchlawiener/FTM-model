@@ -1,0 +1,50 @@
+1) Baryonische Milchstraße (Massenmodell McMillan 2017 [G], Annahme), Feld kugelgemittelt, a₀ = 1,2·10⁻¹⁰ m/s²
+   bulge 9.230e+09, thin 3.519e+10, thick 1.049e+10, HI 1.067e+10, H2 1.231e+09;  M_b = 6.681e+10 M☉
+   [OK] dünne Scheibe gegen 2πΣ₀R_d²: 3.51857e+10 gegen 3.51858e+10 (rel. 5.3e-06)
+   bei R = 14.0 kpc: g_N/a₀ = 0.355, ν = 2.228, v = 202.4 (Newton 135.6) km/s, Ω = 14.46 (Newton 9.69) km/s/kpc;  r* = 8.81 kpc
+
+2) Lineare Antwort der Feldform auf einen Punktstörer, Multipole l (Kugelhintergrund der Milchstraße + äußeres Feld)
+   [OK] konstantes ν − 1 = 1,5: u/f bei 14 kpc: 1.50163 gegen 1.5 (rel. 1.1e-03)
+
+3) Punktstörer: größte Knotenrate eines Rings bei R = 14 kpc, Neigung θ_w, über alle Azimute des Störers (km/s/kpc)
+   Annahmen [G]: LMC 3,2·10⁹ M☉ baryonisch, 50 kpc, Breite −33°;  Sgr 1·10⁸–5·10⁸ M☉ baryonisch, 18 kpc, Breite −20°;
+                 M31 1·10¹¹ M☉ baryonisch, 780 kpc, Breite −22°;  äußeres Feld g_e = 0,02 a₀;  θ_w = 0,1 (Warp-Höhe ≈ 1,4 kpc bei 14 kpc)
+   Störer          l_max  Newton exakt       Newton (Multipole)   ×ν am Ort der Scheibe   volle Antwort (Feldform)   Verstärkung
+   LMC              24   +7.48e-02/-8.39e-02   +7.48e-02/-8.39e-02   +1.12e-01/-1.25e-01     +3.29e-01/-3.62e-01      ×6.4 (Feld)
+   Sgr (5·10⁸)      60   +4.06e-01/-3.19e-01   +4.06e-01/-3.19e-01   +6.05e-01/-4.77e-01     +6.94e-01/-5.01e-01      ×2.6 (Feld)
+   Sgr (1·10⁸)      60   +8.11e-02/-6.39e-02   +8.11e-02/-6.39e-02   +1.21e-01/-9.53e-02     +1.39e-01/-1.00e-01      ×2.6 (Feld)
+   M31               2   +3.78e-04/-5.79e-04   +3.78e-04/-5.79e-04   +5.64e-04/-8.64e-04     +1.67e-02/-2.55e-02      ×65.8 (Feld)
+   (+max/−min: rechtläufig/rückläufig je nach Azimut des Störers gegen die Knotenlinie; das Vorzeichen setzt die Lage.)
+   Glättungslängen im Feld der Milchstraße ℓ = d(M/3M_b)^{1/3}: LMC 12.6 kpc, Sgr 2.4 kpc, M31 619 kpc; der Ring liegt außerhalb der Zonen von LMC und Sgr (kollektives Feld)
+   Für +10,9 km/s/kpc bräuchte die LMC (volle Antwort, θ_w = 0,1) baryonisch 1.06e+11 M☉ = 1.6·M_b der Milchstraße; Sgr 7.9e+09 M☉
+
+4) Äußeres Feld der Lokalen Gruppe: homogenes g_e übt in Newton kein Drehmoment aus; in der Feldform Anteil l = 2 ∝ g_e²
+   g_e = 0.01 a₀: C(14) = -4.38e-03 (km/s/kpc)²,  größte Knotenrate (θ_w = 0,1, cos β sin β = ½) 2.3e-03 km/s/kpc
+   g_e = 0.02 a₀: C(14) = -1.73e-02 (km/s/kpc)²,  größte Knotenrate (θ_w = 0,1, cos β sin β = ½) 9.0e-03 km/s/kpc
+   g_e = 0.03 a₀: C(14) = -3.86e-02 (km/s/kpc)²,  größte Knotenrate (θ_w = 0,1, cos β sin β = ½) 2.0e-02 km/s/kpc
+
+5) Schräg einfallendes Gas: dL/dt = Ṁ·j_⊥. Knotenrate ω = (Ṁ_o/M_o)·(j_⊥/j_c)/sin θ_w (j_c = R·v_c, Gas mit Kreisbahn-Drehimpuls, Winkel ψ)
+   Außenscheibe R > 12 kpc: M_o = 9.16e+09 M☉ (Annahme: alles einfallende Gas landet dort)
+   Ṁ [M☉/Jahr, Annahme]   θ_w     ω (ψ = 90°) [km/s/kpc]   ω (ψ = 30°)
+      1.0                  0.05        2.14                     1.07
+      1.0                  0.10        1.07                     0.53
+      3.0                  0.05        6.41                     3.20
+      3.0                  0.10        3.21                     1.60
+   Für +10,9 km/s/kpc bei θ_w = 0.05: Ṁ·sin ψ = 5.1 M☉/Jahr
+   Für +10,9 km/s/kpc bei θ_w = 0.1: Ṁ·sin ψ = 10.2 M☉/Jahr
+   Im Modell ist j_c um v_FTM/v_N = 1.49 größer; stammt j_⊥ aus Kreisbahnen, kürzt sich das; ist j_⊥ fest, sinkt ω um diesen Faktor.
+   Das Vorzeichen setzt die Richtung von j_⊥ gegen die Knotenlinie; die Drehung endet nach höchstens 90°, wenn die Scheibe zu j_⊥ gekippt ist.
+
+6) Verwindung der eigenen Rotation (gravitomagnetisch, rechtläufig)
+   J = 8.531e+13 M☉ kpc km/s,  a_J = J/(M_b c) = 4.26 pc,  Δs = 3.288e+13 m,  Spinzahl j = a_J/(3Δs) = 1332
+   ω_LT = 2GJ/(c²R³) bei 14 kpc: 2.98e-06;  ×ν(R) = 6.63e-06;  ×ν² (Strom und Feld verstärkt) = 1.48e-05 km/s/kpc
+   Abstand zum Messwert: Faktor 7.4e+05
+
+7) Bilanz bei R = 14 kpc (größte Beträge, θ_w = 0,1): Messwert +10,9 km/s/kpc [G]
+   Sgr (5·10⁸ M☉):  6.94e-01   Vorzeichen: Lage
+   LMC:             3.62e-01   Vorzeichen: Lage
+   M31:             2.55e-02   Vorzeichen: Lage (lineare Antwort, obere Schranke)
+   äußeres Feld:    2.00e-02   (g_e = 0,03 a₀)
+   Gas, 1–3 M☉/Jahr, ψ = 90°: 1.07–3.21   Vorzeichen: Richtung des Einfalls
+   Verwindung:      3.0e-06–1.5e-05   rechtläufig
+Prüfungen: 2, Abweichungen über Toleranz: 0

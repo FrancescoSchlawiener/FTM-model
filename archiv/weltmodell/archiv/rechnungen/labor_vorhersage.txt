@@ -1,0 +1,55 @@
+
+================================================================================================
+A  Regel je Feldebene im Labor (a₀ = 1,1e-10)
+================================================================================================
+   Feld                                    |g| [m/s²]          s      log10 q  ν − 1
+   Erdoberfläche (L, eigenes Feld)          9.810e+00  2.986e+05  -1.2969e+05  10^-1.2969e+05
+   Sonne an der Erdbahn (L)                 5.930e-03       7342      -3188.7  10^-3188.7
+   Galaxie am Sonnenort, geglättet (G)      1.474e-10      1.158     -0.50273  0.4582
+   Zusatz der Galaxie (ν−1)·g_N = 6.755e-11 m/s², gleichförmig über das Sonnensystem;
+   Änderung über 1 AE ≤ T·AE·(ν + dν/dln g) ≈ 1.7e-18 m/s², über 1 km ≈ 1.1e-26 m/s²
+   Glättungslängen ℓ = (GM/T)^(1/3): Sonne 1.93e+05 AE, Erde 2.78e+03 AE
+
+================================================================================================
+B  Sattelpunkt Sonne–Erde
+================================================================================================
+   Sattel 2.5881e+08 m von der Erde; dort je Körper |g| = 5.951e-03 m/s²
+   Gradient längs 4.606e-11 s⁻², quer 2.303e-11 s⁻²
+   Newton-Nullpunkt mit Galaxie: verschoben um g_gal/T = 3.20 m (längs) bis 6.40 m (quer)
+   Bereich |g_N| < a₀: Halbachsen 2.39 m (längs), 4.78 m (quer)
+   (i) ungeglättete Lesart (Regel auf dem wirklichen Newton-Feld): größter Zusatz (ν−1)a_N = s²n_B·a₀ = 7.124e-11 m/s² bei a_N = 2.54 a₀
+       d =    10 m längs: |g| = 4.61e-10, Zusatz (ν−1)|g| = 6.83e-11 m/s²
+       d =   100 m längs: |g| = 4.61e-09, Zusatz (ν−1)|g| = 7.14e-12 m/s²
+       d =   300 m längs: |g| = 1.38e-08, Zusatz (ν−1)|g| = 1.87e-13 m/s²
+       d =  1000 m längs: |g| = 4.61e-08, Zusatz (ν−1)|g| = 5.97e-17 m/s²
+   (ii) Modell (07 Hierarchie): Erde bis ℓ_E = 2779 AE, Sonne bis ℓ☉ = 1.93e+05 AE Newtonsch;
+        geglättetes Feld am Sattel = g_gal + T·d = 1.4740e-10 m/s² (s = 1.1576); Zusatz gleichförmig 6.755e-11,
+        sein Gradient ~ T = 5.5e-30 s⁻² → über 1 km 5.5e-27 m/s²: kein Sattelsignal. Newton-Dynamik am Sattel.
+
+================================================================================================
+C  Wo fiele das Gesamtfeld unter a₀?
+================================================================================================
+   Newton ungeglättet: Sonne hebt die Galaxie auf bei r = √(GM☉/g_gal) = 6343 AE (Richtung Zentrum)
+   geglättet: Feld der Sonnenwolke ≤ GM☉/ℓ☉² = 1.60e-13 ≪ g_gal: |ḡ| ≥ 1.34 a₀ überall im Sonnensystem
+   Kleinstes s erreichbar: 1.158 (q = 0.314), und nur als gleichförmiger Zusatz
+
+================================================================================================
+D  Takt: Uhren
+================================================================================================
+   Taktgefälle an der Erdoberfläche Γ = g/c = 3.272e-08 s⁻¹ = Rotverschiebung 1.092e-16 je m (ART)
+   Zusatz der Regel am Erdfeld: ν − 1 = 10^-129695
+   Uhrenpaar Abstand    1e+00 m, frei fallend im Galaxiefeld: Gezeitenanteil ≈ T h²/(2c²) = 3.1e-47
+   Uhrenpaar Abstand    1e+03 m, frei fallend im Galaxiefeld: Gezeitenanteil ≈ T h²/(2c²) = 3.1e-41
+   Uhrenpaar Abstand    2e+07 m, frei fallend im Galaxiefeld: Gezeitenanteil ≈ T h²/(2c²) = 1.2e-32
+   Gleichförmiger Zusatz der Galaxie: im frei fallenden Labor ohne Taktunterschied (Uhren am selben Ort fallen gleich).
+
+================================================================================================
+E  Kippstelle und Wurzelgesetz
+================================================================================================
+   δ = 1e-02: 1 − q = 2.501002e-01,  2(3a)^(1/4)δ^(1/2) = 2.407603e-01
+   δ = 1e-04: 1 − q = 2.417230e-02,  2(3a)^(1/4)δ^(1/2) = 2.407603e-02
+   δ = 1e-06: 1 − q = 2.408568e-03,  2(3a)^(1/4)δ^(1/2) = 2.407603e-03
+   → Sattel-Knoten-Normalform (Standard der Verzweigungstheorie), Fenster ∝ ε^(3/2), Erholung ∝ √Abstand.
+   Rückkehr mit Verlust Γτ = 1e-03: 1 − e^(−√(Γτ)) = 3.1128e-02, √(Γτ) = 3.1623e-02 (Kabelgleichung, Warburg)
+   Rückkehr mit Verlust Γτ = 1e-02: 1 − e^(−√(Γτ)) = 9.5163e-02, √(Γτ) = 1.0000e-01 (Kabelgleichung, Warburg)
+   Rückkehr mit Verlust Γτ = 1e-01: 1 − e^(−√(Γτ)) = 2.7111e-01, √(Γτ) = 3.1623e-01 (Kabelgleichung, Warburg)

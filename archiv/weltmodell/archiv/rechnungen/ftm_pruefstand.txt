@@ -1,0 +1,222 @@
+Baustein | Aussage                                              |      Modell |        Kern |    Abw. |
+01       | Δs Erde [mm]                                         |       1.478 |       1.478 |   0.02 % | OK
+01       | Δs Sonne [m]                                         |       492.2 |       492.2 |   0.00 % | OK
+01       | g Sonne [m/s²]                                       |         274 |       274.2 |   0.07 % | OK
+01       | r₀ Erde [mm]                                         |        8.87 |        8.87 |   0.00 % | OK
+01       | r₀ Sonne [km]                                        |        2.95 |       2.953 |   0.11 % | OK
+01       | δ Erdoberfläche                                      |    6.96e-10 |   6.961e-10 |   0.02 % | OK
+01       | Erdoberfläche [s/Jahr]                               |       0.022 |     0.02197 |   0.14 % | OK
+01       | δ Sonnenoberfläche                                   |    2.12e-06 |   2.123e-06 |   0.12 % | OK
+01       | Sonnenoberfläche [s/Jahr]                            |          67 |       66.98 |   0.03 % | OK
+02       | Δs Proton [m]                                        |    4.14e-55 |    4.14e-55 |   0.01 % | OK
+02       | Δs/R Proton                                          |     4.9e-40 |   4.921e-40 |   0.43 % | OK
+02       | g Proton [m/s²]                                      |     1.6e-07 |   1.577e-07 |   1.45 % | OK
+02       | Δs/R Wasserstoff-Atom                                |     7.8e-45 |   7.824e-45 |   0.31 % | OK
+02       | Δs Neutronenstern 1,4 M☉ [m]                         |         689 |       689.1 |   0.01 % | OK
+02       | Δs/R Neutronenstern (12 km)                          |       0.057 |     0.05742 |   0.74 % | OK
+02       | g Neutronenstern [m/s²]                              |     1.3e+12 |    1.29e+12 |   0.75 % | OK
+02       | Δs Roter Riese 18 M☉ [km]                            |        8.86 |        8.86 |   0.00 % | OK
+02       | Δs/R Roter Riese (764 R☉)                            |     1.7e-08 |   1.667e-08 |   1.95 % | OK
+02       | g Roter Riese [m/s²]                                 |      0.0084 |    0.008456 |   0.66 % | OK
+02       | α_G                                                  |   5.906e-39 |   5.906e-39 |   0.00 % | OK
+02       | Sternmasse M_* [M☉]                                  |       1.853 |       1.853 |   0.01 % | OK
+02       | Δs_* [m]                                             |         912 |       912.2 |   0.02 % | OK
+02       | Bahngeschwindigkeit Erde [km/s]                      |       29.79 |       29.78 |   0.02 % | OK
+02       | r* Sonne [AE]                                        |        7340 |        7342 |   0.03 % | OK
+02       | Neutronenstern: Hülle bei r/r₀                       |         2.9 |       2.902 |   0.08 % | OK
+02       | Neutronenstern: Takt langsamer um                    |        0.19 |      0.1904 |   0.21 % | OK
+03       | Δs Milchstraße [AE]                                  |       197.5 |       197.4 |   0.04 % | OK
+03       | Δs/R Milchstraße (15,3 kpc)                          |     6.2e-08 |   6.255e-08 |   0.89 % | OK
+03       | Δs Galaxienhaufen [Lj]                               |         8.8 |       8.844 |   0.51 % | OK
+03       | Δs/R Galaxienhaufen (2 Mpc)                          |     1.4e-06 |   1.356e-06 |   3.15 % | OK
+03       | Δs Universum [Mrd Lj]                                |         3.9 |       3.902 |   0.05 % | OK
+03       | Δs/R Universum (46,5 Mrd Lj)                         |       0.084 |     0.08391 |   0.10 % | OK
+03       | r* Milchstraße [kpc]                                 |        8.72 |       8.719 |   0.01 % | OK
+03       | v Milchstraße bei 5 kpc [km/s]                       |         250 |       250.1 |   0.04 % | OK
+03       | v Milchstraße bei 8.72 kpc [km/s]                    |         216 |       216.4 |   0.18 % | OK
+03       | v Milchstraße bei 15 kpc [km/s]                      |         198 |       197.6 |   0.23 % | OK
+03       | v Milchstraße bei 50 kpc [km/s]                      |         180 |       179.6 |   0.23 % | OK
+03       | v_flach Milchstraße [km/s]                           |         172 |         172 |   0.02 % | OK
+03       | Grenzflächendichte a₀/(πG) [M☉/pc²]                  |         251 |       251.2 |   0.08 % | OK
+03       | ν frei (Milchstraße 50 kpc)                          |        6.25 |       6.249 |   0.02 % | OK
+03       | ν senkrechtes Außenfeld 0,03 a₀                      |        5.36 |       5.356 |   0.08 % | OK
+03       | ν gleichgerichtetes Außenfeld                        |        4.59 |       4.589 |   0.02 % | OK
+03       | R_Q: a_N/a₀ beim kosmischen q                        |       0.029 |     0.02922 |   0.76 % | OK
+03       | R_Q Milchstraße [kpc]                                |          51 |       51.01 |   0.02 % | OK
+03       | 1 − w heute (Standardwert a₀)                        |      0.0031 |    0.003126 |   0.82 % | OK
+03       | 1 − w heute (a₀ = cH₀/2π)                            |      0.0028 |    0.002807 |   0.23 % | OK
+03       | ν an der Hubble-Kugel (g = πa₀)                      |         1.2 |       1.205 |   0.39 % | OK
+03       | cH₀/2π bei 67,4 [10⁻¹⁰]                              |        1.04 |       1.042 |   0.21 % | OK
+03       | cH₀/2π bei 70 [10⁻¹⁰]                                |        1.08 |       1.082 |   0.22 % | OK
+03       | H₀ für a₀ = 1,2·10⁻¹⁰ (Literatur) [km/s/Mpc]         |        77.6 |       77.61 |   0.01 % | OK
+03       | Vakuumteil Ω_s bei Θ = 1                             |        0.22 |      0.2193 |   0.31 % | OK
+03       | Vakuumteil mit dem Standardwert a₀                   |        0.24 |      0.2443 |   1.80 % | OK
+03       | ΔN_eff bei Ω_s = 0,22 zu jeder Zeit                  |        2.09 |       2.093 |   0.14 % | OK
+03       | Durchmesser letzte Streufläche [Gpc]                 |        27.8 |       27.79 |   0.05 % | OK
+03       | Zelle für a₀ = 1,04·10⁻¹⁰ [Gpc]                      |        28.1 |       28.11 |   0.04 % | OK
+03       | Zelle für a₀ = 1,19·10⁻¹⁰ [Gpc]                      |        26.9 |       26.88 |   0.08 % | OK
+03       | a₀ ohne Kreispaare (L ≥ 0,985 d_LSS) [10⁻¹⁰]         |        1.13 |       1.127 |   0.26 % | OK
+03       | a₀(z = 10)/a₀(0)                                     |       0.997 |      0.9968 |   0.02 % | OK
+03       | a₀(z = 1090)/a₀(0)                                   |        0.76 |      0.7586 |   0.18 % | OK
+03       | Vakuumteil bei z = 1090                              |     2.5e-10 |   2.513e-10 |   0.52 % | OK
+03       | Schließlänge Λ für den Standardwert [Gpc]            |        13.2 |       13.24 |   0.30 % | OK
+03       | Schließlänge Λ für a₀ = 1,04 [Gpc]                   |          14 |          14 |   0.02 % | OK
+03       | 1/λ_m heute, 500 ρ_krit, N* = 0,3 [Mrd J]            |        0.28 |      0.2753 |   1.69 % | OK
+03       | 1/λ_m heute, 200 ρ_krit, N* = 2,4 [Mrd J]            |         3.5 |       3.482 |   0.52 % | OK
+03       | 1/λ_m Kollaps z = 2, 500 ρ_krit, N* = 0,3 [Mrd J]    |         0.1 |     0.09097 |   9.03 % | OK
+03       | 1/λ_m Kollaps z = 2, 200 ρ_krit, N* = 2,4 [Mrd J]    |         1.2 |       1.151 |   4.11 % | OK
+03       | Kreislauf: Mindestrate Λ̇/Λ [s⁻¹]                    |     3.8e-37 |   3.829e-37 |   0.75 % | OK
+03       | Kreislauf: je Jahr                                   |     1.2e-29 |   1.208e-29 |   0.69 % | OK
+03       | Kreislauf: w_s + 1                                   |       2e-19 |   2.364e-19 |  18.20 % | OK
+03       | Kreislauf: S_max [k]                                 |    9.3e+122 |  9.272e+122 |   0.30 % | OK
+03       | Kreislauf: H im Endzustand / H₀                      |        0.49 |      0.4943 |   0.88 % | OK
+04       | Neutronenstern: Tage je Jahr                         |        69.6 |       69.54 |   0.08 % | OK
+04       | Grenze Rückgabe T_H = T_CMB [kg]                     |     4.5e+22 |   4.502e+22 |   0.03 % | OK
+07       | ν bei r*                                             |       1.582 |       1.582 |   0.00 % | OK
+07       | Bose-Stufen bei r* (s = 1)                           |       0.582 |       0.582 |   0.00 % | OK
+07       | Maximum d = 2: a_N/a₀                                |        2.54 |        2.54 |   0.01 % | OK
+07       | Maximum d = 2: Zusatz/a₀                             |       0.648 |      0.6476 |   0.06 % | OK
+07       | Maximum d = 3: a_N/a₀                                |        7.96 |       7.961 |   0.01 % | OK
+07       | beide Umlaufsinne: coth(1)                           |       1.313 |       1.313 |   0.00 % | OK
+07       | τ_D = c/a₀ [Mrd J]                                   |          86 |       86.36 |   0.42 % | OK
+07       | Ebenen bis r* Milchstraße                            |     1.5e+06 |   1.518e+06 |   1.23 % | OK
+07       | Δs/r an der Erdbahn                                  |     3.3e-09 |    3.29e-09 |   0.30 % | OK
+07       | Δs/r Milchstraße bei 8 kpc                           |     1.2e-07 |   1.196e-07 |   0.30 % | OK
+07       | Im τ_M an der Erdbahn                                |         3.1 |       3.109 |   0.28 % | OK
+07       | Im τ_M Milchstraße 8 kpc                             |         2.5 |       2.537 |   1.47 % | OK
+07       | Rosette χ = 1: Winkel zwischen Perizentren [°]       |       254.6 |       254.6 |   0.02 % | OK
+07       | Erdbahn: s = r*/r                                    |        7342 |        7342 |   0.00 % | OK
+08       | Ablenkung Sonnenrand [″]                             |       1.752 |       1.751 |   0.02 % | OK
+08       | r* Erde [AE]                                         |        12.7 |       12.72 |   0.19 % | OK
+08       | Masse mit r* = λ̄ [kg]                               |     5.9e-29 |   5.886e-29 |   0.23 % | OK
+08       | α_∞ Milchstraße [″]                                  |        0.43 |      0.4268 |   0.75 % | OK
+08       | α_∞ Galaxienhaufen [″]                               |          23 |       22.72 |   1.23 % | OK
+08       | Merkur-Perihel [″/Jh]                                |          43 |       42.98 |   0.05 % | OK
+08       | Verwindung Erde a_J [m]                              |        3.27 |       3.272 |   0.07 % | OK
+08       | T_prograd − T_retrograd [ns]                         |         137 |       137.2 |   0.12 % | OK
+08       | Hulse-Taylor dP/dt                                   |    -2.4e-12 |  -2.403e-12 |   0.11 % | OK
+08       | Schatten M87* [μas]                                  |          40 |       39.69 |   0.78 % | OK
+08       | Erdbahn im Sonnentrichter [s/Jahr]                   |        0.31 |      0.3115 |   0.48 % | OK
+09       | a_J Elektron [fm]                                    |       193.1 |       193.1 |   0.00 % | OK
+09       | Bohr-Magneton [J/T]                                  |   9.274e-24 |   9.274e-24 |   0.00 % | OK
+09       | Spinzahl Elektron                                    |     2.9e+44 |   2.854e+44 |   1.58 % | OK
+09       | Spinzahl Proton                                      |     8.5e+37 |   8.466e+37 |   0.40 % | OK
+09       | α/α_G                                                |   1.236e+36 |   1.236e+36 |   0.00 % | OK
+09       | ω₁ = c/λ̄_p [rad/s]                                  |   1.425e+24 |   1.425e+24 |   0.03 % | OK
+09       | ω₂ = αc/a_B [rad/s]                                  |   4.134e+16 |   4.134e+16 |   0.00 % | OK
+09       | Γ_G = α_G·ω₁ [1/s]                                   |    8.42e-15 |   8.419e-15 |   0.01 % | OK
+02       | δ bei 1 fm neben einem Proton                        |    1.24e-39 |   1.242e-39 |   0.17 % | OK
+02       | Umlauffrequenz Wasserstoff-Hülle [Hz]                |    6.58e+15 |    6.58e+15 |   0.00 % | OK
+02       | Bindungssteilheit Wasserstoff [m/s²]                 |       9e+22 |   9.044e+22 |   0.49 % | OK
+02       | Bindungssteilheit Wasserstoff [g⊕]                   |       9e+21 |   9.219e+21 |   2.44 % | OK
+02       | Faltung für diese Steilheit [kg]                     |     3.8e+12 |   3.795e+12 |   0.14 % | OK
+02       | Erde: δ gegen 2(v_th/c)² (Eisen, Schmelzpunkt)       |         116 |         116 |   0.02 % | OK
+02       | Saturn: Faltung / Erde                               |          95 |       95.16 |   0.17 % | OK
+02       | Saturn: Kante / Erde (mittlerer Radius 58 232 km)    |        1.14 |        1.14 |   0.02 % | OK
+02       | Faltung des Sonnensystems [m]                        |       492.9 |       492.9 |   0.01 % | OK
+02       | Anteil der Sonne [%]                                 |       99.87 |       99.87 |   0.00 % | OK
+02       | Glättungslänge Sonne / r*                            |          26 |       26.13 |   0.48 % | OK
+02       | Gezeitengrenze Sonne [pc]                            |        1.37 |       1.372 |   0.16 % | OK
+02       | Carter-Faktor 𝒞 = α_G/(α¹²(m_e/m_p)⁴)                |       2.944 |       2.944 |   0.00 % | OK
+02       | Eddington-Grenze Sonne [W]                           |   1.257e+31 |   1.257e+31 |   0.01 % | OK
+02       | δ Sonnenoberfläche / α²                              |        0.04 |     0.03986 |   0.35 % | OK
+02       | α = r_e/λ̄_e                                         |    0.007297 |    0.007297 |   0.00 % | OK
+02       | Δs·λ̄/ℓ_P² (Proton)                                  |      0.3333 |      0.3333 |   0.00 % | OK
+02       | Im τ_G (α_G = e^{−2π Im τ})                          |       14.01 |       14.01 |   0.00 % | OK
+02       | Im τ_α                                               |      0.7831 |      0.7831 |   0.00 % | OK
+02       | magnetische/elektrische Elementarladung 1/(2α)       |        68.5 |       68.52 |   0.03 % | OK
+03       | Galaxie im Haufen, 80 kpc, 0,5 Mpc: Anteil des freien Werts |         0.5 |       0.502 |   0.40 % | OK
+03       | Galaxie im Haufen, 80 kpc, 2 Mpc: Anteil des freien Werts |        0.77 |      0.7719 |   0.25 % | OK
+03       | 1 − w bei der Rekombination                          |     3.4e-12 |   3.363e-12 |   1.08 % | OK
+03       | Bilder quadratischer Torus, Abstand² = 1             |           4 |           4 |   0.00 % | OK
+03       | Bilder quadratischer Torus, Abstand² = 2             |           4 |           4 |   0.00 % | OK
+03       | Bilder quadratischer Torus, Abstand² = 3             |       1e-99 |       1e-99 |   0.00 % | OK
+03       | Bilder quadratischer Torus, Abstand² = 4             |           4 |           4 |   0.00 % | OK
+03       | Bilder quadratischer Torus, Abstand² = 5             |           8 |           8 |   0.00 % | OK
+03       | Bilder sechseckiger Torus, Abstand² = 1              |           6 |           6 |   0.00 % | OK
+03       | Bilder sechseckiger Torus, Abstand² = 2              |       1e-99 |       1e-99 |   0.00 % | OK
+03       | Bilder sechseckiger Torus, Abstand² = 3              |           6 |           6 |   0.00 % | OK
+03       | Bilder sechseckiger Torus, Abstand² = 4              |           6 |           6 |   0.00 % | OK
+03       | Bilder sechseckiger Torus, Abstand² = 5              |       1e-99 |       1e-99 |   0.00 % | OK
+03       | Zelle mindestens (0,985·d_LSS) [Gpc]                 |        27.4 |       27.37 |   0.11 % | OK
+04       | Takt bei 100 r₀                                      |       0.995 |       0.995 |   0.00 % | OK
+04       | Takt bei 2 r₀                                        |       0.707 |      0.7071 |   0.02 % | OK
+04       | S = 36πk(Δs/ℓ_P)² = 4πk·α_G (Sonne)                  |           1 |           1 |   0.00 % | OK
+04       | Lebensdauer 3840(S/k)Δs/c = Hawking                  |           1 |           1 |   0.00 % | OK
+04       | Temperatur global = ħH/(2πk) (Δs_H = c/6H)           |           1 |           1 |   0.00 % | OK
+04       | Entropieexport der Erde [W/K]                        |     6.1e+14 |   6.097e+14 |   0.04 % | OK
+05       | ν bei Im τ = ½                                       |       1.045 |       1.045 |   0.02 % | OK
+05       | ν bei Im τ = 2                                       |           1 |           1 |   0.00 % | OK
+05       | (2π)^k/(Γ(k)ζ(k)), k = 2                             |          24 |          24 |   0.00 % | OK
+05       | (2π)^k/(Γ(k)ζ(k)), k = 4                             |         240 |         240 |   0.00 % | OK
+05       | (2π)^k/(Γ(k)ζ(k)), k = 6                             |         504 |         504 |   0.00 % | OK
+05       | 12 = 2/(1 − ½ − ⅓)                                   |          12 |          12 |   0.00 % | OK
+05       | 1728 = 3·240 + 2·504                                 |        1728 |        1728 |   0.00 % | OK
+05       | Gedächtnis-Bindung: Umkehrpunkt (v = 1,6, γ = 0,01)  |        9.75 |       9.747 |   0.03 % | OK
+06       | Aufschaukeln im Dreieck: (Σt)(Σ1/t) − 1 ≥ 8          |           8 |           8 |   0.00 % | OK
+07       | Pólya: ν ≤ 1/(1 − 0,3405) in drei Dimensionen        |       1.516 |       1.516 |   0.03 % | OK
+07       | beide Sinne voll: (1 + 2n_B)/(1 + n_B) bei s = 1     |        1.37 |       1.368 |   0.15 % | OK
+07       | Milchstraße bei r* mit beiden Sinnen [km/s]          |         259 |       258.6 |   0.16 % | OK
+07       | Periode in Im τ: Sonnenoberfläche P >                |     2.5e+05 |   2.513e+05 |   0.51 % | OK
+07       | 220 km/s gehören zu [M☉]                             |     1.6e+11 |   1.605e+11 |   0.29 % | OK
+07       | Resonanz Re τ_M = 1.2000 in der Milchstraße [kpc]    |         5.9 |       5.948 |   0.81 % | OK
+07       | Resonanz Re τ_M = 1.2500 in der Milchstraße [kpc]    |         8.2 |       8.239 |   0.48 % | OK
+07       | Resonanz Re τ_M = 1.2857 in der Milchstraße [kpc]    |        10.9 |       10.91 |   0.09 % | OK
+07       | Resonanz Re τ_M = 1.3333 in der Milchstraße [kpc]    |          18 |       18.04 |   0.25 % | OK
+07       | Resonanz Re τ_M = 1.4000 in der Milchstraße [kpc]    |         108 |       107.5 |   0.45 % | OK
+07       | Re τ_M bei r* (Punktmasse)                           |        1.26 |       1.258 |   0.18 % | OK
+07       | Bose-Leiter: ∫ s^1 n_B ds                            |       1.645 |       1.645 |   0.00 % | OK
+07       | Bose-Leiter: ∫ s^2 n_B ds                            |       2.404 |       2.404 |   0.00 % | OK
+07       | Bose-Leiter: ∫ s^3 n_B ds                            |       6.494 |       6.494 |   0.00 % | OK
+07       | größte Zusatzbeschleunigung Punktmasse bei r/r*      |       0.628 |      0.6275 |   0.08 % | OK
+07       | größte Zusatzbeschleunigung Milchstraße [kpc]        |         5.5 |       5.471 |   0.52 % | OK
+07       | M_schein/M Reihe bei r = 3r*                         |       3.528 |       3.528 |   0.00 % | OK
+08       | r* Sonne [Lj]                                        |       0.116 |      0.1161 |   0.09 % | OK
+08       | δ(r*) = (v_flach/c)² (Milchstraße)                   |           1 |           1 |   0.00 % | OK
+08       | ISCO j = 0,9 mitläufig [3Δs]                         |        2.32 |       2.321 |   0.04 % | OK
+08       | ISCO j = 0,9 gegenläufig [3Δs]                       |        8.72 |       8.717 |   0.03 % | OK
+08       | Gravity Probe B geodätisch [mas/Jahr]                |        6606 |        6604 |   0.03 % | OK
+08       | Gravity Probe B Mitführung [mas/Jahr]                |        39.2 |        40.8 |   4.08 % | OK
+08       | Faltungsmesser GW170817 Δs_c [m]                     |         589 |       589.5 |   0.09 % | OK
+08       | Schwellenfrequenz Gravitationswellen (1 M☉) [Hz]     |       1e-13 |   1.007e-13 |   0.73 % | OK
+08       | ISS [s/Jahr]                                         |       0.021 |     0.02067 |   1.57 % | OK
+03       | M_Q heute (R_Q = R₂₀₀) [M☉]                          |     2.8e+14 |   2.833e+14 |   1.19 % | OK
+09       | Dephasierungszeit ħ/kT bei 310 K [s]                 |    2.46e-14 |   2.464e-14 |   0.16 % | OK
+09       | Debye-Länge physiologische Salzlösung 0,15 M [nm]    |        0.78 |      0.7849 |   0.63 % | OK
+03       | ν bei g/a₀ = 25 (kompakter Kugelsternhaufen, g = 2,8·10⁻⁹) |       1.007 |       1.007 |   0.03 % | OK
+03       | ν bei g/a₀ = 0,13 (Zwerggalaxie, g = 1,44·10⁻¹¹)     |         3.3 |       3.294 |   0.18 % | OK
+03       | σ Tiefgrenze 10⁷ M☉ [km/s]                           |         9.2 |       9.214 |   0.16 % | OK
+03       | σ Tiefgrenze 2·10⁸ M☉ [km/s]                         |        19.5 |       19.49 |   0.07 % | OK
+03       | Haufen: fehlender Faktor bei 100 kpc                 |         3.1 |       3.132 |   1.02 % | OK
+03       | Haufen: fehlender Faktor bei 1 Mpc                   |         1.6 |       1.614 |   0.85 % | OK
+03       | kosmische Streuung des Quadrupols                    |        0.63 |      0.6325 |   0.39 % | OK
+03       | w_s + 1 heute aus der Mindestrate                    |       1e-19 |   1.169e-19 |  16.85 % | OK
+03       | Warp: 90° bei 10,86 km/s/kpc [Mrd. Jahre]            |        0.14 |      0.1414 |   1.02 % | OK
+07       | Rückkehr als Vorgang: Anteil nach 13,8 Mrd. J. (s = 1) |        0.19 |      0.1867 |   1.72 % | OK
+07       | Rückkehr als Vorgang: Anteil nach 13,8 Mrd. J. (s = 0,3) |       0.103 |      0.1028 |   0.23 % | OK
+07       | Rückkehrzeit Kugel r* im Hubble-Volumen, Sonne [Jahre] |       3e+32 |    3.02e+32 |   0.67 % | OK
+07       | Periode in Im τ: Grenze Sonnenoberfläche             |     2.5e+05 |   2.513e+05 |   0.51 % | OK
+08       | Knotenzahl an r* Milchstraße (j = 1329)              |       5e-07 |   5.023e-07 |   0.45 % | OK
+08       | Linse I(1)                                           |       2.135 |       2.135 |   0.02 % | OK
+02       | Radius des Ladungskreises 2ℓ_P/√α [ℓ_P]              |        23.4 |       23.41 |   0.05 % | OK
+02       | Umlauf um den Ladungskreis [GeV]                     |       5e+17 |   5.215e+17 |   4.29 % | OK
+04       | Einsatz der Rückgabe 10 M☉ (Dunkle Energie konstant) [Jahre] |       4e+11 |   3.612e+11 |   9.70 % | OK
+04       | Einsatz der Rückgabe 10⁹ M☉ (nur Vakuumteil) [Jahre] |       1e+12 |   1.198e+12 |  19.79 % | OK
+03       | Warp: Aufwickeln 12–16 kpc, örtliche Regel [Mrd. Jahre] |        0.26 |      0.2572 |   1.09 % | OK
+03       | Warp: Aufwickeln 12–16 kpc, Newton [Mrd. Jahre]      |        0.28 |      0.2813 |   0.47 % | OK
+03       | Pulsare: radial Ṗ/P, örtliche Regel [s⁻¹]            |     6.3e-19 |   6.337e-19 |   0.58 % | OK
+03       | Pulsare: radial Ṗ/P, Newton [s⁻¹]                    |     4.1e-19 |   4.149e-19 |   1.19 % | OK
+08       | M_U = c⁴/(Ga₀) [kg]                                  |     1.1e+54 |     1.1e+54 |   0.02 % | OK
+08       | M_c³·M_U/m_Pl⁴                                       |           1 |           1 |   0.00 % | OK
+08       | r*/λ̄ Proton = (m_p/M_c)^{3/2}                       |         151 |       151.5 |   0.32 % | OK
+08       | r*/r₀ = 1/(2δ*) (Milchstraße)                        |           1 |           1 |   0.00 % | OK
+08       | f*_gw·π/Ω(r*)                                        |           1 |           1 |   0.00 % | OK
+07       | a₀/c = Γ(r*) = 1/τ_D [s⁻¹]                           |     3.7e-19 |   3.669e-19 |   0.83 % | OK
+07       | w = ½ bei θ = a₀/c                                   |         0.5 |         0.5 |   0.00 % | OK
+03       | Θ = 2πa₀/(cH₀) heute                                 |        1.06 |       1.055 |   0.43 % | OK
+03       | Ω_s/(1 − w) heute                                    |          78 |       78.17 |   0.22 % | OK
+03       | Zelle L·H₀/c = (8π²/(Ω_mΘ))^{1/3}                    |         6.2 |       6.203 |   0.05 % | OK
+03       | Θ für L = d_LSS                                      |        1.03 |       1.033 |   0.34 % | OK
+09       | Carter als Frequenzleiter Γ_G·ω₁³/(αω₂)⁴             |       2.944 |       2.944 |   0.00 % | OK
+
+219 Zahlen geprüft, 0 Abweichung(en).

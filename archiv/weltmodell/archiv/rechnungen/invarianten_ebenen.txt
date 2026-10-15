@@ -1,0 +1,88 @@
+Invarianten nach Ebenen (L lokal / G global / I innere Richtung) – Epoche, Beobachter, Masse
+Kern: a₀ = 1.10e-10 m/s², H₀ = 67.4 km/s/Mpc, Ω_m = 0.3134, Ω_r = 9.14e-05, Q = 5.3643, q = 0.8429
+
+0  Hintergrund je Epoche (a₀(z) aus der inneren Faltung der Zelle, Kern a0_frueh_relativ)
+   z:                                                    0          1         10       1090
+   a₀(z)/a₀(0)                                     1.0000     0.9997     0.9971     0.7588
+   H(z)/H₀                                              1      1.788      20.47  2.316e+04
+   Λ(z)/Λ(0)                                       1.0000     1.0003     1.0029     1.3178
+
+1  Kosmische Zahlen über die Epoche
+   Θ = 2πa₀/(cH)                                    1.055     0.5903     0.0514  3.458e-05
+   Ω_s = (π²/45)Θ²  [heute π²/45 = 0,2193]          0.244     0.0764    0.00058   2.62e-10
+   S_H/S_Λ (= Ω_s)                                  0.244     0.0764    0.00058   2.62e-10
+   1 − w (θ = 3H)                                 0.00313    0.00098   7.44e-06   3.37e-12
+   Ω_s/(1 − w)  [36π⁴/45 = 77,93]                 78.1716    78.0037    77.9279    77.9273
+   3H·τ_D  [heute 17,9]                             17.86      31.93      366.7  5.451e+05
+   H·τ_D  (Kac-Zeit der Schwelle, Schritt 1/H)      5.953      10.64      122.2  1.817e+05
+   ν_kosm = 1 + Q (Ω_m/Ω_b, alle Epochen)          6.3643     6.3643     6.3643     6.3643
+   (cH/2)/(π·a₀) = 1/Θ  (Randneigung Hubble-Kugel)    0.9475      1.694      19.45  2.892e+04
+   Zelle mitbewegt L = 27.59 Gpc (a₀ = 1.10e-10); Λ = 13.24 Gpc; M_U = c⁴/(Ga₀) = 1.100e+54 kg
+   L·H/c (physikalisch)                             6.203      5.544      11.55      131.7
+   (8π²/(Ω_m(z)·Θ))^{1/3} mit a₀(0)                 6.203      5.544      11.55      131.7
+   M_Q [M☉]  (∝ Θ⁴)                              2.83e+14   2.77e+13    1.6e+09    0.00043
+   Λ_s·Λ² = π⁴/15 (Vakuumteil der Wirkung)        6.49394    6.49394    6.49394    6.49394
+   a₀/c = θ_c [s⁻¹]                              3.67e-19   3.67e-19   3.66e-19   2.78e-19
+
+   Rückstellbilanz im eigenen Teilchenhorizont und Zelle gegen letzte Streufläche, je Beobachter-Epoche
+   z_Beob =   0.0: ΣΔs_b/R (eigener Horizont) = 0.0833, mit ν_kosm 0.530;  d_LSS(mitbewegt) =  27.79 Gpc, L/d_LSS = 0.993
+   z_Beob =   0.5: ΣΔs_b/R (eigener Horizont) = 0.0929, mit ν_kosm 0.592;  d_LSS(mitbewegt) =  23.88 Gpc, L/d_LSS = 1.155
+   z_Beob =   1.0: ΣΔs_b/R (eigener Horizont) = 0.0962, mit ν_kosm 0.612;  d_LSS(mitbewegt) =  20.98 Gpc, L/d_LSS = 1.315
+   z_Beob =   3.0: ΣΔs_b/R (eigener Horizont) = 0.0973, mit ν_kosm 0.620;  d_LSS(mitbewegt) =  14.76 Gpc, L/d_LSS = 1.870
+   z_Beob =  10.0: ΣΔs_b/R (eigener Horizont) = 0.0935, mit ν_kosm 0.595;  d_LSS(mitbewegt) =   8.49 Gpc, L/d_LSS = 3.249
+   z_Beob = 1090.0: ΣΔs_b/R (eigener Horizont) = 0.0357, mit ν_kosm 0.227;  (Beobachter an der Streufläche)
+   Zukunft: d_LSS wächst bis 2·(χ_1090 + Ereignishorizont) = 38.00 Gpc, L/d_LSS → 0.726
+
+2  Örtliche Zahlen der Regel: isoliert und mit äußerem Feld g_e (Beobachter in einer Umgebung)
+   Größe                                        isoliert   ⊥0,03    ∥0,03    ⊥0,1     ∥0,1  (g_e in a₀)
+   ν(r*) = 1/(1 − e⁻¹) = 1,5820                   1.5820    1.5818    1.5685    1.5797    1.5393
+   Leiter d=1: ∫(a−a_N)(r*/r)^{d−1}dlnr/a₀ [π²/6=1.6449]   1.6449    1.5414    1.4791    1.4566    1.3528
+   Leiter d=2: ∫(a−a_N)(r*/r)^{d−1}dlnr/a₀ [2ζ(3)=2.4041]   2.4041    2.3952    2.3599    2.3748    2.2865
+   Leiter d=3: ∫(a−a_N)(r*/r)^{d−1}dlnr/a₀ [π⁴/15=6.4939]   6.4939    6.4923    6.4479    6.4846    6.3493
+   R_Q/r* = 1/(−ln q) = 5.8501, a_N(R_Q)/a₀ = (ln q)² = 0.0292  (für jede Masse; epochenfest, da Ω_c/Ω_b fest)
+   q_lokal an R_Q (gleich q_kosm nur isoliert)    0.8429    0.8149    0.7840    0.7241    0.6980
+
+   Glättung ℓ/r* = (M×/M)^{1/6}, M× = a₀³/(GT²): Sonne an anderen Orten der Milchstraße (flache Kurve, T ∝ R⁻², R☉ = 8,2 kpc)
+   R =   4.0 kpc: M× = 1.842e+07 M☉, ℓ/r* = 16.25 (direkt 16.25)
+   R =   8.2 kpc: M× = 3.254e+08 M☉, ℓ/r* = 26.23 (direkt 26.23)
+   R =  16.0 kpc: M× = 4.716e+09 M☉, ℓ/r* = 40.95 (direkt 40.95)
+   R =  50.0 kpc: M× = 4.498e+11 M☉, ℓ/r* = 87.53 (direkt 87.53)
+
+   Beobachter am Sonnenort: Potentialtiefe (Newton + Regel) Φ/c² ≈ 3.50e-07 + 1.39e-07: jede Taktlesung ändert sich um ~1e-6
+   bewegter Beobachter β = 1.23e-03 [G]: Regel ist Galilei-invariant (a_N, ν, q unverändert); H aus Rotverschiebungen richtungsabhängig um β/z (z = 0,05: 2.5 %), Monopol um β² = 1.5e-06
+
+3  Massenabhängigkeit (a₀ fest)
+   Masse          Δs[m]       r*[m]       r*²λ̄/(ℓ_P²ℓ₀)  3Δsλ̄/ℓ_P²  δ*=(v_f/c)²  r*/r₀·2δ*  α∞/(2πδ*)  ν(r*)
+   Proton        4.140e-55  3.186e-14    1.0000000000  1.00000000   3.899e-41   1.000000   1.000000  1.58198
+   Sonne         4.922e+02  1.098e+15    1.0000000000  1.00000000   1.344e-12   1.000000   1.000000  1.58198
+   Milchstraße   2.953e+13  2.691e+20    1.0000000000  1.00000000   3.293e-07   1.000000   1.000000  1.58198
+   Haufen        8.368e+16  1.432e+22    1.0000000000  1.00000000   1.753e-05   1.000000   1.000000  1.58198
+   Δs(M_U)/Λ = 0.666667 (⅔);  M_Zelle = 3c²Λ/G = 1.650e+54 kg = 1.5000·M_U
+   ε_L = a₀/a_P = 1.978e-62; M_min = 4.305e-70 kg, M_c = 5.886e-29 kg, M_U = 1.100e+54 kg
+   M_min·M_U/m_Pl² = 1.00000000;  M_c³·M_U/m_Pl⁴ = 1.00000000;  Λ_s·ℓ_P² = 1.016e-122 = 4(π⁴/15)ε_L² = 1.016e-122
+   ε_L über die Epoche: z=0: 1.978e-62, z=1: 1.978e-62, z=10: 1.972e-62, z=1090: 1.501e-62
+   Kac ⟨T⟩ = 2Λ/c = τ_D = 86.4 Mrd. Jahre, für jede Masse (Schrittweite r₀ = 6Δs kürzt sich: r*² = r₀·Λ): Proton 1.000000, Sonne 1.000000, Milchstraße 1.000000, Haufen 1.000000
+   Spin ½: a_J·Δs/ℓ_P² (a_J = ħ/(2Mc)) = Proton 0.166667, Sonne 0.166667  (1/6 = 0,166667)
+   drei Raten ω_C²/(Γ_G·c/3Δs) = Proton 1.000000, Sonne 1.000000, Milchstraße 1.000000, Haufen 1.000000
+
+4  Identitäten der Konstanten (L), sternunabhängig
+   𝒞 = α_G(m_p/m_e)⁴/α¹² = 2.9441;  aus den Sternzahlen der Sonne (√𝒞)² = 2.9441
+   Stern 0,5 M☉/0,5 R☉/3800 K: 𝒞 = 2.9441  (M, R, T kürzen sich: √𝒞 = ħm_p/(3α⁶m_e²cΔs_*))
+   Stern 10 M☉/5 R☉/25000 K: 𝒞 = 2.9441  (M, R, T kürzen sich: √𝒞 = ħm_p/(3α⁶m_e²cΔs_*))
+   Sonne: L_Stefan/L☉ = 1.0000
+   Tröpfchen a_s = 17.8, a_c = 0.711, Z/A = 0.46: Maximum B/A bei A = 59.2, x = E_C/(2E_S) = 0.25000 (¼ für alle Koeffizienten)
+   Tröpfchen a_s = 18.3, a_c = 0.714, Z/A = 0.46: Maximum B/A bei A = 60.6, x = E_C/(2E_S) = 0.25000 (¼ für alle Koeffizienten)
+   Tröpfchen a_s = 16.0, a_c = 0.8, Z/A = 0.46: Maximum B/A bei A = 47.3, x = E_C/(2E_S) = 0.25000 (¼ für alle Koeffizienten)
+
+5  Formgleichheit über die Ebenen (Wert heute, z = 0)
+   Oberflächenschwere κ = c²/(2ℓ): L Sonne ℓ = r₀ = 6Δs: 1.522e+13;  G ℓ = r_H/2 = 3Δs_H: 6.548e-10 m/s²;  I: a₀ = c²/(2Λ) = 1.100e-10 m/s²
+   Temperatur T = ħ/(k·Periode): L Periode 2πc/κ_L: 6.170e-08 K;  G Periode 2π/H: 2.655e-30 K;  I Periode 2Λ/c: 2.803e-30 K
+   a₀ = c·kT_I/ħ = 1.1000e-10 (exakt, jede Epoche);  c·kT_GH/ħ = cH/2π = 1.0422e-10;  T_I/T_GH = Θ = 1.0555
+   T_I/T_GH über z: z=0: 1.055, z=1: 0.5903, z=10: 0.0514, z=1090: 3.458e-05
+   Entropie Länge²/ℓ_P²: L 36π(Δs/ℓ_P)² Sonne 1.049e+77;  G 36π(Δs_H/ℓ_P)² = πr_H²/ℓ_P² 2.265e+122 (Kern 2.265e+122);  I (45/π³)(Λ/ℓ_P)² 9.272e+122;  S_G/S_I = 0.2443 = Ω_s 0.2443
+   S_G/S_I über z: z=0: 0.244, z=1: 0.0764, z=10: 0.00058, z=1090: 2.62e-10
+   Kac-Zählung: L ν = 1/(1−q) an r* 1.5820, an R_Q 6.3643;  G ν_kosm = Ω_m/Ω_b = 6.3643;  I ⟨T⟩·H = 2ΛH/c = H·τ_D = 5.9530 (heute; z=1: 10.644)
+   geometrisches Mittel, Entartung aller drei Längen: L bei m_Pl: λ̄ = 1.6163e-35, 3Δs = 1.6163e-35, ℓ_P = 1.6163e-35 m;  G/I bei M_U: r* = 8.1705e+26, 3Δs = 8.1705e+26, ℓ₀ = 2Λ = 8.1705e+26 m
+   Hubble-Masse: 6Δs(M_H) = 1.000000·r_H (Grenzradius = Horizont, jede Epoche);  r*(M_H)/r_H = √(π/Θ) = 1.7253
+   Bose-Form auf G: q_kosm = e^(−s_k), s_k = 0.1709, ν_kosm = 1 + n_B(s_k) = 6.3643;  χ(s_k) = 0.9170
+   Zählung je Radiant: 2π − 1 = 5.2832 gegen Q = 5.3643;  heute H₀τ_D − 1 = 4.9530

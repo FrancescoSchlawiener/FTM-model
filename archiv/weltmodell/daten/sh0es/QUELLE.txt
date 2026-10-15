@@ -1,0 +1,2 @@
+SH0ES 2022 (Riess u. a. 2022, Gl. 6): ganze Leiter Cepheiden + Supernovae + Anker als lineares System, y Datenvektor, L Gleichungsmatrix, C Kovarianz (FITS); lstsq_results.txt die Lösung nach kleinsten Quadraten (letzte Zahl 5·lg H₀). Hinweis der Autoren: Die Neigung ist um −3,285 verschoben.
+https://github.com/PantheonPlusSH0ES/DataRelease, SH0ES_Data/, geladen 2026-10-12 (die Kovarianz über Git-LFS, media.githubusercontent.com, Prüfsumme wie im LFS-Zeiger), unverändert.

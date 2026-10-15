@@ -1,0 +1,179 @@
+
+====================================================================================================
+0  Eingaben
+====================================================================================================
+   H0 = 67.4 km/s/Mpc, Omega_b h^2 = 0.02237, Q = 5.364, Omega_m = Omega_b(1+Q) = 0.3134, Omega_r = 9.14e-05
+   a0 = cH0/2pi = 1.042e-10 m/s^2 (Modellwert, benutzt);  gemessen 1,2e-10 (nur Vergleich)
+   Omega_s = pi^2/45 = 0.2193  (Anteil an Omega_DE = 0.6865: 0.3195)
+   Mit a0 = 1,2e-10 waere Omega_s = (4pi^4/15)(a0/c)^2/(3H0^2) = 0.2908
+   sigma8 = 0.811, n_s = 0.965 (Planck 2018, aus dem Gedaechtnis), BBKS-Transfer mit Sugiyama-Form, delta_c = 1.686
+
+====================================================================================================
+1  Vakuumteil des Strukturterms als Zustandsgleichung
+====================================================================================================
+   L_s enthaelt (2/l0^2) Q~(q), l0 = c^2/a0; bei y = 0 (q = 1) ist Q~ = -4pi^4/15.
+   Energiedichte: rho_s c^2 = (4pi^4/15) a0^2/(8 pi G).  Mit a0 = Theta * cH/2pi:
+      rho_s = (3H^2/8piG) * (pi^2/45) * Theta^2,   also Omega_s(z) = (pi^2/45) Theta(z)^2
+   Erhaltung (Bianchi, Materie getrennt erhalten): rho_s' + 3(1+w_s) rho_s = 0, rho_s propto a0^2:
+      w_s = -1 - (2/3) dln a0 / dln a
+   Probe: rho_s/rho_krit bei a0 = cH0/2pi = 0.219325 = pi^2/45 = 0.219325
+
+====================================================================================================
+2  Bilanz des Strukturterms im Hintergrund
+====================================================================================================
+   2a  nu-Teil und projizierter Fluss (Schliessungsregel):
+       d/dt(rho_F) + 3H rho_F = -Gamma rho_F,  d/dt(rho_B) + 3H rho_B = +Gamma rho_F  =>  rho_b + rho_F + rho_B propto a^-3 exakt.
+       Die Faltungstiefe haengt nur an der Masse: Sum Delta s = G M_dyn/(3c^2). Innerhalb der Kapazitaetsgrenze R_Q gilt
+       M_dyn = (1+Q) M_b, gleich ob der Fluss frei faellt oder in Operatorform relaxiert ist. Also:
+       Sum Delta s pro mitbewegtem Volumen = G rho_m a^3 V_c /(3c^2) = const. Kein Faktor F_coll(>M), keine Massenskala.
+       Probe an der Grenze R_Q = r*/(-ln q): nu(R_Q) = 1/(1-q) = 1+Q, also Delta s_eff(R_Q) = (1+Q) G M_b/(3c^2), unabhaengig von a0:
+       M_b =  1.0e+09 M_sun, a0 = 1.04e-10: r* =     1.16 kpc, R_Q =     6.77 kpc, nu(R_Q) = 6.3640
+       M_b =  1.0e+09 M_sun, a0 = 2.08e-10: r* =     0.82 kpc, R_Q =     4.78 kpc, nu(R_Q) = 6.3640
+       M_b =  6.0e+10 M_sun, a0 = 1.04e-10: r* =     8.96 kpc, R_Q =    52.41 kpc, nu(R_Q) = 6.3640
+       M_b =  6.0e+10 M_sun, a0 = 2.08e-10: r* =     6.33 kpc, R_Q =    37.06 kpc, nu(R_Q) = 6.3640
+       M_b =  1.0e+12 M_sun, a0 = 1.04e-10: r* =    36.58 kpc, R_Q =   213.96 kpc, nu(R_Q) = 6.3640
+       M_b =  1.0e+12 M_sun, a0 = 2.08e-10: r* =    25.86 kpc, R_Q =   151.29 kpc, nu(R_Q) = 6.3640
+       M_b =  1.0e+14 M_sun, a0 = 1.04e-10: r* =   365.75 kpc, R_Q =  2139.55 kpc, nu(R_Q) = 6.3640
+       M_b =  1.0e+14 M_sun, a0 = 2.08e-10: r* =   258.62 kpc, R_Q =  1512.89 kpc, nu(R_Q) = 6.3640
+
+   2b  Bindungsteil: -(a0^2/8piG) <Q_s(y)>,  Q_s(y) = 4 int_0^s t^3/(e^t-1) dt,  s = sqrt(g/a0)
+       Verhaeltnis zum Vakuumteil: <Q_s>/(4pi^4/15). Jeder Trichter (Punktmasse M_b = f_b M) bis R_Q = r*/0,1709 bzw. bis R_200.
+       J(u) = int Q_s d^3r / r*^3:  J(1) = 11.45, J(5,85) = 36.25, J(100) = 82.81  (Schwanz (16pi/3) ln u)
+       z     <Q_s>/(4pi^4/15) bis R_Q    bis R_200      M_nl(z) [M_sun/h]
+      0.0         5.206e-07              5.623e-07      3.933e+12
+      0.5         5.787e-07              6.604e-07      6.642e+11
+      1.0         4.366e-07              5.237e-07      1.044e+11
+      2.0         1.927e-07              2.515e-07      3.044e+09
+      3.0         8.458e-08              1.182e-07      1.166e+08
+
+       Lineares Feld zwischen den Trichtern: g_pec(k) = (3/2) Omega_m(z) H^2 a delta_k / k,  <Q_s> ~ (4/3)<(g/a0)^(3/2)>
+       z = 0: sigma_g = 1.02e-12 m/s^2 = 9.75e-03 a0(z),  <Q_s>/(4pi^4/15) = 4.66e-05
+       z = 1: sigma_g = 2.47e-12 m/s^2 = 1.33e-02 a0(z),  <Q_s>/(4pi^4/15) = 7.39e-05
+
+====================================================================================================
+3  Rueckkopplung H <-> a0 <-> rho_s als Fixpunkt
+====================================================================================================
+   Friedmann mit dem Vakuumteil:  E^2 = R(a) + Omega_s Theta^2 E^2,   R(a) = Omega_m a^-3 + Omega_r a^-4 + Omega_Lr
+   Abbildung T(E^2) = R + Omega_s Theta^2 E^2 hat dT/dE^2 = Omega_s Theta^2 <= 0,219 < 1: Kontraktion,
+   also genau ein Fixpunkt  E^2 = R/(1 - Omega_s Theta^2), und er ist stabil (Iteration konvergiert mit Faktor 0,219 je Schritt).
+   Dimensionsargument: a0 = c k T/hbar mit T propto hbar H/k -> hbar und k fallen heraus. Aus G, c, H laesst sich
+   genau eine Masse bilden: M_H = c^3/(2GH). Heute:
+      M_H = 4.65e+22 M_sun,  sigma(M_H) = 1.10e-01,  F_coll(>M_H) = erfc(nu/sqrt2) = 8.5e-53
+   Die Schwelle legt ebenfalls keine Masse fest: an der Umkehr (rho = 5,55 rho_m) gilt fuer die baryonische Neigung
+      g_N(R_ta)/a0 = (9pi^2/16)(Omega_b/2) H^2 R /(cH/2pi) = 17,4 Omega_b * H R/c, unabhaengig von der Masse bis auf R:
+      M = 1e+10 M_sun/h: R_ta = 0.253 Mpc, g_N(R_ta)/a0 = 4.87e-05
+      M = 1e+12 M_sun/h: R_ta = 1.173 Mpc, g_N(R_ta)/a0 = 2.26e-04
+      M = 1e+14 M_sun/h: R_ta = 5.446 Mpc, g_N(R_ta)/a0 = 1.05e-03
+      M = 1e+15 M_sun/h: R_ta = 11.734 Mpc, g_N(R_ta)/a0 = 2.26e-03
+   -> jede gebundene Struktur liegt an ihrem Rand tief unter der Schwelle; die Schwelle schneidet keine Masse heraus.
+
+   3b  Theta = 1 (T = hbar H/2pi k, a0 = cH/2pi zu jeder Zeit):
+   Theta=1: w(z=0/0,5/1/2) = -0.872/-0.668/-0.459/-0.201;  w0 = -0.872, w_a = +0.168 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -0.977, w_a = +1.074 
+       Omega_s(z) = 0.2193 zu jeder Zeit. Friedmann: H^2 = (8piG/3) rho /(1-Omega_s): G_kos/G = 1.2809
+       Strahlungsaera: Delta N_eff-Aequivalent = 2.09;  Rekombination: Anteil am Gesamtbudget 0.219
+
+   3c  Theta = 1 - eps/2, eps = -dlnH/dln a (Temperatur des dynamischen Horizonts, T = (hbar H/2pi k)(1 - eps/2)).
+       Gleichbedeutend: Theta = (rho - 3p)/(4 rho) = Spur/(4 rho): Strahlung 0, Staub 1/4, Vakuum 1.
+       Rueckkopplung jetzt differentiell: eps enthaelt dH/dt, also auch rho_s. Mit v = -ln(1 - Omega_s Theta^2):
+          v' = 4 (Theta(v) - Theta_R(a)),   Theta_R = 1 - eps_R/2 aus Materie, Strahlung, Omega_Lr allein.
+       Abweichungen von der langsamen Loesung wachsen vorwaerts mit der Rate dv'/dv = 2(1 - Omega_s Theta^2)/(Omega_s Theta) je e-Faltung.
+       Langsame Loesung: Theta = Theta_R + Omega_s Theta Theta'/(2(1 - Omega_s Theta^2)), iteriert; Theta_0 je Iteration: 0.7762, 0.7804, 0.7784, 0.7770, 0.7771, 0.7771  (asymptotische Reihe; Streuung = Unsicherheit)
+       Fixpunkt: Theta_0 = 0.7770, Omega_s,0 = 0.1324, Omega_Lr = 0.5541
+       z =        0: Theta = 0.7770, Omega_s(z) = 1.324e-01, a0(z)/a0(0) = 1.000  (Atmen a0 propto H: 1.000);  Wachstumsrate der Abweichung 10.2 je e-Faltung
+       z =      0.5: Theta = 0.5452, Omega_s(z) = 6.519e-02, a0(z)/a0(0) = 0.921  (Atmen a0 propto H: 1.313);  Wachstumsrate der Abweichung 15.6 je e-Faltung
+       z =        1: Theta = 0.4034, Omega_s(z) = 3.570e-02, a0(z)/a0(0) = 0.925  (Atmen a0 propto H: 1.781);  Wachstumsrate der Abweichung 21.8 je e-Faltung
+       z =        2: Theta = 0.3008, Omega_s(z) = 1.985e-02, a0(z)/a0(0) = 1.174  (Atmen a0 propto H: 3.032);  Wachstumsrate der Abweichung 29.7 je e-Faltung
+       z =        5: Theta = 0.2562, Omega_s(z) = 1.440e-02, a0(z)/a0(0) = 2.745  (Atmen a0 propto H: 8.324);  Wachstumsrate der Abweichung 35.1 je e-Faltung
+       z =     1090: Theta = 0.1906, Omega_s(z) = 7.971e-03, a0(z)/a0(0) = 5700.200  (Atmen a0 propto H: 23233.225);  Wachstumsrate der Abweichung 47.5 je e-Faltung
+       z =    10000: Theta = 0.0642, Omega_s(z) = 9.031e-04, a0(z)/a0(0) = 91533.839  (Atmen a0 propto H: 1108352.424);  Wachstumsrate der Abweichung 142 je e-Faltung
+       z =    1e+09: Theta = 0.0000, Omega_s(z) = 1.611e-13, a0(z)/a0(0) = 10548844306.768  (Atmen a0 propto H: 9564306229916262.000);  Wachstumsrate der Abweichung 1.06e+07 je e-Faltung
+       Probe: exakte Differentialgleichung rueckwaerts mit diesem Theta_0: Theta(z=1) = 0.4033 (langsam 0.4033), Theta(z=1090) = 0.1906 (langsam 0.1906)
+   Theta=1-eps/2: w(z=0/0,5/1/2) = -1.023/-1.017/-0.974/-0.849;  w0 = -1.023, w_a = -0.013 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.072, w_a = +0.238 
+       rho_s hat ein Minimum bei z = 0.729; Beginn der Beschleunigung (eps = 1) bei z = 0.624
+       a0 heute = Theta_0 cH0/2pi = 8.098e-11 m/s^2 (H0 = 67,4)
+
+       Schar der exakten Loesungen, Parameter Theta_0 = 2 pi a0(0)/(c H0) (Integrationskonstante), rueckwaerts integriert:
+       Theta_0 = 0.6000                          Omega_Lr = 0.6076, eps_0 = +0.800:
+            : w(z=0/0,5/1/2) = -0.685/-1.015/-0.980/-0.862;  w0 = -0.685, w_a = -2.103 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -0.944, w_a = -0.026 
+       Theta_0 = 0.7000                          Omega_Lr = 0.5791, eps_0 = +0.600:
+            : w(z=0/0,5/1/2) = -0.876/-1.016/-0.977/-0.855;  w0 = -0.876, w_a = -0.753 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.012, w_a = +0.113 
+       Theta_0 = 0.7770 langsame Loesung         Omega_Lr = 0.5541, eps_0 = +0.446:
+            : w(z=0/0,5/1/2) = -1.024/-1.017/-0.974/-0.849;  w0 = -1.024, w_a = -0.018 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.072, w_a = +0.239 
+       Theta_0 = 0.9000                          Omega_Lr = 0.5089, eps_0 = +0.200:
+            : w(z=0/0,5/1/2) = -1.261/-1.019/-0.968/-0.836;  w0 = -1.261, w_a = +0.749 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.188, w_a = +0.476 
+       Theta_0 = 1.0000                          Omega_Lr = 0.4672, eps_0 = +0.000:
+            : w(z=0/0,5/1/2) = -1.454/-1.021/-0.961/-0.823;  w0 = -1.454, w_a = +1.082 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.301, w_a = +0.709 
+       Theta_0 = 1.1086 a0 = 1,2e-10, H0 = 70    Omega_Lr = 0.4170, eps_0 = -0.217:
+            : w(z=0/0,5/1/2) = -1.665/-1.024/-0.952/-0.804;  w0 = -1.665, w_a = +1.209 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.448, w_a = +1.011 
+       Theta_0 = 1.1514 a0 = 1,2e-10, H0 = 67,4  Omega_Lr = 0.3958, eps_0 = -0.303:
+            : w(z=0/0,5/1/2) = -1.748/-1.025/-0.948/-0.795;  w0 = -1.748, w_a = +1.200 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -1.514, w_a = +1.147 
+
+   3d  a0 = c^2/L, L mitbewegt fest (a0 propto 1+z), Normierung a0(0) = cH0/2pi:
+   Zelle: w(z=0/0,5/1/2) = -0.787/-0.658/-0.565/-0.461;  w0 = -0.787, w_a = +0.145 (Ableitung bei a=1);  CPL-Fit 0<z<2: w0 = -0.815, w_a = +0.509 (w_s = -1/3 exakt)
+
+====================================================================================================
+4  Was die DESI-Zahlen von a0(z) verlangen (w0, w_a aus dem Gedaechtnis, DESI DR2 + CMB + SN)
+====================================================================================================
+   rho_s(z) = rho_DE,CPL(z) - (Omega_DE - Omega_s),  a0(z)^2/a0(0)^2 = rho_s(z)/Omega_s
+   Kombination      z=0.0   z=0.25  z=0.5   z=0.75  z=1.0   z=1.5   z=2.0   z=2.5   z=3.0    Nullstelle von a0^2   Maximum bei z
+   Pantheon+        +1.000  +1.101  +1.097  +1.044  +0.965  +0.764  +0.510  -0.129  -0.500      z = 2.47              0.35
+   DESY5            +1.000  +1.162  +1.176  +1.120  +1.027  +0.779  +0.442  -0.386  -0.656      z = 2.27              0.41
+   Union3           +1.000  +1.223  +1.256  +1.199  +1.094  +0.806  +0.393  -0.499  -0.754      z = 2.18              0.44
+   (Eintraege: a0(z)/a0(0); negativ heisst a0^2 < 0, d.h. der Vakuumteil allein reicht nicht.)
+   Zum Vergleich Atmen a0 propto H:    1.000   1.140   1.321   1.538   1.787   2.364   3.026   3.760   4.557
+   Mit a0 = 1,2e-10 (Omega_s = 0,292):
+   Pantheon+        +1.000  +1.077  +1.074  +1.033  +0.974  +0.828  +0.665  +0.483  +0.239      z = 3.18
+   DESY5            +1.000  +1.125  +1.135  +1.092  +1.020  +0.839  +0.627  +0.366  -0.280      z = 2.80
+   Union3           +1.000  +1.172  +1.198  +1.153  +1.072  +0.858  +0.602  +0.240  -0.429      z = 2.61
+
+   Benoetigte Steigung heute: dln a0/dln a = -3(1+w0) Omega_DE/(2 Omega_s):
+   Pantheon+     : -0.761   (Atmen a0 propto H: -0.470; Zelle: -1; Theta=1-eps/2: +0.183)
+   DESY5         : -1.164   (Atmen a0 propto H: -0.470; Zelle: -1; Theta=1-eps/2: +0.183)
+   Union3        : -1.564   (Atmen a0 propto H: -0.470; Zelle: -1; Theta=1-eps/2: +0.183)
+
+====================================================================================================
+5  Strukturabhaengige Rueckstellung rho_R = rho_Lr + Omega_s S(a)/S(1), Amplitude fest: beta = Omega_s/Omega_DE
+====================================================================================================
+   beta = 0.3195 (nicht angepasst).  S1 = F_coll(>M,a) sqrt(H/H0)/a   (Delta s_eff propto sqrt(a0), R propto a)
+                                         S2 = F_coll(>M,a)/a            (Kapazitaetsgrenze R_Q: Delta s_eff unabhaengig von a0)
+   a) skalenfrei, M = M_nl(z) (Kollapsbedingung sigma(M,z) = delta_c als Fixpunkt):
+      F_coll(>M_nl(z)) = erfc(1/sqrt2) = 0.3173 fuer jedes z (Press-Schechter ist selbstaehnlich in nu = delta_c/sigma)
+   M = M_nl(z):                       S1: w0 = -0.905, w_a = +0.418, z_max(S) = > 3 (faellt)   S2: w0 = -0.903, w_a = +0.134, z_max(S) = > 3 (faellt)
+   b) skalenfrei, M = M_H(z) = c^3/(2GH): F_coll = 0, kein Beitrag.
+   b') M -> 0 (alle Masse traegt ihre Faltung; Schliessungsregel: der Fluss faltet von Anfang an mit):
+   F_coll = 1:                        S1: w0 = -0.905, w_a = +0.418, z_max(S) = > 3 (faellt)   S2: w0 = -0.903, w_a = +0.134, z_max(S) = > 3 (faellt)
+   c) feste Masse M (Abtastung):
+   M = 10^10.00 M_sun/h (nu0 = 0.47): S1: w0 = -0.859, w_a = -0.119, z_max(S) = 1.94   S2: w0 = -0.885, w_a = -0.239, z_max(S) = 1.12
+   M = 10^10.25 M_sun/h (nu0 = 0.50): S1: w0 = -0.857, w_a = -0.157, z_max(S) = 1.76   S2: w0 = -0.885, w_a = -0.261, z_max(S) = 1.01
+   M = 10^10.50 M_sun/h (nu0 = 0.53): S1: w0 = -0.854, w_a = -0.196, z_max(S) = 1.59   S2: w0 = -0.886, w_a = -0.283, z_max(S) = 0.90
+   M = 10^10.75 M_sun/h (nu0 = 0.57): S1: w0 = -0.852, w_a = -0.239, z_max(S) = 1.43   S2: w0 = -0.887, w_a = -0.306, z_max(S) = 0.80
+   M = 10^11.00 M_sun/h (nu0 = 0.60): S1: w0 = -0.851, w_a = -0.282, z_max(S) = 1.26   S2: w0 = -0.890, w_a = -0.328, z_max(S) = 0.70
+   M = 10^11.25 M_sun/h (nu0 = 0.65): S1: w0 = -0.851, w_a = -0.327, z_max(S) = 1.10   S2: w0 = -0.894, w_a = -0.347, z_max(S) = 0.60
+   M = 10^11.50 M_sun/h (nu0 = 0.70): S1: w0 = -0.853, w_a = -0.369, z_max(S) = 0.95   S2: w0 = -0.900, w_a = -0.363, z_max(S) = 0.50
+   M = 10^11.75 M_sun/h (nu0 = 0.75): S1: w0 = -0.857, w_a = -0.407, z_max(S) = 0.80   S2: w0 = -0.909, w_a = -0.373, z_max(S) = 0.41
+   M = 10^12.00 M_sun/h (nu0 = 0.81): S1: w0 = -0.865, w_a = -0.436, z_max(S) = 0.65   S2: w0 = -0.922, w_a = -0.373, z_max(S) = 0.32
+   M = 10^12.25 M_sun/h (nu0 = 0.89): S1: w0 = -0.879, w_a = -0.450, z_max(S) = 0.51   S2: w0 = -0.939, w_a = -0.360, z_max(S) = 0.23
+   M = 10^12.50 M_sun/h (nu0 = 0.97): S1: w0 = -0.901, w_a = -0.441, z_max(S) = 0.38   S2: w0 = -0.962, w_a = -0.328, z_max(S) = 0.15
+   M = 10^12.75 M_sun/h (nu0 = 1.06): S1: w0 = -0.931, w_a = -0.402, z_max(S) = 0.25   S2: w0 = -0.993, w_a = -0.275, z_max(S) = 0.07
+   M = 10^13.00 M_sun/h (nu0 = 1.17): S1: w0 = -0.972, w_a = -0.330, z_max(S) = 0.13   S2: w0 = -1.030, w_a = -0.197, z_max(S) = 0 (steigt)
+   M = 10^13.25 M_sun/h (nu0 = 1.29): S1: w0 = -1.022, w_a = -0.223, z_max(S) = 0.02   S2: w0 = -1.074, w_a = -0.097, z_max(S) = 0 (steigt)
+   M = 10^13.50 M_sun/h (nu0 = 1.44): S1: w0 = -1.079, w_a = -0.088, z_max(S) = 0 (steigt)   S2: w0 = -1.124, w_a = +0.023, z_max(S) = 0 (steigt)
+   M = 10^13.75 M_sun/h (nu0 = 1.61): S1: w0 = -1.141, w_a = +0.064, z_max(S) = 0 (steigt)   S2: w0 = -1.177, w_a = +0.155, z_max(S) = 0 (steigt)
+   M = 10^14.00 M_sun/h (nu0 = 1.81): S1: w0 = -1.204, w_a = +0.222, z_max(S) = 0 (steigt)   S2: w0 = -1.231, w_a = +0.291, z_max(S) = 0 (steigt)
+   M = 10^14.25 M_sun/h (nu0 = 2.06): S1: w0 = -1.265, w_a = +0.376, z_max(S) = 0 (steigt)   S2: w0 = -1.285, w_a = +0.427, z_max(S) = 0 (steigt)
+   M = 10^14.50 M_sun/h (nu0 = 2.35): S1: w0 = -1.322, w_a = +0.522, z_max(S) = 0 (steigt)   S2: w0 = -1.336, w_a = +0.558, z_max(S) = 0 (steigt)
+
+   Naechste Punkte zu DESY5 (w0 = -0,752, w_a = -0,86; Fehler etwa 0,06 bzw. 0,22, aus dem Gedaechtnis), ohne Korrelation:
+      S1: M = 10^12.00 M_sun/h, nu0 = 0.81, w0 = -0.865, w_a = -0.436, Abstand 2.7 (quadr. Summe der Einzelabstaende)
+          M_nl(z) = M bei z = 0.39  (M_nl(0) = 3.93e+12 M_sun/h)
+      S2: M = 10^11.25 M_sun/h, nu0 = 0.65, w0 = -0.894, w_a = -0.347, Abstand 3.3 (quadr. Summe der Einzelabstaende)
+          M_nl(z) = M bei z = 0.86  (M_nl(0) = 3.93e+12 M_sun/h)
+
+====================================================================================================
+6  Zusammenfassung
+====================================================================================================
+   Bindungsteil <Q_s>/(4pi^4/15) heute: 5.2e-07  -> kein Hebel auf w.
+   Theta = 1       : CPL w0 = -0.977, w_a = +1.074; Delta N_eff-Aequivalent 2.09
+   Theta = 1-eps/2 : CPL w0 = -1.072, w_a = +0.238; Omega_s(z=1090) = 0.0080, BBN 0, Theta_0 = 0.7770
+   Zelle a0 prop 1+z: CPL w0 = -0.815, w_a = +0.509
+   DESI verlangt a0(z)/a0(0) mit Maximum bei z ~ 0,3-0,5 und Abfall zu hohem z; Atmen (a0 propto H) steigt monoton.

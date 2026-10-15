@@ -1,0 +1,81 @@
+0  Eingaben: A0 = 1.10e-10 m/s², H(z) aus E_hintergrund (Ω_m = 0.3134)
+   z = 0.9: E(z) = 1.6844, a0_fest/A0 = 0.99945, a0_H/A0 = 1.6844
+   z = 1.5: E(z) = 2.3637, a0_fest/A0 = 0.99927, a0_H/A0 = 2.3637
+   z = 2.0: E(z) = 3.0258, a0_fest/A0 = 0.99913, a0_H/A0 = 3.0258
+   z = 2.3: E(z) = 3.4583, a0_fest/A0 = 0.99904, a0_H/A0 = 3.4583
+   z = 2.5: E(z) = 3.7600, a0_fest/A0 = 0.99898, a0_H/A0 = 3.7600
+   R_e = 1,678 R_d (Exponentialscheibe); Gas in der Scheibe; Bulge Hernquist a_b = R_e,b/1,815 mit R_e,b = 1 kpc [G]
+
+1  f_DM(R_e) = 1 − a_N/a = q = e^{−√(a_N/a₀)} (örtliche Regel, Scheibe in der Ebene)
+   Typische Scheiben [G]: M_b, R_e, Bulgeanteil B/T
+   Galaxie        M_b[M☉]   R_e[kpc]  B/T   a_N(R_e)/A0   f_DM fest   f_DM a0∝H   Σ_b(<R_e)[M☉/pc²]
+   z≈0,9         7.0e+10    6.0     0.1    1.593        0.283       0.378          309
+   z≈1,5         1.0e+11    5.5     0.2    2.787        0.188       0.338          526
+   z≈2,3         1.2e+11    4.5     0.3    5.073        0.105       0.298          943
+   z≈2,3 groß    1.2e+11    7.0     0.2    2.085        0.236       0.460          390
+   f_DM hängt bei festem a₀ nur an a_N(R_e)/a₀, also an der Flächendichte; a₀ ∝ H hebt es bei gleicher Scheibe mit z.
+
+   Raster (reine Scheibe, B/T = 0): f_DM(R_e) fest / a₀∝H bei z = 1 und z = 2
+   M_b \ R_e     3 kpc              5 kpc              7 kpc              9 kpc
+   3e+10   0.20 | 0.30/0.39   0.38 | 0.48/0.57   0.50 | 0.59/0.67   0.58 | 0.67/0.73
+   6e+10   0.10 | 0.18/0.27   0.25 | 0.36/0.45   0.37 | 0.48/0.57   0.46 | 0.56/0.64
+   1e+11   0.05 | 0.11/0.18   0.17 | 0.26/0.36   0.28 | 0.39/0.48   0.37 | 0.48/0.57
+   2e+11   0.02 | 0.04/0.09   0.08 | 0.15/0.24   0.17 | 0.26/0.36   0.25 | 0.35/0.45
+   (je Feld: fest | a₀∝H bei z=1 / z=2)
+
+   Welche Flächendichte gibt die gemessenen Mediane [S: RC100-Abstract im Suchtreffer] 0,38 (z≈1) und 0,27 (z≈2)?
+   f_DM = 0.38 bei z = 1: a_N(R_e)/a₀ = 0.936 (fest), bei a₀∝H verlangt a_N(R_e)/A0 = 1.673 (1.79-fach)
+   f_DM = 0.27 bei z = 2: a_N(R_e)/a₀ = 1.714 (fest), bei a₀∝H verlangt a_N(R_e)/A0 = 5.187 (3.03-fach)
+   f_DM = 0.28 bei z = 2: a_N(R_e)/a₀ = 1.620 (fest), bei a₀∝H verlangt a_N(R_e)/A0 = 4.903 (3.03-fach)
+   Steigung an der Stelle: d f_DM/d log a₀ = f·s·ln10/2 (s = √(a_N/a₀)); a₀∝H verschiebt log a₀ um log E(z):
+   gleiche Scheibe, f_DM fest = 0.38 → a₀∝H bei z = 1: 0.48
+   gleiche Scheibe, f_DM fest = 0.27 → a₀∝H bei z = 2: 0.47
+   Empfindlichkeit: d f_DM/d log a_N = −f·s·ln10/2; ein Fehler von 0,1 / 0,2 dex in M_b verschiebt f_DM:
+   f = 0.38: 0.423 je dex → ±0.042 / ±0.085; Abstand fest ↔ a₀∝H bei gleicher Scheibe: 0.10
+   f = 0.27: 0.407 je dex → ±0.041 / ±0.081; Abstand fest ↔ a₀∝H bei gleicher Scheibe: 0.20
+   Median aus N Galaxien mit Streuung 0,23 / 0,18 [S]: Fehler 0,23/√50 = 0.033, 0,18/√50 = 0.025
+
+2  Tully-Fisher-Nullpunkt
+   tiefer Grenzfall v⁴ = G M_b a₀: bei festem v Δlog M_b = −log(a₀(z)/a₀(0))
+   z = 0.9: fest +0.0002 dex, a₀∝H -0.226 dex
+   z = 1.5: fest +0.0003 dex, a₀∝H -0.374 dex
+   z = 2.3: fest +0.0004 dex, a₀∝H -0.539 dex
+   am Ort v(2,2 R_d) derselben Scheibe (R_d fest), M_b bei gleichem v gesucht:
+   z≈0,9        v(2,2R_d) = 220.9 km/s (fest), 238.6 (a₀∝H);  Δlog M_b bei festem v = -0.099 dex;  log M_b − log(v⁴/Ga₀) fest = -0.368
+   z≈1,5        v(2,2R_d) = 258.2 km/s (fest), 289.2 (a₀∝H);  Δlog M_b bei festem v = -0.144 dex;  log M_b − log(v⁴/Ga₀) fest = -0.484
+   z≈2,3        v(2,2R_d) = 294.5 km/s (fest), 339.0 (a₀∝H);  Δlog M_b bei festem v = -0.175 dex;  log M_b − log(v⁴/Ga₀) fest = -0.633
+   z≈2,3 groß   v(2,2R_d) = 260.4 km/s (fest), 314.6 (a₀∝H);  Δlog M_b bei festem v = -0.260 dex;  log M_b − log(v⁴/Ga₀) fest = -0.420
+   Gemessen [S, Übler 2017 Suchtreffer]: bei festem v höhere M_b bei z≈2,3 als bei z≈0,9 (positiver Nullpunktgang);
+   a₀∝H verlangt das Gegenteil (niedrigere M_b bei höherem z). Zahlenwerte der Messung nicht geholt.
+
+3  Druckstütze (Burkert 2010 [G]): v_c² = v_rot² + 2σ₀² R/R_d, bei R_e: 3,36 σ₀²
+   z≈0,9        σ₀ = 30 km/s: v_c = 212.7, v_rot = 205.5 km/s; f_DM korrigiert 0.283, ohne Korrektur +0.232 (Δ = -0.051)
+   z≈0,9        σ₀ = 50 km/s: v_c = 212.7, v_rot = 191.9 km/s; f_DM korrigiert 0.283, ohne Korrektur +0.120 (Δ = -0.163)
+   z≈1,5        σ₀ = 30 km/s: v_c = 253.1, v_rot = 247.1 km/s; f_DM korrigiert 0.188, ohne Korrektur +0.148 (Δ = -0.040)
+   z≈1,5        σ₀ = 50 km/s: v_c = 253.1, v_rot = 236.0 km/s; f_DM korrigiert 0.188, ohne Korrektur +0.066 (Δ = -0.122)
+   z≈2,3        σ₀ = 30 km/s: v_c = 294.2, v_rot = 289.1 km/s; f_DM korrigiert 0.105, ohne Korrektur +0.073 (Δ = -0.032)
+   z≈2,3        σ₀ = 50 km/s: v_c = 294.2, v_rot = 279.6 km/s; f_DM korrigiert 0.105, ohne Korrektur +0.009 (Δ = -0.096)
+   z≈2,3 groß   σ₀ = 30 km/s: v_c = 254.6, v_rot = 248.6 km/s; f_DM korrigiert 0.236, ohne Korrektur +0.198 (Δ = -0.037)
+   z≈2,3 groß   σ₀ = 50 km/s: v_c = 254.6, v_rot = 237.6 km/s; f_DM korrigiert 0.236, ohne Korrektur +0.122 (Δ = -0.114)
+   Die Korrektur gilt für die Bahn wie in Newton (Jeans, radiales Gleichgewicht); die Regel ändert a, nicht den Druckterm.
+   Vergleich also mit v_c (korrigiert), wie die Quellen es tun.
+
+4  Preisach: frisch kollabierte Galaxien (Hernquist M_b = 6·10¹⁰, a = 2,57 kpc; g/g_RAR − 1 aus gewicht_preisach.txt)
+   Fall             R[kpc]  δg/g     a_N/A0   χ      dlng/dlnM   Δlog v [dex]  Δlog M_b [dex]   N(3σ) bei 0,10 / 0,15 / 0,20 dex
+   z_c=3,4 → z=2     10    +0.0193   0.481   0.693   0.654       +0.0042       +0.0127             558 /   1255 /   2231
+   z_c=3,4 → z=2     20    +0.0093   0.149   0.819   0.590       +0.0020       +0.0068            1941 /   4367 /   7764
+   z_c=1 → z=0,5     10    -0.0173   0.481   0.693   0.654       -0.0038       -0.0116             669 /   1506 /   2677
+   z_c=1 → z=0,5     20    -0.0402   0.149   0.819   0.590       -0.0089       -0.0302              99 /    222 /    395
+   z_c=1 → z=0,5     50    -0.0613   0.028   0.919   0.540       -0.0137       -0.0508              35 /     78 /    139
+   Δlog M_b: Masse, die bei gleichem g am selben Ort die Abweichung vortäuscht (M_b bei festem R und g).
+   Systematik: ein gemeinsamer Fehler im Masse-zu-Licht (SPARC: Υ_d 0,4–0,6 verschiebt a₀ um 0,9–1,5·10⁻¹⁰) bleibt bei jedem N;
+   für 3σ muss dieser gemeinsame Nullpunkt der Massen auf Δ/3 = 0.0042 dex stimmen (z=2, 10 kpc).
+   in v gemessen (Δlog v = 0,0042 dex): N(3σ) bei 0,03 / 0,05 dex Fehler je Galaxie = 459 / 1276
+   Zum Maß: a₀∝H gäbe bei z = 2 an derselben Stelle g/g_RAR − 1 = +0.522 (Faktor 27 über dem Preisach-Signal)
+
+5  Handprüfung
+   E(2) = √(0,3134·27 + 9,14e-5·81 + 0,6865) = √(8,4618 + 0,0074 + 0,6865) = √9,1557 = 3.0258; Kern 3.0258
+   → Δlog M_b (tief, a₀∝H, z=2) = −log 3,0258 = −0,4809
+   N(3σ), z=2, 10 kpc, σ = 0,15: Δ = log(1,0193)/(1−χ/2); Kern-χ s. o.; (3·0,15/Δ)²
+   von Hand: M(<10) = 6e10·(10/12,57)² = 3.798e+10 M☉; a_N = 5.293e-11 m/s²; s = 0.6937; χ = 0.6929; Δ = 0.01270 dex; N = 1255
+   f_DM von Hand: a_N/a₀ = 1 → q = e^{−1} = 0,368; a_N/a₀ = 2 → e^{−1,414} = 0,243; Kern: 0.368, 0.243

@@ -1,0 +1,41 @@
+0  Beide Lesungen in der einen Gleichung ∂_t u + (Γ + θ)u = D∂_ϖ²u, stationär, Rand u(0) = 1, u beschränkt:
+   L: u_x(ϖ) = e^{−ϖ√((|g_i(x) + g_e|/c + θ̃)/D)},  q(x) = u_x(ϖ_R),  a(x) = ν(x)·(g_i + g_e) − A
+   G: u_x(ϖ) = e^{−ϖ√((|g_i(x)|/c + θ̃)/D)};  g_e wirkt nur als gemeinsamer Fall A (Monopol 0) und über θ̃ des Bereichs
+   Gebundener Satellit im Bereich des Wirts: θ̃ = 0 (w = 0) ⇒ G = isoliert.  θ̃ > 0 gibt s² = s_i² + θ̃τ_D = gleichgerichtete Form.
+
+1  Druckgestützte Systeme, a₀ = 1.10e-10 m/s²; σ_los(R < R_e) [km/s]; Eingaben und Messwerte [G] aus glaettung_stetig/zwerge_aussenfeld
+   System      g_i(r½)     g_e  ℓ[kpc]  Newton       L     G-a  G-b r½   G-b ℓ   gemessen [G]      Abstand in σ: L | G-a
+   Pal 14       0.0122  0.0151    0.34    0.66    1.78    2.06    2.06    5.49    0.38 +0.12/−0.12    +11.6 |  +14.0
+   Crater II    0.0001  0.0055    1.42    0.40    1.39    4.03    4.01    3.42    2.70 +0.3/−0.3     -4.4 |   +4.4
+   Draco        0.0044  0.0132    1.12    1.20    3.33    4.74    4.72    7.75    9.10 +1.2/−1.2     -4.8 |   -3.6
+   Fornax       0.0295  0.0035    8.90    5.55   13.96   14.01   13.96   35.10   11.70 +0.9/−0.9     +2.5 |   +2.6
+   DF2          0.0154  0.0198    6.99    7.04   17.70   20.70   20.63   26.72    8.50 +2.3/−3.1     +3.0 |   +3.9
+   DF4          0.0218  0.0047   13.10    7.15   19.21   19.38   19.31   39.54    4.20 +4.4/−2.2     +6.8 |   +6.9
+   (g in a₀; L = Feldform/örtliche Regel mit Monopol; G-a = eigenes Gefälle am Ort; G-b = ν fest vom Rand r½ bzw. ℓ)
+   Richtung, die die Messung verlangt, gegen L:  Pal 14 runter (G-a hoch),  Crater II hoch (G-a hoch),  Draco hoch (G-a hoch),  Fornax runter (G-a hoch),  DF2 runter (G-a hoch),  DF4 runter (G-a hoch)
+   innerhalb 2σ: L 0 von 6,  G-a 0 von 6
+
+2  SPARC (Q ≤ 2, i ≥ 30°, Υ_d = 0,5, Υ_b = 0,7, Gasdruck 8 km/s): 149 Galaxien, 3150 Punkte
+   Regel                         Rest Median  Streuung [dex] | d ln v/d ln r der äußersten 3 Punkte: gemessen, Regel, Median Δ
+   L, g_e = 0 (= G-a)                 +0.010      0.165     | +0.098  +0.058  -0.009
+   L, g_e = 0,01 senkrecht            +0.012      0.166     | +0.098  +0.040  +0.017
+   L, g_e = 0,03 senkrecht            +0.020      0.171     | +0.098  -0.027  +0.066
+   L, g_e = 0,03 gleichgerichtet      +0.046      0.175     | +0.098  -0.057  +0.099
+   G-b, ν fest am äußersten Punkt     -0.189      0.267     | +0.098  -0.283  +0.278
+   G-b, ν fest am Median-Punkt        +0.029      0.236     | +0.098  -0.283  +0.278
+   G-b hat dieselbe Form wie Newton (v² ∝ V_bar²): die Außenkurven fallen wie die baryonischen, die Streuung wächst.
+
+3  Warp: freie Knotenpräzession eines wenig geneigten Rings, ω_p = Ω − ν_z [km/s/kpc] (> 0 rechtläufig); Messung +10,9 [G]
+   Miyamoto-Nagai 6·10¹⁰ M☉, a = 3, b = 0,3 kpc [A] (wie ringe_oertlich); Lokale Gruppe g_e [A]
+   R[kpc]   Newton  G (=L, g_e=0)  L ⟂ 0,01  L ⟂ 0,03  L Ebene 0,03  G-b ν(ℓ_MW)
+     12.0   -26.80         -38.01    -38.00    -37.95        -38.04      -195.41
+     14.0   -21.57         -32.15    -32.15    -32.08        -32.21      -157.28
+     16.0   -17.82         -27.82    -27.81    -27.71        -27.89      -129.93
+     20.0   -12.89         -21.87    -21.84    -21.64        -21.97       -94.01
+   (G-b: ν fest vom Rand ℓ_MW = 459 kpc, ν = 53.2; ω_p = √ν·ω_N)
+   Ein homogenes g_e hat über den Ring kein Moment (G: exakt 0); in L bleibt nur l = 2 ∝ g_e² (warp_amplitude: ≤ 0,02 km/s/kpc).
+
+4  Von Hand
+   DF2 isoliert, tiefer Grenzfall σ⁴ = (4/81)GMa₀: GM = 2.6549e+28 m³/s², σ⁴ = 1.4422e+17 m⁴/s⁴, σ = 19.49 km/s (G-a Jeans 20.70, Fenster R < R_e)
+   Crater II isoliert: σ = 3.90 km/s (G-a Jeans 4.03); gemessen 2,7 ± 0,3 [G]
+   DF2, L im Grenzfall g_i ≪ g_e: ν(g_e = 0.0181) = 1/(1 − e^(−√0.0181)) = 1/(1 − e^(−0.1345)) = 7.944; σ ≈ σ_N·√(ν(1 + K/3)), K = −(ν−1)s/2 = -0.467 → 18.24 km/s (L 17.70; g_i nicht ≪ g_e)

@@ -1,0 +1,122 @@
+
+====================================================================================================
+A1 Kontaktform mit Reeb-Feld ∂_t: explizite Konstruktion (sympy)
+====================================================================================================
+α = dt + e^{ϖ/ℓ}(cos kz dx + sin kz dy)   auf T³(x,y,z) × [0,Λ]∋ϖ × ℝ∋t
+  α∧(dα)² ∝ k*exp(2*varpi/ell)/ell   (≠ 0 überall ⇒ Kontaktform)
+  Reeb-Feld R = [1, 0, 0, 0, 0]   (= ∂_t: das Zeitfeld)
+  ohne ϖ-Abhängigkeit (e^{ϖ/ℓ} → 1): α∧(dα)² = 0  ⇒ keine Kontaktform
+  ϖ-unabhängig mit dϖ-Anteil f(x,y,z)dϖ: α∧(dα)² ∝ -k*(sin(k*z)*Derivative(f(x, y, z), y) + cos(k*z)*Derivative(f(x, y, z), x))
+    = (rot β₃·∇f)-Anteil; ∫_{T³} dβ₃∧df = ∫ d(β₃∧df) = 0 ⇒ wechselt das Vorzeichen, Nullstelle auf T³.
+  Satz (Stokes): Reeb = ∂_t mit α = dt + β (β zeitfrei, weil der Reeb-Fluss α erhält) verlangt dβ symplektisch
+  auf dem Schnitt Σ⁴. Σ⁴ geschlossen (T³ × S¹) ⇒ ∫(dβ)² = ∫d(β∧dβ) = 0, Widerspruch. Mit innerer Richtung als
+  Kreis S¹ gibt es keine Kontaktform mit Reeb-Feld u. Möglich nur mit Rand (ϖ ∈ [0,Λ]) UND ϖ-abhängigen Koeffizienten.
+  Probe, 5 zufällige β auf T⁴ (Gitter 12⁴): Mittel von Pf(dβ) / min / max:
+    -1.01e-16  -149.24   166.01
+    -3.29e-17  -225.80   218.59
+    -3.59e-15  -313.91   323.24
+    -1.37e-16  -164.76   161.60
+     1.21e-16  -93.75   98.23
+
+====================================================================================================
+A2 Atmen im Kontaktbild: Reeb-Fluss oder nicht?
+====================================================================================================
+α = dt + a(t)·e^{ϖ/ℓ}(cos kz dx + sin kz dy)  (Atmen in α eingesetzt)
+  Reeb-Feld: R_t = 1
+             R_ϖ = -ell*Derivative(a(t), t)/a(t)
+  ⇒ mit ȧ ≠ 0 ist ∂_t kein Reeb-Feld mehr (R erhält α: L_Rα = 0; Atmen ändert α). Atmen ist höchstens ein
+    konformer Kontaktfluss L_Xα = fα; die Dehnung e^{ϖ/ℓ} läuft längs ϖ (Liouville-Richtung), nicht längs u.
+  Metrische Lesart α = −u♭/c (g_tt = −c², g_ti = −c·β_i): i_u dα = Beschleunigung von u ⇒ Reeb ⇔ u geodätisch;
+  dα|_{u⊥} = 2ω (Wirbel von u); Kontakt ⇔ Pf(ω) ≠ 0 im 4-dim. u⊥ = T³ × ϖ: u muss in zwei Ebenen drehen,
+  eine davon mischt Raum und innere Richtung (Verwindung). Ein wirbelfreies, gleich atmendes u (u♭ = −c dt)
+  gibt dα = 0: Frobenius-integrierbar, das Gegenteil von Kontakt.
+  Der Reeb-Fluss trägt dα mit (L_R dα = 0): Koordinatenkomponenten fest ⇒ orthonormal ω_xy ∝ a⁻², ω_zϖ ∝ a⁻¹.
+  Kontakt-Torsion τ = L_u g = 2H·h (Raum): das Atmen ist genau die Torsion; H(t) selbst legt α nicht fest.
+
+====================================================================================================
+A3 Folgt w(a)? Beiträge, die der Reeb-Fluss erzeugt: Potenzen a⁻ⁿ mit festem Exponenten
+====================================================================================================
+Lie-getragene Wirbel: ω² ∝ a⁻⁴ (Raum-Raum) und a⁻² (Raum-ϖ) ⇒ Glieder mit w = n/3 − 1 = +1/3 bzw. −1/3.
+Dunkle Energie = Konstante + ε·a⁻ⁿ (Amplitude ε frei, Integrationskonstante der Wirbel):
+  n    ε/ρ_Λ     w0 = w(1)   wa = −dw/da|₁   Quadrant   (ε so, dass ρ_DE > 0 für a ≥ 0,5)
+  2   +0.05     -0.9683      +0.0605       w0>−1, wa>0
+  2   +0.20     -0.8889      +0.1852       w0>−1, wa>0
+  2   -0.02     -1.0136      -0.0278       w0<−1, wa<0
+  2   -0.05     -1.0351      -0.0739       w0<−1, wa<0
+  4   +0.05     -0.9365      +0.2419       w0>−1, wa>0
+  4   +0.20     -0.7778      +0.7407       w0>−1, wa>0
+  4   -0.02     -1.0272      -0.1111       w0<−1, wa<0
+  4   -0.05     -1.0702      -0.2955       w0<−1, wa<0
+  Allgemein: w = −1 + (n/3)·f(a), f = εa⁻ⁿ/(1+εa⁻ⁿ); sign(1+w0) = sign(ε) = sign(w_a). Der gemessene Quadrant
+  (w0 > −1, w_a < 0) verlangt entgegengesetzte Vorzeichen: mit Konstante + einer Potenz unerreichbar.
+  Beide Potenzen (a⁻², a⁻⁴), Vorzeichen frei: Quadrant erreicht für ε₂ ∈ [+0.015, +0.300], ε₄ ∈ [-0.130, -0.005]
+    nur mit ε₂ > 0 und ε₄ < 0 (True): zwei freie Amplituden mit Gegenvorzeichen,
+    ε₄ < 0 heißt negativer Wirbelbeitrag; keine Vorhersage von w0, w_a.
+  Zum Vergleich im Modell: Vakuumteil Ω_s = 0.2443 bei festem Λ, w_s = −1.
+
+====================================================================================================
+B Anomale Geschwindigkeit ṗ×Ω gegen die Regel (ν−1)g_N, Kreisbahn
+====================================================================================================
+Punktmasse 5·10¹⁰ M☉ (je Masseneinheit): Regel a = ν g_N (parallel zu g_N); Berry: ṙ = p − ṗ×Ω, ṗ = g_N(r).
+  2D, Ω = Ω_z ẑ fest (zeitumkehr-brechend): v_a = −g_N × Ω liegt in der Ebene, senkrecht zu g_N (tangential).
+  Stationäre Kreisbahn: |p| = g/φ̇, rφ̇ = g/φ̇ ± Ωg  ⇒  rφ̇² ∓ Ωgφ̇ − g = 0 (± = Umlaufsinn)
+  Ω so gewählt, dass die rechtläufige Bahn bei 20 kpc die Regel trifft: Ω = 6.976e+15 s
+   r[kpc]  a_N/a₀   v_N     v_Regel  v_Berry(+)  v_Berry(−)  [km/s]   g_N·v_a
+       2   15.839   327.9    331.0    12163.9        8.8            0 (exakt, v_a ⊥ g_N)
+       5    2.534   207.4    232.4     1966.7       21.9            0 (exakt, v_a ⊥ g_N)
+      10    0.634   146.6    197.9      527.0       40.8            0 (exakt, v_a ⊥ g_N)
+      20    0.158   103.7    181.0      181.0       59.4            0 (exakt, v_a ⊥ g_N)
+      40    0.040    73.3    172.6       90.1       59.7            0 (exakt, v_a ⊥ g_N)
+      80    0.010    51.8    168.5       55.8       48.2            0 (exakt, v_a ⊥ g_N)
+  Integration, Sinn +1: r bleibt 20.0000–20.0000 kpc, v = r·φ̇ = 180.97 km/s (Formel 180.97)
+  Integration, Sinn -1: r bleibt 20.0000–737.0268 kpc, v = r·φ̇ = 17.54 km/s (Formel 59.42)
+  (Sinn −1: die Kreislösung existiert, ist in der Integration aber nicht stabil, die Bahn läuft nach außen.)
+  3D-Weyl-Knoten Ω = ±p̂/(2p²)·ħ-Einheiten: auf der Kreisbahn ist p̂ tangential, g_N radial ⇒ ṗ×Ω ∥ Bahnachse:
+    eine Drift aus der Ebene, kein radialer Anteil, v_c unverändert.
+  Ergebnis: v_a·g_N = 0 immer; die Regel ist (ν−1)g_N ∥ g_N. Berry hängt vom Umlaufsinn ab (Regel nicht, 07),
+    fällt ∝ g_N nach außen (Regel: v → (GMa₀)^{1/4} flach). Nicht identisch, auch nicht der Form nach.
+
+====================================================================================================
+C Analogon der Rückkehr: RC-Kette (Kabelgleichung) mit Rückführung V(0) = V_ein + V(n_R)
+====================================================================================================
+Kontinuum: ∂_t V + (g_m/c_m)V = (1/(r_a c_m))∂_x²V  ≡  ∂_t u + Γu = D∂_ϖ²u  (x ↔ ϖ, g_m ↔ Γ, n_R ↔ ϖ_R).
+Rückführung mit Verstärkung 1 (Summierverstärker) = Erneuerung u(0) = g_N + u(ϖ_R) ⇒ V(0)/V_ein = 1/(1 − e^{−s}).
+Bauteile: R = 1000 Ω je Glied, C = 100 nF, Querleitwert G je Glied (einstellbar), Abgriff n_R = 20,
+  400 Glieder, Ende mit R_∞ = R/2 + √(R²/4 + R/G) (Halbgerade, beschränkt) bzw. offen (versiegelt, Schluss bei Λ).
+   G [S]      RG        s=n_R√(RG)  s_eff       ν Kette    1/(1−e^{−s_eff})  1/(1−e^{−s})   1−V(n_R)/V(0)
+   1.00e-08  1.00e-05     0.0632      0.0632    16.31666    16.31666        16.31666    0.06129
+   3.16e-08  3.16e-05     0.1125      0.1125     9.40078     9.40078         9.40077    0.10637
+   1.00e-07  1.00e-04     0.2000      0.2000     5.51668     5.51668         5.51666    0.18127
+   3.16e-07  3.16e-04     0.3557      0.3557     3.34132     3.34132         3.34128    0.29928
+   1.00e-06  1.00e-03     0.6325      0.6324     2.13356     2.13356         2.13350    0.46870
+   3.16e-06  3.16e-03     1.1247      1.1245     1.48105     1.48105         1.48095    0.67520
+   1.00e-05  1.00e-02     2.0000      1.9992     1.15667     1.15667         1.15652    0.86455
+   3.16e-05  3.16e-02     3.5566      3.5519     1.02952     1.02952         1.02938    0.97133
+   1.00e-04  1.00e-01     6.3246      6.2985     1.00184     1.00184         1.00179    0.99816
+   3.16e-04  3.16e-01    11.2468     11.1037     1.00002     1.00002         1.00001    0.99998
+   1.00e-03  1.00e+00    20.0000     19.2485     1.00000     1.00000         1.00000    1.00000
+  Wurzel: d ln(ν − ½)/d ln G im tiefen Bereich (s < 0,1) = -0.4987 (erwartet −½)
+  Die Kette gibt die Bose-Form exakt in s_eff = n_R·arcosh(1 + RG/2); s_eff = s(1 − RG/24 + …).
+  Versiegeltes Ende (offen) bei n_Λ statt R_∞: Übertrag cosh((n_Λ−n_R)/λ)/cosh(n_Λ/λ), λ = 1/√(RG) Glieder
+   n_Λ =   40 (n_Λ/n_R =     2), n_Λ/λ = π/2: ν_versiegelt/ν_Halbgerade − 1 = 0.1460
+   n_Λ =  200 (n_Λ/n_R =    10), n_Λ/λ = π/2: ν_versiegelt/ν_Halbgerade − 1 = 0.0980
+   n_Λ = 1000 (n_Λ/n_R =    50), n_Λ/λ = π/2: ν_versiegelt/ν_Halbgerade − 1 = 0.0918
+   n_Λ = 3000 (n_Λ/n_R =   150), n_Λ/λ = π/2: ν_versiegelt/ν_Halbgerade − 1 = 0.0908
+   Grenzwert n_Λ ≫ n_R (07, Schluss bei Λ): 1/tanh(π/2) − 1 = 0.0903
+  Bauteiltoleranz 1 % (R und G, 200 Ziehungen), Streuung von ν:
+   G = 1e-07: ν = 5.5167 ± 0.0110 (0.20 %)
+   G = 1e-05: ν = 1.1567 ± 0.0006 (0.05 %)
+   G = 1e-04: ν = 1.0018 ± 0.0000 (0.00 %)
+  Zeitskala τ_D = n_R²RC = 40.0 ms; Kern K̂(p) = e^{−√((p+Γ)τ_D)}: mit Wechselspannung ω ≈ 1/τ_D = 4.0 Hz über Lock-in messbar (Warburg-Phase −45° bei Γ → 0).
+  Kennzeichnung: Analog-Prüfung der Form (Bose-Form, Wurzel, versiegeltes Ende), KEINE Prüfung der Gravitation.
+  Weyl-Halbmetall, ³He-B, Magnon-Kondensat: keines hat eine Halbgerade mit Erneuerung u(0) = g + u(ϖ_R);
+    ihre Bose-Formen sind Besetzungen von Quasiteilchen (Energie, Temperatur), die Regel zählt Rückläufe.
+
+====================================================================================================
+D Von Hand
+====================================================================================================
+  Kette: R = 1 kΩ, G = 10 µS ⇒ RG = 0,01; n_R = 20: s = 20·0,1 = 2; ν = 1/(1 − e⁻²) = 1/(1 − 0,13534) = 1,15652.
+     Kette (Knotenanalyse): ν = 1.15667; mit s_eff = 20·arcosh(1,005) = 20·0,099958 = 1,99917 → 1.15667
+  Berry: v_a = −ṗ×Ω ⇒ ṗ·v_a = −ṗ·(ṗ×Ω) = 0 (Spatprodukt mit zwei gleichen Vektoren).
+  Kontakt: T⁴ geschlossen, β global ⇒ ∫(dβ)² = ∫d(β∧dβ) = 0; ein symplektisches (dβ)² hat festes Vorzeichen ≠ 0.
+  Quadrant: ε = +0,1, n = 2: w0 = −1 + (2/3)·0,1/1,1 = −0,9394; bei a = 0,5: f = 0,4/1,4, w = −0,8095 > w0 ⇒ w_a > 0.

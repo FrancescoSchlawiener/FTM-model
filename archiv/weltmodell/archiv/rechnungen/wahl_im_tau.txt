@@ -1,0 +1,104 @@
+0) Fourier-Koeffizienten τ_R(n) von Δ: 1, -24, 252, -1472, 4830, -6048, -16744, 84480, -113643, -115920
+   Bindungssumme von (B): Σ|q|ⁿ, alle Koeffizienten 1
+
+1) χ(s)·(Δs/r)·(3c²/r*) gegen a_N·|q_B|/(1−|q_B|)   (Punktmasse, s = r*/r)
+   größte relative Abweichung über M = 1e8…1e14 M☉, r/r* = 0,01…100: 5.6e-15
+   also χ(s) = s·|q_B|/(1−|q_B|): der Schalter von (A) enthält den Nome von (B)
+
+2a) (A): Δ(τ_A)/q_A − 1 und a_A/a_B − 1 am Übergang, q_A = (v_f²/3c²)·s
+      M [M☉]    v_f [km/s]   q_A(r*)     Im τ_A(r*)   Δ/q_A−1 bei r*   max|a_A/a_B−1|   bei r/r*
+       1e+08        35.5   4.681e-09       3.053    -1.123e-07      -4.133e-08      1.00
+       1e+10       112.3   4.681e-08       2.686    -1.123e-06      -4.133e-07      1.00
+       6e+10       175.8   1.147e-07       2.544    -2.752e-06      -1.012e-06      1.00
+       1e+12       355.3   4.681e-07       2.320    -1.123e-05      -4.133e-06      1.00
+       1e+14      1123.4   4.681e-06       1.953    -1.123e-04      -4.133e-05      1.00
+       1e+15      1997.8   1.480e-05       1.770    -3.552e-04      -1.307e-04      1.00
+   Näherung: max|a_A/a_B − 1| = 24·(v_f²/3c²)/e = 2,94·(v_f/c)²  bei r = r*
+
+2b) (B): Bindung mit Koeffizienten 1 gegen Δ(τ_B) als Kern,  a/a_N = 1 + Σ|q|ⁿ  bzw. 1 + Δ(i s/2π)
+     r/r*     s       |q_B|      Im τ_B    Σ|q|ⁿ = ν−1     Δ(τ_B)         Verhältnis
+    0.100   10.000   4.540e-05    1.5915   4.5402e-05     4.5350e-05     9.989e-01
+    0.200    5.000   6.738e-03    0.7958   6.7837e-03     5.7225e-03     8.436e-01
+    0.304    3.289   3.727e-02    0.5235   3.8717e-02     1.4468e-02     3.737e-01
+    0.500    2.000   1.353e-01    0.3183   1.5652e-01     2.4727e-03     1.580e-02
+    1.000    1.000   3.679e-01    0.1592   5.8198e-01     2.7096e-08     4.656e-08
+    3.000    0.333   7.165e-01    0.0531   2.5277e+00     7.3763e-37     2.918e-37
+   10.000    0.100   9.048e-01    0.0159   9.5083e+00     1.3353e-150     1.404e-151
+   Δ(τ_B) hat sein Maximum bei r = 0,304 r* und verschwindet für r → ∞ (Δ(i/t) = t¹²Δ(it)).
+   In (B) trägt die Bindung daher die Reihe mit Koeffizienten 1; Δ ist dort nur das erste Glied.
+   Unterschied bei r ≪ r*: Σ|q|ⁿ − Δ = 25|q|² + …
+
+3) Phase: Re τ = √(1+χ) (Punktmasse), Milchstraße 6e10 M☉
+     r/r*    Re τ    (A) |Δ(τ)|/Δ(i Im τ) − 1  |  (B) ν = 1/(1−|q|)   Re 1/(1−q)   |1/(1−q)|
+      0.3   1.0599        +6.41e-07             |      1.0370           1.0341       1.0342
+      1.0   1.2578        +2.89e-06             |      1.5820           0.8691       0.9240
+      3.0   1.3574        +1.49e-06             |      3.5277           0.6010       0.6443
+     10.0   1.3967        +4.94e-07             |     10.5083           0.5278       0.5538
+   Die Phase in den höheren Gliedern ändert (A) um ≤ 24|q_A|, (B) um Größen der Ordnung 1.
+
+4) Resonanzradien Re τ = m/n (Punktmasse 6e10 M☉): gleich in (A) und (B) bis auf die Δ-Glieder
+    m/n    r [kpc]   s      |q_A|       |q_B|    Glied n: |τ_R(n)|·|q_A|ⁿ   |q_B|ⁿ     Verschiebung δr/r (A−B)
+   6/5      5.70   1.466   1.681e-07   0.231      6.5e-31          6.56e-04      +1.1e-06
+   5/4      7.89   1.058   1.213e-07   0.347      3.2e-25          1.45e-02      +1.7e-07
+   4/3     17.28   0.483   5.541e-08   0.617      4.3e-20          2.35e-01      -2.1e-06
+   7/5    102.95   0.081   9.299e-09   0.922      3.4e-37          6.67e-01      -4.8e-06
+
+5) Sonnensystem (M = 1 M☉, r* = 7031 AE)
+   Ort          q_A = Δs/r   Im τ_A    s = r*/r    Im τ_B     lg|q_B|     lg a_K [m/s²] (A = B)   q_A·c²r/GM
+   Merkur       8.504e-09     2.958    18166.75    2891.329      -7889.7         -7891.1          0.3333
+   Erde         3.291e-09     3.109     7030.53    1118.944      -3053.3         -3055.5          0.3333
+   Neptun       1.094e-10     3.650      233.81      37.211       -101.5          -106.7          0.3333
+   r* der Sonne 4.681e-13     4.518        1.00       0.159         -0.4           -10.2          0.3333
+   (A): q_A = GM/(3c²r) ist ein Glied erster post-Newtonscher Ordnung; unterdrückt wird der Kern nur durch χ.
+   (B): der Nome selbst ist e^{−s}; jede Funktion von τ_B ist an der Spitze.
+
+6) Gedächtnisintegral, Einheiten GM = r* = a0 = 1 (v_f = 1, Zeit r*/v_f), Kreisfrequenz Ω
+   a = −e_r/r² − C·κ(r)·(e_r·m)·e_r,   ṁ = K·v − λm,   κ(r) = (λ² + ω_c²)/(r ω_c²)  (Kreisbahn am Ort geeicht)
+   (A): C = χ(s(t)), K = s   (Schalter zur Zeit t, Nome längs der Bahn)
+   (B): C = 1,      K = s·χ(s) = s²|q_B|/(1−|q_B|)   (ganze Bindung längs der Bahn)
+   Auf jeder Kreisbahn geben beide exakt a = a_N/(1−e^{−s}).
+
+6a) Kreisbahn, lineare Moden (Frequenz/Ω, Anwachsrate/Ω); ohne Gedächtnis: eine Mode √(1+χ)
+     r/r*   λ/Ω    √(1+χ)  |  (A) Frequenzen     größte Rate  |  (B) Frequenzen     größte Rate
+    0.10   0.01   1.0002  |  1.0002  1.0000     -0.0013   |  1.0001  1.0001     +0.0058
+    0.10   1.00   1.0002  |  1.0002  1.0000     -0.0001   |  1.0001  1.0001     +0.0001
+    0.35   0.01   1.0836  |  1.1755  0.9218     -0.0044   |  1.0353  1.0340     +0.1094
+    0.35   1.00   1.0836  |  1.0951  1.0172     -0.0734   |  1.0563  1.0444     -0.0241
+    1.00   0.01   1.2578  |  1.4985  0.8394     -0.0045   |  1.3805  0.9111     -0.0033
+    1.00   1.00   1.2578  |  1.6433  0.7559     -0.4317   |  1.5181  0.8632     -0.4753
+    3.00   0.01   1.3574  |  1.7119  0.7929     -0.0037   |  1.6636  0.8160     -0.0033
+    3.00   1.00   1.3574  |  2.0737  0.4992     -0.4775   |  2.0348  0.5312     -0.4927
+
+   Anwachsen in (B) über r/r* = 0,01…2 (A: alle Moden gedämpft für λ/Ω = 0,001…100, r/r* = 0,01…100):
+   λ/Ω = 0.001:  größte Rate +0.1138 Ω bei r = 0.35 r*,  Rate > 10⁻³Ω auf 0.07–0.55 r*
+   λ/Ω = 0.010:  größte Rate +0.1094 Ω bei r = 0.35 r*,  Rate > 10⁻³Ω auf 0.08–0.56 r*
+   λ/Ω = 0.100:  größte Rate +0.0733 Ω bei r = 0.35 r*,  Rate > 10⁻³Ω auf 0.10–0.55 r*
+   λ/Ω = 0.300:  größte Rate +0.0310 Ω bei r = 0.31 r*,  Rate > 10⁻³Ω auf 0.12–0.46 r*
+   λ/Ω = 1.000:  größte Rate +0.0027 Ω bei r = 0.20 r*,  Rate > 10⁻³Ω auf 0.14–0.24 r*
+   λ/Ω = 2.000:  größte Rate +0.0002 Ω bei r = 0.13 r*,  Rate > 10⁻³Ω auf keines
+   (A): größte Rate über alle Fälle +2e-14 Ω (Rundungsgrenze)
+   κ fest an der Ausgangsbahn statt am Ort, λ/Ω = 0,01: (B) größte Rate +0.1045 Ω bei 0.33 r*, Band 0.08–0.50 r*; (A) +2e-15 Ω
+   Milchstraße 6e10 M☉ (r* = 8.35 kpc): Band 0,07–0,55 r* = 0.6–4.6 kpc, 1/Ω(0,35 r*) = 9.3 Myr, λ/Ω für 1/λ_m = 0,1 Gyr: 0.093
+
+   Nichtlineare Rechnung, r0 = 0,35 r*, λ/Ω = 0,01, Anfangsauslenkung 10⁻⁴: max|r/r0 − 1| nach 0…5, 5…10, 10…15 Umläufen
+   (A):  1.0e-04   7.7e-05   6.9e-05
+   (B):  1.5e-03   4.2e-02   1.2e+00
+
+6b) Exzentrische Bahnen, volle Dynamik (Gedächtnis zuvor auf der Bahn im lokalen Feld eingeschwungen):
+    Hub (r_a − r_p) relativ zum Anfang nach 5 und 20 Radialperioden, r_a am Ende relativ zum Anfang
+    r_p–r_a [r*]   λ/Ω   |  (A) nach 5    nach 20   r_a   |  (B) nach 5    nach 20   r_a
+    0.2– 1.0      0.01  |      1.038    0.451   0.60   |      1.458    2.491(18)   2.17
+    0.2– 1.0      0.10  |      0.164    0.004   0.35   |      1.286    1.292   1.22
+    0.3– 1.5      0.01  |      1.093    0.573   0.69   |      0.658    0.329   0.53
+    0.3– 1.5      0.10  |      0.187    0.005   0.36   |      0.245    0.265   0.48
+    1.0– 5.0      0.01  |      0.843    0.519   0.65   |      0.754    0.362   0.55
+    1.0– 5.0      0.10  |      0.165    0.007   0.37   |      0.066    0.007   0.37
+    3.0–15.0      0.01  |      0.888    0.463   0.60   |      0.921    0.414   0.57
+    3.0–15.0      0.10  |      0.260    0.002   0.37   |      0.231    0.008   0.37
+
+7) Plötzliche Änderung a_N → f·a_N an einem Ort (Stoß, Gasverlust): Zusatzbeschleunigung unmittelbar danach
+   (A): Schalter springt sofort, χ(s₂)/χ(s₁);  (B): 1 (alles im Gedächtnis, Nachlauf 1/λ_m)
+    s₁      f = 0,25    0,5       2         4        | Endwert s₂χ(s₂)/(s₁χ(s₁)) bei f = 0,25 … 4
+    0.3     1.0809   1.0469   0.9362   0.8511   |   0.540   0.740   1.324   1.702
+    1.0     1.3244   1.1818   0.7805   0.5379   |   0.662   0.836   1.104   1.076
+    3.0     2.7408   1.8381   0.3935   0.0949   |   1.370   1.300   0.556   0.190

@@ -1,0 +1,77 @@
+
+================================================================================================================
+1  Selbstkonsistenz: Bildung im eigenen Atmen statt im Standardhintergrund
+================================================================================================================
+   Kugelmodell geprüft (Standardhintergrund): Δ_ta lokal 5.557, 5.811, 6.413, 11.816 gegen de_fluchtmoden 5.557, 5.811, 6.413, 11.816
+   δ_ta lokal (ohne Strahlung) z = 10.00, 2.00, 1.00, 0.00: 1.0719, 1.0808, 1.1128, 1.2763; Tafel de_uebergabe_anteil: 1.0741, 1.0815, 1.1132, 1.2766 (verwendet wird nur das Verhältnis)
+   Bisher (V0): t(a), D(a), σ·D, δ_ta, Δ_ta aus E_Λ; das Atmen E_eff = E_b + R/3H₀ nur als Ergebnis.
+   S1: t(a), D(a), σ·D aus E_eff (iteriert); δ_ta, Δ_ta wie bisher.
+   S2: zusätzlich Umkehr der Kugel im eigenen Hintergrund: Die Kugel atmet bis zur Umkehr mit (θ̃ ≠ 0, noch nicht gebunden),
+       R̈/R = −GM/R³ + H₀²(Ω_s + Ω_X + ½ dΩ_X/dln a) = dieselbe Beschleunigung wie die Schleifen des Ganzen; danach θ̃ = 0.
+       Diese Form ist die, aus der auch die Wachstumsgleichung (Atmen nur über H) folgt: erzwungen.
+   S1: 3 Runden, letzte Änderung max|ΔE/E| = 1.9e-05;  Ω_X(0) je Runde: 0.3195 → 0.3274 → 0.3269 → 0.3269
+   S2: 3 Runden, letzte Änderung max|ΔE/E| = 7.5e-07;  Ω_X(0) je Runde: 0.3269 → 0.3285 → 0.3284 → 0.3284
+
+   Variante  t₀[Gyr]  D(1)/D_Λ(1)  X(0)   angek.(0)  δ_ta·(1)  Δ_ta·(1)   Ω_X(0)  Ω_s+Ω_X  /0,687
+   V0         13.81    1.0000      4.564   0.2151     1.0000    1.0000     0.3195   0.5639   0.821
+   S1         14.38    1.0574      4.541   0.2373     1.0000    1.0000     0.3269   0.5712   0.832
+   S2         14.37    1.0573      4.574   0.2379     0.9847    0.9137     0.3284   0.5727   0.834
+   δ_ta·, Δ_ta·: Faktor gegen die Werte im Standardhintergrund (heute).
+   X(a) je Variante (z = 6, 3, 2, 1, 0,5, 0):
+   V0   2.176  3.219  3.617  4.054  4.298  4.564
+   S1   2.176  3.221  3.618  4.050  4.286  4.542
+   S2   2.178  3.228  3.631  4.072  4.309  4.574
+   Richtung: E_eff < E_Λ (z ≲ 3) ⇒ mehr Zeit und mehr Wachstum ⇒ mehr und frühere Bindung; ältere Welt ⇒ mehr Transit
+   angekommen (f(T) hängt nur an τ_D). Umkehr im eigenen Atmen (S2): δ_ta −1,5 %, Δ_ta −9 %, X(0) +0,03 – klein.
+
+================================================================================================================
+2  Rückwirkung auf die Übergabe (Naht, Umkehr)
+================================================================================================================
+   Faktor der Naht R_ta (S2 gegen Standard) bei z = 3, 1, 0,5, 0: 1.0043, 1.0206, 1.0230, 1.0306
+   Faktor der Schwelle δ_ta: 0.9957, 0.9820, 0.9828, 0.9847
+   Im eigenen Atmen fehlt der Kugel ein Teil der Beschleunigung des Standardmodells (Ω_s + Ω_X < 0,687, später Anstieg):
+   sie kehrt bei kleinerer linearer Dichte um (größere Bereiche binden früher, nicht später) und etwas weniger dicht.
+   ln B verschiebt sich um (d ln B/d ln R)·ln(R-Faktor); d ln B/d ln R = 1.48 (10¹² M☉, heute, tief 3/2).
+   θ̃ = 0 nach der Umkehr: R_ta physisch fest, das Atmen dehnt nur noch den Fluss; kein weiterer Anteil.
+
+================================================================================================================
+3  Weitere Quellen inaktiven Maßes (nur was aus dem Modell zwingend folgt)
+================================================================================================================
+   (a) Resonanzzungen (07): Einrasten ändert die Gestalt der Bahn (T² → T¹, Insel um die periodische Bahn), nicht die Menge
+       der Zustände, deren ganzer Torus in der Naht liegt; das Maß B zählt Inseln schon mit (Liouville: Inseln haben das
+       Maß ihrer Zustände). Einrasten zu echter Verriegelung verlangt Dissipation, die nicht 𝒫 ist. Gegenüber Newton hebt die
+       Regel die Kepler-Verriegelung aller Bahnen auf (Vorzeichen: frei, nicht inaktiv). Beitrag 0; eigener Ansatz wäre Doppelzählung.
+   (b) Gruppen/Haufen: Anteil M ≥ 10^13 M☉ an X(0) = 1.904 (41.8 %); gezählt bis zur Naht R_ta ≈ 3–4·R₂₀₀ (Δ_ta ≈ 5,6 gegen 200).
+   (b) Gruppen/Haufen: Anteil M ≥ 10^14 M☉ an X(0) = 0.956 (21.0 %); gezählt bis zur Naht R_ta ≈ 3–4·R₂₀₀ (Δ_ta ≈ 5,6 gegen 200).
+       Jenseits R_ta ist Fluss (θ̃ ≠ 0), dort ist nichts gebunden; die Schale bis 1,16·R_ta (w > 0) gab +0,016 in Ω_X
+       (de_fluchtmoden_mass C), nur Spannweite. Kein fehlender Anteil.
+   (c) Mode ξ bei der Übergabe: Kac 1 + Q zählt die Rückkehr in I und ist als Ω_c gebucht; bei I_F wechselt die Mode die
+       Form (w: 1 → 0, Regel ν), ihr Maß verschwindet nicht und wird nicht frei. Sie geht nur über M_ges = (1 + Q)M_b in R_ta
+       ein (schon gezählt). Als zusätzliches inaktives Maß gebucht: Doppelzählung (Faktor 6,36 auf X, Mode als Stoff). Beitrag 0.
+
+================================================================================================================
+4  Tabelle je Variante [Messwerte nur Test, G: Ω_DE = 0,687; Standardmodell Ω_DE(z) = 0,394 / 0,215 / 0,068 bei z = 0,5 / 1 / 2]
+================================================================================================================
+   Var  Ω_X(0)  Ω_DE-Anteil z=0,5  z=1    z=2     w(0)    w₀      w_a     H/H_Λ z=0    0,5    1      2      3     D_M(1090)  Q oben  fσ₈/Λ z=0   0,3    0,6    1,0    1,5
+   V0    0.320   0.320           0.128  0.029   -0.994  -1.047  -0.500     0.937   0.944  0.949  0.976  0.989    1.022      5.10    1.145   1.120  1.108  1.087  1.057
+   S1    0.327   0.327           0.131  0.029   -0.976  -1.018  -0.582     0.941   0.949  0.951  0.976  0.989    1.021      5.13    1.136   1.111  1.102  1.084  1.057
+   S2    0.328   0.327           0.131  0.029   -0.978  -1.020  -0.579     0.941   0.949  0.951  0.976  0.989    1.021      5.13    1.135   1.110  1.102  1.084  1.057
+   Q-Fenster unten 5 (ΛCDM oben 5.52). Ω_DE-Anteil = (Ω_s + Ω_X)(z)/E²(z); fσ₈ mit gleicher früher Amplitude.
+   Selbstkonsistent (S2) gegen bisher: Ω_X(0) +0.009 (+2.8 %), Ω_DE-Anteil z = 1 +0.003, fσ₈(0) -0.010.
+   Lücke: Ω_s + Ω_X = 0.573 von 0,687 (83 %); fehlend 0.114.
+
+================================================================================================================
+5  Beobachterfehler
+================================================================================================================
+   X: Maß der Tori je Bereich (G des Bereichs), je Baryon über die Zelle (G). Weg: Rückkehr in I (τ_D = 2Λ/c fest).
+   Atmen: Rate des Ganzen (G); es wirkt auf Bildung nur über H und über die Beschleunigung der noch mitatmenden Schleifen
+   bis zur Umkehr (θ̃ ≠ 0); im gebundenen Bereich θ̃ = 0. Nirgends Dichte am Ort, kein Stoff, der ballt oder drückt.
+   Zustandsabhängig: X, t₀, D, δ_ta, Δ_ta, Ω_X(z) – selbst Folge des Atmens; fest: Λ, a₀, τ_D, Ω_s.
+
+================================================================================================================
+6  Von Hand
+================================================================================================================
+   Wachstumsrate heute nach f ≈ Ω_m(a)^0,55 (anderer Weg als die Wachstumsgleichung):
+   E_eff(1) = 0.9414 ⇒ Ω_m,eff = 0,3134/0.9414² = 0.3536; f_eff/f_Λ = (0.3536/0,3134)^0,55 = 1.0687
+   D_eff/D_Λ(1) = exp∫(f_eff − f_Λ)dln a = 1.0556 (Wachstumsgleichung 1.0573); fσ₈(0)-Verhältnis ≈ 1.0687·1.0556 = 1.128 (Code 1.135)
+   Ω_X(0) = E_eff(1)² − E_b(1)² = 0.9414² − 0,7467² = 0.3287 (Code 0.3284); E_b(1) = √(0,3134 + 0,2440 + 0,0001).

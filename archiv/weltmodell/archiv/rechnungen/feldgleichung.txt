@@ -1,0 +1,235 @@
+
+==============================================================================
+PUNKT 2: Koeffizienten tau_R(n) von Delta = q * prod_{n>=1} (1-q^n)^24
+==============================================================================
+  tau_R( 1) =                      1
+  tau_R( 2) =                    -24
+  tau_R( 3) =                    252
+  tau_R( 4) =                  -1472
+  tau_R( 5) =                   4830
+  tau_R( 6) =                  -6048
+  tau_R( 7) =                 -16744
+  tau_R( 8) =                  84480
+  tau_R( 9) =                -113643
+  tau_R(10) =                -115920
+  tau_R(11) =                 534612
+  tau_R(12) =                -370944
+  tau_R(13) =                -577738
+  tau_R(14) =                 401856
+  tau_R(15) =                1217160
+  tau_R(16) =                 987136
+  tau_R(17) =               -6905934
+  tau_R(18) =                2727432
+  tau_R(19) =               10661420
+  tau_R(20) =               -7109760
+  tau_R(21) =               -4219488
+  tau_R(22) =              -12830688
+  tau_R(23) =               18643272
+  tau_R(24) =               21288960
+  tau_R(25) =              -25499225
+  tau_R(26) =               13865712
+  tau_R(27) =              -73279080
+  tau_R(28) =               24647168
+  tau_R(29) =              128406630
+  tau_R(30) =              -29211840
+
+  Kontrolle Produkt vs. Reihe:
+   q=0.01:  Produkt=0.00783775679289324  Reihe(n<=30)=0.00783775679289325
+   q=0.05:  Produkt=0.0137048629837817  Reihe(n<=30)=0.0137048629837817
+   q=0.1:  Produkt=0.00610208767129145  Reihe(n<=30)=0.00610208767129144
+   q=(0.02+0.03j):  Produkt=0.0222052090717841+0.00495054676825372j  Reihe(n<=30)=0.022205209071784+0.00495054676825372j
+
+  q^2-Koeffizient: aus (1-q)^24 -> -C(24,1) =  -24
+  q^3-Koeffizient: C(24,2) - C(24,1) [aus (1-q)^24 und (1-q^2)^24] = 252
+
+  Gewicht 12, Kontrolle Delta(-1/tau) / (tau^12 Delta(tau)):
+   tau=(0.3+1.1j):  Verhaeltnis = 1.000000000000 +3.91e-16 i
+               Delta(tau+1)/Delta(tau) = 1.000000000000 -2.07e-16 i
+   tau=(-0.2+0.9j):  Verhaeltnis = 1.000000000000 -3.34e-16 i
+               Delta(tau+1)/Delta(tau) = 1.000000000000 -2.93e-16 i
+   tau=(0.1+1.5j):  Verhaeltnis = 1.000000000000 -3.98e-17 i
+               Delta(tau+1)/Delta(tau) = 1.000000000000 +5.45e-16 i
+
+==============================================================================
+PUNKT 1: Kreisbahn-Auswertung des Gedaechtnisintegrals
+==============================================================================
+  r(t') = r (cos W t', sin W t'),  rdot(t') = r W e_phi(t'),  s = t - t'
+  (e_r(t) (x) e_r(t)) rdot(t') = e_r(t) * r W * sin(W s)
+  I = int_0^inf kappa0 M e^{-lam s} r W sin(W s) ds = kappa0 M r W^2/(lam^2+W^2)
+   kM=1.0, lam=1.0, r=1.0, W=1.0:  numerisch=0.5000000000  analytisch=0.5000000000
+   kM=2.0, lam=0.3, r=1.5, W=1.2:  numerisch=2.8235294118  analytisch=2.8235294118
+   kM=0.5, lam=3.0, r=2.0, W=0.7:  numerisch=0.0516332982  analytisch=0.0516332982
+
+  Exakte Kreisbahnloesung u = v^2 aus
+  u^2 + u (lam^2 r^2 - kappa0 M r^2 - GM/r) - GM lam^2 r = 0
+   GM=1.0, r=1.0, kM=0.3, lam=0.8: u=1.1953900855  lhs=1.1953900855 rhs=1.1953900855
+   GM=1.0, r=5.0, kM=0.01, lam=0.05: u=0.4174441271  lhs=0.0834888254 rhs=0.0834888254
+   GM=1.0, r=2.0, kM=0.0, lam=1.0: u=0.5000000000  lhs=0.2500000000 rhs=0.2500000000
+
+==============================================================================
+PUNKT 3: Faltungstiefe, q(r), eta(r)
+==============================================================================
+  Sonne: GM = 1.327459e+20 m^3/s^2   Delta_s = GM/(3c^2) = 4.923323e+02 m = 3.291038e-09 AU = 1.595540e-14 pc
+  Milchstrasse (6e10 Msun): GM = 7.964752e+30 m^3/s^2   Delta_s = GM/(3c^2) = 2.953994e+13 m = 1.974623e+02 AU = 9.573242e-04 pc
+
+  Referenzlaenge in c^2/L (Milchstrasse):
+   B: a_eff(r*) = a0  -> L = r*/3 = sqrt(GM/a0)/3 = 8.587648e+19 m = 2.783067 kpc  (r* = 8.349202 kpc)
+      a_eff = sqrt(GM a0)/r,  v_rot = (GM a0)^(1/4) = 175.828135 km/s,  v_rot^4 = G M a0
+   A: v_rot = v0 = 220 km/s -> L = GM/(3 v0^2) = 5.485366e+19 m = 1.777686 kpc
+  Variante B (Sonne): r*/3 = 3.505893e+14 m = 2343.5445 AU (r* = 7030.6335 AU),  v_rot = (GM a0)^(1/4) = 355.263474 m/s
+  c^2/L = 3 c^2/r*:  B(MW): 1.046567e-03 m/s^2   B(Sonne): 2.563556e+02 m/s^2   A(MW): 1.638460e-03 m/s^2
+  Kontrolle B (MW): (Ds/r)(3c^2/r*) bei r = r* : 1.200000e-10 m/s^2 (= a0)
+
+==============================================================================
+TABELLE Milchstrasse, Variante B (Hauptfassung, a_eff = sqrt(GM a0)/r)
+==============================================================================
+   r[kpc]      q=Ds/r     eta   Delta/q-1         a_N       a_eff      v_N    v_rot    v_tot w_r/w_phi  Regime
+        5  1.9146e-07  2.4619  -4.595e-06  3.3460e-10  2.0038e-10    227.2    175.8    287.3   1.17241  a>a0 gekoppelt
+    8.349  1.1466e-07  2.5435  -2.752e-06  1.2000e-10  1.2000e-10    175.8    175.8    248.7   1.22474  a=a0 Schwelle
+       10  9.5732e-08  2.5722  -2.298e-06  8.3651e-11  1.0019e-10    160.7    175.8    238.2   1.24297  a<a0 kritisch
+       15  6.3822e-08  2.6367  -1.532e-06  3.7178e-11  6.6794e-11    131.2    175.8    219.4   1.28157  a<a0 kritisch
+       20  4.7866e-08  2.6825  -1.149e-06  2.0913e-11  5.0095e-11    113.6    175.8    209.3   1.30594  a<a0 kritisch
+       30  3.1911e-08  2.7471  -7.659e-07  9.2946e-12  3.3397e-11    92.76    175.8    198.8   1.33502  a<a0 kritisch
+       40  2.3933e-08  2.7929  -5.744e-07  5.2282e-12  2.5048e-11    80.33    175.8    193.3   1.35178  a<a0 kritisch
+       50  1.9146e-08  2.8284  -4.595e-07  3.3460e-12  2.0038e-11    71.85    175.8    189.9   1.36268  a<a0 kritisch
+
+==============================================================================
+TABELLE Milchstrasse, Variante A (Vergleich, v_rot = 220 km/s)
+==============================================================================
+   r[kpc]      q=Ds/r     eta   Delta/q-1         a_N       a_eff      v_N    v_rot    v_tot w_r/w_phi  Regime
+        5  1.9146e-07  2.4619  -4.595e-06  3.3460e-10  3.1371e-10    227.2      220    316.3   1.21815  a>a0 gekoppelt
+    8.349  1.1466e-07  2.5435  -2.752e-06  1.2000e-10  1.8787e-10    175.8      220    281.6   1.26894  a=a0 Schwelle
+       10  9.5732e-08  2.5722  -2.298e-06  8.3651e-11  1.5685e-10    160.7      220    272.4   1.28537  a<a0 kritisch
+       15  6.3822e-08  2.6367  -1.532e-06  3.7178e-11  1.0457e-10    131.2      220    256.1   1.31822  a<a0 kritisch
+       20  4.7866e-08  2.6825  -1.149e-06  2.0913e-11  7.8427e-11    113.6      220    247.6   1.33772  a<a0 kritisch
+       30  3.1911e-08  2.7471  -7.659e-07  9.2946e-12  5.2285e-11    92.76      220    238.8   1.35980  a<a0 kritisch
+       40  2.3933e-08  2.7929  -5.744e-07  5.2282e-12  3.9213e-11    80.33      220    234.2   1.37199  a<a0 kritisch
+       50  1.9146e-08  2.8284  -4.595e-07  3.3460e-12  3.1371e-11    71.85      220    231.4   1.37972  a<a0 kritisch
+
+==============================================================================
+TABELLE Sonne, Variante B; Geschwindigkeiten in km/s
+==============================================================================
+   r[AU]      q=Ds/r     eta   Delta/q-1         a_N       a_eff      v_N    v_rot    v_tot w_r/w_phi  Regime
+        1  3.2910e-09  3.1086  -7.898e-08  5.9316e-03  8.4368e-07    29.79   0.3553    29.79   1.00007  a>a0 gekoppelt
+    30.07  1.0945e-10  3.6503  -2.627e-09  6.5600e-06  2.8057e-08    5.432   0.3553    5.444   1.00213  a>a0 gekoppelt
+      100  3.2910e-11  3.8416  -7.898e-10  5.9316e-07  8.4368e-09    2.979   0.3553        3   1.00699  a>a0 gekoppelt
+     1000  3.2910e-12  4.2080  -7.898e-11  5.9316e-09  8.4368e-10    0.942   0.3553    1.007   1.06044  a>a0 gekoppelt
+     7031  4.6810e-13  4.5184  -1.123e-11  1.2000e-10  1.2000e-10   0.3553   0.3553   0.5024   1.22474  a=a0 Schwelle
+    1e+04  3.2910e-13  4.5745  -7.898e-12  5.9316e-11  8.4368e-11   0.2979   0.3553   0.4636   1.25983  a<a0 kritisch
+    1e+05  3.2910e-14  4.9410  -7.898e-13  5.9316e-13  8.4368e-12   0.0942   0.3553   0.3675   1.39080  a<a0 kritisch
+
+  Sonne/Erdbahn: a_eff/a_N = r/r* = 1.4223e-04
+
+==============================================================================
+PUNKT 1/3: Kernnorm, Gedaechtnisrate, Kreisbahnbedingung
+==============================================================================
+  Zeitintegral des Kerns: int_0^inf ||K|| dDt = kappa0 M_k / lam   [1/s]
+  Kreisbahn: a_K = kappa0 M_k v W/(lam^2+W^2) = kappa0 M_k v / lam_eff, lam_eff = W + lam^2/W
+  lam_eff minimal bei lam = W: lam_eff,min = 2W
+  Aus v_rot = kappa0 Ds/lam_eff:  kappa0/lam_eff = v_rot/Ds = 3c^2/(r* v_rot)  (Variante B)
+   Milchstrasse B: kappa0/lam_eff = 5.952218e-09 1/s   (Kontrolle 3c^2/(r* v_rot) = 5.952218e-09)
+   Sonne B:        kappa0/lam_eff = 7.215929e-01 1/s
+   Milchstrasse A: kappa0/lam_eff = 7.447544e-09 1/s
+   Milchstrasse B, r=5 kpc: W = v_tot/r = 1.8621e-15 1/s  (Umlaufzeit 106.9 Myr)
+   Milchstrasse B, r=10 kpc: W = v_tot/r = 7.7187e-16 1/s  (Umlaufzeit 257.9 Myr)
+   Milchstrasse B, r=20 kpc: W = v_tot/r = 3.3921e-16 1/s  (Umlaufzeit 587.0 Myr)
+   Milchstrasse B, r=50 kpc: W = v_tot/r = 1.2311e-16 1/s  (Umlaufzeit 1617.2 Myr)
+   Erdbahn: W = 1.991234e-07 1/s (Umlaufzeit 365.211 d);  q = 3.2910e-09;  eta = 3.1086;  Ds_Sonne = 492.3323 m
+
+  Grenzfaelle der exakten Kreisbahnloesung mit M_k = q = Ds/r:
+   lam -> 0     :  v^2 = GM/r + kappa0 Ds r = GM/r + kappa0 GM r/(3c^2)
+   lam^2 r^2 >> :  v^2 = (GM/r) / (1 - kappa0 q/lam^2)
+  Bedingung fuer das Profil von Punkt 3 (a_K = V^2/r) auf der Kreisbahn:
+   kappa0 Ds W^2/(lam^2+W^2) = V^2/r   <=>   lam^2 = W^2 (kappa0 Ds r / V^2 - 1)
+
+==============================================================================
+PUNKT 4: Schwellenradius r* = sqrt(GM/a0)
+==============================================================================
+  Sonne: r* = 1.051768e+15 m = 7.030633e+03 AU = 3.408547e-02 pc = 3.408547e-05 kpc
+          q* = sqrt(GM a0)/(3c^2) = 4.680998e-13   (Kontrolle Ds/r* = 4.680998e-13)   eta* = 4.518424
+          (GM a0)^(1/4) = 3.552635e+02 m/s ;  3 c^2 q* = 1.262121e+05 m^2/s^2 = sqrt(GM a0)
+  Milchstrasse: r* = 2.576294e+20 m = 1.722146e+09 AU = 8.349202e+03 pc = 8.349202e+00 kpc
+          q* = sqrt(GM a0)/(3c^2) = 1.146606e-07   (Kontrolle Ds/r* = 1.146606e-07)   eta* = 2.543501
+          (GM a0)^(1/4) = 1.758281e+05 m/s ;  3 c^2 q* = 3.091553e+10 m^2/s^2 = sqrt(GM a0)
+
+  Lage relativ zur Schwelle (a_N/a0, r/r*):
+   Erdbahn 1 AU          : a_N = 5.9316e-03 m/s^2  a_N/a0 = 4.9430e+07   r/r* = 1.4223e-04
+   Neptunbahn 30.07 AU   : a_N = 6.5600e-06 m/s^2  a_N/a0 = 5.4667e+04   r/r* = 4.2770e-03
+   MW 5 kpc              : a_N = 3.3460e-10 m/s^2  a_N/a0 = 2.7884e+00   r/r* = 5.9886e-01
+   MW 10 kpc             : a_N = 8.3651e-11 m/s^2  a_N/a0 = 6.9709e-01   r/r* = 1.1977e+00
+   MW 20 kpc             : a_N = 2.0913e-11 m/s^2  a_N/a0 = 1.7427e-01   r/r* = 2.3954e+00
+   MW 50 kpc             : a_N = 3.3460e-12 m/s^2  a_N/a0 = 2.7884e-02   r/r* = 5.9886e+00
+   Sonne im Feld der Milchstrasse (R = 8.2 kpc): a_N = 1.2441e-10 m/s^2, a_N/a0 = 1.0367
+
+  Frequenzverhaeltnis w_rad/w_azim fuer v^2 = GM/r + V^2:
+   (w_rad/w_azim)^2 = (GM/r + 2V^2)/(GM/r + V^2);  Kepler -> 1, V dominant -> sqrt(2)
+   Resonanzradien w_rad/w_azim = m/n (n<=5) im Intervall (1, sqrt2):  r = (GM/V^2)(p^2-1)/(2-p^2)
+   Milchstrasse, Variante B (GM/V^2 = 8.3492 kpc):
+     6/5 = 1.20000:  r =    6.5601 kpc,  a_N/a0 = 1.6198
+     5/4 = 1.25000:  r =   10.7347 kpc,  a_N/a0 = 0.6049
+     4/3 = 1.33333:  r =   29.2222 kpc,  a_N/a0 = 0.0816
+     7/5 = 1.40000:  r =  200.3808 kpc,  a_N/a0 = 0.0017
+     an r* = 8.3492 kpc: w_rad/w_azim = 1.224745
+   Milchstrasse, Variante A (GM/V^2 = 5.3331 kpc):
+     6/5 = 1.20000:  r =    4.1903 kpc,  a_N/a0 = 3.9702
+     5/4 = 1.25000:  r =    6.8568 kpc,  a_N/a0 = 1.4827
+     4/3 = 1.33333:  r =   18.6657 kpc,  a_N/a0 = 0.2001
+     7/5 = 1.40000:  r =  127.9934 kpc,  a_N/a0 = 0.0043
+     an r* = 8.3492 kpc: w_rad/w_azim = 1.268945
+   Erdbahn (B): w_rad/w_azim = 1.000071
+
+==============================================================================
+DIMENSIONSANALYSE (SI-Exponenten m, s)
+==============================================================================
+   [r_ddot                    ] = m^1 s^-2
+   [rdot                      ] = m^1 s^-1
+   [dt'                       ] = m^0 s^1
+   [grad Phi                  ] = m^1 s^-2
+   [kappa0                    ] = m^0 s^-2
+   [M_k                       ] = m^0 s^0
+   [lam                       ] = m^0 s^-1
+   [K                         ] = m^0 s^-2
+   [int K rdot dt'            ] = m^1 s^-2
+   [Ds=GM/3c^2                ] = m^1 s^0
+   [q=Ds/r                    ] = m^0 s^0
+   [||K_F|| = kappa0 q/lam    ] = m^0 s^-1
+   [a_eff = ||K_F|| v         ] = m^1 s^-2
+   [3c^2/r*                   ] = m^1 s^-2
+   [GM/(r r*)                 ] = m^1 s^-2
+   [sqrt(GM a0)/r             ] = m^1 s^-2
+   [v_rot = sqrt(a_eff r)     ] = m^1 s^-1
+   [r*=sqrt(GM/a0)            ] = m^1 s^0
+   [gamma                     ] = m^1 s^-2
+   Kontrollen:
+    K * rdot * dt'         = (1, -2)  (soll (1,-2))
+    kappa0 * M_k           = (0, -2)  (soll (0,-2))
+    (kappa0 q/lam) * v     = (1, -2)  (soll (1,-2))
+    GM/(3c^2): m^3 s^-2 / (m^2 s^-2) = (1, 0)  (soll (1,0))
+    (Ds/r)(3c^2/r*)        = (1, -2)  (soll (1,-2))
+    (GM a0)^(1/4): (m^3 s^-2 * m s^-2)^(1/4) = (m^4 s^-4)^(1/4) = m s^-1
+
+==============================================================================
+STRUKTUR STATT MASSE: Beobachterschema (Reifikation) formal
+==============================================================================
+  (1) global: chi 0->1, P aktiv;  (2) lokal gemessen: delta_a = a_obs - GM/r^2 = sqrt(GM a0)/r  (B)
+  (3) reifizierte Lesart: M_schein(r) = r^2 a_obs / G = M (1 + r/r*);  M_schein - M = M r/r* = v_rot^2 r / G
+  Feldgleichung: delta_a = q(r) * 3c^2/r*  (Strukturzahl q mal Regelkonstante 3c^2/r*), keine Groesse in kg
+  Ruhetest: rdot == 0  =>  int K rdot dt' = 0  (Gedaechtnisterm wirkt nur auf Bewegung)
+   Milchstrasse B: L = 2.7831 kpc, GM/v_rot^2 = 3L = 8.3492 kpc
+     r=      5 kpc: delta_a = 2.0038e-10 m/s^2 = q*c^2/L = 2.0038e-10;  (M_schein-M)/M = r/(3L) = 0.5989;  M_schein-M = 3.5932e+10 Msun
+     r=  8.349 kpc: delta_a = 1.2000e-10 m/s^2 = q*c^2/L = 1.2000e-10;  (M_schein-M)/M = r/(3L) = 1.0000;  M_schein-M = 6.0000e+10 Msun
+     r=     10 kpc: delta_a = 1.0019e-10 m/s^2 = q*c^2/L = 1.0019e-10;  (M_schein-M)/M = r/(3L) = 1.1977;  M_schein-M = 7.1863e+10 Msun
+     r=     15 kpc: delta_a = 6.6794e-11 m/s^2 = q*c^2/L = 6.6794e-11;  (M_schein-M)/M = r/(3L) = 1.7966;  M_schein-M = 1.0779e+11 Msun
+     r=     20 kpc: delta_a = 5.0095e-11 m/s^2 = q*c^2/L = 5.0095e-11;  (M_schein-M)/M = r/(3L) = 2.3954;  M_schein-M = 1.4373e+11 Msun
+     r=     30 kpc: delta_a = 3.3397e-11 m/s^2 = q*c^2/L = 3.3397e-11;  (M_schein-M)/M = r/(3L) = 3.5932;  M_schein-M = 2.1559e+11 Msun
+     r=     40 kpc: delta_a = 2.5048e-11 m/s^2 = q*c^2/L = 2.5048e-11;  (M_schein-M)/M = r/(3L) = 4.7909;  M_schein-M = 2.8745e+11 Msun
+     r=     50 kpc: delta_a = 2.0038e-11 m/s^2 = q*c^2/L = 2.0038e-11;  (M_schein-M)/M = r/(3L) = 5.9886;  M_schein-M = 3.5932e+11 Msun
+   Milchstrasse A: L = 1.7777 kpc, GM/v_rot^2 = 3L = 5.3331 kpc
+     r=      5 kpc: delta_a = 3.1371e-10 m/s^2 = q*c^2/L = 3.1371e-10;  (M_schein-M)/M = r/(3L) = 0.9375;  M_schein-M = 5.6253e+10 Msun
+     r=  8.349 kpc: delta_a = 1.8787e-10 m/s^2 = q*c^2/L = 1.8787e-10;  (M_schein-M)/M = r/(3L) = 1.5656;  M_schein-M = 9.3933e+10 Msun
+     r=     10 kpc: delta_a = 1.5685e-10 m/s^2 = q*c^2/L = 1.5685e-10;  (M_schein-M)/M = r/(3L) = 1.8751;  M_schein-M = 1.1251e+11 Msun
+     r=     15 kpc: delta_a = 1.0457e-10 m/s^2 = q*c^2/L = 1.0457e-10;  (M_schein-M)/M = r/(3L) = 2.8126;  M_schein-M = 1.6876e+11 Msun
+     r=     20 kpc: delta_a = 7.8427e-11 m/s^2 = q*c^2/L = 7.8427e-11;  (M_schein-M)/M = r/(3L) = 3.7502;  M_schein-M = 2.2501e+11 Msun
+     r=     30 kpc: delta_a = 5.2285e-11 m/s^2 = q*c^2/L = 5.2285e-11;  (M_schein-M)/M = r/(3L) = 5.6253;  M_schein-M = 3.3752e+11 Msun
+     r=     40 kpc: delta_a = 3.9213e-11 m/s^2 = q*c^2/L = 3.9213e-11;  (M_schein-M)/M = r/(3L) = 7.5004;  M_schein-M = 4.5002e+11 Msun
+     r=     50 kpc: delta_a = 3.1371e-11 m/s^2 = q*c^2/L = 3.1371e-11;  (M_schein-M)/M = r/(3L) = 9.3755;  M_schein-M = 5.6253e+11 Msun

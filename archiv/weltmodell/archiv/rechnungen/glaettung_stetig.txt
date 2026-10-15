@@ -1,0 +1,98 @@
+
+====================================================================================================
+1   Einsatz der Glättung
+====================================================================================================
+   a) Identität: Plummer-Wolke der Masse M mit ℓ³ = GM/T hat die Zentraldichte 3M/(4πℓ³) = 3T/(4πG) = ρ_J.
+      Die Hierarchie senkt jeden Körper auf die Gezeitendichte ab; ein Körper, dessen größte Dichte schon ≤ ρ_J ist,
+      hätte nichts abzugeben. Stetige Regel: nur der Überschuss (ρ − ρ_J)_+ wird geglättet.
+   Probe Fourier-Kern: Plummer M(<ℓ)/M = 0.353553 (exakt 2^(-3/2) = 0.353553),  ρ(0)ℓ³/M = 0.238732 (exakt 3/4π = 0.238732)
+   b) Überschussanteil M^c/M eines Plummer-Körpers (Skala b), Einsatz bei b = ℓ (Zentraldichte = ρ_J):
+      b/ℓ          0.00    0.10    0.30    0.50    0.70    0.90    0.99    1.00    1.20
+      Überschuss  1.000   0.850   0.511   0.240   0.072   0.005   0.000   0.000   0.000
+      numerisch   1.000   0.850   0.511   0.240   0.072   0.005   0.000   0.000   0.000
+      umschlossen 1.000   0.985   0.868   0.650   0.364   0.083   0.003   0.000   0.000
+      Nahe am Einsatz: Überschuss ≈ 1.57·(1 − b/ℓ)^(5/2) (bei b/ℓ = 0,99), umschlossen ≈ 2.81·(1 − b/ℓ)^(3/2)
+      Scharfe Ersetzung Körper → Plummer(ℓ): für ein Plummer-Profil bei b = ℓ identisch (kein Sprung), für andere Profile ein Sprung.
+   Poisson-Form (Tiefe w, e^{−|k|w}, P_a·P_b = P_{a+b}): Punktmasse in Tiefe w hat Zentraldichte M/(π²w³);
+      Tiefe bis zur Gezeitendichte w_J = (4/3π)^(1/3)·ℓ = 0.7515·ℓ; ein Körper der Tiefe w_b erhält (w_J − w_b)_+,
+      Einsatz ebenfalls bei Zentraldichte = ρ_J. Die Kernform (Plummer in 𝒢, Poisson auf der Halbgeraden) legt das Modell nicht fest.
+   c) Energie beim Einsetzen, Wolke 1 M☉ am Sonnenort: g_Ne = 1.191 a₀ [G], ν_e = 1.5056, ℓ = 0.934 pc, ρ_J = 0.293 M☉/pc³
+      Strukturenergie linear im äußeren Feld: V_s = −c_e·W, W = (1/8πG)∫|∇φ̄|², c_e = ν_e(1 + K/3) − 1 = 0.3671
+      Probe Kugel R = ℓ → Plummer ℓ (scharfer Einsatz): ΔV/M voll = 516.6 m²/s², linear = 516.6 m²/s²
+      Homogene Wolke (1 M☉), Dichte ρ₀ = (ℓ/R)³·ρ_J; ΔV/M gegen die ungeglättete Wolke [m²/s²]:
+      ρ₀/ρ_J        scharf (Körper → Plummer ℓ)    stetig (Überschuss → Plummer ℓ^c)
+          0.9900              0.0                           0.000
+          1.0000            516.6                          -0.000
+          1.0010            516.9                          -0.447
+          1.0100            520.0                          -3.096
+          1.1000            549.3                           4.476
+          1.5000            663.4                         169.995
+          3.0000            965.3                         678.845
+         10.0000           1687.9                        1598.411
+        100.0000           4211.6                        4202.794
+
+====================================================================================================
+2   Sonne und weite Doppelsterne (a₀ = 1,2·10⁻¹⁰, Sonnenumgebung [G])
+====================================================================================================
+   Sonne: ρ_J/ρ̄☉ = 1.41e-23  ->  M^c/M − 1 = −1.4e-23; ℓ = 0.9337 pc = 27.40 r* (wie bisher)
+   Quadrupol aus der Glättung Q₂ = 9.22e-31 s⁻²  (Cassini-Grenze ~3·10⁻²⁷ s⁻² [G])
+   Sonne γ − 1 = ⟨g⟩/g_N − 1:  1e+03 AE: 5.1e-08,  1e+04 AE: 5.1e-05,  3e+04 AE: 1.3e-03
+   Weiter Doppelstern 2 × 0,75 M☉ [A]: Fixpunkte von ℓ³·√(3/2)|T_gal + T_Begleiter(ℓ)| = G·m (Achse längs R / φ / z)
+      d =  5 kAE:  ℓ = 0.8484 pc;  ℓ = 0.8484 pc;  ℓ = 0.8483 pc   (ohne Begleiter 0.8484 pc)
+      d = 10 kAE:  ℓ = 0.8485 pc;  ℓ = 0.8484 pc;  ℓ = 0.8482 pc   (ohne Begleiter 0.8484 pc)
+      d = 30 kAE:  ℓ = 0.8493 pc;  ℓ = 0.8487 pc;  ℓ = 0.8471 pc   (ohne Begleiter 0.8484 pc)
+   Paar als Ganzes (1,5 M☉, ℓ = 1.069 pc): γ − 1 = 5 kAE: 4.3e-06,  10 kAE: 3.4e-05,  20 kAE: 2.7e-04,  30 kAE: 9.0e-04
+
+====================================================================================================
+3   Sternsysteme: Plummer (b = R_e [A]), isotrope Jeans-Gleichung, σ_los im Fenster R < R_e; Wirt als Punktmasse
+====================================================================================================
+   Eingaben: Masse mit Υ = 2 [A] (Zwerge: L_V [G]), R_e [G], Wirt Milchstraße 6·10¹⁰ M☉ bzw. NGC 1052 10¹¹ M☉ [A], Abstand [G]
+   ρ̄/ρ_J = mittlere Dichte in r_½ gegen Gezeitendichte (baryonisch / wirksam); f = Überschussanteil M^c/M (baryonisch / wirksam)
+   System               g_i/a₀   g_e/a₀  r½/r*        ρ̄/ρ_J           f ℓ_b[kpc]  Newton Feldform stetig b stetig w        gemessen   σ²/σ_N² verlangt/Feldform
+   kompakter KSH [A]    7.5809   0.6969   0.26 9263.3 / 6665.4  0.96 / 0.96     0.10    6.03     6.25     6.03     6.03               –                            
+   Pal 14 [G]           0.0112   0.0138   6.69  594.0 /  96.1  0.90 / 0.79     0.34    0.66     1.81     0.66     0.64  0.38 +0.12/−0.12                0.33 /  7.44
+   NGC 2419 [G]         0.8505   0.0086   0.77 119621.4 / 15540.2  0.99 / 0.97     1.54    5.09     6.57     5.09     5.08   4.1 +0.5/−0.5                0.65 /  1.67
+   Crater II [G]        0.0001   0.0050  72.14    0.5 /   0.1  0.05 / 0.00     1.42    0.40     1.42     1.13     1.42   2.7 +0.3/−0.3               44.48 / 12.24
+   Draco [G]            0.0041   0.0121  11.11   29.5 /   4.5  0.68 / 0.41     1.12    1.20     3.40     1.03     0.00   9.1 +1.2/−1.2               57.80 /  8.07
+   Fornax [G]           0.0271   0.0032   4.30  444.0 /  36.3  0.88 / 0.70     8.90    5.55    14.25     5.46     4.19  11.7 +0.9/−0.9                4.45 /  6.60
+   DF2 [G]              0.0141   0.0181   5.96    7.2 /   1.3  0.49 / 0.18     6.99    7.04    18.06     3.71     4.77   8.5 +2.3/−3.1                1.46 /  6.57
+   DF4 [G]              0.0200   0.0043   5.00  123.4 /  11.5  0.81 / 0.56    13.10    7.15    19.60     6.77     0.00   4.2 +4.4/−2.2                0.34 /  7.51
+   Kraftgesetz der stetigen Regel (baryonische Gezeit): Rand r_c von V = {ρ > ρ_J}, Potentialsprung Δ = Φ_s(r_c) − Φ̃ dort;
+   σ mit Sprung (Tabelle) / ohne Sprung / Anteilsform (nur der Überschuss spürt das Zonenmittel):
+      kompakter KSH [A]  r_c =   0.0249 kpc (r_c/R_e =  8.30),  Δ =     -2.70 (km/s)²,  σ = 6.03 / 6.03 / 6.03 km/s
+      Pal 14 [G]         r_c =   0.1167 kpc (r_c/R_e =  4.72),  Δ =     -0.98 (km/s)²,  σ = 0.66 / 0.67 / 0.67 km/s
+      NGC 2419 [G]       r_c =   0.2644 kpc (r_c/R_e = 13.92),  Δ =    -11.56 (km/s)²,  σ = 5.09 / 5.09 / 5.09 km/s
+      Crater II [G]      r_c =   0.6863 kpc (r_c/R_e =  0.64),  Δ =     -1.88 (km/s)²,  σ = 1.13 / 1.31 / 1.36 km/s
+      Draco [G]          r_c =   0.5407 kpc (r_c/R_e =  2.45),  Δ =     -9.26 (km/s)²,  σ = 1.03 / 1.25 / 1.29 km/s
+      Fornax [G]         r_c =   3.1498 kpc (r_c/R_e =  4.44),  Δ =   -162.53 (km/s)²,  σ = 5.46 / 5.56 / 5.57 km/s
+      DF2 [G]            r_c =   3.7990 kpc (r_c/R_e =  1.73),  Δ =   -372.58 (km/s)²,  σ = 3.71 / 8.29 / 9.12 km/s
+      DF4 [G]            r_c =   5.3967 kpc (r_c/R_e =  3.37),  Δ =   -362.07 (km/s)²,  σ = 6.77 / 7.23 / 7.31 km/s
+   Glatte Form (ρ − ρ_J)²_+/ρ, Kraftgewicht 1 − (ρ_J/ρ)² (baryonische Gezeit): der Randterm wird zur verteilten Kraft ∂_r(Gewicht)·(Φ̃ − Φ_s):
+      Crater II σ = 1.32 km/s (f = 0.02),  Fornax σ = 5.38 km/s (f = 0.86),  DF2 σ = 0.00 km/s (f = 0.40),  DF4 σ = 6.38 km/s (f = 0.77)
+   Feldform = bisherige Regel (Sterne sind Körper, das System ist kollektiv) = stetige Regel mit der Dichte der Quelle (Lesart i).
+   stetig b / w = stetige Regel mit der Dichte der Stufe (Lesart ii, Sterne vorher geglättet), Elterngezeit baryonisch / wirksam.
+   DF4 gegen Fornax: g_i/a₀ 0.0200 / 0.0271,  g_e/a₀ 0.0043 / 0.0032,  r½/r* 5.00 / 4.30,  ρ̄/ρ_J 123 / 444,  ℓ/r½ 6.3 / 9.6
+   Verlangte Richtung je System: (σ_gem/σ_Feldform)², aufsteigend nach der Kenngröße geordnet (< 1: weniger Verstärkung als die Feldform):
+      g_i/a₀  : Crater II (9.61e-05: 3.64)  Draco (0.00405: 7.16)  Pal 14 (0.0112: 0.04)  DF2 (0.0141: 0.22)  DF4 (0.02: 0.05)  Fornax (0.0271: 0.67)  NGC 2419 (0.85: 0.39)
+      g_e/a₀  : Fornax (0.00323: 0.67)  DF4 (0.00427: 0.05)  Crater II (0.00505: 3.64)  NGC 2419 (0.0086: 0.39)  Draco (0.0121: 7.16)  Pal 14 (0.0138: 0.04)  DF2 (0.0181: 0.22)
+      g_i/g_e : Crater II (0.019: 3.64)  Draco (0.336: 7.16)  DF2 (0.777: 0.22)  Pal 14 (0.809: 0.04)  DF4 (4.69: 0.05)  Fornax (8.39: 0.67)  NGC 2419 (98.8: 0.39)
+      ρ̄/ρ_J  : Crater II (0.536: 3.64)  DF2 (7.22: 0.22)  Draco (29.5: 7.16)  DF4 (123: 0.05)  Fornax (444: 0.67)  Pal 14 (594: 0.04)  NGC 2419 (1.2e+05: 0.39)
+      r½/r*   : NGC 2419 (0.767: 0.39)  Fornax (4.3: 0.67)  DF4 (5: 0.05)  DF2 (5.96: 0.22)  Pal 14 (6.69: 0.04)  Draco (11.1: 7.16)  Crater II (72.1: 3.64)
+
+====================================================================================================
+4   Konsequente Stufendichte: auch Wirte sind Körper (Lesart ii ohne Schnitt)
+====================================================================================================
+   Milchstraße 6·10¹⁰ M☉ (Plummer b = 3 kpc [A]) im Feld von M31 (10¹¹ M☉ [A], 785 kpc [G]): ℓ = 459 kpc, Überschussanteil 0.9940, Überschuss bis r = 61 kpc
+   v_c [km/s]           8 kpc      20 kpc      50 kpc     100 kpc
+   Newton               162.7       111.7        71.6        50.8
+   Feldform             208.1       192.5       182.9       179.4
+   stetig (ii)          162.7       111.7        71.6        69.1
+   Alle Satelliten liegen in dieser Zone: σ fällt für Crater II, Draco, Fornax auf die Newton-Spalte.
+
+====================================================================================================
+5   Kovariante Nebenbedingung D²σ̄ = 𝒢[σ] mit Überschuss: Verschmelzen zweier Komponenten (Sonnenumgebung)
+====================================================================================================
+   𝒢[σ] = D²σ − (4πG/c²)[(ρ_σ − ρ_J)_+ − Σ_i γ_i M_i^c 𝒦_{ℓ_i^c}(ρ_i)],  M_i^c = ∫_{V_i}(ρ_σ − ρ_J) dV,  V_i Komponente von {ρ_σ > ρ_J}
+   Probe: ∫(κK1)²dκ = 0.925274 (exakt 3π²/32 = 0.925275)
+   Zwei kompakte Kerne je 1 M☉ verschmelzen (Sattel erreicht ρ_J bei Abstand ≪ ℓ): vorher 2 × Plummer(ℓ = 0.934 pc), nachher Plummer(ℓ = 1.176 pc)
+   Sprung ΔV/M = 205.5 m²/s² (zum Vergleich: scharfer Einsatz einer homogenen Wolke 516.6 m²/s²)

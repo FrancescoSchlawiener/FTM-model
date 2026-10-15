@@ -1,0 +1,269 @@
+
+==============================================================================
+TEIL 1  Schließung eliminiert Fluchtmoden
+==============================================================================
+
+--- 1a Spektrum von -D∂² (diskret, n = 200 Punkte pro Länge L)
+Intervall (Dirichlet):  λ1 = 9.7714   (π²D/L² = 9.8696),  kein Nullmode
+Kreis (periodisch):     λ0 = 0.00e+00, λ1 = λ2 = 39.4752   (4π²D/L² = 39.4784)
+offener Bereich Λ =     10 L:  λ1 = 9.860e-02,  Zahl der Moden unter der Kreislücke 4π²D/L²:    20  (Weyl Λ·2/L = 20)
+offener Bereich Λ =    100 L:  λ1 = 9.869e-04,  Zahl der Moden unter der Kreislücke 4π²D/L²:   200  (Weyl Λ·2/L = 200)
+offener Bereich Λ =   1000 L:  λ1 = 9.870e-06,  Zahl der Moden unter der Kreislücke 4π²D/L²:  2000  (Weyl Λ·2/L = 2000)
+Kreis: genau 1 Mode (die Konstante) unter der Lücke; offen: Zahl ~ Λ -> Kontinuum ohne Lücke.
+
+--- 1b Identifikation als Projektor  P = (1/M) Σ_m T_{mL}  auf dem Überlagerungskreis der Länge M·L
+‖P² - P‖ = 0.0e+00,  ‖[P, Δ]‖ = 0.0e+00   (Identifikation vertauscht mit dem Generator)
+Rang P = 32 (= Punkte auf dem Kreis L),  Rang Π⊥ = I - P = 224
+max |Spektrum(PΔP auf Bild P) - Spektrum(Δ auf Kreis L)| = 3.9e-12
+Moden unter der halben Kreislücke 2π²/L² = 19.739:  im Bild von P: 1 (die Konstante),  im Bild von Π⊥: 10  (kleinster Π⊥-Eigenwert 0.6168 ≈ (2π/(M L))² = 0.6169)
+   kleinster Π⊥-Eigenwert analytisch (4/h²)sin²(π/N) = 0.6168
+=> Π⊥ enthält genau die langwelligen Fluchtmoden (k ∉ 2πZ/L); P löscht sie, ohne einen Term zu Δ hinzuzufügen.
+
+--- 1c Diffusion (D = 1, L = 1, Start in der Fenstermitte)
+ t [L²/D] | Gerade: im Fenster L | Intervall absorbierend: Überleben | Kreis: im Raum | Rückkehrdichte Gerade | Kreis
+    0.01  | 0.999593             | 9.991861e-01                    | 1            | 2.82095              | 2.82095
+    0.10  | 0.736448             | 4.744875e-01                    | 1            | 0.89206              | 1.03859
+    1.00  | 0.276326             | 6.585601e-05                    | 1            | 0.28209              | 1.00000
+   10.00  | 0.089021             | 1.744869e-43                    | 1            | 0.08921              | 1.00000
+  100.00  | 0.028204             | 0.000000e+00                    | 1            | 0.02821              | 1.00000
+Abklingrate des Überlebens im Intervall: π²D/L² = 9.8696; Rückkehrdichte Kreis -> 1/L, Gerade ~ t^(-1/2) -> 0
+Aufenthaltsanteil (Zeitmittel über [0,t]) im Fenster der Breite a = 0.1 um den Start:
+   t =       10:  Kreis 0.10071  (-> a/L = 0.1)   Gerade 0.01772  (≈ a/√(πDt) = 0.01784)
+   t =     1000:  Kreis 0.10001  (-> a/L = 0.1)   Gerade 0.00178  (≈ a/√(πDt) = 0.00178)
+   t =   100000:  Kreis 0.10000  (-> a/L = 0.1)   Gerade 0.00018  (≈ a/√(πDt) = 0.00018)
+
+--- 1d Liouville-Fluss ẋ = v (Gauß-Ensemble σ_v = 1)
+   t =     1: Gerade im Fenster L: 0.38292;  Kreis: 1, max|ρ·L - 1| = 5.35e-09 (Phasenmischung, kein Verlust)
+   t =    10: Gerade im Fenster L: 0.03988;  Kreis: 1, max|ρ·L - 1| = 0.00e+00 (Phasenmischung, kein Verlust)
+   t =   100: Gerade im Fenster L: 0.00399;  Kreis: 1, max|ρ·L - 1| = 0.00e+00 (Phasenmischung, kein Verlust)
+Koopman-Spektrum: Kreis rein punktförmig {i v 2πn/L}; Gerade kontinuierlich {i v k}.
+Kac, Kreisdrehung um den goldenen Winkel, Menge A = [0,0.01): mittlere Rückkehrzeit 100.001  (Kac 1/|A| = 100);  offene Translation x -> x + α auf R: 0 Rückkehrer
+Kac, Kreisdrehung um den goldenen Winkel, Menge A = [0,0.001): mittlere Rückkehrzeit 999.807  (Kac 1/|A| = 1000);  offene Translation x -> x + α auf R: 0 Rückkehrer
+
+--- 1e Wellenpaket (ħ = m = 1): Ring der Länge L gegen Gerade
+Wiederkehrzeit T_rev = mL²/(πħ) = 0.31831
+   t = 0.25 T_rev:  Ring |<ψ0|ψ(t)>|² = 0.500000    Gerade (Ring 64L) = 1.648e-18
+   t = 0.50 T_rev:  Ring |<ψ0|ψ(t)>|² = 0.000000    Gerade (Ring 64L) = 5.242e-19
+   t = 1.00 T_rev:  Ring |<ψ0|ψ(t)>|² = 1.000000    Gerade (Ring 64L) = 2.337e-19
+   t = 2.00 T_rev:  Ring |<ψ0|ψ(t)>|² = 1.000000    Gerade (Ring 64L) = 1.060e-08
+   Gerade analytisch (k0 = 0-Anteil): 1/√(1+(t/2σ0²)²) bei T_rev = 1.5706e-02
+
+--- 1f Pólya: Irrfahrt auf Z³ gegen Torus Z_N³
+Watson-Integral u = 1.516386 (numerisch 1.516369);  Rückkehrwahrscheinlichkeit Z³: 1 - 1/u = 0.340537
+Torus Z_4³: zurückgekehrt 100.00 % (bis 2560 Schritte), mittlere Rückkehrzeit 63.6  (Kac N³ = 64)
+Torus Z_6³: zurückgekehrt 100.00 % (bis 8640 Schritte), mittlere Rückkehrzeit 216.8  (Kac N³ = 216)
+
+--- 1g Bindung als Funktion der Schließungslänge L (D = 1)
+   L    | κ_var = 12D/L² | κ_gap = 4π²D/L² | Fluchtrate Intervall π²D/L² | Kac-Rückkehr Gitter h = 0.01 | Rückkehrdichte t=100
+    1.0 |      12.00000 |       39.47842 |                    9.86960 |       100 Schritte             | 1.00000
+    2.0 |       3.00000 |        9.86960 |                    2.46740 |       200 Schritte             | 0.50000
+    5.0 |       0.48000 |        1.57914 |                    0.39478 |       500 Schritte             | 0.20000
+   10.0 |       0.12000 |        0.39478 |                    0.09870 |      1000 Schritte             | 0.10000
+  100.0 |       0.00120 |        0.00395 |                    0.00099 |     10000 Schritte             | 0.02821
+   (Kac auf dem Gitter Z_{L/h}: mittlere Rückkehrzeit = L/h Schritte; auf Z: unendlich; Rückkehrdichte bei L = 100 noch nicht relaxiert, t < L²/4π²D)
+Toy Model mit K ≡ 1 (τ_K = ∞): Umkehrpunkt aus ½γ(x-x0)² - GM/x = H0, GM = 1, x0 = 1, v_s = 1.6, H0 = 0.28
+   γ =  5.0e-02: x_max =       5.3256,  ℓ_B = x_max - x0 =      4.3256,  γ ℓ_B²/(2 H0) = 1.67061
+   γ =  1.0e-02: x_max =       9.7475,  ℓ_B = x_max - x0 =      8.7475,  γ ℓ_B²/(2 H0) = 1.36640
+   γ =  1.0e-03: x_max =      26.2243,  ℓ_B = x_max - x0 =     25.2243,  γ ℓ_B²/(2 H0) = 1.13619
+   γ =  1.0e-04: x_max =      77.5372,  ℓ_B = x_max - x0 =     76.5372,  γ ℓ_B²/(2 H0) = 1.04606
+   γ =  1.0e-06: x_max =     751.1085,  ℓ_B = x_max - x0 =    750.1085,  γ ℓ_B²/(2 H0) = 1.00475
+=> Schließungsstärke γ ≈ 2 H0/ℓ_B²: dieselbe 1/L²-Form wie κ_eff ≈ c·D/L².
+
+==============================================================================
+TEIL 2  Die drei Rollen als Kräfte am Torus (zwei Stuart-Landau-Zyklen)
+==============================================================================
+ż_j = (μ + iω_j) z_j - β|z_j|² z_j + K e^{iφ}(z_k - z_j) [+ √(2D) ξ_j]
+Polarform: Ȧ1 = μA1 - βA1³ + K[A2 cos(ψ+φ) - A1 cos φ],  θ̇1 = ω1 + K[(A2/A1) sin(ψ+φ) - sin φ],  ψ = θ2 - θ1
+
+--- 2a Gleichgewichte (μ = β = 1, ω̄ = 10, φ = 0) – Vorhersage gegen Simulation
+ Fall |  K   |  Δω  |  φ    | Vorhersage                         | A_pred  | A_sim (min..max)        | Ω2-Ω1 pred | Ω2-Ω1 sim | r pred | r sim
+  A   | 0.10 | 1.00 | 0.000 | freier Torus T²                    |  0.9487 | 0.9479 (0.901..0.994) |     0.9798 |    0.9799 |  0.101 | 0.101
+  B   | 0.10 | 0.21 | 0.000 | freier Torus T²                    |  0.9487 | 0.9476 (0.895..1.000) |     0.0640 |    0.0642 |  0.730 | 0.729
+  C   | 0.30 | 0.50 | 0.000 | eingerastet T¹                     |  0.9305 | 0.9305 (0.931..0.931) |     0.0000 |    0.0000 |  1.000 | 1.000
+  D   | 1.50 | 4.00 | 0.000 | Zerfall (Amplitudentod, Fixpunkt)  |  0.0000 | 0.0000 (0.000..0.000) |        nan |    2.6483 |    nan | 0.451
+  E   | 1.50 | 2.00 | 0.000 | eingerastet T¹                     |  0.7862 | 0.7862 (0.786..0.786) |     0.0000 |    0.0000 |  1.000 | 1.000
+  F   | 0.30 | 0.50 | 1.571 | freier Torus T²                    |  1.0000 | 0.9688 (0.783..1.103) |     0.5000 |    0.5213 |  0.000 | 0.005
+   A_pred: freier Torus √((μ-K cosφ)/β) (mit <cos ψ> = 0), eingerastet √((μ - K(1-cos ψ*))/β), sin ψ* = Δω/2K
+   Schwebung Adler √(Δω² - 4K²cos²φ);  Phasenkonzentration r = |<e^{iψ}>| = (Δω - √(Δω²-4K²))/(2K)
+   Zerfallsgrenze für K = 1.5: Δω_c = 2√(μ(2K-μ)) = 2.8284
+
+--- 2b Dicke des Torus: Rauschen gegen transversale Rückstellung (stochastisches Heun, 400 Realisierungen,
+    mitrotierendes System ω̄ = 0; Rauschen: Re und Im je Varianz D·dt)
+  Fall A: <A> = 0.9484,  Var(A) sim = 1.333e-03 (davon deterministische Schwebung 1.052e-03),  Rauschanteil 2.810e-04,  Vorhersage (D/2)/(2βA*²) = 2.779e-04,  relative Dicke = 0.0177
+  Fall C: <A> = 0.9298,  Var(A) sim = 3.211e-04 (davon deterministische Schwebung -1.954e-14),  Rauschanteil 3.211e-04,  Vorhersage (D/2)/(2βA*²) = 2.892e-04,  relative Dicke = 0.0193
+          Phasendicke der Rastkurve: Var(ψ) sim = 3.609e-03, Vorhersage (D/A²)/(2K cos ψ*) = 3.487e-03
+
+--- 2c Parametrischer Pfad (Temperatur ϑ): μ(ϑ) = 1 - 0.1ϑ, Δω(ϑ) = 0.6 + 0.05ϑ, K = 0.4, D(ϑ) = 1e-3(1+0.1ϑ)
+   ϑ   |  μ   |  Δω  | Regime (analytisch)                | A_sim  | Ω2-Ω1 sim | r sim | rel. Dicke √(D/2/(2(μ-K)))/A
+   0.0 | 1.00 | 0.60 | eingerastet T¹                     | 0.9298 |    0.0000 | 1.000 |   –
+   2.0 | 0.80 | 0.70 | eingerastet T¹                     | 0.7705 |    0.0000 | 1.000 |   –
+   3.8 | 0.62 | 0.79 | eingerastet T¹                     | 0.5320 |    0.0000 | 1.000 |   –
+   4.2 | 0.58 | 0.81 | freier Torus T²                    | 0.4077 |    0.1360 | 0.843 | 0.1047
+   5.0 | 0.50 | 0.85 | freier Torus T²                    | 0.2941 |    0.2921 | 0.697 | 0.1936
+   5.8 | 0.42 | 0.89 | freier Torus T²                    | 0.1311 |    0.3957 | 0.618 | 0.9937
+   6.2 | 0.38 | 0.91 | Zerfall (Amplitudentod, Fixpunkt)  | 0.0000 |       –   |   –   |   –
+   7.0 | 0.30 | 0.95 | Zerfall (Amplitudentod, Fixpunkt)  | 0.0000 |       –   |   –   |   –
+   analytische Schwellen: Entriegeln Δω = 2K -> ϑ = 4.0;  Zerfall K > μ -> ϑ = 6.0 (dort Δω = 0.9 > 2√(μ(2K-μ)) = 0.8)
+
+--- 2d Zahlenbeispiel (Laborskala, Annahmen): zwei selbsterregte MEMS-Oszillatoren bei f0 = 1 MHz
+   Einheit μ0 = 2π·50 Hz (Nettoverstärkung), Zeiteinheit 1/μ0 = 3.183 ms, 1 ϑ-Einheit = 10 K
+   K = 0.4 μ0 = 2π·20 Hz (dissipative Kopplung über gemeinsame Einspannung)
+   Rastbereich |Δf| ≤ 2K/2π = 40 Hz;  kalt Δf = 30 Hz -> eingerastet
+   differentielle Frequenzdrift 0.25 Hz/K, Verstärkungsabfall 0.5 Hz/K (je 2π)
+   Entriegeln bei ΔT = 40 K (Schwebung setzt mit √-Gesetz ein), Zerfall bei ΔT = 60 K
+
+==============================================================================
+TEIL 3  Das Dreieck Energie – Struktur – Zustand als 3x3-Kopplungssystem
+==============================================================================
+J = diag(1/τ_E, 1/τ_S, 1/τ_Z)·(G - I),  G_ij = dimensionslose Verstärkung j -> i (Diagonale 0)
+a1 = Σ 1/τ_i,  a2 = Σ_{i<j} (1 - g_ij g_ji)/(τ_i τ_j),  a3 = det(I - G)/(τ_E τ_S τ_Z)
+det(I - G) = 1 - q_ES - q_EZ - q_SZ - q_ESZ - q_EZS  (2-Zyklen und beide 3-Zyklen)
+
+--- 3a Zufallstest: Hurwitz aus Schleifenverstärkungen gegen Eigenwerte
+   20000 Zufallssysteme (g ~ N(0,1), τ log-gleichverteilt 0.1..1000): Übereinstimmung 100.000 %
+   max rel. Fehler a3 = -det J: 6.1e-13;  stabil 14295, instabil über a3 <= 0 (Durchgehen, Σq >= 1) 5233, instabil oszillatorisch (a1a2 < a3, Aufschaukeln) 472
+
+--- 3b Negativer 3-Zyklus E -> S -> Z -> E (Vorzeichen +,+,-), Schwelle |q3| für Aufschaukeln
+   τ = [1. 1. 1.]:  |q3|_krit numerisch =       8.0000,  analytisch a1·a2·Πτ - 1 =       8.0000
+   τ = [ 1.  3. 10.]:  |q3|_krit numerisch =      19.0667,  analytisch a1·a2·Πτ - 1 =      19.0667
+   τ = [  1.  10. 100.]:  |q3|_krit numerisch =     122.2100,  analytisch a1·a2·Πτ - 1 =     122.2100
+   τ = [1.e+00 1.e+02 1.e+04]:  |q3|_krit numerisch =   10202.0201,  analytisch a1·a2·Πτ - 1 =   10202.0201
+   Sekantenbedingung: |q3| < sec³(π/3) = 8 garantiert Stabilität für alle τ; Zeitskalentrennung hebt die Schwelle.
+
+--- 3c Nichtlineares E-S-Z-Modell
+Ė = 2(P·ℒ(s) - γ(Z)E),  ℒ(s) = 1/(1 + (Δ0 - s)²),  γ(Z) = 1 + bZ          (Struktur -> Energie: Resonanzlage)
+ṡ = (aE + dZ - s)/τ_S                                                    (Energie -> Struktur; Zustand -> Struktur)
+Ż = νE(1 + c_s s²) - hZ                                                  (Energie/Struktur -> Zustand; h = Ausheilen)
+Ohne Zustand (Z = 0): A = aP/γ = 5.0; Fixpunkte s* = [1.    1.382 3.618], Schleifenverstärkung q = [ 0.8     1.236  -3.2361]
+Falten (q = 1): s_f = [1.1835 2.8165], A_f = [5.0887 2.9113]; bistabil für 2.9113 < A < 5.0887 (Bedingung Δ0 > √3)
+Der heiße Ast (s > s_f) verschwindet, sobald A = aP/γ unter 2.9113 fällt: Sattel-Knoten, Sprung auf den kalten Ast
+Start auf dem heißen Ast s = 3.6180
+ Szenario                                 | b    | d     | ν      | h      | Ende: E      s       Z       | Kippen bei t
+ (i)  Ausheilen, Attraktor                | 0.50 |  0.00 |  1e-03 |  5e-03 | 0.7117   3.5584   0.1423 |      nan
+ (ii) Alterung ohne Ausheilen             | 0.50 |  0.00 |  1e-03 |  0e+00 | 0.0655   0.3275   1.7506 |   2289.0
+ (iii) Alterung, schneller (ν x 4)        | 0.50 |  0.00 |  4e-03 |  0e+00 | 0.0483   0.2414   2.8138 |    616.0
+ (iv) Z schiebt Struktur weg (d > 0)      | 0.00 |  0.50 |  1e-03 |  0e+00 | 0.4650   4.0727   3.4969 |      nan
+ (v)  Z schiebt Struktur zurück (d < 0)   | 0.00 | -0.50 |  1e-03 |  0e+00 | 0.0397  -1.9185   4.2343 |   4818.0
+Analytisch (ii): γ_c = aP/A_fold = 1.7174, Z_c = (γ_c-1)/b = 1.4348, gemessen Z(t_kipp) = 1.4944;  t ≈ Z_c/(ν<E>) = 2197.5 mit <E> = 0.6529
+Kippzeit-Verhältnis (ii)/(iii) = 3.716  (erwartet ν-Verhältnis 4)
+Ausheilschwelle (i): h_c ≈ bνE*/(γ_c - 1) = 5.04e-04 (E* ≈ 0.7236); gewählt h = 5e-3 > h_c -> Attraktor
+Faltendurchgang (Z = Z_c) bei t_F = 2176.0; Sprung (s < 2) bei t = 2289.0: Geisterverzögerung 113.0 (vgl. τ_S = 10.0)
+Kritisches Verlangsamen vor dem Kippen (ii): langsamster Eigenwert λ_s des (E,s)-Blocks am quasistatischen Punkt
+    γ_c - γ  | t_F - t (Lauf) | q = A ℒ'(s*) | λ_s         | λ_s/√(γ_c - γ) | λ_s/√(t_F - t)
+       0.300 |          963.0 |    -1.68413 | -2.8741e-01 |    -5.2474e-01 | -9.2618e-03
+       0.100 |          334.0 |    -0.45434 | -1.4761e-01 |    -4.6677e-01 | -8.0767e-03
+       0.030 |          102.0 |     0.24920 | -7.4518e-02 |    -4.3023e-01 | -7.3783e-03
+       0.010 |           34.0 |     0.58213 | -4.1079e-02 |    -4.1079e-01 | -7.0449e-03
+       0.003 |           10.0 |     0.77695 | -2.1808e-02 |    -3.9815e-01 | -6.8962e-03
+       0.001 |            3.0 |     0.87297 | -1.2387e-02 |    -3.9171e-01 | -7.1516e-03
+   (λ_s/√(γ_c - γ) -> konstant: Wurzelgesetz des Sattel-Knotens; da Z nahezu linear wächst, auch λ_s ∝ √(t_F - t))
+
+--- 3d Gedächtniskern: Toy Model = Teilchen am Maxwell-Element
+Toy Model: ẍ = -ω0² x - γ y,  ẏ = ẋ - y/τ_K   <=>   Kraft = -∫ G(t-t') ẋ(t') dt',  G(t) = γ e^{-t/τ_K}
+Harmonische Antwort: Speicheranteil γ(ωτ)²/(1+(ωτ)²) (bindet), Verlustanteil γτ/(1+(ωτ)²) (reibt)
+   ωτ_K   | Δ(ω²)/γ = (ωτ)²/(1+(ωτ)²) | Dämpfung η/(γτ) = 1/(1+(ωτ)²) | sim: ω² - ω0²  | sim: Abklingrate
+      0.1  |                   0.00990  |                      0.99010   |      0.00992·γ | 0.00496 (½γτ/(1+(ωτ)²) mit tatsächlichem ω = 1.0005: 0.00495; Speicher mit ω: 0.00991)
+      1.0  |                   0.50000  |                      0.50000   |      0.52559·γ | 0.02497 (½γτ/(1+(ωτ)²) mit tatsächlichem ω = 1.0256: 0.02437; Speicher mit ω: 0.51266)
+     10.0  |                   0.99010  |                      0.00990   |      0.99179·γ | 0.00451 (½γτ/(1+(ωτ)²) mit tatsächlichem ω = 1.0484: 0.00451; Speicher mit ω: 0.99098)
+    100.0  |                   0.99990  |                      0.00010   |      0.99992·γ | 0.00045 (½γτ/(1+(ωτ)²) mit tatsächlichem ω = 1.0488: 0.00045; Speicher mit ω: 0.99991)
+
+==============================================================================
+TEIL 4  Wärme als langsames Gedächtnis: Rückwirkung auf die EM-Regeln
+==============================================================================
+
+--- 4a Eingespannter Kupferdraht im Magnetfeld (magnetomotorisch, Spannungsquelle)
+Kupfer: ρ_el = 1.68e-08 Ωm, α_R = 3.93e-03/K, E = 128 GPa, (1/E)dE/dT ≈ -3.8e-04/K, α = 1.65e-05/K
+Draht: Radius 50 µm, Länge 20 mm, beidseitig eingespannt, Vorspannung 20 MPa, B = 0.02 T, Q_m = 1000
+R0 = 42.781 mΩ,  G_th = 12kA/ℓ = 1.8897 mW/K,  C_th = 0.5419 mJ/K,  τ_th = C/G = 0.2867 s
+Galerkin (φ = 1 - cos 2πx/ℓ): m_eff = 2.1112 mg, N_cr = 4π²EI/ℓ² = 62.013 mN, N0 = 157.08 mN
+f_m0 = 1610.73 Hz,  Γ = Bℓ = 0.0004 T·m,  R_m = Γ²/c = 7.489 mΩ,  R_m/R0 = 0.175
+Frequenz-Temperaturkoeffizient: über Wärmespannung -3.7855e-02/K, über E(T) -5.3778e-05/K; Leitwert-Koeffizient α_R = 3.93e-03/K
+belastete Güte Q_l = Q/(1 + R_m/R0) = 851.0;  Verschiebung pro K in Linienbreiten: 32.22
+Knicken durch Wärmespannung bei ΔT_b = (N0 + N_cr)/(EAα) = 13.208 K;  τ_m = 2Q_l/ω = 0.1682 s
+
+Stationäre Temperaturen G ΔT = P(ΔT) und Schleifenverstärkung q = P'(ΔT)/G (zerlegt), Anregung f_d relativ zu f_m0:
+  V [mV] | f_d - f_m0 [Hz] | Lösungen ΔT [K]              | q je Lösung                 | q_σ(T)      | q_E(T)      | q_Wärmespannung
+    2.0  |   -10.0         | 0.0247                       | -0.001                      | -9.68e-05 | -9.09e-07 | -6.402e-04
+    2.0  |    -2.0         | 0.0222                       | -0.151                      | -7.79e-05 | -2.15e-04 | -1.512e-01
+    2.0  |    +0.0         | 0.0236                       | +0.066                      | -8.82e-05 | +9.31e-05 | +6.550e-02
+    2.0  |    +2.0         | 0.0245                       | +0.008                      | -9.51e-05 | +1.16e-05 | +8.191e-03
+    5.0  |   -10.0         | 0.1450                       | -0.612                      | -5.31e-04 | -8.67e-04 | -6.104e-01
+    5.0  |    -7.0         | 0.1511                       | +0.160                      | -5.78e-04 | +2.27e-04 | +1.600e-01
+    5.0  |    -4.0         | 0.1538                       | +0.014                      | -6.01e-04 | +2.12e-05 | +1.496e-02
+    5.0  |    +0.0         | 0.1543                       | +0.002                      | -6.05e-04 | +4.18e-06 | +2.944e-03
+   10.0  |   -40.0         | 0.6060                       | -0.476                      | -2.33e-03 | -6.71e-04 | -4.726e-01
+   10.0  |   -30.0         | 0.6157                       | +0.017                      | -2.41e-03 | +2.73e-05 | +1.918e-02
+   10.0  |   -25.0         | 0.6165                       | +0.002                      | -2.41e-03 | +6.44e-06 | +4.536e-03
+   10.0  |   -20.0         | 0.6167                       | -0.001                      | -2.42e-03 | +2.45e-06 | +1.726e-03
+   10.0  |   -10.0         | 0.6169                       | -0.002                      | -2.42e-03 | +6.59e-07 | +4.641e-04
+   (zerlegte Anteile an der ersten Lösung; eine Lösung mit q > 1 ist instabil -> Bistabilität, Sprung, Hysterese)
+Bistabilitätsfenster (drei stationäre Lösungen), Scan f_d - f_m0 von -80 bis +10 Hz in 0.25 Hz:
+   V =  2.0 mV: max q über alle Lösungen = +0.153;  Fenster: keins
+   V =  5.0 mV: max q über alle Lösungen = +0.603;  Fenster: keins
+   V =  6.0 mV: max q über alle Lösungen = +1.232;  Fenster: [-11.50, -11.50] Hz
+   V =  7.0 mV: max q über alle Lösungen = +1.898;  Fenster: [-16.25, -15.75] Hz
+   V = 10.0 mV: max q über alle Lösungen = +3.924;  Fenster: [-35.00, -32.50] Hz
+Quasistatischer Sweep bei V = 10 mV (C dT/dt = P - G ΔT, je 0.25-Hz-Schritt 10 τ_th):
+   Hysterese (|ΔT_auf - ΔT_ab| > 1 mK): f_d - f_m0 ∈ [-35.00, -32.50] Hz, max Sprung 88.5 mK
+   bei f_d - f_m0 = -32.50 Hz: ΔT_auf = 525.9 mK, ΔT_ab = 614.3 mK
+Kanalverhältnis (Frequenzhub pro K in Linienbreiten) / α_R = 8197
+
+--- 4b Ferrit am Curie-Punkt (Modell): P(T) = P0 (1 - T/T_C)^{2β}, 2β = 0.72, T_C = 493 K (MnZn typisch), T0 = 293 K
+  P0/G [K] | T* [K]   | T_C - T* [K] | q = P'(T*)/G | Verstärkung 1/(1-q) | dT*/d ln P0 [K] | Kupfer (P konst.) dT*/d ln P0 [K]
+       100 |  336.727 |     156.2733 |       -0.201 |             0.83232 |         36.3946 |      100.0
+       300 |  390.099 |     102.9012 |       -0.679 |             0.59545 |         57.8175 |      300.0
+      1000 |  453.990 |      39.0102 |       -2.971 |             0.25180 |         40.5379 |     1000.0
+      3000 |  482.372 |      10.6280 |      -12.829 |             0.07231 |         13.6937 |     3000.0
+     10000 |  490.878 |       2.1219 |      -67.143 |             0.01468 |          2.9039 |    10000.0
+
+==============================================================================
+TEIL 5  Gravitation: Vorspannung -> Steifigkeit -> Resonanzverschiebung
+==============================================================================
+Galerkin, Kragbalken (unten frei), φ = 1 - cos(πx/2ℓ): k_el = (π⁴/32) EI/ℓ³, k_geo = (π²/16 - 1/4) ρAg,
+   m_eff = (3/2 - 4/π) ρAℓ.  hängend: ω² = (k_el + k_geo)/m, stehend: ω² = (k_el - k_geo)/m
+   Koeffizienten: k_el = 3.0440 EI/ℓ³, k_geo = 0.3669 ρAg (unabhängig von ℓ); Knicklänge stehend ℓ_c³ = 8.298 EI/(ρAg)  (exakt Greenhill 7.837, Galerkin +5.9 %)
+
+ Körper          | g [m/s²]  | Δs [m]     | Takt √(1-6Δs/r) | h_max Stahl σ_y/ρg | ℓ_c Stab d=10mm | χ_g (hängend): Si-Balken | Stahlstab | Stahldraht
+ Erde            | 9.820e+00 | 1.4782e-03 | 0.999999999304 |      3.2432e+03 m |   5.0277e+00 m | 1.958e-07               | 7.377e-03 | 0.9867
+ Sonne           | 2.743e+02 | 4.9231e+02 | 0.999997877067 |      1.1612e+02 m |   1.6571e+00 m | 5.468e-06               | 1.719e-01 | 0.9995
+ Sirius B        | 4.017e+06 | 5.0117e+02 | 0.999740741017 |      7.9279e-03 m |   6.7727e-02 m | 7.416e-02               | 9.997e-01 | 1.0000
+ Neutronenstern  | 1.291e+12 | 6.8923e+02 | 0.809558356640 |      2.4677e-08 m |   9.8886e-04 m | 1.000e+00               | 1.000e+00 | 1.0000
+Hebelgesetz: ∂ln ω/∂ln g = ½ χ_g (hängend), -½ χ_g/(1 - 2χ_g) (stehend);  χ_g = k_geo/(k_el + k_geo)
+
+Verhältnis differentieller Kanal / Takt-Kanal bei radialer Verschiebung (FTM-Form g = 3c²Δs/r²):
+   R = (½ χ_g |d ln g/dr|) / (d ln Takt/dr) = χ_g (r - 6Δs)/(3Δs)
+   mit Eigenbeschleunigung a = g/√(1-6Δs/r) (ART, statischer Beobachter): R' = χ_g[(r - 6Δs)/(3Δs) + ½]
+   Erde           : r/Δs =   4.3101e+09,  R/χ_g =   1.4367e+09,  R'/χ_g =   1.4367e+09
+   Sonne          : r/Δs =   1.4131e+06,  R/χ_g =   4.7105e+05,  R'/χ_g =   4.7105e+05
+   Sirius B       : r/Δs =   1.1573e+04,  R/χ_g =   3.8556e+03,  R'/χ_g =   3.8561e+03
+   Neutronenstern : r/Δs =   1.7411e+01,  R/χ_g =   3.8036e+00,  R'/χ_g =   4.3036e+00
+   R = 1 bei χ_g = 1: FTM-Form r = 9Δs (= 3GM/c², Radius der Photonensphäre), Eigenbeschleunigung r = 7.5Δs
+
+Beispiel: Pendel/hängender Draht (χ_g ≈ 1) 1 m anheben auf der Erde:
+   δω/ω differentiell = ½ δln g = -1.5696e-07;  Takt δln(dτ/dt) = 1.0925e-16
+   Si-Kragbalken 100 µm x 1 µm: χ_g = 1.958e-07; hängend gegen stehend: ω_h/ω_s - 1 = 1.958e-07
+   Stahlstab 1 m, d = 10 mm: χ_g = 7.377e-03; hängend gegen stehend: ω_h/ω_s - 1 = 7.460e-03
+
+==============================================================================
+TEIL 6  Neue Aussagen: Auswahlregeln und Grenzen für die Zahl der Zyklen
+==============================================================================
+
+--- 6a Koexistenz zweier Zyklen an gemeinsamer Verstärkung (Lamb): İ_i = 2I_i(α_i - β_i I_i - θ_ij I_j)
+   θ12 = 0.5, θ21 = 0.5: C = 0.250, Fenster θ12/β2 = 0.500 < α1/α2 = 1.0526 < β1/θ21 = 2.000: True -> I = (0.7000, 0.6000)  Koexistenz (T²)
+   θ12 = 0.9, θ21 = 0.9: C = 0.810, Fenster θ12/β2 = 0.900 < α1/α2 = 1.0526 < β1/θ21 = 1.111: True -> I = (0.7632, 0.2632)  Koexistenz (T²)
+   θ12 = 1.5, θ21 = 1.5: C = 2.250, Fenster θ12/β2 = 1.500 < α1/α2 = 1.0526 < β1/θ21 = 0.667: False -> I = (0.0000, 0.9500)  ein Zyklus verdrängt (T¹)
+   θ12 = 2.0, θ21 = 0.3: C = 0.600, Fenster θ12/β2 = 2.000 < α1/α2 = 1.0526 < β1/θ21 = 3.333: False -> I = (0.0000, 0.9500)  ein Zyklus verdrängt (T¹)
+
+--- 6c Kac-Budget: Zerlegung des Kreises in 10 gleiche Zellen, Drehung um den goldenen Winkel (2·10⁶ Schritte)
+   mittlere Rückkehrzeiten je Zelle: min 9.9999, max 10.0001;  Σ 1/<τ_i> = 1.000000  (Kac: = 1)
+   offene Translation auf R: jede Zelle wird höchstens einmal besucht, Σ 1/<τ_i> = 0
+
+--- 6b Höchstzahl freier Zyklen an einem gemeinsamen Medium: θ̇_i = ω_i + k Σ_j sin(θ_j - θ_i), ω_i gleichabständig in Band W = 1
+   N  | k1 (erstes Einrasten) | (N-1)·k1 | k_s (vollständig synchron) | N·k_s  | Kuramoto 2W/π = 0.6366
+    4 |            1.9250e-01 |   0.5775 |                 2.0000e-01 | 0.8000
+    8 |            8.1250e-02 |   0.5687 |                 9.0000e-02 | 0.7200
+   16 |            4.1250e-02 |   0.6187 |                 4.2500e-02 | 0.6800
+   32 |            2.0312e-02 |   0.6297 |                 2.0625e-02 | 0.6600
+   Gitterauflösung in k: 0.01/N
+
+Rechenzeit: 140.8 s

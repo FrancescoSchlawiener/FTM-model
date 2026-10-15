@@ -1,0 +1,172 @@
+
+====================================================================================================
+0   Grundgroessen und Sonnenumgebung (a0 = 1,2e-10 m/s², gemessen)
+====================================================================================================
+   v0 = 233 km/s, R0 = 8,178 kpc [G]  ->  g_obs = 2.1514e-10 m/s² = 1.793 a0
+   Newtonsches Elternfeld aus RAR-Umkehr: g_Ne = 1.4289e-10 = 1.1908 a0,  nu_e = 1.5056,  K = dln nu/dln g = -0.2759
+   Sonne: r* = 7029.7 AE,  r_e = √(GM/g_Ne) = 6442.1 AE
+   lineare Antwort des kollektiven Feldes auf ein schwaches eigenes Feld (Kugelmittel):  c_e = nu_e(1+K/3) - 1 = 0.3671
+
+====================================================================================================
+1   Gezeitentensor und Glaettungsradius  l³ = G M / (√(3/2)·|Ē^TF|)
+====================================================================================================
+   Normierung: Punktmasse als Eltern, Kreisbahn: Ē^TF = (GM/R³)·diag(-2,1,1) -> √(3/2)|Ē^TF| = √(3/2)·√6 = 3.0000·GM/R³
+               = Jacobi-Wert 4A(A-B) = 3Ω² = 3GM/R³ der Kepler-Bahn (A = 3Ω/4, B = -Ω/4).
+   effektive Gezeit (Oort [G], ρ0 = 0,10 M☉/pc³): diag = (-9.713e-31, 7.770e-31, 5.871e-30) s⁻²
+      spurfrei: diag = (-2.863e-30, -1.115e-30, 3.979e-30),  |TF| = 5.027e-30,  √(3/2)|TF| = 6.157e-30
+   baryonische Newton-Gezeit (aus g_Ne, dln v/dln R = -0.1250, dln g_N/dln R = -1.7262, ρ_b = 0,084 M☉/pc³ [G]):
+      diag = (-9.775e-31, 5.663e-31, 5.179e-30) s⁻²;  spurfrei |TF| = 4.530e-30,  √(3/2)|TF| = 5.549e-30
+   Jacobi-Wert 4A(A-B) (Bahnrahmen, enthaelt Ω²) = 1.748e-30 s⁻²
+
+   Gezeitenmass                                           |E| [s⁻²]   l [pc]     l [AE]    l/r*   l/r_e
+   kovariant: √(3/2)|∂∂Φ̄_N^TF| (baryonisch, gewaehlt)    5.549e-30    0.934  1.926e+05   27.40   29.90
+   √(3/2)|Φ_ij^TF| effektiv                               6.157e-30    0.902   1.86e+05   26.46   28.88
+   volle Frobenius-Norm effektiv (mit Spur)               6.001e-30    0.910  1.876e+05   26.69   29.13
+   Jacobi 4A(A-B) (Bahnrahmen)                            1.748e-30    1.372   2.83e+05   40.26   43.94
+
+====================================================================================================
+2   Zonenmittel der Gezeit  ⟨Ē^TF⟩_l = ∫ K_l(x) ∂∂Φ̄_N^TF(x) d³x   (Plummer-Gewicht um den Schwerpunkt)
+====================================================================================================
+   Probe der Identitaet ⟨∂z²(1/|x-d|)⟩_l = (2/d³)·F(d/l),  F(x) = x³/(1+x²)^(3/2):
+      d/l =  0.3:  Quadratur 1.757443,  Formel 1.757479
+      d/l =  1.0:  Quadratur 0.707099,  Formel 0.707107
+      d/l =  3.0:  Quadratur 0.063245,  Formel 0.063246
+   Eigenes Feld (d = 0, kugelsymmetrisch): Zonenmittel des spurfreien Anteils = 0 exakt.
+
+   Beitraege zur Gezeit der Sonne (l = 0.934 pc; Mass √(3/2)|TF| = 3GM/d³ fuer eine Punktquelle):
+   Quelle                          d  Punktwert [s⁻²]  Zonenmittel [s⁻²]  rel. zu Galaxie
+   Merkur                    0.387 AE        3.406e-19          2.763e-36         4.98e-07
+   Venus                     0.723 AE        7.702e-19          4.075e-35         7.34e-06
+   Erde+Mond                 1.000 AE        3.616e-19          5.061e-35         9.12e-06
+   Mars                      1.524 AE        1.084e-20          5.372e-36         9.68e-07
+   Jupiter                   5.203 AE        8.061e-19          1.589e-32         2.86e-03
+   Saturn                    9.555 AE        3.896e-20          4.758e-33         8.57e-04
+   Uranus                   19.218 AE        7.315e-22          7.267e-34         1.31e-04
+   Neptun                   30.110 AE        2.244e-22          8.575e-34         1.55e-04
+   Summe Planeten                           2.329e-18          2.233e-32         4.02e-03
+   Galaxie (baryonisch)                     5.549e-30          5.549e-30         1.00e+00
+   Mit dem Punktwert statt des Zonenmittels waere l = 25.7 AE = 0.0037 r*  (Cassini verlangt l ≥ 1,30 r*).
+   Planetenbeitrag im Zonenmittel ≈ 3·ΣGM_p/l³ (unabhaengig von d): 2.233e-32 s⁻²  -> δl/l ≤ 1.3e-03
+
+   Nachbarsterne: Poisson-Feld n = 0,1 Sterne/pc³ [G], Massen log-gleichverteilt 0,1-1 M☉, je ueber l_j geglaettet;
+   Gezeit eines Plummer-Sterns im Abstand d, gemittelt ueber die Sonnenzone ≈ Hesse-Matrix des Potentials mit ε² = l_j² + l_s².
+   l_Sonne / l_glatt: Median 0.995,  5 % 0.945,  95 % 1.050,  Minimum 0.900  ->  l_min = 24.6 r*
+
+   Zonenmittel einer ebenen Welle e^{ik·x}: Π(kl) = kl·K1(kl);  Probe (Quadratur):  kl=0.3: 0.916798 / 0.916798,  kl=1.0: 0.601907 / 0.601907,  kl=3.0: 0.120469 / 0.120469,  kl=10.0: 0.000186 / 0.000186
+   Gezeit einer Welle ½ω²h_c gegen die galaktische Gezeit (h_c = 2,4e-15 (f·yr)^(-2/3) [G, PTA-Spektrum, unter 2 nHz extrapoliert]):
+       f [Hz]    λ [pc]        kl      ½ω²h_c      Π(kl)  Zonenmittel/Gal.
+     5.00e-10    19.431     0.302   1.883e-31  9.160e-01         3.108e-02
+     1.00e-09     9.716     0.604   4.744e-31  7.799e-01         6.668e-02
+     2.00e-09     4.858     1.208   1.195e-30  5.186e-01         1.117e-01
+     3.00e-09     3.239     1.812   2.053e-30  3.257e-01         1.205e-01
+     1.00e-08     0.972     6.039   1.022e-29  7.780e-03         1.433e-02
+     3.17e-08     0.306    19.142   4.759e-29  2.716e-08         2.330e-07
+     1.00e-07     0.097    60.386   2.202e-28  5.833e-26         2.315e-24
+   LIGO-Band (100 Hz, h = 1e-21): ½ω²h = 1.97e-16 s⁻² (Punktwert 3.6e+13-fach der Galaxie), kl = 6.04e+10, Π ~ exp(-6.0e+10) = 0
+
+====================================================================================================
+3   Masse als Komar-Fluss und Fixpunkt fuer l
+====================================================================================================
+   Statisch, σ = ln N (q -> 0 im Innern kompakter Koerper), Schwarzschild: M_σ = (c²/4πG)∮ n·Dσ dA = M/N(r),
+   M_K = (c²/4πG)∮ e^σ n·Dσ dA = M (unabhaengig von der Flaeche).
+   Sonne, Oberflaeche              : N = 0.99999788,  M_σ/M = 1.00000212,  M_K/M = 1,  Unterschied in l: 7.08e-07
+   Weisser Zwerg 0,6 M☉, 8700 km   : N = 0.99989816,  M_σ/M = 1.00010185,  M_K/M = 1,  Unterschied in l: 3.39e-05
+   Neutronenstern 1,4 M☉, 12 km    : N = 0.80960123,  M_σ/M = 1.23517598,  M_K/M = 1,  Unterschied in l: 7.29e-02
+   Fixpunkt-Iteration l -> (GM/√(3/2)|⟨E⟩_l|)^(1/3) mit Planeten (Start 0,1 l): 7 Schritte, l = 0.932488 pc,  l/l_ohne Planeten - 1 = -1.34e-03
+
+====================================================================================================
+4   Newton-Grenzfall der Wirkung: diskrete Probe auf einem 3D-Gitter (Einheiten G = a0 = 1, Gitterweite 1)
+====================================================================================================
+   Diskrete Fassung von  L_NR = (1/8πG)[(∇Ψ)² - 2∇Φ·∇Ψ + (∇Φ-∇Φ_N)² + a0²Q_s(|∇Φ̄_N|²/a0²) + 2φ(∇²Φ̄_N - 𝒢[∇²Φ_N])] - ρΦ
+   𝒢[s] = (1-χ)s + K_l·∫χ s  (Koerpergebiet χ, Plummer-Kern K_l um den Schwerpunkt, Masse aus dem Fluss)
+   Gitter 14³, Koerper 20 (7 Knoten), Gas 8, l = 2.5;  |∇Φ̄_N|/a0 im Gitter: 0.031 ... 1.627
+   Richtungsableitungen der Wirkung in der Loesung (zufaellige Richtungen, zentrale Differenzen):
+      δS/δPsi  ·e =  1.993e-11   (Vergleichsgroesse (1/4π)|∇Φ_N·∇e| = 2.093e-01)
+      δS/δPhi  ·e = -2.990e-11   (Vergleichsgroesse (1/4π)|∇Φ_N·∇e| = 4.536e-02)
+      δS/δPhiN ·e =  0.000e+00   (Vergleichsgroesse (1/4π)|∇Φ_N·∇e| = 1.837e-01)
+      δS/δPhib ·e =  0.000e+00   (Vergleichsgroesse (1/4π)|∇Φ_N·∇e| = 2.335e-01)
+      δS/δphi  ·e =  0.000e+00   (Vergleichsgroesse (1/4π)|∇Φ_N·∇e| = 1.822e-02)
+   Wirkung in der Loesung S = 277.9674557766,  -V_E0 = 277.9674557766,  Differenz -5.68e-14
+   Strukturpotential im Koerpergebiet (𝒢†φ): min -2.4856964828, max -2.4856964828,  K·φ = -2.4856964828
+   Kraftgesetz: dV_E0/dε (neu geloest) = -13.0475168348
+                Σ Φ·η mit Φ = Φ_N + 𝒢†φ  = -13.0475168344
+                Σ (Φ_N + φ)·η (ohne Zonenmittel im Koerper) = -13.2309343419
+
+====================================================================================================
+5   Sonne im Milchstrassenfeld mit dem kovarianten Glaettungsradius
+====================================================================================================
+   Quadrupol Q2 = -(3/2)(g_e/r_e)·J(β, λ = l/r_e);  Cassini: Q2 = (3 ± 3)·10⁻²⁷ s⁻² (Hees et al. 2014); galaktische Gezeit: 4.30e-30 s⁻²
+   Glaettungsradius                              l [pc]       λ           J    Q2 [s⁻²]  Q2/σ_Cassini  Q2 (a0=cH0/2π)
+   kovariant, baryonisch (gewaehlt)               0.934   29.90 -4.1445e-06   9.218e-31       3.1e-04       8.464e-31
+   kovariant, effektiv                            0.902   28.88 -4.5989e-06   1.023e-30       3.4e-04       9.392e-31
+   Jacobi 4A(A-B)                                 1.372   43.94 -1.3059e-06   2.904e-31       9.7e-05       2.667e-31
+   Minimum Nachbarsterne (0,90 l)                 0.840   26.91 -5.6852e-06   1.264e-30       4.2e-04       1.161e-30
+   Oberflaechenterm allein (4/15)(dν/dln g)/λ³·(-3/2)g_e/r_e bei l_bar: 9.218e-31 s⁻²
+
+   γ(r) = ⟨g⟩/g_N der Sonne (l = 0.934 pc) und Zusatz ohne den gleichfoermigen Anteil (der Sonne und Planeten gleich beschleunigt):
+      r [AE]  g_N [m/s²]  γ - 1 (Quadratur)   γ - 1 (linear: c_e r³/(r²+l²)^1,5)   δa [m/s²]
+           1   5.930e-03          0.000e+00                            5.139e-17   3.047e-19
+         5.2   2.193e-04          7.105e-15                            7.226e-15   1.585e-18
+          30   6.589e-06          1.388e-12                            1.388e-12   9.142e-18
+         100   5.930e-07          5.139e-11                            5.139e-11   3.047e-17
+        1000   5.930e-09          5.139e-08                            5.139e-08   3.047e-16
+        5000   2.372e-10          6.417e-06                            6.417e-06   1.522e-15
+       1e+04   5.930e-11          5.118e-05                            5.118e-05   3.035e-15
+       3e+04   6.589e-12          1.339e-03                            1.339e-03   8.819e-15
+       5e+04   2.372e-12          5.825e-03                            5.825e-03   1.382e-14
+       1e+05   5.930e-13          3.592e-02                            3.592e-02   2.130e-14
+       2e+05   1.483e-13          1.372e-01                            1.372e-01   2.034e-14
+   Innen: isotroper Hooke-Zusatz δa = -κ r, κ = c_e GM/l³ = 2.037e-30 s⁻²  (zum Vergleich Λc²/3 bei Λ_obs = 1,1e-52 m⁻²: 3.30e-36 s⁻²)
+
+   Periheldrehungen aus Hooke-Zusatz (κ) + Quadrupol (Glaettung 9.22e-31 + Gezeit 4.30e-30 s⁻²); Fehler EPM2011 [G]:
+   Planet    Δϖ̇ [mas/Jahr]  σ_EPM [mas/Jahr]  Verhaeltnis  δa_Hooke [m/s²]     δa/g_N
+   Merkur         3.389e-08              0.03      1.1e-06        1.180e-19   2.98e-18
+   Venus         -3.314e-08             0.016      2.1e-06        2.204e-19   1.94e-17
+   Erde           1.203e-07            0.0019      6.3e-05        3.047e-19   5.14e-17
+   Mars          -4.043e-07           0.00037      1.1e-03        4.643e-19   1.82e-16
+   Jupiter       -2.750e-06              0.28      9.7e-06        1.585e-18   7.24e-15
+   Saturn         4.326e-06            0.0047      9.2e-04        2.912e-18   4.48e-14
+   Uranus        -2.232e-05               3.9      5.7e-06        5.857e-18   3.65e-13
+   Neptun        -2.380e-06               5.4      4.4e-07        9.176e-18   1.40e-12
+
+   Weite Doppelsterne (1,5 M☉, l = 1.069 pc):  2 kAE: γ = 1.00000,  5 kAE: γ = 1.00000,  7 kAE: γ = 1.00001,  10 kAE: γ = 1.00003,  15 kAE: γ = 1.00011,  20 kAE: γ = 1.00027,  30 kAE: γ = 1.00090
+   Oortsche Wolke (Kreisbahnen), γ mit l_bar / mit l_Jacobi:  1e+04 AE: 1.0001 / 1.0000,  2e+04 AE: 1.0004 / 1.0001,  5e+04 AE: 1.0058 / 1.0019,  1e+05 AE: 1.0359 / 1.0136,  2e+05 AE: 1.1372 / 1.0706
+
+====================================================================================================
+6   Groesse der kovarianten Korrekturen (Sonne, l = l_bar)
+====================================================================================================
+   Vorzugssystem: Kern im Ruhesystem des Koerpers, Gradient im Ruhesystem des Mediums; v = 369,8 km/s [G], (v/c)² = 1.52e-06
+      anisotroper Anteil des Hooke-Zusatzes ~ (v/c)²·κ = 3.10e-36 s⁻²,  Korrektur an Q2 ~ (v/c)²·Q2 = 1.40e-36 s⁻²
+      Projektion der Gezeit mit U statt u: relative Aenderung ~ (v/c)² = 1.5e-06  ->  δl/l ~ 5.1e-07
+   Metrische Laenge im Kern: Potentialtiefe (v0/c)² = 6.04e-07;  eigenes Feld am Zonenrand GM/(c² l) = 5.12e-14
+   Masse: σ-Fluss statt Komar-Fluss an der Sonnenoberflaeche: 2,1e-6 (-> δl/l = 7e-7); Komar-Fluss: exakt
+   Instantanes σ̄ auf dem Ruheschnitt: Lichtlaufzeit ueber die Zone l/c = 3.05 Jahre; Retardierungsfehler ~ (v/c)² = 1.5e-06 relativ
+   η - 1 (Stern spuert ⟨Φ_s⟩_l, Licht und Gas Φ_s): Δg ≈ 2πG l² [ln(2L/l) - 4/3] ∇ρ_ph = 7.88e-18 m/s²,  Δg/g_obs = 3.7e-08
+      (ρ_ph = 0,01 M☉/pc³ [G], Skala L = R0; Plummer-Kern: ⟨r²⟩ logarithmisch, abgeschnitten bei L)
+   Planeten in der Zone: δl/l = -1.3e-03 (Fixpunkt), Schwankung mit den Umlaeufen von Jupiter/Saturn in derselben Groesse
+
+====================================================================================================
+7   Zum Vergleich: Gezeit aus der vollen Riemann-Projektion -> Kopplung der Zonen an Gravitationswellen
+====================================================================================================
+   Strukturenergie der geglaetteten Sonne: V(l) = -9.9039e+32 J,  dV/dl = 3.4388e+16 J/m,  d²V/dl² = -2.3871e+00 J/m²
+   l = (GM/|E|)^(1/3):  dV/d|E| = -5.952e+61 J s²,  d²V/d|E|² = 7.152e+90 J s⁴
+   Welle mit Gezeit ½ω²h: Zusatz in der Wellen-Lagrangedichte -⅛ n V_EE ω² ḣ² Π(kl)²  ->  δ = 4πG n V_EE ω² Π²/c²,  n = 0,1 pc⁻³ [G]
+       f [Hz]       kl      Π(kl)   |δc_T/c| ≈ |δ|/2
+     1.00e-10   0.0604  9.938e-01          4.428e-05
+     1.00e-09    0.604  7.799e-01          2.727e-03
+     3.00e-09     1.81  3.257e-01          4.281e-03
+     1.00e-08     6.04  7.780e-03          2.714e-05
+     3.17e-08     19.1  2.716e-08          3.324e-15
+     1.00e-07     60.4  5.833e-26          1.525e-49
+     1.00e-03 6.04e+05  0.000e+00          0.000e+00
+     1.00e+02 6.04e+10  0.000e+00          0.000e+00
+   Mit der Hesse-Form des Faltungspotentials σ̄ (gewaehlt) ist die Kopplung null: σ koppelt linear nicht an TT-Moden.
+
+====================================================================================================
+8   Schwellenuebergang (Koerper = Zusammenhangskomponente mit ρ_σ > ρ_J = 3√(3/2)|Ē^TF|/(4πG)) und l-Kraft
+====================================================================================================
+   ρ_J an der Sonne = 1.985e-20 kg/m³ = 0.293 M☉/pc³ = 8.7 H-Atome/cm³ (X = 0,73)
+   An der Schwelle gilt mittlere Dichte = ρ_J, also Radius R = (3M/4πρ_J)^(1/3) = l: das Objekt ist so gross wie seine Zone.
+   Sprung Punkt -> Plummer l                  : ΔV = 1.268e+35 J,  ΔV/M = 6.375e+04 m²/s²,  √(2|ΔV|/M) = 357.06 m/s
+   Sprung homogene Kugel R = l -> Plummer l   : ΔV = 1.027e+33 J,  ΔV/M = 5.166e+02 m²/s²,  √(2|ΔV|/M) = 32.14 m/s
+   l-Kraft (l ∝ R^(2/3) bei flacher Rotationskurve): F/M = -1.316e-18 m/s² = -6.1e-09 g_obs

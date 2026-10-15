@@ -1,0 +1,100 @@
+0) Zerlegung: a/a_N = ν = Σ_{n≥0} qⁿ = 1/(1−q),  χ = s·q/(1−q);  Tully-Fisher verlangt s·ν → 1 für s → 0 (1 − q ≈ s)
+   Tiefgrenzfall bei s = 0,01:
+   q = e^{−s}     s·ν =    1.0050   a/a0 = s²ν = 0.0101
+   q = 1/cosh s   s·ν =  200.0083   a/a0 = s²ν = 2.0001
+   q = e^{−s²}    s·ν =  100.0050   a/a0 = s²ν = 1.0001
+
+(a) Standardabbildung p' = p + K sin x, x' = x + p'  (Resonanz-Halbbreite 2√K, Abstand 2π; Überlappung bei K = π²/4)
+    Mit K ∝ ε = a0/a_N ist Breite/Abstand ∝ 1/s: die Wurzel entsteht aus der Pendelbreite ∝ √ε.
+  a1) Anteil nicht auf rotierenden KAM-Tori (Inseln 0/1 und 1/2, Librationstest) bei kleinem K:
+      K      Insel 0/1   /√K      Pendel 16√K/4π²   Insel 1/2   /K
+     0.01   0.0402    0.402    0.0405          0.0009     0.091
+     0.04   0.0800    0.400    0.0811          0.0041     0.104
+     0.10   0.1299    0.411    0.1282          0.0106     0.106
+     0.30   0.2189    0.400    0.2220          0.0294     0.098
+      Anteil ≈ 0,405·√K ∝ 1/s: Zusatz χ·√(a_N a0) = Anteil·a0·s → konstant ≈ 0,64·a0 im ganzen Newton-Bereich (K = π²/4s²).
+  a2) Chaotischer Anteil (Lyapunov > 0,02 nach 2500 Schritten) gegen χ(s), s = π/(2√K) (s = 1 bei Überlappung):
+      K       s      chaotisch   χ(s)
+    0.600  2.028   0.0311     0.3073
+    0.800  1.756   0.1353     0.3666
+    0.972  1.594   0.4009     0.4064
+    1.200  1.434   0.5854     0.4488
+    1.500  1.283   0.6944     0.4922
+    2.000  1.111   0.7535     0.5454
+    3.000  0.907   0.8820     0.6142
+    5.000  0.702   0.9815     0.6895
+    8.000  0.555   1.0000     0.7479
+      Grenzschicht für kleines K ∝ exp(−π²/√K) = exp(−2π·s); Koeffizient 1 hieße K(s=1) = π⁴ = 97,4 (dort längst voll chaotisch).
+  a3) Melnikov-Integrale des Pendels (Separatrix ẋ₀ = 2 sech t), numerisch gegen geschlossen:
+   Ω = 0.5:  Antrieb 4.7434260856 = 2π·sech(πΩ/2) 4.7434260856;   parametrisch 0.4520688490 = πΩ²/(2 sinh(πΩ/2)) 0.4520688490
+   Ω = 1:  Antrieb 2.5040806625 = 2π·sech(πΩ/2) 2.5040806625;   parametrisch 0.6825694503 = πΩ²/(2 sinh(πΩ/2)) 0.6825694503
+   Ω = 2:  Antrieb 0.5420299028 = 2π·sech(πΩ/2) 0.5420299028;   parametrisch 0.5440581100 = πΩ²/(2 sinh(πΩ/2)) 0.5440581100
+   Ω = 4:  Antrieb 0.0234668956 = 2π·sech(πΩ/2) 0.0234668956;   parametrisch 0.0938682372 = πΩ²/(2 sinh(πΩ/2)) 0.0938682372
+      Exponent immer πΩ/2 (Pole des sech-Pulses bei ±iπ/2), Vorfaktor je nach Störung verschieden.
+
+(b) Mode der Frequenz ω bei einem in imaginärer Zeit periodischen Korrelator (Periode 2π, Singularität bei Koinzidenz):
+      ω      ∫e^{−iωt}·[−1/(4sinh²((t−iε)/2))]dt·e^{−ωε}   s/(e^s−1), s=2πω    FT[1/(4cosh²(t/2))]   Quotient   e^{−s/2}
+    0.05    0.851131540328                         0.851131540328      0.9958994720          0.85463600   0.85463600
+    0.15    0.601709955665                         0.601709955665      0.9639259015          0.62422843   0.62422843
+    0.30    0.337439076892                         0.337439076892      0.8659808344          0.38966114   0.38966114
+    1.00    0.011755441347                         0.011755441347      0.2720290550          0.04321392   0.04321392
+      Singularität auf der reellen Achse (thermisch) → Bose s/(e^s−1); Separatrix-Puls (Pole bei halber Periode) → (s/2)/sinh(s/2).
+      χ = ⟨E⟩/kT (Planck-Mittelwert durch Gleichverteilungswert), a = a_N·(1 + n_B): Identitäten, keine Herleitung von s.
+  b1) Natürliches Verhältnis Energie/Temperatur bei Unruh- bzw. Horizonttemperatur ist linear: s' = a_N/a0.
+      Punktmasse 6·10¹⁰ M☉, v_f = (GMa0)^{1/4} = 175.8 km/s:
+      r [kpc]   v mit q = e^{−a_N/a0}   v mit q = e^{−√(a_N/a0)}
+       10         226.8 km/s               213.5 km/s
+       30         339.8 km/s               188.2 km/s
+      100         609.6 km/s               179.5 km/s
+      300        1054.2 km/s               177.1 km/s
+      Linear: a → a0 + a_N/2, v ∝ √r steigt, keine Tully-Fisher-Relation.
+  b2) Energie = ħ·Bahnfrequenz, Temperatur kT_GH = ħa0/c:
+      r = 8 kpc: ħω_K/kT_GH = ω_K·c/a0 =   1817.9,   verlangt s = 1.044
+      r = 50 kpc: ħω_K/kT_GH = ω_K·c/a0 =    116.3,   verlangt s = 0.167
+      Verlangt ist ω = √(a_N a0)/c = √(a_N/ℓ0), ℓ0 = c²/a0: bei a_N = a0 Periode 2πc/a0 = 497 Mrd. Jahre.
+
+(c) Rückkehr mit poissonschem Verlust (Rate Γ):
+  c1) Fester Umlauf T, ΓT = 1: mittlere Zahl vollständiger Umläufe (MC) 0.58307, q/(1−q) = 0.58198 (Kac).
+      Mit Γ ∝ a_N und festem T folgt q = e^{−a_N/a0} (wie b1). Mit Γ = √(a_N/L), T = √(L/a0) folgt s exakt (gleiche Länge L gesetzt).
+      Verlust längs des Weges nach außen, Rate ∝ a_N: s_Weg = |Φ_N|/√(GMa0). Plummer b = 3 kpc, 6·10¹⁰ M☉:
+      r =  0.5 kpc:  s_lokal = 1.1131  s_Weg = 2.7452   ν_lokal = 1.4893  ν_Weg = 1.0686
+      r =  2.0 kpc:  s_lokal = 1.7246  s_Weg = 2.3156   ν_lokal = 1.2169  ν_Weg = 1.1095
+      r =  5.0 kpc:  s_lokal = 1.3259  s_Weg = 1.4319   ν_lokal = 1.3616  ν_Weg = 1.3138
+      r = 10.0 kpc:  s_lokal = 0.7827  s_Weg = 0.7997   ν_lokal = 1.8423  ν_Weg = 1.8164
+      r = 30.0 kpc:  s_lokal = 0.2762  s_Weg = 0.2769   ν_lokal = 4.1431  ν_Weg = 4.1342
+  c2) Diffusive Rückkehr (Gitter-Irrfahrt, L = 12, 40000 Läufer), Verlust je Schritt 1−e^{−Γ}, s = L·√(2Γ):
+      s     einseitig MC   Gitter z^L  e^{−s}     von 2L MC   e^{−2s}    geschlossener Kreis (±L) MC   1/cosh s
+    0.3    0.7388±0.0016  0.7408      0.7408    0.55126    0.54881           0.9565±0.0002         0.9566
+    1.0    0.3674±0.0016  0.3677      0.3679    0.13526    0.13534           0.6474±0.0010         0.6481
+    2.0    0.1349±0.0010  0.1347      0.1353    0.01776    0.01832           0.2645±0.0011         0.2658
+    4.0    0.0178±0.0003  0.0176      0.0183    0.00026    0.00034           0.0354±0.0004         0.0366
+      Einseitig (nach außen offen): q = e^{−s}, n Rückkehren qⁿ, Zahl der Rückkehren ν = 1/(1−q). Geschlossener Kreis: 1/cosh s → a → 2a0 (Abschnitt 0).
+  c3) Laplace-Eindeutigkeit: E[e^{−λX}] = e^{−√λ} für alle λ nur für die Lévy-Dichte f(x) = x^{−3/2}e^{−1/(4x)}/(2√π) (erste Ankunft der Diffusion):
+      λ =   0.1:  0.728893414110   e^(−√λ) = 0.728893414110
+      λ =   1.0:  0.367879441171   e^(−√λ) = 0.367879441171
+      λ =  10.0:  0.042329219623   e^(−√λ) = 0.042329219623
+      Verlust ∝ a_N^β, Rückkehrdauer stabil mit Index α: q = e^{−(a_N/a0)^{αβ}}; verlangt αβ = ½:
+      α = 1 (feste Dauer) ↔ β = ½ (Frequenz ∝ √a);  α = ½ (Diffusion) ↔ β = 1 (Rate ∝ a, wie Unruh/Horizont).
+  c4) Zeitskala bei Γ = a_N/c, τ_D = c/a0 = 79 Mrd. Jahre: mittlere Dauer überlebender Rückkehren τ_D/(2s), bei s = 1: 40 Mrd. Jahre.
+      Als Echtzeit-Geschichte zu lang (mit a0 = cH0/2π ist c/(2a0) = π/H0); als stationärer Kern: q = e^{−κL} löst G'' = κ²G, κ²L² = a_N/a0.
+
+(d) Mittelung
+  d1) Kern-Nome Δs/r, zeitgemittelt über Kepler-Ellipsen mit großer Halbachse 8 kpc (Milchstraße 6·10¹⁰ M☉):
+      e = 0:  ⟨Δs/r⟩ = 1.1966e-07
+      e = 0.5:  ⟨Δs/r⟩ = 1.1966e-07
+      e = 0.9:  ⟨Δs/r⟩ = 1.1966e-07
+      verlangt q = e^{−s} bei 8 kpc: 0.3522. Ein Potenzgesetz in Δs/r bleibt nach jeder Mittelung ein Potenzgesetz der Größe 10⁻⁷.
+  d2) Summe über alle Harmonischen statt der einfachen Schleife, (s·ν)² = v⁴/(GMa0) bei der Punktmasse:
+      s        Bose (n=1)   Lambert 1+Σ1/(e^{ns}−1)   1+Σσ₁(n)e^{−ns}
+    0.100    1.1043            9.028                2.5772e+02
+    0.010    1.0100           26.987                2.6897e+04
+    0.001    1.0010           56.044                2.7042e+06
+      Nur die einfache Schleife hält v⁴ = GMa0; mit allen Harmonischen wächst v⁴ logarithmisch bzw. wie 1/s².
+  d3) Frequenzdarstellung: χ(s) = 1 − s/2 + 2Σ_k s²/(s² + (2πk)²) (Summe von Speicheranteilen mit Raten 2πk):
+      s = 0.5:  Reihe 0.7707470413   χ = 0.7707470413
+      s = 2:  Reihe 0.3130352855   χ = 0.3130352855
+      s = 5:  Reihe 0.0339182745   χ = 0.0339182745
+
+Ergebnis: (a) liefert die Wurzel (Resonanzbreite ∝ √ε), nicht die Form. (b) liefert die Bose-Form, nicht die Wurzel.
+(c) einseitig diffusiv + Verlust ∝ a_N liefert q = e^{−√(a_N/a0)} exakt samt Tully-Fisher; ballistisch oder geschlossen nicht.
+(d) führt über die Laplace-Eindeutigkeit auf (c) zurück; Mittelung des Kern-Nomes oder aller Harmonischen trägt nicht.

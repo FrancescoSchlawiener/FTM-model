@@ -1,0 +1,37 @@
+1) Schwelle, tiefer Bereich g_obs/g_bar ∝ √a0, Tully-Fisher v⁴ = G M a0
+   z     a0 Atmen  a0 Zelle   √-Verh. A/Z   Δlog v (A−Z)   Δlog M_bar bei festem v (A−Z)
+   0.5      1.322     1.500      0.9389     -0.0137 dex     +0.0548 dex
+   1.0      1.791     2.000      0.9462     -0.0120 dex     +0.0480 dex
+   2.0      3.033     3.000      1.0054     +0.0012 dex     -0.0047 dex
+   3.0      4.568     4.000      1.0687     +0.0144 dex     -0.0577 dex
+   4.0      6.334     5.000      1.1255     +0.0257 dex     -0.1027 dex
+   6.0     10.438     7.000      1.2211     +0.0434 dex     -0.1735 dex
+   8.0     15.196     9.000      1.2994     +0.0569 dex     -0.2275 dex
+  10.0     20.525    11.000      1.3660     +0.0677 dex     -0.2709 dex
+   Gleichstand E(z) = 1+z bei z = 1.917
+
+2) Heutige Drift der Schwelle d ln a0/dt
+   Atmen: Ḣ/H = −(1+q0)H0 = -0.4727 H0 = -3.26 %/Gyr;  v_flach: -0.81 %/Gyr
+   Zelle: −H0 = -6.89 %/Gyr;  v_flach: -1.72 %/Gyr
+
+3) Proton-Kreuzung a0(z) = G m_p³c²/ħ²  (r*_p = λ̄_p, λ̄_p = ħ/(m_p c))
+   a0 nötig = 2.5239e-06 m/s²,  a0 heute (cH0/2π, H0 = 67,4) = 1.0422e-10,  Verhältnis 2.4217e+04
+   Atmen: z = 1119.4     feste Zelle: z = 2.4216e+04
+   Plasmatemperatur: Atmen kT = 0.2631 eV,  Zelle kT = 5.688 eV
+
+4) Zelle = Horizont nur zu einer Epoche: L_phys = c²/a0
+   mitbewegter Umfang 2πc/(aH) in Einheiten des heutigen:  z: Wert
+       0.0: 1.0000
+       0.5: 1.1344
+       1.0: 1.1169
+       2.0: 0.9892
+       5.0: 0.7231
+    1100.0: 0.0468
+
+5) Scheibe mit M_b = 1e11 M☉ (Punktmassen-Näherung), f_zus = 1 − 1/ν, a0(0) = 1,2e-10
+   R =  5 kpc, z = 0: f_zus Atmen = 0.116, Zelle = 0.116
+   R =  5 kpc, z = 1: f_zus Atmen = 0.200, Zelle = 0.218
+   R =  5 kpc, z = 2: f_zus Atmen = 0.290, Zelle = 0.288
+   R = 10 kpc, z = 0: f_zus Atmen = 0.340, Zelle = 0.340
+   R = 10 kpc, z = 1: f_zus Atmen = 0.447, Zelle = 0.467
+   R = 10 kpc, z = 2: f_zus Atmen = 0.539, Zelle = 0.537

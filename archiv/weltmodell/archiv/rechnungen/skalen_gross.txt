@@ -1,0 +1,243 @@
+==============================================================================
+FTM - Rechnungen grosse Skalen (Galaxie bis Kosmos) und vier Bausteine
+==============================================================================
+
+0. Bezugsgroessen (x = 1, y = 1)
+------------------------------------------------------------------------------
+g_Erde                       = 9.81 m/s^2
+ds_Erde = G M_E/(3c^2)       = 1.478235e-03 m  = 1.4782 mm
+ds_Erde / R_Erde             = 2.320255e-10
+6 * ds_Erde / R_Erde         = 1.392153e-09
+ds_Sonne                     = 492.3323 m
+x_Sonne (Erdmassen)          = 333054.3
+y_Sonne (Erdradien)          = 109.20
+Grenzradius Sonne r0 = 6 ds  = 2953.99 m
+
+Umformung: dtau/dt = sqrt(1 - 6*ds/r) = sqrt(1 - 6*(ds_E/R_E)*x/y)
+           mit 6*ds_E/R_E = 1.392153e-09
+
+1. Grosse Systeme: g(x,y), ds, ds/R, dtau/dt am Rand
+------------------------------------------------------------------------------
+Eingabewerte (sichtbare Massen, Aussenradius):
+System              | M [kg]    | M [M_Sonne] | R           | R [m]    
+--------------------+-----------+-------------+-------------+----------
+Erde (Bezug)        | 5.972e+24 | 3.003e-06   | 6371 km     | 6.371e+06
+Sonne (Bezug)       | 1.989e+30 | 1.000e+00   | 695 700 km  | 6.957e+08
+Milchstrasse        | 1.193e+41 | 6.000e+10   | 50 000 Lj   | 4.730e+20
+Galaxienhaufen      | 3.381e+44 | 1.700e+14   | 2 Mpc       | 6.171e+22
+beobacht. Universum | 1.500e+53 | 7.541e+22   | 46,5 Mrd Lj | 4.399e+26
+
+System              | x         | y         | g [m/s^2] | g/g_E     | ds [m]    | ds/R      | dtau/dt (Rand) | 1-dtau/dt
+--------------------+-----------+-----------+-----------+-----------+-----------+-----------+----------------+----------
+Erde (Bezug)        | 1         | 1         | 9.81      | 1         | 0.001478  | 2.320e-10 | 0.999999999304 | 6.961e-10
+Sonne (Bezug)       | 3.331e+05 | 109.2     | 274       | 27.93     | 492.3     | 7.077e-07 | 0.999997876961 | 2.123e-06
+Milchstrasse        | 1.998e+16 | 7.425e+13 | 3.556e-11 | 3.625e-12 | 2.954e+13 | 6.245e-08 | 0.999999812657 | 1.873e-07
+Galaxienhaufen      | 5.662e+19 | 9.687e+15 | 5.920e-12 | 6.034e-13 | 8.370e+16 | 1.356e-06 | 0.999995931364 | 4.069e-06
+beobacht. Universum | 2.512e+28 | 6.905e+19 | 5.168e-11 | 5.268e-12 | 3.713e+25 | 0.0844    | 0.70257        | 0.2974   
+
+Faltungstiefe in anschaulichen Einheiten:
+System              | ds [m]    | ds [AE]   | ds [Lj]   | ds/ds_Erde | r0 = 6ds [m]
+--------------------+-----------+-----------+-----------+------------+-------------
+Erde (Bezug)        | 0.001478  | 9.881e-15 | 1.563e-19 | 1          | 0.008869    
+Sonne (Bezug)       | 492.3     | 3.291e-09 | 5.204e-14 | 3.331e+05  | 2954        
+Milchstrasse        | 2.954e+13 | 197.5     | 0.003122  | 1.998e+16  | 1.772e+14   
+Galaxienhaufen      | 8.370e+16 | 5.595e+05 | 8.847     | 5.662e+19  | 5.022e+17   
+beobacht. Universum | 3.713e+25 | 2.482e+14 | 3.925e+09 | 2.512e+28  | 2.228e+26   
+
+2. Dunkle Materie als Summeneffekt: S = sum_i ds_i = G/(3c^2) * sum_i M_i
+------------------------------------------------------------------------------
+2a. Milchstrasse, Summe ueber Komponenten
+Komponente                | M [M_Sonne] | ds_i [m]  | ds_i [Lj]
+--------------------------+-------------+-----------+----------
+Sternscheibe              | 4.000e+10   | 1.969e+13 | 0.002082 
+Zentralverdickung (Bulge) | 1.000e+10   | 4.923e+12 | 5.204e-04
+Gas                       | 1.000e+10   | 4.923e+12 | 5.204e-04
+Zentrum (kompakte Masse)  | 4.300e+06   | 2.117e+09 | 2.238e-07
+SUMME S_MW                | 6.0004e+10  | 2.954e+13 | 0.003123 
+
+Kontrolle Linearitaet: ds(sum x_i) = 2.954205e+13 m = S
+S_MW / R_MW (R = 50 000 Lj)          = 6.2452e-08
+
+Summe ueber Einzelsterne: S = N * m_mittel * ds_Sonne
+N Sterne | m_mittel [M_Sonne] | S [m]     | S [Lj]  
+---------+--------------------+-----------+---------
+1e+11    | 0.5                | 2.462e+13 | 0.002602
+2e+11    | 0.3                | 2.954e+13 | 0.003122
+4e+11    | 0.15               | 2.954e+13 | 0.003122
+
+Summe innerhalb eines Radius r (Straffung S(<r)/r), Eingabewerte eingeschl. Masse:
+Ort                       | M(<r) [M_Sonne] | S(<r) [m] | S(<r)/r   | 1-dtau/dt
+--------------------------+-----------------+-----------+-----------+----------
+Zentrum, r = 0,1 Lj       | 4.30e+06        | 2.117e+09 | 2.238e-06 | 6.713e-06
+r = 1 000 Lj              | 1.00e+10        | 4.923e+12 | 5.204e-07 | 1.561e-06
+Sonnenbahn, r = 26 700 Lj | 5.50e+10        | 2.708e+13 | 1.072e-07 | 3.216e-07
+Rand, r = 50 000 Lj       | 6.00e+10        | 2.954e+13 | 6.245e-08 | 1.873e-07
+
+2b. Galaxienhaufen, Summe ueber Komponenten
+Komponente               | M [M_Sonne] | ds_i [m]  | ds_i [Lj]
+-------------------------+-------------+-----------+----------
+Sterne in ~1000 Galaxien | 2.000e+13   | 9.847e+15 | 1.041    
+Heisses Haufengas        | 1.500e+14   | 7.385e+16 | 7.806    
+SUMME S_H                | 1.7000e+14  | 8.370e+16 | 8.847    
+
+S_H / R_H (R = 2 Mpc)   = 1.3562e-06
+S_H / S_MW              = 2.8331e+03
+Zentrum (4.3e6 M_S): ds = 2.1170e+09 m = 3.043 R_S, r0 = 1.2702e+10 m
+
+Netzwerk-Summe fuer eine Galaxie im Haufen: S_Netz = S_eigen + sum_j ds_j (Umgebung)
+Pfad                               | S [m]     | S [Lj]   | S / S_MW
+-----------------------------------+-----------+----------+---------
+nur eigene Galaxie (MW-artig)      | 2.954e+13 | 0.003123 | 1       
++ Haufengas + 999 weitere Galaxien | 8.373e+16 | 8.85     | 2834    
+
+3. Filamente und Knoten: S_Knoten = sum_k S_Haufen,k ; Linienfaltung lambda = S/L
+------------------------------------------------------------------------------
+Filamente | Haufen/Filament | L [Mpc] | S_Knoten [m] | S_Knoten [Lj] | lambda = S_Fil/L
+----------+-----------------+---------+--------------+---------------+-----------------
+1         | 5               | 30      | 4.185e+17    | 44.23         | 4.521e-07       
+3         | 5               | 30      | 1.255e+18    | 132.7         | 4.521e-07       
+6         | 5               | 30      | 2.511e+18    | 265.4         | 4.521e-07       
+
+4. Quasi-periodische Wicklung: theta_n = 2 pi n w (mod 2 pi), w = pi
+------------------------------------------------------------------------------
+n Umlaeufe | naechste ganze Zahl | Restabstand [Umlauf] | Restwinkel [Grad]
+-----------+---------------------+----------------------+------------------
+1          | 3                   | 1.416e-01            | 5.097e+01        
+7          | 22                  | 8.851e-03            | 3.187e+00        
+106        | 333                 | 8.821e-03            | 3.176e+00        
+113        | 355                 | 3.014e-05            | 1.085e-02        
+33102      | 103993              | 1.913e-05            | 6.887e-03        
+33215      | 104348              | 1.102e-05            | 3.965e-03        
+66317      | 208341              | 8.114e-06            | 2.921e-03        
+99532      | 312689              | 2.901e-06            | 1.044e-03        
+265381     | 833719              | 2.313e-06            | 8.327e-04        
+364913     | 1146408             | 5.879e-07            | 2.116e-04        
+
+Kein n liefert Restabstand 0 (w irrational).
+
+5. Expansion (Atmen) und Rotverschiebung: 1 + z = L(t_ob)/L(t_em)
+------------------------------------------------------------------------------
+Dehnung des Pfades | L_ob/L_em | z     | E_ob/E_em
+-------------------+-----------+-------+----------
+1 %                | 1.01      | 0.01  | 0.9901   
+10 %               | 1.10      | 0.10  | 0.9091   
+50 %               | 1.50      | 0.50  | 0.6667   
+100 %              | 2.00      | 1.00  | 0.5000   
+200 %              | 3.00      | 2.00  | 0.3333   
+1000 %             | 11.00     | 10.00 | 0.0909   
+
+Atemrate alpha = (1/L) dL/dt, Eingabewert 70 km/s/Mpc = 2.2685e-18 1/s
+   relative Pfadverlaengerung pro Jahr = 7.1590e-11
+   Zeitskala 1/alpha                     = 1.3968e+10 Jahre
+
+Faltungsanteil am Lichtpfad: L_eff = L_flach + sum ds_i
+Pfad                                            | sum ds [m] | L [m]     | sum ds / L
+------------------------------------------------+------------+-----------+-----------
+Durchgang Milchstrasse (Durchmesser 100 000 Lj) | 2.954e+13  | 9.461e+20 | 3.123e-08 
+Durchgang Haufen (Durchmesser 4 Mpc)            | 8.370e+16  | 1.234e+23 | 6.781e-07 
+Universum, R = 46,5 Mrd Lj                      | 3.713e+25  | 4.399e+26 | 0.0844    
+
+6. Optisches Kaleidoskop: Bilder bei d_n = d_0 + n U, Zeitversatz n U / c
+------------------------------------------------------------------------------
+Autorbeispiel: Galaxie in 10 Mrd Lj = eigene Region vor 10 Mrd Jahren -> U = 10 Mrd Lj
+n | Abstand d_n [Mrd Lj] | Zeitversatz [Mrd Jahre]
+--+----------------------+------------------------
+1 | 10                   | 10                     
+2 | 20                   | 20                     
+3 | 30                   | 30                     
+4 | 40                   | 40                     
+
+Anzahl Kopien einer Grundzelle (Kantenlaenge U) in Kugel vom Radius R_B:
+   k = (4/3) pi (R_B/U)^3 ;  N_real = N_beob / k ;  N_beob = 2e12 Galaxien
+R_B [Mrd Lj] | U [Mrd Lj] | k      | N_real   
+-------------+------------+--------+----------
+13.8         | 5.0        | 88.1   | 2.271e+10
+13.8         | 10.0       | 11.0   | 1.817e+11
+13.8         | 20.0       | 1.4    | 1.453e+12
+46.5         | 5.0        | 3369.3 | 5.936e+08
+46.5         | 10.0       | 421.2  | 4.749e+09
+46.5         | 20.0       | 52.6   | 3.799e+10
+
+7. Dunkle Energie: Ausgleich der globalen Spannung  dL_aussen = sum ds_innen
+------------------------------------------------------------------------------
+sum ds (Universum, M = 1,5e53 kg) = 3.7129e+25 m = 3.9246e+09 Lj
+relative Rueckstellung dL/R       = 8.4399e-02
+
+8. Zeit: dtau/dt = sqrt(1 - 6 ds / r) fuer verschiedene Faltungstiefen
+------------------------------------------------------------------------------
+Ort                                 | ds [m]    | r [m]     | ds/r      | dtau/dt        | 1-dtau/dt | s pro Jahr | Naeherung 3 ds/r
+------------------------------------+-----------+-----------+-----------+----------------+-----------+------------+-----------------
+flacher Aussenraum (keine Faltung)  | 0         | 1         | 0         | 1.000000000000 | 0         | 0          | 0               
+Erde, Bahn im Sonnentrichter (1 AE) | 492.3     | 1.496e+11 | 3.291e-09 | 0.999999990127 | 9.873e-09 | 0.3116     | 9.873e-09       
+Erde, Oberflaeche                   | 0.001478  | 6.371e+06 | 2.320e-10 | 0.999999999304 | 6.961e-10 | 0.02197    | 6.961e-10       
+Milchstrasse, Rand                  | 2.954e+13 | 4.730e+20 | 6.245e-08 | 0.999999812657 | 1.873e-07 | 5.912      | 1.873e-07       
+Galaxienhaufen, Rand                | 8.370e+16 | 6.171e+22 | 1.356e-06 | 0.999995931364 | 4.069e-06 | 128.4      | 4.069e-06       
+Sonne, Oberflaeche                  | 492.3     | 6.957e+08 | 7.077e-07 | 0.999997876961 | 2.123e-06 | 67         | 2.123e-06       
+Weisser Zwerg (1 M_S, 5800 km)      | 492.3     | 5.800e+06 | 8.488e-05 | 0.999745       | 2.547e-04 | 8037       | 2.547e-04       
+Neutronenstern (1,4 M_S, 12 km)     | 689.3     | 1.2e+04   | 0.05744   | 0.809548       | 0.1905    | 6.010e+06  | 0.1723          
+MW-Zentrum, r = 100 r0              | 2.117e+09 | 1.270e+12 | 0.001667  | 0.994987       | 0.005013  | 1.582e+05  | 0.005           
+MW-Zentrum, r = 10 r0               | 2.117e+09 | 1.270e+11 | 0.01667   | 0.948683       | 0.05132   | 1.619e+06  | 0.05            
+MW-Zentrum, r = 2 r0                | 2.117e+09 | 2.540e+10 | 0.08333   | 0.707107       | 0.2929    | 9.243e+06  | 0.25            
+MW-Zentrum, r = 1,1 r0              | 2.117e+09 | 1.397e+10 | 0.1515    | 0.301511       | 0.6985    | 2.204e+07  | 0.4545          
+Universum, r = 46,5 Mrd Lj          | 3.713e+25 | 4.399e+26 | 0.0844    | 0.702570       | 0.2974    | 9.386e+06  | 0.2532          
+Grenzradius r = r0 = 6 ds           | 492.3     | 2954      | 0.1667    | 0.000000       | 1         | 3.156e+07  | 0.5             
+
+Zeitdifferenz zwischen zwei Faltungstiefen (pro Jahr Aussenzeit):
+Vergleich                              | Differential | s / Jahr  | Tage / Jahr
+---------------------------------------+--------------+-----------+------------
+Erde Oberflaeche vs. flach             | 6.961e-10    | 0.02197   | 2.542e-07  
+Sonne Oberflaeche vs. Erde Oberflaeche | 2.122e-06    | 66.98     | 7.752e-04  
+Neutronenstern vs. Sonne               | 0.1905       | 6.010e+06 | 69.56      
+
+dtau/dt ueber x und y (Erdeinheiten): sqrt(1 - 6 (ds_E/R_E) x / y)
+System              | x/y       | 6(ds_E/R_E) x/y | 6(ds_E/R_E)(g/g_E) y
+--------------------+-----------+-----------------+---------------------
+Erde (Bezug)        | 1         | 1.392e-09       | 1.392e-09           
+Sonne (Bezug)       | 3050      | 4.246e-06       | 4.246e-06           
+Milchstrasse        | 269.1     | 3.747e-07       | 3.747e-07           
+Galaxienhaufen      | 5845      | 8.137e-06       | 8.137e-06           
+beobacht. Universum | 3.637e+08 | 0.5064          | 0.5064              
+
+9. Verschraenkung: aeusserer Abstand d_aussen vs. innerer Abstand d_innen = 0
+------------------------------------------------------------------------------
+d_aussen               | [m]       | Lichtlaufzeit aussen [s] | d_innen [m] | Laufzeit innen [s]
+-----------------------+-----------+--------------------------+-------------+-------------------
+1 m                    | 1         | 3.336e-09                | 0           | 0                 
+1 AE                   | 1.496e+11 | 499                      | 0           | 0                 
+100 Lj (Autorbeispiel) | 9.461e+17 | 3.156e+09                | 0           | 0                 
+50 000 Lj              | 4.730e+20 | 1.578e+12                | 0           | 0                 
+
+Faltungstiefen im Mikro-Faltungsbereich:
+Teilchen | M [kg]    | ds [m]   
+---------+-----------+----------
+Proton   | 1.673e-27 | 4.140e-55
+Elektron | 9.109e-31 | 2.255e-58
+
+10. Syntropie / Recycling: Massefluss aus Abstrahlung  dM/dt = L / c^2
+------------------------------------------------------------------------------
+Sonne: L = 3.828e+26 W  -> dM/dt = 4.2592e+09 kg/s
+       d(ds)/dt = G/(3c^2) dM/dt = 1.0543e-18 m/s = 3.3270e-11 m/Jahr
+       in 10 Mrd Jahren: dM = 1.3441e+27 kg = 6.7577e-04 M_Sonne, d(ds) = 0.3327 m
+Milchstrasse: L = 5.0e+36 W -> dM/dt = 5.5633e+19 kg/s = 8.8267e-04 M_Sonne/Jahr
+       d(ds)/dt = 4.3457e-01 m/Jahr
+       Anteil pro Jahr an S_MW = 1.4710e-14
+
+11. Gedaechtnis des Raumes: Rillentiefe P(p) = sum_k ds_k (Knickspuren)
+------------------------------------------------------------------------------
+Spur von                    | ds [m]    | ds / ds_Erde
+----------------------------+-----------+-------------
+Erde                        | 0.001478  | 1           
+Sonne                       | 492.3     | 3.331e+05   
+Summe von 1000 Sonnenmassen | 4.923e+05 | 3.331e+08   
+Milchstrasse (sichtbar)     | 2.954e+13 | 1.998e+16   
+Galaxienhaufen              | 8.370e+16 | 5.662e+19   
+
+12. Selbstaehnlichkeit: g(l^2 x, l y) = g(x,y) ;  ds(l x)/(l y) = ds(x)/y
+------------------------------------------------------------------------------
+lambda    | g(l^2 x, l y) [m/s^2] | ds(l x)/(l y R_E)
+----------+-----------------------+------------------
+1         | 9.81                  | 2.320e-10        
+10        | 9.81                  | 2.320e-10        
+1000      | 9.81                  | 2.320e-10        
+1.000e+06 | 9.81                  | 2.320e-10        
+

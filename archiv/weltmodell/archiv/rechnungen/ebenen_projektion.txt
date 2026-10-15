@@ -1,0 +1,112 @@
+
+====================================================================================================
+1   Was die Projektion erhält und was sie abbaut
+====================================================================================================
+   Poisson-Kern P_ϖ(x) = ϖ/(π²(r² + ϖ²)²), ∫P_ϖ = 1, P_a·P_b = P_{a+b} (Symbol e^{−|k|ϖ})
+   m(r/ϖ =       1) = 0.181690   (Anteil der Masse in r; 1 − m ≈ (4/π)ϖ/r = 1.27e+00)
+   m(r/ϖ =      10) = 0.873517   (Anteil der Masse in r; 1 − m ≈ (4/π)ϖ/r = 1.27e-01)
+   m(r/ϖ =     100) = 0.987268   (Anteil der Masse in r; 1 − m ≈ (4/π)ϖ/r = 1.27e-02)
+   m(r/ϖ =   10000) = 0.999873   (Anteil der Masse in r; 1 − m ≈ (4/π)ϖ/r = 1.27e-04)
+   ⇒ Zentrum: der Fluss GM = 3c²Δs durch jede Kugel r ≫ ϖ bleibt; die Faltung Δs ist in ϖ invariant.
+   ϖ =   0.1: Schalenmittel des Gezeitenpolynoms − Wert: max 2.6e-09 (Mittelwertsatz, Kerngewicht 0.99999);  isotroper Anteil r²: ∫r²P_ϖ bis r = 10⁴ϖ = 12443·ϖ² (divergiert)
+   ϖ =   1.0: Schalenmittel des Gezeitenpolynoms − Wert: max 7.3e-08 (Mittelwertsatz, Kerngewicht 0.99999);  isotroper Anteil r²: ∫r²P_ϖ bis r = 10⁴ϖ = 12443·ϖ² (divergiert)
+   ϖ =  10.0: Schalenmittel des Gezeitenpolynoms − Wert: max 6.5e-06 (Mittelwertsatz, Kerngewicht 0.99999);  isotroper Anteil r²: ∫r²P_ϖ bis r = 10⁴ϖ = 12443·ϖ² (divergiert)
+   ⇒ Hintergrund: homogenes Feld A und spurfreie Gezeit E^TF der Elternebene (harmonisch) sind in ϖ exakt unverändert;
+     nicht invariant ist nur der Spuranteil (Quelldichte am Ort).
+   Wirbel: eigene Hesse im Zentrum 4GM/(3πϖ³) ∝ ϖ⁻³; größtes eigenes Feld α·GM/ϖ², α = 0.1861 bei r = 0.824ϖ;
+     es fällt bei ϖ_a = √α·r* = 0.431·r* auf a₀.
+   Triade in der Projektion: invariant bleiben Fluss (Zentrum, Δs) und harmonischer Elternteil (Hintergrund);
+     abgebaut wird nur die eigene aufgelöste Struktur (Wirbel), Hesse ∝ ϖ⁻³ gegen die feste Elterngezeit.
+
+====================================================================================================
+2   Hierarchie Mond – Erde – Sonne – Milchstraße: Tiefe des Übergangs in die Elternebene
+====================================================================================================
+   Elterngezeit am Sonnenort (Newton-Hesse, [G]-Eingaben wie trichter_invarianten): T = 5.5519e-30 s⁻²
+   Kriterium (07, 13): eigene isotrope Hesse = T des Rests. Poisson-Kern: ϖ_J³ = 4GM/(3πT) ⇒ ϖ_J = (4/3π)^(1/3)·ℓ = 0.7515·ℓ
+   ℓ = (GM/T)^(1/3) in der galaktischen Gezeit: Sonne 0.9336 pc, Erde 2778 AE, Mond 641.3 AE (07: 0,93 pc, 2780, 641)
+   Poisson-Tiefe ϖ_J = 0.7515·ℓ: Sonne 0.7016 pc, Erde 2088 AE, Mond 482.0 AE
+
+   (A) eine gemeinsame Tiefe ϖ für alle Körper (die Gleichung wörtlich): Verhältnis eigene Hesse / T des Rests
+      Lage 0: Mond: 0.0003354 AE ↓ | Erde: 0.00755 AE ↓, 867.8 AE ↑, 2088 AE ↓ | Sonne: 1.447e+05 AE ↓
+      Lage 1: Mond: 0.0003354 AE ↓ | Erde: 0.00755 AE ↓, 901.9 AE ↑, 2088 AE ↓ | Sonne: 1.447e+05 AE ↓
+      Lage 2: Mond: 0.0003354 AE ↓ | Erde: 0.00755 AE ↓, 890.4 AE ↑, 2088 AE ↓ | Sonne: 1.447e+05 AE ↓
+      (↓ eigene Ebene geht unter, ↑ taucht wieder auf.) Die letzte Grenze der Erde liegt nahe ϖ_J, der Mond geht in der
+      Punktgezeit der Erde unter (Hill-artig) und taucht nicht wieder auf: 641 AE entsteht mit einer gemeinsamen Tiefe nicht.
+
+   (B) jeder Körper mit eigener Tiefe (Fixpunkt ϖ_i³ = 4GM_i/(3πT_i), T_i aus den übrigen, je mit ihrer Tiefe geglättet)
+      poisson  Lage 0: Mond 482.0 AE (T/T_gal = 1.0000), Erde 2087.9 AE (T/T_gal = 1.0000), Sonne 144709.3 AE (T/T_gal = 1.0000)
+      poisson  Lage 1: Mond 482.0 AE (T/T_gal = 1.0000), Erde 2087.9 AE (T/T_gal = 1.0000), Sonne 144708.8 AE (T/T_gal = 1.0000)
+      poisson  Lage 2: Mond 482.0 AE (T/T_gal = 1.0000), Erde 2087.9 AE (T/T_gal = 1.0000), Sonne 144708.9 AE (T/T_gal = 1.0000)
+      plummer  Lage 0: Mond 641.3 AE (T/T_gal = 1.0000), Erde 2778.3 AE (T/T_gal = 1.0000), Sonne 192560.2 AE (T/T_gal = 1.0000)
+      plummer  Lage 1: Mond 641.3 AE (T/T_gal = 1.0000), Erde 2778.3 AE (T/T_gal = 1.0000), Sonne 192559.7 AE (T/T_gal = 1.0000)
+      plummer  Lage 2: Mond 641.3 AE (T/T_gal = 1.0000), Erde 2778.3 AE (T/T_gal = 1.0000), Sonne 192559.8 AE (T/T_gal = 1.0000)
+   ⇒ 2780 AE / 641 AE (07) folgen, wenn jede Ebene ihre eigene Tiefe hat (Plummer: ℓ; Poisson: 0,752·ℓ).
+     Die Reihenfolge in ϖ ist ∝ M^(1/3) in derselben Elterngezeit: Mond < Erde < Sonne; alle drei gehen in die
+     kollektive Ebene der Galaxie über, nicht ineinander (der geglättete Kern der Sonne ist isotrop).
+
+   Entlang ϖ am Ort des Mondes (Lage 0, gemeinsame Tiefe): Anteile an der spurfreien Hesse
+        ϖ          Erde      Sonne     Galaxie   | eigene Hesse Mond / T_gesamt
+    1.000e+06 m  1.00e+00  5.65e-03  2.65e-19  |  9.93e+04
+    1.000e+07 m  1.00e+00  5.88e-03  2.76e-19  |  1.03e+02
+    1.000e+08 m  1.00e+00  9.58e-03  4.50e-19  |  1.69e-01
+    1.000e+09 m  3.51e-01  9.21e-01  4.37e-17  |  1.64e-02
+    1.000e+10 m  5.69e-06  1.00e+00  5.29e-17  |  1.98e-05
+    1.000e+11 m  2.59e-10  1.00e+00  2.40e-16  |  8.98e-08
+    1.496e+11 m  8.91e-11  1.00e+00  6.18e-16  |  6.92e-08
+    1.496e+12 m  1.82e-20  1.00e+00  1.40e-11  |  1.57e-06
+    1.496e+13 m  0.00e+00  1.00e+00  1.37e-06  |  1.53e-04
+    7.211e+13 m  0.00e+00  1.00e+00  3.58e-03  |  3.58e-03
+    2.992e+14 m  0.00e+00  0.00e+00  1.00e+00  |  1.40e-02
+    1.496e+15 m  0.00e+00  0.00e+00  1.00e+00  |  1.12e-04
+    1.543e+16 m  0.00e+00  6.18e-16  1.00e+00  |  1.02e-07
+
+   Galaxie 6·10¹⁰ M☉ bei 1 Mpc von 10¹⁴ M☉ [A]: T = 3GM_H/d³ = 1.355e-33 s⁻²; ℓ = 58.5 kpc, ϖ_J = 43.9 kpc, r* = 8.72 kpc
+
+====================================================================================================
+3   Rückkehr als Glättung der Kreisbahnmode; Leiter in ϖ; Enden
+====================================================================================================
+   q = e^{−|k|ϖ_R} mit k = 1/r, ϖ_R = r*: der Anteil der Struktur auf der Bahnskala, der die Tiefe r* übersteht (07)
+      Erdbahn im Sonnentrichter          r*/r =       7342,  q = e^(−s) = 0.000e+00,  ν = 1.0000
+      Mond um die Erde                   r*/r =       4952,  q = e^(−s) = 0.000e+00,  ν = 1.0000
+      Sonne in der Milchstraße (Punkt)   r*/r =      1.063,  q = e^(−s) = 3.453e-01,  ν = 1.5274
+      Galaxie im Haufen [A]              r*/r =      0.356,  q = e^(−s) = 7.005e-01,  ν = 3.3389
+      Doppelstern 1,5 M☉, 20 kAE         r*/r =     0.4496,  q = e^(−s) = 6.379e-01,  ν = 2.7614
+   Der Doppelstern liegt mit r* = 8992 AE < 20 kAE < ϖ_J = 0.80 pc in der Projektion im Tiefbereich (ν = 2.76 frei);
+   Newton bis ℓ (γ = 1,000, 13) verlangt, dass die Regel das über ℓ geglättete Feld liest: das ist gesetzt (E0), nicht projiziert.
+   Gegenprobe: liest die Rückkehr den in ϖ geglätteten Betrag, Γ(ϖ) = |ḡ(r;ϖ)|/c, so ist s_eff = ∫√(Γ/D)dϖ ≤ 1.8763
+     für jedes r ≪ r* (Punktmasse), ν ≥ 1.1809: keine Newton-Grenze. Die Koeffizienten der Rückkehr
+     dürfen nicht von ϖ abhängen (07): Die Rückkehr trägt Γ des Orts; geglättet wird nur die Bahnmode, nicht der Verlust.
+
+   Leiter in ϖ: Schritt r₀ = 6Δs, Rückkehrtiefe r*, Schluss Λ = ℓ₀/2:  r₀ : r* : Λ = (2δ*)² : 2δ* : 1, Stufen m = r*/r₀ = 1/(2δ*)
+      Proton       r₀/r* = 7.7981e-41, r*/Λ = 7.7981e-41, 2δ* = 7.7981e-41, m = 1.2824e+40
+      Erde         r₀/r* = 4.6597e-15, r*/Λ = 4.6597e-15, 2δ* = 4.6597e-15, m = 2.1461e+14
+      Sonne        r₀/r* = 2.6887e-12, r*/Λ = 2.6887e-12, 2δ* = 2.6887e-12, m = 3.7193e+11
+      Milchstraße  r₀/r* = 6.5859e-07, r*/Λ = 6.5859e-07, 2δ* = 6.5859e-07, m = 1.5184e+06
+      Haufen       r₀/r* = 3.5056e-05, r*/Λ = 3.5056e-05, 2δ* = 3.5056e-05, m = 2.8526e+04
+   Oberes Ende in ϖ: m = 1 (r₀ = r* = Λ) bei M = M_U/4 = 2.751e+53 kg; Zelle 1,5·M_U hat m = 0.408 < 1:
+     keine Halbgerade, die Rückkehr ist geschlossen. In Raumlängen (01, 08): r* = 3Δs = ℓ₀ bei M_U = 1.100e+54 kg.
+   Unteres Ende: r* = λ̄ bei M_c = 5.886e-29 kg verlangt ħ; die Gleichung (∇² + ∂_ϖ²)u = 0 enthält ħ nicht.
+     Innerhalb der Gleichung ist die kleinste Länge der Schritt r₀; r₀ = ℓ_P bei M = 1.088e-08 kg (= m_Pl/2), auch nur mit ħ.
+   Glättungslänge: nicht auf der Leiter. ℓ/r* = (M×/M)^(1/6), M× = a₀³/(GT²) hängt an der Elterngezeit (Zustand der Umgebung).
+
+====================================================================================================
+4   Kompakt und kollektiv: was die Projektion trennt
+====================================================================================================
+   Sonne (galakt. Gezeit)                     ϖ_J/r* =    19.71
+   Milchstraße im Haufen [A]                  ϖ_J/r* =     5.04
+   Milchstraße bei M31 [A: 10¹¹ M☉, 785 kpc]  ϖ_J/r* =    39.57
+   ⇒ ϖ_J > r* für Stern und Galaxie: Die Tiefe des Übergangs trennt die Klassen nicht. Die Dichteregel (ρ > ρ_J) würde
+     die Galaxie wie die Sonne glätten (70: Milchstraße Newtonsch). Die Trennung trägt r*/R, die Lage der Hülle zur Rückkehrtiefe.
+   Überlappen der Glättungswolken: n·ϖ_J³ = (ρ̄/ρ_J)/π² (Poisson); am Sonnenort ρ̄_* ≈ 0,05–0,1 M☉/pc³ [G] gegen ρ_J = 0.293 M☉/pc³
+   SPARC (175 Kurven): größtes baryonisches Feld g_b,max/a₀: Median 0.25, 16–84 % 0.06–4.30, Spanne 0.019–66.7; unter a₀ am ganzen Ort: 68 %
+   SPARC r*/R_letzter Punkt (M_b aus der letzten Kurvenmasse): Median 0.228, 16–84 % 0.159–0.376
+   AME2020 (3558 Kerne): r*/R_Kern = 26.6–68.3; r*/λ̄ = (M/M_c)^(3/2) = 151.6–7.6e+05; ϖ_J (galakt.) = 2.04–13.57 mm
+   Elektron: r*/λ̄ = 1.925e-03 (unter dem unteren Ende, Triade nur in der inneren Richtung)
+
+====================================================================================================
+5   Werte für die Prüfung von Hand
+====================================================================================================
+   ϖ_J(Erde) = (4GM⊕/(3πT))^(1/3) = 3.12341e+14 m = 2087.9 AE;  ℓ(Erde) = 4.15623e+14 m = 2778.3 AE;  T = 5.55186e-30 s⁻²
+   S_∞ unabhängig (mpmath, Teilung 0|1|10|∞): 1.87625
+   α (Poisson, größtes Feld) = 0.18605;  (4/3π)^(1/3) = 0.751501;  S_∞ = 1.87626
+   Sonne: 2δ* = 6Δs/r* = 2.68869e-12, r*/Λ = 2.68869e-12

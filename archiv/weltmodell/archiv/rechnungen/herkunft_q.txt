@@ -1,0 +1,82 @@
+Messwerte [G] (ohne Korrelation von ω_b und ω_c):
+   Planck 2018 TT,TE,EE+lowE+lensing    ω_b = 0.02237 ± 0.00015, ω_c = 0.12 ± 0.0012:  Q = 5.3643 ± 0.0646 (1.20%),  q = 0.84287 ± 0.00159,  ν = 1+Q
+   Planck 2018 + BAO                    ω_b = 0.02242 ± 0.00014, ω_c = 0.11933 ± 0.00091:  Q = 5.3225 ± 0.0525 (0.99%),  q = 0.84183 ± 0.00131,  ν = 1+Q
+   Ziel: Q = 5.3643 ± 0.0646 (1.20%), ν = 6.3643 (1.01%), q = 0.84287 (0.19%);  s = −ln q = 0.1709, s² = 0.0292
+
+1) Lesarten
+L1 Rückkehr auf der bei Λ geschlossenen Halbgeraden: D·G'' = Γ·G, G(0) = 1, G'(Λ) = 0  ⇒  G(w) = cosh((Λ−w)κ)/cosh(Λκ),  κ = √(Γ/D) = 1/r
+   q = G(L) = cosh((Λ−L)s/L)/cosh(Λs/L),  s = L·κ = √(a_N/a₀);  kleines s: 1 − q = (2Λ/L − 1)·s²/2
+   Kette N = 4000, Λ/L =    2.000, s = 0.500:  Kette 0.730763,  Formel 0.730763,  offen e^(−s) = 0.606531
+   Kette N = 4000, Λ/L =    1.772, s = 1.772:  Kette 0.180539,  Formel 0.180569,  offen e^(−s) = 0.169916
+   Kette N = 4000, Λ/L =   10.000, s = 0.170:  Kette 0.854698,  Formel 0.854698,  offen e^(−s) = 0.843665
+   Kette N = 4000, Λ/L = 1000.000, s = 0.170:  Kette 0.843643,  Formel 0.843665,  offen e^(−s) = 0.843665
+   a) Homogener Hintergrund: a_N = 0 ⇒ Γ = 0 ⇒ G ≡ 1, q = 1 für jedes Λ; ν = ∞. Kein endliches Q.
+   b) Lineares Feld (Schätzung: Effektivwert über alle k, BBKS, σ₈, n_s [G]): g = (3/2)Ω_m H₀²(1+z)²D(z)·σ₋₁,  a₀(z) = cH(z)/2π
+      z =      0:  g = 1.02e-12 m/s²,  a_N/a₀ = 9.75e-03,  s = 0.0988,  q = 0.9060,  ν =  10.63,  Q =   9.63
+      z =      1:  g = 2.55e-12 m/s²,  a_N/a₀ = 1.26e-02,  s = 0.1120,  q = 0.8940,  ν =   9.44,  Q =   8.44
+      z =      3:  g = 5.76e-12 m/s²,  a_N/a₀ = 1.08e-02,  s = 0.1038,  q = 0.9014,  ν =  10.14,  Q =   9.14
+      z =   1090:  g = 4.11e-09 m/s²,  a_N/a₀ = 1.50e-03,  s = 0.0388,  q = 0.9620,  ν =  26.30,  Q =  25.30
+      Deckel: Λk = πck/H ≥ 94 für k ≥ 0,01 h/Mpc, der Faktor aus Λ ändert q um < e^(−180).
+
+L2 Kac in der atmenden Zelle: 1 − q = μ(A)/μ(X), ν = ⟨T_A⟩ in Schritten des Ortes (Kac-Budget: Ω_b/Ω_m + Ω_c/Ω_m = 1)
+   Halbgerade [0, Λ], Λ = πc/H; Ort des Kosmos = globale Engstelle r₀ = 6Δs_H = c/H (Δs_H = c/6H):  μ(Ort)/μ(X) = r₀/2Λ = 1/2π
+   Kette N =   3, Schritte zufällig, h₀ = c/H, Λ = 3.141593·c/H:  ⟨T_Ort⟩·H = 6.2831853072  (2π = 6.2831853072)
+   Kette N =  10, Schritte zufällig, h₀ = c/H, Λ = 3.141593·c/H:  ⟨T_Ort⟩·H = 6.2831853072  (2π = 6.2831853072)
+   Kette N = 300, Schritte zufällig, h₀ = c/H, Λ = 3.141593·c/H:  ⟨T_Ort⟩·H = 6.2831853072  (2π = 6.2831853072)
+   Schleife N =   4, Schritte zufällig, h₀ = c/H, Umfang 6.283185·c/H:  ⟨T_Ort⟩·H = 6.2831853072
+   Schleife N =  50, Schritte zufällig, h₀ = c/H, Umfang 6.283185·c/H:  ⟨T_Ort⟩·H = 6.2831853072
+   Probe: r*_H² = GM_H/a₀ = (c³/2H)/(cH/2π) = π(c/H)² = r₀·Λ  (Kac-Beziehung r*² = r₀Λ gilt auch für die Hubble-Kugel)
+   Ort = Engstelle r₀ = c/H (Halbgerade oder Schleife U)  ν =   6.2832   q = 0.84085   Q =   5.2832   Abstand Q:    -1.3 σ
+   Ort = Durchmesser 2c/H                                 ν =   3.1416   q = 0.68169   Q =   2.1416   Abstand Q:   -49.9 σ
+   Ort = eigener Schwellenradius r*_H = √π·c/H            ν =   3.5449   q = 0.71791   Q =   2.5449   Abstand Q:   -43.7 σ
+   dreidimensional: Hubble-Kugel im Würfel U³             ν =  59.2176   q = 0.98311   Q =  58.2176   Abstand Q:  +818.3 σ
+   Zeiteinheit Umlauf U/c statt Schritt c/H               ν =   1.0000   q = 0.00000   Q =   0.0000   Abstand Q:   -83.1 σ
+   Dieselbe Zuordnung für eine einzelne Masse, ν = 2Λ/r₀ = U/6Δs: Sonne 2.9e+23, Milchstraße 4.9e+12, Haufen 1.7e+09 (die Regel dort: ν = 1 … 30)
+
+L3 Kriterium R_Q: lokales q = kosmisches q ⇒ a_N(R_Q) = (ln q)²·a₀ = 0.0292 a₀, R_Q = r*/(−ln q) = 5.85 r*  (Umschreibung von q)
+   Aus der Zone des Kollapses (Virialdichte 18π²·ρ̄_b(z_c), a₀ = cH₀/2π): s = r*/r_vir ∝ M_b^{1/6}(1+z_c), Q = n_B(s) = 1/(e^s − 1)
+   M_b [M☉]     z_c = 1      z_c = 3      z_c = 6
+      1e+09    Q =  25.46   Q =  12.49   Q =   6.93
+      6e+10    Q =  12.63   Q =   6.07   Q =   3.27
+      1e+12    Q =   7.72   Q =   3.62   Q =   1.88
+
+L4 Rand der Hubble-Kugel: GM_H = c³/2H, a_N(c/H) = cH/2 = π·a₀, s = √π; geschlossen: L = r*_H, Λ/L = √π, q = cosh(π − s)/cosh π
+   volle Dichte   s = 1.7725:  offen q = 0.1699 (Q = 0.205),  geschlossen q = 0.1806 (Q = 0.220)
+   nur Ω_m [G]    s = 0.9923:  offen q = 0.3707 (Q = 0.589),  geschlossen q = 0.3751 (Q = 0.600)
+   nur Ω_b [G]    s = 0.3933:  offen q = 0.6748 (Q = 2.075),  geschlossen q = 0.6763 (Q = 2.089)
+   Verlangt wäre am Rand a_N = 0.0292·a₀, das 108-mal weniger als cH/2.
+
+2) Zeitabhängigkeit (Hintergrund mit atmender Zelle)
+   Lesart                                   Q(z = 0)   Q(z = 1)   Q(z = 1090)
+   L2 Engstelle, atmende Zelle U = 2πc/H         5.2832       5.2832       5.2832
+   L2 feste Zelle U₀ = 27 Gpc, ν = U₀H/c(1+z)      5.070        4.926      144.853
+   L1 lineares Feld (Effektivwert)               9.634        8.436       25.301
+   L4 nur Ω_m(z)                                 0.600        0.324        0.356
+   L4 nur Ω_b(z)                                 2.089        1.314        1.407
+   Kac-Zeit durch Weltalter, ν = 2π/(H·t)         6.086        7.914        9.572
+   Nur L2 mit atmender Zelle ist zeitlich fest: Λ = πc/H und r₀ = c/H wachsen gleich, ν = 2π zu jeder Zeit.
+   Planck 2018 TT,TE,EE+lowE+lensing    ω_c aus Q = 2π − 1: 0.11818 gegen 0.12 ± 0.0012 (-1.51 σ in ω_c); Q: -1.26 σ
+   Planck 2018 + BAO                    ω_c aus Q = 2π − 1: 0.11845 gegen 0.11933 ± 0.00091 (-0.97 σ in ω_c); Q: -0.75 σ
+   Nicht feste Q(z) widersprechen dem exakt staubartigen Hintergrund der Schließungsregel (a³(ρ_b + scheinbare Dichte) fest);
+   die Strahlung liest Q bei z ≈ 1090 (5.36 ± 0.06 [G]); L1 gäbe dort 25, die feste Zelle 145.
+
+3) Zufallsprobe: einfache Ausdrücke aus Zahlen des Modells im Band der Messung (δ = |x/Ziel − 1|)
+   Ziel Q = 5.36433, 1σ = 1.20%
+   Klasse                                      Werte     Dichte/ln   bester δ   N(1σ) gef./erw.   N(2σ) gef./erw.
+   A: 2^a·3^b·5^c·π^d, Wurzeln bis 4            1498821       79158   5.7e-06    1889 /  1906.1    3772 /  3812.2
+   C: (p/q)·π^k, p,q ≤ 64                         32755        2132   7.7e-05      53 /    51.4     103 /   102.7
+   D: x∘y, x,y aus 20 Modellzahlen, ∘ ∈ +−×÷        805         220   7.1e-03       3 /     5.3       9 /    10.6
+   Ziel ν = 1+Q = 6.36433, 1σ = 1.01%
+   Klasse                                      Werte     Dichte/ln   bester δ   N(1σ) gef./erw.   N(2σ) gef./erw.
+   A: 2^a·3^b·5^c·π^d, Wurzeln bis 4            1498821       78715   7.0e-07    1556 /  1597.6    3110 /  3195.3
+   C: (p/q)·π^k, p,q ≤ 64                         32755        2135   2.9e-04      45 /    43.3      85 /    86.7
+   D: x∘y, x,y aus 20 Modellzahlen, ∘ ∈ +−×÷        805         198   5.8e-05       2 /     4.0       8 /     8.0
+   Ziel q = 0.84287, 1σ = 0.19%
+   Klasse                                      Werte     Dichte/ln   bester δ   N(1σ) gef./erw.   N(2σ) gef./erw.
+   A: 2^a·3^b·5^c·π^d, Wurzeln bis 4            1498821       82095   2.4e-05     300 /   310.6     609 /   621.2
+   C: (p/q)·π^k, p,q ≤ 64                         32755        2240   9.3e-06      10 /     8.5      18 /    17.0
+   D: x∘y, x,y aus 20 Modellzahlen, ∘ ∈ +−×÷        805         108   8.4e-03       0 /     0.4       0 /     0.8
+   2π − 1 = 5.2832 liegt 1.52% neben Q; gleich gut oder besser (2π − 1 eingeschlossen): Klasse D 6, C 69, A 2407.
+   Eigene Lesarten mit festem, endlichem ν: 8 Werte zwischen 1.00 und 59.2; bester Abstand zu ν = 6.364: 1.28% (2π).
+   Wahrscheinlichkeit, dass eine von 8 Lesarten zufällig so nahe liegt: 0.049 (Formel), 0.042 (Zufallsziele log-gleich im Bereich).
+   Eine einzige, zwingende Lesart hätte p = 0.0063; für p ≤ 10⁻³ müsste sie auf 0.20% treffen und so genau gemessen sein.

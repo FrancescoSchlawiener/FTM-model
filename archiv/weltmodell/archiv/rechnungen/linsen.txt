@@ -1,0 +1,308 @@
+﻿====================================================================================================
+FTM – Gravitationslinsen quantitativ (linsen.py)
+G = 6.6743e-11, c = 299792458.0, M☉ = 1.98847e+30, kpc = 3.085678e+19 m, a0 = 1.2e-10, c·H0/2π (H0=70) = 1.0824e-10 m/s²
+Kosmologie nur für Winkeldurchmesser-Abstände: flach, H0 = 70 km/s/Mpc, Ωm = 0.3 (Annahme)
+====================================================================================================
+
+1) LINSENGLEICHUNG
+   Metrik schwaches Feld: ds² = -(1+2Φ/c²)c²dt² + (1-2Ψ/c²)dx²
+   Ablenkung: α(b) = (1/c²)∫∇⊥(Φ+Ψ)dl   [mit Faktor 1/c², nicht 2/c²; Φ=Ψ ergibt 4GM/(c²b)]
+   Kontrolle Sonne: Δs☉ = 492.2232 m;  12Δs/R☉ = 1.7512"  (GR 1.751")
+   nur Takt-Anteil (c_eff aus 08, Brechzahl n = 1/sqrt(1-6Δs/r)): 6Δs/R☉ = 0.8756"  (halber Wert)
+
+   Punktmasse M = 1e11 M☉: Δs = 4.9222e+13 m = 329.0 AE, r* = 10.778 kpc
+   Tiefgrenze Option A: α_∞ = 6πΔs/r* = 2π·sqrt(GM a0)/c² = 0.5755"
+      b/r*   b[kpc]   I(b/r*)   α_N=α_Bs   α_B_halb        α_A  Näherung A   [arcsec]
+       0.1     1.08    1.0168    3.66350    3.69436    3.72521     2.40721
+       0.3     3.23    1.1645    1.22117    1.32160    1.42203     1.18605
+       1.0    10.78    2.1354    0.36635    0.57434    0.78232     0.75864
+       3.0    32.33    5.2342    0.12212    0.38065    0.63918     0.63652
+      10.0   107.78   16.2145    0.03664    0.31533    0.59402     0.59378
+      30.0   323.33   47.6261    0.01221    0.29690    0.58159     0.58157
+     100.0  1077.76  157.5803    0.00366    0.29048    0.57730     0.57729
+   Näherung A für b >> r*: α_A ≈ 6πΔs/r* + 6Δs/b
+
+   η(r) = M_dyn/M_lens (3D, Punktmasse), y = (r*/r)²:
+      r/r*         ν    η_A   η_B_halb=2ν/(1+ν)  η_B_strikt=ν  r/r*+1/2
+       0.1    1.0000   1.00              1.0000        1.0000     0.600
+       0.5    1.1565   1.00              1.0726        1.1565     1.000
+       1.0    1.5820   1.00              1.2254        1.5820     1.500
+       2.0    2.5415   1.00              1.4353        2.5415     2.500
+       5.0    5.5167   1.00              1.6931        5.5167     5.500
+      10.0   10.5083   1.00              1.8262       10.5083    10.500
+      30.0   30.5028   1.00              1.9365       30.5028    30.500
+     100.0  100.5008   1.00              1.9803      100.5008   100.500
+
+====================================================================================================
+2) GALAXIE-GALAXIE-LINSEN: ΔΣ(R) für isolierte Galaxien (Baryonen als Hernquist-Kugel)
+   Annahme: a_H = 1.5 kpc·(M/1e10)^0.3 (Sterne + kaltes Gas, ohne heißen Halo). Punktmasse wäre ab 20 kpc fast gleich.
+
+   M_bar = 1e+10 M☉, a_H = 1.50 kpc, r* = 3.41 kpc, v_flach = (GMa0)^1/4 = 112.3 km/s
+    R[kpc]  ΔΣ_Newton  ΔΣ_B_halb       ΔΣ_A  [M☉/pc²]  g_bar/a0  4GΔΣ_A/g_RAR  4GΔΣ_Bh/g_RAR  4GΔΣ_N/g_RAR     A/N
+        10    22.9209    48.2511    73.5814            8.78e-02         0.998          0.655        0.3110    3.21
+        20     6.7126    21.8162    36.9198            2.51e-02         1.001          0.591        0.1819    5.50
+        30     3.1530    13.8721    24.5912            1.17e-02         1.001          0.565        0.1283    7.80
+        50     1.1876     7.9593    14.7309            4.38e-03         1.001          0.541        0.0807   12.40
+       100     0.3073     3.8298     7.3523            1.13e-03         1.000          0.521        0.0418   23.92
+       200     0.0782     1.8752     3.6722            2.86e-04         1.000          0.511        0.0213   46.97
+       300     0.0350     1.2411     2.4471            1.28e-04         1.000          0.507        0.0143   70.01
+       500     0.0126     0.7402     1.4678            4.62e-05         1.000          0.504        0.0086  116.10
+       700     0.0065     0.5274     1.0483            2.36e-05         1.000          0.503        0.0062  162.19
+      1000     0.0032     0.3684     0.7337            1.16e-05         1.000          0.502        0.0043  231.32
+
+   M_bar = 3e+10 M☉, a_H = 2.09 kpc, r* = 5.90 kpc, v_flach = (GMa0)^1/4 = 147.8 km/s
+    R[kpc]  ΔΣ_Newton  ΔΣ_B_halb       ΔΣ_A  [M☉/pc²]  g_bar/a0  4GΔΣ_A/g_RAR  4GΔΣ_Bh/g_RAR  4GΔΣ_N/g_RAR     A/N
+        10    61.2162    97.3684   133.5205            2.39e-01         1.005          0.733        0.4607    2.18
+        20    18.9064    42.4354    65.9644            7.14e-02         1.006          0.647        0.2884    3.49
+        30     9.0583    26.3184    43.5786            3.38e-02         1.005          0.607        0.2089    4.81
+        50     3.4694    14.6833    25.8973            1.28e-02         1.004          0.569        0.1345    7.46
+       100     0.9096     6.8727    12.8358            3.34e-03         1.002          0.537        0.0710   14.11
+       200     0.2330     3.3097     6.3864            8.53e-04         1.001          0.519        0.0365   27.41
+       300     0.1044     2.1773     4.2503            3.82e-04         1.001          0.513        0.0246   40.72
+       500     0.0378     1.2922     2.5466            1.38e-04         1.000          0.508        0.0149   67.33
+       700     0.0194     0.9186     1.8179            7.07e-05         1.000          0.505        0.0106   93.93
+      1000     0.0095     0.6407     1.2719            3.47e-05         1.000          0.504        0.0075  133.85
+
+   M_bar = 1e+11 M☉, a_H = 2.99 kpc, r* = 10.78 kpc, v_flach = (GMa0)^1/4 = 199.8 km/s
+    R[kpc]  ΔΣ_Newton  ΔΣ_B_halb       ΔΣ_A  [M☉/pc²]  g_bar/a0  4GΔΣ_A/g_RAR  4GΔΣ_Bh/g_RAR  4GΔΣ_N/g_RAR     A/N
+        10   172.3256   219.4947   266.6637            6.88e-01         1.015          0.836        0.6560    1.55
+        20    57.3437    92.9204   128.4971            2.20e-01         1.017          0.735        0.4538    2.24
+        30    28.2802    55.9291    83.5781            1.07e-01         1.014          0.679        0.3431    2.96
+        50    11.1043    29.9839    48.8635            4.14e-02         1.010          0.620        0.2295    4.40
+       100     2.9696    13.4137    23.8578            1.10e-02         1.006          0.565        0.1252    8.03
+       200     0.7684     6.2688    11.7692            2.82e-03         1.003          0.534        0.0655   15.32
+       300     0.3455     4.0772     7.8090            1.27e-03         1.002          0.523        0.0443   22.60
+       500     0.1255     2.3964     4.6672            4.59e-04         1.001          0.514        0.0269   37.18
+       700     0.0643     1.6962     3.3281            2.35e-04         1.001          0.510        0.0193   51.75
+      1000     0.0316     1.1791     2.3267            1.15e-04         1.001          0.507        0.0136   73.61
+
+   g_RAR = ν(g_bar/a0)·g_bar mit g_bar = G·M_bar(<R)/R² (3D, wie in der Linsen-RAR).
+   4GΔΣ ist die SIS-Umrechnung ΔΣ → g_obs (exakt für ρ ∝ r⁻²). Werte ≈1: Linsen folgen der RAR.
+
+====================================================================================================
+3) MASSEREICHER GALAXIENHAUFEN: Einstein-Radius und Linsenmasse
+   z_l = 0.3; ρ_c(z_l) = 1.2509e-26 kg/m³
+   Baryonen: Gas β-Modell β=2/3, r_c = 150 kpc, M_gas(<1 Mpc) = 1e14 M☉, abgeschnitten bei 3 Mpc;
+             BCG (mit ICL) Hernquist 1.5e12 M☉, a = 20 kpc; Mitgliedsgalaxien Hernquist 1e13 M☉, a = 300 kpc (Annahmen)
+
+   3D-Profile:  r[kpc]      M_bar   g_N/a0      ν  M_dyn,A=νM_bar  M_NFW(1e15,c4) Rest NFW/A
+                    50  1.190e+12    0.553  1.906       2.269e+12       6.215e+12       2.74
+                   100  3.167e+12    0.368  2.199       6.964e+12       2.194e+13       3.15
+                   250  1.548e+13    0.288  2.409       3.730e+13       9.938e+13       2.66
+                   500  4.446e+13    0.207  2.738       1.217e+14       2.615e+14       2.15
+                  1000  1.074e+14    0.125  3.361       3.608e+14       5.737e+14       1.59
+
+   Projizierte Linsenmasse M_2D(<R) [M☉] (Sichtlinie bis ∞):
+    R[kpc]  Baryonen(N)      B_halb    Option A  A/bar  NFW 1e15, c=4  NFW 1e15, c=6  NFW 2e15, c=5 Rest(1e15,c4)
+        50    2.882e+12   5.043e+12   7.205e+12   2.50      1.742e+13      2.452e+13      2.905e+13          2.42
+       100    8.047e+12   1.515e+13   2.226e+13   2.77      5.103e+13      6.824e+13      8.518e+13          2.29
+       250    3.113e+13   6.434e+13   9.754e+13   3.13      1.819e+14      2.212e+14      3.042e+14          1.87
+       500    7.514e+13   1.754e+14   2.756e+14   3.67      4.093e+14      4.566e+14      6.856e+14          1.49
+      1000    1.586e+14   4.422e+14   7.258e+14   4.58      7.943e+14      8.144e+14      1.333e+15          1.09
+
+   Einstein-Radien (Radius, in dem die mittlere Konvergenz 1 ist):
+   z_s = 1.0: Σ_crit = 2834.7 M☉/pc², D_l = 918.8 Mpc, 1" = 4.454 kpc
+      Baryonen Newton (=B_strikt)        θ_E =   0.43"  R_E =    1.9 kpc
+      Option B_halb                      θ_E =   0.68"  R_E =    3.1 kpc
+      Option A (ν_FTM, a0=1.2e-10)       θ_E =   1.04"  R_E =    4.6 kpc
+      NFW 1e15, c=4                      θ_E =   5.61"  R_E =   25.0 kpc
+      NFW 1e15, c=6                      θ_E =  13.75"  R_E =   61.3 kpc
+      NFW 2e15, c=5                      θ_E =  20.54"  R_E =   91.5 kpc
+   z_s = 2.0: Σ_crit = 2352.3 M☉/pc², D_l = 918.8 Mpc, 1" = 4.454 kpc
+      Baryonen Newton (=B_strikt)        θ_E =   0.66"  R_E =    2.9 kpc
+      Option B_halb                      θ_E =   1.03"  R_E =    4.6 kpc
+      Option A (ν_FTM, a0=1.2e-10)       θ_E =   1.57"  R_E =    7.0 kpc
+      NFW 1e15, c=4                      θ_E =   9.64"  R_E =   42.9 kpc
+      NFW 1e15, c=6                      θ_E =  19.57"  R_E =   87.2 kpc
+      NFW 2e15, c=5                      θ_E =  29.27"  R_E =  130.4 kpc
+
+   Nötige Linsenmasse für einen beobachteten Einstein-Radius (z_s = 2) gegenüber Option A:
+   θ_E = 10" (R_E =  44.5 kpc): M_2D nötig = 1.466e+13 M☉, Option A = 5.997e+12, Baryonen = 2.452e+12  ⇒  Rest = 2.44, nötig/Baryonen =  5.98
+   θ_E = 20" (R_E =  89.1 kpc): M_2D nötig = 5.865e+13 M☉, Option A = 1.840e+13, Baryonen = 6.748e+12  ⇒  Rest = 3.19, nötig/Baryonen =  8.69
+   θ_E = 30" (R_E = 133.6 kpc): M_2D nötig = 1.320e+14 M☉, Option A = 3.582e+13, Baryonen = 1.252e+13  ⇒  Rest = 3.68, nötig/Baryonen = 10.54
+   θ_E = 45" (R_E = 200.4 kpc): M_2D nötig = 2.969e+14 M☉, Option A = 6.893e+13, Baryonen = 2.281e+13  ⇒  Rest = 4.31, nötig/Baryonen = 13.01
+
+   Vergleich der Übergangsfunktionen und von a0 (Option A), M_2D(<500 kpc) und Rest gegenüber NFW(1e15, c=4):
+   ν_FTM = 1/(1-e^-√y), a0 = 1.2e-10              M_2D(500) = 2.756e+14  Rest(500) =  1.49   M_2D(100) = 2.226e+13  Rest(100) =  2.29
+   ν_simple, a0 = 1.2e-10                         M_2D(500) = 2.768e+14  Rest(500) =  1.48   M_2D(100) = 2.242e+13  Rest(100) =  2.28
+   ν_standard, a0 = 1.2e-10                       M_2D(500) = 2.428e+14  Rest(500) =  1.69   M_2D(100) = 1.895e+13  Rest(100) =  2.69
+   ν_FTM, a0 = cH0/2π                             M_2D(500) = 2.639e+14  Rest(500) =  1.55   M_2D(100) = 2.137e+13  Rest(100) =  2.39
+   ν_FTM, a0(z=0.3) = cH(z)/2π = 1.262e-10        M_2D(500) = 2.816e+14  Rest(500) =  1.45   M_2D(100) = 2.270e+13  Rest(100) =  2.25
+   Rest := M_2D,NFW-Referenz / M_2D,Option A. Die Referenz steht für die beobachtete Linsenmasse (Annahme).
+
+====================================================================================================
+4) BULLET CLUSTER 1E 0657-56: 3D-Operator (QUMOND-artig) auf dem Gitter, projiziert zu κ(x,y)
+   Gitter 192x192x96, Zellen 20.0x20.0x40.0 kpc, Box 3.84 x 3.84 x 3.84 Mpc,
+   isolierte Randbedingung durch Nullauffüllung (Hockney-Eastwood), 1/r-Kern im doppelten Gitter.
+   FFT-Kern vorbereitet in 1.4 s
+
+   Validierung: kugelsymmetrischer Haufen (β-Gas r_c = 150 kpc, 1e14 M☉ bis 1.5 Mpc; BCG 1e12, a=25) im Gitterzentrum
+    R[kpc]  M_N Gitter      M_N 1D  M_A Gitter      M_A 1D  Abw. A
+       100   4.272e+12   4.161e+12   1.436e+13   1.400e+13    2.6%
+       250   1.660e+13   1.661e+13   6.075e+13   6.082e+13   -0.1%
+       500   4.004e+13   4.005e+13   1.655e+14   1.654e+14    0.1%
+
+   Baryonisches Modell (Achse Ost→West = +x; Geometrie gerundet nach Clowe et al. 2006, Abb. 1; ±50 kpc unsicher):
+     Haupt-BCG       Hernquist a =    25 kpc  x =     0 kpc  M = 1.00e+12 M☉ (r < 1500 kpc)
+     Haupt-Galaxien  Hernquist a =   250 kpc  x =     0 kpc  M = 1.00e+13 M☉ (r < 1500 kpc)
+     Sub-BCG         Hernquist a =    20 kpc  x =   720 kpc  M = 6.00e+11 M☉ (r < 1500 kpc)
+     Sub-Galaxien    Hernquist a =   150 kpc  x =   720 kpc  M = 5.00e+12 M☉ (r < 1500 kpc)
+     Hauptgas        β=2/3, r_c =   200 kpc  x =   200 kpc  M = 1.50e+14 M☉ (r < 1500 kpc)
+     Bullet-Gas      β=2/3, r_c =    60 kpc  x =   560 kpc  M = 2.00e+13 M☉ (r < 500 kpc)
+     Gas gesamt 1.70e+14 M☉, Sterne gesamt 1.66e+13 M☉, Gas/Sterne = 10.2
+     Massen sind Modellannahmen in der Größenordnung von Clowe et al. 2006 / Bradač et al. 2006 (nicht exakt übernommen).
+   QUMOND-Lauf in 3.2 s; ρ_ph min/max = 2.839e+03 / 4.132e+06 M☉/kpc³ (Anteil negativer Phantommasse: 0.00 %)
+     g_N/a0 in der Mittelebene bei Haupt-BCG  (x=   0):  0.239   ν =  2.59
+     g_N/a0 in der Mittelebene bei Hauptgas   (x= 200):  0.037   ν =  5.73
+     g_N/a0 in der Mittelebene bei Mitte      (x= 360):  0.015   ν =  8.76
+     g_N/a0 in der Mittelebene bei Bullet-Gas (x= 560):  0.096   ν =  3.75
+     g_N/a0 in der Mittelebene bei Sub-BCG    (x= 720):  0.359   ν =  2.22
+   z_l = 0.296, z_s = 1: Σ_crit = 2.841e+09 M☉/kpc², 1" = 4.413 kpc
+
+   Konvergenzmaxima auf der Stoßachse (y = 0); Karte mit Gauß σ geglättet (Auflösung der Rekonstruktion):
+   (Galaxien bei x = 0 / 720 kpc, Gas bei x = 200 / 560 kpc)
+   σ =     0 kpc  Karte                            x_peak Haupt      κ  x_peak Sub      κ
+                Newton (Baryonen) = B_strikt              0.1  0.258       719.7  0.222
+                Option B_halb                             0.5  0.345       719.3  0.296
+                Option A (Operator)                       0.9  0.431       718.9  0.369
+                nur Phantomanteil (A - Newton)            5.9  0.173       538.0  0.154
+   σ =    50 kpc  Karte                            x_peak Haupt      κ  x_peak Sub      κ
+                Newton (Baryonen) = B_strikt             15.4  0.070       559.7  0.072
+                Option B_halb                            17.6  0.125       550.8  0.130
+                Option A (Operator)                      18.8  0.179       546.9  0.189
+                nur Phantomanteil (A - Newton)           23.2  0.110       537.1  0.117
+   σ =   100 kpc  Karte                            x_peak Haupt      κ  x_peak Sub      κ
+                Newton (Baryonen) = B_strikt            134.2  0.054       544.0  0.058
+                Option B_halb                           181.8  0.103       528.2  0.107
+                Option A (Operator)                     203.3  0.151       519.9  0.156
+                nur Phantomanteil (A - Newton)          234.2  0.098       496.0  0.098
+   σ = 0: Pixelspitze der BCG (20 kpc) – kein Linsenobservabel; maßgeblich sind σ = 50–100 kpc.
+   Empfindlichkeit gegenüber der Sternmasse (Option A; σ = 50 kpc, in Klammern σ = 100 kpc):
+     Sterne x0.25 (Sterne in 100 kpc um Haupt-/Sub-BCG: 6.4e+11 / 4.7e+11 M☉)  x_peak Haupt =  258.5 ( 175.8)   x_peak Sub =  535.9 ( 481.4)
+     Sterne x0.5  (Sterne in 100 kpc um Haupt-/Sub-BCG: 1.3e+12 / 9.5e+11 M☉)  x_peak Haupt =  244.9 ( 284.4)   x_peak Sub =  539.6 ( 493.9)
+     Sterne x1.0  (Sterne in 100 kpc um Haupt-/Sub-BCG: 2.6e+12 / 1.9e+12 M☉)  x_peak Haupt =   18.8 ( 203.3)   x_peak Sub =  546.9 ( 519.9)
+     Sterne x2.0  (Sterne in 100 kpc um Haupt-/Sub-BCG: 5.1e+12 / 3.8e+12 M☉)  x_peak Haupt =   10.4 (  55.5)   x_peak Sub =  697.3 ( 584.8)
+   Clowe et al. 2006 geben in 100-kpc-Aperturen um die BCGs Sternmassen von nur ~5e11 M☉ an (UNSICHER) ≈ Faktor x0.25 hier.
+
+   Aperturmassen (R = 100 kpc) [M☉]:
+   Ort                Gas     Sterne     Newton   Option A  A/Bar  M_κ Clowe*   Rest
+   Haupt-BCG     3.10e+12   2.57e+12   5.68e+12   1.51e+13   2.66    2.80e+13   1.86
+   Hauptgas      4.82e+12   5.10e+11   5.33e+12   1.52e+13   2.85    2.30e+13   1.52
+   Bullet-Gas    5.92e+12   4.64e+11   6.39e+12   1.67e+13   2.62    1.80e+13   1.08
+   Sub-BCG       3.22e+12   1.90e+12   5.11e+12   1.34e+13   2.61    2.00e+13   1.50
+   *M_κ: Richtwerte der Größenordnung nach Clowe et al. 2006, Tab. 2 (aus dem Gedächtnis, UNSICHER, am Original prüfen).
+    Beobachtet: M_κ(100 kpc) ~ 2–3e13 M☉ an beiden Galaxienpeaks, Plasma dort nur ~(3–6)e12, Sterne ~5e11.
+
+   Profil κ(x, y=0) (z_s = 1), geglättet mit σ = 50 kpc:
+    x[kpc]   κ_Gas κ_Sterne   κ_bar     κ_A
+      -300  0.0156   0.0026  0.0181  0.0701
+      -240  0.0179   0.0039  0.0218  0.0795
+      -180  0.0208   0.0064  0.0271  0.0925
+      -120  0.0242   0.0122  0.0364  0.1132
+       -60  0.0285   0.0252  0.0537  0.1478
+         0  0.0337   0.0354  0.0691  0.1776
+        60  0.0400   0.0253  0.0653  0.1727
+       120  0.0467   0.0123  0.0591  0.1638
+       180  0.0517   0.0066  0.0582  0.1658
+       240  0.0535   0.0042  0.0576  0.1665
+       300  0.0530   0.0030  0.0560  0.1624
+       360  0.0525   0.0025  0.0550  0.1584
+       420  0.0548   0.0024  0.0572  0.1621
+       480  0.0615   0.0028  0.0644  0.1766
+       540  0.0673   0.0042  0.0715  0.1887
+       600  0.0617   0.0083  0.0701  0.1805
+       660  0.0475   0.0186  0.0661  0.1669
+       720  0.0349   0.0269  0.0617  0.1557
+       780  0.0265   0.0185  0.0449  0.1252
+       840  0.0208   0.0080  0.0288  0.0941
+       900  0.0167   0.0037  0.0204  0.0755
+       960  0.0133   0.0021  0.0153  0.0632
+      1020  0.0102   0.0013  0.0115  0.0536
+
+====================================================================================================
+5) GEDÄCHTNIS-VARIANTE: Operatorfeld läuft der Zustandsgeschichte nach
+   Gedächtnisgeschwindigkeit u(t) = λ∫e^{-λ(t-t')} v(t') dt' (Kern aus 07), Gedächtnislage dX_mem/dt = u.
+   Struktur wird aus ρ_mem gebildet:  ∇²Φ = 4πGρ_bar + ∇·[(ν(|∇Φ_N[ρ_mem]|/a0) - 1) ∇Φ_N[ρ_mem]]
+   Stationär gilt ρ_mem = ρ_bar (Galaxien, Sonnensystem unverändert). Stoßfreie Galaxien: v = const ⇒ X_mem = X_gal.
+   Gas, zur Zeit 0 abgebremst:  (X_mem,gas - X_gal)/(X_gas - X_gal) = φ(λt)
+     sofortige Abbremsung:    φ_s(x) = 1 - (1 - e^{-x})/x          (x = λt)
+     konstante Abbremsung:    φ_k(x) = 1 - 2/x + 2(1 - e^{-x})/x²
+   Durchgangsweg 4500 km/s · 150 Myr = 690 kpc; Kreuzungszeit 720 kpc/4500 km/s = 156 Myr
+
+   Scan über φ, Sternmassen x1.0; Karten mit σ = 50 kpc geglättet (in Klammern β bei σ = 100 kpc)
+       φ x_peak Haupt  β_Haupt  x_peak Sub   β_Sub  κ_Haupt   κ_Sub   (β_H, β_S) σ=100   β = (x_peak - x_gal)/(x_gas - x_gal)
+    0.00          9.6    0.048       696.8   0.145    0.203   0.182   ( 0.18,  0.44)
+         Aperturmassen R=100 kpc bei φ=0: Haupt-BCG 1.74e+13 (Rest 1.61), Sub-BCG 1.53e+13 (Rest 1.31)
+    0.05         10.8    0.054       694.1   0.162    0.203   0.182   ( 0.19,  0.47)
+    0.10         12.1    0.060       691.4   0.179    0.202   0.182   ( 0.21,  0.50)
+    0.15         13.3    0.067       687.8   0.201    0.202   0.183   ( 0.23,  0.52)
+    0.20         14.5    0.072       683.7   0.227    0.201   0.183   ( 0.25,  0.55)
+    0.30         16.6    0.083       675.1   0.281    0.200   0.182   ( 0.29,  0.61)
+    0.40         18.3    0.092       662.3   0.361    0.198   0.182   ( 0.33,  0.68)
+    0.50         19.6    0.098       637.0   0.519    0.195   0.181   ( 0.38,  0.76)
+    0.60         20.3    0.102       604.7   0.720    0.192   0.182   ( 0.43,  0.84)
+    0.80         20.3    0.101       571.4   0.929    0.186   0.186   ( 0.60,  1.03)
+    1.00         18.8    0.094       546.9   1.082    0.179   0.189   ( 1.02,  1.25)
+   σ = 50 kpc, β ≤ 0.25: φ ≤ 0.243 ⇒ λt ≤ 0.586 (sofort) / 0.900 (konstant) ⇒ 1/λ ≥   256 Myr (sofort) /   167 Myr (konstant) bei t = 150 Myr
+   σ = 50 kpc, β ≤ 0.4: φ ≤ 0.425 ⇒ λt ≤ 1.231 (sofort) / 1.945 (konstant) ⇒ 1/λ ≥   122 Myr (sofort) /    77 Myr (konstant) bei t = 150 Myr
+   σ = 100 kpc, β ≤ 0.25: schon bei φ = 0 verletzt
+   σ = 100 kpc, β ≤ 0.4: schon bei φ = 0 verletzt
+
+   Scan über φ, Sternmassen x0.25; Karten mit σ = 50 kpc geglättet (in Klammern β bei σ = 100 kpc)
+       φ x_peak Haupt  β_Haupt  x_peak Sub   β_Sub  κ_Haupt   κ_Sub   (β_H, β_S) σ=100   β = (x_peak - x_gal)/(x_gas - x_gal)
+    0.00         25.3    0.126       663.6   0.353    0.161   0.154   ( 0.33,  0.68)
+         Aperturmassen R=100 kpc bei φ=0: Haupt-BCG 1.41e+13 (Rest 1.98), Sub-BCG 1.30e+13 (Rest 1.54)
+    0.05         29.6    0.148       653.8   0.414    0.161   0.156   ( 0.37,  0.71)
+    0.10         35.4    0.177       643.2   0.480    0.161   0.157   ( 0.41,  0.74)
+    0.15         41.3    0.207       633.3   0.542    0.160   0.159   ( 0.45,  0.78)
+    0.20         47.5    0.237       624.4   0.597    0.159   0.161   ( 0.50,  0.81)
+    0.30         67.3    0.337       609.9   0.688    0.158   0.164   ( 0.61,  0.88)
+    0.40        121.6    0.608       597.8   0.764    0.157   0.168   ( 0.73,  0.95)
+    0.50        162.3    0.811       587.0   0.831    0.158   0.172   ( 0.85,  1.03)
+    0.60        185.2    0.926       576.7   0.896    0.160   0.175   ( 0.97,  1.11)
+    0.80        220.7    1.103       556.5   1.022    0.162   0.181   ( 1.24,  1.29)
+    1.00        258.5    1.293       535.9   1.151    0.163   0.185   ( 0.88,  1.49)
+   σ = 50 kpc, β ≤ 0.25: schon bei φ = 0 verletzt
+   σ = 50 kpc, β ≤ 0.4: φ ≤ 0.039 ⇒ λt ≤ 0.080 (sofort) / 0.120 (konstant) ⇒ 1/λ ≥  1885 Myr (sofort) /  1253 Myr (konstant) bei t = 150 Myr
+   σ = 100 kpc, β ≤ 0.25: schon bei φ = 0 verletzt
+   σ = 100 kpc, β ≤ 0.4: schon bei φ = 0 verletzt
+
+   Zusatz: Rest (fehlender Faktor) ebenfalls als Gedächtnisstruktur an den stoßfreien Komponenten, φ = 0:
+   κ = κ_N[ρ_bar] + s·κ_ph[ρ_mem];  s = 1 ist der reine Operator, s > 1 enthält den Rest als Struktur
+   Sterne x1.0  s = 1.0: β_Haupt =  0.05 ( 0.18), β_Sub =  0.15 ( 0.44)   M(100 kpc) Haupt-BCG = 1.74e+13, Sub-BCG = 1.53e+13
+   Sterne x1.0  s = 1.5: β_Haupt =  0.04 ( 0.14), β_Sub =  0.13 ( 0.35)   M(100 kpc) Haupt-BCG = 2.33e+13, Sub-BCG = 2.04e+13
+   Sterne x1.0  s = 2.0: β_Haupt =  0.04 ( 0.12), β_Sub =  0.12 ( 0.30)   M(100 kpc) Haupt-BCG = 2.91e+13, Sub-BCG = 2.55e+13
+   Sterne x1.0  s = 3.0: β_Haupt =  0.04 ( 0.09), β_Sub =  0.11 ( 0.25)   M(100 kpc) Haupt-BCG = 4.08e+13, Sub-BCG = 3.57e+13
+   Sterne x0.25 s = 1.0: β_Haupt =  0.13 ( 0.33), β_Sub =  0.35 ( 0.68)   M(100 kpc) Haupt-BCG = 1.41e+13, Sub-BCG = 1.30e+13
+   Sterne x0.25 s = 1.5: β_Haupt =  0.11 ( 0.24), β_Sub =  0.25 ( 0.53)   M(100 kpc) Haupt-BCG = 1.93e+13, Sub-BCG = 1.76e+13
+   Sterne x0.25 s = 2.0: β_Haupt =  0.10 ( 0.20), β_Sub =  0.21 ( 0.44)   M(100 kpc) Haupt-BCG = 2.45e+13, Sub-BCG = 2.22e+13
+   Sterne x0.25 s = 3.0: β_Haupt =  0.08 ( 0.15), β_Sub =  0.18 ( 0.35)   M(100 kpc) Haupt-BCG = 3.49e+13, Sub-BCG = 3.15e+13
+
+   Vorhersage β(t) = Versatz(κ-Galaxien)/Versatz(Gas-Galaxien) als Funktion der Zeit seit dem Stoß
+   (Bullet-Geometrie, Sterne x1, σ = 50 kpc, sofortige Abbremsung; ΛCDM-stoßfrei: β = 0; ohne Gedächtnis: β(φ=1))
+   t[Gyr]     1/λ=300 Myr     1/λ=600 Myr    1/λ=1000 Myr    1/λ=3000 Myr  ohne Gedächtnis  ΛCDM(stoßfrei)
+     0.05           0.172           0.159           0.153           0.148            1.082           0.000
+     0.10           0.201           0.172           0.161           0.151            1.082           0.000
+     0.15           0.234           0.186           0.169           0.153            1.082           0.000
+     0.30           0.335           0.234           0.195           0.161            1.082           0.000
+     0.50           0.546           0.298           0.234           0.172            1.082           0.000
+     0.70           0.734           0.376           0.270           0.183            1.082           0.000
+     1.00           0.836           0.546           0.335           0.201            1.082           0.000
+     1.50           0.930           0.755           0.491           0.234            1.082           0.000
+     2.00           0.967           0.836           0.655           0.265            1.082           0.000
+   Versatz κ–Gas = (1 - β)·Versatz Gas–Galaxien.
+
+   Zeitmarken (Literatur, UNSICHER, prüfen): Bullet ~0.15 Gyr; El Gordo ~0.5 Gyr; Musket Ball ~0.7 Gyr (Dawson 2013).
+   Bullet       t = 0.15 Gyr: 1/λ= 300 Myr: φ=0.21, β=0.23  1/λ= 600 Myr: φ=0.12, β=0.19  1/λ=1000 Myr: φ=0.07, β=0.17  1/λ=3000 Myr: φ=0.02, β=0.15
+   El Gordo     t = 0.50 Gyr: 1/λ= 300 Myr: φ=0.51, β=0.55  1/λ= 600 Myr: φ=0.32, β=0.30  1/λ=1000 Myr: φ=0.21, β=0.23  1/λ=3000 Myr: φ=0.08, β=0.17
+   Musket Ball  t = 0.70 Gyr: 1/λ= 300 Myr: φ=0.61, β=0.73  1/λ= 600 Myr: φ=0.41, β=0.38  1/λ=1000 Myr: φ=0.28, β=0.27  1/λ=3000 Myr: φ=0.11, β=0.18
+   1 Gyr        t = 1.00 Gyr: 1/λ= 300 Myr: φ=0.71, β=0.84  1/λ= 600 Myr: φ=0.51, β=0.55  1/λ=1000 Myr: φ=0.37, β=0.34  1/λ=3000 Myr: φ=0.15, β=0.20
+
+   Nötige Nachlaufzeit, damit β ≤ 0.25 (Sterne x1, σ = 50 kpc) auch t Gyr nach dem Stoß gilt:
+   t = 0.15 Gyr  ⇒  1/λ ≥    256 Myr (sofort) /    167 Myr (konstant)
+   t = 0.50 Gyr  ⇒  1/λ ≥    854 Myr (sofort) /    555 Myr (konstant)
+   t = 0.70 Gyr  ⇒  1/λ ≥   1195 Myr (sofort) /    778 Myr (konstant)
+   t = 1.00 Gyr  ⇒  1/λ ≥   1708 Myr (sofort) /   1111 Myr (konstant)
+   t = 2.00 Gyr  ⇒  1/λ ≥   3416 Myr (sofort) /   2221 Myr (konstant)
+
+Fertig.

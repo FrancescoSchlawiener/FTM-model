@@ -1,0 +1,70 @@
+================================================================================================================
+0  Grundgrößen
+================================================================================================================
+   ρ_b = 4.2019e-28 kg/m³ (Ω_b = 0.04924);  d_LSS = 27.786 Gpc;  L_min = 0,985·d_LSS = 27.369 Gpc
+   Δs_b(d_LSS) = 2.1245 Gpc;  Δs_b(L_min) = 2.0303 Gpc
+   gemessen Q = 5.3643 ± 0.0646 (Planck) bzw. 5.3225 ± 0.0525 (+BAO) [G]; a₀-Band 1,04–1,19·10⁻¹⁰
+   heute mit der Lesart (ν = 6.3643): r*/Λ = √(6/ν) = 0.9710,  r₀/Λ = 6/ν = 0.9428,  3Δs_b/ℓ₀ = 1,5/ν = 0.2357
+================================================================================================================
+1  Bedingungen Λ = m·Δs_b  ⇒  ν = m, Q = m − 1; a₀ bei würfelförmiger Zelle
+================================================================================================================
+   Bedingung                                       ν      Q  σ Planck   σ +BAO  a₀(L_min)  a₀(d_LSS)   L für a₀ = 1,04 / 1,10 / 1,19 [Gpc]
+   F1  ϖ-Leiter: r₀ = r* = Λ (Halbgerade)       6.00   5.00      -5.6     -6.1    1.1955     1.1425    28.67 /  28.14 /  27.41   (L_min = 27.37)
+   F2  Raum-Triade: 3Δs = r* = ℓ₀ = 2Λ          1.50   0.50     -75.3    -91.9    4.7819     4.5700    45.51 /  44.67 /  43.51   (L_min = 27.37)
+   F3a Kreis 2Λ: r₀ = ℓ₀                        3.00   2.00     -52.1    -63.3    2.3910     2.2850    36.12 /  35.45 /  34.54   (L_min = 27.37)
+   F3b Kreis 2Λ: r* = ℓ₀ (= F2)                 1.50   0.50     -75.3    -91.9    4.7819     4.5700    45.51 /  44.67 /  43.51   (L_min = 27.37)
+   F3c Kreis 2Λ: r₀ = r* (= F1)                 6.00   5.00      -5.6     -6.1    1.1955     1.1425    28.67 /  28.14 /  27.41   (L_min = 27.37)
+   Kreis 2Λ: r₀ = ℓ₀ gibt r*² = r₀Λ = ℓ₀²/2, r* = ℓ₀/√2 ≠ ℓ₀: auf dem Kreis fallen die drei Längen nie zusammen.
+   Halbgerade (F1) und Raum-Triade (F2) haben je genau einen Tripelpunkt (r*² = r₀Λ bzw. r*² = 3Δs·ℓ₀).
+================================================================================================================
+2  Gezählte Faltung statt Baryonen (Δs_eff = ν·Δs_b = Λ nach der Lesart)
+================================================================================================================
+   F1': 6Δs_eff = Λ  ⇒ 6Λ = Λ: Widerspruch.   F2': 3Δs_eff = 2Λ ⇒ 3Λ = 2Λ: Widerspruch.
+   r*_eff/Λ = √(6ν·Δs_b/Λ) = √6 = 2.4495 > 1 für jedes ν: Die gezählte Masse liegt stets jenseits des Schlusses;
+   die Lesart setzt die Zelle mit gezählter Faltung auf ΣΔs_eff = Λ, d. h. M = 1,5·M_U (keine freie Bedingung).
+   Nur die Baryonenfaltung (wie in der Regel r* = √(GM_b/a₀)) gibt eine Bedingung.
+================================================================================================================
+3  F4  Kac am Ort der Zelle: 1/ν = μ(Ort)/μ(X) mit Λ = ν·Δs_b
+================================================================================================================
+   X = Halbgerade Λ Ort = r₀ = 6Δs_b : 1/ν = 6.0/ν  ⇒ Widerspruch (6.0 = 1)
+   X = Halbgerade Λ Ort = 3Δs_b      : 1/ν = 3.0/ν  ⇒ Widerspruch (3.0 = 1)
+   X = Halbgerade Λ Ort = Δs_b       : 1/ν = 1.0/ν  ⇒ gilt für jedes ν (Umschreibung)
+   X = Kreis 2Λ     Ort = r₀ = 6Δs_b : 1/ν = 3.0/ν  ⇒ Widerspruch (3.0 = 1)
+   X = Kreis 2Λ     Ort = 3Δs_b      : 1/ν = 1.5/ν  ⇒ Widerspruch (1.5 = 1)
+   X = Kreis 2Λ     Ort = Δs_b       : 1/ν = 0.5/ν  ⇒ Widerspruch (0.5 = 1)
+   Kac legt ν nie fest: entweder Umschreibung der Lesart oder Widerspruch.
+================================================================================================================
+4  F5  Fixpunkt der eigenen Rückkehr der Zelle mit der tiefsten Mode der inneren Richtung
+================================================================================================================
+   räumlich: tiefste Mode k = 0 ⇒ s = 0, q = 1, ν = ∞ (kein Fixpunkt).
+   Halbgerade k₁ = π/2Λ                     offen e^{−kϖ_R}   : ν = 1.0228 (Q = 0.023, -82.7σ; r*/Λ = 2.422 > 1: jenseits des Schlusses, ungültig)
+   Halbgerade k₁ = π/2Λ                     geschlossen cosh  : keine Lösung mit r* ≤ Λ
+   Kreis 2Λ k₁ = π/Λ                        offen e^{−kϖ_R}   : ν = 1.0005 (Q = 0.000, -83.0σ; r*/Λ = 2.449 > 1: jenseits des Schlusses, ungültig)
+   Kreis 2Λ k₁ = π/Λ                        geschlossen cosh  : keine Lösung mit r* ≤ Λ
+   k = 1/Λ (Λ als Radius: L/I verwechselt)  offen e^{−kϖ_R}   : ν = 1.1082 (Q = 0.108, -81.4σ; r*/Λ = 2.327 > 1: jenseits des Schlusses, ungültig)
+   k = 1/Λ (Λ als Radius: L/I verwechselt)  geschlossen cosh  : keine Lösung mit r* ≤ Λ
+================================================================================================================
+5  Schranke statt Gleichung: ϖ_R(Zelle) = r*(M_b) ≤ Λ  ⇔  ν ≥ 6, Q ≥ 5 (untere Schranke, zeitfest)
+================================================================================================================
+   Obere Schranke aus L ≥ L_min (keine Kreispaare): ν ≤ 3c⁴/(2Gρ_bL_min³a₀) – hängt an a₀ und Zellform (nicht zwingend)
+   würfelförmig      ν_max bei a₀ = 1,04 / 1,10 / 1,19:  6.897 /  6.521 /  6.028
+   sechseckig        ν_max bei a₀ = 1,04 / 1,10 / 1,19:  7.964 /  7.529 /  6.960
+   raumzentriert     ν_max bei a₀ = 1,04 / 1,10 / 1,19:  8.959 /  8.470 /  7.830
+   flächenzentriert  ν_max bei a₀ = 1,04 / 1,10 / 1,19:  9.755 /  9.223 /  8.525
+   Würfel, a₀ = 1,1: Fenster 6 ≤ ν ≤ 6.521, also 5 ≤ Q ≤ 5.521; gemessen 5,364
+   Würfel: Fenster leer (ν_max < 6) für a₀ > 1.1955·10⁻¹⁰ (= a₀ bei F1 und L = L_min)
+   Abstand zur Gleichheit heute: r*/Λ = 0.9710, 1 − r*/Λ = 0.0290; Q − 5 = 0.364 = 5.6σ
+================================================================================================================
+6  Zeitfestigkeit (Beobachterfehler): r*/Λ mit Λ(z)/Λ(0) = 1/a0_frueh_relativ(z), M_b mitbewegt fest
+================================================================================================================
+   z =       0: Λ(z)/Λ(0) = 1.0000,  r*/Λ = 0.9710  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   z =       1: Λ(z)/Λ(0) = 1.0003,  r*/Λ = 0.9708  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   z =      10: Λ(z)/Λ(0) = 1.0029,  r*/Λ = 0.9695  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   z =     100: Λ(z)/Λ(0) = 1.0292,  r*/Λ = 0.9571  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   z =    1090: Λ(z)/Λ(0) = 1.3178,  r*/Λ = 0.8458  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   z =   10000: Λ(z)/Λ(0) = 3.9156,  r*/Λ = 0.4907  (F1 als Gleichung gälte nur bei einem Λ; die Schranke gilt in jeder Epoche)
+   Nicht zeitfest und daher ausgeschlossen: Bedingungen mit L_phys = L̄·a (G atmet), H, Θ oder d_LSS des heutigen Beobachters.
+================================================================================================================
+7  Handwert
+================================================================================================================
+   F1, L = d_LSS: Δs_b = 2.1245 Gpc, Λ = 6Δs_b = 12.747 Gpc, a₀ = c²/2Λ = 1.1425e-10 m/s²

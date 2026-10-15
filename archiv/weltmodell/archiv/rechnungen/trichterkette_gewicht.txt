@@ -1,0 +1,165 @@
+
+==============================================================================================================
+1   Kugelschale im Kern-Hintergrund: θ̃ und w gegen den heutigen mittleren Kontrast 1 + Δ (Blick G am Ort L)
+==============================================================================================================
+   Ω_m = (1+Q)Ω_b = 0.3134, Ω_r = 9.14e-05, Ω_Λ = 0.6865;  H₀ = 2.1843e-18 s⁻¹;  θ_c = a₀/c = 3.6692e-19 s⁻¹ [I]
+   θ_c/3H₀ = 0.05599  (3H₀τ_D = 17.86);  w = ½ bei θ̃ = θ_c, w = 0,9 bei θ̃ = 3θ_c, w = 0,1 bei θ̃ = θ_c/3
+   ρ̄_m = 2.6742e-27 kg/m³ = 3.9513e+10 M☉/Mpc³
+   Alter t₀ = 0.95082/H₀ = 13.794 Gyr;  Probe ε = 0: 1+Δ = 1.000000, θ/3H₀ = 1.000000 (soll 1, E(0) = 1.000000)
+   Umkehr heute (θ = 0): 1 + Δ_ta = 11.816
+   Probe Einstein-de Sitter: 1 + Δ_ta = 5.5517  (analytisch 9π²/16 = 5.5517)
+   w heute     θ̃/3H₀     1 + Δ       (1+Δ)/(1+Δ_ta)   v_pec/(H₀R) = θ/3H₀ − 1
+    0.990     0.55713      4.5993       0.3892        -0.4429
+    0.900     0.16798      9.3452       0.7909        -0.8320
+    0.500     0.05599     10.9648       0.9280        -0.9440
+    0.100     0.01866     11.5292       0.9757        -0.9813
+   θ fällt in jeder noch expandierenden Schale monoton (θ̃ = θ heute); Tabelle 1 + Δ → θ/3H₀, w:
+      1+Δ =  1.00: θ/3H₀ = 1.0000 (linear 1 − fΔ/3 = +1.0000), θ̃/θ_c =   17.86, 1 − w = 1.46e-02
+      1+Δ =  1.10: θ/3H₀ = 0.9828 (linear 1 − fΔ/3 = +0.9824), θ̃/θ_c =   17.55, 1 − w = 1.52e-02
+      1+Δ =  1.30: θ/3H₀ = 0.9500 (linear 1 − fΔ/3 = +0.9472), θ̃/θ_c =   16.97, 1 − w = 1.63e-02
+      1+Δ =  1.50: θ/3H₀ = 0.9192 (linear 1 − fΔ/3 = +0.9120), θ̃/θ_c =   16.42, 1 − w = 1.74e-02
+      1+Δ =  2.00: θ/3H₀ = 0.8482 (linear 1 − fΔ/3 = +0.8239), θ̃/θ_c =   15.15, 1 − w = 2.04e-02
+      1+Δ =  3.00: θ/3H₀ = 0.7245 (linear 1 − fΔ/3 = +0.6478), θ̃/θ_c =   12.94, 1 − w = 2.74e-02
+      1+Δ =  5.00: θ/3H₀ = 0.5211 (linear 1 − fΔ/3 = +0.2956), θ̃/θ_c =    9.31, 1 − w = 4.73e-02
+      1+Δ =  8.00: θ/3H₀ = 0.2717 (linear 1 − fΔ/3 = -0.2326), θ̃/θ_c =    4.85, 1 − w = 1.11e-01
+
+==============================================================================================================
+2   Bereiche: mittlerer Kontrast 1 + Δ(<R) [G, Massenmodell unten], θ/3H₀, θ̃/θ_c, w (Top-Hat aus 1)
+==============================================================================================================
+   Überschussmassen [G], Plummer-Radius [A]:
+      Milchstraße        8.00e+11 M☉  d =    0.0 Mpc  (l, b) = (  0.0°,   0.0°)  a =  0.1 Mpc
+      M31                1.20e+12 M☉  d =    0.8 Mpc  (l, b) = (121.2°, -21.6°)  a =  0.1 Mpc
+      M81-Gruppe         1.00e+12 M☉  d =    3.6 Mpc  (l, b) = (142.1°,  40.9°)  a =  0.3 Mpc
+      Cen-A-Gruppe       3.00e+12 M☉  d =    3.7 Mpc  (l, b) = (309.5°,  19.4°)  a =  0.3 Mpc
+      Virgo              1.20e+15 M☉  d =   16.5 Mpc  (l, b) = (283.8°,  74.5°)  a =  2.0 Mpc
+      Großer Attraktor   5.00e+15 M☉  d =   65.0 Mpc  (l, b) = (307.0°,   9.0°)  a = 10.0 Mpc
+      Perseus-Pisces     5.00e+15 M☉  d =   73.0 Mpc  (l, b) = (150.6°, -13.3°)  a = 10.0 Mpc
+      Coma               1.50e+15 M☉  d =  100.0 Mpc  (l, b) = ( 58.1°,  88.0°)  a =  3.0 Mpc
+      Shapley            1.00e+16 M☉  d =  200.0 Mpc  (l, b) = (312.0°,  30.7°)  a = 10.0 Mpc
+   Nicht enthalten: Leeren (Lokale Leere u. a., negativer Überschuss); 1 + Δ großer Kugeln ist daher eine obere Schätzung.
+   Zentrum               R[Mpc]   M_über[M☉]   1+Δ       θ/3H₀    θ̃/θ_c      w         umgekehrt
+   uns (Milchstraße)         1    1.906e+12     12.513    0.0000       0.00   0.00000   ja (w = 0)
+   uns (Milchstraße)         3    2.269e+12      1.508    0.9180      16.39   0.98256   nein
+   uns (Milchstraße)        10    1.589e+13      1.096    0.9835      17.56   0.98487   nein
+   uns (Milchstraße)        30    1.218e+15      1.273    0.9544      17.05   0.98389   nein
+   uns (Milchstraße)        70    5.979e+15      1.105    0.9819      17.54   0.98482   nein
+   uns (Milchstraße)       200    1.743e+16      1.013    0.9977      17.82   0.98532   nein
+   Virgo                     1    1.076e+14    651.059    0.0000       0.00   0.00000   ja (w = 0)
+   Virgo                     3    6.891e+14    155.213    0.0000       0.00   0.00000   ja (w = 0)
+   Virgo                    10    1.132e+15      7.842    0.2842       5.07   0.89489   nein
+   Virgo                    30    1.230e+15      1.275    0.9540      17.04   0.98388   nein
+   Virgo                    70    5.627e+15      1.099    0.9829      17.55   0.98485   nein
+   Virgo                   200    2.121e+16      1.016    0.9972      17.81   0.98530   nein
+   Großer Attraktor          1    5.300e+12     33.022    0.0000       0.00   0.00000   ja (w = 0)
+   Großer Attraktor          3    1.194e+14     27.707    0.0000       0.00   0.00000   ja (w = 0)
+   Großer Attraktor         10    1.767e+15     11.676    0.1946       3.48   0.84497   nein
+   Großer Attraktor         30    4.269e+15      1.955    0.8543      15.26   0.97988   nein
+   Großer Attraktor         70    6.060e+15      1.107    0.9817      17.53   0.98481   nein
+   Großer Attraktor        200    2.251e+16      1.017    0.9970      17.81   0.98530   nein
+   Shapley                   1    1.060e+13     65.044    0.0000       0.00   0.00000   ja (w = 0)
+   Shapley                   3    2.387e+14     54.415    0.0000       0.00   0.00000   ja (w = 0)
+   Shapley                  10    3.534e+15     22.351    0.0000       0.00   0.00000   ja (w = 0)
+   Shapley                  30    8.536e+15      2.910    0.7350      13.13   0.97330   nein
+   Shapley                  70    9.710e+15      1.171    0.9709      17.34   0.98446   nein
+   Shapley                 200    1.760e+16      1.013    0.9977      17.82   0.98532   nein
+   Umkehrradius (Punktmasse, 1+Δ_ta = 11.82):  R_ta = (3M/(4πρ̄_m(1+Δ_ta)))^(1/3)
+      Lokale Gruppe 2·10¹²       R_ta =   1.01 Mpc;  bei 1,5·R_ta: w = 0.9585;  Schale w = ½ bei R =   1.03 Mpc, w = 0,9 bei   1.09 Mpc
+      Virgo 1,2·10¹⁵             R_ta =   8.50 Mpc;  bei 1,5·R_ta: w = 0.9585;  Schale w = ½ bei R =   8.71 Mpc, w = 0,9 bei   9.19 Mpc
+      Großer Attraktor 5·10¹⁵    R_ta =  13.67 Mpc;  bei 1,5·R_ta: w = 0.9585;  Schale w = ½ bei R =  14.02 Mpc, w = 0,9 bei  14.79 Mpc
+      Shapley 10¹⁶               R_ta =  17.23 Mpc;  bei 1,5·R_ta: w = 0.9585;  Schale w = ½ bei R =  17.66 Mpc, w = 0,9 bei  18.63 Mpc
+   Gemessen [G]: Nullgeschwindigkeitsfläche Lokale Gruppe ≈ 0,96 Mpc, Virgo ≈ 7,2 Mpc (Karachentsev).  Abstand LG–Virgo 16,5 Mpc.
+
+==============================================================================================================
+3   Pekuliargeschwindigkeit der Lokalen Gruppe: linear mitatmend (Schließungsregel = Standardmodell mit Ω_m = (1+Q)Ω_b)
+==============================================================================================================
+   f = d ln D/d ln a heute: Wachstumsgleichung 0.5256, Ω_m^0,55 = 0.5283
+   v = (f H₀/4π)∫δ r̂/r² dV = (2f/(3H₀Ω_m))·Σ G·ΔM_i·d_i/(d_i² + a_i²)^{3/2} (Plummer)
+   Grundmassen [G]:
+      M81-Gruppe         |v| =     6.0 km/s, Anteil längs Σ =    0.8 %
+      Cen-A-Gruppe       |v| =    12.2 km/s, Anteil längs Σ =    2.3 %
+      Virgo              |v| =   297.6 km/s, Anteil längs Σ =   87.1 %
+      Großer Attraktor   |v| =    80.4 km/s, Anteil längs Σ =   11.9 %
+      Perseus-Pisces     |v| =    65.8 km/s, Anteil längs Σ =   -9.1 %
+      Coma               |v| =    10.7 km/s, Anteil längs Σ =    2.9 %
+      Shapley            |v| =    17.7 km/s, Anteil längs Σ =    4.0 %
+      Σ: |v| =  339.2 km/s nach (l, b) = (282.2°,  66.4°), Winkel zum CMB-Dipol  36.6°;  Komponente längs Dipol  272.2 km/s (gemessen 620 [G])
+   Variante: Großer Attraktor 2·10¹⁶ (a = 20 Mpc), Shapley 5·10¹⁶ (a = 20 Mpc) [G, Obergrenze]:
+      M81-Gruppe         |v| =     6.0 km/s, Anteil längs Σ =    0.1 %
+      Cen-A-Gruppe       |v| =    12.2 km/s, Anteil längs Σ =    2.0 % IntegrationWarning: The integral is probably divergent, or slowly convergent.
+  return quad(a_fn, R, Ra, limit=200)[0] - 0.5 * OL * H0**2 * (Ra**2 - R**2)
+
+      Virgo              |v| =   297.6 km/s, Anteil längs Σ =   47.0 %
+      Großer Attraktor   |v| =   291.3 km/s, Anteil längs Σ =   43.3 %
+      Perseus-Pisces     |v| =    65.8 km/s, Anteil längs Σ =   -9.1 %
+      Coma               |v| =    10.7 km/s, Anteil längs Σ =    1.3 %
+      Shapley            |v| =    87.5 km/s, Anteil längs Σ =   15.3 %
+      Σ: |v| =  547.7 km/s nach (l, b) = (299.5°,  43.9°), Winkel zum CMB-Dipol  23.2°;  Komponente längs Dipol  503.3 km/s (gemessen 620 [G])
+   Grundmassen + Lokale Leere als Fehlmasse -4.47e+14 M☉ (δ = −0,8, R = 15 Mpc, 25 Mpc bei (30°, 15°)) [A]:
+      M81-Gruppe         |v| =     6.0 km/s, Anteil längs Σ =    0.9 %
+      Cen-A-Gruppe       |v| =    12.2 km/s, Anteil längs Σ =    2.2 %
+      Virgo              |v| =   297.6 km/s, Anteil längs Σ =   86.3 %
+      Großer Attraktor   |v| =    80.4 km/s, Anteil längs Σ =   11.6 %
+      Perseus-Pisces     |v| =    65.8 km/s, Anteil längs Σ =   -7.7 %
+      Coma               |v| =    10.7 km/s, Anteil längs Σ =    2.8 %
+      Shapley            |v| =    17.7 km/s, Anteil längs Σ =    3.8 %
+      Lokale Leere [A]   |v| =    47.9 km/s, Anteil längs Σ =    0.1 %
+      Σ: |v| =  336.2 km/s nach (l, b) = (265.7°,  62.5°), Winkel zum CMB-Dipol  33.2°;  Komponente längs Dipol  281.4 km/s (gemessen 620 [G])
+   Virgo kugelig: 1 + Δ(<16,5 Mpc um Virgo) = 2.590; Einfall nichtlinear (Top-Hat) 253 km/s, linear fΔ/3·H₀R 310 km/s; w der Schale an der LG = 0.9757
+   [G] gemessener Einfall der LG auf Virgo ≈ 185–250 km/s.
+
+==============================================================================================================
+4   Anteile Virgo / Großer Attraktor / Perseus-Pisces / Shapley: linear 1/r² (Überschussmasse) gegen frühere 1/r-Lesart
+==============================================================================================================
+   Quelle              linear 1/r²    frühere 1/r (√M/r)
+   Virgo                   92.8 %         79.1 %
+   Großer Attraktor        12.2 %         24.5 %
+   Perseus-Pisces          -9.0 %        -19.4 %
+   Shapley                  4.0 %         15.8 %
+   Richtung linear: (280.5°,  67.3°), Winkel zum CMB-Dipol  37.4°
+   Richtung 1/r   : (281.1°,  60.0°), Winkel zum CMB-Dipol  30.2°
+   Frühere Kette: ν(a_N) auf das Gesamtfeld, Skala a/H₀ = 1 529 km/s (M_b), 3 945 (M_beob), 5 403 (Σ 1/r, M_beob).
+   Dieselben Quellen (Virgo, GA, Shapley; M_b = f_b·M): ν-Regel in die lineare Formel statt G·ΔM/r²: v = 2f/(3H₀Ω_m)·ν g_N = 1841 km/s (ν = 31.6)
+   mitatmend mit (1+Q)M_b = M: v = 371 km/s.  Verhältnis ν/(1+Q) = 4.96: Mode und Regel zugleich zählt den Zusatz doppelt.
+
+==============================================================================================================
+5   Wechsel örtlich (L) → mitatmend (G): Umkehrradius gegen R_Q; Zeitargument mit Mode gegen örtliche Regel
+==============================================================================================================
+   R_Q = r*/(−ln q_kosm), −ln q_kosm = 0.1709
+      Milchstraße 6·10¹⁰                   r* =     8.7 kpc, R_Q =     51.0 kpc;  (1+Q)M_b = 3.82e+11 M☉, R_ta dazu = 0.58 Mpc
+      Lokale Gruppe 1,8·10¹¹ (Sterne) [G]  r* =    15.1 kpc, R_Q =     88.4 kpc;  (1+Q)M_b = 1.15e+12 M☉, R_ta dazu = 0.84 Mpc
+      Lokale Gruppe 3·10¹¹ (mit Gas) [A]   r* =    19.5 kpc, R_Q =    114.1 kpc;  (1+Q)M_b = 1.91e+12 M☉, R_ta dazu = 0.99 Mpc
+      Virgo f_b·1,2·10¹⁵                   r* =   488.8 kpc, R_Q =   2859.5 kpc;  (1+Q)M_b = 1.20e+15 M☉, R_ta dazu = 8.50 Mpc
+   Zeitargument: radiale Bahn von R = 0 bei t = 0 bis zur Umkehr R_ta genau heute (t₀ = 13.794 Gyr), Kraft a(R) − Ω_Λ H₀² R
+   Lokale Gruppe, R₀ = 0,96 Mpc [G] ⇒ Newton-Masse M = 1.734e+12 M☉ (Top-Hat-Formel: 1.730e+12)
+      M_b = 1,8·10¹¹ [G] : mitatmend/Mode (1+Q)M_b → R_ta = 0.836 Mpc;  örtliche Regel ν(a_N) bis R_ta → R_ta = 2.244 Mpc
+      M_b = 3·10¹¹ [A]   : mitatmend/Mode (1+Q)M_b → R_ta = 0.991 Mpc;  örtliche Regel ν(a_N) bis R_ta → R_ta = 2.551 Mpc
+      R₀ = 0,96 Mpc verlangt: mit Mode M_b = 2.72e+11 M☉;  mit ν(a_N) bis R₀ M_b = 6.06e+09 M☉  (Sterne MW + M31 ≈ 1,8·10¹¹ [G])
+   Äußeres Feld der LG aus dem Dipol, linear: g_e = v/(2f/(3H₀Ω_m)) = 1.211e-12 m/s² = 0.0110 a₀ (ν(g_e) = 10.04)
+      mit äußerem Feld g_e = 9.84e-14 m/s² (Virgo+GA+Shapley M_b-Newton) [s² = s_i² + s_e²]: M_b = 1,8·10¹¹ → R_ta = 1.411 Mpc; R₀ = 0,96 verlangt M_b = 5.50e+10 M☉
+      mit äußerem Feld g_e = 6.10e-13 m/s² (Virgo 1,2·10¹⁵ linear) [s² = s_i² + s_e²]: M_b = 1,8·10¹¹ → R_ta = 1.073 Mpc; R₀ = 0,96 verlangt M_b = 1.28e+11 M☉
+      mit äußerem Feld g_e = 1.21e-12 m/s² (aus dem Dipol 620 km/s) [s² = s_i² + s_e²]: M_b = 1,8·10¹¹ → R_ta = 0.966 Mpc; R₀ = 0,96 verlangt M_b = 1.77e+11 M☉
+      dasselbe senkrecht [s⁴ = s_i⁴ + s_e⁴]: M_b = 1,8·10¹¹ → R_ta = 0.971 Mpc; R₀ = 0,96 verlangt M_b = 1.74e+11 M☉
+      ν(g_e) = 1 + Q verlangte g_e = 3.21e-12 m/s² = 0.0292 a₀ (die Schwelle von R_Q)
+   Virgo, R₀ = 7,2 Mpc [G] ⇒ Newton-Masse 7.316e+14 M☉; Baryonen dazu mit Mode 1.15e+14; mit ν(a_N) bis R₀ verlangt M_b = 1.87e+13 M☉
+   An R₀ der LG (M_b = 1,8·10¹¹): a_N/a₀ = 2.47e-04, ν = 64.1 gegen 1 + Q = 6.36;  Wirkmasse νM_b = 1.15e+13 M☉
+   Einfall der Zwerge auf die LG außerhalb R₀: w der Schale (Masse 2·10¹²):
+      R = 1.0 Mpc: 1+Δ =  13.08, θ/3H₀ = 0.000, w = 0.0000  (umgekehrt)
+      R = 1.2 Mpc: 1+Δ =   7.99, θ/3H₀ = 0.272, w = 0.8897
+      R = 1.5 Mpc: 1+Δ =   4.58, θ/3H₀ = 0.559, w = 0.9576
+      R = 2.0 Mpc: 1+Δ =   2.51, θ/3H₀ = 0.783, w = 0.9762
+      R = 3.0 Mpc: 1+Δ =   1.45, θ/3H₀ = 0.927, w = 0.9829
+   Kette (Regel je Ebene):
+      Sonne in der Milchstraße (8,2 kpc < R_Q = 51 kpc): umgekehrt, w = 0, örtliche Regel ν(|g_N|) auf das Gesamtfeld
+      Milchstraße in der LG (0,47 Mpc vom Schwerpunkt < R_ta ≈ 1 Mpc): umgekehrt, w = 0, örtliche Regel auf das Gesamtfeld mit g_e
+      LG gegen Virgo (16,5 Mpc > R_ta,Virgo ≈ 7–8,5 Mpc), GA, Perseus-Pisces, Shapley: w = 0,995–0,997, linear, Staub mit 1 + Q; A = g_e
+
+==============================================================================================================
+6   Unabhängige Prüfung von Hand (Zahlen eingetippt, keine Kernfunktionen)
+==============================================================================================================
+   θ_c/3H₀ = (1,1e-10/2,998e8)/(3·2.1843e-18) = 0.05599;  w(θ = 3H₀) = 1/(1 + 0,05600²) → 1 − w = 3.126e-03
+   Virgo als Punkt 1,2·10¹⁵ M☉ bei 16,5 Mpc: g = 6.1451e-13 m/s², v = 2f/(3H₀Ω_m)·g = 316 km/s (f = 0,5275)
+   R_Q(LG, 1,8·10¹¹) = r*/(−ln(5,364/6,364)) = 15.10 kpc/0.1709 = 88.4 kpc
+   Lynden-Bell ohne Λ: M = π²R₀³/(8Gt₀²) = 1.275e+12 M☉ (Skript mit Λ 1.734e+12; Λ erhöht M)
+   Tiefe Regel ohne Λ: Φ = v_f² ln R, t = R_a√π/(v_f√2) ⇒ R_a = t₀v_f√(2/π) = 2.549 Mpc (v_f = 226.4 km/s); Skript mit ν, Ω_Λ = 0: 2.555 Mpc
+   Newton ohne Λ, M = 1,734·10¹²: R₀ = (8GMt₀²/π²)^(1/3) = 1.064 Mpc; Skript Ω_Λ = 0: 1.064 Mpc
+   Einstein-de Sitter 1+Δ_ta = 9π²/16 = 5,5517 (Skript 5.5517); tiefe Wirkmasse an 0,96 Mpc: r·√(M_b a₀/G) = 1.14e+13 M☉

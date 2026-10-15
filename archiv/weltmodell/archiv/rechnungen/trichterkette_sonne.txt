@@ -1,0 +1,141 @@
+Trichterkette um die Sonne – Lesarten von „Sagittarius“
+a₀ = 1.10e-10 m/s²;  Baryonanteil der Haufen f_b = Ω_b/Ω_m = 0.157 [A];  R₀ = 8,2 kpc, v☉ = 230 km/s [G]
+Massen: M_beob = Wert der Punkteliste (Beobachter-Masse; bei LMC, Sgr-Zwerg, M31/LG, Haufen dynamisch gelesen, enthält also die
+Zusatzbeschleunigung schon) [G];  M_b = Faltungsmasse: Sgr-Zwerg 10⁸ (Sterne) [G], LMC 3·10⁹ [G], M31 1,2·10¹¹ [G], Haufen f_b·M_beob [A].
+Die Regel mit M_beob zählt den Zusatz doppelt; sie steht nur als obere Grenze.
+
+========================================================================================================
+1   Kette der Trichter: Werte am Ort der Sonne, je Quelle für sich (die Regel wirkt auf das Gesamtfeld, Zeile Σ)
+========================================================================================================
+   Quelle               M_b [M☉]    Δs [m]          r*     d/r* g_N [m/s²]    g_N/a₀       ν     ν·g_N  √(GMa₀)/d          l, b | mit M_beob:    g_N/a₀  √(GMa₀)/d
+   Sgr A*               4.30e+06  2.12e+09     73.8 pc   111.09  8.914e-15  8.10e-05 111.590  9.95e-13  9.902e-13    0.0,   0.0 |             8.10e-05  9.902e-13
+   Milchstraße (Pkt)    6.00e+10  2.95e+13    8.72 kpc     0.94  1.244e-10  1.13e+00   1.527  1.90e-10  1.170e-10    0.0,   0.0 |             1.13e+00  1.170e-10
+   Sgr-Zwerg 18 kpc     1.00e+08  4.92e+10    356.0 pc    50.57  4.302e-14  3.91e-04  51.068  2.20e-12  2.175e-12    5.6, -14.2 |             3.91e-03  6.879e-12
+   Sgr-Zwerg 26,5 kpc   1.00e+08  4.92e+10    356.0 pc    74.45  1.985e-14  1.80e-04  74.946  1.49e-12  1.478e-12    5.6, -14.2 |             1.80e-03  4.673e-12
+   Große Mag. Wolke     3.00e+09  1.48e+12    1.95 kpc    25.64  1.673e-13  1.52e-03  26.148  4.37e-12  4.289e-12  280.5, -32.9 |             7.60e-02  3.033e-11
+   M31                  1.20e+11  5.91e+13   12.33 kpc    63.26  2.749e-14  2.50e-04  63.756  1.75e-12  1.739e-12  121.2, -21.6 |             3.12e-03  6.148e-12
+   Virgo                1.57e+14  7.73e+16  446.20 kpc    36.98  8.044e-14  7.31e-04  37.481  3.02e-12  2.975e-12  283.8,  74.5 |             4.65e-03  7.504e-12
+   Großer Attraktor     7.86e+14  3.87e+17  997.74 kpc    65.15  2.592e-14  2.36e-04  65.648  1.70e-12  1.688e-12  307.0,   9.0 |             1.50e-03  4.260e-12
+   Shapley              1.57e+15  7.73e+17    1.41 Mpc   141.74  5.475e-15  4.98e-05 142.242  7.79e-13  7.761e-13  312.0,  30.7 |             3.17e-04  1.958e-12
+   Milchstraße als Exponentialscheibe 6·10¹⁰ M☉, R_d = 3 kpc [A]: g_N(R₀) = 1.266e-10 m/s² = 1.151 a₀, ν = 1.520, a = 1.924e-10
+   Σ Gesamtfeld (M_b): |g_N| = 1.2444e-10 m/s² = 1.1313 a₀, ν = 1.5272, a = 1.9004e-10 m/s², Richtung (l, b) = (359.927°, -0.010°)
+   Anteile am Newton-Gesamtfeld (Komponente längs Σ) – dieselben Anteile trägt a = ν(|g_N|)g_N, weil ν ein gemeinsamer Faktor ist:
+      Sgr A*                  0.0072 %   (Betrag/|Σ| 7.16e-05)
+      Milchstraße (Pkt)      99.9483 %   (Betrag/|Σ| 9.99e-01)
+      Sgr-Zwerg 26,5 kpc      0.0154 %   (Betrag/|Σ| 1.59e-04)
+      Große Mag. Wolke        0.0207 %   (Betrag/|Σ| 1.34e-03)
+      M31                    -0.0107 %   (Betrag/|Σ| 2.21e-04)
+      Virgo                   0.0041 %   (Betrag/|Σ| 6.46e-04)
+      Großer Attraktor        0.0124 %   (Betrag/|Σ| 2.08e-04)
+      Shapley                 0.0025 %   (Betrag/|Σ| 4.40e-05)
+   Gezeitenanteil (Feld an der Sonne minus Feld am Zentrum der Milchstraße) – nur er ändert die Bahn der Sonne um das Zentrum:
+      Sgr-Zwerg 18 kpc    |g(☉) − g(GC)| = 8.935e-14 m/s² = 7.06e-02 % des Feldes der Scheibe
+      Sgr-Zwerg 26,5 kpc  |g(☉) − g(GC)| = 2.022e-14 m/s² = 1.60e-02 % des Feldes der Scheibe
+      Große Mag. Wolke    |g(☉) − g(GC)| = 2.813e-14 m/s² = 2.22e-02 % des Feldes der Scheibe
+      M31                 |g(☉) − g(GC)| = 3.748e-16 m/s² = 2.96e-04 % des Feldes der Scheibe
+      Virgo               |g(☉) − g(GC)| = 4.022e-17 m/s² = 3.18e-05 % des Feldes der Scheibe
+      Großer Attraktor    |g(☉) − g(GC)| = 4.693e-18 m/s² = 3.71e-06 % des Feldes der Scheibe
+      Shapley             |g(☉) − g(GC)| = 3.169e-19 m/s² = 2.50e-07 % des Feldes der Scheibe
+
+========================================================================================================
+2   Sgr A*: kompakter Trichter, Reichweite des Einzeltrichters, Anteil an der Beschleunigung der Sonne
+========================================================================================================
+   Δs = 2.1165e+09 m,  r₀ = 6Δs = 1.2699e+10 m,  r* = 2.2777e+18 m = 73.81 pc,  r*/r₀ = 1.794e+08 (kompakt: r* ≫ Hülle)
+   Sonne: d/r* = 111.1  → Sonne liegt weit außerhalb r* von Sgr A*
+   Einflussradius r_h = GM/σ² und Glättungslänge ℓ³ = GM/T mit der Elterngezeit T = √(3/2)|E^TF| des Sternfelds um Sgr A*.
+   Sternfeld als isotherme Kugel (σ [G]): Φ = 2σ²ln r, E^TF = diag(−8/3, 4/3, 4/3)σ²/r², T(r) = 4σ²/r²; ℓ aus GM/ℓ³ = T(ℓ) → ℓ = GM/(4σ²).
+      σ =    70 km/s: r_h =  3.77 pc,  ℓ = GM/4σ² = 0.944 pc (Fixpunkt numerisch 0.944 pc),  ℓ/r* = 0.0128,  g_N(ℓ)/a₀ = 6.12e+03
+      σ =   100 km/s: r_h =  1.85 pc,  ℓ = GM/4σ² = 0.462 pc (Fixpunkt numerisch 0.462 pc),  ℓ/r* = 0.0063,  g_N(ℓ)/a₀ = 2.55e+04
+      σ =   120 km/s: r_h =  1.28 pc,  ℓ = GM/4σ² = 0.321 pc (Fixpunkt numerisch 0.321 pc),  ℓ/r* = 0.0043,  g_N(ℓ)/a₀ = 5.29e+04
+   Damit endet der Einzeltrichter von Sgr A* bei ~0,5 pc, tief im Newton-Bereich (g ≫ a₀); schon dort geht er ins kollektive Feld
+   des Zentrums über. Sein r* = 74 pc hat für ihn keine eigene Bedeutung mehr (ℓ < r*: die Rückkehr setzt erst im Gesamtfeld ein).
+   Am Ort der Sonne: g_N(Sgr A*) = 8.914e-15 m/s² = 8.10e-05 a₀;  Anteil am Gesamtfeld 0.0072 % (Punkt), 0.0070 % (Scheibe)
+   Las man Sgr A* fälschlich als freien kollektiven Trichter (√(GMa₀)/d = 9.902e-13): 0.52 % — gilt nicht, denn die Regel sieht nur das Gesamtfeld.
+
+========================================================================================================
+3   Welcher Trichter bestimmt die Bahn der Sonne, welcher die Bewegung der Milchstraße / Lokalen Gruppe
+========================================================================================================
+   Bahn der Sonne: v²/R₀ = 2.0907e-10 m/s² (v = 230 km/s [G]) = 1.901 a₀
+      Milchstraße Punkt          g_N = 1.2438e-10, ν = 1.5274, a = 1.8997e-10 → v =  219.2 km/s, a/(v²/R₀) = 0.909
+      Milchstraße Exp.-Scheibe   g_N = 1.2658e-10, ν = 1.5199, a = 1.9240e-10 → v =  220.6 km/s, a/(v²/R₀) = 0.920
+      Scheibe + Sgr A*           g_N = 1.2659e-10, ν = 1.5199, a = 1.9241e-10 → v =  220.6 km/s, a/(v²/R₀) = 0.920
+   → Die Bahn der Sonne bestimmt der kollektive Trichter der Milchstraße (Zentrum Richtung Schütze, l = 0°).
+   Massenmittel A der Scheibe (6·10¹⁰ M☉, R_d = 3 kpc): Probe g_e = 0,03 a₀ in der Ebene: A/g_e = 1.273 (Satz des Modells: 1,27), ν(g_e) = 6.288
+   Milchstraße als Ganzes im äußeren Feld (am Zentrum; Scheibe liegt in der galaktischen Ebene):
+   äußere Quellen                     Massen  |g_e|/a₀   (l, b) von g_e  A/|g_e|  ν(g_e) Winkel A,g_e
+   LMC                                M_b     1.56e-03 ( 269.2°,-33.3°)    1.334   25.85       3.79°
+   LMC                                M_beob  7.78e-02 ( 269.2°,-33.3°)    1.334    4.11       3.76°
+   M31                                M_b     2.47e-04 ( 121.8°,-21.5°)    1.300   64.08       2.88°
+   M31                                M_beob  3.09e-03 ( 121.8°,-21.5°)    1.300   18.49       2.88°
+   Virgo + GA + Shapley               M_b     8.95e-04 ( 297.8°, 59.0°)    1.416   33.93       3.43°
+   Virgo + GA + Shapley               M_beob  5.69e-03 ( 297.8°, 59.0°)    1.416   13.76       3.43°
+   alle                               M_b     1.52e-03 ( 272.9°, -6.7°)    1.276   26.11       1.01°
+   alle                               M_beob  7.60e-02 ( 269.1°,-30.9°)    1.326    4.15       3.64°
+   A liegt nach dem Modell zwischen g_e (dichter Kern) und ν(g_e)·g_e; die Milchstraße sitzt fast ganz im dichten Kern (A ≈ g_e).
+
+========================================================================================================
+3b  Beschleunigung der Lokalen Gruppe durch Virgo, Großen Attraktor, Shapley (Ort der Sonne ≈ Ort der LG auf dieser Skala)
+========================================================================================================
+   M_b = f_b·M_beob (Faltungsmasse) [A]
+   Quelle                M [M☉]         d        g_N    g_N/a₀  √(GMa₀)/d  ν(g_N)g_N Regel/Newton
+   Virgo               1.57e+14   16.5 Mpc  8.044e-14  7.31e-04  2.975e-12  3.015e-12        37.48
+   Großer Attraktor    7.86e+14   65.0 Mpc  2.592e-14  2.36e-04  1.688e-12  1.701e-12        65.65
+   Shapley             1.57e+15  200.0 Mpc  5.475e-15  4.98e-05  7.761e-13  7.788e-13       142.24
+      Newton Σ:              |g| = 9.843e-14 m/s², Richtung ( 297.9°,  59.0°), Winkel zum CMB-Dipol  32.6°, Skala |g|/H₀ =     45 km/s
+      Regel auf Gesamtfeld:  |a| = 3.340e-12 m/s² (ν = 33.93), Richtung = Newton-Richtung, Skala a/H₀ =   1529 km/s
+      Σ je Quelle 1/r:       |a| = 4.678e-12 m/s², Richtung ( 302.2°,  48.9°), Winkel zum CMB-Dipol  27.5°, Skala a/H₀ =   2142 km/s
+      Massenmittel A (Milchstraße als Scheibe): |A| = 1.394e-13 m/s² = 1.416·|g_e|, Richtung ( 297.8°,  62.4°), Winkel zum CMB-Dipol  35.4°, Skala A/H₀ =     64 km/s
+         Winkel Sgr A* / Zentrum (0°, 0°)           : zu Newton Σ  76.1°, zu 1/r-Σ  69.5°
+         Winkel Sgr-Zwerg (5,6°, −14,2°)            : zu Newton Σ  91.2°, zu 1/r-Σ  84.2°
+         Winkel Norma-Haufen A3627 (325,3°, −7,3°) [G]: zu Newton Σ  69.9°, zu 1/r-Σ  59.7°
+   M_beob [G] (obere Grenze, Zusatz doppelt)
+   Quelle                M [M☉]         d        g_N    g_N/a₀  √(GMa₀)/d  ν(g_N)g_N Regel/Newton
+   Virgo               1.00e+15   16.5 Mpc  5.120e-13  4.65e-03  7.504e-12  7.763e-12        15.16
+   Großer Attraktor    5.00e+15   65.0 Mpc  1.650e-13  1.50e-03  4.260e-12  4.343e-12        26.33
+   Shapley             1.00e+16  200.0 Mpc  3.485e-14  3.17e-04  1.958e-12  1.975e-12        56.69
+      Newton Σ:              |g| = 6.264e-13 m/s², Richtung ( 297.9°,  59.0°), Winkel zum CMB-Dipol  32.6°, Skala |g|/H₀ =    287 km/s
+      Regel auf Gesamtfeld:  |a| = 8.618e-12 m/s² (ν = 13.76), Richtung = Newton-Richtung, Skala a/H₀ =   3945 km/s
+      Σ je Quelle 1/r:       |a| = 1.180e-11 m/s², Richtung ( 302.2°,  48.9°), Winkel zum CMB-Dipol  27.5°, Skala a/H₀ =   5403 km/s
+      Massenmittel A (Milchstraße als Scheibe): |A| = 8.873e-13 m/s² = 1.416·|g_e|, Richtung ( 297.8°,  62.4°), Winkel zum CMB-Dipol  35.4°, Skala A/H₀ =    406 km/s
+         Winkel Sgr A* / Zentrum (0°, 0°)           : zu Newton Σ  76.1°, zu 1/r-Σ  69.5°
+         Winkel Sgr-Zwerg (5,6°, −14,2°)            : zu Newton Σ  91.2°, zu 1/r-Σ  84.2°
+         Winkel Norma-Haufen A3627 (325,3°, −7,3°) [G]: zu Newton Σ  69.9°, zu 1/r-Σ  59.7°
+   Skala a/H₀ [A]: nur Größenordnung (Beschleunigung × Hubble-Zeit), keine Wachstumsrechnung. CMB-Dipol der LG: 620 km/s, (276°, 30°) [G].
+   Für die LG als Ganzes gilt wie oben: A zwischen g_e und ν(g_e)g_e; die Galaxien der LG liegen in ihren dichten Kernen (A ≈ g_e).
+
+========================================================================================================
+4   Ordnung der Anteile: Regel im tiefen Bereich (∝ √M/r) gegen Newton (∝ M/r²); Richtungen
+========================================================================================================
+   M_b:  Virgo: Newton  71.9 %, 1/r  54.7 % | Großer Attraktor: Newton  23.2 %, 1/r  31.0 % | Shapley: Newton   4.9 %, 1/r  14.3 %
+   M_beob:  Virgo: Newton  71.9 %, 1/r  54.7 % | Großer Attraktor: Newton  23.2 %, 1/r  31.0 % | Shapley: Newton   4.9 %, 1/r  14.3 %
+   Winkel zwischen den Richtungen:
+      Virgo             : zum CMB-Dipol  44.7°, zu l = 0° (Sgr A*)  86.3°, zum Sgr-Zwerg 101.5°
+      Großer Attraktor  : zum CMB-Dipol  35.8°, zu l = 0° (Sgr A*)  53.5°, zum Sgr-Zwerg  62.6°
+      Shapley           : zum CMB-Dipol  30.9°, zu l = 0° (Sgr A*)  54.9°, zum Sgr-Zwerg  68.3°
+      Norma A3627       : zum CMB-Dipol  60.2°, zu l = 0°  35.4°
+      CMB-Dipol         : zu l = 0°  84.8°, zum Sgr-Zwerg  96.7°
+
+========================================================================================================
+5   Netzwerk: Sattel zwischen zwei kollektiven Trichtern (Felder gleich, längs der Verbindung)
+========================================================================================================
+   Newton (1/r²):  x/D = √M₁/(√M₁ + √M₂);   tiefe Form je Quelle (1/r, Φ_X = v_flach²·ln r):  x/D = M₁^{1/4}/(M₁^{1/4} + M₂^{1/4}).
+   Örtliche Regel auf das Gesamtfeld: a = ν(|g_N|)g_N verschwindet genau dort, wo g_N verschwindet → Sattel am Newton-Punkt.
+   Milchstraße 6·10¹⁰                     – Virgo            (M_b   ): Newton-Sattel     316 kpc (g_N = 7.6e-04 a₀), tiefe Form    2024 kpc (a = 4.3e-03 a₀);  r*₁ =   8.7 kpc
+   Milchstraße 6·10¹⁰                     – Virgo            (M_beob): Newton-Sattel     127 kpc (g_N = 4.7e-03 a₀), tiefe Form    1335 kpc (a = 6.5e-03 a₀);  r*₁ =   8.7 kpc
+   Lokale Gruppe 1,8·10¹¹ (MW + M31) [A]  – Virgo            (M_b   ): Newton-Sattel     540 kpc (g_N = 7.8e-04 a₀), tiefe Form    2564 kpc (a = 5.9e-03 a₀);  r*₁ =  15.1 kpc
+   Lokale Gruppe 1,8·10¹¹ (MW + M31) [A]  – Virgo            (M_beob): Newton-Sattel     218 kpc (g_N = 4.8e-03 a₀), tiefe Form    1713 kpc (a = 8.8e-03 a₀);  r*₁ =  15.1 kpc
+   Milchstraße 6·10¹⁰                     – Großer Attraktor (M_b   ): Newton-Sattel     563 kpc (g_N = 2.4e-04 a₀), tiefe Form    5557 kpc (a = 1.6e-03 a₀);  r*₁ =   8.7 kpc
+   Milchstraße 6·10¹⁰                     – Großer Attraktor (M_beob): Newton-Sattel     224 kpc (g_N = 1.5e-03 a₀), tiefe Form    3613 kpc (a = 2.4e-03 a₀);  r*₁ =   8.7 kpc
+   Lokale Gruppe 1,8·10¹¹ (MW + M31) [A]  – Großer Attraktor (M_b   ): Newton-Sattel     969 kpc (g_N = 2.4e-04 a₀), tiefe Form    7121 kpc (a = 2.1e-03 a₀);  r*₁ =  15.1 kpc
+   Lokale Gruppe 1,8·10¹¹ (MW + M31) [A]  – Großer Attraktor (M_beob): Newton-Sattel     388 kpc (g_N = 1.5e-03 a₀), tiefe Form    4673 kpc (a = 3.2e-03 a₀);  r*₁ =  15.1 kpc
+   v_flach (Φ_X = v_flach²·ln ν): Milchstraße (Pkt) 172 km/s, M31 205 km/s, Virgo 1231 km/s, Großer Attraktor 1840 km/s, Shapley 2188 km/s
+
+========================================================================================================
+6   Unabhängige Prüfung von Hand (Konstanten eingetippt, keine Kernfunktionen)
+========================================================================================================
+   r*(Sgr A*) = √(1,32712e20·4,3e6/1,1e-10) = 2.2777e+18 m = 73.81 pc   (Skript: 73.81 pc)
+   Virgo (M_beob 10¹⁵) am Ort der LG: g_N = 5.1196e-13, s = 0.0682, ν = 15.164, a = 7.7633e-12;  tief √(GMa₀)/d = 7.5044e-12
+      Reihe ν ≈ 1/s + 1/2 + s/12 = 15.164 (Skript ν = 15.164)
+   Milchstraße (Punkt) an der Sonne: g_N = 1.2437e-10 = 1.131 a₀, ν = 1.5274, v = 219.2 km/s
+   Winkel CMB-Dipol – l = 0°: cos = cos 30°·cos 276° = 0.0905 → 84.8°
+   ℓ(Sgr A*, σ = 100 km/s) = GM/(4σ²) = 0.462 pc

@@ -1,0 +1,161 @@
+1a) Flussdimension d_eff = 1 − d ln a/d ln r für a = a_N/(1 − e^{−s}); Punktmasse, Einheiten GM = a₀ = 1 (r* = 1, s = r*/r)
+   max|d_eff − (3 − χ(s))| = 9.3e-11   (analytisch: d ln ν/d ln r = s/(e^s − 1) = χ)
+   κ²/Ω² numerisch gegen 1 + χ: max Abw. 1.1e-09;  gegen 4 − d_eff: 1.0e-09
+   d ln a/d ln a_N gegen 1 − χ/2: max Abw. 1.1e-10; Bereich [0.5025, 1.0000] ⊂ (½, 1)
+   r/r*   d_eff   Re τ = √(1+χ)   ν = M_schein/M   r/r*   r/r* + ½   r/r* + ½ + r*/(12r)
+    0.3   2.877   1.0599          1.0370         0.3000   0.8000     1.0778
+      1   2.418   1.2578          1.5820         1.0000   1.5000     1.5833
+      3   2.157   1.3574          3.5277         3.0000   3.5000     3.5278
+     10   2.049   1.3967          10.5083         10.0000   10.5000     10.5083
+     30   2.017   1.4083          30.5028         30.0000   30.5000     30.5028
+   Bernoulli: ν − (1/s + ½ + s/12 − s³/720 + s⁵/30240) bei s = 1: -8.1e-07
+   Schnitt Flächengesetz GM/r² = Umfanggesetz √(GMa₀)/r (Milchstraße 6·10¹⁰ M☉): r = 8.349 kpc = √(GM/a₀) = 8.349 kpc, a/a₀ dort = 1.000000
+   Fluss: a·4πr² = 4πGM, a·2πr = 2π√(GMa₀) ⇒ a_Umfang/a_Fläche = (4πr²/2πr)/(4πr*²/2πr*) = r/r* (π kürzt sich)
+
+1b) Potenzgesetz a ∝ r^{1−d}: κ²/Ω² = 4 − d, Winkel zwischen Perizentren 360°/√(4 − d)
+   d =   2: κ²/Ω² = 2.000000, Winkel 254.56°
+   d = 2.5: κ²/Ω² = 1.500000, Winkel 293.94°
+   d =   3: κ²/Ω² = 1.000000, Winkel 360.00°
+   d = 3.5: κ²/Ω² = 0.500000, Winkel 509.12°
+   d = 4: κ² = 0 (keine stabile Kreisbahn), d > 4 instabil. d_eff ∈ [2, 3] ⇔ Re τ ∈ [1, √2].
+
+1c) Linse: α = (2/c²)∫a_⊥dz. Für a ∝ r^{1−d}: α = (2/c²)·a(b)·b·F_d, F_d = ∫(1+u²)^{−d/2}du = S_{d−1}/S_{d−2}
+   d = 2: F_d = 3.141593,  S_1/S_0 = 3.141593
+   d = 3: F_d = 2.000000,  S_2/S_1 = 2.000000
+   d = 4: F_d = 1.570796,  S_3/S_2 = 1.570796
+   d = 5: F_d = 1.333333,  S_4/S_3 = 1.333333
+   d = 3: α = 4GM/(c²b) = 12Δs/b;  d = 2: α = 2π(v/c)² = 6πΔs/r* (überstrichener Winkel π, mal 2 aus Φ + Ψ)
+   b/r*   I = M_Zyl/M   πx/2 + ½   d_Linse = 3 − d ln I/d ln x   d_eff(r = b)   I/ν(r = b)
+    0.3      1.1645      0.9712   2.726                        2.877          1.1229
+      1      2.1354      2.0708   2.294                        2.418          1.3499
+      3      5.2342      5.2124   2.104                        2.157          1.4837
+     10     16.2145     16.2080   2.032                        2.049          1.5430
+     30     47.6261     47.6239   2.011                        2.017          1.5614
+   I/ν → π/2 = 1.5708: Projektion von ρ ∝ 1/r² auf den Zylinder, kein eigenes Gesetz
+
+1d) Kosmos: Hubble-Kugel mit kritischer Dichte, a₀ = cH/2π
+   a_N(R_H) = GM_H/R_H² = c²/(2R_H): 1.000000;  a₀·2πR_H/c² = 1.000000 (Umfanggesetz: c² durch den Hubble-Umfang)
+   a_N/a₀ = 3.141593 = π;  r*_H/R_H = 1.772454 = √π;  s = √π: ν = 1.2047, d_eff = 2.637
+   lineare Störung a_N/a₀ = 10⁻³: Umfanggesetz gäbe ν = 32.1; die Schließungsregel wirkt dort wie Staub mit Faktor 1 + Q = 6,36 (d = 3)
+
+2a) 3 in Δs = GM/3c²: Überschussradius δR = ∫₀^R(1/√(1 − 2Gm/rc²) − 1)dr, in Einheiten GM/c² (GM/Rc² = 10⁻⁶)
+   homogen in d = 2 Dimensionen (m ∝ r^d): δR = 0.5000 GM/c²  (1/d = 0.5000)
+   homogen in d = 3 Dimensionen (m ∝ r^d): δR = 0.3333 GM/c²  (1/d = 0.3333)
+   homogen in d = 4 Dimensionen (m ∝ r^d): δR = 0.2500 GM/c²  (1/d = 0.2500)
+   ρ ∝ 1/r (m ∝ r²): δR = 0.5000 GM/c²
+   Polytrope n = 3 (ξ₁ = 6.89685): δR = 1.3192 GM/c²  → die 3 ist die Dimension bei homogener Dichte
+2b) 6 in r₀ = 6Δs: g_tt = 1 − 2GM/(rc²) (der Takt ist die Wurzel der quadratischen Metrik): 6 = 2·3
+2c) 12 in 12Δs/b: Linsenintegral 2.000000 (= S₂/S₁) × (1 + γ) = 2 × 3 (Δs) = 12.000000
+2d) Exponent ½: Rückweg D·G'' = Γ·G, G(0) = 1, G beschränkt; Steigung d ln(−ln q)/d ln Γ
+   zweite Ordnung: q(Γ=1) = 0.36787944 (e⁻¹ = 0.36787944), Steigung 0.50000
+   erste Ordnung (Drift v·G' = −Γ·G): q = e^{−ΓL/v}, Steigung 1; Ordnung m: charakteristische Wurzel (Γ/D)^{1/m}
+   Dichte erster Rückkehr L/√(4πDt³)·e^{−L²/4Dt} (∝ t^{−3/2}), Laplace bei Γ = 0.3: 0.57826528 = e^{−√Γ} = 0.57826528
+   Dichte erster Rückkehr L/√(4πDt³)·e^{−L²/4Dt} (∝ t^{−3/2}), Laplace bei Γ = 1.0: 0.36787944 = e^{−√Γ} = 0.36787944
+   Dichte erster Rückkehr L/√(4πDt³)·e^{−L²/4Dt} (∝ t^{−3/2}), Laplace bei Γ = 3.0: 0.17692121 = e^{−√Γ} = 0.17692121
+2e) 4 in v⁴ = GMa₀: a = a_N^p·a₀^{1−p} ⇒ d ln v/d ln r = (1 − 2p)/2
+   p = 0.4: d ln v/d ln r = +0.1000
+   p = 0.5: d ln v/d ln r = +0.0000
+   p = 0.6: d ln v/d ln r = -0.1000
+   p = ½: v² = √(GMa₀) ⇒ v⁴ = GMa₀; 4 = 2 (v² = ar) × 2 (Wurzel)
+2f) Bose-Integrale und Eisenstein-Zahlen: ∫x^{k−1}/(e^x − 1)dx = Γ(k)ζ(k);  (2π)^k/(Γ(k)ζ(k)) = 2/|ζ(1−k)|
+   k = 2: Γ(k)ζ(k) = 1.644934 (1.644934);  (2π)^k/Γ(k)ζ(k) = 24.000000;  2/|ζ(1−k)| = 24.000000
+   k = 4: Γ(k)ζ(k) = 6.493939 (6.493939);  (2π)^k/Γ(k)ζ(k) = 240.000000;  2/|ζ(1−k)| = 240.000000
+   k = 6: Γ(k)ζ(k) = 122.081167 (122.081167);  (2π)^k/Γ(k)ζ(k) = 504.000000;  2/|ζ(1−k)| = 504.000000
+   → 24 (E₂, Δ = η²⁴), 240 (E₄), 504 (E₆): Schließung (2π)^k geteilt durch Bose-Integral mit Zustandsdichte x^{k−1}
+   Q̃(s → 0) = -25.975758;  −4π⁴/15 = -25.975758 = −4Γ(4)ζ(4) = −4(2π)⁴/240 = -25.975758
+   Kontrolle s = 1: Li-Form -25.076537, −4∫_s^∞x³n_B = -25.076537
+   Ω_s = (4π⁴/15)/(3·(2π)²) = 0.219325 = π²/45 = 0.219325  (Bose-Summe π⁴ über Schließung (2π)² aus a₀ = cH/2π)
+   Nullpunkt: ζ(−1) = -0.083333 = −ζ(2)/(2π²); E₀ = (2πħc/L)·ζ(−1) = −πħc/(6L); 24 = (2π)²/ζ(2) = 24.000000
+   Zustandszahl p(500): ln p = 49.1873;  2π√(n/6) − ln(4√3·n) = 2√(ζ(2)n) − … = 49.2072  (6 = π²/ζ(2))
+   Zustandszahl p(5000): ln p = 170.9209;  2π√(n/6) − ln(4√3·n) = 2√(ζ(2)n) − … = 170.9271  (6 = π²/ζ(2))
+2g) Spitzenform und Modulgruppe
+   E₄³ − E₆² = [0, 1728, -41472, 435456, -2543616] …: erster Koeffizient 3·240 + 2·504 = 1728 = 12³ = 1728
+   (E₄³ − E₆²)/1728 = [0, 1, -24, 252, -1472, 4830, -6048];  q∏(1 − qⁿ)²⁴ = [0, 1, -24, 252, -1472, 4830, -6048]
+   Fläche des Fundamentalbereichs ∫∫dx dy/y² = 1.04719755 = π/3 = 2π(1 − ½ − ⅓) = 1.04719755;  4π/Fläche = 12.000000
+   Valenzformel: Nullstellen von f (Gewicht k) = k·Fläche/4π = k/12, Punkte i und ρ zählen ½ bzw. ⅓:
+   E₄: 4/12 = ⅓ (nur ρ), E₆: 6/12 = ½ (nur i), Δ: 12/12 = 1 (Spitze). 12 = 2/(1 − ½ − ⅓): aus den zwei symmetrischen Tori
+2h) Carter α_G ∝ α¹²(m_e/m_p)⁴: Beiträge zu α^{…} in α_G^{1/2}: Photosphäre T⁴ mit kT ∝ α² → 8, Zündung α² über T_c² → −4, Thomson α² → +2
+   12 = 2·(8 − 4 + 2) = 12, 4 = 2·(4 − 2) = 4: T⁴ (Stefan-Boltzmann, Bose-Integral π⁴/15), α² (Coulomb-Skalen), Verdopplung aus α_G^{1/2}; bei Kramers-Opazität 4 → 5
+2i) Perihel: Schwarzschild κ²/Ω² = 1 − 6GM/(rc²) = 1 − 18Δs/r; 2π(Ω/κ − 1) / (18πΔs/r) = 1.000000  (2π je Umlauf × 9)
+2j) Schließung: Lücke des Rings 39.4776 (4π² = 39.4784), Rand 9.8696 (π² = 9.8696), Verhältnis 3.9999
+2k) Dirac: e·4πg = 2πħc·n (Kugelfluss = Schließung der Phase) ⇒ g/e = (2π/4π)/α = 68.518 = 1/(2α)
+2l) Horizont: T = ħc/(24πkΔs) = ħκ/(2πkc) mit κ = c²/(12Δs); dM/dt = −σT⁴A/c² gegen −ħc⁴/(15360πG²M²): 1.000000
+    15360π = 60·(8π)⁴/(16π·π²): 60 = Stefan-Boltzmann (Bose π⁴/15 und 4π²), 8π = 2π·4 (Schließung, κ), 16π = Horizontfläche; S = 4π(6Δs)²/4ℓ_P² = 36π(Δs/ℓ_P)²
+2m) Eddington: ∫sin²θ dΩ = 8.377580 = 8π/3 (Thomson); L_Edd = 4π·3c²Δs·m_pc/((8π/3)r_e²) → Faktor 4.5000 = 9/2
+2n) reine Zahlen aus der Regel: ν(r*) = 1/(1 − e⁻¹) = 1.5820; Rosette 360°/√2 = 254.56°; Hubble-Rand cH/2 = π·a₀
+
+3a) n-Eck (Umkreisradius 1): halber Umfang n·sin(π/n), umbeschrieben n·tan(π/n)
+   n       n·sin(π/n)     n·tan(π/n)     n²(π − n sin)   n²(n tan − π)
+   6       3.0000000000  3.4641016151  5.09734        11.61032
+   12      3.1058285412  3.2153903092  5.15003        10.62686
+   24      3.1326286133  3.1596599421  5.16329        10.40676
+   96      3.1410319509  3.1427145996  5.16744        10.33985
+   1000    3.1415874859  3.1416029891  5.16771        10.33547
+   100000  3.1415926531  3.1415926546  5.16772        10.33543
+   Grenzwerte π³/6 = 5.16771, π³/3 = 10.33543: Fehler ∝ 1/n²
+   Archimedes ab dem Sechseck: U_{2n} = 2U_nu_n/(U_n + u_n) (harmonisch), u_{2n} = √(U_{2n}u_n) (geometrisch)
+   n =  12: 3.1058285 < π < 3.2153903,  Fehlerverhältnis —
+   n =  24: 3.1326286 < π < 3.1596599,  Fehlerverhältnis 3.9897
+   n =  48: 3.1393502 < π < 3.1460862,  Fehlerverhältnis 3.9974
+   n =  96: 3.1410320 < π < 3.1427146,  Fehlerverhältnis 3.9994
+   n = 192: 3.1414525 < π < 3.1418730,  Fehlerverhältnis 3.9998
+   n = 96: 223/71 = 3.1408451 < 3.1414525,  3.1418730 < 22/7 = 3.1428571
+   Tangentenvieleck (Inkreisradius r = 1): Fläche/Umfang = n·tan(π/n)/(2n·tan(π/n)) = ½ für jedes n und für den Kreis (Kegelzerlegung, d: V = r·S/d)
+
+3b) Umlaufphase der Bahn: Re τ_M = √(1 + χ(r*/r)), Milchstraße r* = 8.35 kpc; Perizentren rücken je Radialperiode um 360°·q/p
+   p/q     Re τ      r [kpc]    Figur
+   8/7   1.14286       4.10   {8/1} (Vieleck)
+   7/6   1.16667       4.69   {7/1} (Vieleck)
+   6/5   1.20000       5.70   {6/1} (Vieleck)
+   5/4   1.25000       7.89   {5/1} (Vieleck)
+   9/7   1.28571      10.45   {9/2} (Stern)
+   4/3   1.33333      17.28   {4/1} (Vieleck)
+   7/5   1.40000     102.95   {7/2} (Stern)
+   irrational: Perizentren füllen den Ring dicht (Unendlich-Eck)
+   Häufung zur Kepler-Grenze 1: (n+1)/n
+   n =     5: r =  5.695 kpc,  s = r*/r = 1.466,  ln(n/2) + ln s = 1.299
+   n =    10: r =  3.223 kpc,  s = r*/r = 2.590,  ln(n/2) + ln s = 2.561
+   n =    30: r =  2.024 kpc,  s = r*/r = 4.125,  ln(n/2) + ln s = 4.125
+   n =   100: r =  1.480 kpc,  s = r*/r = 5.641,  ln(n/2) + ln s = 5.642
+   n =  1000: r =  1.002 kpc,  s = r*/r = 8.335,  ln(n/2) + ln s = 8.335
+   Näherungsbrüche von √2 (Tiefgrenze):
+   7/5: √2 − p/q = 1.421e-02,  r = 103 kpc = 12.33 r*,  r/(q²r*/2) = 0.9865
+   41/29: √2 − p/q = 4.205e-04,  r = 3509 kpc = 420.3 r*,  r/(q²r*/2) = 0.9996
+   239/169: √2 − p/q = 1.238e-05,  r = 1.192e+05 kpc = 1.428e+04 r*,  r/(q²r*/2) = 1.0000
+   mittlerer Abstand von Re τ ∈ [1, √2] zur nächsten Resonanz mit Nenner ≤ Q: Q=16: 5.18e-03, Q=32: 1.49e-03, Q=64: 4.31e-04, Q=128: 1.21e-04, Q=256: 3.37e-05, Q=512: 9.22e-06
+   Abstand·Q²/ln Q = 0.478, 0.440, 0.424, 0.409, 0.398, 0.387  → fällt wie ln Q/Q²; beste Näherungen p/q einzeln: |x − p/q| < 1/q²
+   Zahl der Resonanzen mit q ≤ 50 in (1, √2): 321; (√2 − 1)·3·50²/π² = 314.8  (Dichte teilerfremder Paare 1/ζ(2) = 6/π²)
+   Sonnenort 8,2 kpc: Re τ = 1.25533, Kettenbruch [1, 3, 1, 10, 1, 73]; q²|x − p/q| = 4/3: 0.702, 5/4: 0.085, 54/43: 0.904, 59/47: 0.013
+   goldene Wicklung: n·‖nφ‖ bei Fibonacci-n → 0.4472, 0.4472, 0.4472, 0.4472;  1/√5 = 0.4472
+
+3c) Kristallographie: Drehung um 2π/n erhält ein Gitter nur, wenn ihre Spur 2cos(2π/n) ganz ist
+   erlaubt: n ∈ [1, 2, 3, 4, 6] → 360°, 180°, 120°, 90°, 60°
+   k:                4          6          8         10         12         14
+   |E_k(i)|:  1.46e+00   6.66e-16   2.12e+00   8.88e-16   1.97e+00   1.33e-15   (null genau für 4 ∤ k)
+   |E_k(ρ)|:  7.22e-16   2.88e+00   3.77e-31   2.15e-15   3.00e+00   2.22e-16   (null genau für 6 ∤ k)
+   j(i) = 1728.000000 (Quadrat, 90°),  |j(ρ)| = 7.8e-44 (Sechseck, 60°/120°); 180° hat jedes Gitter (−1)
+   Drehung im Gitter: i·(1, i) = (i, −1), e^{iπ/3}·(1, ρ) = (1 + ρ, −1): ganzzahlig; nur diese zwei τ (mod SL(2,ℤ)) tragen 90° bzw. 60°/120°
+   Bahn-Torus Milchstraße 8 kpc: Δs = 197.5 AE, τ_M − 1 = 0.252 + 2.537i, |j(τ_M)| = 8.357e+06, r/Δs = 8.357e+06: an der Spitze, weit von i und ρ
+
+4a) Einheitskugel V_n = π^{n/2}/Γ(n/2 + 1), Sphäre S_{n−1} = n·V_n, Würfel [−1,1]ⁿ
+   n    V_n       S_{n−1}    V_n/2ⁿ      Kac 2ⁿ/V_n   S/V Kugel  S/V Würfel(Inkreis 1)
+   1     2.0000    2.0000   1.000e+00            1    1.00       1.00
+   2     3.1416    6.2832   7.854e-01        1.273    2.00       2.00
+   3     4.1888   12.5664   5.236e-01         1.91    3.00       3.00
+   4     4.9348   19.7392   3.084e-01        3.242    4.00       4.00
+   5     5.2638   26.3189   1.645e-01        6.079    5.00       5.00
+   6     5.1677   31.0063   8.075e-02        12.38    6.00       6.00
+   7     4.7248   33.0734   3.691e-02        27.09    7.00       7.00
+   8     4.0587   32.4697   1.585e-02        63.07    8.00       8.00
+   10    2.5502   25.5016   2.490e-03        401.5   10.00      10.00
+   20    0.0258    0.5161   2.461e-08    4.063e+07   20.00      20.00
+   Maximum V_n bei n = 5.2569, S_{n−1} bei n = 7.2569
+   V_n/V_(n−2) = 2π/n: max Abw. 4.4e-16;  S_(n+1) = 2π·V_n: max Abw. 7.1e-15
+   Gauß: ∫e^{−x²}dx = 1.77245385 = √π → π^{n/2}: ein π je zwei Dimensionen (eine Ebene, eine Schleife)
+4b) Bose-Integral in d Dimensionen (Zustandsdichte S_{d−1}x^{d−1}, Energie x): ∫x^d/(e^x − 1)dx = Γ(d+1)ζ(d+1)
+   d = 1: 1.644934  (π²/6)
+   d = 2: 2.404114  (2ζ(3), keine π-Potenz)
+   d = 3: 6.493939  (π⁴/15)
+   d = 4: 24.886266  (24ζ(5), keine π-Potenz)
+   d = 5: 122.081167  (8π⁶/63)
+   8π⁶/63 = 122.081167; π⁴/15 im Vakuumteil verlangt d = 3 (ungerades d gibt ζ(gerade) ∝ π^(d+1))

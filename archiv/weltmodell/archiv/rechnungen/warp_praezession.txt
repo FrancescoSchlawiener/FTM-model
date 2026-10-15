@@ -1,0 +1,136 @@
+==============================================================================
+1  Massenmodell und Gitter
+==============================================================================
+   Gitter: 435 × 240 Zellen, R bis 1551 kpc, z bis 1546 kpc
+   kleinste Zellen: ΔR = 0.100 kpc, Δz = 0.010 kpc
+   bulge : M = 9.2300e+09 M☉
+   thin  : M = 3.5184e+10 M☉
+   thick : M = 1.0486e+10 M☉
+   HI    : M = 1.0674e+10 M☉
+   H2    : M = 1.2306e+09 M☉
+   [OK] dünne Scheibe, Gittermasse gegen 2πΣ0Rd²: 3.51839e+10 vs 3.51858e+10 (rel. 5.6e-05)
+   [OK] dicke Scheibe, Gittermasse gegen 2πΣ0Rd²: 1.04859e+10 vs 1.04868e+10 (rel. 9.0e-05)
+   baryonische Gesamtmasse M_b = 6.6804e+10 M☉
+
+==============================================================================
+2  Newton- und Feldform-Potential (axialsymmetrisch, numerisch)
+==============================================================================
+   [OK] Testkugel dΦ/dR bei R = 2.0 kpc: 3599.89 vs 3600.57 (rel. 1.9e-04)
+   [OK] Testkugel dΦ/dR bei R = 10.0 kpc: 2251.39 vs 2250.36 (rel. 4.6e-04)
+   [OK] Testkugel dΦ/dR bei R = 20.0 kpc: 562.687 vs 562.59 (rel. 1.7e-04)
+   a0 = 1.2e-10 m/s² = 3702.8 (km/s)²/kpc
+   [OK] Testkugel Feldform dΦ/dR = ν·g_N bei 10.0 kpc: 4158.03 vs 4156.56 (rel. 3.5e-04)
+   [OK] Testkugel Feldform dΦ/dR = ν·g_N bei 20.0 kpc: 1743.06 vs 1742.85 (rel. 1.2e-04)
+
+   Rotationskurve (Mittelebene)
+   R[kpc]  v_N[km/s]  v_FTM[km/s]  g_N/a0   ν=v²/v_N²   Beob. [G]
+     4.0      185.7       205.4    2.327    1.224   
+     8.2      177.4       220.0    1.036    1.539   229 ± 1 (Eilers 2019) [G]
+    12.0      157.1       216.2    0.555    1.894   ≈ 222 [G]
+    14.0      147.1       213.0    0.417    2.099   ≈ 218 [G]
+    16.0      138.2       210.1    0.322    2.310   ≈ 214 [G]
+    20.0      124.0       205.3    0.207    2.743   ≈ 209 [G]
+    25.0      110.9       201.2    0.133    3.293   
+
+   Σ(|z|<1,1 kpc) bei R = 8,2 kpc: baryonisch 54.7, Newton 60.7, FTM 94.6 M☉/pc²  (Beob. 71 ± 6 [G])
+
+==============================================================================
+3  Frequenzen und freie Ringpräzession (Ring im vollen Potential)
+==============================================================================
+   Ω, κ, ν_z in km/s/kpc; ω_p = Ω − ν_z; ω_lin = −(ν_z² − Ω²)/(2Ω)
+   Form     R   Ω      κ/Ω    ν_z/Ω   ω_p      ω_lin
+   Newton    12  13.09  1.092  3.475   -32.40   -72.50
+   Newton    14  10.50  1.048  3.474   -25.98   -58.12
+   Newton    16   8.64  1.024  3.487   -21.48   -48.19
+   FTM       12  18.02  1.351  3.479   -44.68  -100.06
+   FTM       14  15.22  1.339  3.474   -37.64   -84.19
+   FTM       16  13.13  1.337  3.484   -32.60   -73.09
+
+==============================================================================
+4  Präzession des geneigten Außenteils aus dem Energiefunktional
+==============================================================================
+   V[ρ] = −(1/8πG)∫[|∇Φ_N|² + a0² Q_s(|∇Φ_N|²/a0²)] d³x.  Kippung des Außenteils ρ_o
+   um θ:  V = V0 + ½Kθ²,  ω_p = −K/L_o.
+   K = K_stat + K_mit
+   K_stat = ∫ρ_o ⟨D²(Φ − Φ_N,o)⟩ dV        (Außenteil im ruhenden Gesamtfeld, ohne eigenes Newton-Feld)
+   K_mit  = −(1/4πG)∫[(ν−1)⟨|∇ψ|²⟩ + yν'(y)⟨(n̂·∇ψ)²⟩] dV,  ψ = D Φ_N,o  (Feld kippt mit)
+   D = −z∂_y + y∂_z (Drehung um x),  ⟨⟩ = Mittel über φ.
+
+   Teil               M_o[M☉]    ω_N      ω_stat   ω_mit    ω_FTM    (km/s/kpc; <0 = rückläufig)
+   Außenteil R > 10   1.252e+10    -2.23   -20.86    19.86    -1.00
+   Außenteil R > 12   9.187e+09    -1.76   -19.69    18.50    -1.19
+   Außenteil R > 14   6.939e+09    -1.40   -18.57    17.36    -1.21
+   Außenteil R > 16   5.363e+09    -1.14   -17.43    16.25    -1.17
+   Ring 11–13         2.726e+09   -11.11   -31.32    15.26   -16.06
+   Ring 13–15         1.873e+09    -9.04   -29.23    15.24   -13.98
+   Ring 15–17         1.341e+09    -7.52   -27.84    15.47   -12.37
+
+   Kontrolle der Newton-Identität (1/4πG)∫⟨|∇ψ|²⟩ = ∫ρ_o⟨D²Φ_o⟩:
+   [OK]    Außenteil R > 12: 4.33967e+14 vs 4.34154e+14 (rel. 4.3e-04)
+   [OK]    Ring 13–15: 8.23824e+13 vs 8.26406e+13 (rel. 3.1e-03)
+   Test: Außenring im Feld einer Kugel, K/K_typ = -3.82e-05 (Soll 0)
+
+   Vergleich a0 = cH0/2π = 1.082e-10 m/s² (H0 = 70):
+   Außenteil R > 12   ω_stat =  -18.49, ω_mit =   17.33, ω_FTM =   -1.16 km/s/kpc
+   Ring 13–15         ω_stat =  -27.66, ω_mit =   14.19, ω_FTM =  -13.47 km/s/kpc
+
+   Variante: dünne und dicke Scheibe × 0,8 (Massenmodell-Empfindlichkeit)
+   M_b = 5.767e+10 M☉, v_FTM(8,2) = 206.9, v_FTM(14) = 202.0 km/s, Σ_bar(1,1) = 46.2, Σ_dyn,FTM(1,1) = 84.2 M☉/pc²
+   Außenteil R > 12   ω_stat =  -21.87, ω_mit =   20.91, ω_FTM =   -0.97 km/s/kpc;  Ring bei 14: Ω − ν_z = -38.19
+   Ring 13–15         ω_stat =  -32.17, ω_mit =   17.65, ω_FTM =  -14.52 km/s/kpc;  Ring bei 14: Ω − ν_z = -38.19
+
+==============================================================================
+5  Gedächtnis-Nachlauf: der mitkippende Teil folgt mit Kern λ e^{−λΔt}
+==============================================================================
+   Kippung Θ ∝ e^{st}; der mitkippende Teil folgt mit dem Faktor λ/(λ+s):
+   L s = −i[K_stat + K_mit λ/(λ+s)]   ⇒   s² + (λ + i a) s + iλ(a + b) = 0,
+   a = K_stat/L, b = K_mit/L.  Präzession = Im s (> 0 rechtläufig), Anwachsen = Re s.
+   Teil               1/λ_m[Myr]   Mode 1: Im s   Re s[1/Gyr]  |  Mode 2: Im s   Re s[1/Gyr]
+   Außenteil R > 12          0          -1.19        0.000  |     (Nachlaufmode fehlt)
+   Außenteil R > 12         50          -0.61       -0.628  |        -19.08      -19.372
+   Außenteil R > 12        100          -0.23       -0.498  |        -19.45       -9.502
+   Außenteil R > 12        170          -0.09       -0.332  |        -19.60       -5.551
+   Außenteil R > 12        200          -0.07       -0.287  |        -19.62       -4.713
+   Außenteil R > 12        260          -0.04       -0.226  |        -19.65       -3.621
+   Außenteil R > 12        500          -0.01       -0.120  |        -19.67       -1.880
+   Außenteil R > 12          ∞           0.00       -0.000  |        -19.69       -0.000
+   Ring 13–15                0         -13.98        0.000  |     (Nachlaufmode fehlt)
+   Ring 13–15               50          -3.74       -9.421  |        -25.49      -10.579
+   Ring 13–15              100          -0.84       -4.771  |        -28.39       -5.229
+   Ring 13–15              170          -0.29       -2.812  |        -28.94       -3.070
+   Ring 13–15              200          -0.21       -2.391  |        -29.02       -2.609
+   Ring 13–15              260          -0.12       -1.840  |        -29.11       -2.007
+   Ring 13–15              500          -0.03       -0.957  |        -29.20       -1.043
+   Ring 13–15                ∞           0.00       -0.000  |        -29.23       -0.000
+
+==============================================================================
+6  Äußeres Feld der Lokalen Gruppe (EFE): l=2-Anteil und Drehmoment
+==============================================================================
+   g_e (beob.)  g_N,e/a0    r_e[kpc]   C(14)[(km/s/kpc)²]  Ω_EFE(12/14/16) max [km/s/kpc]
+    0.01 a0    9.901e-05       885   -4.377e-03        3.64e-04 / 4.31e-04 / 5.00e-04
+    0.02 a0    3.922e-04       445   -1.733e-02        1.44e-03 / 1.71e-03 / 1.98e-03
+    0.03 a0    8.738e-04       298   -3.858e-02        3.21e-03 / 3.80e-03 / 4.40e-03
+   Kontrolle g_e → 0: max|ρ2| = 4.15e-04 M☉/kpc³ (Soll ≈ 0)
+
+==============================================================================
+7  Große Magellansche Wolke: lineare Antwort der Feldgleichung (l = 2)
+==============================================================================
+   [OK] lineare Antwort mit konstantem ν−1 = 1,5: u/f bei 14 kpc: 1.50163 vs 1.5 (rel. 1.1e-03)
+   M_LMC = 3.20e+09 M☉ (baryonisch [G]), d = 50.0 kpc, b = -33.0°, |cos β| = 0.545
+   R[kpc]  C_N[(km/s/kpc)²]  C_FTM     Verstärkung  Ω_prec,N   Ω_prec,FTM  Knotenrate θ_w=0,1  [km/s/kpc]
+      12   -1.1010e-01      -7.1887e-01    6.53     6.87e-03   3.26e-02    2.73e-01
+      14   -1.1010e-01      -7.0902e-01    6.44     8.56e-03   3.81e-02    3.19e-01
+      16   -1.1010e-01      -6.9961e-01    6.35     1.04e-02   4.35e-02    3.65e-01
+   Für eine Knotenrate von 10,9 km/s/kpc (θ_w = 0,1) bei 14 kpc wäre eine baryonische LMC-Masse von 1.09e+11 M☉ nötig (1.64 M_b der Milchstraße).
+
+==============================================================================
+8  Verwindung a_J, Lense-Thirring, Knotenzahl ζ, Re τ
+==============================================================================
+   J = 8.721e+13 M☉ kpc km/s,  a_J = J/(Mc) = 4.35 pc,  Δs = 3.288e+13 m,  χ = a_J/(3Δs) = 1362
+   r* = √(GM/a0) = 8.81 kpc
+   R    ω_LT=2GJ/(c²R³)  ×ν(R)     Im τ_M  Re τ_M=κ/Ω  Ω−κ     ν_z/Ω   ζ_starr  ζ_Ring  ζ_Gaia
+     12  4.83e-06         9.19e-06  0.1168  1.3512     -6.33  3.479   -0.056   -0.891  +0.605
+     14  3.04e-06         6.39e-06  0.1001  1.3393     -5.16  3.474   -0.078   -0.919  +0.716
+     16  2.04e-06         4.70e-06  0.0876  1.3368     -4.42  3.484   -0.092   -0.942  +0.830
+
+Prüfungen: 10, Abweichungen über Toleranz: 0

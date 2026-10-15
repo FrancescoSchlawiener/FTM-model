@@ -1,0 +1,7 @@
+Galaxien 153 Primär 70 Punkte 3168
+g_e = 0.01 a₀ senkrecht: a₀'/a₀ = 0.99 (gewichtet), 0.97 (ungewichtet)
+g_e = 0.01 a₀ gleich   : a₀'/a₀ = 0.91 (gewichtet), 0.86 (ungewichtet)
+g_e = 0.03 a₀ senkrecht: a₀'/a₀ = 0.93 (gewichtet), 0.86 (ungewichtet)
+g_e = 0.03 a₀ gleich   : a₀'/a₀ = 0.78 (gewichtet), 0.69 (ungewichtet)
+g_e = 0.05 a₀ senkrecht: a₀'/a₀ = 0.85 (gewichtet), 0.75 (ungewichtet)
+g_e = 0.05 a₀ gleich   : a₀'/a₀ = 0.69 (gewichtet), 0.58 (ungewichtet)

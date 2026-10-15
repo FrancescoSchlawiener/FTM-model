@@ -1,0 +1,15 @@
+nur Geschwindigkeitsfehler (wie Notiz 68): 137 Galaxien
+  d ln a₀ / d log Σ₀ = +0.163 ± 0.074 (Fehler)  ± 0.076 (Bootstrap)  → d log a₀/d log Σ₀ = +0.071 ± 0.033
+  innere Streuung von ln a₀: 0.58 (0.25 dex), gewichtetes Mittel a₀ = 1.09·10⁻¹⁰
+  Primärabstände : d log a₀/d log Σ₀ = +0.047 ± 0.046 (62 Galaxien)
+  Hubble-Fluss   : d log a₀/d log Σ₀ = +0.114 ± 0.045 (75 Galaxien)
+Abstand und Neigung als Störgrößen, Υ_d fest: 111 Galaxien
+  d ln a₀ / d log Σ₀ = +0.103 ± 0.094 (Fehler)  ± 0.084 (Bootstrap)  → d log a₀/d log Σ₀ = +0.045 ± 0.036
+  innere Streuung von ln a₀: 0.50 (0.22 dex), gewichtetes Mittel a₀ = 1.07·10⁻¹⁰
+  Primärabstände : d log a₀/d log Σ₀ = +0.056 ± 0.049 (57 Galaxien)
+  Hubble-Fluss   : d log a₀/d log Σ₀ = +0.024 ± 0.071 (54 Galaxien)
+Abstand, Neigung, Υ_d (0,1 dex) als Störgrößen: 112 Galaxien
+  d ln a₀ / d log Σ₀ = +0.096 ± 0.090 (Fehler)  ± 0.087 (Bootstrap)  → d log a₀/d log Σ₀ = +0.042 ± 0.038
+  innere Streuung von ln a₀: 0.48 (0.21 dex), gewichtetes Mittel a₀ = 1.04·10⁻¹⁰
+  Primärabstände : d log a₀/d log Σ₀ = +0.036 ± 0.046 (55 Galaxien)
+  Hubble-Fluss   : d log a₀/d log Σ₀ = +0.058 ± 0.072 (57 Galaxien)

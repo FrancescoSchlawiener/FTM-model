@@ -1,0 +1,127 @@
+FUSION IM TRICHTER: Temperatur, Zündung, Gedächtnis, Elemente
+Tiefe δ = 3Δs/R (Taktunterschied Hülle gegen flachen Außenraum), kT lokal gemessen, m̄ = μ·m_u
+
+1) TIEFE → TEMPERATUR
+   Herleitung im Trichter: Längs eines ruhenden Trichters gilt am Ort dh = T ds − dΦ (Hydrostatik, h = Enthalpie je Teilchen).
+   Ohne Entropiegefälle (Polytrope, Konvektion) ist h + m̄Φ fest: Die Wärme je Teilchen im Zentrum ist der Taktunterschied
+   zwischen Zentrum und Hülle in Ruheenergie,  h_c = m̄c²·Δδ_innen,  Δδ_innen = (Φ(R) − Φ(0))/c².  Beim idealen Gas h = (n+1)kT:
+        kT_c = m̄c²·Δδ_innen/(n+1) = f·δ·m̄c²,    f = θ_n = Δδ_innen/((n+1)δ)
+
+   Polytrope n = 1.5: ξ₁ = 3.6538, −ξ₁²θ'(ξ₁) = 2.7141, ρ_c/ρ̄ = 5.99;  f = θ_n = 0.5385  (Potentialintegral: 0.5385);  Δδ_innen = 1.346·δ
+   Polytrope n = 3.0: ξ₁ = 6.8968, −ξ₁²θ'(ξ₁) = 2.0182, ρ_c/ρ̄ = 54.18;  f = θ_n = 0.8543  (Potentialintegral: 0.8543);  Δδ_innen = 3.417·δ
+   [G] Tafelwerte: ξ₁ = 3,6538 / 6,8969; −ξ₁²θ' = 2,7141 / 2,0182
+
+   Körper                                          δ=3Δs/R      f     β  T_c Tiefe   T_c [G] T[G]/T_Tiefe
+   Sonne (μ homogen 0,62)                        2.123e-06  0.854 1.000  1.215e+07  1.57e+07        1.292   Hauptreihe
+   Sonne (μ_c heute 0,85 [G])                    2.123e-06  0.854 1.000  1.666e+07  1.57e+07        0.942   Hauptreihe
+   Roter Zwerg 0,3 M☉, 0,29 R☉ [G]               2.196e-06  0.538 1.000  7.924e+06  7.50e+06        0.946   voll konvektiv, T_c [G ±30 %]
+   Roter Zwerg 0,1 M☉, 0,12 R☉ [G]               1.769e-06  0.538 1.000  6.383e+06  4.50e+06        0.705   teilentartet, T_c [G ±30 %]
+   massiv 15 M☉, 4,7 R☉ ZAMS [G]                 6.774e-06  0.854 0.927  3.595e+07  3.40e+07        0.946   Strahlungsdruck β
+   massiv 60 M☉, 10 R☉ ZAMS [G]                  1.274e-05  0.854 0.674  4.912e+07  4.00e+07        0.814   Strahlungsdruck β
+   Brauner Zwerg 0,05 M☉, 0,1 R☉ (1 Gyr) [G]     1.061e-06  0.538 1.000  3.830e+06  1.00e+06        0.261   entartet
+   Jupiter                                       1.972e-08  0.500 1.000  6.607e+04  2.00e+04        0.303   entartet/flüssig, n≈1
+   Weißer Zwerg 0,6 M☉, 0,0125 R☉ [G]            1.019e-04  0.538 1.000  1.107e+09  1.00e+07        0.009   entartet, C/O
+   Sirius B 1,02 M☉, 0,0084 R☉ [G]               2.577e-04  0.854 1.000  4.443e+09  2.00e+07        0.005   entartet
+   Hauptreihe: T_c = f·δ·m̄c²/k trifft auf Faktor 0,8–1,3 (f aus der Polytrope, keine Anpassung).
+   Entartete Trichter (Brauner Zwerg, Jupiter, Weißer Zwerg) liegen um Faktor 10–10³ darunter: Dort hält die Zählregel (Pauli) die Tiefe, nicht die Temperatur.
+
+   Kontrolle Elektronendruck bei ρ = 10⁵ kg/m³: exakt 6.8071e+14 Pa, nichtrelativistisch 6.8104e+14 Pa
+   Tiefe gegen Zählregel:  kT_c/(μ m_u c²) = f·δ − (m_e/(μ_e m_u))·Π(x),  Π = P_e/(n_e m_e c²),  x = λ̄_e·(3π²n_e)^{1/3}
+   (Π = x²/5 nichtrelativistisch, x/4 hochrelativistisch). Beim Zusammenziehen wächst δ ∝ 1/R, Π ∝ 1/R²: T hat ein Maximum.
+   Kontrolle: Grenzmasse, bei der Tiefe und hochrelativistische Zählregel gleich mit 1/R laufen: n = 3 → 1.456 M☉ (Chandrasekhar 5,836/μ_e² = 1.459 M☉); n = 1,5 → 0.968 M☉ (Zentralrelation n = 1,5 nur für kleine Massen)
+
+2) ZÜNDSCHWELLEN ALS TIEFEN
+   AME2020: Q(4¹H→⁴He) = 26.731 MeV, Q(3α) = 7.275, Q(C+C→Ne+α) = 4.617, Q(2Ne→O+Mg) = 4.587, Q(O+O→Si+α) = 9.594, Q(2Si→⁵⁶Ni) = 10.922 MeV
+           S_α(²⁰Ne) = 4.730 MeV, S_α(²⁸Si) = 9.984 MeV, Q(⁵⁶Fe → 13α + 4n) = 124.42 MeV
+   Zündtemperaturen [G] (Lehrbuchwerte, ±20 %). δ_zünd = kT/(f·μ m_u c²), f = θ₃ = 0.854 (Kern ~ n = 3).
+   Stufe   T_zünd  kT[keV]     μ    δ_zünd Schritt   E_G[MeV]    E_G/kT  3E₀/kT E_C[MeV]   kT/E_C  Q/A/m_uc² Q/A/(m_uc²δ)
+   pp     4.0e+06     0.34  0.62  6.99e-07               0.49  1.42e+03    21.2    0.600 5.75e-04   7.17e-03     1.03e+04   Mindestwert am unteren Massenende [G]
+   CNO    1.7e+07     1.46  0.62  2.97e-06    4.25       44.8  3.06e+04    59.1    2.463 5.95e-04   7.17e-03     2.42e+03   Gleichstand mit pp [G]
+   3α     1.0e+08     8.62  1.33  8.12e-06    2.74        167  1.94e+04    50.8    2.676 3.22e-03   6.51e-04         80.1   
+   C      6.0e+08    51.70  1.71  3.79e-05    4.67   7.61e+03  1.47e+05    99.8    9.434 5.48e-03   2.07e-04         5.45   
+   Ne     1.2e+09   103.41  1.82  7.15e-05    1.89          —   S_α/kT=  45.7         —        —   1.23e-04         1.72   Photozerfall ²⁰Ne(γ,α)
+   O      1.8e+09   155.11  1.78  1.10e-04    1.53   3.21e+04  2.07e+05   111.8   15.239 1.02e-02   3.22e-04         2.94   
+   Si     3.0e+09   258.52  1.87  1.74e-04    1.59          —   S_α/kT=  38.6         —        —   2.09e-04          1.2   Photozerfall, Quasi-Gleichgewicht
+   Coulomb-Stufen: ln T_zünd = 0.560·ln E_G + c (r = 0.984);  T ∝ E_G hieße Steigung 1, feste Gamow-Zahl 3E₀/kT hieße 1.
+   Gemessen steigt 3E₀/kT von 21 auf 112: Die Stufen sind nicht E_G-proportional,
+   weil der Querschnittsfaktor S (pp schwach, sonst stark) und die Dichte im Logarithmus stehen. kT/E_C = 10⁻³ … 10⁻² (Tunneln).
+   Ne und Si zünden nicht über eine Barriere, sondern über den Photozerfall bei S_α/kT ≈ 30–45.
+   Ende der Leiter: Q/A/(m_u c²) fällt von 7·10⁻³ (H) auf 2·10⁻⁴ (Si), δ_zünd steigt von 10⁻⁶ auf 10⁻⁴: Ihr Quotient (Brenn- zu Kontraktionsvorrat)
+   fällt von 10³ auf ≈ 1. Bei Si trägt die Kernbindung den Trichter nicht mehr länger, als seine eigene Tiefe ihn trägt; ⁵⁶Ni/⁵⁶Fe ist Q = 0.
+
+   Längenform: E_C/(m̄c²) = Z₁Z₂·r_m/R_Kern mit r_m = αħ/(m̄c) (klassischer Radius der Masse m̄), δ = 3Δs/R:
+   δ_zünd/(E_C/m_u c²) ist kein fester Bruch (kT/E_C wandert um Faktor 10), also keine reine Längengleichung Kernradius : Faltung.
+   r_p,klass = 1.535e-18 m;  pp: E_C/(m_p c²) = 6.39e-04 (R_Kern = 2,4 fm [A]),  δ_zünd(pp) = 6.99e-07
+
+   Mindestmasse des Wasserstoffbrennens: T_max(M) aus Tiefe gegen Zählregel (n = 1,5, μ = 0,62, μ_e = 1,143 [A] X = 0,75)
+   T_zünd = 2e+06 K → M_min = 0.0789 M☉ (0.0426 M_*),  R bei T_max = 0.151 R☉, δ = 1.11e-06, x = λ̄_e k_F = 0.056
+   T_zünd = 3e+06 K → M_min = 0.1069 M☉ (0.0577 M_*),  R bei T_max = 0.136 R☉, δ = 1.67e-06, x = λ̄_e k_F = 0.068
+   T_zünd = 4e+06 K → M_min = 0.1326 M☉ (0.0715 M_*),  R bei T_max = 0.127 R☉, δ = 2.22e-06, x = λ̄_e k_F = 0.079
+   geschlossene Form (nur nichtrelativistisch, anderer Weg): M_min(3·10⁶ K) = 0.1070 M☉;  M_min ∝ M_*·(kT_zünd/m_ec²)^(3/4)
+   [G] Modelle: 0,075 M☉ bei T_c ≈ 3·10⁶ K. Die Ein-Zonen-Rechnung liegt um Faktor 1,4 darüber (Größenordnung getroffen, nicht der Wert).
+   Schnittform: M_min/M_* = C·(kT_zünd/m_ec²)^(3/4), (kT/m_ec²)^(3/4) = 3.37e-03, C = 17.1: eine Potenz der Temperaturskala, kein geometrisches Mittel zweier Leiterlängen.
+
+   Welche Stufe erreicht ein Kern der Masse M_K (T_max aus Tiefe gegen Zählregel)?
+   He-Kern → 3α   n = 1.5: T = 1.0e+08 K braucht M_K ≥ 0.401 M☉  (δ = 2.71e-05, x = 0.38)
+   He-Kern → 3α   n = 3.0: T = 1.0e+08 K braucht M_K ≥ 0.603 M☉  (δ = 1.71e-05, x = 0.38)
+   C/O-Kern → C   n = 1.5: nicht erreicht; T_max bei 0,999·M_Grenze = 4.99e+08 K
+   C/O-Kern → C   n = 3.0: nicht erreicht; T_max bei 0,999·M_Grenze = 4.99e+08 K
+   [G] Vergleich: kleinster He-brennender Stern ≈ 0,3 M☉, He-Blitz bei Kern 0,47 M☉, C-Zündung ab Kern ≈ 1,05–1,1 M☉.
+   T_max hängt nur an M/M_Grenze (beide Terme laufen gleich mit der Strukturzahl): n = 1,5 und n = 3 geben dieselbe Kurve.
+   Decke: Bei M → M_Grenze gilt kT_max = (μ/μ_e)·m_ec²·max_x[x/4 − Π(x)] = (μ/μ_e)·0.0964·m_ec² (bei x = 1.06);
+   C/O (μ/μ_e = 0,875): kT_max = 43.1 keV = 5.00e+08 K. Kohlenstoff zündet bei 51.7 keV [G],
+   also an der Decke: Ein Trichter, dessen Tiefe die Elektronen-Zählregel hält, erreicht höchstens ≈ 0,1·m_ec²; Ne, O, Si (100–260 keV) nur
+   in Kernen über der Grenzmasse, die nie entarten (massive Sterne). Die Elektronen-Compton-Länge setzt die Grenze der Leiter.
+
+3) TEMPERATUR ALS GEDÄCHTNIS?
+   Kelvin-Helmholtz: t_KH = GM²/(RL) = δ·Mc²/L  (Vorrat der Tiefe durch Abstrahlung)
+   Kernbrennen:      t_nuc = (Q/A/m_uc²)·X_K·Mc²/L,   t_nuc/t_KH = (Q/A/m_uc²)·X_K/δ
+   Entartete Kühlung (Mestel) [G]: t_cool ≈ 8,8·10⁶ a·(A/12)⁻¹·(M/M☉)^(5/7)·(μ/2)^(−2/7)·(L/L☉)^(−5/7)
+   Sonne   δ = 2.12e-06: t_KH = 0.0314 Gyr, t_nuc = 10.6 Gyr [L, X_K: G/A], t_nuc/t_KH = 338
+   15 M☉   δ = 6.77e-06: t_KH = 7.52e-05 Gyr, t_nuc = 0.00796 Gyr [L, X_K: G/A], t_nuc/t_KH = 106
+   0,1 M☉  δ = 1.77e-06: t_KH = 2.62 Gyr, t_nuc = 1.06e+04 Gyr [L, X_K: G/A], t_nuc/t_KH = 4056
+   Weißer Zwerg 0,6 M☉ bei L = 1e-02 L☉: t_cool ≈ 0.14 Gyr [G-Formel]
+   Weißer Zwerg 0,6 M☉ bei L = 1e-03 L☉: t_cool ≈ 0.728 Gyr [G-Formel]
+   Weißer Zwerg 0,6 M☉ bei L = 1e-04 L☉: t_cool ≈ 3.77 Gyr [G-Formel]
+   Weißer Zwerg: δ = 1.02e-04, Wärme je Masse (3/2)kT/(A m_u c²) = 9.91e-08 bei 10⁷ K: Die Wärme ist 1028-fach kleiner als die Tiefe.
+   Kühlt er, bleibt δ (Zählregel hält R), T fällt. Die Tiefe ist bindend (Struktur), die Temperatur altert (Zustand).
+   Im nicht entarteten Trichter umgekehrt: Abstrahlung vertieft (R sinkt), T steigt (negative Wärmekapazität, dE = −dE_th).
+   Schwelle der Entartung: Hauptreihe mit ρ_c = D_n·ρ̄, kT = fδm̄c², E_F = m_ec²(√(1+x²) − 1): ψ = kT/E_F
+   M = 1.000 M☉ (R [G]) δ = 2.12e-06: kT_c = 0.954 keV, E_F = 0.428 keV, ψ = 2.23
+   M = 0.300 M☉ (R [G]) δ = 2.20e-06: kT_c = 0.569 keV, E_F = 0.525 keV, ψ = 1.08
+   M = 0.100 M☉ (R [G]) δ = 1.77e-06: kT_c = 0.230 keV, E_F = 1.474 keV, ψ = 0.16
+   M = 0.075 M☉ (R [G]) δ = 1.59e-06: kT_c = 0.115 keV, E_F = 1.752 keV, ψ = 0.07
+   M = 0.050 M☉ (R [G]) δ = 1.06e-06: kT_c = 0.040 keV, E_F = 1.337 keV, ψ = 0.03
+   Die Entartung beginnt dort, wo die Zählregel so viel trägt wie die Tiefe (ψ ≈ 1); ab da hält der Trichter seine Tiefe ohne Wärme.
+   Was nicht vergessen wird, ist nicht T, sondern die Asche: Die Zusammensetzung zeichnet die größte je erreichte Tiefe δ_max auf
+   (Fusion unter dem Gleichgewicht ist nicht umkehrbar). He-Zwerg, C/O-Zwerg, O/Ne-Zwerg = erreichte Stufe; das Gegenstück zu θ̃ (Minimum der Geschichte).
+
+4) ELEMENTE ALS SPUR DER TIEFE
+   Häufigkeiten log ε [G] (Asplund 2009), B/A = größte gemessene Bindung je Nukleon des Elements (AME2020)
+   Z 6–28 (Brennstufen)     Spearman log ε gegen B/A: r_S = -0.49 (p = 0.018, n = 23);  bei festem Z (Gang abgezogen): +0.52 (p = 0.011)
+   Z 29–92 (jenseits Fe)    Spearman log ε gegen B/A: r_S = +0.75 (p = 3.3e-11, n = 55);  bei festem Z (Gang abgezogen): +0.10 (p = 0.45)
+   Li, Be, B: log ε = 3.26, 1.30, 2.79 gegen He 10.93, C 8.43; B/A (⁷Li, ⁹Be, ¹¹B) = 5.61, 6.46, 6.93 MeV unter ⁴He 7.07 und ¹²C 7.68: Die schwach gebundenen Kerne werden in jeder Trichtertiefe über 10⁶ K verbrannt, nicht aufgebaut.
+   Z 6–28 Nachbardifferenzen (gerade/ungerade): r_S = +0.74 (p = 7.3e-05, n = 22)
+   gerade Z 6–28: ⟨log ε⟩ = 7.03, ⟨B/A⟩ = 8.465 MeV; ungerade: 5.32, 8.415 MeV
+   Größte Häufigkeit Z 15–40: Z=26 (7.50), Z=16 (7.12), Z=18 (6.40);  größte B/A: Fe/Ni 8.7904 / 8.7946 MeV
+   Fe liegt 2.07 bzw. 2.51 dex über Mn und Co: Gipfel am Maximum der Bindung.
+   Tröpfchen (AME2020, 2484 Kerne): a_S = 16.86, a_C = 0.695 MeV; x = E_C/2E_S bei ⁵⁶Fe = 0.239 (¼ am Maximum)
+
+   Tiefen jenseits der Brennleiter (Klein: bei T = 0 ist das chemische Potential je Baryon × Takt fest, E_F je Baryon = m_uc²·Δδ):
+   Neutronisierung freier Protonen (m_n − m_H)c²  E =   0.782 MeV → Δδ = E/(μ_e m_uc²) = 8.40e-04
+   Neutronisierung ⁵⁶Fe → ⁵⁶Mn (AME)              E =   3.695 MeV → Δδ = E/(μ_e m_uc²) = 1.84e-03
+   größte Kernbindung B/A (⁶²Ni)                  E =   8.795 MeV → Δδ = E/(μ_e m_uc²) = 9.44e-03
+   Photozerfall des Eisens: Q = 124.4 MeV = -2.22 MeV je Nukleon; bei T ≈ 10¹⁰ K [G] → δ_zünd = 5.2e-04
+   Neutronenstern 1,4 M☉, 12 km [G]: δ = 1 − dτ/dt = 0.190, 3Δs/R = 0.172;  δ/(B/A_max/m_uc²) = 20
+   s-Prozess: Neutronen aus ¹³C(α,n), ²²Ne(α,n) in der He-Schale (T ≈ 1–3·10⁸ K [G]) → Stufe 3α der Leiter, δ ≈ 10⁻⁵.
+   r-Prozess: Neutronendichte > 10²⁰ cm⁻³ [G] (Verschmelzung/Kollaps von Neutronensternen) → δ ≈ 0,1–0,2.
+   Gipfel jenseits Fe (nur gerade Z, damit der Gerade-ungerade-Gang nicht zählt): Z = 54, 66, 78, 82
+   [G] Zuordnung: s-Gipfel Sr/Ba/Pb (N = 50, 82, 126), r-Gipfel Se–Kr, Te–Xe, Os–Pt (N = 50, 82, 126 bei kleinerem Z). Die Gipfel folgen den
+   Schalenzahlen der Neutronen (Zählregel), nicht der Tiefe; die Tiefe entscheidet nur die Neutronendichte (s langsam, r schnell).
+
+6) GEGENPROBEN (anderer Weg)
+   (a) Virial n = 3: ⟨kT⟩ = |E_g|/(3N) = 612.9 eV = 7.112e+06 K (Mittel); T_c/⟨T⟩ bei n = 3 [G] ≈ 2 → 1.42e+07 K
+       Polytrope: 1.215e+07 K. Von Hand: δ☉ = 3·492,2 m/6,957·10⁸ m = 2,1225·10⁻⁶; ·0,62·931,494 MeV = 1225,8 eV; ·0,8543 = 1047 eV = 1,215·10⁷ K
+   (b) δ_zünd(C) von Hand: kT = 8,617·10⁻⁵ eV/K·6·10⁸ K = 51,70 keV; /(0,8543·(12/7)·931,494 MeV) = 51,70·10³/1,3642·10⁹ = 3,79·10⁻⁵;  Skript 3.790e-05
+   (c) M_min(3·10⁶ K): numerisch mit exaktem Druck 0.1069 M☉, geschlossene Form 0.1070 M☉
+

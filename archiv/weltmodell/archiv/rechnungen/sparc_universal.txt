@@ -1,0 +1,30 @@
+SPARC Q ≤ 2, Neigung ≥ 30°: 149 Galaxien; Rest je Galaxie Median -0.025 dex, Streuung 0.156 dex
+Spearman ρ des Rests mit (p = Irrtumswahrscheinlichkeit; |ρ| mit p < 0,003 auffällig):
+   log Baryonenmasse                  ρ = +0.129  p = 1.2e-01  
+   log V_flach                        ρ = +0.162  p = 7.3e-02  
+   log R_d                            ρ = +0.069  p = 4.0e-01  
+   log SB₀ (Flächenhelligkeit)        ρ = +0.229  p = 5.0e-03  
+   Gasanteil                          ρ = -0.097  p = 2.4e-01  
+   log kleinstes g_N/a₀               ρ = +0.049  p = 5.6e-01  
+   Hubble-Typ                         ρ = -0.208  p = 1.1e-02  
+   Neigung [Messgröße]                ρ = +0.023  p = 7.8e-01  
+   log Abstand [Messgröße]            ρ = +0.074  p = 3.7e-01  
+   rel. Abstandsfehler [Messgröße]    ρ = +0.126  p = 1.3e-01  
+Rest innen (R < 2R_d) − außen (R > 2R_d): Median -0.009 dex, Mittel -0.021 ± 0.013 (n = 144)
+   Υ_d = 0.4: Median Rest +0.014, ρ(Rest, log SB₀) = +0.290 (p = 3.4e-04)
+   Υ_d = 0.6: Median Rest -0.053, ρ(Rest, log SB₀) = +0.169 (p = 3.9e-02)
+   gasdominiert (f_gas > 0,5)     n =  64: ρ(Rest, log SB₀) = +0.374 (p = 2.3e-03), Median Rest -0.031
+   sterndominiert (f_gas < 0,2)   n =  43: ρ(Rest, log SB₀) = -0.027 (p = 8.7e-01), Median Rest -0.010
+Gasdruck (V_c² = V_obs² + σ²·R/R_d): Streuung des Rests und Zusammenhang mit V_flach (alle / gasdominiert)
+   σ =  0.0 km/s: Median -0.001, Streuung 0.121 dex; ρ(Rest, log V_f) alle +0.162 (p 7.3e-02), gasdominiert +0.476 (p 8.2e-04); gasdominiert V_f < 60: -0.046 dex (n = 12)
+   σ =  8.0 km/s: Median +0.005, Streuung 0.120 dex; ρ(Rest, log V_f) alle +0.053 (p 5.6e-01), gasdominiert +0.339 (p 2.1e-02); gasdominiert V_f < 60: -0.010 dex (n = 12)
+   σ = 10.0 km/s: Median +0.012, Streuung 0.121 dex; ρ(Rest, log V_f) alle +0.005 (p 9.6e-01), gasdominiert +0.292 (p 4.9e-02); gasdominiert V_f < 60: +0.008 dex (n = 12)
+   σ =  0.0 km/s: ρ(Rest, log SB₀) alle +0.229 (p 5.0e-03), gasdominiert +0.374 (p 2.3e-03), sterndominiert +0.158; Streuung alle 0.156 dex
+   σ =  8.0 km/s: ρ(Rest, log SB₀) alle +0.147 (p 7.4e-02), gasdominiert +0.363 (p 3.2e-03), sterndominiert +0.154; Streuung alle 0.137 dex
+Gasdruck σ = 8 km/s mit äußerem Feld g_e (senkrecht): Zusammenhang mit log SB₀ und Streuung
+   g_e/a₀ = 0.00: Median -0.002, Streuung 0.1374 dex; ρ(Rest, log SB₀) alle +0.147 (p 7.4e-02), gasdominiert +0.363 (p 3.2e-03)
+   g_e/a₀ = 0.01: Median +0.002, Streuung 0.1372 dex; ρ(Rest, log SB₀) alle +0.127 (p 1.2e-01), gasdominiert +0.344 (p 5.4e-03)
+   g_e/a₀ = 0.02: Median +0.009, Streuung 0.1383 dex; ρ(Rest, log SB₀) alle +0.073 (p 3.8e-01), gasdominiert +0.280 (p 2.5e-02)
+   g_e/a₀ = 0.03: Median +0.017, Streuung 0.1404 dex; ρ(Rest, log SB₀) alle +0.018 (p 8.3e-01), gasdominiert +0.232 (p 6.5e-02)
+   g_e/a₀ = 0.05: Median +0.031, Streuung 0.1456 dex; ρ(Rest, log SB₀) alle -0.084 (p 3.1e-01), gasdominiert +0.166 (p 1.9e-01)
+   g_e/a₀ = 0.08: Median +0.054, Streuung 0.1549 dex; ρ(Rest, log SB₀) alle -0.198 (p 1.6e-02), gasdominiert +0.088 (p 4.9e-01)

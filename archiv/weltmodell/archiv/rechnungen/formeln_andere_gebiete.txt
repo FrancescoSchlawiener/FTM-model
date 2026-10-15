@@ -1,0 +1,65 @@
+A) Dieselbe Gleichung D·G'' = Γ·G: offene Halbgerade gegen geschlossenes Ende bei Λ (Neumann, cosh-Form)
+   Punktmasse, s = r*/r, L = r*.  offen: q = e^{−s};  geschlossen: q = cosh((Λ/L − 1)s)/cosh((Λ/L)s)
+   Λ/L =   10: Abweichung 10 % von e^(−s) bei r = 6.39 r* = 0.639·r*·Λ/L;  tief: 1 − q → s²(Λ/L − ½) (linear in Γ, a → konstant)
+   Λ/L =   30: Abweichung 10 % von e^(−s) bei r = 19.53 r* = 0.651·r*·Λ/L;  tief: 1 − q → s²(Λ/L − ½) (linear in Γ, a → konstant)
+   Probe tief (Λ/L = 10, s = 10⁻³): (1 − q)/s² = 9.4997  (Λ/L − ½ = 9,5)
+   Warburg (Γ → iω): 1 − e^{−√(iωτ)} ≈ √(ωτ)·e^{iπ/4}, Phase 45°; geschlossen (coth-Form) unterhalb ω ≈ D/Λ² kapazitiv (90°).
+
+B) Aufbauzeit der Rückkehr, falls sie ein Vorgang in t wäre (Synthese-Diffusion-Abbau, G(0,t) = 1 ab t = 0)
+   G(L,t) = ½[e^{−s}erfc(L/√(4Dt) − √(Γt)) + e^{s}erfc(L/√(4Dt) + √(Γt))],  τ_D = L²/D, Γ = s²/τ_D
+   s = 0.3: mittlere Aufbauzeit ∫(1 − G/G_∞)dt = 1.66667 τ_D;  τ_D/(2s) = 1.66667;  Sattelzeit t* = ½√(τ_D/Γ) = 1.66667
+   s = 1.0: mittlere Aufbauzeit ∫(1 − G/G_∞)dt = 0.50000 τ_D;  τ_D/(2s) = 0.50000;  Sattelzeit t* = ½√(τ_D/Γ) = 0.50000
+   s = 3.0: mittlere Aufbauzeit ∫(1 − G/G_∞)dt = 0.16667 τ_D;  τ_D/(2s) = 0.16667;  Sattelzeit t* = ½√(τ_D/Γ) = 0.16667
+   τ_D = c/a₀ = 79.2 Mrd. Jahre. Nach 13,8 Mrd. Jahren erreicht: s = 1: 0.22, s = 3: 0.64, s = 0,3: 0.12 des stationären q
+
+C) Exponent ½ und Dimension der Rückkehrrichtung (Rückkehr eines Zufallswegs, z = e^{−Γ})
+   1D: 1 − F(z) = √(1 − z²);  2D (Quadratgitter): 1 − F = 1/P(z), P = (2/π)K(z);  3D: F(1) = 1 − 1/u₃ (Pólya)
+   Γ = 1e-02: 1D 1 − F = 1.407e-01 (√(2Γ) = 1.414e-01);  2D 1 − F = 0.4676 (π/ln(8/Γ) = 0.4700, logarithmisch)
+   Γ = 1e-04: 1D 1 − F = 1.414e-02 (√(2Γ) = 1.414e-02);  2D 1 − F = 0.2783 (π/ln(8/Γ) = 0.2783, logarithmisch)
+   Γ = 1e-06: 1D 1 − F = 1.414e-03 (√(2Γ) = 1.414e-03);  2D 1 − F = 0.1976 (π/ln(8/Γ) = 0.1976, logarithmisch)
+   3D: Watson u₃ = 1.516386, Rückkehrwahrscheinlichkeit 1 − 1/u₃ = 0.3405; größte Verstärkung ν_max = u₃ = 1.5164
+   d ln a/d ln a_N tief: 1D 0.5000 (½, Tully-Fisher), 2D 0.9320 (→ 1, logarithmisch), 3D → 1 (ν beschränkt)
+   allgemein: Rückkehrdichte ∝ t^{d_s/2 − 2} ⇒ 1 − q ∝ Γ^{1 − d_s/2} ⇒ a ∝ a_N^{d_s/2}; flache Kurven verlangen d_s = 1.
+
+D) Kritische Verzweigung (Poisson-Nachkommen, Mittel m): Gesamtzahl S, T(z) = E[z^S] = z·e^{m(T−1)}
+   m = 1.0: Γ = 1e-03: 1 − E[e^(−ΓS)] = 4.4057e-02;  √(2Γ) = 4.4721e-02;  Γ/(1 − m) = –
+   m = 1.0: Γ = 1e-05: 1 − E[e^(−ΓS)] = 4.4655e-03;  √(2Γ) = 4.4721e-03;  Γ/(1 − m) = –
+   m = 0.95: Γ = 1e-03: 1 − E[e^(−ΓS)] = 1.7057e-02;  √(2Γ) = 4.4721e-02;  Γ/(1 − m) = 2.0000e-02
+   m = 0.95: Γ = 1e-05: 1 − E[e^(−ΓS)] = 1.9960e-04;  √(2Γ) = 4.4721e-03;  Γ/(1 − m) = 2.0000e-04
+   m = 1: √-Gesetz (wie 1 − q ≈ s);  m < 1: linear in Γ (Boden, kein Tully-Fisher).
+
+E) Rücklaufzahl n geometrisch verteilt, P(n) = (1 − q)qⁿ: Shannon-Entropie H = ln ν + χ
+   s = 0.3: H = 2.207714;  ln ν + χ = 2.207714;  Mittel Q = n_B = 2.8583
+   s = 1.0: H = 1.040652;  ln ν + χ = 1.040652;  Mittel Q = n_B = 0.5820
+   s = 3.0: H = 0.208256;  ln ν + χ = 0.208256;  Mittel Q = n_B = 0.0524
+
+F) Leiter bis zu einem Schnitt: ∫₀^x s^d n_B ds = (x^d/d)·D_d(x) (Debye-Funktion), x = s_max (Kompaktheit)
+   d = 1: x = 0,3 / 1 / 3 / 30: 0.2782 / 0.7775 / 1.4413 / 1.6449;  x^d/d bei 0,3: 0.3000;  Γ(d+1)ζ(d+1) = 1.6449
+   d = 2: x = 0,3 / 1 / 3 / 30: 0.0407 / 0.3539 / 1.5418 / 2.4041;  x^d/d bei 0,3: 0.0450;  Γ(d+1)ζ(d+1) = 2.4041
+   d = 3: x = 0,3 / 1 / 3 / 30: 0.0080 / 0.2248 / 2.5522 / 6.4939;  x^d/d bei 0,3: 0.0090;  Γ(d+1)ζ(d+1) = 6.4939
+
+G) Mittlere Weglänge im Körper (Cauchy, Blanco-Mazzolo): ⟨ℓ⟩ = η_d·V/S, unabhängig von der Streuung
+   d = 1: η_d = d·√π·Γ((d+1)/2)/Γ(d/2+1) = 2.00000
+   d = 2: η_d = d·√π·Γ((d+1)/2)/Γ(d/2+1) = 3.14159
+   d = 3: η_d = d·√π·Γ((d+1)/2)/Γ(d/2+1) = 4.00000
+   d = 1, Halbgerade bei Λ reflektierend, Ein- und Austritt am Ort (V = Λ, S = 1): ⟨ℓ⟩ = 2Λ, ⟨T⟩ = 2Λ/c (Kac, masseunabhängig).
+   Zufallsweg, Schritt h = 0.1: mittlere Weglänge bis zur Rückkehr = 2.227 Λ (Kac: 2(Λ + h))
+   Zufallsweg, Schritt h = 0.05: mittlere Weglänge bis zur Rückkehr = 2.073 Λ (Kac: 2(Λ + h))
+
+H) Akkumulationsverfahren (Pharmakokinetik, Reaktor 1/M) an SPARC: s_beob = −ln(1 − g_bar/g_beob); Regel: s_beob² = g_bar/a₀
+   Punkte: 2573 (Q ≤ 2, Neigung ≥ 30°, δV/V < 0,1; Υ_disk = 0,5, Υ_bul = 0,7)
+   a₀ aus dem Median von g_bar/s_beob²: 1.223e-10 m/s²
+   g_bar 1.0e-12–3.2e-12: n =  151, Median s_beob²·a₀/g_bar = 1.068  (16–84 %: 0.43–2.80)
+   g_bar 3.2e-12–1.0e-11: n =  684, Median s_beob²·a₀/g_bar = 1.142  (16–84 %: 0.58–2.20)
+   g_bar 1.0e-11–3.2e-11: n =  612, Median s_beob²·a₀/g_bar = 1.016  (16–84 %: 0.53–1.94)
+   g_bar 3.2e-11–1.0e-10: n =  545, Median s_beob²·a₀/g_bar = 1.009  (16–84 %: 0.44–2.07)
+   g_bar 1.0e-10–3.2e-10: n =  353, Median s_beob²·a₀/g_bar = 0.774  (16–84 %: 0.39–1.94)
+   g_bar 3.2e-10–1.0e-09: n =  179, Median s_beob²·a₀/g_bar = 0.873  (16–84 %: 0.35–1.46)
+   g_bar 1.0e-09–3.2e-09: n =   38, Median s_beob²·a₀/g_bar = 0.233  (16–84 %: 0.12–1.09)
+   Gerade durch den Ursprung heißt: die Exponentialform trägt; ein Anstieg bei kleinem g_bar wäre äußeres Feld (ν kleiner, s_beob größer).
+   Brauchbar nur für s ≲ 2 (g_bar ≲ 4a₀): für g_bar → g_beob divergiert −ln(1 − x), und die Auswahl g_bar < g_beob verzerrt nach unten.
+
+I) Äußeres Feld: Betrag des Gesamtfelds (Modell) gegen unabhängige Verlustkanäle (Matthiessen: Raten addieren)
+   Milchstraße 50 kpc, g_e = 0,03 a₀: a_N = 0.0279 a₀;  ν frei = 6.50
+   senkrecht s⁴ = s_i⁴ + s_e⁴: ν = 5.46;  gleichgerichtet s² = s_i² + s_e²: ν = 4.68
+   Matthiessen (Γ = Γ_i + Γ_e) gäbe für jede Richtung den gleichgerichteten Wert: Richtungsabhängigkeit trennt beide.

@@ -1,0 +1,66 @@
+1  Hintergrund (A0 = 1.10e-10, H0 = 67.4, θ_c/H0 = 0.16798, θ_c = 0.0116 /Gyr)
+   θ_bg = 3H fällt monoton (größter Schritt -4.9e-06 ≤ 0): min der Geschichte = heutiger Wert
+   1 − w heute: jetzige Form 1.4611e-02, Preisach 1.4611e-02, Differenz 0.0e+00
+   1 − w bei z = 1090: 0.00e+00 (beide); mit a0(1090) = 0.759 a0 (Kern a0_frueh_relativ): 0.00e+00
+   mit a0 = cH0/2π: 1 − w heute 1.3016e-02
+
+2  Top-Hat im Kern-Hintergrund (Materie, Strahlung, Vakuumteil); θ = 3Ṙ/R
+   z_c   z_ta   t_ta[Gyr]  r_vir[kpc]  ω_vir[1/Gyr]  w 0,9→0,1 [Myr]  vor Umkehr [Myr]  max|w_j−w_P| bis t_c  Hand Δt [Myr]
+    3.4   6.00     0.929       53.2       3.375          14.36            14.39           0.0e+00            7.24
+     Verlauf z_c = 3,4:  t[Gyr]   R/R_ta   θ/H0      w_jetzt   w_Preisach
+                         0.186    0.530     130.908   1.0000    1.0000
+                         0.744    0.975      11.997   0.9998    0.9998
+                         0.920    1.000       0.575   0.8428    0.8428
+                         0.929    1.000       0.058   0.4429    0.4429
+                         0.929    1.000       0.000   0.0103    0.0103
+                         0.930    1.000      -0.058   0.0000    0.0000
+                         1.394    0.838     -38.585   0.0000    0.0000
+                         1.850    0.091   -2538.067   0.0000    0.0000
+    2.0   3.79     1.638       77.5       1.920          44.58            44.67           0.0e+00           22.49
+    1.0   2.24     2.926      113.7       1.081         142.63           142.93           0.0e+00           72.07
+    0.5   1.49     4.298      146.1       0.743         309.26           309.91           0.0e+00          156.72
+   θ fällt bis zum Umkehrpunkt monoton, danach θ < 0 und virialisiert θ = 0: beide Formen gleich, I_pre gleich.
+   Handwert: Δt = (3 − 1/3)·θ_c/|θ̇_ta|, θ̇_ta = 3R̈/R am Umkehrpunkt.
+
+   Wiederausdehnung eines virialisierten Bereichs (z_c = 1, Ereignis 0,5 Gyr nach t_c):
+   θ(t) = θ_e·e^{−(t−t_e)/τ}, Radiuszuwachs f = e^{∫θdt/3} − 1;  Verlust an Übergabe ΔI = ∫ w ω_vir dt
+     f = 0.001, τ = 0.1 Gyr: θ_e = 0.030/Gyr = 3 θ_c;  w_jetzt max 0.87023, w_jetzt > 0,5 für 0.095 Gyr;  ΔI = 0.110;  w_Preisach = 0
+     f = 0.010, τ = 0.1 Gyr: θ_e = 0.299/Gyr = 26 θ_c;  w_jetzt max 0.99850, w_jetzt > 0,5 für 0.325 Gyr;  ΔI = 0.351;  w_Preisach = 0
+     f = 0.100, τ = 0.1 Gyr: θ_e = 2.859/Gyr = 247 θ_c;  w_jetzt max 0.99998, w_jetzt > 0,5 für 0.551 Gyr;  ΔI = 0.595;  w_Preisach = 0
+     f = 0.100, τ = 1.0 Gyr: θ_e = 0.286/Gyr = 25 θ_c;  w_jetzt max 0.99836, w_jetzt > 0,5 für 3.207 Gyr;  ΔI = 3.467;  w_Preisach = 0
+     f = 0.300, τ = 1.0 Gyr: θ_e = 0.787/Gyr = 68 θ_c;  w_jetzt max 0.99978, w_jetzt > 0,5 für 4.219 Gyr;  ΔI = 4.560;  w_Preisach = 0
+   Atmende Schwingung um das Gleichgewicht R = R_v(1 + ε sin ω_vir t):  mittleres w der jetzigen Form (Preisach: 0)
+     ε = 1e-03: θ-Amplitude 0.28 θ_c, ⟨w⟩ = 0.163, Übergaberate ⟨1−w⟩ω = 0.837 der Rate bei w = 0
+     ε = 1e-02: θ-Amplitude 2.80 θ_c, ⟨w⟩ = 0.348, Übergaberate ⟨1−w⟩ω = 0.652 der Rate bei w = 0
+     ε = 1e-01: θ-Amplitude 28.00 θ_c, ⟨w⟩ = 0.476, Übergaberate ⟨1−w⟩ω = 0.524 der Rate bei w = 0
+
+3  Frisch kollabierte Galaxien (M_b = 6·10¹⁰ M☉, Hernquist a = 2.57 kpc, Top-Hat (1+Q)M_b, Kern-Hintergrund)
+   R_Q = 53.09 kpc; r_vir/R_Q: z_c=3.4: 1.003, z_c=2: 1.460, z_c=1: 2.142, z_c=0.5: 2.751
+   r_vir = R_Q bei z_c = 3.412
+   N* aus der RAR-Enge (z_c = 0,5, |g/g_RAR − 1| ≤ 5 % bei 10–50 kpc heute): jetzige Form 2.419, Preisach 2.419
+   Kern uebergabezeit: 1/λ_m (z_c = 0,5, Δ aus Top-Hat, N* = 2.42) = 3.26 Gyr; hier N*/ω_vir = 3.26 Gyr
+   z_c     z_obs   R_ξ (jetzt)   R_ξ (Preisach)   g/g_RAR − 1 bei 10 / 20 / 50 kpc (Preisach)
+    3.41    2.0   6.3978e-02    6.3978e-02       +0.0191  +0.0093  +0.0004
+    3.40    2.0   6.5156e-02    6.5156e-02       +0.0193  +0.0093  +0.0003
+    2.00    1.0   6.0666e-02    6.0666e-02       +0.0029  -0.0070  -0.0159
+    1.00    0.5   1.3665e-01    1.3665e-01       -0.0173  -0.0402  -0.0613
+    0.50    0.0   9.3126e-02    9.3126e-02       -0.0195  -0.0354  -0.0500
+
+4  Haufen 10¹⁵ M☉ (z = 0,3; Gas β = 2/3, r_c = 150 kpc, 10¹⁴ in 1 Mpc; BCG 1,5·10¹²; Galaxien 10¹³; NFW c = 4)
+     100 kpc: ν = 2.131, stoßfrei R_ξ = 0.799, Operator 0.201
+     250 kpc: ν = 2.331, stoßfrei R_ξ = 0.746, Operator 0.254
+    1000 kpc: ν = 3.242, stoßfrei R_ξ = 0.492, Operator 0.508
+    1500 kpc: ν = 3.748, stoßfrei R_ξ = 0.321, Operator 0.679
+   R_ξ = 1 − (ν−1)M_b/(q M_ref) enthält w nicht: vor dem Stoß (θ = 0) ist w in beiden Formen 0 → 80/20 unverändert.
+   Nach dem Stoß: auseinanderlaufende Bereiche, θ ≈ 3v/d (v, d angenommen):
+     v = 1000 km/s, d =  300 kpc: θ = 10.2/Gyr = 883 θ_c → w_jetzt = 1 − 1.2e-13, w_Preisach = 0
+     v = 1000 km/s, d = 1000 kpc: θ = 3.1/Gyr = 265 θ_c → w_jetzt = 1 − 8.5e-08, w_Preisach = 0
+     v = 3000 km/s, d =  300 kpc: θ = 30.7/Gyr = 2650 θ_c → w_jetzt = 1 − 0.0e+00, w_Preisach = 0
+     v = 3000 km/s, d = 1000 kpc: θ = 9.2/Gyr = 795 θ_c → w_jetzt = 1 − 5.7e-13, w_Preisach = 0
+     v = 4500 km/s, d =  300 kpc: θ = 46.0/Gyr = 3975 θ_c → w_jetzt = 1 − 0.0e+00, w_Preisach = 0
+     v = 4500 km/s, d = 1000 kpc: θ = 13.8/Gyr = 1192 θ_c → w_jetzt = 1 − 1.0e-15, w_Preisach = 0
+   Gasanteil der Übergabe nach dem Stoß 1 − (1 − e^{−x})/x, x = λ_m t: gilt nur mit Preisach (jetzige Form: λ = (1−w)ω/N* ≈ 0 solange θ > 0)
+
+5  Handprüfung
+   1 − w_bg heute = r²/(1 + r²), r = (a0/c)/(3H0) = 0.055994 → 3.1255e-03
+   von Hand: a0/c = 1,1e-10/2,998e8 = 3,669e-19 /s; 3H0 = 3·67,4/3,0857e19 = 6,553e-18 /s; r = 0,05599; r² = 3,135e-3; 1 − w = 3,125e-3

@@ -1,0 +1,100 @@
+====================================================================================================
+1  TRIADE AUF DER TEILCHENEBENE
+====================================================================================================
+1a Phase mit Windung +1: harmonischer Teil (Mittel von dθ)·L/2π = +1.000000000000; Rest ist exakt (Gradient einer periodischen Funktion)
+1a Phase mit Windung -1: harmonischer Teil (Mittel von dθ)·L/2π = -1.000000000000; Rest ist exakt (Gradient einer periodischen Funktion)
+1a Phase mit Windung +2: harmonischer Teil (Mittel von dθ)·L/2π = +2.000000000000; Rest ist exakt (Gradient einer periodischen Funktion)
+   ⇒ Auf dem Knoten ist die Windung (Ladung) genau der harmonische Teil der Phase: Hintergrund = Ladung (topologisch, ohne Länge),
+     Zentrum = Gradientfluss GM (Faltung 3Δs), Wirbel = Rotationsteil (Verwindung a_J = J/Mc).
+
+1b Leiter je Knoten (Längen in m); Gesetze: 3Δs·λ̄ = ℓ_P², 3Δs·a_J = (J/ħ)·ℓ_P²
+   Knoten             3Δs         ℓ_P         a_J          λ̄     λ̄/ℓ_P = ℓ_P/3Δs   3Δs·λ̄/ℓ_P²          r*
+   Elektron    6.7648e-58  1.6163e-35  1.9308e-13  3.8616e-13         2.389222e+22   1.000000000   7.434e-16
+   Proton      1.2421e-54  1.6163e-35  1.0515e-16  2.1031e-16         1.301211e+19   1.000000000   3.186e-14
+   m_p/3       4.1404e-55  1.6163e-35  3.1546e-16  6.3093e-16         3.903634e+19   1.000000000   1.839e-14
+   Planck      1.6163e-35  1.6163e-35  8.0813e-36  1.6163e-35         1.000000e+00   1.000000000   1.149e-04
+   Die Mitte ℓ_P ist für jede Masse dieselbe; jeder Knoten hat genau eine Zahl, (m/m_Pl)² = α_G(m).
+   Skalierung: 3Δs ∝ m¹, λ̄ ∝ m⁻¹, a_J ∝ m⁻¹, ℓ_P ∝ m⁰, r* ∝ m^{1/2}·a₀^{-1/2}.
+   Jede Gleichung zwischen Sprossen zweier Knoten hat die Form (m_p/m_e)^k = Zahl aus ℓ_P, λ̄, a₀ … ;
+   ohne a₀ bleibt nur k·ln(m_p/m_e) = 0 (keine Aussage); mit a₀ = c²/2Λ bände sie m_p/m_e an die Schließlänge Λ (Zustand, Epoche).
+1c Paare (Sprosse Proton = Sprosse Elektron): Exponent der Masse und ob a₀ eingeht
+    3Δs(p) = a_J (e): m_p^+1.0 ~ m_e^-1.0
+    3Δs(p) = λ̄  (e): m_p^+1.0 ~ m_e^-1.0
+    3Δs(p) = r*  (e): m_p^+1.0 ~ m_e^+0.5  (hängt an a₀)
+    a_J(p) = 3Δs (e): m_p^-1.0 ~ m_e^+1.0
+    a_J(p) = λ̄  (e): m_p^-1.0 ~ m_e^-1.0
+    a_J(p) = r*  (e): m_p^-1.0 ~ m_e^+0.5  (hängt an a₀)
+     λ̄(p) = 3Δs (e): m_p^-1.0 ~ m_e^+1.0
+     λ̄(p) = a_J (e): m_p^-1.0 ~ m_e^-1.0
+     λ̄(p) = r*  (e): m_p^-1.0 ~ m_e^+0.5  (hängt an a₀)
+     r*(p) = 3Δs (e): m_p^+0.5 ~ m_e^+1.0  (hängt an a₀)
+     r*(p) = a_J (e): m_p^+0.5 ~ m_e^-1.0  (hängt an a₀)
+     r*(p) = λ̄  (e): m_p^+0.5 ~ m_e^-1.0  (hängt an a₀)
+   ⇒ Keine Sprosse legt m_p/m_e fest, ohne eine Größe der inneren Richtung (a₀, Λ) als Teilchengröße zu lesen.
+
+1d Magnetisches Moment. Elementar: Ladung und Faltung am selben imaginären Versatz i·a_J ⇒ g = 2, μ = Q_el·c·a_J.
+   Proton als ein Knoten: μ = e·c·a_J = 5.050784e-27 J/T = 1.000000 μ_N
+   gemessen [G] μ_p = 2.792847 μ_N ⇒ Versatz der Ladung a_Q = μ_p/(e c) = 2.7928·a_J: Betrag und Phase sitzen im Proton nicht am selben Ort.
+   Proton uud: ⟨ΣS_z⟩ = +0.500000, ΣQ_el = +1.000000, ⟨Σ Q_i σ_zi⟩ = +1.000000  ⇒ μ = ⟨ΣQσ⟩·(m_p/m_q) μ_N;  mit m_q = m_p/3: +3.0000 μ_N  (gemessen [G] +2.7928)
+   Neutron udd: ⟨ΣS_z⟩ = +0.500000, ΣQ_el = +0.000000, ⟨Σ Q_i σ_zi⟩ = -0.666667  ⇒ μ = ⟨ΣQσ⟩·(m_p/m_q) μ_N;  mit m_q = m_p/3: -2.0000 μ_N  (gemessen [G] -1.9130)
+   μ_n/μ_p = -0.666667 (hängt nicht an m_q, nur an m_u = m_d); gemessen [G] -0.68498, Abweichung -2.67 %
+   m_q, das μ_p trifft: m_p/2.7928 = 336.0 MeV (= m_p/3 · 1.0742)
+   Erzwungen im Modell: g = 2 je elementarem Knoten, Summe der Momente (Multipolreihen addieren sich), ΣQ_el ganz (Z₃).
+   Nicht erzwungen: Drittelladungen (Eingabe), Farb-Antisymmetrie (volles SU(3), das Modell hat nur das Zentrum Z₃),
+   gleiche Teilung der Faltung m_q = m_p/3 (die gebundene Faltung liegt großteils nicht auf den Windungen). Kein Weg zu m_e.
+
+====================================================================================================
+2  KERNE (AME2020): Klasse kompakt/kollektiv und Regel im Kern
+====================================================================================================
+2a gemessene Isobaren: 266; größtes B/A je A: Maximum 8.7946 MeV bei A = 62
+   erstes A mit B/A ≥ 0.80·max: A = 4
+   erstes A mit B/A ≥ 0.90·max: A = 16
+   erstes A mit B/A ≥ 0.95·max: A = 28
+2b Kern als Trichter: r*/R, g_N(R)/a₀, Rückkehranteil q = e^{-s}, Kern-Nome Δs/R
+      A   R [fm]   r* [fm]     r*/R   g_N(R)/a₀        s      lg q       Δs/R
+      2    1.512     44.89    29.69   8.815e+02    29.69    -12.89  5.437e-40
+      4    1.905     63.48    33.33   1.111e+03    33.33    -14.47  8.631e-40
+     12    2.747    109.96    40.02   1.602e+03    40.02    -17.38  1.795e-39
+     16    3.024    126.97    41.99   1.763e+03    41.99    -18.24  2.175e-39
+     56    4.591    237.53    51.74   2.677e+03    51.74    -22.47  5.014e-39
+     62    4.749    249.93    52.62   2.769e+03    52.62    -22.85  5.366e-39
+    208    7.110    457.79    64.39   4.146e+03    64.39    -27.96  1.203e-38
+    238    7.437    489.69    65.85   4.336e+03    65.85    -28.60  1.316e-38
+   Grenze kompakt/kollektiv r*/R = 1 (r*/R ∝ A^{1/6}): A = 2.92e-09 < 1 ⇒ jeder Kern ist kompakt, die Regel ruht (dazu Erdfeld: s = 298633).
+   Die Triade der Kerne (Zentrum Faltung, Wirbel Nukleonenbewegung, Hintergrund Vakuum) sagt keinen Übergang in B/A voraus;
+   Sättigung, Maximum (x = ¼) und Schalen folgen aus Reichweite der Kernbindung, Coulomb und Zählregeln, nicht aus einer Länge des Modells.
+
+====================================================================================================
+3  NOME: |q_Δs| = Δs/r (instantan) gegen |q| = e^{-r*/r} im dynamischen Vorgang
+====================================================================================================
+3a Punktweise, 2000 zufällige (M, r), M = 10³⁰–10⁴⁶ kg, r/r* = 0,03–100: max |a_A/a_B − 1| / (v_f/c)² = 2.9431 (Schranke 24/(3e) = 2.9430)
+   Beide Formen sind Funktionen des augenblicklichen (M, r); die Identität χ(s)·(Δs/r)·3c²/r* = a_N·q/(1−q) gilt für jedes M(t), r(t).
+3b Die eine Gleichung ∂_t u + Γu = D ∂_ϖ²u bei Massensprung M → f·M am festen Ort r:
+   f = 0.7: Γ/D vorher 1.000000/r², nachher 1.000000/r²; ∂_t u nach dem Sprung / Γ = 3.33e-07 (Gitterfehler, h/r = 2e-03)
+          Lesetiefe ϖ_R = √(D·2Λ/c): 1.000000 r* → 0.836660 r*  (= √f); q: 0.367879 → 0.433155
+   f = 2.0: Γ/D vorher 1.000000/r², nachher 1.000000/r²; ∂_t u nach dem Sprung / Γ = 3.33e-07 (Gitterfehler, h/r = 2e-03)
+          Lesetiefe ϖ_R = √(D·2Λ/c): 1.000000 r* → 1.414214 r*  (= √f); q: 0.367879 → 0.243117
+   ⇒ Γ/D = a_N/GM = 1/r² hängt nicht an M: Ein Massensprung lässt das Profil in der inneren Richtung stationär,
+     nur die Lesetiefe ϖ_R ∝ √M rückt, und zwar zugleich mit D. Keine Übergangszeit, auch wenn man die Gleichung zeitlich liest.
+3c Bahnen nach der Massenänderung (Punktmasse; Anfang Kreisbahn): (A) Δs/r mit voller Spitzenform, (B) e^{-r*/r}, (N) Newton
+   Zwerg 10⁹ M☉, Stern bei r*, Supernova-Wind nimmt 30 % sofort: v_f = 61.8 km/s, (v_f/c)² = 4.25e-08
+      nach 3 Mrd. J.: r_max/r₀ (A) 1.371679616  (B) 1.371679433  (N) 81.874758;  r_min/r₀ (A) 1.000000000  (B) 1.000000000
+      max |r_A − r_B|/r₀ = 4.62e-06,  |φ_A − φ_B| am Ende = 1.84e-05 rad;  |r_B − r_N|/r₀ bis 80.588, |φ_B − φ_N| = 150.47 rad
+      Kontrolle ohne Massenänderung: |φ_A − φ_B| am Ende = 3.35e-05 rad (Umläufe 33.73); mit Vorgang 1.84e-05 rad (Umläufe 24.34)
+   Zwerg 10⁹ M☉, Stern bei 0,3 r*, Gezeitenabriss −50 % über 0,2 Mrd. J.: v_f = 61.8 km/s, (v_f/c)² = 4.25e-08
+      nach 3 Mrd. J.: r_max/r₀ (A) 1.622052409  (B) 1.622052281  (N) 2.228656;  r_min/r₀ (A) 1.000000000  (B) 1.000000000
+      max |r_A − r_B|/r₀ = 1.31e-06,  |φ_A − φ_B| am Ende = 4.90e-05 rad;  |r_B − r_N|/r₀ bis 0.652, |φ_B − φ_N| = 164.54 rad
+      Kontrolle ohne Massenänderung: |φ_A − φ_B| am Ende = 7.51e-05 rad (Umläufe 166.18); mit Vorgang 4.90e-05 rad (Umläufe 67.97)
+   Haufen 10¹⁴ M☉, Galaxie bei r*, Verschmelzung ×2 über 1 Mrd. J.: v_f = 1099.2 km/s, (v_f/c)² = 1.34e-05
+      nach 10 Mrd. J.: r_max/r₀ (A) 1.000000000  (B) 1.000000000  (N) 1.474765;  r_min/r₀ (A) 0.642426269  (B) 0.642389552
+      max |r_A − r_B|/r₀ = 3.44e-04,  |φ_A − φ_B| am Ende = 5.44e-03 rad;  |r_B − r_N|/r₀ bis 0.826, |φ_B − φ_N| = 38.10 rad
+      Kontrolle ohne Massenänderung: |φ_A − φ_B| am Ende = 2.00e-03 rad (Umläufe 6.32); mit Vorgang 5.44e-03 rad (Umläufe 12.85)
+   ⇒ Der Vorgang selbst ist groß (gegen Newton Ordnung 1); die beiden Schreibweisen trennen sich nur um die Spitzenform-Glieder ≲ 3(v_f/c)².
+
+====================================================================================================
+Von Hand
+====================================================================================================
+   s = 1: χ = 1/(e − 1) = 1/1,718282 = 0,581977;  s·q/(1 − q) = 0,367879/0,632121 = 0,581977
+   Proton aus drei Knoten: μ_p = (4μ_u − μ_d)/3, μ_u = +2 μ_N, μ_d = −1 μ_N (m_q = m_p/3)  ⇒ (8 + 1)/3 = 3 μ_N;  μ_n = (4·(−1) − 2)/3 = −2 μ_N;  μ_n/μ_p = −2/3
+   Zwerg 10⁹ M☉: v_f⁴ = GMa₀ = 1,3271·10²⁹ · 1,1·10⁻¹⁰ = 1,4598·10¹⁹ ⇒ v_f = 61,81 km/s; (v_f/c)² = 4,251·10⁻⁸; 24/(3e)·(v_f/c)² = 1,25·10⁻⁷
+   Kern ⁵⁶Fe: r* = √(G·56·m_u/a₀) = √(6,6743·10⁻¹¹·9,2990·10⁻²⁶/1,1·10⁻¹⁰) = √(5,642·10⁻²⁶) = 2,375·10⁻¹³ m; R = 1,2·56^{1/3} fm = 4,59 fm; r*/R = 51,7

@@ -1,0 +1,24 @@
+1) Jede Stufe, integriert mit dem Maß ihres Flussgesetzes (Gewicht (r*/r)^{d−1} auf d ln r):
+   ∫(a − a_N)·(r*/r)^{d−1} d ln r = a₀·Γ(d+1)ζ(d+1)
+   d = 1:  1.6449340668   Γ(2)ζ(2) = 1.6449340668
+   d = 2:  2.4041138063   Γ(3)ζ(3) = 2.4041138063
+   d = 3:  6.4939394023   Γ(4)ζ(4) = 6.4939394023
+   d = 1: Maß d ln r (Skala);  d = 2: Maß d(1/r) (Umfang, Krümmung der Bahnkreise);  d = 3: Maß d(1/r²) (Fläche, Newton-Feld)
+
+2) Die Größe der Stufe 2 in Bahnfrequenzen: (a − a_N)·r*/r = r*·(Ω² − Ω_N²)
+   ∫(Ω² − Ω_N²) d ln r = 2.4041138063 · a₀/r*  = 2ζ(3)·Ω_N(r*)²,  2ζ(3) = 2.4041138063
+   Die zusätzliche Umlauffrequenz im Quadrat, über den Logarithmus des Radius summiert, ist 2ζ(3) mal das Quadrat
+   der Kepler-Frequenz am Schwellenradius; für jede Masse dieselbe Zahl.
+   Sonne       : Ω_N(r*) = 3.378e-13 s⁻¹ (Umlauf 0.589 Mio. Jahre),  ∫(Ω² − Ω_N²) d ln r = 2.743e-25 s⁻²
+   Milchstraße : Ω_N(r*) = 6.825e-16 s⁻¹ (Umlauf 292 Mio. Jahre),  ∫(Ω² − Ω_N²) d ln r = 1.120e-30 s⁻²
+
+3) Das Zusatzpotential in geschlossener Form (vom Zentrum gezählt):
+   Φ_X(r) = ∫₀^r (a − a_N) dr = a₀r*·∫_s^∞ n_B ds = v_f²·ln ν(s) = −v_f²·ln(1 − e^{−s})
+   r =   0.3 r*:  numerisch 0.0363258604   v_f²·ln ν = 0.0363258604
+   r =   1.0 r*:  numerisch 0.4586751454   v_f²·ln ν = 0.4586751454
+   r =   3.0 r*:  numerisch 1.2606536049   v_f²·ln ν = 1.2606536049
+   r =  30.0 r*:  numerisch 3.4178177525   v_f²·ln ν = 3.4178177525
+   ln ν = −ln(1 − e^{−s}) = ln Z ist der Logarithmus der Zustandssumme einer Bose-Mode; außen Φ_X → v_f²·ln(r/r*).
+   Takt: δ_X = (v_f/c)²·ln ν(s).
+   Dieselbe Zahl 2ζ(3) als Potential: ∫₀^∞ Φ_X d(a_N/a₀) = 2·v_f²∫ s·ln ν ds = 2ζ(3)·v_f²:
+   2.4041138063

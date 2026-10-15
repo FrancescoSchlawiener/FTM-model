@@ -1,0 +1,224 @@
+Wechselwirkungen im Zustandsraum – Rechnung zur Forschungsnotiz 03
+Parameter: L=1.0, C=1.0, m=1.0, ell=1.0, a=0.35, b=0.2, R0=0.1, alphaR=0.5, Rrad=0.05, betaA=3.0, kel=0.2, kappaT=0.05, c=0.02, cac=0.01, am=0.1, bm=0.2, Gam=0.03, Cth=20.0, Gth=1.0, Ta=1.0, T0=1.0, Sb=0.05, epsD=0.0, Yref=0.1, mD=2.0, nu0=0.0, Ea=10.0, epsg=0.0
+
+==============================================================================
+TEIL 1  Exakte Zerlegung  ż = F_tan + F_irr + F_port + ε F_par  (Identitäten)
+==============================================================================
+Stichprobe: 2000 Zufallszustände
+max |∇E·F_tan|                         = 1.416e-15   (tangential: energieneutral)
+max |∇S·F_tan|                         = 8.327e-17   (tangential: entropieneutral)
+max |∇E·F_irr|                         = 7.105e-15   (innere Dissipation verschiebt nur)
+min  ∇S·F_irr                          = 7.042e-06   (>= 0)
+max |∇E·F_port - (P_in-P_grav-P_out)|  = 1.332e-15
+max |∇E·F_par - P_grav|                = 1.475e-17   (Schädigung: E-neutral)
+min  ∇S·F_par                          = 1.351e-29   (>= 0, Y·Ḋ/T)
+max |div F_tan| in (q,I,x,v,σ=C_th ln T) = 5.551e-11   (Liouville: tangential kontrahiert nie)
+
+==============================================================================
+TEIL 2  Energiebilanz und Entropieproduktion entlang einer Trajektorie
+==============================================================================
+Integration: RK4, dt = 0.01, t = 1000, langsame Terme aktiv (ε_D=1e-05, ν0=0.05, ġ=0.0001)
+Endzustand: T = 1.1948, D = 1.371e-03, A = 1.214e-02, g = 0.6000
+Energiebilanz  E(t) - E(0) - ∫(P_in - P_out)dt : max. Fehler = 5.181e-08
+   Durchsatz ∫(P_in + P_out)dt = 471.853  -> relativer Fehler = 1.098e-10
+Entropiebilanz S(t) - S(0) - ∫(Π - Φ_S)dt       : max. Fehler = 2.736e-10
+Entropieproduktion: min Π(t) = 3.8903e-06  (>= 0),  ∫Π dt = 237.1728
+Zeitmittel der Leistungsflüsse über t = 0..1000 (Vorzeichen: >0 in Pfeilrichtung):
+   DC-Quelle -> EM (aktives Element)               2.163897e-01
+   Strömung -> Mech (Selbsterregung)               2.183355e-02
+   Gravitation -> Mech (parametrisch ½ṁg x²/l)     1.465763e-05
+   EM -> Wärme (Joule R I²)                        6.928473e-02
+   EM -> Wärme (Sättigung b I⁴)                    1.153587e-01
+   Mech -> Wärme (innere Dämpfung c v²)            4.366710e-03
+   Mech -> Wärme (Sättigung b_m v⁴)                1.541281e-02
+   Mech -> Wärme über Schädigung (Y Ḋ)             7.449947e-08
+   EM -> außen (Abstrahlung)                       3.091282e-02
+   Mech -> außen (Schall)                          2.183355e-03
+   Wärme -> Umgebung                               2.004939e-01
+   Peltier -> Umgebung (S T_a I)                   2.482629e-05
+   Wärme -> EM (Seebeck-EMK · I)                   5.484166e-06
+   Wärmeknoten -> Peltier (S T I)                  3.031046e-05
+   EM -> Mech (Lorentz Γ I v)                      3.489952e-04
+   Mech -> Wärme (reversibel κ T x v)              2.590061e-06
+
+==============================================================================
+TEIL 3  Jacobi-Struktur
+==============================================================================
+Arbeitspunkt T* = 1.21048 (aus Teil 5)
+J_tan im Ruhepunkt (EM, Mech), energienormiert (q/√C, √L I, √k x, √m v):
+   [ 0.0000   1.0000   0.0000   0.0000]
+   [-1.0000   0.0000   0.0000  -0.0300]
+   [ 0.0000   0.0000   0.0000   0.8303]
+   [ 0.0000   0.0300  -0.8303   0.0000]
+   ||J + Jᵀ|| = 0.00e+00   (exakt antisymmetrisch)
+   Eigenwerte: -1.1e-19-1.00144i  +5.6e-17-0.82915i  +5.6e-17+0.82915i  -1.1e-19+1.00144i
+   Normalmoden Ω1 = 0.82915, Ω2 = 1.00144   (ω_e = 1, ω_m = √k = 0.83035)
+Punkt auf dem Torus (g=0.5): tr J_tan (in σ-Koord.) = 4.34e-12;  tr J_trans = -0.2972
+Blocknormen der vollen Jacobimatrix (ε-Terme aktiv: ε_D=1e-5, ν0=0.05, ġ=1e-4):
+   Zeile\Spalte               EM(q,I)       Mech(x,v)               T  langsam(D,A,g)
+   EM(q,I)                  1.414e+00       3.000e-02       7.625e-02       1.744e-01
+   Mech(x,v)                3.000e-02       1.245e+00       4.020e-03       8.199e-02
+   T                        1.464e-02       1.889e-02       4.815e-02       4.578e-03
+   langsam(D,A,g)           0.000e+00       2.079e-08       8.986e-05       1.325e-05
+
+==============================================================================
+TEIL 4  Onsager (dissipativ, symmetrisch) und Casimir (reaktiv, antisymmetrisch)
+==============================================================================
+Thermoelektrisches Element (Kräfte X_e = ΔV/T, X_q = ΔT/T²; Flüsse I, J_q):
+   L = [[10.95218, 0.66287], [0.66287, 1.50537]]
+   L12 - L21 = 0.0e+00  (Kelvin: Π = S T  <=>  Onsager L12 = L21)
+   Eigenwerte L: 1.45909, 10.99846  (> 0  => Π_s >= 0)
+   min X·L·X über 5000 Zufallskräfte = 2.398e-03
+   Seebeck/Peltier-Beitrag zur Gesamt-Entropieproduktion: max |ΔΠ| = 0.0e+00
+Gyrator (Lorentz/Induktion): J[Ĩ,ṽ] = -0.03000, J[ṽ,Ĩ] = +0.03000  -> antisymmetrisch (B-ungerade, Casimir)
+Thermoelastik (Metrik C_th/T):   J[ṽ,T̃] = +0.00861, J[T̃,ṽ] = -0.00861  -> antisymmetrisch (reversibel)
+
+==============================================================================
+TEIL 5  Schleifenverstärkungen und die Reihe Σ qⁿ
+==============================================================================
+S2  EM -> Wärme -> Material σ(T) -> EM
+   stromgetrieben q = 0.5: ΔT_sim = 1.00000,  ΔT0/(1-q) = 1.00000,  Teilsummen ΔT0·Σ_(n<=N) qⁿ (N=0,1,2,5,20): 0.5000, 0.7500, 0.8750, 0.9844, 1.0000
+   stromgetrieben q = 0.9: ΔT_sim = 9.00000,  ΔT0/(1-q) = 9.00000,  Teilsummen ΔT0·Σ_(n<=N) qⁿ (N=0,1,2,5,20): 0.9000, 1.7100, 2.4390, 4.2170, 8.0152
+   stromgetrieben q = 1.2: ΔT erreicht 50·ΔT0 nach t = 11.17 C/G  (Reihe divergiert: thermisches Durchgehen)
+   selbsterregt (Minimalsystem): q_S2 = ∂P/∂T / G = -0.0500  (negativ: stabilisierend)
+   ΔT0 (ohne Rücklauf) = 0.22100,  ΔT = ΔT0/(1-q) = 0.21048  -> T* = 1.21048
+S3  Selbsterregung (aktives Element bzw. Strömung):  q_self(A) = a / (R_tot + 3bA²/4)
+   EM:   A*² = 1.26317,  q_self(A*) = 1.000000,  λ⊥,EM = (aA*/2L)·∂_A ln q = -μ_e = -0.18948
+   Mech: A*² = 0.46667,  q_self(A*) = 1.000000,  λ⊥,Mech = -μ_m = -0.07000
+   Wärme: λ_T = -(G - ∂P/∂T)/C_th = -0.05250
+S1  EM -> Lorentz -> Mech -> Bewegungs-EMK -> EM:  q_LI(ω) = Γ²ω² / (L m (ω²-ω_e²)(ω²-ω_m²))
+   q_LI(Ω1) = 1.000000000,  q_LI(Ω2) = 1.000000000   (Normalmoden = Barkhausen q = 1)
+   ω = 0.5: q_LI = +0.00068,  Σqⁿ = 1/(1-q) = 1.00068
+   ω = 0.95: q_LI = -0.03911,  Σqⁿ = 1/(1-q) = 0.96236
+   ω = 1.2: q_LI = +0.00392,  Σqⁿ = 1/(1-q) = 1.00394
+Netzwerk (ΔT, ΔR, ΔP): Spektralradius ρ(A) = 0.36840 = |q_S2|^(1/3) = 0.36840
+   ||(I-A)^-1 - Σ_(n<60) Aⁿ|| = 2.22e-16;  Gesamtverstärkung ΔP0 -> ΔT: 0.95238 = (1/G)/(1-q) = 0.95238
+S5  Maxwell-Druck -> Spalt -> Feld (Pull-in): q_ES = ε0A V²/(k (d-x)³);  am Pull-in-Punkt q_ES = 1.000000
+S7  Ermüdung: Ḋ = ε_D (Y/Y_ref)^m, Y ∝ x² ∝ 1/k ∝ 1/(1-D)  ->  Ḋ ∝ (1-D)^(-m), m = 2
+   Lebensdauer t_f = (1-D0)^(m+1) / ((m+1) Ḋ0) = 0.3333 / Ḋ0  (endliche Zeit statt Konvergenz)
+S8  Alterung: ∂ln Ȧ/∂T = E_a/T² = 6.8248 (Modell); real E_a = 0.7 eV, 300->310 K: Faktor 2.395
+
+==============================================================================
+TEIL 6  Torus-Attraktor: Lyapunov-Signatur, Rotationszahl, Poincaré-Schnitt
+==============================================================================
+g = 0.5 (quasiperiodisch):
+   Lyapunov-Spektrum (q,I,x,v,T):  +0.00004  -0.00001  -0.05361  -0.06648  -0.18255
+   Σλ = -0.30261,  <div F> = -0.30261
+   Ω_EM = 0.999111, Ω_mech = 0.829245, Rotationszahl ρ = Ω_mech/Ω_EM = 0.829983
+   Ordnungsparameter der Phasendifferenz |<e^iψ>| = 0.0434
+   Poincaré-Schnitt θ_EM = 0 mod 2π: 397 Durchgänge, belegte θ_mech-Bins (72): 100.0 %
+   mittlerer Lorentz-Energiefluss EM->Mech  Γ<I v> = +0.00019
+   T* = 1.2017
+   Vorhersage (Teil 5): λ⊥,EM = -0.1895, λ⊥,Mech = -0.0700, λ_T = -0.0525
+g = 0.8 (eingerastet):
+   Lyapunov-Spektrum (q,I,x,v,T):  -0.00000  -0.00904  -0.05537  -0.12176  -0.14887
+   Σλ = -0.33505,  <div F> = -0.33505
+   Ω_EM = 1.004428, Ω_mech = 1.004435, Rotationszahl ρ = Ω_mech/Ω_EM = 1.000007
+   Ordnungsparameter der Phasendifferenz |<e^iψ>| = 0.9999
+   Poincaré-Schnitt θ_EM = 0 mod 2π: 399 Durchgänge, belegte θ_mech-Bins (72): 1.4 %
+   mittlerer Lorentz-Energiefluss EM->Mech  Γ<I v> = +0.01130
+   T* = 1.2077
+
+==============================================================================
+TEIL 7  Kollaps T² -> T¹ : Rast-Scan in g, langsame Rampe, Alterung
+==============================================================================
+Rast-Scan (A = 0):  g,  ω_m,0 = √(k(T*,0,g)),  ρ = Ω_m/Ω_e,  |<e^iψ>|,  max|I|,  max|v|
+   g = 0.20   ω_m,0 = 0.6239   ρ = 0.62406   |<e^iψ>| = 0.0209   max|I| = 1.142   max|v| = 0.733
+   g = 0.30   ω_m,0 = 0.6995   ρ = 0.69959   |<e^iψ>| = 0.0265   max|I| = 1.147   max|v| = 0.741
+   g = 0.40   ω_m,0 = 0.7677   ρ = 0.76772   |<e^iψ>| = 0.0372   max|I| = 1.152   max|v| = 0.751
+   g = 0.50   ω_m,0 = 0.8305   ρ = 0.83022   |<e^iψ>| = 0.0556   max|I| = 1.157   max|v| = 0.766
+   g = 0.60   ω_m,0 = 0.8886   ρ = 0.88816   |<e^iψ>| = 0.0803   max|I| = 1.161   max|v| = 0.789
+   g = 0.65   ω_m,0 = 0.9163   ρ = 0.91602   |<e^iψ>| = 0.1113   max|I| = 1.161   max|v| = 0.803
+   g = 0.70   ω_m,0 = 0.9433   ρ = 0.94378   |<e^iψ>| = 0.1981   max|I| = 1.159   max|v| = 0.819
+   g = 0.72   ω_m,0 = 0.9539   ρ = 0.95446   |<e^iψ>| = 0.2436   max|I| = 1.157   max|v| = 0.822
+   g = 0.74   ω_m,0 = 0.9640   ρ = 0.96611   |<e^iψ>| = 0.4455   max|I| = 1.153   max|v| = 0.809
+   g = 0.75   ω_m,0 = 0.9694   ρ = 1.00056   |<e^iψ>| = 0.9065   max|I| = 1.150   max|v| = 0.686
+   g = 0.76   ω_m,0 = 0.9744   ρ = 1.00003   |<e^iψ>| = 0.9997   max|I| = 1.142   max|v| = 0.527
+   g = 0.78   ω_m,0 = 0.9846   ρ = 0.99999   |<e^iψ>| = 0.9998   max|I| = 1.115   max|v| = 0.718
+   g = 0.80   ω_m,0 = 0.9949   ρ = 1.00001   |<e^iψ>| = 0.9999   max|I| = 1.065   max|v| = 0.829
+   g = 0.82   ω_m,0 = 1.0050   ρ = 1.00001   |<e^iψ>| = 0.9999   max|I| = 1.077   max|v| = 0.810
+   g = 0.84   ω_m,0 = 1.0147   ρ = 1.00000   |<e^iψ>| = 0.9998   max|I| = 1.129   max|v| = 0.661
+   g = 0.86   ω_m,0 = 1.0244   ρ = 1.00007   |<e^iψ>| = 0.9648   max|I| = 1.149   max|v| = 0.619
+   g = 0.87   ω_m,0 = 1.0294   ρ = 1.03091   |<e^iψ>| = 0.5114   max|I| = 1.153   max|v| = 0.804
+   g = 0.88   ω_m,0 = 1.0340   ρ = 1.03685   |<e^iψ>| = 0.3363   max|I| = 1.156   max|v| = 0.820
+   g = 0.90   ω_m,0 = 1.0436   ρ = 1.04673   |<e^iψ>| = 0.2345   max|I| = 1.159   max|v| = 0.820
+   g = 0.95   ω_m,0 = 1.0677   ρ = 1.07144   |<e^iψ>| = 0.1317   max|I| = 1.164   max|v| = 0.804
+   g = 1.00   ω_m,0 = 1.0903   ρ = 1.09462   |<e^iψ>| = 0.1075   max|I| = 1.166   max|v| = 0.789
+   Rastfenster (|ρ-1| < 2e-4): g ∈ [0.76, 0.86]
+Alterungs-Scan (g = 0.5, A fest): Zyklustod des EM-Umlaufs bei μ_e(A) = 0
+   A = 0.30:  μ_e = a - R_rad - R(T*,A) = +0.0991   max|I| = 0.8538   max|v| = 0.746   T* = 1.1148
+   A = 0.50:  μ_e = a - R_rad - R(T*,A) = +0.0419   max|I| = 0.5757   max|v| = 0.726   T* = 1.0648
+   A = 0.60:  μ_e = a - R_rad - R(T*,A) = +0.0150   max|I| = 0.3570   max|v| = 0.709   T* = 1.0358
+   A = 0.65:  μ_e = a - R_rad - R(T*,A) = +0.0019   max|I| = 0.1364   max|v| = 0.690   T* = 1.0213
+   A = 0.70:  μ_e = a - R_rad - R(T*,A) = -0.0132   max|I| = 0.0564   max|v| = 0.683   T* = 1.0207
+   A = 0.80:  μ_e = a - R_rad - R(T*,A) = -0.0435   max|I| = 0.0558   max|v| = 0.682   T* = 1.0206
+   kritisches A_c (μ_e = 0 bei T = T_a + P_mech/G = 1.0210): A_c = 0.6563
+Langsame Rampe ġ = ±5e-05 (ε = ġ/ω ≈ 5e-05), Fenster Δt = 250: Rotationszahl im Fenster
+   g(auf)   ρ_auf      |  g(ab)    ρ_ab
+   0.6125   0.89153   |  0.9375   1.06901
+   0.6250   0.89860   |  0.9250   1.06371
+   0.6375   0.90521   |  0.9125   1.05660
+   0.6500   0.91377   |  0.9000   1.05020
+   0.6625   0.92018   |  0.8875   1.04202
+   0.6750   0.92631   |  0.8750   1.03798
+   0.6875   0.93152   |  0.8625   1.02785
+   0.7000   0.94210   |  0.8500   0.99945
+   0.7125   0.94640   |  0.8375   0.99873
+   0.7250   0.95518   |  0.8250   0.99822
+   0.7375   0.95683   |  0.8125   0.99760
+   0.7500   0.97063   |  0.8000   0.99709
+   0.7625   1.00001   |  0.7875   0.99685
+   0.7750   1.00139   |  0.7750   0.99770
+   0.7875   1.00174   |  0.7625   0.99808
+   0.8000   1.00190   |  0.7500   0.99943
+   0.8125   1.00253   |  0.7375   0.99930
+   0.8250   1.00323   |  0.7250   0.97778
+   0.8375   1.00286   |  0.7125   0.95312
+   0.8500   1.00221   |  0.7000   0.94755
+   0.8625   1.00082   |  0.6875   0.94192
+   0.8750   1.00113   |  0.6750   0.93156
+   0.8875   1.01922   |  0.6625   0.92604
+   0.9000   1.04342   |  0.6500   0.92021
+   0.9125   1.04992   |  0.6375   0.91133
+   0.9250   1.05647   |  0.6250   0.90700
+   0.9375   1.06028   |  0.6125   0.89867
+   Rastkriterium in der Rampe: |ρ-1| < 0.005 (ein Phasensprung pro Fenster ergäbe >= 0.025)
+   Rast bei Rampe auf:  g ∈ [0.7625, 0.8750] (Fenstermitten)
+   Rast bei Rampe ab:   g ∈ [0.7375, 0.8500] (Fenstermitten)
+Bistabilitätstest (fester Parameter, Start im Rastzustand von g = 0.80, t = 3000):
+   g = 0.72:  ρ = 0.95480
+   g = 0.74:  ρ = 0.96606
+   g = 0.87:  ρ = 1.03194
+   g = 0.88:  ρ = 1.03711
+   g = 0.89:  ρ = 1.04145
+
+==============================================================================
+TEIL 8  Gravitation als langsamer Parameter – FTM-Größen
+==============================================================================
+Körper, g = GM/R², Δs = GM/(3c²), dτ/dt = √(1-6Δs/R), 1-dτ/dt
+   Erde                   g = 9.8203e+00 m/s²   Δs = 1.47834e-03 m   dτ/dt = 0.999999999304   1-dτ/dt = 6.9613e-10
+   Sonne                  g = 2.7420e+02 m/s²   Δs = 4.92208e+02 m   dτ/dt = 0.999997877495   1-dτ/dt = 2.1225e-06
+   Sirius B               g = 4.0161e+06 m/s²   Δs = 5.01068e+02 m   dτ/dt = 0.999740793253   1-dτ/dt = 2.5921e-04
+   Neutronenstern 1.4 M☉  g = 1.2903e+12 m/s²   Δs = 6.89092e+02 m   dτ/dt = 0.809601233782   1-dτ/dt = 1.9040e-01
+   Kontrolle Erde: Δs⊕ = 1.4783 mm,  Schwarzschild-Radius r₀ = 6Δs⊕ = 8.870 mm
+   Erde                   ω_EM,obs = 0.999999999304, ω_m,obs = 0.830699999422, ρ_obs - ρ_loc = 0.0e+00
+   Sonne                  ω_EM,obs = 0.999997877495, ω_m,obs = 0.830698236835, ρ_obs - ρ_loc = 0.0e+00
+   Sirius B               ω_EM,obs = 0.999740793253, ω_m,obs = 0.830484676955, ρ_obs - ρ_loc = 0.0e+00
+   Neutronenstern 1.4 M☉  ω_EM,obs = 0.809601233782, ω_m,obs = 0.672535744903, ρ_obs - ρ_loc = -1.1e-16
+Zeitdilatations-Gradient: Δω/ω = g h / c² bei h = 22.5 m: 2.4585e-15
+System um h = 1000 m angehoben:  δg/g = -3.1385e-04
+   Pendel-Zyklus (ω_m = √(g/l)): δω_m/ω_m = -1.5694e-04;  EM-Zyklus: δω_e/ω_e = 0
+   gemeinsamer Zeitdilatationsfaktor: δ(dτ/dt) = 1.0925e-13
+   Verhältnis differentieller Kanal / gemeinsamer Kanal = 1.437e+09
+Modell: ∂ln ω_m/∂ln g = (m g/l)/(2k) bei g = 0.5: 0.3626
+Druckvorspannung (k = k_el(1-D) - κΔT - m g/l): Knick-/Zyklusverlust bei g_c = 0.1895
+Resonanzmitte ω_m(g) = ω_e bei g = 0.8105
+
+==============================================================================
+TEIL 9  Fluktuations-Dissipations-Beziehung
+==============================================================================
+Langevin-Oszillator, Rauschen <ξξ> = 2 c k_B T δ mit c = 0.1, k_B T = 0.01, 4000 Realisierungen:
+   <½ m v²>/(½ k_B T) = 1.0062,   <½ k x²>/(½ k_B T) = 1.0070
+Johnson-Nyquist S_V = 4 k_B T R bei R = 1 kΩ, T = 300 K: 1.6568e-17 V²/Hz = 4.070 nV/√Hz
+
+Rechenzeit: 522.5 s

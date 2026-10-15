@@ -1,0 +1,24 @@
+1) Kac für Flüsse: μ(A) = E[Verweildauer]/E[Zyklus]
+   Verweildauer 1/H, Zyklus 2π/H  →  Ω_b/Ω_m = 1/2π = 0.15915,  ν = 6.28319,  q = 0.84085,  Q = 5.28319
+   H kürzt sich: das Verhältnis ist zeitlich konstant, auch wenn H atmet.
+
+2) Schleife je Relaxationszeit: Verlustanteil 1/2π, Summe Σ qⁿ·(1/H) = 2π/H = ein Zyklus
+   Σ qⁿ = 6.283185
+
+3) Stetige Form: Fluss erneuert sich mit der Rate Γ, eigene Zustände mit H
+   ν = H/Γ;  ν = 2π  ⟺  Γ = H/2π = a₀/c = θ_c  (kritische Rate der Schließungsregel)
+
+4) Vergleich mit Messungen [G]
+   Planck 2018 TT,TE,EE+lowE+lensing: ν = 6.3643 ± 0.0646  → Abstand zu 2π: +1.26 σ (ohne Korrelation)
+      Vorhersage Ω_c h² = (2π−1)·Ω_b h² = 0.11818 ± 0.00079
+   Planck 2018 + BAO: ν = 6.3225 ± 0.0525  → Abstand zu 2π: +0.75 σ (ohne Korrelation)
+      Vorhersage Ω_c h² = (2π−1)·Ω_b h² = 0.11845 ± 0.00074
+   BBN (D/H) Ω_b h² = 0.02218 ± 0.00055: Ω_c h² = 0.1172 ± 0.0029 gegen Planck 0,1200 ± 0,0012 → +0.90 σ
+
+5) Gleichwertige Form: a₀ = c·H₀·Ω_b/Ω_m
+   H₀ = 67.4: c·H₀/ν(Planck 6,364) = 1.0290e-10,  c·H₀/2π = 1.0422e-10 m/s²
+   H₀ = 70.0: c·H₀/ν(Planck 6,364) = 1.0686e-10,  c·H₀/2π = 1.0824e-10 m/s²
+   H₀ = 73.0: c·H₀/ν(Planck 6,364) = 1.1144e-10,  c·H₀/2π = 1.1288e-10 m/s²
+
+6) Kosmischer Kern: Umlauffrequenz des Horizonts (euklidisch) ω = H, Relaxation λ = H → k = λ/ω = 1
+   Radiale Antwort ω/(λ²+ω²) bei festem λ maximal für ω = λ; λ_eff = ω + λ²/ω minimal (= 2ω) bei k = 1.

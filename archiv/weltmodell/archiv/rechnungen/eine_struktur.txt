@@ -1,0 +1,37 @@
+================================================================================================
+A  Perioden der Rückkehr (imaginäre Zeit) je Ebene; kT = ħ/Periode; Λ = π·c²/κ
+================================================================================================
+innere Richtung: τ_D = c/a₀ = 2Λ/c = 2.7254e+18 s = 86.4 Mrd a,  Λ = 13.24 Gpc
+   kT_I = ħ/τ_D = ħa₀/c = 2.8026e-30 K
+Horizont (global): κ = cH₀, Periode 2πc/κ = 2π/H₀ = 2.8765e+18 s;  T_GH = 2.6554e-30 K
+   Λ_H = π·c²/κ = πc/H₀ = 13.97 Gpc;  Λ/Λ_H = 2πa₀/(cH₀) = Θ = 0.9475
+Falte (lokal, Sonnenmasse): κ = c²/(2r₀), Periode = 24πΔs/c = 1.2379e-04 s  (Probe 24πΔs/c = 1.2379e-04)
+   T = ħc/(24πkΔs) = 6.1703e-08 K;  Λ_loc = π·c²/κ = 2π·r₀ = 18555.8 m (Probe 2πr₀ = 18555.8)
+   ⇒ auf jeder Ebene: Periode = 2Λ/c (Kac-Zeit der bei Λ geschlossenen Halbgeraden), Λ = π·c²/κ, a = κ/2π
+
+================================================================================================
+B  Verschränkung: gemeinsamer Knoten, CHSH  S = E(a,b) − E(a,b') + E(a',b) + E(a',b')
+================================================================================================
+B1 mitgeführte Eigenschaft (lokal, jede Mischung deterministischer Strategien): max |S| = 2
+B2 mitgeführte Richtung (Monte-Carlo, Winkel 0/45/90/135°): S = 2.0000;  analytisch (Dreieck E = −(1 − 2Δ/π)) max S = 2.0000
+B3 Knoten, Grundschwingung E = −cos Δ: max S = 2.828427  (2√2 = 2.828427), Winkel π/4
+   Photon (Polarisation kehrt nach π zurück, E = −cos 2Δ): max S = 2√2 bei θ = 67.50° ≙ 22,5° mod 45°
+B4 Eigenwert CHSH-Operator (zwei Spins ½): 2.828427
+B5 b = 0.0: P(A=+1) = 0.5000, P(A=−1) = 0.5000, E(a,b) = -0.9553, −cos(a−b) = -0.9553
+B5 b = 0.7: P(A=+1) = 0.5000, P(A=−1) = 0.5000, E(a,b) = -0.9211, −cos(a−b) = -0.9211
+B5 b = 2.0: P(A=+1) = 0.5000, P(A=−1) = 0.5000, E(a,b) = +0.1288, −cos(a−b) = +0.1288
+B6 Oberschwingungen der Windung (Dreieck abgeschnitten nach N Gliedern, E(0) = −1):
+   N =     1: Anteil Grundschwingung 1.0000, max S = 2.8284
+   N =     2: Anteil Grundschwingung 0.9000, max S = 2.3626
+   N =     3: Anteil Grundschwingung 0.8687, max S = 2.2320
+   N =     5: Anteil Grundschwingung 0.8447, max S = 2.1350
+   N =    10: Anteil Grundschwingung 0.8273, max S = 2.0660
+   N =   100: Anteil Grundschwingung 0.8122, max S = 2.0064
+   N =  1000: Anteil Grundschwingung 0.8107, max S = 2.0005
+   Mischung Grundschwingung (1−ε) + Dreieck ε:
+   ε = 0.00: max S = 2.8284
+   ε = 0.10: max S = 2.7456
+   ε = 0.25: max S = 2.6213
+   ε = 0.50: max S = 2.4142
+   ε = 1.00: max S = 2.0000
+   Grenze ohne Einschränkung (nur kein Signal, Popescu-Rohrlich): S = 4

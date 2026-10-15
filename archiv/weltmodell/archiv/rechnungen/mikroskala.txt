@@ -1,0 +1,152 @@
+------------------------------------------------------------------------------
+TEIL C  Ladung als Windungszahl
+------------------------------------------------------------------------------
+C1  Windungszahl w = (1/2π)∮dθ eines stetigen Feldes ψ = |ψ|e^{iθ} ≠ 0 auf dem Kreis
+    ν = +0.000: Phasenlauf/2π = +0.0000, Randauslenkung |ψ(L)−ψ(0)| = 0.0000  (2|sin πν| = 0.0000)
+    ν = +1.000: Phasenlauf/2π = +1.0000, Randauslenkung |ψ(L)−ψ(0)| = 0.0000  (2|sin πν| = 0.0000)
+    ν = -2.000: Phasenlauf/2π = -2.0000, Randauslenkung |ψ(L)−ψ(0)| = 0.0000  (2|sin πν| = 0.0000)
+    ν = +0.500: Phasenlauf/2π = +0.5000, Randauslenkung |ψ(L)−ψ(0)| = 2.0000  (2|sin πν| = 2.0000)
+    ν = +0.333: Phasenlauf/2π = +0.3333, Randauslenkung |ψ(L)−ψ(0)| = 1.7321  (2|sin πν| = 1.7321)
+
+C2  Torus Nx×Ny mit Verdrehung ψ(x+Nx) = e^{2πiν}ψ(x): minimale Energie (Gitter-GL, Gradientenfluss)
+         ν       Ny=8      Ny=16      Ny=32  E/Ny (32)  analytisch
+     0.000     0.0000     0.0000     0.0000     0.0000      0.0000
+     0.250     0.8187     1.6373     3.2746     0.1023      0.1028
+     0.333     1.4501     2.9002     5.8005     0.1813      0.1827
+     0.500     3.2290     6.4579    12.9159     0.4036      0.4106
+     1.000     0.0000     0.0000     0.0000     0.0000      0.0000
+     2.000     0.0000     0.0000     0.0000     0.0000      0.0000
+    -> E = 0 genau für ν ∈ ℤ; sonst E ∝ Ny (Länge der Schnittlinie).
+    Scharfe Naht der Breite w (keine Verteilung): E = K|δ|²·L2/w, |δ| = 2|sin πν|:
+      w = 1.00: σ(ν=1/2) = 4.0 K,  σ(ν=1/3) = 3.0 K  (divergiert für w→0)
+      w = 0.50: σ(ν=1/2) = 8.0 K,  σ(ν=1/3) = 6.0 K  (divergiert für w→0)
+      w = 0.10: σ(ν=1/2) = 40.0 K,  σ(ν=1/3) = 30.0 K  (divergiert für w→0)
+
+C3  Kaluza-Klein: q_n = n·√(16πGε₀)·ħ/(c R)   (SI);   Gauß: q_n = 2n√G·ħ/(cR)
+    R_KK (q_1 = e)        = 3.7841e-34 m = 23.412 ℓ_P   (Formel 2ℓ_P/√α = 3.7841e-34 m)
+    2πR_KK (Umfang)       = 2.3776e-33 m
+    Masse der n=1-Mode    = ħ/(cR) = 5.2147e+17 GeV = (√α/2)·m_Pl = 5.2147e+17 GeV
+    Ladung²/Gravitation der Mode: e²/(4πε₀Gm_1²) = 4.0000
+    Elektron: e²/(4πε₀Gm_e²) = α/α_G,e = 4.1656e+42;  (e/m_e)/(q_1/m_1) = 1.0205e+21
+    Faltungstiefe der Mode Δs_1 = ℓ_P²/(3R) = 2.3011e-37 m
+    Umformung: α = (2ℓ_P/R_KK)² = 12·Δs_1/λ̄_1 (λ̄_1 = R_KK) = 0.0072973526  (1/α = 137.035999)
+    (Vergleich: α_G = 3·Δs_p/λ̄_p)
+
+C4  Dirac-Bedingung  q·Φ_m = 2πnħ  (Φ_m = magnetischer Fluss in Wb)
+    Flussquant h/e        = 4.135668e-15 Wb
+    Gauß: e·g = nħc/2  ->  g_D/e = 1/(2α) = 68.518
+    Torus (Fläche A, konstantes B): Kozykel e^{ieBA/ħ} = 1  ->  eBA = 2πnħ; c₁ = eΦ/h ∈ ℤ
+      Φ = 1·h/e: Kozykel-Phase = +1.000000-0.000000i
+      Φ = 2·h/e: Kozykel-Phase = +1.000000-0.000000i
+      Φ = 0,5·h/e: Kozykel-Phase = -1.000000+0.000000i  (verletzt)
+
+C5  Z₃-Zentrum: e^{2πiQ}·ω^t = 1 ⇔ Q + t/3 ∈ ℤ   (t = Trialität: Quarks − Antiquarks mod 3)
+    u            Q =   2/3  t mod 3 = 1  Q+t/3 ganz: True   farbneutral: False   Q ganz: False
+    d            Q =  -1/3  t mod 3 = 1  Q+t/3 ganz: True   farbneutral: False   Q ganz: False
+    ū            Q =  -2/3  t mod 3 = 2  Q+t/3 ganz: True   farbneutral: False   Q ganz: False
+    d̄           Q =   1/3  t mod 3 = 2  Q+t/3 ganz: True   farbneutral: False   Q ganz: False
+    e⁻           Q =    -1  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    ν            Q =     0  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    W⁺           Q =     1  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    Gluon        Q =     0  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    p = uud      Q =     1  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    n = udd      Q =     0  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    π⁺ = ud̄     Q =     1  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    Δ⁺⁺ = uuu    Q =     2  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    Diquark uu   Q =   4/3  t mod 3 = 2  Q+t/3 ganz: True   farbneutral: False   Q ganz: False
+    Ω⁻ = sss     Q =    -1  t mod 3 = 0  Q+t/3 ganz: True   farbneutral: True   Q ganz: True
+    Saitenspannung QCD σ ≈ 0.18 GeV² (Gitter, aus dem Gedächtnis) = 0.912 GeV/fm
+------------------------------------------------------------------------------
+TEIL A  Massenverhältnis und Dimensionstransmutation
+------------------------------------------------------------------------------
+A0  m_p = 938.272 MeV;  2m_u+m_d (MSbar, 2 GeV) = 9.02 MeV = 0.96 % von m_p
+    m_e = y_e v/√2 mit v = 246.22 GeV  ->  y_e = 2.9350e-06
+    α_G = (m_p/m_Pl)² = 5.9061e-39,  m_Pl = 1.22089e+19 GeV,  ln(m_Pl/m_p) = 44.012
+
+A1  Lauf von α_s(M_Z) = 0,1180 nach oben (Schwellen m_c, m_b, m_t)
+    1-Schleifen: α_s(M_GUT=2e16) = 0.02206 (1/α = 45.33);  α_s(M_Pl) = 0.01906 (1/α = 52.48)
+    2-Schleifen: α_s(M_GUT=2e16) = 0.02182 (1/α = 45.83);  α_s(M_Pl) = 0.01886 (1/α = 53.02)
+
+A2  Nome der Dimensionstransmutation: Λ/M = |q̃| = e^{−2π Im τ̃},  Im τ̃ = 1/(β₀ α_s(M))
+    α_s(m_c) = 0.3743;  Λ₃ (1-Schleifen-Form an m_c) = 196.7 MeV;  C = m_p/Λ₃ = 4.770
+    rein 1-Schleife: Λ₃ aus α_s(m_c) = 142.51 MeV, aus α_s(M_Pl) mit Schwellenformel = 142.51 MeV
+    C₁ = m_p/Λ₃(1-Schleife) = 6.584
+    dlnΛ₃/d(1/α_s(M_Pl)) = −2π/β₀(3) = -0.6981  (exakt, 1 Schleife)
+    |q̃|(M_Pl) = Λ₃/M_Pl = 1.1672e-20,  Im τ̃_eff = ln(M_Pl/Λ₃)/2π = 7.3047
+    Instanton-Nome τ = θ/2π + i/α_s:  |q| = e^{−2π/α_s(M_Pl)} = 10^-143.2
+    α_G = C²|q̃|² = 5.9061e-39   (gemessen 5.9061e-39)
+    Einfache Form exp(−4π/(β₀α_s(M_Pl))) mit n_f=3 (β₀=9): 1.508e-32
+    Einfache Form exp(−4π/(β₀α_s(M_Pl))) mit n_f=6 (β₀=7): 1.221e-41
+    effektives β₀ aus α_G = exp(−4π/(β_eff α_s(M_Pl))): 7.492 (1-Schl.), 7.569 (2-Schl.)
+
+A3  Empfindlichkeit: gleiche Dynamik (C fest), andere Kopplung am Planck-Punkt (2 Schleifen)
+    α_s(M_Pl) = 0.01886 -> μ(α_s=0,5) = 871.1 MeV, C' = m_p/μ = 1.077
+    α_s(M_Pl)·0.95 = 0.01792: m_p =     145.91 MeV,  α_G = 1.428e-40
+    α_s(M_Pl)·0.98 = 0.01848: m_p =     458.08 MeV,  α_G = 1.408e-39
+    α_s(M_Pl)·1.02 = 0.01924: m_p =    1915.49 MeV,  α_G = 2.462e-38
+    α_s(M_Pl)·1.05 = 0.01980: m_p =    5710.25 MeV,  α_G = 2.188e-37
+    -> das gemessene m_p verlangt α_s(M_Pl) = 0.01886 (1/α_s = 53.02); ±1 % in α_s(M_Pl) ändert m_p um +41.1 % / -29.8 %
+
+A4  Zufallsprüfung für m_p/m_e = 1836,15267 (Toleranz 2e-5 relativ)
+    6π⁵ = 1836.1181, Abweichung -1.882e-05 relativ = 3.1e+05 σ (m_p/m_e rel. Unsicherheit 6e-11)
+    Ausdrücke r·π^a·e^b: r = p/q (p,q ≤ 12), a ∈ {−8, −7,5, …, 8}, b ∈ {−4..4}: 27027 Formen, 27027 verschiedene Werte
+    Treffer bei 1836,15267: 1 Formen; 1 verschiedene Werte
+      6·π^5.0·e^0 = 1836.1181  (-1.88e-05)
+    Zufallsziele in [1000, 3000] (20000): mittlere Trefferzahl 0.041; Anteil mit ≥1 Treffer 4.1 %
+
+A5  Eigenwerte auf dem Quadrat-Torus: λ ∝ n₁²+n₂²,  m ∝ √λ
+    (m_p/m_e)² = 3371456.64;  √3371457 = 1836.152771 (+5.34e-08)
+    Summen zweier Quadrate N mit |√N/1836,15267 − 1| < 2e-5: 51 (von 271 ganzen Zahlen im Fenster)
+    nächstes: N = 3371453, √N = 1836.151682
+
+A6  Geometrische Lesarten von 6π⁵: k·V₁ bzw. k·V₁·V₂ bzw. k·V₁/V₂ = 6π⁵ exakt, k ganz ≤ 1000
+    22 Darstellungen; Beispiele (kleinstes k zuerst):
+      6π⁵ = 3·Vol(S^3·S^5)
+      6π⁵ = 9·Vol(S^1·S^7)
+      6π⁵ = 9·Vol(T^1·S^7)
+      6π⁵ = 9·Vol(T^2·B^6)
+      6π⁵ = 12·Vol(B^4·S^5)
+      6π⁵ = 18·Vol(B^2·S^7)
+      6π⁵ = 18·Vol(S^3·B^6)
+      6π⁵ = 36·Vol(B^1·S^9)
+      6π⁵ = 36·Vol(S^2·B^8)
+      6π⁵ = 72·Vol(B^4·B^6)
+    Kontrolle: Vol(B¹⁰) = 1/120·π^5, Vol(S⁹) = 1/12·π^5
+------------------------------------------------------------------------------
+TEIL B  Feinstrukturkonstante
+------------------------------------------------------------------------------
+B1  Wyler: α = (9/8π⁴)(π⁵/(2⁴·5!))^{1/4} = 1/137.036082;  1/α gemessen 137.035999177;  Abweichung +6.077e-07 = 4051 σ
+    α(M_Z) (MSbar): 1/127,95;  Unterschied zu α(0): Δ(1/α) = 9.09
+    Leptonanteil Δα_lep(M_Z) (1 Schleife) = 0.03142;  1/α nach Leptonen allein = 132.73
+
+B2  Kontrolle: η(i) = 0.7682254223,  Γ(1/4)/(2π^{3/4}) = 0.7682254223;  E₂(i) = 0.9549296586 = 3/π = 0.9549296586;  j(i) = 1728.0000
+    E₂(ρ) = (1.1026577908435842+1.370733674887287e-31j)  (2√3/π = 1.1026577908)
+    j((1+i√163)/2) = -2.625374e+17 (−640320³ = -2.625374e+17)
+
+B3  Zufallsprüfung Modulformen: 74 Grundwerte × 30 Potenzen × 9 π-Potenzen × 91 Brüche = 1818180 Formen, 1722229 verschiedene Werte
+    Toleranz 1.0e-04: Treffer bei 137,035999 = 20
+    Toleranz 1.5e-10: Treffer bei 137,035999 = 0
+    Zufallsziele in [100, 200]: mittlere Trefferzahl bei 1e-4 = 15.39;  erwartet bei 1,5e-10: 2.31e-05
+    beste Treffer (von 23 Formen):
+      3/5·π^2·[|η|(2i)]^-6: rel. Abw. 4.07e-06
+      3/5·π^2·[|j|(3i)]^0.1667: rel. Abw. 1.60e-05
+      3/5·π^2·[|η|(3i)]^-4: rel. Abw. 1.68e-05
+      3/5·π^2·[|q|(2i)]^-0.25: rel. Abw. 1.69e-05
+      3/5·π^2·[|q|(3i)]^-0.1667: rel. Abw. 1.69e-05
+
+B4  Modul-Fixpunkte und E₂-Nullstelle, τ = θ/2π + i/α (Montonen-Olive-Normierung, 4π/e² = 1/α)
+    τ = i  (S-Fixpunkt): α = 1;   τ = ρ (ST-Fixpunkt): Im ρ = √3/2 -> α = 2/√3 = 1.1547, θ = −π
+    E₂(iy) = 0 bei y = 0.5235217000:  α = 1/y = 1.9101;  |q| = e^{−2πy} = 0.03728 = 1/26.826
+    |q| = α verlangt Im τ = ln(137,036)/2π = 0.78308; j(i·0.7831) = 3863.203, E₂ = 0.82099
+    Skala von α = 1 (QED-artiger Lauf, alle SM-Fermionen, b = 10.667): ln(μ/M_Z) = 74.8, μ ≈ 10^34.4 GeV (M_Pl = 10^19.1)
+
+B5  Carter nach Erklärung von α_G:  α ≈ α_G^{1/12}·(m_p/m_e)^{1/3}
+    = 1/125.24  (gemessen 1/137.036);  Faktor 0.9139;  α_G/(α¹²μ⁴) = 2.944
+
+B6  Vereinheitlichung (1 Schleife): 1/α_em = 1/α_Y + 1/α_2, α_1 = (5/3)α_Y; bei M_X: 1/α_em = (8/3)/α_X
+    M_Z: 1/α_1 = 59.02, 1/α_2 = 29.58, 1/α_3 = 8.47
+    SM: α_1=α_2 bei 10^13.01 GeV, α_2=α_3 bei 10^16.99 GeV;  1/α_X ≈ 47.02
+    MSSM (ab M_Z, hypothetisch): α_1=α_2 bei 10^16.30 GeV, α_2=α_3 bei 10^16.36 GeV;  1/α_X ≈ 24.31
+    MSSM-Vorhersage aus α_s(M_Z) und sin²θ_W: 1/α_em(M_Z) = 126.68  (MSbar gemessen 127,95)
+
+Fertig.

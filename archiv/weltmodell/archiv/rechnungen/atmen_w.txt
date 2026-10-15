@@ -1,0 +1,17 @@
+1) Vakuumwert des Strukturterms: Ω_s = π²/45 = 0.2193  (Anteil an Ω_Λ = 0,685: 0.32)
+
+2) Variante 'mitlaufend' (a0 ∝ H, also Λ_s ∝ H²): konstanter Anteil Ω_s an jeder Epoche
+   Wirkung wie eine vergrößerte Gravitationskonstante für die Expansion: G_eff/G = 1/(1−Ω_s) = 1.281
+   Urknall-Nukleosynthese erlaubt etwa |ΔG/G| ≲ 0,1 (aus dem Gedächtnis) und die CMB einen frühen Anteil ≲ 0,01–0,05
+   -> mitlaufende Variante ausgeschlossen.
+
+3) Variante 'eingefroren' (Λ_s konstant, heutiger Wert) + Rest Λ_r: w(z) der Summe bleibt −1
+   -> reines Λ; der DESI-Hinweis (w₀ > −1, w_a < 0) wird damit nicht erklärt.
+
+4) Zwischenform: Λ_s ∝ H(z)^n, 0 < n < 2 (Schwelle folgt dem Atmen nur teilweise). Effektives w(z) des Strukturterms:
+   n = 0.00:  w_s(z=0/0,5/1) = -1.000/-1.000/-1.000   w_DE,gesamt = -1.000/-1.000/-1.000
+   n = 0.25:  w_s(z=0/0,5/1) = -0.959/-0.923/-0.902   w_DE,gesamt = -0.987/-0.974/-0.965
+   n = 0.50:  w_s(z=0/0,5/1) = -0.917/-0.845/-0.803   w_DE,gesamt = -0.973/-0.945/-0.924
+   n = 1.00:  w_s(z=0/0,5/1) = -0.823/-0.683/-0.604   w_DE,gesamt = -0.943/-0.877/-0.816
+   Hinweis: n > 0 ergibt w > −1, aber mit der Zeit steigendem |w+1| in die Vergangenheit, also w_a > 0.
+   DESI bevorzugt w₀ > −1 UND w_a < 0 (Dunkle Energie war früher stärker 'phantomartig').

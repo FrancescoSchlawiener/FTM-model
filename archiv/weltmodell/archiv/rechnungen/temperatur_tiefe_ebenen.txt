@@ -1,0 +1,146 @@
+TEMPERATUR UND TIEFE AUF DEN EBENEN
+kT = f·δ·m̄c²,  δ = a·r/c² (Tiefe der Bahn nach der Regel),  m̄ = μ·m_p,  μ = 0.60 [A]
+
+1) FORM FÜR GAS IN a(r) = ν(a_N)·a_N
+   Hydrostatik am Ort: d(nkT)/dr = −ρ·a  ⇒  kT(r) = μm_p·a·r/S,  S = −d ln ρ/d ln r − d ln T/d ln r
+   ⇒  kT = f·δ·m̄c²,  δ = a·r/c² = v_c²/c²,  f = 1/S  (örtlich).  Integral: kT(r) = (μm_p/ρ(r))·∫_r^∞ ρ·a dr'.
+   Im Stern dieselbe Bilanz, dort über das Potential integriert: f = θ_n = Δδ_innen/((n+1)δ).
+   Die Regel geht nur über δ ein: δ_eff = ν·δ_N; im Tiefbereich a·r = √(GM_b a₀) = v_flach² fest ⇒ δ fest ⇒ Gas isotherm.
+   Stern-Kontrolle Polytrope n = 1.5: ξ₁ = 3.6538, f = 1/((n+1)·ξ₁|θ'(ξ₁)|) = 0.5385
+   Stern-Kontrolle Polytrope n = 3.0: ξ₁ = 6.8968, f = 1/((n+1)·ξ₁|θ'(ξ₁)|) = 0.8543
+   f für Gas (örtlich, f = 1/S):
+     singuläre isotherme Kugel ρ ∝ r⁻²: S = 2, f = 0,500
+     Beta-Profil β = 0.500 (isotherm): f(x = r/r_c) = (1+x²)/(3βx²):  x=1: 1.333, x=3: 0.741, x=10: 0.673;  x→∞: 0.667
+     Beta-Profil β = 0.667 (isotherm): f(x = r/r_c) = (1+x²)/(3βx²):  x=1: 1.000, x=3: 0.556, x=10: 0.505;  x→∞: 0.500
+     Beta-Profil β = 0.800 (isotherm): f(x = r/r_c) = (1+x²)/(3βx²):  x=1: 0.833, x=3: 0.463, x=10: 0.421;  x→∞: 0.417
+     Kontrolle Integralform, β = 2/3, Tiefbereich: kT/(μm_p v_flach²) bei x =    1: 0.6931  (Hydrostatik ohne Randdruck)
+     Kontrolle Integralform, β = 2/3, Tiefbereich: kT/(μm_p v_flach²) bei x =    3: 0.5268  (Hydrostatik ohne Randdruck)
+     Kontrolle Integralform, β = 2/3, Tiefbereich: kT/(μm_p v_flach²) bei x =   10: 0.5025  (Hydrostatik ohne Randdruck)
+   Global (isoliert, ganz im Tiefbereich, jedes Profil): ⟨σ²⟩_M = ⟨kT⟩_M/μm_p = (2/9)·√(GM_b a₀)  ⇔  σ⁴ = (4/81)GM_b a₀
+     Plummer numerisch: ⟨σ_r²⟩_M/√(GMa₀) = 0.2222  (2/9 = 0.2222);  f_global = 2/9 bezogen auf δ_flach = v_flach²/c²
+   Blickrichtung: T lokal (L); δ = a·r/c² am Ort der Bahn (L), dieselbe Zahl, die der ferne Beobachter (G) als Taktunterschied
+   3Δs/r nur im Newton-Bereich liest; im Tiefbereich ist δ = 3Δs_eff/r mit Δs_eff = ν·Δs. Kein Stoff kommt hinzu.
+
+2) GRUPPEN UND HAUFEN: M_b gegen T
+   Tiefbereich (Form): v_flach⁴ = GM_b a₀, kT = μm_p v_flach²/S  ⇒  M_b = (S·kT/μm_p)²/(G a₀)   ∝ T²
+   Newton: M = S·kT·r/(Gμm_p), r_Δ ∝ M^{1/3}  ⇒  M ∝ T^{3/2}
+   T[keV]   M_b,tief(S=2)[M☉]   M_b,tief(S=2,4)   M_b,tief global 2/9 (⟨kT⟩_M)
+     0.5     1.746e+12          2.514e+12        8.839e+12
+     1.0     6.984e+12          1.006e+13        3.535e+13
+     2.0     2.793e+13          4.023e+13        1.414e+14
+     5.0     1.746e+14          2.514e+14        8.839e+14
+    10.0     6.984e+14          1.006e+15        3.535e+15
+   (S = 2: β = 2/3 außen; S = 2,4: gemessenes Dichte- plus Temperaturgefälle bei r₅₀₀ [G, typisch 2–3])
+
+   [G] M₅₀₀–T: Arnaud, Pointecouteau, Pratt 2005: M₅₀₀ = 3,84·10¹⁴ h70⁻¹ M☉ (T/5 keV)^1,71 (alle), 4,10·10¹⁴ (T/5)^1,49 (T > 3,5 keV);
+       Vikhlinin 2006: 3,32·10¹⁴ h⁻¹ (T/5)^1,47.  [G] f_gas,500 (Vikhlinin 2006, Sun 2009, Lovisari 2015): 0,04 / 0,06 / 0,08 / 0,11 / 0,125;
+       [G] f_*,500 inkl. BCG+ICL (Lin 2003, Gonzalez 2013): 0,05 / 0,035 / 0,025 / 0,015 / 0,010  (je ±30–50 %)
+       [G] gemessene Steigungen: M_gas ∝ T^1,8–2,1 (Arnaud 2007, Sun 2009, Lovisari 2015), M_tot ∝ T^1,5–1,7
+
+   Lesung am Rand r₅₀₀ (a_tot = GM₅₀₀/r₅₀₀² aus der Hydrostatik [G]), Regel umgekehrt → nötige Baryonen M_b,Regel:
+   T    Quelle    M₅₀₀[M☉]   r₅₀₀[kpc]  a_tot/a₀  a_N/a₀    ν     S_impl  M_b,Regel   M_b,gem[G]  Regel/gem  M_b,tief(S_impl)
+    0.5 Arnaud   7.776e+12      309    0.103    0.0160   8.41   1.36   1.206e+12   6.999e+11    1.72     8.035e+11
+    0.5 Vikhl.   1.669e+13      398    0.133    0.0153   8.60   2.26   1.913e+12   1.502e+12    1.27     2.225e+12
+    1.0 Arnaud   2.544e+13      458    0.153    0.0207   7.46   1.50   3.440e+12   2.417e+12    1.42     3.902e+12
+    1.0 Vikhl.   4.624e+13      559    0.187    0.0300   6.29   2.23   7.405e+12   4.393e+12    1.69     8.655e+12
+    2.0 Arnaud   8.323e+13      681    0.228    0.0429   5.35   1.65   1.567e+13   8.739e+12    1.79     1.895e+13
+    2.0 Vikhl.   1.281e+14      786    0.263    0.0555   4.76   2.20   2.705e+13   1.345e+13    2.01     3.367e+13
+    5.0 Arnaud   4.258e+14     1173    0.392    0.1121   3.51   1.96   1.217e+14   5.323e+13    2.29     1.671e+14
+    5.0 Vikhl.   4.926e+14     1231    0.412    0.1219   3.39   2.16   1.457e+14   6.157e+13    2.37     2.029e+14
+   10.0 Arnaud   1.196e+15     1655    0.554    0.1975   2.79   1.95   4.268e+14   1.615e+14    2.64     6.622e+14
+   10.0 Vikhl.   1.365e+15     1729    0.578    0.2127   2.71   2.13   5.017e+14   1.842e+14    2.72     7.894e+14
+   Steigungen 0,5–10 keV (Arnaud): M_b,Regel ∝ T^2.02,  M_b,gem ∝ T^1.84 [G],  M₅₀₀ ∝ T^1.70 [G]
+   Die Regel verlangt die Steigung 2 (Tiefbereich, a_N/a₀ ≈ 0,03–0,1 bei r₅₀₀); gemessen ist ~2 für die Baryonen.
+   Grenzmasse der Mode (Modell): M_Q ≈ 2,8·10¹⁴ M☉ (M₂₀₀) → M₅₀₀ = 0.692·M₂₀₀ (NFW c = 4) = 1.94e+14 M☉ → T_Q ≈ 3.3 keV (Arnaud [G])
+   Nach dem Modell wirkt unter T_Q nur der Operator: Dort müsste die Regel allein (Spalte Regel/gem) ≈ 1 geben.
+   Gerechnet: 0,5–2 keV (unter T_Q) 1,3–2,0, 5–10 keV (über T_Q) 2,3–2,7. Die Lücke wächst mit T (wie der Rest der Mode),
+   verschwindet unter T_Q aber nicht. Mit hydrostatischem Defizit [G, 10–30 %] wüchse sie noch; mit Baryonen außerhalb
+   der Zählung (warmes Gas, f_* und f_gas der Gruppen je ±30–50 % [G]) schrumpfte sie. Bei 0,5–1 keV im Fehler, bei 2 keV nicht.
+
+   Haufenprofil (Baryonen [A]: Gas β = 2/3, r_c = 150 kpc, 10¹⁴ M☉ in 1 Mpc, bis 3 Mpc; BCG 1,5·10¹² (Hernquist 20 kpc);
+   Galaxien 10¹³ (Hernquist 300 kpc); Gesamtwirkung Regel + Mode vertreten durch NFW M₂₀₀ = 10¹⁵ M☉, c = 4, z = 0,3,
+   die das Modell mit dem Rest der Mode auf 1–5 % trifft)
+   r[kpc]   a_N/a₀    ν     kT_Newton  kT_Regel  kT_Regel+Mode [keV]   δ_Regel=a r/c²  f = kT/(δ m̄c²) (Regel)
+      50   0.6033   1.85      1.37       3.12        8.49            2.109e-06        2.631
+     100   0.4012   2.13      1.20       2.89        7.54            3.229e-06        1.591
+     250   0.3139   2.33      1.25       3.35        7.23            6.910e-06        0.861
+     500   0.2253   2.65      1.38       4.26        7.35            1.126e-05        0.672
+    1000   0.1360   3.24      1.37       5.10        6.57            1.666e-05        0.544
+    1500   0.0963   3.75      1.19       4.96        5.27            2.045e-05        0.431
+   emissionsgewichtet 0,15–1 r₅₀₀ (r₅₀₀ = 1240 kpc, M₅₀₀ = 6.92e+14): Newton 1.32, Regel 3.96, Regel+Mode 7.17 keV
+   [G] ein Haufen mit M₅₀₀ ≈ 7·10¹⁴ M☉ hat T ≈ 7–8 keV (Arnaud 2005: 6.9 keV).  Regel allein: T um Faktor 1.81 zu kalt,
+   grob gleichbedeutend M_b um den Faktor 3.28 (T² im Tiefbereich) zu klein: die bekannte Lücke; der Rest der Mode schließt sie.
+
+3) ELLIPTISCHE GALAXIEN: T des heißen Halos gegen σ der Sterne
+   Gas und Sterne stehen im selben a(r): σ_r² = (1/ρ_*)∫ρ_* a dr, kT/μm_p = (1/ρ_g)∫ρ_g a dr.
+   Örtlich: σ² ≈ a·r/S_*, kT/μm_p = a·r/S_g  ⇒  β_spec = μm_pσ²/kT ≈ S_g/S_* (Verhältnis der Profile), wenn a·r fest ist.
+   Modell [A]: Hernquist M_* = 1.5e+11 M☉, R_e = 6 kpc (v_flach = 216 km/s); Gas β = 0,5, r_c = 1 kpc; T emissionsgewichtet 1–5 R_e
+   Lesart   σ_*(<R_e/2)[km/s]   kT(1–5R_e)[keV]  kT(R_e)  kT(5R_e)  kT(20R_e)   β_spec = μm_pσ²/kT
+   Newton        139.1              0.090         0.143    0.046     0.013        1.344
+   Regel         147.1              0.219         0.235    0.205     0.176        0.619
+     bei  1 R_e: a_N/a₀ = 2.195, ν = 1.29
+     bei  5 R_e: a_N/a₀ = 0.171, ν = 2.95
+     bei 20 R_e: a_N/a₀ = 0.013, ν = 9.45
+   Regel/Newton: kT(1–5 R_e) × 2.43, σ_* × 1.058
+   Modell [A]: Hernquist M_* = 4.0e+11 M☉, R_e = 10 kpc (v_flach = 276 km/s); Gas β = 0,5, r_c = 1 kpc; T emissionsgewichtet 1–5 R_e
+   Lesart   σ_*(<R_e/2)[km/s]   kT(1–5R_e)[keV]  kT(R_e)  kT(5R_e)  kT(20R_e)   β_spec = μm_pσ²/kT
+   Newton        175.9              0.144         0.228    0.074     0.019        1.345
+   Regel         186.6              0.353         0.377    0.328     0.243        0.618
+     bei  1 R_e: a_N/a₀ = 2.107, ν = 1.31
+     bei  5 R_e: a_N/a₀ = 0.164, ν = 3.00
+     bei 20 R_e: a_N/a₀ = 0.012, ν = 9.64
+   Regel/Newton: kT(1–5 R_e) × 2.45, σ_* × 1.061
+   Örtlich kürzt sich a in β_spec nur, wo a·r fest ist (Tiefbereich, isotherm): β_spec → S_g/S_*. Newton: a·r fällt außen,
+   T fällt nach außen steil und β_spec > 1. Die Regel gibt flaches T und β_spec ≈ 0,6.
+   [G] gemessen (O'Sullivan, Ponman, Collins 2003; Davis & White 1996): σ ≈ 250 km/s ↔ kT_X ≈ 0,6–0,9 keV, β_spec ≈ 0,5–1;
+   T flach oder nach außen steigend (NGC 720, NGC 1521 [G]).
+   Mit β_spec(Regel) = 0.618: σ = 250 km/s → kT = μm_pσ²/β_spec = 0.63 keV (μm_pσ² = 0.391 keV).
+   Faber-Jackson [G]: σ ≈ 250 km/s gehört zu M_* ≈ 2–5·10¹¹ M☉.
+
+4) TIEFENLEITER ÜBER DIE EBENEN: δ und kT/(m̄c²)
+   Ebene                                δ             T [K]       kT/(m̄c²)     f = kT/(δ m̄c²)   Bemerkung
+   Sonnenkern (Hauptreihe)              2.123e-06    1.570e+07    1.709e-06    0.805            δ = 3Δs/R; T_c [G]; nicht entartet
+   Weißer Zwerg 0,6 M☉ (1e7 K)          1.019e-04    1.000e+07    5.396e-07    0.0053            entartet: Zählregel hält die Tiefe
+   Neutronenstern alt (1e8 K)           1.723e-01    1.000e+08    9.172e-06    5.32e-05            entartet (Neutronen)
+   Proto-Neutronenstern (3e11 K)        1.034e-01    3.000e+11    2.751e-02    0.266            [G] ~30 MeV, R ≈ 20 km
+   Elliptische 1,5e11 (Halo, 3R_e)      5.975e-07    2.475e+06    3.788e-07    0.634            δ = a r/c² nach der Regel
+   Gruppe 1 keV (r₅₀₀)                  2.656e-06    1.160e+07    1.776e-06    0.669            δ = a_tot r/c² [G-Skala]
+   Haufen 5 keV (r₅₀₀)                  1.738e-05    5.802e+07    8.882e-06    0.511            δ = a_tot r/c² [G-Skala]
+   Haufen 1e15 (Profil, 0,15–1 r₅₀₀)    2.561e-05    8.326e+07    1.274e-05    0.498            δ bei r₅₀₀/2, Regel+Mode
+   Nicht entartete Ebenen (Stern, Halo, Gruppe, Haufen): f = 0,3–1,4; entartete: f ≪ 1 (Zählregel statt Wärme).
+   δ der Gas-Ebenen (10⁻⁶ bis 3·10⁻⁵) liegt im selben Band wie die Brennleiter der Sterne (7·10⁻⁷ pp … 1,7·10⁻⁴ Si):
+   Gruppen in der Tiefe des Wasserstoffbrennens, reiche Haufen in der des Heliumbrennens (Tatsache der Tabelle, nicht hergeleitet).
+
+   Kosmische Ebene (Blickrichtung G): Im homogenen Hintergrund gibt es kein Gefälle, a_N = 0, keine Rückkehr (Γ = 0), keine Bahn;
+   δ = a·r/c² ist dort null. Die Temperatur des Hintergrunds folgt dem Atmen, T ∝ 1/a (Rotverschiebung), nicht einer Tiefe.
+   Rekombination: kT/(m_p c²) = 2.76e-10 bei T = 3000 K; Tiefe der Störungen |Φ|/c² ~ 10⁻⁵ [G]: gibt nur ΔT/T = Φ/(3c²) (Sachs-Wolfe),
+   also f nicht von der Ordnung 1: Die globale Ebene hat keine Tiefe in diesem Sinn; die Tiefe tritt dort nur als Störung auf.
+   Horizonttemperatur (04, global): T = ħc/(12πkΔs_H) enthält ħ, nicht m̄c²·δ; sie ist eine andere Form (Quantenlänge statt Masse).
+
+5) GEDÄCHTNIS: Kühlzeit gegen Alter
+   t_cool = (3/2)(n_e+n_i)kT/(n_e n_H Λ(T)) = 2,875·kT/(n_H Λ),  n_e = 1,2 n_H, n_ges = 2,3 n_H [A]
+   Λ(T) [G] Tozzi & Norman 2001 (Z = 0,3 Z☉): Λ = (8,6·10⁻³ T^−1,7 + 5,8·10⁻² T^0,5 + 6,3·10⁻²)·10⁻²² erg cm³/s, T in keV
+   Ort                                   n_e[cm⁻³]      kT[keV]   t_cool[Gyr]   K = kT n_e^−2/3 [keV cm²]
+   Kühlkern-Zentrum (10 kpc) [G]         5.00e-02        3.0         0.638        22.1
+   Haufenkern ohne Kühlkern [G]          5.00e-03        7.0          11.3        239
+   Gruppenzentrum [G]                    3.00e-02        0.8         0.367        8.29
+   Elliptischer Halo, 5 R_e [G]          1.00e-03        0.7          9.63        70
+   Gruppe 1 keV, r₅₀₀ (aus f_gas)        1.21e-04        1.0           112        409
+   Haufen 5 keV, r₅₀₀ (aus f_gas)        2.22e-04        5.0           205        1.37e+03
+   Alter seit Bildung bei z = 1 bzw. 0,5: 8.0 bzw. 5.2 Gyr.  Schallzeit bis r₅₀₀ (5 keV): 0.99 Gyr (c_s = 1153 km/s)
+   Kühlzeit = Alter (8.0 Gyr) bei 3 keV für n_e = 4.0e-03 cm⁻³: innen kühlt das Gas, außen nicht.
+   Kühlkern: Temperatur gegen örtliche Tiefe (BCG 1,5·10¹² M☉ + Haufen wie oben, Regel+Mode):
+     r = 10 kpc: v_c = 431 km/s, δ = 2.07e-06, μm_p v_c² = 1.16 keV;  kT = f·δ·m̄c² mit f = 1/S, S = 1–2: 0.58–1.16 keV
+     r = 30 kpc: v_c = 634 km/s, δ = 4.47e-06, μm_p v_c² = 2.52 keV;  kT = f·δ·m̄c² mit f = 1/S, S = 1–2: 1.26–2.52 keV
+   [G] Kühlkerne: T fällt innen auf 0,3–0,5 T_mittel (2–4 keV bei 7 keV), nicht tiefer; K₀ ≈ 10–30 keV cm² (Cavagnolo 2009).
+
+6) UNABHÄNGIGE PROBEN (von Hand, anderer Weg)
+   (a) M_b,tief(1 keV, S = 2) von Hand: kT/μm_p = 1,6022·10⁻¹⁶/(0,6·1,6726·10⁻²⁷) = 1,5965·10¹¹ m²/s²; ×2 → 3,193·10¹¹, ² = 1,0195·10²³;
+       G a₀ = 6,6743·10⁻¹¹·1,1·10⁻¹⁰ = 7,3417·10⁻²¹ → 1,3886·10⁴³ kg = 6,98·10¹² M☉.  Skript: 6.984e+12 M☉
+   (b) T im Tiefbereich aus M_b: 10¹⁴ M☉: v_f⁴ = G·1,989·10⁴⁴·1,1·10⁻¹⁰ = 1,4602·10²⁴ → v_f² = 1,2084·10¹² → v_f = 1099 km/s;
+       kT = μm_p v_f²/2 = 0,6·1,6726·10⁻²⁷·1,2084·10¹²/2 = 6,063·10⁻¹⁶ J = 3,78 keV.  Skript: 3.784 keV
+   (c) t_cool(n_e = 0,05, 3 keV) von Hand: Λ = (8,6·10⁻³·0,1546 + 5,8·10⁻²·1,732 + 0,063)·10⁻²² = 1,648·10⁻²³ erg cm³/s;
+       n_H = 0,04167; 2,875·4,806·10⁻⁹ erg/(0,04167·1,648·10⁻²³) = 2,012·10¹⁶ s = 0,638 Gyr.  Skript: 0.638 Gyr
+   (d) δ eines 5-keV-Haufens mit f = ½: 5·10³ eV/(0,5·0,6·938,27·10⁶ eV) = 1,776·10⁻⁵.  Skript: 1.7763e-05
+   (e) Elliptische, Tiefbereich-Grenze: v_f = (G·1,5·10¹¹·1,989·10³⁰·1,1·10⁻¹⁰)^¼ = (2,190·10²¹)^¼ = 216,3 km/s;
+       kT(S = 1,5) = 0,6·1,6726·10⁻²⁷·(2,163·10⁵)²/1,5 = 3,130·10⁻¹⁷ J = 0,195 keV.  Skript v_flach: 276.4 km/s

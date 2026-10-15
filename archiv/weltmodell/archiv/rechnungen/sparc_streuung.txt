@@ -1,0 +1,6 @@
+Υ-Streuung 0.00 dex: gemessene Streuung des Rests 0.137 dex, aus den Fehlern erwartet 0.119 dex, Rest innen 0.068 dex (n = 149)
+Υ-Streuung 0.10 dex: gemessene Streuung des Rests 0.137 dex, aus den Fehlern erwartet 0.128 dex, Rest innen 0.050 dex (n = 149)
+Υ-Streuung 0.15 dex: gemessene Streuung des Rests 0.137 dex, aus den Fehlern erwartet 0.139 dex, Rest innen 0.000 dex (n = 149)
+Schwelle je Galaxie (Υ-Streuung 0.00 dex): Median a₀ = 1.09·10⁻¹⁰, Streuung 0.360 dex (robust 0.277), aus den Fehlern erwartet 0.307 dex (Median der Einzelfehler 0.271), n = 149
+Schwelle je Galaxie (Υ-Streuung 0.10 dex): Median a₀ = 1.09·10⁻¹⁰, Streuung 0.360 dex (robust 0.277), aus den Fehlern erwartet 0.324 dex (Median der Einzelfehler 0.310), n = 149
+Anstieg der direkt gelesenen Schwelle mit der Flächendichte (Theil-Sen, Gasdruck 8 km/s): +0.064 ± 0.040 je Dekade (n = 149)

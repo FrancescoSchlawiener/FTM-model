@@ -1,0 +1,97 @@
+
+================================================================================================================
+1  Welches Maß verlangt das Modell? (Axiome: Liouville, kein Außen, 𝒫 maßerhaltend; vor dem Ergebnis)
+================================================================================================================
+   (b) = (a) als Maß: Wirkungs-Winkel ist kanonisch, d³x d³p = d³J d³θ (Jacobi 1); Liouville gibt kein anderes Maß.
+       Verschieden ist nur die MENGE. 05: Grundraum aus Tori, Freiheitsgrad = Umlaufrichtung; gebunden an den Bereich ist
+       ein Zustand, dessen ganzer Torus in der Naht liegt (w = 0 bis R_ta). (a) zählt am Ort, ob v < v_esc(r → R_ta): das
+       schneidet ganze Tori ab (fast kreisförmige Bahnen nahe R_ta mit E > Φ(R_ta), die R_ta nie erreichen).
+       Torus in R_ta ⇔ v_r² + v_t²(1 − r²/R²) ≤ v_esc,R²(r): Ellipsoid, Volumen (4π/3)v_esc³/(1 − r²/R²).
+   Kein Außen: Newton 'E > 0 entkommt' zählt bis ∞; im Modell gibt es kein ∞, der Bereich endet an der Naht. Beide
+       Dynamiken sind am selben Rand zu messen: Newton-Tori innerhalb R_ta (A' und B). A zählt Newton-Bahnen, die den
+       Bereich verlassen, als gebunden – gemischter Rand.
+   (c) Schale bis 1,16·R_ta: dort ist w > 0 (Mode mitatmend, Übergang zum Fluss), die Form ist gesetzt; gebunden heißt
+       θ̃ = 0, also bis R_ta. Nur Spannweite.
+   (d) Mitnahme (1 + wQ): innerhalb der Naht ist w = 0 ⇒ 1 + wQ = 1, die Mitnahme des Bereichs IST Newton; (1 + Q)
+       gilt nur mitatmend (w = 1, außen). (1 + Q)·M_b als bindende Masse innen läse die Mode als Stoff (Beobachterfehler).
+       𝒫_q (05): q → 0 gibt I = Newton (offen); inaktiv heißt gegenüber I. Nur Spannweite.
+   (e) ln: N Baryonen, Maß des Ganzen = Produkt der Einteilchenmaße (Liouville auf dem Produktraum); das Atmen δ ln V je
+       Baryon ist additiv in ln μ. Linear (μ_R/μ_N − 1) addierte Maße verschiedener Bereiche, als wären sie disjunkte
+       Teile eines Einteilchenraums – dann fehlt die Norm (de_fluchtmoden A). Nur Spannweite.
+   ⇒ Erzwungen: B (ganze Tori in der Naht, Regel gegen Newton, ln).
+
+   Je Bereich (Punktmasse), Verhältnisse μ_R/μ_N:
+   M_b [M☉]   a     R_ta/r*   A        A'       B        ln A    ln A'   ln B    ln C    ln D    B: Regel μ_b/μ_a  Newton μ_b/μ_a
+   10^8.000   1.00    193.2    345.84  1174.21  1390.54    5.846   7.068   7.237   7.459   4.461      1.625             1.373
+   10^8.000   0.50    118.4    166.65   565.81   669.76    5.116   6.338   6.507   6.728   3.731      1.625             1.373
+   10^8.000   0.25     61.7     63.32   215.00   254.24    4.148   5.371   5.538   5.758   2.762      1.623             1.373
+   10^10.000  1.00     89.7    110.19   374.12   442.69    4.702   5.925   6.093   6.314   3.317      1.624             1.373
+   10^10.000  0.50     55.0     53.35   181.13   214.13    3.977   5.199   5.367   5.586   2.591      1.623             1.373
+   10^10.000  0.25     28.7     20.50    69.61    82.11    3.020   4.243   4.408   4.625   1.632      1.619             1.373
+   10^10.778  1.00     66.5     70.75   240.23   284.12    4.259   5.482   5.649   5.870   2.873      1.623             1.373
+   10^10.778  0.50     40.8     34.36   116.67   137.81    3.537   4.759   4.926   5.145   2.150      1.621             1.373
+   10^10.778  0.25     21.3     13.30    45.16    53.19    2.588   3.810   3.974   4.189   1.198      1.616             1.373
+   10^12.000  1.00     41.6     35.41   120.24   142.04    3.567   4.789   4.956   5.175   2.180      1.621             1.373
+   10^12.000  0.50     25.5     17.32    58.81    69.34    2.852   4.074   4.239   4.456   1.463      1.618             1.373
+   10^12.000  0.25     13.3      6.82    23.16    27.17    1.920   3.142   3.302   3.513   0.526      1.610             1.373
+   10^14.000  1.00     19.3     11.60    39.37    46.34    2.451   3.673   3.836   4.051   1.060      1.615             1.373
+   10^14.000  0.50     11.8      5.80    19.69    23.07    1.758   2.980   3.139   3.348   0.363      1.608             1.373
+   10^14.000  0.25      6.2      2.41     8.17     9.47    0.878   2.100   2.248   2.446  -0.528      1.592             1.373
+   Probe A gegen de_fluchtmoden (Milchstraße a = 1): ln A = 4.259 (dort 4.259).
+
+================================================================================================================
+2  X je Definition mit dem erzwungenen Übergang (M_min = 10⁶, geschachtelt, θ̃ = 0, erste Rückkehr f) [Messwerte G]
+================================================================================================================
+   Def  ab      X(0)    Ω_X(0)  /0.442  Ω_X z=0,5  z=1     z=2      w(0)    w₀      w_a     H/H_Λ z=0   0,5    1      2      3     Ω_s+Ω_X
+   A    I_F      3.348   0.2210   0.500    0.1769    0.0865   0.0058   -0.985  -0.432   -4.132    0.883   0.921   0.943   0.976   0.989    0.465
+   A    Umkehr   3.348   0.2525   0.571    0.2212    0.1237   0.0122   -0.940  -0.446   -3.644    0.900   0.935   0.949   0.976   0.989    0.497
+   A'   I_F      4.418   0.3075   0.695    0.2441    0.1192   0.0081   -0.989  -0.444   -4.103    0.930   0.942   0.948   0.976   0.989    0.552
+   A'   Umkehr   4.418   0.3487   0.789    0.3041    0.1696   0.0168   -0.939  -0.452   -3.630    0.952   0.960   0.956   0.976   0.989    0.593
+   B    I_F      4.564   0.3195   0.723    0.2533    0.1236   0.0084   -0.990  -0.445   -4.100    0.937   0.944   0.949   0.976   0.989    0.564
+   B    Umkehr   4.564   0.3621   0.819    0.3155    0.1759   0.0174   -0.940  -0.453   -3.628    0.959   0.963   0.957   0.977   0.989    0.606
+   C    I_F      4.755   0.3355   0.759    0.2654    0.1294   0.0088   -0.991  -0.448   -4.095    0.945   0.948   0.950   0.976   0.989    0.580
+   C    Umkehr   4.755   0.3800   0.859    0.3305    0.1841   0.0183   -0.940  -0.455   -3.625    0.968   0.967   0.959   0.977   0.989    0.624
+   D    I_F      2.134   0.1284   0.290    0.1023    0.0496   0.0032   -0.991  -0.427   -4.178    0.828   0.897   0.937   0.976   0.989    0.373
+   D    Umkehr   2.134   0.1498   0.339    0.1297    0.0720   0.0069   -0.956  -0.453   -3.658    0.841   0.906   0.940   0.976   0.989    0.394
+   E    I_F     410.826  129.2783  292.365   30.4238    5.7915   0.2152   -1.777  -1.570   -3.445   11.401   4.264   1.635   0.988   0.989   129.523
+   E    Umkehr  410.826  240.1591  543.123   60.3615   11.7078   0.5333   -1.747  -1.564   -3.256   15.524   5.945   2.127   1.005   0.990   240.403
+   Ω_DE gemessen [G] 0.687; Ω_s = 0.244 fest. w₀, w_a: Anpassung z ≤ 2 wie de_fluchtmoden_verzoegert.
+   E (linear) treibt das Atmen um Größenordnungen; H/H_Λ(0) ≫ 1 ist keine Lösung, nur Grenze.
+   Für Ω_X(0) = 0.442 bräuchte B (I_F) den Faktor 1.33 auf X (X(0) = 6.09 statt 4.56 je Baryon).
+
+================================================================================================================
+3  Gesamtbild (erzwungene Definition B, und A zum Vergleich)
+================================================================================================================
+   B ab I_F: Ω_s + Ω_X = 0.564 (Ω_DE 0.687 [G]); D_M(1090)/D_M,ΛCDM = 1.022; Q-Fenster oben 5.10 (ΛCDM 5.52), unten 5
+      fσ₈/fσ₈,ΛCDM (gleiche frühe Amplitude): z = 0.0: 1.145, z = 0.3: 1.120, z = 0.6: 1.108, z = 1.0: 1.087, z = 1.5: 1.057
+   B ab Umkehr: Ω_s + Ω_X = 0.606 (Ω_DE 0.687 [G]); D_M(1090)/D_M,ΛCDM = 1.017; Q-Fenster oben 5.20 (ΛCDM 5.52), unten 5
+      fσ₈/fσ₈,ΛCDM (gleiche frühe Amplitude): z = 0.0: 1.101, z = 0.3: 1.084, z = 0.6: 1.083, z = 1.0: 1.075, z = 1.5: 1.054
+   A ab I_F: Ω_s + Ω_X = 0.465 (Ω_DE 0.687 [G]); D_M(1090)/D_M,ΛCDM = 1.031; Q-Fenster oben 4.95 (ΛCDM 5.52), unten 5
+      fσ₈/fσ₈,ΛCDM (gleiche frühe Amplitude): z = 0.0: 1.245, z = 0.3: 1.177, z = 0.6: 1.136, z = 1.0: 1.095, z = 1.5: 1.058
+   C ab I_F: Ω_s + Ω_X = 0.580 (Ω_DE 0.687 [G]); D_M(1090)/D_M,ΛCDM = 1.021; Q-Fenster oben 5.13 (ΛCDM 5.52), unten 5
+      fσ₈/fσ₈,ΛCDM (gleiche frühe Amplitude): z = 0.0: 1.131, z = 0.3: 1.112, z = 0.6: 1.104, z = 1.0: 1.085, z = 1.5: 1.057
+
+================================================================================================================
+4  Beobachterfehler
+================================================================================================================
+   μ ist das Maß des Zustandsraums eines Bereichs (G des Bereichs), gezählt in ganzen Tori; über die Zelle je Baryon (G).
+   Der Faktor 1/(1 − r²/R²) ist die Streckung des Geschwindigkeits-Ellipsoids (Tori, die die Naht nicht erreichen), keine
+   Dichte am Ort und kein Raumvolumen; das Mehr sitzt in fast kreisförmigen Bahnen nahe der Naht, wo kaum Baryonen sind.
+   (1 + Q)·M_b als Bezug (D) läse die Mode ξ innen als bindenden Stoff; innen ist w = 0, die Mode ist Regel (ν).
+   X, Ω_X zustandsabhängig (Epoche, Massenfunktion); τ_D und Λ fest.
+
+================================================================================================================
+5  Von Hand: Newton-Tori analytisch, Regel über den Wirkungsweg (Milchstraße, M_b = 6·10¹⁰ M☉, a = 1)
+================================================================================================================
+   Newton, Punktmasse: μ_b = (16π²/3)(2GM R)^{3/2}·∫₀¹√(x(1−x))/(1+x)dx, Integral = 0.26951  [= π(3/2 − √2) = 0.26951]
+   gegen bis R (A'): ∫₀¹x^{1/2}(1−x)^{3/2}dx = B(3/2, 5/2) = π/16 = 0.19635 ⇒ μ_b/μ_a (Newton) = 16(3/2 − √2) = 1.3726
+   Code Newton μ_b/μ_a = 1.3726.
+   Regel tief (v_R² = 2v_f² ln(R/r)): μ_R,b/μ_N,b = (R/r*)^{3/2}·∫u²(ln 1/u)^{3/2}/(1−u²)du / ∫√(x(1−x))/(1+x)dx
+     = 66.54^{1,5}·0.13871/0.26951 = 279.3 (Code, voller Kern-ν: 284.1; Rest aus ν ≈ 1/s + ½)
+   Wirkungsweg (2π)³∫2L·J_r dL (anderer Weg, Quadratur in E und L):
+     Newton μ_b: Wirkung 2.1594e+81, Ellipsoid-Code 2.1594e+81, analytisch 2.1594e+81
+     Regel/Newton μ_b: Wirkung 284.10, Code 284.09; ln 5.649 gegen 5.649
+   Verschiebung je Bereich, tief: ln B − ln A = ln(32/3π) + ln[(0.13871/0.08528)/1,3726] = 1,2225 + 0.1698 = 1.392 (Tabelle 1: 1,39)
+   ⇒ X_B(0) − X_A(0) ≈ 1.392·F(>10⁶, 0) = 1.392·0.875 = 1.218 (Code 1.215).
+   Grob: Ω_X ≈ (E_b + ΔE)² − E_b², ΔE ∝ X; B/A in X(0) = 4.564/3.348 = 1.36 ⇒ ΔE_B ≈ 1.36·0,137 = 0.187,
+   Ω_X ≈ (0,747 + 0.187)² − 0,747² = 0.314 (Code 0.320; Zeitverlauf der Quelle ungleich, daher nur grob).

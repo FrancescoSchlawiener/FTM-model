@@ -1,0 +1,78 @@
+0) Faser w ≥ 0, D·G'' = Γ·G, G(0) = 1, Ende bei w = W reflektierend: G(L) = cosh(m(W−L))/cosh(mW), m = √(Γ/D), s = mL
+   W → ∞ (offen): G(L) = e^{−s};  W = L (Spiegel am Start = geschlossener Kreis 2L): 1/cosh s. Finite Differenzen (h = 2,5·10⁻⁵ L bzw. 5·10⁻⁴ L):
+      s      W/L = 1 (FD / 1/cosh s)     W/L = 200 (FD / e^{−s})
+     0.1    0.995021 / 0.995021        0.904837 / 0.904837
+     1.0    0.648054 / 0.648054        0.367879 / 0.367879
+     3.0    0.099328 / 0.099328        0.049787 / 0.049787
+   Tiefgrenzfall s·ν bei s = 0,01 (Tully-Fisher verlangt 1): Ende bei W = 
+     1: 200.008  10: 10.563  100: 1.322  1000: 1.005  10000: 1.005  inf: 1.005    → offen heißt: kein Ende vor W ≈ L/s.
+
+1) Strukturwirkung ℒ = 2h^{μν}B_μB_ν + (2/ℓ0²)Q̃(q), q = exp(−(ℓ0²Y)^{1/4}), Y = h^{μν}∂σ∂σ: σ tritt nur über ∂σ auf (σ → σ + konst).
+   Linearisierung von ∇·[ν∇σ] (Faltungsgleichung) um ein statisches Gefälle n = ∇σ/|∇σ|:
+   μ_ij = ν·δ_ij + 2Y·ν'(Y)·n_i n_j,   2Yν'/ν = s/(2*(1 - exp(s)))  =  −χ/2:  True
+   numerisch (Jacobi-Matrix des Flusses): μ_∥/μ_⊥ = s=0.5: 0.614626 (1−χ/2 = 0.614626), s=1: 0.709012 (1−χ/2 = 0.709012), s=3: 0.921406 (1−χ/2 = 0.921406)
+   μ_∥/μ_⊥ = 1 − χ/2 = d ln a/d ln a_N (Steigung der Beschleunigungsrelation).
+   Mit innerer Richtung w (h^{ww} = 1, a_w = 0), schwaches Feld: δσ = δΦ_N/c² folgt aus der Gleichung ∇²Φ_N = 4πGρ, im Leeren:
+   (∇² + ∂_w²)δσ = 0,  δσ = f(w)·e^{ik·x}:  f'' = k²f,  beschränkt für w → ∞: f = e^{−kw} (Poisson-Kern, zweiter Ordnung, offen).
+   Die Faltungsgleichung überträgt δσ auf die Neigung: ∂_w²δΦ − k²δΦ = ν f'' − (μ_⊥k_⊥² + μ_∥k_∥²) f; kein Glied ohne Ableitung.
+   Faser an einem Punkt (k → 0): f'' = 0, masselos, q = 1 – kein Verlust.
+   Kreisbahn als reelle Schleife (Umfang 2πr), niedrigste Mode e^{iφ} (senkrecht zum Gefälle, μ_⊥ = ν): f = e^{−w/r}, δΦ ebenso.
+   → Die Wirkung liefert eine abgeschirmte Gleichung in w mit √(Γ/D) = 1/r, aber keinen Verlust ∝ a_N an einem Punkt.
+   q = e^{−s} verlangt dann die innere Länge L = r·s = r·√(a_N/a0); Punktmasse: L = r* = √(GM/a0) = √(3Δs·ℓ0), längs r fest.
+
+2) Das Argument von q in Q̃: s² = √(ℓ0²Y) = ℓ0·|∇σ| = (ℓ0/c)·(c|∇σ|) = τ_D·Γ.  Γ = c|∇σ| = a_N/c,  τ_D = L²/D = ℓ0/c.
+   Starkfeld σ = ln(dτ/dt): Γ = c|∇ln√(1−6Δs/r)| = (a_N/c)/(1 − 6Δs/r) – das Taktgefälle der Faltung, unendlich am Knoten r0 = 6Δs.
+   Satz mit L = r*: D = L²c/ℓ0 = GM/c = 3cΔs,  Γ/D = a_N/(GM) = 1/r² (Punktmasse) = Abschirmung der Kreisbahnmode aus 1).
+   Sonne                  Δs = 4.9233e+02 m  r* = 1.0518e+15 m = √(3Δs·ℓ0) 1.0518e+15  D = 4.428e+11 m²/s  Γ(r*) = 4.003e-19 s⁻¹  τ_D = 79.16 Mrd. J.  freie Weglänge 2D/c = 2.9540e+03 m = 6Δs 2.9540e+03
+   Milchstraße 6·10¹⁰ M☉  Δs = 2.9540e+13 m  r* = 2.5763e+20 m = √(3Δs·ℓ0) 2.5763e+20  D = 2.657e+22 m²/s  Γ(r*) = 4.003e-19 s⁻¹  τ_D = 79.16 Mrd. J.  freie Weglänge 2D/c = 1.7724e+14 m = 6Δs 1.7724e+14
+   τ_D = c/a0 = 79.16 Mrd. Jahre; mit a0 = cH0/2π (H0 = 70) ist τ_D = 2π/H0 = 87.76 Mrd. Jahre.
+
+3) Andere Raten bei diffusivem Rückweg (Punktmasse, s so geeicht, dass s = 1 bei r* der Milchstraße):
+      Rate Γ                     d ln v/d ln r (30–100 r*)   d ln v/d ln M bei r = 200 r*(M_MW)   v⁴/(GMa0) bei 100 r*
+   a_N/c                       -0.0048                      0.2510                              1.0100
+   √(a_N a0)/c                 -0.2667                      0.3802                              0.0110
+   c|a| (a physikalisch)       -0.1747                      0.3355                              0.0479
+   ω = √(a_N/r)                -0.1345                      0.3764                              0.1032
+   Nur Γ ∝ a_N gibt flache Kurven mit v⁴ = GMa0 (Steigung 0, Massenexponent 1/4).
+
+4) Irrfahrt auf einer geschlossenen inneren Schleife (Umfang L), Verlust mit Rate Γ; Lage auf der Überlagerung (Gerade) mitgeführt.
+   A: erste Windung +1 (Punkt +L) vor dem Verlust;  B: erste Windung ±1 (Austritt aus (−L, L)).  D = 1/2, L = 1, Γ = s²/2, 50 000 Läufer:
+      s      A (MC)    e^{−s}     B (MC)    1/cosh s
+     0.5    0.6039    0.6065     0.8869    0.8868
+     1.0    0.3689    0.3679     0.6458    0.6481
+     2.0    0.1371    0.1353     0.2672    0.2658
+   Dieselbe geschlossene Schleife gibt e^{−s}, wenn nur Windungen in einem Sinn Rückläufe sind, und 1/cosh s, wenn beide zählen.
+   Summe der Windungen beider Sinne (Green-Funktion der Schleife): Σ_n e^{−|n|s} = coth(s/2) = 2ν − 1; s·coth(s/2) bei s = 0,01: 2.0000 → v⁴ = 4GMa0.
+   Drift Pe = vL/2D in der Faser: q = exp(−(√(Pe² + s²) − Pe)); s·ν bei s = 0,01 für Pe = 0: 1.005, 0.001: 1.110, 0.01: 2.419, 0.1: 20.055  → Tiefgrenzfall a → 2Pe·a0 ohne Tully-Fisher.
+
+5a) Nahfeld: s = r*/r, q = e^{−s} (Sonne, r* = 7031 AE):
+      Merkur  s =   18166.75   log10 q =     -7889.72
+      Erde    s =    7030.53   log10 q =     -3053.32
+      Neptun  s =     233.81   log10 q =      -101.54
+      r*      s =       1.00   log10 q =        -0.43
+5b) Unabhängigkeit von M: L = r*, D = GM/c ⇒ τ_D = L²/D = c/a0 für jede Masse; q hängt nur von a_N ab.
+      M = 10^ 8 M☉:  τ_D = 79.1594 Mrd. J.,  q(a_N = a0) = 0.367879,  s·ν bei a_N = 10⁻⁴a0: 1.005008
+      M = 10^10 M☉:  τ_D = 79.1594 Mrd. J.,  q(a_N = a0) = 0.367879,  s·ν bei a_N = 10⁻⁴a0: 1.005008
+      M = 10^12 M☉:  τ_D = 79.1594 Mrd. J.,  q(a_N = a0) = 0.367879,  s·ν bei a_N = 10⁻⁴a0: 1.005008
+      M = 10^14 M☉:  τ_D = 79.1594 Mrd. J.,  q(a_N = a0) = 0.367879,  s·ν bei a_N = 10⁻⁴a0: 1.005008
+5c) Endliche freie Weglänge λ_f bei Lichtgeschwindigkeit (Telegraphengleichung, Wendrate μ = c/λ_f, D = cλ_f/2):
+    κL = s·√(1 + ε s²), ε = λ_f/(2ℓ0); q = ½(1 + μ/(μ + Γ + cκ))·e^{−κL}.
+    λ_f = 6Δs, L = r*, 10⁸ M☉    : q/e^{−s} − 1 = -4.21e-09 / -1.40e-08 / -4.21e-08 (s = 0,3/1/3);  s·(v_f/c)² bei s = 1: 1.40e-08, (v_f/c)⁴ = 1.97e-16
+    λ_f = 6Δs, L = r*, 6·10¹⁰ M☉ : q/e^{−s} − 1 = -1.03e-07 / -3.44e-07 / -1.03e-06 (s = 0,3/1/3);  s·(v_f/c)² bei s = 1: 3.44e-07, (v_f/c)⁴ = 1.18e-13
+    λ_f = 6Δs, L = r*, 10¹⁵ M☉   : q/e^{−s} − 1 = -1.33e-05 / -4.44e-05 / -1.33e-04 (s = 0,3/1/3);  s·(v_f/c)² bei s = 1: 4.44e-05, (v_f/c)⁴ = 1.97e-09
+    L = ℓ0 (ein Schritt, λ_f = 2ℓ0, ballistisch): q = 0.5679 / 0.1424 / 3.892e-05 gegen e^{−s} = 0.7408 / 0.3679 / 0.0498;  s·ν bei s = 0,01: 0.5063 → v⁴ = GMa0/4.
+5d) Bahn-Lesart mit L = Schwellenlänge der eingeschlossenen Faltung, L² = G·M(<R)/a0, und Abschirmung 1/R (Kreisbahnmode):
+    s_II = √(G·M(<R)/a0)/R gegen lokal s = √(a_N/a0). Dünne Exponentialscheibe, Beispiel r*(M) = 3R_d:
+      R/R_d    a_N·R²/(G·M(<R))    s lokal    s_II      a_II/a_lokal − 1
+      0.5        0.7578            1.5687     1.8020    -0.0519
+      1.0        1.0519            1.5817     1.5421    +0.0105
+      2.2        1.3188            1.2581     1.0955    +0.0754
+      3.0        1.3448            1.0378     0.8949    +0.0920
+      5.0        1.2474            0.6564     0.5877    +0.0830
+     10.0        1.0589            0.3086     0.2999    +0.0248
+     30.0        1.0051            0.1003     0.1000    +0.0024
+    Für Kugelsymmetrie ist a_N R² = G M(<R): beide Lesarten gleich. In Scheiben weicht die Bahn-Lesart im Übergang ab.
+
+Ergebnis: Die Form (Wurzel, Exponential, Σqⁿ) folgt aus einem abgeschirmten Rückweg zweiter Ordnung, der in einem Umlaufsinn
+gezählt wird. Die Faltungsgleichung liefert in w die Abschirmung 1/r der Kreisbahnmode; Verlust ∝ a_N an einem Punkt liefert sie nicht.
+Offen bleibt die innere Länge L = r* = √(3Δs·ℓ0) (gleichwertig: Γ = c|∇σ| mit τ_D = ℓ0/c); sie steckt im Argument von Q̃.

@@ -1,0 +1,2 @@
+Local Volume Database (Pace 2025, OJAp 8, 142), Version v1.1.1: Zwerggalaxien und Sternhaufen im Lokalen Volumen mit Lage, Abstand, Halblichtradius, Elliptizität, M_V, Sternmasse, Geschwindigkeitsstreuung (mit Obergrenzen), Eigenbewegung, Metallizität, HI-Masse, Abstand zum Wirt.
+https://github.com/apace7/local_volume_database, Release v1.1.1, comb_all.csv, geladen 2026-10-12, unverändert.

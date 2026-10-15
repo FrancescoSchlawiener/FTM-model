@@ -1,0 +1,29 @@
+=== 1 Beide Formen ===
+Λ = c²/2a₀ = 13.24 Gpc, Ω_s(0) = 0.2443, H_s/H₀ = 0.4943 (= √Ω_s: 0.4943)
+S_Λ = 9.272e+122 k, horizontentropie(H_s) = 9.272e+122 k
+z = 0:        S_H = 2.265e+122 k, S_H/S_Λ = 0.2443
+a =    2 (Std): S_H/S_Λ = 0.3367;   (nur Vakuumteil): 0.8618
+a =    5 (Std): S_H/S_Λ = 0.3546;   (nur Vakuumteil): 0.9898
+a =   10 (Std): S_H/S_Λ = 0.3557;   (nur Vakuumteil): 0.9987
+a =  100 (Std): S_H/S_Λ = 0.3559;   (nur Vakuumteil): 1.0000
+a → ∞  (Std): S_H/S_Λ = Ω_s/Ω_Λ = 0.3559  → nie auf 10 % gleich
+a → ∞  (nur Vakuumteil): 1
+10 %-Gleichheit im Grenzfall: a = 2.260 (z = -0.558), Weltalter 35.6 Mrd J (dieser Hintergrund, heute 15.6 Mrd J; Std heute 13.81)
+  Probe analytisch: a³ = 9Ω_m/Ω_s (ohne Strahlung) → a = 2.260
+
+=== 2 Mindestrate ===
+Λ-Form Ṡ_i/(2S_Λ) = 3.829e-37 s⁻¹ = 1.21e-29/J → 1.00e-05 M☉/J;  kreislauf_mindestrate: 3.829e-37
+H-Form Ṡ_i/(2S_H) heute = 1.567e-36 s⁻¹ = 4.95e-29/J → 4.10e-05 M☉/J
+Heute wächst der Horizont durch die Verdünnung der Materie: Ṡ_H = 4.65e+104 k/s = 6.6e+17·Ṡ_i → keine Mindestrate für Λ
+
+=== 3 Bedingung −Ḣ ≥ ℓ_P²H³Ṡ_i/(2πc²k) ===
+heute: −Ḣ = 2.24e-36 s⁻², verlangt 3.42e-54 s⁻²
+Std (Ω_Λ fest): Ṡ_i = 7,1·10⁸⁶ k/s je Horizont fest → verletzt ab a = 1.048e+06, Weltalter 2.554e+11 J
+   Probe analytisch (ohne Strahlung): t = 2/(3H₀√Ω_Λ)·arsinh(√(Ω_Λ/Ω_m)a^1,5) = 2.554e+11 J
+nur Vakuumteil: Ṡ_i = 7,1·10⁸⁶ k/s je Horizont fest → verletzt ab a = 1.757e+06, Weltalter 4.331e+11 J
+Std, Ṡ_i ∝ a⁻³ (Quellen verdünnen sich im festen Horizontvolumen): verletzt ab a = None
+Im Grenzfall H → H_s ist Ḣ = 0 nur ohne neue Faltung; mit Λ̇/Λ ≥ Ṡ_i/(2S_Λ) = 3.83e-37 s⁻¹ gilt −Ḣ = H_s·Λ̇/Λ ≥ ℓ_P²H_s³Ṡ_i/(2πc²k), w_s + 1 = (2/3)(Λ̇/Λ)/H_s = 2.4e-19
+
+=== 4 Probe von Hand ===
+Λ = 4.0852e+26 m, S_Λ = 9.272e+122, S_H = 2.265e+122, Verhältnis 0.2443, Raten 3.829e-37 / 1.567e-36 s⁻¹
+Masse je Jahr: 3c²·Λ·rate·yr/G = 1.00e-05 M☉

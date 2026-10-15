@@ -1,0 +1,205 @@
+ELEMENTE UND ÜBERGÄNGE: Phasen, Elektronen, Kern; Anschluss an das Modell
+PubChem: 118 Elemente; mit Schmelzpunkt 103, Siedepunkt 93, beide 93, Ionisierungsenergie 102, Elektronenaffinität 57, Elektronegativität 95, Radius 99, Dichte kondensiert 85
+Radius in PubChem = Van-der-Waals-Radius [pm]. Dichte der Gase ist Gasdichte, darum Atomvolumen nur für feste und flüssige Elemente.
+Sonderfälle (aus dem Verhältnis T_b/T_m genommen): He: Schmelzpunkt nur unter Druck; C: sublimiert (Schmelz- und Siedewert fast gleich); As: sublimiert (Schmelzpunkt über Siedepunkt)
+
+1) PHASEN: Schmelz- und Siedepunkt
+------------------------------------------------------------------------------------------
+1a) Verhältnis T_b/T_m über 90 Elemente: Median 1.82, 16–84 % 1.49–3.07, Min 1.023 (Xe), Max 8.18 (Ga); Variationskoeffizient 0.49
+    je Block:  n   Median   Min            Max
+    Noble gas                  5    1.04   1.02 (Xe)     1.10 (Ne)
+    Halogen                    4    1.32   1.18 (I )     1.59 (F)
+    Alkaline earth metal       6    1.58   1.45 (Ra)     2.17 (Ba)
+    Nonmetal                   6    1.70   1.23 (N )     1.94 (Se)
+    Transition metal          29    1.77   1.35 (Cr)     2.69 (Hg)
+    Lanthanide                15    1.90   1.22 (Tm)     3.45 (Ce)
+    Metalloid                  6    2.08   1.74 (Te)     2.56 (Ge)
+    Actinide                   7    2.62   1.58 (Am)     4.55 (Np)
+    Alkali metal               5    3.12   3.07 (K )     3.56 (Li)
+    Post-transition metal      7    3.37   2.99 (Al)     8.18 (Ga)
+    Kruskal-Wallis über Blöcke mit n ≥ 3: H = 53.0, p = 2.9e-08. Das Fenster T_b/T_m hängt an der Bindungsart, es ist keine Konstante.
+    [G] Richards (ΔS_m ≈ k je Atom) und Trouton (ΔS_b ≈ 10,5 k): ΔH_b/ΔH_m ≈ 10,5·T_b/T_m = 19 im Median;
+        Schmelzen nimmt nur etwa 5 % der Bindung, es löst die Ordnung, nicht den Zusammenhalt.
+
+1b) Was geht mit ln T_m und ln T_b einher? Spearman ρ [95 % Bootstrap], Permutations-p; Bonferroni über alle 16 Tests
+    ln T_m ~ Ionisierungsenergie      n=102  ρ = -0.19 [-0.42, +0.05]  p = 0.050
+    ln T_m ~ Elektronegativität       n= 95  ρ = -0.09 [-0.32, +0.18]  p = 0.393
+    ln T_m ~ Elektronenaffinität      n= 57  ρ = -0.20 [-0.45, +0.07]  p = 0.129
+    ln T_m ~ Van-der-Waals-Radius     n= 99  ρ = +0.16 [-0.05, +0.37]  p = 0.102
+    ln T_m ~ Atomvolumen (kondens.)   n= 85  ρ = -0.56 [-0.68, -0.41]  p = 2.0e-04  *
+    ln T_m ~ Dichte (kondens.)        n= 85  ρ = +0.45 [+0.22, +0.63]  p = 2.0e-04  *
+    ln T_m ~ Masse                    n=103  ρ = +0.22 [+0.02, +0.41]  p = 0.022
+    ln T_m ~ T_m bzw. T_b             n= 93  ρ = +0.89 [+0.82, +0.93]  p = 2.0e-04  *
+    ln T_b ~ Ionisierungsenergie      n= 93  ρ = -0.35 [-0.56, -0.10]  p = 8.0e-04  *
+    ln T_b ~ Elektronegativität       n= 85  ρ = -0.19 [-0.41, +0.08]  p = 0.094
+    ln T_b ~ Elektronenaffinität      n= 55  ρ = -0.31 [-0.55, -0.04]  p = 0.018
+    ln T_b ~ Van-der-Waals-Radius     n= 93  ρ = +0.30 [+0.10, +0.49]  p = 0.004
+    ln T_b ~ Atomvolumen (kondens.)   n= 82  ρ = -0.47 [-0.62, -0.28]  p = 2.0e-04  *
+    ln T_b ~ Dichte (kondens.)        n= 82  ρ = +0.53 [+0.33, +0.68]  p = 2.0e-04  *
+    ln T_b ~ Masse                    n= 93  ρ = +0.37 [+0.16, +0.54]  p = 4.0e-04  *
+    ln T_b ~ T_m bzw. T_b             n= 93  ρ = +0.89 [+0.81, +0.93]  p = 2.0e-04  *
+    * = nach Bonferroni signifikant.
+    Vorhersage von ln T_m (Leave-one-out-R², n = 81): Atom allein: IE, EN, r: -0.12 (Zufall ≤ -0.00); + ln V_A (Festkörper): 0.45 (Zufall ≤ 0.01); + d-Füllung: 0.53 (Zufall ≤ -0.01)
+
+1c) d-Block: T_m gegen Gruppe 3–12 (Zahl der s+d-Elektronen), je Reihe quadratisch angepasst
+    Reihe 4: Sc 1814 Ti 1941 V 2183 Cr 2180 Mn 1519 Fe 1811 Co 1768 Ni 1728 Cu 1358 Zn 693
+            R² = 0.78, Scheitel bei Gruppe 5.63; höchster Wert V (Gruppe 5)
+    Reihe 5: Y 1795 Zr 2128 Nb 2750 Mo 2896 Tc 2430 Ru 2607 Rh 2237 Pd 1828 Ag 1235 Cd 594
+            R² = 0.96, Scheitel bei Gruppe 6.52; höchster Wert Mo (Gruppe 6)
+    Reihe 6: La 1191 Hf 2506 Ta 3290 W 3695 Re 3459 Os 3306 Ir 2719 Pt 2042 Au 1337 Hg 234
+            R² = 0.97, Scheitel bei Gruppe 6.91; höchster Wert W (Gruppe 6)
+    mittleres R² = 0.90, Permutations-p = 2.0e-04; Scheitel im Mittel bei Gruppe 6.35 = halbe Füllung von 12 s+d-Plätzen (Friedel, bekannt)
+
+1d) Größte Sprünge zum Nachbarn Z → Z+1
+    T_m: C→N 3823→63 K, Ne→Na 25→371 K, Au→Hg 1337→234 K, Si→P 1687→317 K, Ar→K 84→337 K, Ga→Ge 303→1211 K, Li→Be 454→1560 K, Rb→Sr 312→1050 K
+    T_b: C→N 4098→77 K, Ne→Na 27→1156 K, Ar→K 87→1032 K, Kr→Rb 120→961 K, Si→P 3538→554 K, Xe→Cs 165→944 K, Au→Hg 3129→630 K, Ge→As 3106→887 K
+    Die größten Sprünge liegen dort, wo ein Netz fester Bindungen (Metall, kovalentes Gitter) in abgeschlossene Einheiten (Edelgasatom, Molekül N₂, O₂, F₂) übergeht,
+    oder umgekehrt. Der Übergang zählt die Bindungen zwischen den Einheiten, nicht die in ihnen.
+
+1e) Wer ist wem ähnlicher: waagrechter Nachbar (Z, Z+1, gleiche Periode) oder senkrechter (gleiche Gruppe, nächste Periode)?  mittleres |Δ|, Mann-Whitney
+    Hauptgruppen (1, 2, 13–18): ln T_m: waagr. 0.80 / senkr. 0.66 (p = 0.293); ln T_b: waagr. 0.73 / senkr. 0.58 (p = 0.111); IE: waagr. 2.08 / senkr. 1.53 (p = 0.025); EN: waagr. 0.31 / senkr. 0.28 (p = 0.128); r: waagr. 21.38 / senkr. 19.50 (p = 0.647)
+    d-Block (3–12): ln T_m: waagr. 0.27 / senkr. 0.24 (p = 0.708); ln T_b: waagr. 0.24 / senkr. 0.23 (p = 0.174); IE: waagr. 0.46 / senkr. 0.66 (p = 0.083); EN: waagr. 0.23 / senkr. 0.19 (p = 0.466); r: waagr. 13.69 / senkr. 16.24 (p = 0.409)
+
+2) ELEKTRONEN
+------------------------------------------------------------------------------------------
+2a) Größte Abfälle der Ionisierungsenergie Z → Z+1 (von 101 Paaren): He→Li (24.59→5.39 eV), Ne→Na (21.57→5.14 eV), Ar→K (15.76→4.34 eV), Kr→Rb (14.00→4.18 eV), Xe→Cs (12.13→3.89 eV), Rn→Fr (10.74→3.90 eV)
+    6 von 6 liegen am Edelgas → Alkalimetall; Zufallswahrscheinlichkeit, dass die 6 größten genau diese 6 Stellen treffen: 1/C(101,6) = 7.9e-10
+    Knicke innerhalb der Periode (Gruppe 2 > 13: neue Unterschale; 15 > 16: halbvolle p-Schale): P2: ja/ja, P3: ja/ja, P4: ja/ja, P5: nein/nein, P6: nein/nein
+
+2b) Ionisierungsenergie als Längenverhältnis: IE/(m_e c²) = r_e/(2 r_IE), r_IE = e²/(8πε₀·IE); Wasserstoff: r_IE = a_B
+    r_IE: H 52.9 pm (a_B = 52.9), He 29.3, Cs 184.9 pm; gemessener Radius / r_IE: Median 2.05, 16–84 % 1.79–2.62
+    IE·r_vdW / (e²/4πε₀): Median 1.02, 16–84 % 0.89–1.31: Bindungsbruchteil IE/(m_e c²) ≈ r_e/r_vdW der Größenordnung nach
+    ln IE gegen ln r: Steigung -1.39 [-1.69, -1.12] (Coulomb mit fester Ladung gäbe −1); Spearman ρ = -0.73 [-0.82, -0.60], p = 2.0e-04, n = 99
+    IE/(m_e c²) liegt zwischen 7.6e-06 (Cs) und 4.8e-05 (He); Wasserstoff α²/2 = 2.66e-05
+
+2c) Elektronenaffinität fehlt (Anion nicht oder kaum gebunden) für Z ≤ 56: He, Be, N, Ne, Mg, Ar, Ca, Mn, Zn, Kr, Sr, Cd, Xe, Ba
+    Valenzschalen alle voll oder p, d halbvoll (Definition [A]): He, Be, N, Ne, Mg, P, Ar, Ca, Mn, Zn, As, Kr, Sr, Tc, Pd, Cd, Sb, Xe, Ba
+    14 der 14 fehlenden liegen in diesen 19; hypergeometrisch p = 2.0e-09. Ausnahmen mit positiver Affinität: P 0.75, As 0.81, Tc 0.55, Pd 0.56, Sb 1.07
+
+2d) Kippstelle der Polarisation (Clausius-Mossotti, Herzfeld): ε = (1 + 2q)/(1 − q), q = (4π/3)·α'/V_A; bei q = 1 divergiert die Rückkopplung der lokalen Felder (Metall)
+    α' nicht in den Daten: geschätzt (A) α' = (9/2)·r_IE³ (Wasserstoff-Form) bzw. (B) α' = r_vdW³ [beides A, Faktor 2 unsicher]; V_A aus Dichte und Masse
+    (A) aus IE: 71 Metalle, 7 Nichtmetalle; beste Schwelle q_c = 0.25 [0.20, 0.56], Trefferquote 0.97 (Zufall p = 1.0e-03); bei q = 1: 0.63
+       falsch eingeordnet: C, Se;  Halbmetalle: B 1.63, Si 0.65, Ge 0.63, As 0.35, Sb 0.36, Te 0.28, Po 0.32
+    (B) aus r_vdW: 71 Metalle, 7 Nichtmetalle; beste Schwelle q_c = 0.72 [0.27, 1.08], Trefferquote 0.94 (Zufall p = 0.008); bei q = 1: 0.92
+       falsch eingeordnet: C, P, S, Se, I;  Halbmetalle: B 3.91, Si 1.94, Ge 1.74, As 1.23, Sb 1.21, Te 1.08, Po 0.86
+    zum Vergleich Elektronegativität allein: Trefferquote 0.97 (Schwelle 2.54)
+    zum Vergleich Ionisierungsenergie allein: Trefferquote 0.99 (Schwelle 9.45)
+
+3) KERN (AME2020)
+------------------------------------------------------------------------------------------
+3a) Kerne in AME2020: 3558, davon gemessen 2550; schwerstes gemessenes Z = 110, größtes gemessenes A = 270
+    größte Bindung je Nukleon B/A: 62Ni 8794.56 keV, 58Fe 8792.25 keV, 56Fe 8790.36 keV, 60Ni 8780.78 keV, 54Cr 8777.97 keV
+    kleinste Kernmasse je Nukleon (Atommasse − Z·m_e, relativ zu u): 56Fe -1319.52 keV, 60Ni -1313.02 keV, 62Ni -1307.33 keV
+    Die kleinste Faltung je Nukleon, Δs/A = G·m/(3c²A), hat ⁵⁶Fe, nicht ⁶²Ni: ⁶²Ni hat mehr Neutronen, die schwerer sind als Protonen.
+
+3b) Tröpfchenmodell (bekannt) an 2484 gemessene Kerne, A ≥ 16: a_V = 15.41, a_S = 16.86, a_C = 0.695, a_A = 22.50, a_P = 12.03 MeV; rms 3.31 MeV
+    Maximum von B/A im Tröpfchenmodell längs des Stabilitätstals: A = 58, Z = 26; gemessen ⁶²Ni (Z = 28)
+    Spaltbarkeit x = E_C/(2E_S) = a_C Z²/(2a_S A): am Maximum 0.240, ⁵⁶Fe 0.249, ⁶²Ni 0.261
+    hergeleitet: bei festem Z/A ist d(B/A)/dA = 0 genau bei E_C = E_S/2, also x = ¼; Oberfläche (je Nukleon fallend) gegen Coulomb (steigend).
+    Kippstelle: Die Verformungsenergie einer Quadrupolform ist (2/5)E_S·α²·(1 − x); bei x = 1 verschwindet die Rückstellung (Bohr-Wheeler), Antwort ∝ 1/(1 − x).
+    größtes x unter den gemessenen Kernen: 0.927 (269Ds), 1/(1 − x) = 13.8; schwerster gemessener 270Ds
+
+3c) Magische Zahlen blind: Schalenlücke D = S_2n(N) − S_2n(N+2) (gerades N), Median über alle gemessenen Z mit ≥ 3 Werten; ebenso aus S_2p
+    Hauptwert: Lücke minus Lücke des Tröpfchenmodells (entfernt den glatten Gang, der leichte Kerne groß macht)
+    N ohne Tröpfchengang: größte 82 (3.23), 50 (3.19), 126 (3.03), 28 (2.44), 152 (0.57), 124 (0.30), 20 (0.29), 16 (0.20), 142 (0.17)  [MeV; 76 Werte]
+       unter den 6 größten 4 magische (mit Daten: 8, 20, 28, 50, 82, 126); Zufall p = 1.7e-04; Rang der magischen: 8:74, 20:7, 28:4, 50:2, 82:1, 126:3
+    Z ohne Tröpfchengang: größte 50 (2.64), 28 (2.01), 82 (1.28), 100 (0.40), 80 (0.38), 98 (0.31), 20 (0.20), 96 (0.14), 94 (0.05)  [MeV; 50 Werte]
+       unter den 5 größten 3 magische (mit Daten: 8, 20, 28, 50, 82); Zufall p = 4.8e-03; Rang der magischen: 8:46, 20:7, 28:2, 50:1, 82:3
+    N roh: größte 6 (11.26), 4 (6.82), 8 (6.68), 28 (5.04), 16 (4.94), 50 (4.94), 20 (4.27), 82 (4.17), 14 (4.05)  [MeV; 76 Werte]
+       unter den 6 größten 3 magische (mit Daten: 8, 20, 28, 50, 82, 126); Zufall p = 5.2e-03; Rang der magischen: 8:3, 20:7, 28:4, 50:6, 82:8, 126:10
+    Z roh: größte 6 (12.44), 8 (11.14), 14 (8.16), 16 (6.69), 28 (6.58), 4 (6.39), 20 (6.35), 50 (5.40), 12 (5.28)  [MeV; 50 Werte]
+       unter den 5 größten 2 magische (mit Daten: 8, 20, 28, 50, 82); Zufall p = 7.2e-02; Rang der magischen: 8:2, 20:7, 28:5, 50:8, 82:17
+
+3d) Schwellen der Teilchenemission: gemessen S_n < 0 bei 17 von 2393, S_p < 0 bei 76 von 2343 Kernen
+    S_n < 0: 4H, 5H, 6H, 5He, 7He, 9He, 10He, 10Li, 12Li, 13Be, 15Be, 16B …
+    S_p < 0 (größte Z): 219Np (-253 keV), 211Pa (-704 keV), 212Pa (-431 keV), 213Pa (-254 keV), 214Pa (-51 keV), 205Ac (-757 keV), 206Ac (-392 keV), 207Ac (-292 keV)
+    Der Kern kann ein Nukleon abgeben, sobald die Separationsenergie das Vorzeichen wechselt; die Tropflinie ist diese Schwelle.
+
+3e) A gerade: 127 Isobarenketten; Zahl lokaler Massenminima (stabil gegen einfachen β-Zerfall): 1 → 48, 2 → 74, 3 → 5
+3e) A ungerade: 127 Isobarenketten; Zahl lokaler Massenminima (stabil gegen einfachen β-Zerfall): 1 → 127, 2 → 0, 3 → 0
+    Bei geradem A liegen gerade-gerade und ungerade-ungerade Kerne auf zwei um 2·a_P/√A versetzten Parabeln: Mehrfachstabilität,
+    Übergang zwischen den Minima nur über doppelten β-Zerfall (Barriere = der Zwischenkern liegt höher).
+
+4) TRICHTERGRÖSSEN JE ELEMENT UND KERN (Modell: Δs = GM/(3c²), Takt 3Δs/r, α_G = 3Δs/λ̄ = (M/m_Pl)²)
+------------------------------------------------------------------------------------------
+    Element   Δs [m]      Δs/r_vdW    3Δs/R_Kern   α_G = (m/m_Pl)²   r* = √(Gm/a₀)   B/A/(m_u c²)  IE/(m_e c²)  kT_m/(m c²)
+    H        4.14e-55   3.5e-45     1.0e-39      5.9e-39             30.5 fm      3.04e-03     2.7e-05      1.3e-12
+    C        4.94e-54   2.9e-44     5.4e-39      8.4e-37            105.3 fm      8.24e-03     2.2e-05      2.9e-11
+    Fe       2.30e-53   1.2e-43     1.5e-38      1.8e-35            227.1 fm      9.44e-03     1.5e-05      3.0e-12
+    Ni       2.41e-53   1.5e-43     1.5e-38      2.0e-35            232.8 fm      9.44e-03     1.5e-05      2.7e-12
+    Pb       8.51e-53   4.2e-43     3.6e-38      2.5e-34            437.2 fm      8.46e-03     1.5e-05      2.7e-13
+    U        9.78e-53   4.1e-43     3.9e-38      3.3e-34            468.9 fm      8.20e-03     1.2e-05      5.5e-13
+    Og       1.21e-52   –           4.6e-38      5.1e-34            522.2 fm      –            –            –
+    Gravitation zweier Nachbaratome G m²/(2r_vdW) gegen k T_m: 1.5e-33 bis 7.4e-30; gegen IE: 3.6e-37 bis 2.4e-32
+    Takt des Kerns an seiner Oberfläche gegen seine Bindung (3Δs/R)/(B/A/m_u c²): ⁵⁶Fe 1.6e-36
+    Rückkehranteil im Labor (Erdfeld): q = e^(−√(g⊕/a₀)) = e^(−2.86e+05); zwischen zwei Atomen allein wäre a_N ≈ 1.6e-16 m/s² < a₀,
+    aber die Regel sieht das Gesamtfeld, und jedes Labor liegt tief im Newton-Bereich. Die Galaxienregel spielt für Elemente keine Rolle.
+
+4b) Wo ein Trichter den Zustand seines Stoffs bestimmt: Druck im Zentrum mal Atomvolumen gegen kT
+    homogene Kugel: P_c·V_A = ½·m_A·GM/R = ½·m_A c²·δ,  δ = 3Δs/R = GM/(Rc²)  (Takt an der Oberfläche)
+    ⇒ δ_krit = 2kT/(m_A c²) = 2(v_th/c)²;  derselbe Quotient δ·m_A c²/(kT) entscheidet, ob ein Körper sein Gas hält (Jeans, bekannt)
+    δ_krit(T_m) über 85 feste/flüssige Elemente: 2.2e-13 bis 5.9e-11 (Median 1.9e-12)
+    Körpermasse dazu (Kugel aus dem Element): Median 7.0e+20 kg, Radius Median 272 km (16–84 %: 172–590 km)
+    Eisen: δ_krit = 6.0e-12, M = 4.0e+21 kg, R = 495 km
+    Erde δ = 6.96e-10 (Modell 01) = 116·δ_krit(Fe): Der Erdtrichter verschiebt die Phasengrenzen seines Eisens; ein Atom allein nie.
+    [G] Mond δ ≈ 3·10⁻¹¹ (M = 7,3·10²² kg, R = 1737 km); Kleinkörper werden erst ab einigen hundert km Radius rund (bekannte Grenze).
+
+5) REGELN DES MODELLS AN DEN DATEN
+------------------------------------------------------------------------------------------
+5a) Rückkopplungssumme 1/(1 − q), Kippstelle q = 1: drei Stellen an den Elementen mit derselben Form
+    Kern: q = x (Spaltbarkeit), Rückstellung ∝ 1 − x; gemessen x = 0.26 (⁶²Ni) bis 0.93; keine Kippstelle erreicht, schwerste Kerne halten nur über Schalen.
+    Hülle: q = (4π/3)α'/V_A (lokales Feld), ε = (1+2q)/(1−q); Metall ab q = 1 (Herzfeld) — geprüft in 2d.
+    [G] Magnetismus: χ = χ₀/(1 − I·N(E_F)) (Stoner); ferromagnetisch bei I·N(E_F) ≥ 1 (Fe, Co, Ni); keine Daten dazu.
+    Schmelzen und Sieden sind Übergänge erster Art: Der Gleichgewichtspunkt liegt zwischen zwei Stellen q = 1 (Unterkühlungs- und Überhitzungsgrenze);
+    die Tabellenwerte T_m, T_b sind nicht die Kippstellen, sondern der Gleichstand der freien Energien innerhalb des Hysteresefensters.
+
+5b) Kopplungsfenster: fest = eingerastet (Gitterphasen gebunden), flüssig = gekoppelt, nicht eingerastet, Gas = entkoppelt.
+    Wären beide Ränder von einer Kopplung gesetzt, wäre T_b/T_m fest; gemessen 1.02–8.18, nach Block verschieden (p = 2.9e-08).
+    Edelgase (eine Paarkopplung): T_b/T_m = Ne 1.102, Ar 1.042, Kr 1.036, Xe 1.023, Rn 1.047; Metalle breit: die Bindung überlebt den Verlust der Ordnung.
+
+5c) Geometrisches Mittel als Übergangslänge in der Hülle: λ̄_e² = r_e·a_B: 1.491190e-25 = 1.491190e-25 (exakt, α-Kette r_e = αλ̄_e = α²a_B)
+    Gegenstück im Modell ℓ_P² = 3Δs·λ̄; für ein Atom: 3Δs·λ̄ = 2.6123e-70 = ℓ_P² = 2.6123e-70 (Fe, für jede Masse gleich)
+    r* eines Atoms liegt zwischen Kern und Hülle (31 fm bei H bis 0.52 pm bei Og); ohne Wirkung, da jedes Labor im Newton-Bereich liegt.
+
+5d) Drehordnungen: Ein Kristall ist ein Zustand auf dem Torus ℝ³/Λ; eine Drehung des Gitters hat ganzzahlige Spur, 2cos(2π/n) ∈ ℤ ⇒ n ∈ [1, 2, 3, 4, 6]
+    Das ist derselbe Satz wie für die flachen Tori (60°, 90°, 120°, 180°). Kristallstrukturen stehen nicht in den Daten; nicht elementweise prüfbar.
+
+5e) Bose-Leiter, Planck-Form: in den Daten keine Wärmekapazität, kein Spektrum, keine Debye-Temperatur; nicht prüfbar.
+    Struktur [G]: Lindemann ⟨u²⟩ = (ħ/2mω)·coth(ħω/2kT) = (ħ/2mω)(1 + 2n_B); Schmelzen liegt im Rayleigh-Jeans-Bereich (kT ≫ ħω), die Form zählt beide Umlaufsinne.
+
+6) MUSTERSCAN ÜBER ALLE ELEMENTE MIT ZUFALLSSCHUTZ
+------------------------------------------------------------------------------------------
+    Werte: 12 von 36 Paaren nach Bonferroni (×72) signifikant:
+       IE       ~ EN       ρ = +0.90 [+0.83, +0.94], n = 94
+       lnT_m    ~ lnT_b    ρ = +0.89 [+0.80, +0.94], n = 93
+       IE       ~ r        ρ = -0.73 [-0.81, -0.61], n = 99
+       EN       ~ EA       ρ = +0.72 [+0.57, +0.81], n = 57
+       IE       ~ EA       ρ = +0.69 [+0.56, +0.81], n = 57
+       EN       ~ r        ρ = -0.69 [-0.80, -0.54], n = 91
+       r        ~ V_A      ρ = +0.63 [+0.48, +0.76], n = 85
+       V_A      ~ lnT_m    ρ = -0.56 [-0.68, -0.42], n = 85
+       IE       ~ V_A      ρ = -0.51 [-0.67, -0.31], n = 85
+       EN       ~ V_A      ρ = -0.51 [-0.70, -0.28], n = 81
+       IE       ~ T_b/T_m  ρ = -0.50 [-0.65, -0.29], n = 90
+       V_A      ~ lnT_b    ρ = -0.47 [-0.61, -0.29], n = 82
+    Nachbardifferenzen: 6 von 36 Paaren nach Bonferroni (×72) signifikant:
+       lnT_m    ~ lnT_b    ρ = +0.71 [+0.51, +0.85], n = 84
+       V_A      ~ lnT_b    ρ = -0.58 [-0.75, -0.34], n = 75
+       V_A      ~ lnT_m    ρ = -0.53 [-0.71, -0.26], n = 79
+       IE       ~ T_b/T_m  ρ = -0.48 [-0.64, -0.31], n = 79
+       lnT_b    ~ T_b/T_m  ρ = +0.39 [+0.13, +0.58], n = 79
+       IE       ~ B/A_max  ρ = +0.38 [+0.14, +0.55], n = 95
+    Kreuzebene (B/A_max gegen Hülle und Phasen) in den Nachbardifferenzen: IE~B/A_max ρ = +0.38 (p = 6.7e-04), EN~B/A_max ρ = +0.25 (p = 0.022), EA~B/A_max ρ = +0.16 (p = 0.355), r~B/A_max ρ = +0.02 (p = 0.831), V_A~B/A_max ρ = -0.11 (p = 0.345), lnT_m~B/A_max ρ = +0.06 (p = 0.564), lnT_b~B/A_max ρ = -0.01 (p = 0.931), T_b/T_m~B/A_max ρ = -0.26 (p = 0.018)
+
+    Kernschalen in Hülle und Phasen? Lokalresiduum X(Z) − ½[X(Z−1) + X(Z+1)] an Z = 8, 20, 28, 50, 82 gegen 5 zufällige Z (Permutation)
+       ln T_m  : magisch +0.051, Zufall -0.018 ± 0.314, p = 0.756;  gerades gegen ungerades Z: -0.060 / +0.029, p = 0.783
+       ln T_b  : magisch +0.117, Zufall -0.010 ± 0.352, p = 0.682;  gerades gegen ungerades Z: -0.190 / +0.168, p = 0.045
+       IE      : magisch -0.202, Zufall +0.071 ± 1.309, p = 0.717;  gerades gegen ungerades Z: +1.200 / -1.091, p = 7.7e-06
+       B/A_max : magisch +66.171, Zufall +19.245 ± 142.880, p = 0.256;  gerades gegen ungerades Z: +96.300 / -56.821, p = 3.4e-19
+
+    Gerade/ungerade Z in der Ionisierungsenergie ohne Edelgase und ihre Nachbarn (Z_Edelgas − 1 … + 1):
+       IE: gerade +0.284 / ungerade -0.303 eV, p = 0.006 (n = 44/39)
+          s- und p-Block: gerade +0.140 / ungerade -0.761, p = 0.236 (n = 16/10)
+          d-Block: gerade +0.592 / ungerade -0.159, p = 0.023 (n = 15/16)
+          f-Block: gerade +0.106 / ungerade -0.129, p = 0.061 (n = 13/13)
+       Lokalresiduen IE gegen B/A_max ohne Edelgasnähe: ρ = +0.18 [-0.06, +0.41], p = 0.090, n = 83

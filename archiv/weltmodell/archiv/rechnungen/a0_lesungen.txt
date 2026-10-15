@@ -1,0 +1,60 @@
+a₀-Lesungen an SPARC, Regel a = ν(a_N)·a_N aus ftm_kern, Referenz a₀ = 1.10e-10 m/s²; Υ_d = 0,5, Υ_b = 0,7 wo nicht anders gesagt
+
+==============================================================================================================
+1a Tully-Fisher mit V_flach (Q ≤ 2, Neigung ≥ 30°, V_flach > 0): wie tief sind die äußersten Punkte, was fehlt in M_b?
+==============================================================================================================
+   123 Galaxien; äußerster Punkt mit V_bar² > 0
+   s = √(a_N/a₀) am äußersten Punkt: 10/25/50/75/90 % = 0.145 / 0.185 / 0.234 / 0.313 / 0.455;  a_N/a₀ Median 0.055;  Anteil s > 0,3: 30%, s > 0,5: 8%
+   Zerlegung (Median, dex) log(V_f⁴/(G M_b a₀)) = 4 log(V_f/V_Regel) + 2 log(ν s) + log(M_enc/M_b) [exakt je Galaxie]:
+      gesamt +0.142  (a₀ aus V⁴/GM_b: 1.526·10⁻¹⁰)
+      Daten gegen Regel am Punkt 4 log(V_f/V_Regel) -0.051 (Mittel -0.040)
+      endliche Tiefe 2 log(ν s) = 2 log(s/(1 − e^{−s})) +0.099 (Mittel +0.119; ν s → 1 nur für s → 0)
+      Masse log(V_bar²R/(G M_b)): Kugel-Masse am Punkt gegen Tabellenmasse +0.072 (Mittel +0.070)
+      Summe der Mittel +0.150 = Mittel gesamt +0.150
+   Bulge: 27 von 123 mit Bulge; M_b = 0,5·L + 1,33·M_HI zählt ihn mit 0,5 statt 0,7: M_b zu klein um Median 4.9% (größter 24.8%); a₀_TF sinkt dadurch im Median um 0.029·10⁻¹⁰
+   Lesung mit der Regel selbst (V_flach = V_Regel am äußersten Punkt): Median 0.966, Mittel 0.990 ·10⁻¹⁰
+   Tiefgrenze allein verlangt s → 0: nur Galaxien mit s < 0,2 (43): V⁴/(G M_b) Median 1.478·10⁻¹⁰, dort 2 log(ν s) = +0.071, log(M_enc/M_b) = +0.080
+
+==============================================================================================================
+1b Log-kleinste-Quadrate: von der ungewichteten Anpassung zur profilierten (Abstand, Neigung, Υ_d)
+==============================================================================================================
+   Hebel: d ln a/d ln a₀ = χ/2 (Kern: 1 − Steigung); die Anpassung setzt Σ χ·Rest = 0, also das χ-gewichtete Mittel der Reste
+   Reste bei a₀ = 1,1 (Auswahl, 3150 Punkte): Median -0.0003, Mittel -0.0127, χ-gewichtetes Mittel -0.0164 dex; Schiefe: Anteil r < −0,3 dex 5.1%, r > +0,3 dex 2.4%
+      Punkte mit r < −0,3 dex: 162, davon mit a_N > a₀ 22%
+   alle 175 Kurven, gleich gewichtet (Gesamtlauf)                         a₀ = 0.951·10⁻¹⁰
+   Auswahl Q ≤ 2, Neigung ≥ 30°, gleich gewichtet (Gesamtlauf)            a₀ = 0.997·10⁻¹⁰
+     + nur Punkte mit errV > 0                                            a₀ = 0.997·10⁻¹⁰
+     + jede Galaxie gleich (1/N_Punkte)                                   a₀ = 0.859·10⁻¹⁰
+     + Gewicht 1/(σ_V² + σ_int²), σ_int = 0,10 ln                         a₀ = 1.172·10⁻¹⁰
+     + Gewicht 1/(σ_V² + σ_int²), σ_int = 0,20 ln                         a₀ = 1.127·10⁻¹⁰
+   Median der Reste = 0 (Punkte mit a_N < a₀), Auswahl                    a₀ = 1.078·10⁻¹⁰
+   Median der Reste = 0 (alle Punkte), Auswahl                            a₀ = 1.098·10⁻¹⁰
+     gleiche Punkte, Fehlergewicht σ_int = 0,10, ohne Profil (Υ 0,5)      a₀ = 1.172·10⁻¹⁰
+     + Abstand, Neigung, Υ_d profiliert (Υ 0,5, σ_int 0,10)               a₀ = 1.058·10⁻¹⁰
+     + robust (soft_l1) statt Quadrat                                     a₀ = 1.029·10⁻¹⁰
+   (149 Galaxien, 3152 Punkte in den gewichteten und profilierten Zeilen)
+
+==============================================================================================================
+2  Konsistente Lesung: profiliert, Bootstrap über Galaxien (1000), Systematik aus Υ_d, σ_int, Verlust, Abstandsmethode
+==============================================================================================================
+   Υ_d | σ_int | Verlust  | a₀ [10⁻¹⁰] | Bootstrap | χ²/Punkt | Primär-Abstände | Hubble-Fluss
+   0.4 | 0.10  | linear   |      1.079 |     0.084 |     1.31 | 1.091 ± 0.104 (68) | 1.057 ± 0.154 (81)
+   0.4 | 0.20  | linear   |      1.130 |     0.087 |     0.70 | 1.074 ± 0.106 (68) | 1.245 ± 0.146 (81)
+   0.5 | 0.10  | linear   |      1.058 |     0.087 |     1.28 | 1.028 ± 0.096 (68) | 1.115 ± 0.163 (81)
+   0.5 | 0.20  | linear   |      1.056 |     0.079 |     0.69 | 0.968 ± 0.092 (68) | 1.242 ± 0.140 (81)
+   0.6 | 0.10  | linear   |      1.045 |     0.083 |     1.29 | 0.982 ± 0.097 (68) | 1.170 ± 0.173 (81)
+   0.6 | 0.20  | linear   |      1.003 |     0.078 |     0.70 | 0.891 ± 0.085 (68) | 1.248 ± 0.148 (81)
+   0.5 | 0.10  | soft_l1  |      1.029 |     0.082 |     0.74 | 1.037 ± 0.125 (68) | 1.017 ± 0.125 (81)
+   0.5 | 0.10  | H₀ 67,4  |      1.025 |     0.081 |     1.29 | 1.028 ± 0.093 (68) | 1.020 ± 0.158 (81)
+   Hubble-Fluss-Abstände mit H₀ = 67.4 statt 73 (D × 1.083): a₀ = 1.025, Verschiebung -0.033 (in der Systematik nicht enthalten, Wahl des H₀ der Abstände)
+   Lesung: a₀ = 1.06 ± 0.09 (stat.) ± 0.04 (syst.: Υ_d ±0,1 0.02, σ_int 0.00, Verlust 0.03) ·10⁻¹⁰;  Spanne aller Varianten 1.00–1.13
+   Tully-Fisher mit der Regel (1a): 0.97·10⁻¹⁰ (Median), dieselbe Größe von außen gelesen
+   Zum Vergleich: cH₀/2π = 1.042 (H₀ = 67,4), 1.129 (H₀ = 73); Zelle Würfel ohne Kreispaare ≤ 1,128
+   Blickrichtung: gelesen ist die am Ort wirksame Regel (L). Ein äußeres Feld senkt sie unter die Regel ohne Feld;
+   die Lesung ist daher eine untere Schranke der inneren Größe a₀ = c²/2Λ (I), nicht a₀ selbst.
+
+==============================================================================================================
+3  Handwert
+==============================================================================================================
+   Punktmasse, s = 0,3: e^{−0,3} = 0.74082, 1 − e^{−s} = 0.25918, ν s = 1.15749, (ν s)² = 1.3398: V⁴/(GMa₀) = (ν s)² → Tully-Fisher liest a₀ um 34% zu hoch
+   Kern: ν(0,09 a₀)·0,3 = 1.15749

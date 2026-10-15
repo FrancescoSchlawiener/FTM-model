@@ -1,0 +1,100 @@
+
+====================================================================================================
+1   Plummer-Kugel (Masse M, Skala b) im homogenen Feld g_e: A/g_e,  X = GM/(b²a₀),  größtes inneres Feld 0,385·X·a₀
+====================================================================================================
+   Zeilen X (g_i,max/a₀), Spalten g_e/a₀.  Eintrag A/g_e;  Grenzfälle: Newtonsches Zentrum A/g_e = 1, Feldform A/g_e = ν(g_e)
+         X  g_i,max  g_i(r½) |    0.003    0.010    0.030    0.100    0.300    1.000
+                      ν(g_e) |   18.762   10.508    6.288    3.689    2.371    1.582
+     0.026    0.010   0.0076 |   11.662    9.497    6.220    3.685    2.371    1.582
+     0.100    0.038   0.0294 |    6.808    6.290    5.403    3.639    2.368    1.582
+     0.300    0.115   0.0881 |    4.310    4.140    3.860    3.281    2.343    1.581
+     1.000    0.385   0.2937 |    2.670    2.619    2.537    2.374    2.100    1.568
+     3.000    1.155   0.8811 |    1.820    1.803    1.776    1.723    1.637    1.465
+    10.000    3.849   2.9370 |    1.324    1.319    1.311    1.295    1.269    1.222
+    30.000   11.547   8.8110 |    1.115    1.114    1.111    1.106    1.097    1.082
+   260.000  100.074  76.3621 |    1.012    1.012    1.012    1.011    1.010    1.009
+   Anteil zwischen den Grenzfällen f = (A/g_e − 1)/(ν(g_e) − 1)  (0 = Newtonsches Zentrum, 1 = Feldform):
+     0.026                   |    0.600    0.894    0.987    0.999    1.000    1.000
+     0.100                   |    0.327    0.556    0.833    0.982    0.998    1.000
+     0.300                   |    0.186    0.330    0.541    0.849    0.980    0.998
+     1.000                   |    0.094    0.170    0.291    0.511    0.802    0.976
+     3.000                   |    0.046    0.084    0.147    0.269    0.464    0.800
+    10.000                   |    0.018    0.034    0.059    0.110    0.196    0.381
+    30.000                   |    0.007    0.012    0.021    0.039    0.071    0.140
+   260.000                   |    0.001    0.001    0.002    0.004    0.008    0.015
+   Symmetrie: g_e in Richtung (1,2,3)/√14, volle 3D-Quadratur (r, θ, φ) und Monte Carlo (2·10⁶ Massenpunkte):
+      X =  0.10, g_e =  0.03: A∥/g_e = 5.40302 (3D), 5.40302 (axial), 5.4033 ± 0.0004 (MC);  |A⊥|/|A| = 2.4e-11 (3D), 4.4e-05 (MC, Fehler 1.1e-04)
+      X =  1.00, g_e =  0.10: A∥/g_e = 2.37411 (3D), 2.37411 (axial), 2.3743 ± 0.0003 (MC);  |A⊥|/|A| = 1.3e-16 (3D), 9.8e-06 (MC, Fehler 2.0e-04)
+      X = 10.00, g_e =  0.01: A∥/g_e = 1.31889 (3D), 1.31888 (axial), 1.3189 ± 0.0003 (MC);  |A⊥|/|A| = 4.5e-15 (3D), 2.3e-05 (MC, Fehler 3.4e-04)
+
+====================================================================================================
+2   Milchstraßen-ähnliche Masse 6·10¹⁰ M☉, g_e = 0,03·a₀ in der Ebene: A und Einseitigkeit m = 1 von v_c(φ)
+====================================================================================================
+   Punktmasse als Grenzfall b → 0 der Plummer-Kugel (A/g_e):  b = 3 kpc: 1.3578,  b = 1 kpc: 1.0421,  b = 0.3 kpc: 1.0037,  b = 0.1 kpc: 1.0004,  b = 0.01 kpc: 1.0000
+   (ν(g_e) = 6.288; bei b → 0 liegt die Masse im Newtonschen Zentrum, A → g_e)
+   Hernquist a = 3 kpc [A]: A/g_e = 2.3063;  Exponentialscheibe R_d = 3 kpc: A/g_e = 1.2730 (A_y/g_e = 3.6e-17, Masse-Norm 1.000000)
+   Probe Scheibenfeld bei 50 kpc: g_R/(GM/R²) = 1.0175; zentrale Flächendichte M/(2πR_d²) = 1061 M☉/pc²
+   m = 1 [%] je Bezug:  g_e (Newtonsches Zentrum) | ν(g_e)g_e (Feldform) | A (Massenmittel der eigenen Massen)
+   Punktmasse (A = g_e)  (A/g_e = 1.000)
+      R = 10 kpc, g_i/a₀ =  0.760, v̄_c =  210.6 km/s:     0.21 |   5.88 |   0.21
+      R = 20 kpc, g_i/a₀ =  0.190, v̄_c =  190.7 km/s:     1.98 |  12.95 |   1.98
+      R = 30 kpc, g_i/a₀ =  0.084, v̄_c =  182.6 km/s:     6.03 |  18.52 |   6.03
+      R = 50 kpc, g_i/a₀ =  0.030, v̄_c =  156.6 km/s:    36.11 |  19.64 |  36.11
+   Hernquist a = 3 kpc  (A/g_e = 2.306)
+      R = 10 kpc, g_i/a₀ =  0.450, v̄_c =  176.7 km/s:     0.54 |   8.12 |   1.59
+      R = 20 kpc, g_i/a₀ =  0.144, v̄_c =  175.2 km/s:     2.92 |  14.80 |   1.41
+      R = 30 kpc, g_i/a₀ =  0.070, v̄_c =  172.3 km/s:     7.87 |  19.81 |   1.13
+      R = 50 kpc, g_i/a₀ =  0.027, v̄_c =  147.2 km/s:    55.77 |  16.86 |  31.81
+   Exponentialscheibe 3 kpc  (A/g_e = 1.273)
+      R = 10 kpc, g_i/a₀ =  0.860, v̄_c =  219.8 km/s:     0.16 |   5.42 |   0.13
+      R = 20 kpc, g_i/a₀ =  0.217, v̄_c =  198.6 km/s:     1.64 |  12.11 |   0.94
+      R = 30 kpc, g_i/a₀ =  0.089, v̄_c =  185.9 km/s:     5.58 |  18.12 |   4.37
+      R = 50 kpc, g_i/a₀ =  0.031, v̄_c =  159.5 km/s:    34.12 |  20.02 |  30.83
+
+====================================================================================================
+3   Druckgestützte Systeme: Jeans (isotrop, Plummer b = R_e) mit a_int im Bezug A; Eingaben SYS aus glaettung_stetig.py
+====================================================================================================
+   σ_los im Fenster R < R_e [km/s]. Feldform: Monopol von ν(|g|)g (wie glaettung_stetig.py). Bezug A: Monopol von ν(|g|)g − A.
+   Zusammenhalt: Massenanteil, an dem a_int radial nach außen zeigt; in Klammern a_int(0)/g_i(r½) (Schub des Kerns gegen das Ganze, längs g_e).
+   System          g_i/a₀  g_e/a₀  A/g_e ν(g_e)  Newton Feldform  Bezug A Virial A    gemessen | außen (Kern): Bezug g_e | ν(g_e)g_e | A
+   Pal 14 [G]      0.0122  0.0151  7.740  8.653    0.66     1.78     1.78     1.57  0.38 ± 0.12 | 0.141 (+9.461) | 0.000 (+0.000) | 0.019 (+1.129)
+   NGC 2419 [G]    0.9278  0.0094  1.776 10.830    5.09     6.49     6.49     6.07  4.10 ± 0.50 | 0.001 (+0.099) | 0.000 (+0.000) | 0.001 (+0.092)
+   Crater II [G]   0.0001  0.0055 13.981 13.982    0.40     1.39     1.39     1.22  2.70 ± 0.30 | 0.492 (+682.142) | 0.000 (+0.000) | 0.001 (+0.047)
+   Draco [G]       0.0044  0.0132  9.047  9.226    1.20     3.33     3.33     2.93  9.10 ± 1.20 | 0.341 (+24.499) | 0.000 (+0.000) | 0.009 (+0.533)
+   Fornax [G]      0.0295  0.0035  6.741 17.364    5.55    13.96    13.96    13.17 11.70 ± 0.90 | 0.013 (+1.950) | 0.000 (+0.000) | 0.009 (+1.266)
+   DF2 [G]         0.0154  0.0198  6.878  7.619    7.04    17.70    17.70    15.60  8.50 ± 2.70 | 0.147 (+8.521) | 0.000 (+0.000) | 0.018 (+0.953)
+   DF4 [G]         0.0218  0.0047  7.494 15.164    7.15    19.21    19.21    17.90  4.20 ± 3.30 | 0.023 (+3.023) | 0.000 (+0.000) | 0.014 (+1.637)
+   Virial ohne Bezug (A = 0) gleich Virial mit A: Pal 14 1.567/1.567,  NGC 2419 6.067/6.067,  Crater II 1.220/1.220,  Draco 2.932/2.932,  Fornax 13.173/13.173,  DF2 15.605/15.605,  DF4 17.897/17.897
+   Größte Differenz Feldform − Bezug A in σ: 2.2e-16 km/s
+
+====================================================================================================
+4   Ordnung: verlangte Verstärkung (σ_gem/σ_Bezug A)² gegen A/g_e, A/(ν(g_e)g_e), g_i/g_e
+====================================================================================================
+   A/g_e       : NGC 2419 (1.78: 0.40)  Fornax (6.74: 0.70)  DF2 (6.88: 0.23)  DF4 (7.49: 0.05)  Pal 14 (7.74: 0.05)  Draco (9.05: 7.46)  Crater II (14: 3.79)
+   A/ν(g_e)g_e : NGC 2419 (0.164: 0.40)  Fornax (0.388: 0.70)  DF4 (0.494: 0.05)  Pal 14 (0.894: 0.05)  DF2 (0.903: 0.23)  Draco (0.981: 7.46)  Crater II (1: 3.79)
+   g_i/g_e     : Crater II (0.019: 3.79)  Draco (0.336: 7.46)  DF2 (0.777: 0.23)  Pal 14 (0.809: 0.05)  DF4 (4.69: 0.05)  Fornax (8.39: 0.70)  NGC 2419 (98.8: 0.40)
+
+====================================================================================================
+5   Unabhängige Prüfung
+====================================================================================================
+   a) g_i ≫ g_e, erste Ordnung: A/g_e = ⟨ν(g_i)(1 + K/3)⟩_ρ, K = d ln ν/d ln g. Tiefbereich ν ≈ 1/s + 1/2 + s/12:
+      ν(1 + K/3) = ν + (s/6)ν' ≈ (5/6)/s + 1/2 + 7s/72.  Plummer: ⟨(g_i b²/GM)^{−1/2}⟩ = ∫₀¹ m^{−1/6}(1 − m^{2/3})^{−1/2} dm
+      = (3/2)·B(5/4, 1/2) = 2.62206   (Handwert: Γ(5/4) = 0,90640, Γ(1/2) = 1,77245, Γ(7/4) = 0,91906 → 2,6220);  ⟨(g_i b²/GM)^{1/2}⟩ = (3/2)B(7/4, 3/2) = 0.47926
+      Rest bei endlichem g_e: dort, wo g_i < g_e (Kern, Rand), fällt ν(g_i) weg; Ordnung √(g_e/X)·(5/3)/√X
+      X = 0.03, g_e = 1e-05: Näherung (5/6)·B/√X + 1/2 + (7/72)√X·B' = 13.1235;  Quadratur 13.0052
+      X = 0.03, g_e = 1e-07: Näherung (5/6)·B/√X + 1/2 + (7/72)√X·B' = 13.1235;  Quadratur 13.1116
+      X = 0.03, g_e = 1e-09: Näherung (5/6)·B/√X + 1/2 + (7/72)√X·B' = 13.1235;  Quadratur 13.1223
+      X = 0.01, g_e = 1e-09: Näherung (5/6)·B/√X + 1/2 + (7/72)√X·B' = 22.3551;  Quadratur 22.3516
+   b) g_i ≪ g_e, zweite Ordnung: A = ν(g_e)g_e·[1 + ⟨g_i²⟩(g_e h'' + 4h')/(6 ν g_e)], h = ν(g); Plummer ⟨g_i²⟩ = X²·(3/2)B(5/2, 3)
+      (3/2)B(5/2, 3) = (3/2)·2/(5/2·7/2·9/2) = 0.07619
+      X = 0.01, g_e = 0.3: ν(g_e) = 2.37116, Näherung 2.37113, Quadratur 2.37113
+      X = 0.003, g_e = 0.1: ν(g_e) = 3.68859, Näherung 3.68854, Quadratur 3.68854
+      X = 0.03, g_e = 1.0: ν(g_e) = 1.58198, Näherung 1.58196, Quadratur 1.58196
+   c) Monopol eines konstanten Vektors: ½∫₋₁¹ μ dμ = 0, daher gibt jeder Bezug A dieselbe isotrope Jeans-Lösung wie die Feldform;
+      Virial: ∫ρ x·A dV = A·∫ρ x dV = 0 (Schwerpunkt im Ursprung). Zahlen in 3 stimmen damit überein.
+   d) Schalenformel (Substitution |g_tot| = u²) gegen direkte μ-Quadratur (4000 Gauß-Knoten):
+      g = 0.05, g_e = 0.03: 0.12641183  /  0.12641183
+      g = 0.0301, g_e = 0.03: 0.15532107  /  0.15532107
+      g = 2.0, g_e = 0.01: 0.01221180  /  0.01221180
+      g = 0.001, g_e = 0.3: 0.71134642  /  0.71134642
+   e) Punktmasse, Hand: A = g_e, weil ν(|g_i + g_e|) → 1 für die ganze Masse (g_i → ∞ im Zentrum); Plummer b → 0 in 2 zeigt es.

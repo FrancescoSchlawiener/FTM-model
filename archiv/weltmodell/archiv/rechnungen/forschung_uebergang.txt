@@ -1,0 +1,46 @@
+1) Variante B: r0 = r*/3  ->  a_eff = GM/(3 r r0) = sqrt(GM a0)/r,  v_rot^4 = G M a0
+   M =  1.0e+09 M☉   r* =   1.08 kpc   v_rot =   63.2 km/s   v^4/(G M a0) = 1.000000
+   M =  1.0e+10 M☉   r* =   3.41 kpc   v_rot =  112.3 km/s   v^4/(G M a0) = 1.000000
+   M =  6.0e+10 M☉   r* =   8.35 kpc   v_rot =  175.8 km/s   v^4/(G M a0) = 1.000000
+   M =  2.0e+11 M☉   r* =  15.24 kpc   v_rot =  237.6 km/s   v^4/(G M a0) = 1.000000
+
+2) Harter Schalter χ an r* = 8.35 kpc (Milchstraße, 6e10 M☉):
+   r = 0.999 r*   a = 1.202e-10 m/s²   v =  175.9 km/s
+   r = 1.001 r*   a = 2.396e-10 m/s²   v =  248.6 km/s
+   -> Sprung um Faktor 2 in a, um √2 in v.
+
+3) Glatte Übergänge, alle mit Newton für a_N >> a0 und sqrt(a_N a0) für a_N << a0:
+    y=a_N/a0  empirisch  Rückkopplung  additiv glatt  Schalter
+      100.00      1.000         1.000          1.010     1.000
+       10.00      1.044         1.044          1.086     1.000
+        3.00      1.215         1.215          1.253     1.000
+        1.00      1.582         1.582          1.632     1.000
+        0.30      2.371         2.371          2.532     2.826
+        0.10      3.689         3.689          4.028     4.162
+        0.01     10.508        10.508         11.000    11.000
+   Rückkopplung Σqⁿ ist mit der empirischen Kurve identisch (gleiche Funktion).
+
+4) Schwelle a0 und das Atmen des Torus: a0 = c·H0/(2π)
+   H0 =  67.4 km/s/Mpc  ->  c·H0/2π = 1.042e-10 m/s²   (a0 = 1.2e-10)
+   H0 =  70.0 km/s/Mpc  ->  c·H0/2π = 1.082e-10 m/s²   (a0 = 1.2e-10)
+   H0 =  73.0 km/s/Mpc  ->  c·H0/2π = 1.129e-10 m/s²   (a0 = 1.2e-10)
+
+5) Sonnensystem mit Rückkopplungs-Übergang (q = exp(-sqrt(a_N/a0))):
+   Erdbahn   a_N/a0 =  4.943e+07  q = 0.00e+00  Zusatz = 0.00e+00 m/s²
+   Saturn    a_N/a0 =  5.386e+05  q = 1.91e-319  Zusatz = 1.48e-323 m/s²
+   Neptun    a_N/a0 =  5.456e+04  q = 3.64e-102  Zusatz = 2.38e-107 m/s²
+   Sonne r*  a_N/a0 =  1.000e+00  q = 3.68e-01  Zusatz = 6.98e-11 m/s²
+
+6) Ramanujan-Δ auf der imaginären Achse τ = i·t (q = e^{-2πt}), Δ(i/t) = t^12 Δ(it):
+   t =  3.0   q = 6.512e-09   Δ = 6.512e-09
+   t =  2.0   q = 3.487e-06   Δ = 3.487e-06
+   t =  1.0   q = 1.867e-03   Δ = 1.785e-03
+   t =  0.5   q = 4.321e-02   Δ = 1.428e-02
+   t =  0.3   q = 1.518e-01   Δ = 1.509e-03
+   t =  0.2   q = 2.846e-01   Δ = 5.545e-06
+   t =  0.1   q = 5.335e-01   Δ = 5.158e-16
+   -> Δ ist an beiden Enden null: bei q→0 (Nahfeld) und bei q→1 (tiefes Fernfeld).
+   Geometrische Reihe Σqⁿ = q/(1-q) wächst dagegen für q→1 unbegrenzt.
+
+7) Kepler-Frequenzverhältnis: Punktmasse ω_rad/ω_azim = 1 (rational, geschlossene Bahnen),
+   flache Rotationskurve κ/Ω = √2 = 1.4142 (irrational).

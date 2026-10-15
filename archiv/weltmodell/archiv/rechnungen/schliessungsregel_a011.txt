@@ -1,0 +1,205 @@
+
+====================================================================================================
+0  Groessen und Wahl von w(theta)
+====================================================================================================
+  Q = omega_c/omega_b = 5.3643,  q = Q/(1+Q) = 0.84287,  nu_kos = 1/(1-q) = 6.3643,  y_Q = (ln q)^2 = 0.02922
+  theta_c = a0/c = 3.6692e-19 1/s = 0.1681 H0   (a0 = 1,2e-10 m/s^2; a0/c ist die Atemrate des Torus pro Radiant, cH0/2pi -> 0.1592 H0)
+  H0^-1 = 14.516 Gyr,  rho_c0 = 8.5231e-27 kg/m^3
+  w(theta) = theta_+^2/(theta_+^2+theta_c^2): C^1-glatt, w = 1 fuer theta >> theta_c, w = 0 fuer theta <= 0 (Umkehr, Einfall, gebunden)
+
+====================================================================================================
+1  Wirkung: Stabilitaet und Erhaltung (Mitnahme mit Rueckwirkung)
+====================================================================================================
+  R(z*) = 0.6219.  Schallgeschwindigkeit des Photon-Baryon-Fluids mit mitgenommenem Anteil (1-w) des Flusses:
+  c_s^2 = 1/(3(1 + R + (1-w) Q R))   (w = 1: Standard; w = 0: Fluss voll mitgenommen)
+   w = 1.00:  c_s^2(z*) = 0.2055  (>= 0)
+   w = 0.99:  c_s^2(z*) = 0.2014  (>= 0)
+   w = 0.90:  c_s^2(z*) = 0.1705  (>= 0)
+   w = 0.50:  c_s^2(z*) = 0.1013  (>= 0)
+   w = 0.00:  c_s^2(z*) = 0.0672  (>= 0)
+  projizierter Fluss (freier Anteil): c_s^2 = 0 exakt (Nebenbedingung (d chi)^2 = -1), kein Gradiententerm, Energiedichte mu >= 0
+
+  0i-Probe k^2(phi' + phi) = 1,5 Hc sum Omega_i (1+w_i) theta_i  (00-Gleichung treibt phi; 0i ist unabhaengige Kontrolle);  Abweichung normiert auf 1,5 Hc sum |Omega_i (1+w_i) theta_i|
+  Median / Maximum der relativen Abweichung ueber 0,01 < k < 0,3 /Mpc:
+   w = 1                        a=1e-05: 1.0e-06/1.0e-06  a=1e-04: 1.9e-06/3.9e-05  a=5e-04: 4.7e-06/1.3e-05  a=9e-04: 1.8e-06/1.4e-05
+   w = 0,9 mit Rueckwirkung     a=1e-05: 1.0e-06/1.0e-06  a=1e-04: 2.0e-06/3.7e-05  a=5e-04: 3.7e-06/8.8e-06  a=9e-04: 2.0e-06/2.9e-05
+   w = 0,5 mit Rueckwirkung     a=1e-05: 1.0e-06/1.0e-06  a=1e-04: 2.3e-06/3.1e-05  a=5e-04: 3.4e-06/3.7e-05  a=9e-04: 3.5e-06/1.2e-04
+   w = 0,9 ohne Rueckwirkung    a=1e-05: 8.9e-05/3.5e-04  a=1e-04: 5.2e-03/5.0e-02  a=5e-04: 4.0e-03/4.4e-02  a=9e-04: 2.8e-03/3.9e-02
+  => Mit Rueckwirkung ist die 0i-Gleichung fuer jedes w auf Diskretisierungsniveau erfuellt (wie bei w = 1).
+
+====================================================================================================
+2  Kosmos
+====================================================================================================
+  2a  w im Hintergrund, theta = 3H:
+   z =      0:  theta/H0 =      3.000   1 - w = 3.129e-03
+   z =    0.5:  theta/H0 =      3.963   1 - w = 1.795e-03
+   z =      1:  theta/H0 =      5.364   1 - w = 9.811e-04
+   z =      2:  theta/H0 =      9.079   1 - w = 3.426e-04
+   z =      5:  theta/H0 =     24.822   1 - w = 4.585e-05
+   z =     10:  theta/H0 =     61.358   1 - w = 7.504e-06
+   z =    100:  theta/H0 =   1705.733   1 - w = 9.710e-09
+   z =   1090:  theta/H0 =  60557.166   1 - w = 7.704e-12
+  2b  Moden bei z*: max |delta_P'|/3 (Delta pro ln k, 0,002-0,32/Mpc) = 6.24e-04; theta_lok = 3H(1 - delta'/3)
+      auch bei 10 sigma: 1 - w(z*) = 7.80e-12  (Hintergrund 7.70e-12)
+
+  2c  Spielzeug-Boltzmann: Peakverhaeltnisse, Abweichung von H3/H2 gegen w = 1
+   w = 1                              H2/H1  0.708  H3/H1  1.151  H3/H2  1.625  H4/H3  0.597  H5/H4  0.856  |dH3/H2|  0.000%  max|dH_i/H_i|  0.000%
+   w(theta_bg), theta_c = a0/c        H2/H1  0.708  H3/H1  1.151  H3/H2  1.625  H4/H3  0.597  H5/H4  0.856  |dH3/H2|  0.000%  max|dH_i/H_i|  0.000%
+   w = 0.99 konstant (Empfindlichkeit) H2/H1  0.679  H3/H1  1.117  H3/H2  1.644  H4/H3  0.588  H5/H4  0.857  |dH3/H2|  1.164%  max|dH_i/H_i|  4.102%
+   w = 0.97 konstant (Empfindlichkeit) H2/H1  0.626  H3/H1  1.051  H3/H2  1.680  H4/H3  0.570  H5/H4  0.859  |dH3/H2|  3.406%  max|dH_i/H_i| 11.651%
+   w = 0.9 konstant (Empfindlichkeit) H2/H1  0.494  H3/H1  0.868  H3/H2  1.758  H4/H3  0.524  H5/H4  0.850  |dH3/H2|  8.196%  max|dH_i/H_i| 30.301%
+   w = 0,5 konstant (Empfindlichkeit) H2/H1  0.289  H3/H1  0.377  H3/H2  1.305  H4/H3  0.434  H5/H4  0.664  |dH3/H2| 19.707%  max|dH_i/H_i| 67.281%
+   Hintergrund: Omega_m = Omega_b(1+Q) = 0.3138; Fluss und Uebergabe sind druckfrei -> a^3 rho_ges = const exakt
+
+  2d  Uebergabe im Hintergrund (Rate (1-w) Omega/N*, Omega = sqrt(G M/R^3) = H sqrt(Om(a)/2)); Werte fuer N* = 1, eps ~ 1/N*:
+      z =   10:  eps = 1.768e-06
+      z =    2:  eps = 8.229e-05
+      z =    1:  eps = 2.451e-04
+      z =  0.5:  eps = 4.758e-04
+      z =    0:  eps = 9.461e-04
+  2e  Wachstum f sigma8(z), sigma8 = 0,811 (Planck 2018, aus dem Gedaechtnis); Modell: Anteil eps als nicht klumpend (konservativ)
+      z      f_LCDM   fs8_LCDM   fs8_Modell(N*=1)   rel. Abw.
+      0.0   0.5259   0.4265     0.4264           -3.91e-04
+      0.3   0.6836   0.4729     0.4728           -2.48e-04
+      0.5   0.7601   0.4742     0.4741           -1.84e-04
+      0.8   0.8399   0.4527     0.4527           -1.20e-04
+      1.0   0.8761   0.4314     0.4314           -9.18e-05
+      1.5   0.9309   0.3745     0.3745           -5.05e-05
+      2.0   0.9584   0.3245     0.3245           -3.02e-05
+
+====================================================================================================
+3  Galaxie: spaerischer Kollaps, theta_lok(t), w(t), Uebergabe W(t)
+====================================================================================================
+  Kontrolle Kollaps bei z_c = 3.0: lineares delta bei Umkehr 1.0755, bei Kollaps 1.7028
+  Kontrolle Kollaps bei z_c = 0.0: lineares delta bei Umkehr 1.1319, bei Kollaps 1.6810
+
+  M_b = 6e+10 M_sun (Hernquist a = 2.57 kpc), Fluss Q M_b = 3.219e+11, Top-Hat-Masse (1+Q) M_b = 3.819e+11 M_sun
+  Bilanz: Operatorstruktur M_ph(<R) = (nu-1) M_b(<R) gleich Flussmasse Q M_b bei nu = 1+Q, d.h. q_lok = q_kos = 0.84287:
+   Punktmasse: R_Q = r*/(-ln q) = 8.72 kpc / 0.1709 = 51.02 kpc;  Hernquist: R_Q = 53.09 kpc, g_N(R_Q) = 2.700e-12 m/s^2
+  Lagrange-Radius (mitbewegt) R_L = 1.321 Mpc
+   z_c    z_ta   t_ta[Gyr] t_c[Gyr]  r_ta[kpc] r_vir[kpc]  r_vir/R_Q   Omega_vir[1/Gyr]  I_pre   I(z=0)
+    0.5   1.49    4.304    8.605      292.2     146.1     2.752         0.742        1.8644    5.735
+    1.0   2.24    2.930    5.859      227.5     113.8     2.143         1.080        1.8429   10.444
+    2.0   3.79    1.642    3.281      155.1      77.6     1.461         1.919        1.8274   22.050
+    3.0   5.36    1.075    2.147      117.0      58.5     1.102         2.928        1.8219   36.003
+    4.0   6.94    0.771    1.541       93.8      46.9     0.884         4.079        1.8195   51.909
+    5.0   8.52    0.588    1.174       78.3      39.1     0.737         5.355        1.8182   69.534
+  r_vir = R_Q fuer z_c = 3.440: r_ta = 105.6 kpc, r_vir = 52.78 kpc, t_c = 1.839 Gyr, Omega_vir = 3.419/Gyr, I(z=0) = 42.779
+  Verlauf fuer diesen Kollaps (theta_lok = 3 R'/R):
+     t[Gyr]    z      R/R_ta   theta_lok/H0   theta_bg/H0     w
+      0.184   19.64    0.529      132.9658     157.6404   1.0000
+      0.460   10.21    0.837       39.2245      63.1618   1.0000
+      0.736    7.19    0.975       12.1405      39.4861   0.9998
+      0.874    6.30    0.999        2.8838      33.2667   0.9966
+      0.911    6.11    1.000        0.5764      31.9479   0.9216
+      0.920    6.06    1.000       -0.0178      31.6241   0.0000
+      1.196    4.92    0.943      -19.3493      24.3558   0.0000
+      1.564    3.95    0.657      -81.7920      18.6740   0.0000
+      1.831    3.45    0.078    -3307.0893      15.9884   0.0000
+  Nach dem Kollaps (virialisiert, stationaer): theta = 0 exakt (Zeitfeld entlang des Killing-Vektors) -> w = 0.
+  w faellt von 0,9 auf 0,1 zwischen t = 0.912 und 0.920 Gyr (Umkehr bei 0.920 Gyr)
+  g/g_RAR mit Rest-Fluss W (Fluss als isotherme Kugel bis r_vir = 52.8 kpc):  |g/g_RAR - 1| <= 5 % bei 5-50 kpc verlangt W <= 0.1041
+
+  Form: Operatorstruktur M_ph(<r) = (nu-1) M_b(<r) gegen frei gefallenen Fluss (isotherme Kugel, Q M_b r/r_vir, r_vir = R_Q); Q*(-ln q) = 0.9170
+   r[kpc]   r/r*    M_ph/M_b   M_P,frei/M_b   Verhaeltnis
+     5.00    0.57     0.2016     0.5082        0.397
+    10.00    1.15     0.6322     1.0164        0.622
+    20.00    2.29     1.6650     2.0328        0.819
+    30.00    3.44     2.7636     3.0492        0.906
+    40.00    4.59     3.8838     4.0656        0.955
+    50.64    5.81     5.0863     5.1470        0.988
+  Umzuverteilende Masse (Integral |M_ph - M_P,frei| dr / R_Q) / (Q M_b):
+   0.0480
+
+====================================================================================================
+4  Galaxienhaufen (10^15 M_sun) und Bullet Cluster
+====================================================================================================
+  Baryonen: Gas beta = 2/3, r_c = 150 kpc, 1e14 in 1 Mpc (bis 3 Mpc); BCG 1,5e12 (a = 20 kpc); Galaxien 1e13 (a = 300 kpc); z = 0.3
+  Linsenmasse vertreten durch NFW M200 = 1e15, c = 4: r200 = 1903 kpc; Baryonen in r200: 2.224e+14 (Anteil 0.222, kosmisch 0.157)
+  g_N(r200)/a0 = 0.0778  gegen y_Q = 0.0292: die Zone endet, bevor q_lok = q_kos erreicht ist.
+  Fluss der Zone M_P(<r): zwei Normierungen, NFW-Form (stossfrei): (i) Q M_b(<r200), (ii) q M_ref (kosmischer Anteil der Linsenmasse)
+  Energiebilanz: der Operator nimmt M_ph = (nu-1) M_b auf, der Rest W_rest = 1 - M_ph/M_P bleibt freier Fluss; Gesamtmasse M_b + M_P
+   r[kpc]  g_N/a0    nu    M_ref/(nu M_b)  | (i) M_P/M_b  W_rest  (M_b+M_P)/M_ref | (ii) M_P/M_b  W_rest  (M_b+M_P)/M_ref | reiner Operator nu M_b/M_ref
+     100    0.401   2.131      3.130      | Operatoranteil 1-W_rest (i)/(ii): 0.142/0.201 |    7.956    0.858       1.343      |    5.621    0.799       0.993      |    0.320
+     250    0.314   2.331      2.664      | Operatoranteil 1-W_rest (i)/(ii): 0.180/0.254 |    7.409    0.820       1.354      |    5.235    0.746       1.004      |    0.375
+     500    0.225   2.646      2.162      | Operatoranteil 1-W_rest (i)/(ii): 0.241/0.341 |    6.825    0.759       1.368      |    4.822    0.659       1.018      |    0.462
+    1000    0.136   3.242      1.613      | Operatoranteil 1-W_rest (i)/(ii): 0.359/0.509 |    6.238    0.641       1.384      |    4.407    0.491       1.034      |    0.620
+    1500    0.096   3.748      1.281      | Operatoranteil 1-W_rest (i)/(ii): 0.480/0.679 |    5.727    0.520       1.401      |    4.046    0.321       1.051      |    0.781
+  Top-Hat 1e15 M_sun (R_L = 18.21 Mpc), beobachtet bei z = 0.3:
+   z_c    z_ta   t_c[Gyr]  r_vir[kpc]  Omega_vir[1/Gyr]  (t_obs - t_c)[Gyr]
+    0.4   1.34    9.386      2130         0.683         0.891
+    0.5   1.49    8.605      2014         0.742         1.673
+    0.7   1.79    7.308      1812         0.870         2.969
+    1.0   2.24    5.859      1568         1.080         4.418
+  Kapazitaet: Operator fasst den ganzen Fluss der Zone, wenn g_N(r200) <= y_Q a0 (kosmischer Baryonenanteil, M_b = M200/(1+Q)):
+   z = 0.0: Grenzmasse M200 = 2.839e+14 M_sun (r200 = 1391 kpc); darueber bleibt Rest-Fluss
+   z = 0.3: Grenzmasse M200 = 1.501e+14 M_sun (r200 = 1011 kpc); darueber bleibt Rest-Fluss
+   z = 1.0: Grenzmasse M200 = 2.779e+13 M_sun (r200 = 435 kpc); darueber bleibt Rest-Fluss
+
+
+  Bullet Cluster (z = 0,296): Hauptkomponente M200 = 1,5e15 M_sun, c = 4 (Groessenordnung aus dem Gedaechtnis);
+  Linsenmasse in 100 kpc um den Haupt-BCG ~2,8e13 M_sun (Clowe et al. 2006, aus dem Gedaechtnis)
+   stossfreier Anteil W_rest bei 100 kpc (Haufenmodell oben, (i)/(ii)): 0.858 / 0.799
+   stossfreier Anteil W_rest bei 250 kpc (Haufenmodell oben, (i)/(ii)): 0.820 / 0.746
+   Fluss (projiziert, 100 kpc): 5.08e+13 M_sun; davon stossfrei (W_rest(100 kpc), (ii)): 4.06e+13 M_sun
+   operatorgebundener Anteil (folgt den Baryonen, im Stoss dem Gas mit Nachlauf): 1.02e+13 M_sun
+
+====================================================================================================
+5  Relaxation in die Operatorform: Rate lambda = Omega_vir/N* (pro Radiant der Zonenbahn)
+====================================================================================================
+  Galaxie (z_c = 3.44, r_vir = R_Q): Restabweichung W(z=0) <= 0.104  ->  N* <= 18.91
+  Bullet: Nachlauf 1/lambda = N*/Omega_vir >= 0,26 Gyr mit Omega_vir = 0.742 bzw. 1.080 /Gyr (z_c = 0,5 bzw. 1)  ->  N* >= 0.281
+  Fenster: 0.281 <= N* <= 18.91  (0.045 bis 3.01 Umlaeufe der Zone)
+  Uebergabezeit 1/lambda = N*/Omega_vir an den Fenstergrenzen:
+   Galaxie (z_c = 3.44): 0.082 bis 5.530 Gyr
+   Haufen z_c = 0.5: 0.378 bis 25.469 Gyr
+   Haufen z_c = 1.0: 0.260 bis 17.497 Gyr
+   Uebergabe im Bullet waehrend 150 Myr seit dem Stoss (obere Grenze N* = 0.281): 0.327
+  RAR-Grenze N* = 2.42 = 0.385 Umlaeufe: 1/lambda Galaxie (z_c = 3.44) = 0.707 Gyr, Haufen z_c = 0,5: 3.255 Gyr, z_c = 1: 2.236 Gyr
+
+====================================================================================================
+6  Vorhersagen (N* = obere Fenstergrenze: groesste Restabweichung; rechts N* aus der RAR-Enge bei z_c = 0,5)
+====================================================================================================
+  6a  Galaxien M_b = 6e10: Rest-Fluss W und Abweichung g/g_RAR - 1 bei 10 / 20 / 50 kpc, nach Kollaps-Rotverschiebung und Beobachtungszeit
+   z_c     z_obs   W        10 kpc     20 kpc     50 kpc
+   0.50    0.0   0.7383   -0.1546   -0.2804   -0.3964   | N* = 2.42: W = 9.31e-02  -2.0e-02  -3.5e-02  -5.0e-02
+   1.00    0.5   0.7754   -0.0984   -0.2284   -0.3479   | N* = 2.42: W = 1.37e-01  -1.7e-02  -4.0e-02  -6.1e-02
+   1.00    0.0   0.5756   -0.0731   -0.1696   -0.2583   | N* = 2.42: W = 1.33e-02  -1.7e-03  -3.9e-03  -6.0e-03
+   2.00    1.0   0.6988   +0.0328   -0.0804   -0.1837   | N* = 2.42: W = 6.06e-02  +2.8e-03  -7.0e-03  -1.6e-02
+   2.00    0.5   0.5289   +0.0248   -0.0608   -0.1390   | N* = 2.42: W = 6.84e-03  +3.2e-04  -7.9e-04  -1.8e-03
+   2.00    0.0   0.3115   +0.0146   -0.0358   -0.0819   | N* = 2.42: W = 1.09e-04  +5.1e-06  -1.3e-05  -2.9e-05
+   3.00    2.0   0.7618   +0.1713   +0.0524   -0.0554   | N* = 2.42: W = 1.19e-01  +2.7e-02  +8.2e-03  -8.6e-03
+   3.00    1.0   0.5110   +0.1149   +0.0351   -0.0371   | N* = 2.42: W = 5.23e-03  +1.2e-03  +3.6e-04  -3.8e-04
+   3.00    0.5   0.3340   +0.0751   +0.0230   -0.0243   | N* = 2.42: W = 1.88e-04  +4.2e-05  +1.3e-05  -1.4e-05
+   3.00    0.0   0.1489   +0.0335   +0.0102   -0.0108   | N* = 2.42: W = 3.38e-07  +7.6e-08  +2.3e-08  -2.5e-08
+   3.44    2.0   0.6997   +0.2124   +0.1050   +0.0081   | N* = 2.42: W = 6.11e-02  +1.9e-02  +9.2e-03  +7.0e-04
+   3.44    1.0   0.4390   +0.1333   +0.0659   +0.0051   | N* = 2.42: W = 1.59e-03  +4.8e-04  +2.4e-04  +1.8e-05
+   3.44    0.5   0.2672   +0.0811   +0.0401   +0.0031   | N* = 2.42: W = 3.27e-05  +9.9e-06  +4.9e-06  +3.8e-07
+   3.44    0.0   0.1041   +0.0316   +0.0156   +0.0012   | N* = 2.42: W = 2.04e-08  +6.2e-09  +3.1e-09  +2.4e-10
+   RAR-Enge als Schranke: |g/g_RAR - 1| <= 5 % bei 10-50 kpc zur Zeit z = 0 verlangt
+    z_c = 0.5: W <= 0.093  ->  N* <= 2.42
+    z_c = 1.0: W <= 0.111  ->  N* <= 4.76
+    z_c = 2.0: W <= 0.190  ->  N* <= 13.29
+
+
+  6b  Erste Abweichung im Materiespektrum: 2-sigma-Bereiche erreichen die Umkehr (theta_lok = 0, w -> 0)
+      Bedingung 2 sigma(R_L, z) = delta_ta,lin = 1.0755 (aus dem Top-Hat oben); Transfer BBKS mit Sugiyama-Form (aus dem Gedaechtnis), n_s = 0,965, sigma8 = 0,811
+      z     R_L [Mpc/h]   M [M_sun/h]    k_1 = 1/R_L [h/Mpc]   Anteil der Masse jenseits Umkehr (PS, alle Skalen >= M)
+     0.0      13.924      9.846e+14           0.072                 0.0455
+     0.5       9.884      3.521e+14           0.101                 0.0455
+     1.0       7.010      1.256e+14           0.143                 0.0455
+     2.0       3.748      1.920e+13           0.267                 0.0455
+     3.0       2.163      3.691e+12           0.462                 0.0455
+     5.0       0.836      2.134e+11           1.196                 0.0455
+      (k_1 ist der Lagrange-Massstab; im Euler-Raum liegt die Struktur um (Dichte)^(1/3) ~ 5-6 bei hoeherem k)
+
+  6c  Uebergabe vollzogen (W = 1/e) fuer 2-sigma-Peaks: delta_c,lin = 1.7028; I(z_c, t) = I_pre + Omega_vir (t - t_c) (massenunabhaengig)
+      z_obs   z_c*    R_L [Mpc/h]   M [M_sun/h]    k_h = 1/R_L [h/Mpc]
+       0.0    1.75       1.758      1.980e+12          0.569
+       0.5    2.80       0.820      2.013e+11          1.219
+       1.0    3.92       0.392      2.205e+10          2.548
+       2.0    6.25       0.101      3.738e+08          9.918
+      Zwischen k_1 und k_h: Bereiche nach der Umkehr mit Rest-Fluss 1/e < W < 1 (Haufen, Gruppen) -> Uebergangsregime
+
+  6d  f sigma8: relative Abweichung vom LCDM-Wert bei N* = 18.91 (Hintergrund-Uebergabe als nicht klumpend, konservativ):
+      z=0.0: -2.1e-05  z=0.5: -9.7e-06  z=1.0: -4.9e-06  z=2.0: -1.6e-06

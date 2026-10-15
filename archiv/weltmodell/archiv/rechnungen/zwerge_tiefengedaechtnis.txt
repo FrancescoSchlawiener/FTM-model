@@ -1,0 +1,88 @@
+WEISSE ZWERGE ALS GEDÄCHTNIS DER TIEFE
+kT_c/(μ m_u c²) = f·δ − (m_e/(μ_e m_u))·Π(x),  δ = 3Δs/R,  f = θ_n;  kT lokal, δ gegen den flachen Außenraum
+μ: He 1.333, C/O 1.745 [A 1:1], O/Ne 1.796 [A 0,6/0,3/0,1]; μ_e = 2.  M_Grenze: n = 3 → 1.456 M☉, n = 1,5 → 0.968 M☉
+
+1) T_max HÄNGT NUR AN m = M/M_Grenze:  kT_max = (μ/μ_e)·m_ec²·g(m)
+   (Tiefe ∝ M/R und Zählregel ∝ M^{2/3}/R² laufen mit derselben Strukturzahl; g ist für jede Polytrope dieselbe Funktion.)
+        m    g(n=3)  g(n=1,5) x bei T_max
+    0.100   0.00365   0.00365       0.136
+    0.200   0.00929   0.00929       0.221
+    0.300   0.01616   0.01616       0.298
+    0.323   0.01789   0.01789       0.315
+    0.400   0.02408   0.02408       0.372
+    0.500   0.03300   0.03300       0.449
+    0.600   0.04294   0.04294       0.530
+    0.700   0.05399   0.05399       0.621
+    0.720   0.05635   0.05635       0.641
+    0.800   0.06632   0.06632       0.727
+    0.900   0.08024   0.08024       0.862
+    0.950   0.08797   0.08797       0.948
+    0.990   0.09463   0.09463       1.033
+    0.999   0.09620   0.09620       1.055
+   Decke g(1) = max_x[x/4 − Π(x)] = 0.0964
+
+2) GRENZMASSEN: Bei welcher Kernmasse erreicht der von der Zählregel gehaltene Kern die Zündtiefe der nächsten Stufe?
+   Kern unter der Grenzmasse: T_max(M_K) < T_zünd → die Stufe wird nie erreicht, der Kern bleibt als Zwerg dieser Asche.
+   Stufe              T_zünd    δ_zünd  g nötig       m  M_K(n=3) M_K(n=1,5)  ρ_c[kg/m³]     x
+   He-Kern → 3α      1.0e+08  8.12e-06   0.0253  0.4143     0.603      0.401    1.09e+08  0.38
+   C/O-Kern → C      6.0e+08  3.72e-05   0.1159   nie (g nötig > Decke 0.0964): nur ein Kern, der nicht entartet, zündet
+   O/Ne-Kern → Ne    1.2e+09  7.23e-05   0.2253   nie (g nötig > Decke 0.0964): nur ein Kern, der nicht entartet, zündet
+   [G] Vergleich: He-Blitz bei Kern 0,47 M☉ (m = 0,32); Grenze C/O|O/Ne ≈ 1,05 M☉ (m = 0,72); O/Ne-Kerne über M_Grenze kollabieren (Elektroneneinfang).
+
+   Kohlenstoff: Die Zündtemperatur hängt von der Dichte ab (Abschirmung) [G: 6·10⁸ K bei 10⁸–10⁹ kg/m³, tiefer bei höherer Dichte].
+        T_C  g nötig       m  M_K(n=3)        ρ_c
+    3.5e+08   0.0676  0.8099     1.180   7.87e+08
+    4.0e+08   0.0773  0.8799     1.281   1.12e+09
+    4.5e+08   0.0870  0.9436     1.374   1.60e+09
+    4.8e+08   0.0928  0.9790     1.426   1.99e+09
+    4.9e+08   0.0947  0.9903     1.442   2.15e+09
+
+   Eichung am He-Blitz [G 0,47 M☉ → m = 0.323]: Die Ein-Zonen-Rechnung gibt dort g = 0.0179; wirklich nötig 0.0253
+   → Faktor κ = T_wirklich/T_Ein-Zone = 1.415 (die Rechnung unterschätzt T bei gegebener Masse).
+   Mit demselben κ: Decke C/O = κ·(μ/μ_e)·g(1)·m_ec² = 7.06e+08 K.
+   C zündet bei 5e+08 K → m = 0.815, M_K = 1.186 M☉  [G 1,05]
+   C zündet bei 6e+08 K → m = 0.911, M_K = 1.327 M☉  [G 1,05]
+   C zündet bei 7e+08 K → m = 0.995, M_K = 1.450 M☉  [G 1,05]
+   Ne zündet bei 1.2e+09 K: nötig g = 0.1592 gegen Decke 0.0964 → nie
+   Umgekehrt: Grenze 1,05 M☉ (m = 0.721) verlangte mit κ eine C-Zündung bei 4.14e+08 K, ohne κ bei 2.92e+08 K.
+   Eine Eichung an He trifft C nicht: C/O|O/Ne landet bei 1,19–1,45 statt 1,05. Die Grenze folgt nur als 'nahe unter M_Grenze'.
+
+3) BLITZ ODER RUHIG: Entartungsgrad ψ = kT/E_F im Augenblick der Zündung (erster Schnitt T(R) = T_zünd beim Zusammenziehen)
+   He-Kern → 3α     ψ bei Zündung (M_K in M☉): 0.35:—  0.47:—  0.6:—  0.8:0.89  1.0:1.43  1.2:1.99  1.4:2.58  2.0:4.49  4.0:12.14
+   C/O-Kern → C     ψ bei Zündung (M_K in M☉): 0.35:—  0.47:—  0.6:—  0.8:—  1.0:—  1.2:—  1.4:—  2.0:0.70  4.0:2.95
+   He-Kern → 3α     ψ = 1 (Grenze entartet/ruhig) bei M_K = 0.84 M☉
+   C/O-Kern → C     ψ = 1 (Grenze entartet/ruhig) bei M_K = 2.28 M☉
+   [G] He zündet im Blitz für Anfangsmassen ≲ 2 M☉ (Kern 0,45–0,5), ruhig darüber; C zündet entartet (Flamme außermittig) in Kernen 1,05–1,4 M☉.
+
+4) WELCHE TIEFE HÄLT DIE ASCHE?  Gesamttiefe δ gegen Wärmetiefe δ_W = kT/(f μ m_u c²) = δ − (m_e/(f μ_e m_u))·Π(x)
+   Zündtiefen (n = 3): 3α 8.12e-06, C 3.72e-05, Ne 7.23e-05
+   He-Zwerg    0.40 M☉: δ_kalt Ein-Zone 2.00e-05 (R 29555 km), mit R [G] 11479 km: δ = 5.15e-05 =  0.7·δ_zünd(Ne);  δ_W,max = 4.60e-06
+   C/O-Zwerg   0.60 M☉: δ_kalt Ein-Zone 3.77e-05 (R 23510 km), mit R [G]  8696 km: δ = 1.02e-04 =  1.4·δ_zünd(Ne);  δ_W,max = 8.06e-06
+   C/O-Zwerg   1.00 M☉: δ_kalt Ein-Zone 1.01e-04 (R 14564 km), mit R [G]  5635 km: δ = 2.62e-04 =  3.6·δ_zünd(Ne);  δ_W,max = 1.68e-05
+   O/Ne-Zwerg  1.20 M☉: δ_kalt Ein-Zone 1.74e-04 (R 10201 km), mit R [G]  4105 km: δ = 4.32e-04 =  6.0·δ_zünd(Ne);  δ_W,max = 2.23e-05
+   O/Ne-Zwerg  1.35 M☉: δ_kalt Ein-Zone 3.20e-04 (R  6230 km), mit R [G]  2783 km: δ = 7.16e-04 =  9.9·δ_zünd(Ne);  δ_W,max = 2.71e-05
+   Mit den gemessenen Radien liegt die Gesamttiefe ab 0,6 M☉ über der Ne-Zündtiefe, die des He-Zwergs 0,4 über der C-Zündtiefe (1,4-fach);
+   die Ein-Zonen-Radien sind 2,2–2,7-fach zu groß (Ein-Zonen-Fehler), ändern das Urteil ab 1 M☉ nicht: δ allein sortiert die Asche nicht.
+   δ_W,max bleibt bei jedem entarteten Kern unter δ_zünd(C) (Decke); O/Ne-Asche entsteht nur, wo der Kern bei der C-Zündung noch nicht voll entartet war.
+   Die Asche hält das Maximum der Wärmetiefe δ_W (der Teil der Tiefe, den nicht die Zählregel trägt): Stufe = max_t δ_W(t) ≥ δ_zünd.
+
+5) GEDÄCHTNIS: Endzusammensetzung = f(max_t δ_W), nicht f(Endzustand)
+   Preisach-Muster: Die Asche ist der Extremwert der Geschichte der Wärmetiefe; spätere Abnahme (Kühlung, Massenverlust) löscht nichts.
+   [G] Beispiele:
+   – Asymptotischer Riesenast: Der C/O-Kern wächst, die Hülle wird abgeblasen; Endmasse ≈ Kernmasse am Ende, Asche = größte Wärmetiefe des Kerns.
+   – Unterzwerge sdB: Hülle an der Spitze des Riesenasts verloren, Kern 0,47 hatte He gezündet → C/O-Zwerge mit 0,45–0,5 M☉ (unter dem Gipfel 0,6).
+   – Doppelsterne: vor dem He-Blitz abgestreift → He-Zwerge 0,15–0,45 M☉ (in der Einzelsternentwicklung zu jung für das Weltalter).
+   – Neon-Novae (z. B. V1974 Cyg, QU Vul): Auswurf reich an Ne, der Zwerg verliert Masse, die Asche verrät die O/Ne-Stufe.
+   – Kalte Verschmelzung zweier C/O-Zwerge über 1,05 M☉ ohne Zündung bleibt C/O: große δ, kleine δ_W (bestätigt Teil 4).
+   Die Grenzen in der Masse der Zwerge sind daher nur für Einzelsterne scharf; die Zuordnung Asche ↔ max δ_W gilt immer.
+   Anfangs-End-Massen-Beziehung: nicht aus der Tiefe allein. Sie braucht den Kernzuwachs gegen den Massenverlust der Hülle (Wind).
+   Aus der Leiter folgt nur die Ordnung: M_WD ≥ Kernmasse bei der letzten Zündung (He-Blitz 0,47 → Gipfel der Verteilung bei 0,6 [G]);
+   O/Ne-Zwerge nur, wo der Kern m ≈ 0,72 erreicht hat, und nie über M_Grenze.
+   [G] Gaia (Kilic 2020, Tremblay 2016; arXiv nicht erreichbar): Gipfel 0,59–0,62 M☉, Nebengipfel/Überschuss ≈ 0,8, He-Zwerge wenige Prozent;
+   [G] Anfangsmassen: He-Blitz ≲ 2 M☉, O/Ne ab ≈ 7–8 (Super-AGB) bis ≈ 9–10 M☉.
+
+6) GEGENPROBEN (anderer Weg)
+   (a) Decke He: (μ/μ_e)·g(1)·m_ec² = (4/3)/2·0,0964·511,0 keV = 32,84 keV → /8,617·10⁻⁵ eV/K = 3,81·10⁸ K;  Skript 3.810e+08 K
+   (b) He-Grenze nichtrelativistisch geschlossen (T_max ∝ M^{4/3}): 0.625 M☉ (n = 3); exakter Druck 0.603 M☉ – nahe beieinander, da x ≈ 0,4 noch fast nichtrelativistisch.
+       Von Hand: T_max ∝ M^{4/3}; aus T_nr(1 M☉) = 1.871e+08 K → M = (10⁸/1.871e+08)^{3/4} = 0.625 M☉
+

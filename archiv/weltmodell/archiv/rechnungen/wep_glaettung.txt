@@ -1,0 +1,104 @@
+
+====================================================================================================
+0   Milchstraßenmodell [A] und Gezeitendichte
+====================================================================================================
+   R₀ = 8,18 kpc : g_N = 1.401e-10 m/s² = 1.274 a₀,  v_Regel = 228.6 km/s,  ρ_b(z=0) = 0.086 M☉/pc³,  T = 5.486e-30 s⁻²,  ρ_J = 0.290 M☉/pc³
+   15 kpc        : g_N = 5.033e-11 m/s² = 0.458 a₀,  v_Regel = 217.7 km/s,  ρ_b(z=0) = 0.019 M☉/pc³,  T = 1.263e-30 s⁻²,  ρ_J = 0.067 M☉/pc³
+   Soll am Sonnenort [G]: v₀ = 233 km/s → g_obs = 2.151e-10; g_N (Regel umgekehrt, a₀ = 1,1) = 1,474e-10; ρ_b = 0,084; T = 5,549e-30 (kovariante_e0)
+   ρ_J am Sonnenort aus T = 5,549e-30: 1.9848e-20 kg/m³ = 0.2933 M☉/pc³ = 11.87 m_p/cm³ = 8.73 H/cm³ (mit Helium, 1,36 m_p je H)
+   bei 15 kpc (Modellverhältnis T₁₅/T₀ = 0.230): T = 1.278e-30, ρ_J = 0.0675 M☉/pc³ = 2.73 m_p/cm³ = 2.01 H/cm³
+
+====================================================================================================
+1   Glättungslängen ℓ = (GM/T)^(1/3)
+====================================================================================================
+   (σ̄) Gezeit aus dem geglätteten Feld (07 kovariant): Die Plummer-Wolke der Sonne ist im Kern isotrop, ihr spurfreier
+       Hesse-Anteil verschwindet für r ≪ ℓ☉; am Ort jedes Körpers im Sonnensystem bleibt die galaktische Gezeit T.
+   (Hill) Gezeit des wirklichen Elternkörpers 3GM_E/d³ (Erde in der Sonne, Mond in der Erde, Laborkörper an der Erdoberfläche).
+   Körper               ℓ (σ̄) [m]       = AE   GM/ℓ² (σ̄)  ℓ (Hill) [m]  GM/ℓ² (Hill)
+   Sonne                 2.881e+16   1.93e+05    1.599e-13     2.881e+16     1.599e-13
+   Erde                  4.157e+14   2.78e+03    2.307e-15     1.497e+09     1.780e-04
+   Mond                  9.596e+13        641    5.325e-16     6.152e+07     1.295e-03
+   Jupiter               2.837e+15    1.9e+04    1.574e-14     5.311e+10     4.492e-05
+   Laborkörper 1 kg      2.291e+06   1.53e-05    1.271e-23     2.435e-02     1.126e-07
+   Stern 0,1 M☉          1.337e+16   8.94e+04    7.421e-14     1.337e+16     7.421e-14
+   Pt 0,4 kg             1.688e+06   1.13e-05    9.368e-24     1.994e-02     6.715e-08
+   Ti 0,3 kg             1.534e+06   1.03e-05    8.511e-24     1.812e-02     6.101e-08
+   Identität: Im Plummer-Kern (d ≪ ℓ) ist das geglättete Feld eines Körpers GM·d/ℓ³ = T·d, für jede Masse gleich.
+
+====================================================================================================
+2   Lesart R1: örtliche Regel am Schwerpunkt, ḡ_N(x_i) = Σ_{j≠i} geglättete Felder (eigenes Feld am Schwerpunkt = 0)
+====================================================================================================
+   Galaktisches Feld am Sonnenort g_N = 1.401e-10; Zusatz (ν−1)g_N = 6.700e-11 m/s²
+   Nachbarfeld in ḡ_N                   σ̄ [m/s²]   ν−1 (σ̄)  Hill [m/s²]  ν−1 (Hill)
+   Mond am Ort der Erde                 2.133e-21     0.4782    3.194e-05   0.000e+00
+   Erde am Ort des Mondes               2.133e-21     0.4782    4.154e-05   0.000e+00
+   Jupiter am Ort der Sonne             4.317e-18     0.4782    2.079e-07   0.000e+00
+   Sonne am Ort der Erde                8.301e-19     0.4782    8.301e-19   4.782e-01
+   Erde am Ort eines Laborkörpers       3.535e-23     0.4782    7.576e-07   0.000e+00
+   σ̄: Jeder Körper im Sonnensystem sieht ν des galaktischen Feldes (Nachbarn ≤ T·30 AE = 2.5e-17 m/s²). Der Empfänger-ℓ kommt in R1 nicht vor: Δa = 0 exakt für Körper am selben Ort.
+   Hill: Nachbarfelder ≫ a₀ an jedem Schwerpunkt, ν − 1 → 0; das Sonnensystem erhielte keinen galaktischen Zusatz,
+         die Sonne liefe mit v = 188 statt 229 km/s (Galaxienbeschleunigung gemessen 2,3e-10 [G]). Hill-ℓ trägt nicht.
+   σ̄, gegenseitiger Zusatz Erde–Mond aus T·d = 2.13e-21 m/s²: ≤ (ν−1+g·dν/dg)·T·d = 1.9e-21 m/s² je Körper (je Masse gleich)
+
+====================================================================================================
+3   Lesart R2: Regel über die Plummer-Zone gemittelt,  a_i = ∫K_ℓ(y)·[(ν(|ḡ_N|)−1)ḡ_N](x_i + y) d³y
+====================================================================================================
+   (a) Gezeitenterm D(ℓ) = ∫w_ℓ(r)[S(r) − g_s(x₀)]dr, S(r) Kugelmittel des Zusatzfelds, w_ℓ = 3ℓ²r²/(r²+ℓ²)^(5/2)
+   Zusatzfeld am Sonnenort g_s = -6.6996e-11 m/s² (radial);  S(r)−g_s ≈ C r²: C = 1.3697e-50 m⁻¹s⁻²,  ∇²g_s/6 = 1.3692e-50
+      r =      10 pc: (S − g_s)/(C r²) = 0.999
+      r =     101 pc: (S − g_s)/(C r²) = 0.898
+      r =     295 pc: (S − g_s)/(C r²) = 0.610
+      r =    1005 pc: (S − g_s)/(C r²) = 0.230
+      r =    2921 pc: (S − g_s)/(C r²) = 0.083
+      Probe dünne Scheibe b = 0.30 kpc: g_N = 1.418e-10, C = 2.017e-50, D(ℓ☉) = 2.705e-16 m/s²
+      Probe dünne Scheibe b = 0.60 kpc: g_N = 1.384e-10, C = 1.098e-50, D(ℓ☉) = 1.537e-16 m/s²
+      Standard b = 0,45 kpc: D(ℓ☉) = 1.894e-16 m/s²;  Näherung 3Cℓ²(ln(2L/ℓ) − 4/3) mit L = 400 pc: 1.849e-16
+   (b) Eigenterm E(M): das eigene geglättete Feld u(y) = −GM·y/(y²+ℓ²)^(3/2) im Argument von ν, gleichförmiges Außenfeld g
+   Sonne: E = -2.214e-18 m/s² (Quadratur), 2. Ordnung ⟨u²⟩(2f'/3 + g f''/6) = -2.214e-18;  f' = -2.847e+09, f'' = 3.259e+19
+   Feldform (Energiefunktional): ∫Q_s(|g + u(x − x_i)|²)d³x hängt bei gleichförmigem g nicht von x_i ab → Eigenkraft 0;
+   E ist ein Term der gemittelten örtlichen Regel, nicht der Feldform (dort bleibt nur die ℓ-Kraft der Notiz 13, 9e-19).
+
+====================================================================================================
+4   WEP-Differenzen zur Galaxie hin (Lesart R2; Lesart R1 gibt überall 0)
+====================================================================================================
+   Vergleich: Galaxienbeschleunigung Regel 2.071e-10 (gemessen 2,3e-10 [G]); LLR 5.9e-16 m/s²; MICROSCOPE 7.9e-15 m/s²
+   Paar                         ℓ-Wahl   ΔD Gezeit    ΔE eigen  |Δa|/g_gal      /LLR    /MICRO
+   Pt 0,4 kg – Ti 0,3 kg        σ̄        5.86e-37   -1.58e-28    7.62e-19   2.7e-13   2.0e-14
+   Pt 0,4 kg – Ti 0,3 kg        Hill      1.34e-52   -4.86e-14    2.35e-04   8.2e+01   6.1e+00
+   Erde – Mond                  σ̄        6.53e-20   -4.36e-22    3.17e-10   1.1e-04   8.3e-06
+   Erde – Mond                  Hill      2.05e-30    9.61e-17    4.64e-07   1.6e-01   1.2e-02
+   Erde – Sonne                 σ̄       -1.89e-16    2.21e-18    9.25e-07   3.2e-01   2.4e-02
+   Erde – Sonne                 Hill     -1.89e-16   -6.70e-11    3.24e-01   1.1e+05   8.4e+03
+   Laborkörper 1 kg – Erde      σ̄       -6.95e-20    4.61e-22    3.38e-10   1.2e-04   8.8e-06
+   Laborkörper 1 kg – Erde      Hill     -2.06e-30    2.87e-13    1.38e-03   4.8e+02   3.6e+01
+   Sonne – Jupiter              σ̄        1.87e-16   -2.19e-18    9.13e-07   3.2e-01   2.4e-02
+   Sonne – Jupiter              Hill      1.89e-16    6.70e-11    3.24e-01   1.1e+05   8.4e+03
+   Sonne – Stern 0,1 M☉         σ̄        1.43e-16   -1.74e-18    6.99e-07   2.4e-01   1.8e-02
+   Hill-Erde in R2: eigenes Feld GM/ℓ² = 1.8e-04 ≫ a₀ in der ganzen Zone → Erde ohne Zusatz, Sonne mit Zusatz:
+      Δa ≈ (ν−1)g_N = 6.70e-11 m/s² Erde gegen Sonne; erzwungene Verschiebung der Erdbahn Δa/Ω² = 1690 m (feste galaktische Richtung) – ausgeschlossen [Planetenentfernungen auf m-Niveau, G].
+   Alte Zahl (Notiz 13, gelesene Dichte 0,01 M☉/pc³): 1,6–2,0e-18 m/s² = 7–9e-9 g.  Neu, Sonne gegen Stern 0,1 M☉ (σ̄, R2): siehe Zeile oben.
+
+====================================================================================================
+5   Glättungsschwelle als Phase: Wolke gegen warmes Medium
+====================================================================================================
+   Warmes Medium (n < ρ_J): kein Körper, Selbstfeld ungeglättet im Argument von ν → Eigenbindung linear verstärkt,
+   Kugelmittel c_e = ν(1 + K/3) − 1, K = dlnν/dlng. Wolke (n > ρ_J): Überschuss über ℓ_c geglättet; in ḡ_N bleibt im
+   Wolkeninnern (R < ℓ_c) Boden ρ_J plus Plummer-Kern ρ_J → Eigenbindung 1 + c_e·2ρ_J/ρ̄ (r ≪ ℓ_c, linear).
+   R₀ = 8,18 kpc: g_N = 1.401e-10, ν = 1.478, K = -0.270, c_e = 0.345, v = 228.6 km/s, ρ_J = 11.87 m_p/cm³
+      Wolke                      n_H  R [pc]  M^c/M ℓ_c [pc]     D(ℓ_c)          E      Δa/a  Δv [m/s] Eigenbindung
+          1e+03 M☉              1e+03     1.9  0.991      9.3   1.11e-14  -2.20e-16   5.4e-05  6.22e+00       1.0060
+          1e+05 M☉              1e+02    19.2  0.913     42.0   1.26e-13  -4.49e-15   6.3e-04  7.20e+01       1.0602
+          1e+06 M☉              1e+02    41.4  0.913     90.6   3.81e-13  -2.08e-14   1.9e-03  2.22e+02       1.0602
+          1e+05 M☉              1e+04     4.1  0.999     43.3   1.32e-13  -4.77e-15   6.6e-04  7.54e+01       1.0006
+      ℓ_c/R = (ρ̄/ρ_J − 1)^(1/3) (homogene Wolke): n_H = 1e2 → 2.19, n_H = 1e4 → 10.46
+      warmes Medium (n_H = 0,1–1): Δa = 0 (kein Körper), Eigenbindung 1 + c_e = 1.345
+   15 kpc: g_N = 5.033e-11, ν = 2.034, K = -0.350, c_e = 0.797, v = 217.7 km/s, ρ_J = 2.73 m_p/cm³
+      Wolke                      n_H  R [pc]  M^c/M ℓ_c [pc]     D(ℓ_c)          E      Δa/a  Δv [m/s] Eigenbindung
+          1e+03 M☉              1e+03     1.9  0.998     15.2   6.87e-15  -1.59e-16   6.9e-05  7.47e+00       1.0032
+          1e+05 M☉              1e+02    19.2  0.980     70.2   7.31e-14  -3.39e-15   7.5e-04  8.13e+01       1.0320
+          1e+06 M☉              1e+02    41.4  0.980    151.3   2.07e-13  -1.57e-14   2.2e-03  2.37e+02       1.0320
+          1e+05 M☉              1e+04     4.1  1.000     70.7   7.38e-14  -3.43e-15   7.5e-04  8.21e+01       1.0003
+      ℓ_c/R = (ρ̄/ρ_J − 1)^(1/3) (homogene Wolke): n_H = 1e2 → 3.65, n_H = 1e4 → 17.07
+      warmes Medium (n_H = 0,1–1): Δa = 0 (kein Körper), Eigenbindung 1 + c_e = 1.797
+   Rotationskurven HI gegen CO unterscheiden sich um einige km/s durch Driftgeschwindigkeit und Nichtkreisbewegung [G];
+   der Unterschied der Bahnbeschleunigung aus der Regel ist ≤ 1e-4 davon: nicht messbar. Die Phase wirkt auf die Eigenbindung.

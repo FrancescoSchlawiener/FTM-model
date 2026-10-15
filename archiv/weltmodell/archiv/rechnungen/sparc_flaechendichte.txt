@@ -1,0 +1,18 @@
+SPARC, Q ≤ 2, Neigung ≥ 30°: 153 Galaxien, a₀ = 1.10e-10, Υ_d = 0.5, Υ_b = 0.7
+log Σ_dyn(gemessen)/Σ_dyn(Regel): Mittel -0.054, Median -0.031, Streuung 0.214 dex, Fehler des Mittels 0.017
+   Σ₀ = Υ_d·SB₀ in [0, 30) M☉/pc²: n =  10, Rest -0.130 ± 0.085 dex
+   Σ₀ = Υ_d·SB₀ in [30, 300) M☉/pc²: n =  79, Rest -0.075 ± 0.023 dex
+   Σ₀ = Υ_d·SB₀ in [300, 100000) M☉/pc²: n =  64, Rest -0.017 ± 0.027 dex
+   Steigung log Σ_dyn gegen log Σ₀, gemessen          : alle 0.551, Σ₀ < 300: 0.688
+   Steigung log Σ_dyn gegen log Σ₀, Regel             : alle 0.502, Σ₀ < 300: 0.588
+   Steigung log Σ_dyn gegen log Σ₀, Newton (Baryonen) : alle 0.779, Σ₀ < 300: 0.950
+
+Störgrößen: Mittel des Rests, Trend d(Rest)/d log Σ₀ (Steigung gemessen − Regel), Rest bei Σ₀ < 30
+  Υ_d | a₀ [10⁻¹⁰] | g_e/a₀ (senkrecht) | Rest [dex]        | Trend           | Rest Σ₀ < 30
+  0.5 |       1.10 |               0.00 | -0.054 ± 0.017    | +0.048 ± 0.025  | -0.130
+  0.4 |       1.10 |               0.00 | -0.014 ± 0.017    | +0.057 ± 0.025  | -0.104
+  0.6 |       1.10 |               0.00 | -0.089 ± 0.017    | +0.041 ± 0.025  | -0.025
+  0.5 |       1.04 |               0.00 | -0.046 ± 0.017    | +0.046 ± 0.025  | -0.119
+  0.5 |       1.19 |               0.00 | -0.066 ± 0.017    | +0.052 ± 0.025  | -0.144
+  0.5 |       1.10 |               0.01 | -0.050 ± 0.017    | +0.042 ± 0.025  | -0.110
+  0.5 |       1.10 |               0.03 | -0.033 ± 0.017    | +0.019 ± 0.025  | -0.049

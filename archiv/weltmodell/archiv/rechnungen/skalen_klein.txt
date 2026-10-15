@@ -1,0 +1,240 @@
+FTM - Rechnungen zu den Skalenebenen (klein bis Sterne)
+============================================================
+
+## 0. Erd-Einheiten (Bezugsgroessen)
+
+| Groesse | Wert |
+|---|---|
+| c | 299792458 m/s |
+| G | 6.67400e-11 m^3/(kg s^2) |
+| M_E (Erdmasse) | 5.97200e+24 kg |
+| R_E (Erdradius) | 6371.0 km |
+| g_E (Bezugswert in A1) | 9.81 m/s^2 |
+| G M_E / R_E^2 (SI) | 9.8195 m/s^2 |
+| g_E / (G M_E / R_E^2) | 0.99903 |
+| Ds_E = G M_E / (3 c^2) | 1.4782 mm |
+| Ds_E / R_E | 2.3203e-10 |
+| 6 Ds_E / R_E = 2 G M_E / (R_E c^2) | 1.3922e-09 |
+| x_Sonne = M_S / M_E | 333054.3 |
+| Ds / M = G / (3 c^2) | 2.4753e-28 m/kg |
+| y_Sonne = R_S / R_E | 109.198 |
+| Ds_Sonne = x_S * Ds_E | 492.33 m |
+
+## 1. Pruefung der Kopplung G M = 3 c^2 Ds (F3) an der Erde
+
+G M_E             = 3.985713e+14 m^3/s^2
+3 c^2 * Ds_E      = 3.985713e+14 m^3/s^2
+g_E * R_E^2       = 3.981844e+14 m^3/s^2   (mit Bezugswert g_E = 9.81; Verhaeltnis 0.99903)
+Gangrate Erde, (A3) direkt : 0.999999999303923
+Gangrate Erde, (F5) ueber Ds: 0.999999999303923
+
+## 2. Grosse Tabelle: alle Koerper (Oberflaeche)
+
+| Koerper | x [M_E] | y [R_E] | g [m/s^2] | g/g_E | Ds | Ds/R |
+|---|---|---|---|---|---|---|
+| Elektron | 1.525e-55 | 4.423e-22 | 7.649e-12 | 7.797e-13 | 2.255e-58 m | 8.002e-44 |
+| Proton | 2.801e-52 | 1.320e-22 | 1.577e-07 | 1.608e-08 | 4.140e-55 m | 4.924e-40 |
+| He-4-Kern | 1.113e-51 | 2.630e-22 | 1.578e-07 | 1.609e-08 | 1.645e-54 m | 9.816e-40 |
+| Fe-56-Kern | 1.555e-50 | 5.867e-22 | 4.432e-07 | 4.518e-08 | 2.299e-53 m | 6.150e-39 |
+| H-Atom | 2.802e-52 | 8.306e-18 | 3.985e-17 | 4.062e-18 | 4.142e-55 m | 7.828e-45 |
+| Mond | 0.01229 | 0.2727 | 1.622 | 0.1653 | 1.817e-05 m | 1.046e-11 |
+| Merkur | 0.05528 | 0.3829 | 3.698 | 0.3769 | 8.171e-05 m | 3.349e-11 |
+| Mars | 0.1075 | 0.532 | 3.724 | 0.3796 | 1.588e-04 m | 4.686e-11 |
+| Venus | 0.8151 | 0.9499 | 8.861 | 0.9033 | 0.001205 m | 1.991e-10 |
+| Erde | 1 | 1 | 9.81 | 1 | 0.001478 m | 2.320e-10 |
+| Uranus | 14.54 | 3.981 | 8.998 | 0.9173 | 0.02149 m | 8.472e-10 |
+| Neptun | 17.15 | 3.865 | 11.26 | 1.148 | 0.02535 m | 1.030e-09 |
+| Saturn | 95.17 | 9.14 | 11.18 | 1.139 | 0.1407 m | 2.416e-09 |
+| Jupiter | 317.8 | 10.97 | 25.89 | 2.64 | 0.4698 m | 6.721e-09 |
+| Sonne | 3.331e+05 | 109.2 | 274 | 27.93 | 492.3 m | 7.077e-07 |
+| Sirius B (Weisser Zwerg) | 3.390e+05 | 0.9173 | 3.953e+06 | 4.030e+05 | 501.2 m | 8.576e-05 |
+| Neutronenstern | 4.663e+05 | 0.001884 | 1.289e+12 | 1.314e+11 | 689.3 m | 0.05744 |
+| Beteigeuze (Roter Riese) | 5.995e+06 | 8.343e+04 | 0.00845 | 8.613e-04 | 8862 m | 1.667e-08 |
+
+Gangrate und Faltungs-Differential an der Oberflaeche:
+
+| Koerper | dtau/dt | delta = 1-dtau/dt | 3 Ds/R | delta * 1 Jahr | r0 = 6 Ds | R / r0 |
+|---|---|---|---|---|---|---|
+| Elektron | 1 - 2.401e-43 | 2.401e-43 | 2.401e-43 | 7.575e-36 s | 1.353e-57 m | 2.083e+42 |
+| Proton | 1 - 1.477e-39 | 1.477e-39 | 1.477e-39 | 4.661e-32 s | 2.484e-54 m | 3.385e+38 |
+| He-4-Kern | 1 - 2.945e-39 | 2.945e-39 | 2.945e-39 | 9.293e-32 s | 9.868e-54 m | 1.698e+38 |
+| Fe-56-Kern | 1 - 1.845e-38 | 1.845e-38 | 1.845e-38 | 5.822e-31 s | 1.379e-52 m | 2.710e+37 |
+| H-Atom | 1 - 2.348e-44 | 2.348e-44 | 2.348e-44 | 7.411e-37 s | 2.485e-54 m | 2.129e+43 |
+| Mond | 0.999999999969 | 3.138e-11 | 3.138e-11 | 9.903e-04 s | 1.090e-04 m | 1.593e+10 |
+| Merkur | 0.999999999900 | 1.005e-10 | 1.005e-10 | 0.003171 s | 4.903e-04 m | 4.976e+09 |
+| Mars | 0.999999999859 | 1.406e-10 | 1.406e-10 | 0.004437 s | 9.530e-04 m | 3.556e+09 |
+| Venus | 0.999999999403 | 5.973e-10 | 5.973e-10 | 0.01885 s | 0.007229 m | 8.372e+08 |
+| Erde | 0.999999999304 | 6.961e-10 | 6.961e-10 | 0.02197 s | 0.008869 m | 7.183e+08 |
+| Uranus | 0.999999997458 | 2.542e-09 | 2.542e-09 | 0.08021 s | 0.1289 m | 1.967e+08 |
+| Neptun | 0.999999996911 | 3.089e-09 | 3.089e-09 | 0.09747 s | 0.1521 m | 1.619e+08 |
+| Saturn | 0.999999992752 | 7.248e-09 | 7.248e-09 | 0.2287 s | 0.8441 m | 6.899e+07 |
+| Jupiter | 0.999999979838 | 2.016e-08 | 2.016e-08 | 0.6363 s | 2.819 m | 2.480e+07 |
+| Sonne | 0.999997876961 | 2.123e-06 | 2.123e-06 | 67 s | 2954 m | 2.355e+05 |
+| Sirius B (Weisser Zwerg) | 0.999742675019 | 2.573e-04 | 2.573e-04 | 8121 s | 3007 m | 1943 |
+| Neutronenstern | 0.809547647354 | 0.1905 | 0.1723 | 6.010e+06 s | 4136 m | 2.902 |
+| Beteigeuze (Roter Riese) | 0.999999949981 | 5.002e-08 | 5.002e-08 | 1.578 s | 5.317e+04 m | 9.996e+06 |
+
+## 3. Subatomare Ebene und Atom
+
+| Groesse | Wert |
+|---|---|
+| Radius a0 des H-Atoms | 5.29177e-11 m |
+| g aus (A1), Masse Proton+Elektron, y = a0/R_E | 3.9847e-17 m/s^2 |
+| Ds des H-Atoms | 4.1425e-55 m |
+| Ds / a0 | 7.8281e-45 |
+| elektro-geometrische Bindungs-Steilheit a_el | 9.0442e+22 m/s^2 |
+| a_el / g_E | 9.2194e+21 |
+| a_el / g (Faltungs-Steilheit des Protons bei a0, A1) | 2.2710e+39 |
+| Umlaufgeschwindigkeit v = sqrt(a_el * a0) | 2.18769e+06 m/s |
+| v / c | 7.29735e-03 |
+| Umlauffrequenz f = v/(2 pi a0) | 6.5797e+15 Hz |
+| Umlaufzeit 1/f | 1.5198e-16 s |
+| aequivalentes x aus (A1) umgestellt: x = a_el y^2 / g_E | 6.3605e-13 M_E = 3.7985e+12 kg |
+| Ds_aequiv = x Ds_E | 9.4023e-16 m |
+| Ds_aequiv / a0 | 1.7768e-05 |
+| 3 Ds_aequiv / a0 | 5.3303e-05 |
+| (v/c)^2 | 5.3251e-05 |
+
+Additivitaet von Ds in der Kernmasse (Ds ~ x):
+
+| Kern | Masse | Ds | Ds / Ds_Proton |
+|---|---|---|---|
+| Proton | 1.673e-27 kg | 4.140e-55 m | 1 |
+| He-4-Kern | 6.645e-27 kg | 1.645e-54 m | 3.973 |
+| Fe-56-Kern | 9.286e-26 kg | 2.299e-53 m | 55.52 |
+
+## 4. Sol-System: Planetenbahnen als dynamischer Wirbel (Neigung der Sonne am Bahnradius)
+
+x = x_Sonne + x_Planet (Ds additiv), g(r) = 3 c^2 Ds(x) / r^2 = G M / r^2 (SI),
+v = sqrt(g * r) = c sqrt(3 Ds / r), T = 2 pi r / v
+
+| Planet | r [AE] | y [R_E] | g_Sonne(r) [m/s^2] | v | T | Ds_S / r | delta_S(r) | (v/c)^2 |
+|---|---|---|---|---|---|---|---|---|
+| Merkur | 0.3871 | 9089 | 0.03958 | 47.88 km/s | 0.2408 a | 8.502e-09 | 2.551e-08 | 2.551e-08 |
+| Venus | 0.7233 | 1.698e+04 | 0.01134 | 35.03 km/s | 0.6151 a | 4.550e-09 | 1.365e-08 | 1.365e-08 |
+| Erde | 1.0000 | 2.348e+04 | 0.005932 | 29.79 km/s | 0.9999 a | 3.291e-09 | 9.873e-09 | 9.873e-09 |
+| Mars | 1.5237 | 3.578e+04 | 0.002555 | 24.13 km/s | 1.881 a | 2.160e-09 | 6.480e-09 | 6.480e-09 |
+| Jupiter | 5.2044 | 1.222e+05 | 2.192e-04 | 13.06 km/s | 11.87 a | 6.324e-10 | 1.897e-09 | 1.899e-09 |
+| Saturn | 9.5826 | 2.250e+05 | 6.461e-05 | 9.624 km/s | 29.66 a | 3.434e-10 | 1.030e-09 | 1.031e-09 |
+| Uranus | 19.2184 | 4.513e+05 | 1.606e-05 | 6.795 km/s | 84.24 a | 1.712e-10 | 5.137e-10 | 5.138e-10 |
+| Neptun | 30.1100 | 7.070e+05 | 6.543e-06 | 5.429 km/s | 165.2 a | 1.093e-10 | 3.279e-10 | 3.279e-10 |
+
+Mond um die Erde (x = x_Erde + x_Mond, r = 384 400 km):
+  g = 2.7305e-03 m/s^2, v = 1024.5 m/s, T = 27.286 d
+
+System-Summe der Faltung (Sonne + Planeten + Mond):
+  Sum x = 333054.3 + 446.68 = 333500.93
+  Ds_System = 492.993 m;  Anteil der Sonne = 99.866 %
+
+## 5. Interplanetarer Raum: unbewegter Hintergrund um die Sonne
+
+| Ort | y [R_E] | g [m/s^2] | g/g_E | Ds_S/r | delta | delta * 1 Jahr |
+|---|---|---|---|---|---|---|
+| Sonnenoberflaeche | 109.2 | 274 | 27.93 | 7.077e-07 | 2.123e-06 | 67 s |
+| 10 R_S | 1092 | 2.74 | 0.2793 | 7.077e-08 | 2.123e-07 | 6.7 s |
+| 0.1 AE | 2348 | 0.5926 | 0.06041 | 3.291e-08 | 9.873e-08 | 3.116 s |
+| 1 AE | 2.348e+04 | 0.005926 | 6.041e-04 | 3.291e-09 | 9.873e-09 | 0.3116 s |
+| 5.2 AE | 1.222e+05 | 2.188e-04 | 2.230e-05 | 6.324e-10 | 1.897e-09 | 0.05987 s |
+| 30 AE | 7.070e+05 | 6.536e-06 | 6.663e-07 | 1.093e-10 | 3.279e-10 | 0.01035 s |
+| 100 AE | 2.348e+06 | 5.926e-07 | 6.041e-08 | 3.291e-11 | 9.873e-11 | 0.003116 s |
+| 1000 AE | 2.348e+07 | 5.926e-09 | 6.041e-10 | 3.291e-12 | 9.873e-12 | 3.116e-04 s |
+| 1 Lichtjahr | 1.485e+09 | 1.482e-12 | 1.510e-13 | 5.204e-14 | 1.561e-13 | 4.927e-06 s |
+
+Radius, bei dem die Sonnenmasse die Erd-Steilheit g_E haette: y = sqrt(x_S) = 577.1 R_E = 3.6768e+06 km = 5.285 R_S
+
+## 6. Planetare Kerne: Faltungstiefe Ds im Zentrum
+
+| Koerper | x | Ds | Ds/R | r0 = 6 Ds |
+|---|---|---|---|---|
+| Mond | 0.01229 | 1.817e-05 m | 1.046e-11 | 1.090e-04 m |
+| Merkur | 0.05528 | 8.171e-05 m | 3.349e-11 | 4.903e-04 m |
+| Mars | 0.1075 | 1.588e-04 m | 4.686e-11 | 9.530e-04 m |
+| Venus | 0.8151 | 1.205 mm | 1.991e-10 | 7.229 mm |
+| Erde | 1 | 1.478 mm | 2.320e-10 | 8.869 mm |
+| Uranus | 14.54 | 21.49 mm | 8.472e-10 | 128.9 mm |
+| Neptun | 17.15 | 25.35 mm | 1.030e-09 | 152.1 mm |
+| Saturn | 95.17 | 140.7 mm | 2.416e-09 | 844.1 mm |
+| Jupiter | 317.8 | 469.8 mm | 6.721e-09 | 2.819 m |
+
+Erde: Ds / R_Kern (3485.5 km)        = 4.2411e-10
+Erde: Ds / R_innerer Kern (1221.5 km) = 1.2102e-09
+
+## 7. Luftballon-Effekt: gleiche Masse, wachsender Radius
+
+### eine Sonnenmasse: x = 3.331e+05 M_E, Ds = 492.33 m (konstant)
+
+| Radius | y [R_E] | g [m/s^2] | g/g_E | Ds | Ds/R | dtau/dt Oberflaeche |
+|---|---|---|---|---|---|---|
+| 12 km (Neutronenstern) | 0.001884 | 9.210e+11 | 9.388e+10 | 492.33 m | 0.04103 | 0.868236 |
+| 0.0084 R_S (Weisser Zwerg) | 0.9173 | 3.883e+06 | 3.958e+05 | 492.33 m | 8.425e-05 | 0.999747 |
+| 1 R_S | 109.2 | 274 | 27.93 | 492.33 m | 7.077e-07 | 0.999998 |
+| 10 R_S | 1092 | 2.74 | 0.2793 | 492.33 m | 7.077e-08 | 1 - 2.123e-07 |
+| 100 R_S | 1.092e+04 | 0.0274 | 0.002793 | 492.33 m | 7.077e-09 | 1 - 2.123e-08 |
+| 200 R_S | 2.184e+04 | 0.00685 | 6.983e-04 | 492.33 m | 3.538e-09 | 1 - 1.062e-08 |
+| 764 R_S | 8.343e+04 | 4.694e-04 | 4.785e-05 | 492.33 m | 9.263e-10 | 1 - 2.779e-09 |
+| 1000 R_S | 1.092e+05 | 2.740e-04 | 2.793e-05 | 492.33 m | 7.077e-10 | 1 - 2.123e-09 |
+
+### Beteigeuze-Masse (18 Sonnenmassen): x = 5.995e+06 M_E, Ds = 8861.98 m (konstant)
+
+| Radius | y [R_E] | g [m/s^2] | g/g_E | Ds | Ds/R | dtau/dt Oberflaeche |
+|---|---|---|---|---|---|---|
+| 0.0084 R_S (Weisser Zwerg) | 0.9173 | 6.990e+07 | 7.125e+06 | 8861.98 m | 0.001516 | 0.995440 |
+| 1 R_S | 109.2 | 4932 | 502.8 | 8861.98 m | 1.274e-05 | 0.999962 |
+| 10 R_S | 1092 | 49.32 | 5.028 | 8861.98 m | 1.274e-06 | 0.999996 |
+| 100 R_S | 1.092e+04 | 0.4932 | 0.05028 | 8861.98 m | 1.274e-07 | 1 - 3.821e-07 |
+| 200 R_S | 2.184e+04 | 0.1233 | 0.01257 | 8861.98 m | 6.369e-08 | 1 - 1.911e-07 |
+| 764 R_S | 8.343e+04 | 0.00845 | 8.613e-04 | 8861.98 m | 1.667e-08 | 1 - 5.002e-08 |
+| 1000 R_S | 1.092e+05 | 0.004932 | 5.028e-04 | 8861.98 m | 1.274e-08 | 1 - 3.821e-08 |
+
+Invariante des Luftballon-Effekts: g * y^2 = x * g_E (A1);  SI-Form G M = 3 c^2 Ds
+  R =     1 R_S: g*y^2 = 3.267262e+06 m/s^2,  g*R^2 = 1.326170e+20 m^3/s^2,  G M = 3c^2 Ds = 1.327459e+20 m^3/s^2
+  R =   100 R_S: g*y^2 = 3.267262e+06 m/s^2,  g*R^2 = 1.326170e+20 m^3/s^2,  G M = 3c^2 Ds = 1.327459e+20 m^3/s^2
+  y fuer g = g_E bei 1 M_S: y = sqrt(x) = 577.1 R_E = 5.285 R_S
+  y fuer g = g_E bei 18 M_S: y = sqrt(x) = 2448.5 R_E = 22.422 R_S
+  g(12 km) / g(1000 R_S) bei 1 M_S = 3.3611e+15
+  Sonne / Beteigeuze (Oberflaechen-Neigung) = 32427.6
+
+## 8. Skalenvergleich Ds/R (Mikro bis Makro)
+
+| Koerper | Ebene | Ds/R | g [m/s^2] |
+|---|---|---|---|
+| H-Atom | Atom (Torus-Wirbel) | 7.828e-45 | 3.985e-17 |
+| Elektron | Elementarteilchen-Schwingung | 8.002e-44 | 7.649e-12 |
+| Proton | Gebundene Kernmasse | 4.924e-40 | 1.577e-07 |
+| He-4-Kern | Gebundene Kernmasse | 9.816e-40 | 1.578e-07 |
+| Fe-56-Kern | Gebundene Kernmasse | 6.150e-39 | 4.432e-07 |
+| Mond | Planetar | 1.046e-11 | 1.622 |
+| Merkur | Planetar | 3.349e-11 | 3.698 |
+| Mars | Planetar | 4.686e-11 | 3.724 |
+| Venus | Planetar | 1.991e-10 | 8.861 |
+| Erde | Planetar | 2.320e-10 | 9.81 |
+| Uranus | Planetar | 8.472e-10 | 8.998 |
+| Neptun | Planetar | 1.030e-09 | 11.26 |
+| Saturn | Planetar | 2.416e-09 | 11.18 |
+| Jupiter | Planetar | 6.721e-09 | 25.89 |
+| Beteigeuze (Roter Riese) | Stern (Roter Riese) | 1.667e-08 | 0.00845 |
+| Sonne | Stern | 7.077e-07 | 274 |
+| Sirius B (Weisser Zwerg) | Stern (kompakt) | 8.576e-05 | 3.953e+06 |
+| Neutronenstern | Stern (kompakt) | 0.05744 | 1.289e+12 |
+
+## 9. Quasi-periodische Wicklung: Faltungsverhaeltnis rho = pi
+
+Bahn auf dem Torus: theta1 = 2 pi * n * rho, theta2 = 2 pi * n  (n = Umlaeufe um theta2).
+Rueckkehrabstand nach n Umlaeufen: d(n) = Abstand von n*rho zur naechsten ganzen Zahl
+(Bruchteil einer vollen Windung). Aufgelistet: jede neue beste Annaeherung bis n = 10^6.
+
+| n (Umlaeufe) | m (Windungen) | Naeherung m/n | d(n) | Winkelabstand |
+|---|---|---|---|---|
+| 1 | 3 | 3/1 | 1.416e-01 | 5.097e+01 Grad |
+| 7 | 22 | 22/7 | 8.851e-03 | 3.187e+00 Grad |
+| 106 | 333 | 333/106 | 8.821e-03 | 3.176e+00 Grad |
+| 113 | 355 | 355/113 | 3.014e-05 | 1.085e-02 Grad |
+| 33102 | 103993 | 103993/33102 | 1.913e-05 | 6.887e-03 Grad |
+| 33215 | 104348 | 104348/33215 | 1.102e-05 | 3.965e-03 Grad |
+| 66317 | 208341 | 208341/66317 | 8.114e-06 | 2.921e-03 Grad |
+| 99532 | 312689 | 312689/99532 | 2.901e-06 | 1.044e-03 Grad |
+| 265381 | 833719 | 833719/265381 | 2.313e-06 | 8.327e-04 Grad |
+| 364913 | 1146408 | 1146408/364913 | 5.879e-07 | 2.116e-04 Grad |
+
+d(n) wird nie 0: die Bahn schliesst sich fuer kein n.
+

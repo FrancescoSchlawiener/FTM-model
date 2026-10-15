@@ -1,0 +1,102 @@
+A1) Mode f(w)·e^{ik·x} von (∇² + ∂_w²)u = 0:  f'' = k²f
+    allgemein: C1*exp(-k*w) + C2*exp(k*w)   (k > 0)
+    beschränkt für w → ∞ ⇔ Koeffizient von e^{+kw} = 0 ⇒ f = f(0)·e^{−kw};  k = 0: f = A + Bw, beschränkt ⇔ B = 0
+    Schleife w ~ w + Λ: Monodromie exp(Λ·[[0,1],[k²,0]]) hat die Eigenwerte [exp(-Lambda*k), exp(Lambda*k)]; = 1 nur für k = 0
+    k = 0: Monodromie [[1,Λ],[0,1]] ≠ I, periodisch nur f = konst.
+
+A2) Glättung P_w: Symbol e^{−|k|w} (x periodisch, 512 Punkte, Zufallsdaten)
+    P_0.1·P_0.3 − P_0.4: 5.7e-17
+    P_0.5·P_1.2 − P_1.7: 1.4e-17
+    P_2.0·P_3.0 − P_5.0: 6.9e-18
+    w = 0.05: Kern min 3.978e-03 ≥ 0, Masse 1.000000000015;  max|P_w f| = 0.481 ≤ max|f| = 3.100
+    w = 0.5: Kern min 3.898e-02 ≥ 0, Masse 1.000000000000;  max|P_w f| = 0.137 ≤ max|f| = 3.100
+    w = 2.0: Kern min 1.212e-01 ≥ 0, Masse 1.000000000000;  max|P_w f| = 0.058 ≤ max|f| = 3.100
+    Satz: Eine Familie T_w (w ≥ 0) mit T_0 = I, T_a T_b = T_{a+b}, verschiebungsinvariant in x, u = T_w f harmonisch in (x, w)
+    und max|T_w f| ≤ max|f| ist T_w = P_w: Multiplikator m_w(k) = e^{−wφ(k)} (Halbgruppe), φ² = k² (harmonisch), φ = +|k| (Kontraktion).
+    T_Λ = I verlangt e^{−|k|Λ} = 1 ⇒ k = 0. Fortsetzung auf w < 0 hätte |m| = e^{+|k||w|} > 1: keine Glättung, unbeschränkt.
+
+A3) Eindeutigkeit: Hälfte des Satzes ohne Halbgruppe. Beschränkt harmonisch auf w ≥ 0 mit u(x,0) = 0 ⇒ u ≡ 0
+    (ungerade Spiegelung w → −w gibt eine beschränkte harmonische Funktion auf dem ganzen Raum, Liouville ⇒ konstant = 0).
+    Ohne Beschränktheit gibt es u = w, u = w·x₁, u = sinh(kw)e^{ikx}: die Daten am Ort legen das Feld dann nicht fest.
+    Endliche Tiefe W mit Deckel (kL = s = 1, G bei w = L):
+      W = 2L: Deckel u = 0 → 0.324027, Deckel ∂u = 0 → 0.410154, Halbgerade e^{−1} = 0.367879
+      W = 5L: Deckel u = 0 → 0.367773, Deckel ∂u = 0 → 0.367986, Halbgerade e^{−1} = 0.367879
+      W = 20L: Deckel u = 0 → 0.367879, Deckel ∂u = 0 → 0.367879, Halbgerade e^{−1} = 0.367879
+
+A4) Schleife w ~ w + Λ mit dem Ort als Quelle (Sprung von ∂_w u am Ort): G(w) = cosh(k(w − Λ/2))/cosh(kΛ/2)
+    Λ =  2.0/k: max|G(a)G(b) − G(a+b)| = 0.580;  G(Λ/2) = 0.6481, G(3Λ/4)/G(Λ/2) = 1.128 > 1;  Quellstärke −[∂_wG] = 1.5232 (Halbgerade: 1)
+    Λ =  4.0/k: max|G(a)G(b) − G(a+b)| = 0.929;  G(Λ/2) = 0.2658, G(3Λ/4)/G(Λ/2) = 1.543 > 1;  Quellstärke −[∂_wG] = 1.9281 (Halbgerade: 1)
+    Λ = 10.0/k: max|G(a)G(b) − G(a+b)| = 1.000;  G(Λ/2) = 0.0135, G(3Λ/4)/G(Λ/2) = 6.132 > 1;  Quellstärke −[∂_wG] = 1.9998 (Halbgerade: 1)
+    → Mit dem Ort als Quelle verträgt die Gleichung eine Schleife; dann ist G keine Halbgruppe und wächst jenseits Λ/2 wieder (Entglättung).
+      Mit dem Ort als Rand (Daten G(0) = 1, Glättungstiefe) gibt es keine Schleife. Das ist dieselbe Form wie der thermische Propagator im Kreis.
+
+A5) Ortsabhängige Kopplung: u_ww = A·u, A = −∂_x ν(x) ∂_x ≥ 0 (periodisch, ν > 0 zufällig, 200 Punkte)
+    kleinste Eigenwerte von A: 0.0e+00, 0.9942, 1.3058;  ‖P_0,3·P_0,7 − P_1‖ = 1.9e-16
+    Λ = 1.0: Zahl der Eigenwerte von P_Λ gleich 1 (auf 10⁻⁹): 1 (nur der Mittelwert)
+    Λ = 10.0: Zahl der Eigenwerte von P_Λ gleich 1 (auf 10⁻⁹): 1 (nur der Mittelwert)
+    → Homogenität ist nicht nötig: P_w = e^{−w√A} für jedes A ≥ 0; eine Schleife lässt nur den Kern von A (Mittelwert) zu.
+
+A6) Vorzeichen: wäre w zeitartig (h^{ww} = −1), gälte u_ww = −A·u mit Lösungen e^{±i√λ w}: beschränkt, keine Halbgruppe,
+    periodisch für √λ·Λ ∈ 2πℤ (z. B. λ = 1, Λ = 2π: max|M − I| = 4.4e-16).
+    Die Halbgerade verlangt eine raumartige innere Richtung (elliptische Gleichung).
+
+B1) Kerne auf dem Bahntorus, τ = x + iy, q = e^{2πiτ}, s = 2πy (y = Im τ_M = s/2π)
+    Szegő S = Σ_{n≥0}qⁿ = 1/(1 − q);  Poisson P = Σ_{n∈ℤ} e^{2πinx}e^{−2π|n|y} = (1 − |q|²)/|1 − q|²;  Schwarz H = (1 + q)/(1 − q)
+    s      x      Re S        ½(1 + P)     P           Re H        |S|²
+    0.3   0.00     3.858296    3.858296    6.716592    6.716592   14.886447
+    0.3   0.10     1.144292    1.144292    1.288585    1.288585    2.855979
+    0.3   0.25     0.645656    0.645656    0.291313    0.291313    0.645656
+    1.0   0.00     1.581977    1.581977    2.163953    2.163953    2.502650
+    1.0   0.10     1.300476    1.300476    1.600953    1.600953    1.851530
+    1.0   0.25     0.880797    0.880797    0.761594    0.761594    0.880797
+    3.0   0.00     1.052396    1.052396    1.104791    1.104791    1.107537
+    3.0   0.10     1.041001    1.041001    1.082002    1.082002    1.084691
+    3.0   0.25     0.997527    0.997527    0.995055    0.995055    0.997527
+    → Re S = ½(1 + P) und Re H = P überall; auf der Achse x = 0: S = 1 + n_B(s), H = P = coth(s/2) = 1 + 2n_B(s).
+      S und H sind beide holomorph und beide Reihen nur in q; sie unterscheiden sich im Gewicht (cₙ = 1 gegen cₙ = 2).
+
+B2) Kern des Autors Δ(τ) = q∏(1 − qⁿ)²⁴ = Σ_{n≥1} τ(n)qⁿ: Fourier-Koeffizienten längs Re τ bei Im τ = 0,3 (256 Punkte)
+    n:   1:     1.000  2:   -24.000  3:   252.000  4: -1472.000  5:  4830.000   (Soll τ(n) = 1, −24, 252, −1472, 4830)
+    Anteile mit n ≤ 0: max|c_n| = 1.5e-15;  normiert: c₁ = 1
+    Gittersumme G₄: Zeilen n > 0: 1.1587894651+1.3441930636j;  Zeilen n < 0: 1.1587894651+1.3441930636j;  (2πi)⁴/3!·Σσ₃(n)qⁿ = 1.1587894660+1.3441930636j
+    ganze Summe 4.4822253975+2.6883861272j = 2ζ(4) + 2·(2πi)⁴/3!·Σσ₃qⁿ = 4.4822253995+2.6883861272j
+    → Rückkehr in beiden Richtungen (n und −n) gibt beide Male qⁿ, nie q̄ⁿ: Holomorphie wählt nicht die Richtung der Rückkehr,
+      die Gegenrichtung verdoppelt das Gewicht (Faktor 2 vor der q-Reihe).
+
+B3) Paar σ + iσ̃ mit Cauchy-Riemann in (x, w): σ = Poisson-Fortsetzung des Orts, σ̃ = Hilbert-Transformierte (−i·sgn n)
+    s = 0.3: max|σ + iσ̃ − (1 + q)/(1 − q)| = 1.5e-14;  auf der Achse σ̃ = 0.0e+00, σ + iσ̃ = 6.716592 = coth(s/2) = 6.716592
+    s = 1.0: max|σ + iσ̃ − (1 + q)/(1 − q)| = 1.6e-15;  auf der Achse σ̃ = 0.0e+00, σ + iσ̃ = 2.163953 = coth(s/2) = 2.163953
+    s = 3.0: max|σ + iσ̃ − (1 + q)/(1 − q)| = 4.5e-16;  auf der Achse σ̃ = 0.0e+00, σ + iσ̃ = 1.104791 = coth(s/2) = 1.104791
+    → Ein Cauchy-Riemann-Paar ist die holomorphe Ergänzung eines reellen harmonischen Feldes: positive Frequenzen mit Gewicht 2,
+      auf der Achse der Poisson-Wert 1 + 2n_B. Es gibt nicht 1 + n_B.
+
+B4) Hardy-Projektion P₊ (nur n ≥ 0, Gewicht 1) des Orts: Fortsetzung = S; Re S = ½(1 + P).
+    Das ist dieselbe Aussage wie „jeder Rücklauf n ≥ 0 einmal“; eine eigene Begründung für n ≥ 0 liefert sie nicht.
+    Orientierung τ → −τ̄ (q → q̄): S(q̄) = conj S(q) (x = 0,1, s = 1: 1.30048+0.40036j ↔ 1.30048-0.40036j); auf der Achse gleich (1.58198).
+    → Im τ > 0 wählt q statt q̄, nicht das Gewicht; bei Re τ = 0 ist die Wahl unsichtbar.
+
+B5) Gewicht je Rücklauf. Halbgerade ⇒ Erneuerung: G(mL) = G(L)^m = q^m (Halbgruppe). N gleichwertige Sinne, Rücklauflänge βL:
+    ν = 1 + N·Σ_{m≥1} e^{−βms} = 1 + N·n_B(βs),   χ(s) = s·(ν − 1) → N/β für s → 0,   Newton-Grenze ν − 1 → N·e^{−βs}
+    Fassung                       N  β   c₁(q = e^{−s})  χ(0)   v⁴/(GMa₀)   ν(a_N = a₀)   ν(0,1a₀)   ν(0,01a₀)
+    Szegő, ein Sinn              1  1                1   1.0         1.0       1.5820     3.6886     10.508
+    Poisson, beide Sinne         2  1                2   2.0         4.0       2.1640     6.3772     20.017
+    coth s (beide, Länge 2L)     2  2                0   1.0         1.0       1.3130     3.2670     10.033
+    drei Sinne, Länge 3L         3  3                0   1.0         1.0       1.1572     2.8960      9.575
+    Grenzwert des Autors χ → 1 (Tori zerfallen) ⇔ v⁴ = GMa₀ mit derselben Schwelle in s ⇔ N = β.
+    Rücklauflänge L = r* (β = 1) ⇒ N = 1: genau ein Sinn, ν = 1 + n_B(s). Dazu passt c₁ = 1, der erste Koeffizient des normierten Δ.
+
+B6) Zahlen Szegő gegen Poisson bei gleicher Schwelle, und gegen coth s (gleicher Tully-Fisher-Nullpunkt)
+    a_N/a₀    1 + n_B     1 + 2n_B    coth s     Poisson/Szegő   coth s/Szegő
+         10      1.0442      1.0884     1.0036       1.0423       0.9611
+          3      1.2150      1.4299     1.0646       1.1769       0.8763
+          1      1.5820      2.1640     1.3130       1.3679       0.8300
+        0.3      2.3712      3.7423     2.0048       1.5783       0.8455
+        0.1      3.6886      6.3772     3.2670       1.7289       0.8857
+       0.01     10.5083     20.0167    10.0333       1.9048       0.9548
+     0.0001    100.5008    200.0017   100.0033       1.9900       0.9950
+    Milchstraße als Punktmasse 6·10¹⁰ M☉, r* = 8.35 kpc, v in km/s:
+      r =  0.5 r*: Szegő  267.4, Poisson  284.9, coth s  253.3
+      r =  1.0 r*: Szegő  221.2, Poisson  258.6, coth s  201.5
+      r =  3.0 r*: Szegő  190.7, Poisson  249.8, coth s  179.0
+      r = 10.0 r*: Szegő  180.2, Poisson  248.8, coth s  176.1
+    Newton-Grenze (Sonne bei 1 AE, s = 7031): ν − 1 = e^{−s} bzw. 2e^{−s}, beide unter 10⁻³⁰⁰⁰.

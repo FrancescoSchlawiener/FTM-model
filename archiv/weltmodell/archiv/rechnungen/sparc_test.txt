@@ -1,0 +1,93 @@
+0) Einzelwert von Hand: a_N = 0,873 a₀ → s = √0,873 = 0,93434, e^{−s} = 0,39284, ν = 1/(1 − 0,39284) = 1,6470, a = 1,4378 a₀
+   im Skript: ν(0,873) = 1.64702, a = 1.43785 a₀.   cH₀/2π = 1.0422 (H₀ = 67,4) bzw. 1.1288 (H₀ = 73) ·10⁻¹⁰ m/s²;  a₀/(2πG) = 137.0 M☉/pc² für 1,2·10⁻¹⁰
+
+1) Prüfung des Lösers in kpc, km/s, M☉ (a₀ = 1,2·10⁻¹⁰)
+   Plummer-Kugel 10¹⁰ M☉, b = 0,3 r*, bei R = 1.0007 r*: a_N/a₀ exakt 0.8776, Gitter 0.8777; Feldform 1.4432, von Hand ν(a_N)·a_N = 1.4432
+   Plummer, Feldform gegen algebraisch 0,1–25 r*: größte Abweichung 7.8e-05
+   Kuzmin-Scheibe 10⁹ M☉, h = 1 kpc (exakt a = ν(|g_N|)·g_R): Gitter/exakt bei R/h = 0.25: 0.9956  0.5: 0.9962  1: 0.9975  2: 0.9990  5: 0.9998  8: 1.0000  
+   Exponentialscheibe R_d = 1 r*, Feldform/algebraisch bei R/R_d = 0,25 … 8: 0.606 0.717 0.829 0.936 0.988 1.021 1.015
+   Exponentialscheibe R_d = 3 r*, Feldform/algebraisch bei R/R_d = 0,25 … 8: 0.529 0.656 0.793 0.925 0.987 1.022 1.016
+
+2) Daten: 175 Galaxien, Auswahl Q ≤ 2 und Neigung ≥ 30°: 153 Galaxien, 3168 Punkte
+   verwendbar (g_bar > 0, Vobs > 0, errV > 0): 3166 Punkte in 153 Galaxien; ohne: 2 Punkte (meist innen, Gasloch)
+   Massenmodell, geprüft gegen die Daten:
+   Gas: Vgas aus der rückgerechneten Scheibe, Abweichung (rms je Galaxie) Median 0.07, 90 % unter 0.50, größte 4.0 km/s; Masse/1,33·M_HI Median 1.000, außerhalb 0,8–1,25: 4 Galaxien
+   Gas ohne Bindung an M_HI: Masse/1,33·M_HI Median 1.10 (16–84 %: 0.82–2.62); die Gesamtmasse ist aus Vgas allein schlecht bestimmt (Gas jenseits des letzten Punkts, unstetige Vgas-Kurven)
+   Newton-Feld des Modells / g_bar der Daten, Sternscheibe dünn: Median 1.033, 16–84 % 0.998–1.117
+   Newton-Feld des Modells / g_bar der Daten, Sternscheibe sech², z₀ = 0.15 R_d: Median 1.002, 16–84 % 0.979–1.030
+   Anteil des Gases an Σ bei x ≥ 1: Median 0.27
+   Näherung ν(√(g_R² + (2πGΣ)²))/ν(g_R) gegen den Löser (dünn, 1,2): mittlere Abweichung -0.001 dex, 90 % innerhalb 0.022 dex
+
+3) Vorhersage A: Residuen gegen x = 2πGΣ/g_bar (Σ = Υ_d·SBdisk + Σ_gas; Bulge nicht in Σ)
+   Δ = log g_obs − log[ν(g_bar/a₀)·g_bar]; Feldform: Δ_F = log(Feldform/algebraisch) aus dem Löser je Galaxie.
+   δ = Δ minus Trend in l = log(g_bar/a₀) (quadratisch, angepasst an die Punkte mit x < 0,3): Abweichung bei gleichem g_bar.
+   β: Regression Δ = c₀ + c₁l + c₂l² + β·Δ_F über alle Punkte (Feldform β = 1, algebraisch β = 0); Fehler durch Ziehen von Galaxien.
+   a₀ = 1.200·10⁻¹⁰:   x-Bereich | Punkte | Δ Daten (±) | Δ_F dünn / dick | δ Daten (±) | δ_F dünn / dick
+         0–0.3  |   898 | -0.015 (0.013) | +0.001 / +0.001 | +0.000 (0.013) | -0.000 / +0.000
+       0.3–1    |  1365 | -0.008 (0.013) | -0.019 / -0.019 | +0.007 (0.013) | -0.019 / -0.019
+         1–3    |   729 | -0.040 (0.018) | -0.093 / -0.084 | -0.025 (0.018) | -0.095 / -0.086
+         3–∞    |   174 | -0.168 (0.038) | -0.234 / -0.192 | -0.143 (0.039) | -0.240 / -0.198
+      β (dünn) = +0.43 ± 0.15   (Probe: Feldform-Daten ohne Rauschen geben β = 1.00)
+      β (dick) = +0.38 ± 0.17   (Probe: Feldform-Daten ohne Rauschen geben β = 1.00)
+      Punkte mit Δ_F(dünn) < −0,05 dex: 871 in 117 Galaxien; δ Daten -0.043, δ_F dünn -0.129, dick -0.113
+      nach der Vorhersage Δ_F (dünn) geordnet:  Δ_F-Bereich | Punkte | Galaxien | Median x | δ Daten (±) | δ_F dünn / dick
+      -0.02 … +1.00 |  1738 |  134 |  0.29 | +0.003 (0.012) | -0.004 / -0.004
+      -0.05 … -0.02 |   557 |  131 |  0.75 | -0.002 (0.017) | -0.034 / -0.032
+      -0.10 … -0.05 |   419 |  116 |  1.28 | -0.010 (0.018) | -0.075 / -0.068
+      -0.20 … -0.10 |   333 |  101 |  2.11 | -0.040 (0.023) | -0.140 / -0.123
+      -9.00 … -0.20 |   119 |   53 |  4.82 | -0.170 (0.050) | -0.287 / -0.242
+   a₀ = 1.042·10⁻¹⁰:   x-Bereich | Punkte | Δ Daten (±) | Δ_F dünn / dick | δ Daten (±) | δ_F dünn / dick
+         0–0.3  |   898 | +0.007 (0.013) | +0.001 / +0.001 | +0.000 (0.013) | -0.000 / -0.000
+       0.3–1    |  1365 | +0.013 (0.013) | -0.019 / -0.019 | +0.006 (0.013) | -0.019 / -0.018
+         1–3    |   729 | -0.016 (0.018) | -0.091 / -0.083 | -0.025 (0.018) | -0.093 / -0.084
+         3–∞    |   174 | -0.142 (0.038) | -0.230 / -0.190 | -0.143 (0.039) | -0.235 / -0.195
+      β (dünn) = +0.44 ± 0.15   (Probe: Feldform-Daten ohne Rauschen geben β = 1.00)
+      β (dick) = +0.38 ± 0.17   (Probe: Feldform-Daten ohne Rauschen geben β = 1.00)
+      Punkte mit Δ_F(dünn) < −0,05 dex: 860 in 116 Galaxien; δ Daten -0.045, δ_F dünn -0.127, dick -0.112
+      nach der Vorhersage Δ_F (dünn) geordnet:  Δ_F-Bereich | Punkte | Galaxien | Median x | δ Daten (±) | δ_F dünn / dick
+      -0.02 … +1.00 |  1756 |  134 |  0.29 | +0.002 (0.012) | -0.004 / -0.004
+      -0.05 … -0.02 |   550 |  130 |  0.76 | -0.000 (0.017) | -0.034 / -0.032
+      -0.10 … -0.05 |   430 |  115 |  1.31 | -0.015 (0.019) | -0.075 / -0.068
+      -0.20 … -0.10 |   313 |  100 |  2.14 | -0.038 (0.023) | -0.141 / -0.124
+      -9.00 … -0.20 |   117 |   53 |  4.82 | -0.169 (0.050) | -0.285 / -0.241
+
+4) Vorhersage B: a₀ je Galaxie bei festem Υ (algebraische Relation), gegen Σ₀ = Υ_d·SBdisk(zentral, Tabelle)
+   149 Galaxien mit ≥ 5 Punkten. Steigung d log a₀/d log Σ₀ (± durch Ziehen), Spearman ρ, Median a₀ je Σ₀-Bereich [M☉/pc²]:
+                                     Steigung        ρ     |  <30   30–100  100–300  300–1000  >1000
+   Anzahl Galaxien                                          |     10       49       26       36       28  
+   Daten, algebraisch angepasst             +0.117 ± 0.042  +0.24  |  0.584   0.873   1.010   1.224   1.264
+   Daten, Feldform dünn angepasst           +0.069 ± 0.044  +0.13  |  0.679   1.122   1.134   1.375   1.279
+   Daten, Feldform dick angepasst           +0.072 ± 0.044  +0.14  |  0.678   1.122   1.128   1.361   1.285
+   Vorhersage Feldform dünn, a₀ 1,2 (÷a₀)   +0.051 ± 0.007  +0.53  |  0.769   0.739   0.828   0.891   0.979
+   Vorhersage Feldform dünn, cH₀/2π (÷a₀)   +0.051 ± 0.007  +0.53  |  0.769   0.740   0.830   0.893   0.980
+   Vorhersage Feldform dick, a₀ 1,2 (÷a₀)   +0.048 ± 0.006  +0.53  |  0.777   0.749   0.836   0.893   0.974
+   Vorhersage Feldform dick, cH₀/2π (÷a₀)   +0.049 ± 0.006  +0.53  |  0.777   0.750   0.838   0.894   0.975
+   algebraische Regel als Vorhersage: Steigung 0, a₀ je Galaxie = wahres a₀.
+   Steigung Daten (algebraisch angepasst) minus Vorhersage Feldform dünn (1,2): +0.066 ± 0.043
+   nach Abstandsmethode: f_D ≥ 2 (68 Galaxien) Steigung Daten +0.140, Vorhersage +0.051;  f_D = 1 (81) Daten +0.129, Vorhersage +0.052;  Median Σ₀ f_D ≥ 2 / = 1: 274 / 151 M☉/pc²
+   Anpassungen am Rand (0,05 oder 20): 6
+   Streuung der Daten: log a₀ (algebraisch) je Galaxie σ = 0.35 dex
+
+5) Gesamt: ein a₀ für alle Punkte, Υ fest; χ² mit Fehlern allein aus errV
+   3166 Punkte, 153 Galaxien.          bestes a₀ [10⁻¹⁰] | χ²/N beim besten | χ²/N bei 1,2 | bei cH₀/2π (67,4) | bei cH₀/2π (73)
+   algebraisch                        1.339        |     49.73       |    51.31    |     57.83         |    53.54
+   Feldform dünn                      1.446        |     52.56       |    57.05    |     66.13         |    60.42
+   Feldform dick                      1.448        |     52.26       |    56.83    |     65.98         |    60.23
+   χ²(alg) − χ²(Feldform dünn) je x-Bereich, jeweils beim besten a₀:  0–0.3: -1108  0.3–1: -1337  1–3: -6610  3–∞: +100
+      je Galaxie: 61 bevorzugen die Feldform, 92 die algebraische Relation; größte |Δχ²|: IC2574 +3471, UGC02953 +3138, UGC00128 -2792, NGC2403 -1927
+   χ²(alg) − χ²(Feldform dick) je x-Bereich, jeweils beim besten a₀:  0–0.3: -1240  0.3–1: -1495  1–3: -5482  3–∞: +204
+      je Galaxie: 59 bevorzugen die Feldform, 94 die algebraische Relation; größte |Δχ²|: IC2574 +3250, UGC02953 +3021, UGC00128 -2728, NGC2403 -1913
+
+6) Grenzen, gerechnet
+   Υ_d = 0.4 (Υ_b skaliert nicht): bestes a₀ algebraisch 1.692, Feldform dünn 1.844;  β = +0.26 ± 0.14 (933 Punkte mit Δ_F < −0,05)
+   Υ_d = 0.6 (Υ_b skaliert nicht): bestes a₀ algebraisch 1.084, Feldform dünn 1.162;  β = +0.55 ± 0.16 (821 Punkte mit Δ_F < −0,05)
+   Abstände aus dem Hubble-Fluss (f_D = 1, H₀ = 73 in den Daten) auf H₀ = 67,4 umgerechnet (g_obs ∝ 1/D, g_bar und x fest): bestes a₀ algebraisch 1.171, Feldform dünn 1.264, dick 1.266
+   nur Abstände aus TRGB, Cepheiden, UMa, SN (f_D ≥ 2; 70 Galaxien): algebraisch 1.095, Feldform dünn 1.214, dick 1.216
+   nur Hubble-Fluss (f_D = 1; 83 Galaxien): algebraisch 1.523, Feldform dünn 1.616, dick 1.618
+   mit Neigungsfehler (2·δi/tan i) im Fehler: bestes a₀ algebraisch 1.203 (χ²/N 9.78), Feldform dünn 1.333 (χ²/N 11.27)
+   nur Q = 1 (93 Galaxien): algebraisch 1.200, Feldform dünn 1.286, dick 1.290;  β = +0.16 ± 0.15 (584 Punkte mit Δ_F < −0,05)
+   ohne die drei innersten Punkte je Galaxie: algebraisch 1.340, Feldform dünn 1.440, dick 1.443;  β = -0.03 ± 0.18 (548 Punkte mit Δ_F < −0,05)
+   nur Punkte mit 2·errV/Vobs < 0,1: algebraisch 1.345, Feldform dünn 1.446, dick 1.449;  β = -0.29 ± 0.32 (241 Punkte mit Δ_F < −0,05)
+   Punkte mit x ≥ 1 ohne Gas in Σ: 562 statt 903
+
+(Rechenzeit 438 s)

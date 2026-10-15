@@ -1,0 +1,1081 @@
+{
+"118": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 79
+},
+"115": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 94
+},
+"116": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 102
+},
+"117": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 103
+},
+"114": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 111
+},
+"113": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 112
+},
+"112": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 107
+},
+"111": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"5f146d107s1": 2.7707
+},
+"tiefste": true,
+"sekunden": 154
+},
+"110": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"5f146d77s27p1": -2367.2859
+},
+"tiefste": false,
+"sekunden": 143
+},
+"109": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"5f146d67s27p1": -1681.4001
+},
+"tiefste": false,
+"sekunden": 131
+},
+"108": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"5f146d57s27p1": -1006.1203
+},
+"tiefste": false,
+"sekunden": 129
+},
+"107": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"5f146d47s27p1": -338.8005
+},
+"tiefste": false,
+"sekunden": 133
+},
+"105": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"5f146d47s1": 1.1561,
+"5f146d27s27p1": 1.7077
+},
+"tiefste": true,
+"sekunden": 174
+},
+"106": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"5f146d57s1": 1.5424,
+"5f146d37s27p1": 2.6961
+},
+"tiefste": true,
+"sekunden": 180
+},
+"104": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f146d27s17p1": 2.2487,
+"5f146d37s1": 2.0091,
+"5f146d17s27p1": 0.7893
+},
+"tiefste": true,
+"sekunden": 198
+},
+"103": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f146d17s17p1": 2.236,
+"5f146d27s1": 2.7331,
+"5f147s27p1": -0.0525
+},
+"tiefste": false,
+"sekunden": 218
+},
+"102": {
+"nachbarn": 4,
+"gerechnet": 1,
+"abstand": {
+"5f147s17p1": 2.1186
+},
+"tiefste": true,
+"sekunden": 117
+},
+"101": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"5f137s17p1": 2.0468,
+"5f147s1": 3.8602
+},
+"tiefste": true,
+"sekunden": 189
+},
+"100": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f127s17p1": 1.9764,
+"5f126d17s1": 2.7953,
+"5f137s1": 4.6001
+},
+"tiefste": true,
+"sekunden": 259
+},
+"99": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f117s17p1": 1.9071,
+"5f116d17s1": 2.5701,
+"5f127s1": 5.2799
+},
+"tiefste": true,
+"sekunden": 269
+},
+"98": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f107s17p1": 1.839,
+"5f106d17s1": 2.339,
+"5f96d17s2": -0.5696
+},
+"tiefste": false,
+"sekunden": 271
+},
+"97": {
+"nachbarn": 5,
+"gerechnet": 4,
+"abstand": {
+"5f97s17p1": 1.7715,
+"5f96d17s1": 2.104,
+"5f87s27p1": -0.6992,
+"5f86d17s2": -1.8019
+},
+"tiefste": false,
+"sekunden": 337
+},
+"95": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f77s17p1": 1.6346,
+"5f76d17s1": 1.6429,
+"5f66d17s2": 1.0072
+},
+"tiefste": true,
+"sekunden": 248
+},
+"94": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"5f67s17p1": 1.602,
+"5f66d17s1": 1.5277,
+"5f56d17s2": 1.0365
+},
+"tiefste": true,
+"sekunden": 258
+},
+"96": {
+"nachbarn": 7,
+"gerechnet": 5,
+"abstand": {
+"5f76d17s17p1": 1.6764,
+"5f76d27s1": 1.0507,
+"5f86d17s1": 4.9171,
+"5f77s27p1": 1.2759,
+"5f87s2": 3.0487
+},
+"tiefste": true,
+"sekunden": 363
+},
+"93": {
+"nachbarn": 7,
+"gerechnet": 5,
+"abstand": {
+"5f46d17s17p1": 1.6103,
+"5f46d27s1": 0.821,
+"5f56d17s1": 1.5005,
+"5f47s27p1": 1.3643,
+"5f57s2": 0.0734
+},
+"tiefste": true,
+"sekunden": 371
+},
+"90": {
+"nachbarn": 5,
+"gerechnet": 5,
+"abstand": {
+"6d27s17p1": 1.54,
+"6d37s1": 0.28,
+"5f16d27s1": 2.2887,
+"6d17s27p1": 1.797,
+"5f16d17s2": 1.4249
+},
+"tiefste": true,
+"sekunden": 379
+},
+"92": {
+"nachbarn": 7,
+"gerechnet": 6,
+"abstand": {
+"5f36d17s17p1": 1.5925,
+"5f36d27s1": 0.7925,
+"5f46d17s1": 3.0594,
+"5f37s27p1": 1.3424,
+"5f47s2": 1.1712,
+"5f26d27s2": 1.1215
+},
+"tiefste": true,
+"sekunden": 445
+},
+"91": {
+"nachbarn": 7,
+"gerechnet": 6,
+"abstand": {
+"5f26d17s17p1": 1.575,
+"5f26d27s1": 0.8012,
+"5f36d17s1": 4.5477,
+"5f27s27p1": 1.2809,
+"5f37s2": 2.3325,
+"5f16d27s2": -0.1501
+},
+"tiefste": false,
+"sekunden": 448
+},
+"86": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 44
+},
+"88": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"7s17p1": 1.4623,
+"6d17s1": 1.612
+},
+"tiefste": true,
+"sekunden": 151
+},
+"85": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 62
+},
+"87": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"7p1": 1.3282,
+"6d1": 1.8468
+},
+"tiefste": true,
+"sekunden": 168
+},
+"89": {
+"nachbarn": 5,
+"gerechnet": 4,
+"abstand": {
+"6d17s17p1": 1.5329,
+"6d27s1": 1.0257,
+"7s27p1": 0.9567,
+"5f17s2": 4.4296
+},
+"tiefste": true,
+"sekunden": 331
+},
+"84": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 64
+},
+"83": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 58
+},
+"82": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 52
+},
+"81": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 56
+},
+"80": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 51
+},
+"79": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"4f145d96s2": 1.3703
+},
+"tiefste": true,
+"sekunden": 95
+},
+"77": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"4f145d86s1": 0.525
+},
+"tiefste": true,
+"sekunden": 113
+},
+"76": {
+"nachbarn": 5,
+"gerechnet": 1,
+"abstand": {
+"4f145d76s1": 1.3597
+},
+"tiefste": true,
+"sekunden": 121
+},
+"78": {
+"nachbarn": 7,
+"gerechnet": 2,
+"abstand": {
+"4f145d10": 1.0186,
+"4f145d86s2": 0.3868
+},
+"tiefste": true,
+"sekunden": 135
+},
+"75": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f145d56s16p1": 1.8961,
+"4f145d66s1": 2.1129
+},
+"tiefste": true,
+"sekunden": 163
+},
+"74": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f145d46s16p1": 1.8853,
+"4f145d56s1": -0.0331
+},
+"tiefste": false,
+"sekunden": 156
+},
+"73": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f145d36s16p1": 1.9166,
+"4f145d46s1": 0.3913
+},
+"tiefste": true,
+"sekunden": 153
+},
+"72": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f145d26s16p1": 1.9383,
+"4f145d36s1": 1.3933,
+"4f145d16s26p1": 1.6079
+},
+"tiefste": true,
+"sekunden": 228
+},
+"70": {
+"nachbarn": 4,
+"gerechnet": 2,
+"abstand": {
+"4f146s16p1": 1.8533,
+"4f145d16s1": 2.9244
+},
+"tiefste": true,
+"sekunden": 158
+},
+"71": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f145d16s16p1": 1.9355,
+"4f145d26s1": 2.2691,
+"4f146s26p1": 0.5182
+},
+"tiefste": true,
+"sekunden": 222
+},
+"69": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f136s16p1": 1.7968,
+"4f135d16s1": 2.741
+},
+"tiefste": true,
+"sekunden": 198
+},
+"68": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f126s16p1": 1.7405,
+"4f125d16s1": 2.5509,
+"4f115d16s2": -1.1165
+},
+"tiefste": false,
+"sekunden": 238
+},
+"67": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f116s16p1": 1.685,
+"4f115d16s1": 2.3545,
+"4f105d16s2": -1.8553
+},
+"tiefste": false,
+"sekunden": 256
+},
+"66": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f106s16p1": 1.6297,
+"4f105d16s1": 2.1526,
+"4f95d16s2": -2.6377
+},
+"tiefste": false,
+"sekunden": 259
+},
+"65": {
+"nachbarn": 5,
+"gerechnet": 4,
+"abstand": {
+"4f96s16p1": 1.5746,
+"4f95d16s1": 1.9467,
+"4f86s26p1": -1.7963,
+"4f85d16s2": -3.4713
+},
+"tiefste": false,
+"sekunden": 304
+},
+"63": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f76s16p1": 1.4633,
+"4f75d16s1": 1.5399
+},
+"tiefste": true,
+"sekunden": 169
+},
+"62": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f66s16p1": 1.4423,
+"4f65d16s1": 1.4204
+},
+"tiefste": true,
+"sekunden": 187
+},
+"64": {
+"nachbarn": 7,
+"gerechnet": 5,
+"abstand": {
+"4f75d16s16p1": 1.5082,
+"4f75d26s1": 0.765,
+"4f85d16s1": 6.0869,
+"4f76s26p1": 1.8546,
+"4f86s2": 4.3673
+},
+"tiefste": true,
+"sekunden": 346
+},
+"61": {
+"nachbarn": 5,
+"gerechnet": 2,
+"abstand": {
+"4f56s16p1": 1.4242,
+"4f55d16s1": 1.3072
+},
+"tiefste": true,
+"sekunden": 189
+},
+"60": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f46s16p1": 1.4062,
+"4f45d16s1": 1.2048,
+"4f35d16s2": 0.4519
+},
+"tiefste": true,
+"sekunden": 227
+},
+"59": {
+"nachbarn": 5,
+"gerechnet": 3,
+"abstand": {
+"4f36s16p1": 1.3881,
+"4f35d16s1": 1.3563,
+"4f25d16s2": -0.4136
+},
+"tiefste": false,
+"sekunden": 251
+},
+"56": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"6s16p1": 1.3265,
+"5d16s1": 1.0465
+},
+"tiefste": true,
+"sekunden": 124
+},
+"54": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 27
+},
+"55": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"6p1": 1.2311,
+"5d1": 1.6733
+},
+"tiefste": true,
+"sekunden": 110
+},
+"53": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 40
+},
+"57": {
+"nachbarn": 5,
+"gerechnet": 5,
+"abstand": {
+"5d16s16p1": 1.3803,
+"5d26s1": 0.2322,
+"4f15d16s1": 3.5818,
+"6s26p1": 2.0768,
+"4f16s2": 2.5158
+},
+"tiefste": true,
+"sekunden": 302
+},
+"58": {
+"nachbarn": 7,
+"gerechnet": 5,
+"abstand": {
+"4f15d16s16p1": 1.3984,
+"4f15d26s1": 0.248,
+"4f25d16s1": 2.7315,
+"4f16s26p1": 2.1183,
+"4f26s2": 1.373
+},
+"tiefste": true,
+"sekunden": 358
+},
+"52": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 45
+},
+"50": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 32
+},
+"51": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 37
+},
+"48": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 29
+},
+"47": {
+"nachbarn": 3,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 28
+},
+"49": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 35
+},
+"46": {
+"nachbarn": 2,
+"gerechnet": 1,
+"abstand": {
+"4d95s1": 0.4714
+},
+"tiefste": true,
+"sekunden": 64
+},
+"43": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"4d55s15p1": 1.7668,
+"4d65s1": 0.6115
+},
+"tiefste": true,
+"sekunden": 102
+},
+"45": {
+"nachbarn": 4,
+"gerechnet": 2,
+"abstand": {
+"4d9": 0.5946,
+"4d75s2": 1.43
+},
+"tiefste": true,
+"sekunden": 107
+},
+"44": {
+"nachbarn": 4,
+"gerechnet": 2,
+"abstand": {
+"4d8": 1.5766,
+"4d65s2": 0.3642
+},
+"tiefste": true,
+"sekunden": 106
+},
+"42": {
+"nachbarn": 4,
+"gerechnet": 1,
+"abstand": {
+"4d45s2": 1.517
+},
+"tiefste": true,
+"sekunden": 68
+},
+"41": {
+"nachbarn": 4,
+"gerechnet": 2,
+"abstand": {
+"4d5": 1.4619,
+"4d35s2": 0.5798
+},
+"tiefste": true,
+"sekunden": 89
+},
+"38": {
+"nachbarn": 2,
+"gerechnet": 2,
+"abstand": {
+"5s15p1": 1.5961,
+"4d15s1": 2.2045
+},
+"tiefste": true,
+"sekunden": 105
+},
+"40": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"4d25s15p1": 1.7152,
+"4d35s1": 0.4761
+},
+"tiefste": true,
+"sekunden": 116
+},
+"36": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 24
+},
+"39": {
+"nachbarn": 3,
+"gerechnet": 3,
+"abstand": {
+"4d15s15p1": 1.6821,
+"4d25s1": 1.4248,
+"5s25p1": 1.4599
+},
+"tiefste": true,
+"sekunden": 150
+},
+"35": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 39
+},
+"34": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 38
+},
+"32": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 26
+},
+"33": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 32
+},
+"37": {
+"nachbarn": 2,
+"gerechnet": 2,
+"abstand": {
+"5p1": 1.4204,
+"4d1": 2.2462
+},
+"tiefste": true,
+"sekunden": 98
+},
+"31": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 29
+},
+"30": {
+"nachbarn": 2,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 26
+},
+"29": {
+"nachbarn": 3,
+"gerechnet": 1,
+"abstand": {
+"3d94s2": 0.0249
+},
+"tiefste": true,
+"sekunden": 61
+},
+"28": {
+"nachbarn": 3,
+"gerechnet": 1,
+"abstand": {
+"3d94s1": 0.8169
+},
+"tiefste": true,
+"sekunden": 64
+},
+"27": {
+"nachbarn": 3,
+"gerechnet": 1,
+"abstand": {
+"3d84s1": 1.6135
+},
+"tiefste": true,
+"sekunden": 67
+},
+"24": {
+"nachbarn": 4,
+"gerechnet": 1,
+"abstand": {
+"3d44s2": 0.4004
+},
+"tiefste": true,
+"sekunden": 49
+},
+"26": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"3d64s14p1": 2.3605,
+"3d74s1": 2.3693
+},
+"tiefste": true,
+"sekunden": 101
+},
+"25": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"3d54s14p1": 2.1257,
+"3d64s1": 3.0948
+},
+"tiefste": true,
+"sekunden": 97
+},
+"23": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"3d34s14p1": 1.9818,
+"3d44s1": 0.2849
+},
+"tiefste": true,
+"sekunden": 95
+},
+"22": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"3d24s14p1": 1.9075,
+"3d34s1": 1.0393
+},
+"tiefste": true,
+"sekunden": 107
+},
+"21": {
+"nachbarn": 3,
+"gerechnet": 2,
+"abstand": {
+"3d14s14p1": 1.8247,
+"3d24s1": 1.7897
+},
+"tiefste": true,
+"sekunden": 108
+},
+"20": {
+"nachbarn": 2,
+"gerechnet": 2,
+"abstand": {
+"4s14p1": 1.7175,
+"3d14s1": 2.5333
+},
+"tiefste": true,
+"sekunden": 78
+},
+"18": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 13
+},
+"19": {
+"nachbarn": 2,
+"gerechnet": 2,
+"abstand": {
+"4p1": 1.4995,
+"3d1": 2.5318
+},
+"tiefste": true,
+"sekunden": 68
+},
+"15": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 14
+},
+"17": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 19
+},
+"16": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 20
+},
+"14": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 16
+},
+"13": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 20
+},
+"10": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 10
+},
+"12": {
+"nachbarn": 1,
+"gerechnet": 1,
+"abstand": {
+"3s13p1": 2.6053
+},
+"tiefste": true,
+"sekunden": 39
+},
+"9": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 22
+},
+"11": {
+"nachbarn": 1,
+"gerechnet": 1,
+"abstand": {
+"3p1": 2.0477
+},
+"tiefste": true,
+"sekunden": 37
+},
+"8": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 21
+},
+"7": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 16
+},
+"6": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 15
+},
+"5": {
+"nachbarn": 1,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 16
+},
+"2": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 5
+},
+"1": {
+"nachbarn": 0,
+"gerechnet": 0,
+"abstand": {},
+"tiefste": true,
+"sekunden": 5
+},
+"4": {
+"nachbarn": 1,
+"gerechnet": 1,
+"abstand": {
+"2s12p1": 2.512
+},
+"tiefste": true,
+"sekunden": 23
+},
+"3": {
+"nachbarn": 1,
+"gerechnet": 1,
+"abstand": {
+"2p1": 1.8577
+},
+"tiefste": true,
+"sekunden": 20
+}
+}

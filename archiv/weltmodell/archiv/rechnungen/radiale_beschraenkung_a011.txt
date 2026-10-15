@@ -1,0 +1,63 @@
+0) Einzelwert von Hand: a_N = 0,873 a₀ → s = 0,93434, e^{−s} = 0,39284, ν = 1,6470
+   im Skript: ν(0,873) = 1.64702;  ∫₀¹√(1 + x²u²)du bei x = 5: von Hand ½(√26 + asinh 5/5) = 2,7807, im Skript 2.7808
+
+1) Mittel des Vertikalfelds über die Dichte einer selbstgravitierenden Schicht: g_z = 2πGΣ·(2M(z)/Σ − 1), M(z)/Σ ist unter der
+   Dichte gleichverteilt, also |g_z|/2πGΣ = u gleichverteilt auf [0, 1]: ⟨|g_z|⟩ = ½·2πGΣ, ⟨g_z²⟩ = ⅓·(2πGΣ)², für jedes Profil.
+   sech²       : ⟨|g_z|⟩/2πGΣ = 0.50000,  ⟨g_z²⟩/(2πGΣ)² = 0.33333
+   exponentiell: ⟨|g_z|⟩/2πGΣ = 0.50000,  ⟨g_z²⟩/(2πGΣ)² = 0.33333
+
+2) Dicke Exponentialscheibe (sech², z₀ = 0,15 R_d), 10¹⁰ M☉, a₀ = 1,2: Verhältnis zur radialen Form ν(g_R)·g_R in der Mittelebene
+   In der Mittelebene ist g_z = 0 (Spiegelung), also n = Dσ/|Dσ| = e_R: die örtliche Regel ist dort exakt radial.
+   F = Feldform (Löser), ört. = ν(|g_N|)·g_R in der untersten Zelle, d/c = Bahnregel bzw. Torusmittel mit Tracer = Massenschicht
+   (2D-Feld des Lösers, Dichtegewicht über z); Schicht: dieselben aus g_z = 2πGΣ·u (u gleichverteilt), F-Näherung ν(√(g_R² + (2πGΣ)²)).
+   r* = 3.560 kpc.   R_d/r* R/R_d      x |      F   ört.      d      c | Schicht:      F      d      c | lg-Anteil d/F, c/F
+               0.3  0.25   4.90 |  0.854  1.000  0.862  0.837 |           0.775  0.855  0.827 |  0.94  1.12
+               0.3  0.50   2.73 |  0.896  1.000  0.923  0.911 |           0.851  0.918  0.904 |  0.73  0.85
+               0.3  1.00   1.51 |  0.931  1.000  0.959  0.955 |           0.906  0.958  0.953 |  0.59  0.64
+               0.3  2.00   0.75 |  0.967  1.000  0.981  0.981 |           0.952  0.982  0.981 |  0.56  0.58
+               1.0  0.25   4.90 |  0.726  1.000  0.757  0.715 |           0.557  0.728  0.681 |  0.87  1.05
+               1.0  0.50   2.73 |  0.787  1.000  0.850  0.829 |           0.681  0.833  0.807 |  0.68  0.78
+               1.0  1.00   1.51 |  0.859  1.000  0.919  0.912 |           0.803  0.914  0.905 |  0.55  0.60
+               1.0  2.00   0.75 |  0.940  1.000  0.967  0.966 |           0.915  0.968  0.967 |  0.54  0.56
+               3.0  0.25   4.90 |  0.683  1.000  0.721  0.673 |           0.484  0.684  0.631 |  0.86  1.04
+               3.0  0.50   2.73 |  0.746  1.000  0.823  0.799 |           0.619  0.801  0.771 |  0.67  0.77
+               3.0  1.00   1.51 |  0.831  1.000  0.904  0.896 |           0.764  0.897  0.886 |  0.55  0.59
+               3.0  2.00   0.75 |  0.930  1.000  0.962  0.960 |           0.901  0.963  0.962 |  0.54  0.55
+   Die Feldform senkt auch bei dicker Scheibe, obwohl das Gefälle in der Mittelebene radial ist: Die Tiefe kommt aus der wirbelfreien
+   Ergänzung von ν∇Φ_N (die abgesenkte ν über der Schicht wird in die Ebene getragen), nicht aus der Richtung der Rückkehr am Stern.
+
+3) SPARC: 153 Galaxien, Υ_d = 0,5, Υ_b = 0,7, x = 2πGΣ/g_bar (Σ = Υ_d·SBdisk + Σ_gas). Lesarten in der Schichtnäherung mit g_R = g_bar;
+   c und d mit Tracer = Massenschicht (obere Grenze); ein Tracer in der Mittelebene gibt bei c und d genau die radiale Form.
+   Punkte: 3166 in 153 Galaxien; x ≥ 1: 903, x ≥ 3: 174
+   β = Anteil der Feldform-Tiefe (Regression Δ = c₀ + c₁l + c₂l² + β·Δ_F; F-Näherung als Δ_F); Daten mit Fehler durch Ziehen von Galaxien:
+   alle Punkte                         : Daten β = +0.39 ± 0.15 | F 1,00 | a, b 0 | c 0.66 | d 0.55   (Punkte mit Δ_F < −0,05: 942)
+   ohne die drei innersten je Galaxie  : Daten β = +0.08 ± 0.18 | F 1,00 | a, b 0 | c 0.55 | d 0.47   (Punkte mit Δ_F < −0,05: 621)
+   δ = Abweichung bei gleichem g_bar (Trend aus x < 0,3 abgezogen):   x-Bereich | Punkte | δ Daten (±) | F | c | d
+                                                                    0–0.3 |   898 | +0.000 (0.013) | +0.000 | +0.000 | -0.000
+                                                                  0.3–1   |  1365 | +0.007 (0.013) | -0.020 | -0.007 | -0.007
+                                                                    1–3   |   729 | -0.025 (0.018) | -0.101 | -0.049 | -0.043
+                                                                    3–∞   |   174 | -0.143 (0.039) | -0.279 | -0.188 | -0.155
+   Ein a₀ für alle Punkte (Fehler allein aus errV):
+      radial (a, b)         : bestes a₀ = 1.339·10⁻¹⁰, χ²/N = 49.73, χ² − χ²(radial) = +0
+      Feldform-Näherung     : bestes a₀ = 1.472·10⁻¹⁰, χ²/N = 51.84, χ² − χ²(radial) = +6669
+      c (Tracer = Schicht)  : bestes a₀ = 1.392·10⁻¹⁰, χ²/N = 50.00, χ² − χ²(radial) = +865
+      d (Tracer = Schicht)  : bestes a₀ = 1.388·10⁻¹⁰, χ²/N = 49.87, χ² − χ²(radial) = +435
+
+4) Sonnenort, Dynamikmasse Σ_dyn(|z| < 1,1 kpc) = a_z/(2πG) mit Σ_bar = 47,1 M☉/pc², z = 1,1 kpc, R₀ = 8,2 kpc (Literaturwert 71 ± 6)
+   Vertikalfrequenz in der Ebene: a, Kernform (e_r): ν_z² = ν_z,N² + (ν−1)ω_N²;  F, c, d: ν_z² = ν·ν_z,N² (a_z = ν·g_z, g_z(0) = 0);  b: a_z = ν(|g_z|)·g_z, ∝ √z für z → 0
+   Scheibenmodell (g_N,R = 1.374·10⁻¹⁰, 2πGΣ = 0.412·10⁻¹⁰): a Kern e_r  57.3 | a mit Anwendung längs g_N  70.0 | b 102.9 | c  69.2– 70.0 | d  69.2 | F (örtlich genähert)  69.2
+   Punktmasse     (g_N,R = 1.244·10⁻¹⁰, 2πGΣ = 0.412·10⁻¹⁰): a Kern e_r  57.1 | a mit Anwendung längs g_N  71.9 | b 102.9 | c  70.9– 71.9 | d  70.9 | F (örtlich genähert)  70.9
+
+5) Kugeln: Auf der Kreisbahn ist g_N radial und gleich groß; F, a, c, d geben a = ν(g_N)·g_N, b ebenso (g_z = 0 in der Bahnebene).
+   b, g_N = 1.0 a₀: bei 45° zur Achse |a_b|/|a| = 1.112, Richtung +0.0° gegen radial;  bei 30° zur Achse |a_b|/|a| = 1.098, Richtung +4.6° gegen radial;  
+   b, g_N = 0.01 a₀: bei 45° zur Achse |a_b|/|a| = 1.180, Richtung +0.0° gegen radial;  bei 30° zur Achse |a_b|/|a| = 1.160, Richtung +6.9° gegen radial;  tief bei 45°: 2^¼ = 1.189
+   Die Tensorregel hängt an den Achsen: Kugeln bleiben nicht kugelförmig.
+   c: für exzentrische Bahnen setzt das Bahnmittel statt des Ortswerts das Argument; druckgestützte Kugeln ändern sich (nicht gerechnet).
+
+6) Äußeres Feld, Milchstraße (6·10¹⁰ M☉) bei 50 kpc, g_e = 0,03 a₀: ν frei / senkrecht zur Scheibe / in der Scheibenebene
+   g_i = 0.0304 a₀, frei ν = 6.25
+   F, d (örtlicher Betrag):          senkrecht 5.36, gleichgerichtet 4.59
+   a, b (nur das radiale Gefälle):  senkrecht 6.25 (ohne Wirkung), gleichgerichtet 4.59
+   c (Γ über die Kreisbahn gemittelt): senkrecht 5.36, in der Bahnebene ⟨|g|⟩ = 0.0385 a₀ → 5.62
+
+(Rechenzeit 11 s)
