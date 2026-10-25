@@ -1,0 +1,2 @@
+# Deason u. a. 2019 (arXiv:1901.02016), Zusammenfassung: r0 [kpc], v_esc [km/s], Fehler oben, Fehler unten, Grenze [r200], M200 [1e12 M_sun]
+8.3 528 24 25 2 1.00

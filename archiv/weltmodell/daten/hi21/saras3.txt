@@ -1,0 +1,2 @@
+# SARAS 3 (Singh u. a. 2022, arXiv:2112.06778): Band von, bis [MHz], Vertrauen der Verwerfung des Profils von EDGES [%]
+55 85 95.3

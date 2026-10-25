@@ -1,0 +1,5 @@
+Massen und Lagen an zwei Haufenstößen, von Hand aus den Tabellen der Arbeiten abgeschrieben (arXiv, geladen am 16.10.2026, Tabellen gelesen und am Seitenbild geprüft):
+- clowe2006_tab2.txt: Clowe u. a. 2006, ApJ 648, L109 (arXiv:astro-ph/0608407), Tabelle 2, 1E0657-56.
+- bradac2006_tab.txt: Bradač u. a. 2006, ApJ 652, 937 (arXiv:astro-ph/0608408), Tabellen 2 und 3, 1E0657-56. Die Gasgipfel in Tabelle 2 ohne Fehler.
+- bradac2008_tab.txt: Bradač u. a. 2008, ApJ 687, 959 (arXiv:0806.2320), Tabellen 2 und 3, MACS J0025.4-1222.
+Gelesen mit daten.haufenstoss.

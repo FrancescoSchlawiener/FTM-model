@@ -98,7 +98,7 @@ M = ω₃·(√(3π)/2)·m_Pl³/(2m_u)² = **1,456 M☉**
 
 ## Beispiel 5: Die Falte
 
-Fällt die Hülle auf das Zentrum, bleibt der Trichter endlich. Eine Falte von 10⁶ M☉ in einer Galaxie hat am Horizont s² = **1,4·10¹⁷**: Sie liegt tief im Newton-Bereich, die Rückkehr wirkt erst außerhalb von r* = **36 pc**. Die Falte der Sonnenmasse hat die Temperatur kT = m̃c²/(4π), T = **6,2·10⁻⁸ K**, eine **2,3·10²²**-mal kürzere Periode als die Rückkehr (kT_I = ħa₀/c). Ihre Entropie ist S = 4πk·(M/m_Pl)² = **1,05·10⁷⁷** k. Was in sie fällt, gibt bis zur innersten stabilen Bahn **5,7 %** seiner Ruheenergie ab, **6,1**-mal so viel wie die Kernbindung bis zum Eisen (⁵⁶Fe: **0,94 %**, AME2020). Am Treffpunkt der Drehung, j = 1, sind es **42 %**. Erst bei M_U/4 = **1,4·10²³ M☉** fallen Horizont, Schwelle und Schließlänge zusammen.
+Fällt die Hülle auf das Zentrum, bleibt der Trichter endlich. Eine Falte von 10⁶ M☉ in einer Galaxie hat am Horizont s² = **1,4·10¹⁷**: Sie liegt tief im Newton-Bereich, die Rückkehr wirkt erst außerhalb von r* = **36 pc**. Die Falte der Sonnenmasse hat die Temperatur kT = m̃c²/(4π), T = **6,2·10⁻⁸ K**, eine **2,3·10²²**-mal kürzere Periode als die Rückkehr (kT_I = ħa₀/c). Ihre Entropie ist S = 4πk·(M/m_Pl)² = **1,05·10⁷⁷** k. Strahlt sie als schwarzer Körper ihrer Temperatur, lebt sie t = 5120π·α_G·3Δs/c = **2,1·10⁶⁷** Jahre. Was in sie fällt, gibt bis zur innersten stabilen Bahn **5,7 %** seiner Ruheenergie ab, **6,1**-mal so viel wie die Kernbindung bis zum Eisen (⁵⁶Fe: **0,94 %**, AME2020). Am Treffpunkt der Drehung, j = 1, sind es **42 %**. Erst bei M_U/4 = **1,4·10²³ M☉** fallen Horizont, Schwelle und Schließlänge zusammen.
 
 ---
 
@@ -140,7 +140,7 @@ Als Punktmasse von 6·10¹⁰ M☉ hat die Milchstraße die Faltung Δs = **197,
 | 15 | 131 | 196 |
 | 50 | 72 | 178 |
 
-Bei 50 kpc ist die Verstärkung ν = **6,14** (Bild 5). Ein gleichförmiges äußeres Feld ändert sie nicht, die Milchstraße fällt mit ihm. Weit außen geht die Ablenkung des Lichts gegen α_∞ = 2π·(v_flach/c)² = **0,42″**. Die Naht, an der das örtliche q das kosmische erreicht (a_N = **0,029**·a₀), liegt bei R_Q = **52,0 kpc**.
+Bei 50 kpc ist die Verstärkung ν = **6,14** (Bild 5). Ein gleichförmiges äußeres Feld ändert sie nicht, die Milchstraße fällt mit ihm. Weit außen geht die Ablenkung des Lichts gegen α_∞ = 2π·(v_flach/c)² = **0,42″**. Die Naht, an der das örtliche q das kosmische erreicht (a_N = **0,029**·a₀), liegt bei R_Q = **52,0 kpc**. Kein Bereich um sie bindet über R_max = v_flach/H_∞ = **3,07 Mpc** hinaus, das Mittel aus Schwelle und Schließung, mit H_∞ = c·√Λ_s, der Rate des Endzustands.
 
 ![Die Milchstraße als Punktmasse: Newton fällt nach außen ab, die Regel biegt um r* ab und läuft flach auf v⁴ = GMa₀ zu.](bilder/de/milchstrasse.svg)
 
@@ -148,9 +148,9 @@ Bei 50 kpc ist die Verstärkung ν = **6,14** (Bild 5). Ein gleichförmiges äu�
 
 ## Beispiel 8: Die Schwelle aus 141 Galaxien
 
-Über alle **141** Galaxien (SPARC, Qualität 1 oder 2, Neigung über 30°) mit **2688** Punkten, Abstand, Neigung und Masse-zu-Licht je Galaxie mitgeschätzt: Das Masse-zu-Licht der Scheiben folgt aus der Forderung, dass Stern und Gas derselben Regel folgen, Υ_d = **0,67**. Dann liest sich die Schwelle zu a₀ = **1,11**·10⁻¹⁰ m/s² (16–84 %: 1,00–1,21). Die Bose-Form trifft am besten: Die einfache Form liegt um Δχ² = **53** daneben, die Standard-Form um **41**. Die Rückkehr hat die Dimension **0,92** ± **0,05**, eindimensional wie die Wurzel in q verlangt.
+Über alle **141** Galaxien (SPARC, Qualität 1 oder 2, Neigung über 30°) mit **2688** Punkten, Abstand, Neigung und Masse-zu-Licht je Galaxie mitgeschätzt: Das Masse-zu-Licht der Scheiben folgt aus der Forderung, dass Stern und Gas derselben Regel folgen, Υ_d = **0,67**. Dann liest sich die Schwelle zu a₀ = **1,11**·10⁻¹⁰ m/s² (16 bis 84 %: 1,00 bis 1,21). Die Bose-Form trifft am besten: Die einfache Form liegt um Δχ² = **53** daneben, die Standard-Form um **41**. Die Rückkehr hat die Dimension **0,92** ± **0,05**, eindimensional wie die Wurzel in q verlangt.
 
-**Scheiben an der Schwelle.** Die Scheibenlänge ist im Median **0,71**·r* (16–84 %: 0,37–1,28), das ist r*/√2, und sie wächst mit der baryonischen Masse wie M_b^{0,31 ± 0,02}.
+**Scheiben an der Schwelle.** Die Scheibenlänge ist im Median **0,71**·r* (16 bis 84 %: 0,37 bis 1,28), das ist r*/√2, und sie wächst mit der baryonischen Masse wie M_b^{0,31 ± 0,02}.
 
 **Einzeltrichter oder kollektiv.** Kompakte Kugelsternhaufen (g = 25·a₀) zeigen kaum einen Zusatz, ν = **1,007**. Dünne Systeme (g = 0,13·a₀) den vollen, ν = **3,3**. Druckgestützte Kugeln haben σ_v⁴ = (4/81)·GMa₀: **9,1 km/s** bei 10⁷ M☉, **19,3 km/s** bei 2·10⁸ M☉. Als Ganzes unter der Schwelle liegt ein System mit Σ < a₀/(πG) = **242 M☉/pc²**. An den 52 Sternhaufen der Local Volume Database mit gemessener Streuung liegen die dünnen (g_N < a₀) mit der Regel +0,10 ± 0,03 dex über der Vorhersage, nach Newton +0,41 (χ² 53 gegen 235).
 
@@ -198,7 +198,7 @@ Aus der Schwelle allein folgen die Schließlänge Λ = c²/(2a₀) = **13,7 Gpc*
 
 Das Atmen: Θ = 2πa₀/(cH₀) = **1,020**, der Vakuumteil Ω_s = (π²/45)·Θ² = **0,228**. Drei Schleifen geben Ω_DE, heute Ω_DE/Ω_s = **3,03** (nach Planck gelesen). Der Vakuumteil ist das geometrische Mittel aus Planck-Dichte und Quantendichte der Schließlänge: Λ_s·ℓ_P² = (4π⁴/15)·ε_L² = **9,4·10⁻¹²³**. Seine zeitfeste Zahl ist k_s = π³/30 = **1,034**. Trüge er die Ausdehnung allein, liefe sie in H_s = H₀·√Ω_s = **32,1 km/s/Mpc**, mit drei Teilen in **55,6 km/s/Mpc**. Das Ganze liegt mit r*/Λ = **0,971** knapp unter seinem eigenen Treffpunkt. Seine Zelle ist L = **27,9 Gpc**.
 
-![Die Leiter der Längen: Quantenlänge λ̄, Faltung 3Δs und Schwellenradius r* über der Masse, dazu die Länge der Wirkung ℓ₀ und die Planck-Länge. Wo zwei Längen gleich werden, liegt eine Sprosse. Die Spiegelung M ↔ m_Pl²/M vertauscht λ̄ und 3Δs.](bilder/de/leiter.svg)
+![Die Leiter der Längen: Quantenlänge λ̄, Faltung 3Δs, Schwellenradius r* und Rückkehrtiefe der Quantenbewegung r̃ über der Masse, die größte Umkehr R_max = v_flach/H_∞, dazu die Länge der Wirkung ℓ₀ und die Planck-Länge. Wo zwei Längen gleich werden, liegt eine Sprosse, fünf Treffmassen von M_min bis M_U. Die Spiegelung M ↔ m_Pl²/M vertauscht λ̄ und 3Δs und damit r* und r̃.](bilder/de/leiter.svg)
 
 ---
 

@@ -1,0 +1,2 @@
+# Petersen, Peñarrubia 2021 (arXiv:2011.10581): v_travel, +, −, l_apex, +, −, b_apex, +, − (km/s und Grad)
+32 4 4 56 9 9 -34 10 9

@@ -1,0 +1,5 @@
+# Bera u. a. 2019, ApJL 882, L7 (arXiv:1909.05905), Abschnitt 4.3: kosmische Dichte des neutralen Wasserstoffs in
+# sternbildenden Galaxien bei z ≈ 0,34 (0,2 < z < 0,4), gestapelt aus 445 Galaxien (uGMRT, Extended Groth Strip),
+# mit der B-Leuchtkraftfunktion bei z ≈ 0,3 und dem heutigen Verhältnis von HI zu M_B hochgerechnet; H0 = 70, Ω_m = 0,3.
+# z  rho_HI[M_sun/Mpc^3]  Fehler_Statistik  Fehler_Feldschwankung  Omega_HI  Fehler  Fehler_Feld  Zahl
+0.34 6.5e7 1.0e7 1.2e7 4.81e-4 0.75e-4 0.87e-4 445

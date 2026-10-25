@@ -1,0 +1,7 @@
+# Zhang u. a. 2024 (arXiv:2411.19945), Zusammenfassung: Art (sf sternbildend, q erloschen), Median lg M* [M_sun], L_X,CGM [1e40 erg/s]
+sf 10.7 0.8
+sf 11.1 2.3
+sf 11.3 4.0
+q 10.8 1.1
+q 11.1 6.2
+q 11.4 30

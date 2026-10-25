@@ -1,0 +1,2 @@
+Neutraler Wasserstoff in Galaxien bei z ≈ 0,34: Bera, Kanekar, Chengalur, Bagla 2019, ApJL 882, L7, arXiv:1909.05905, Abschnitt 4.3 (Gl. 4 mit Lmin/LB* = 10⁻⁴), aus dem Text der Arbeit abgeschrieben am 16.10.2026. Gelesen mit daten.hi_frueh.
+Mittlere HI-Masse sternbildender Galaxien bei z ≈ 1 gegen heute bei gleicher Sternmasse: Chowdhury, Kanekar, Chengalur 2022, ApJ 935, 167, arXiv:2207.00031, Abschnitt 6 und Tabelle 4, aus dem Text der Arbeit abgeschrieben am 16.10.2026 (chowdhury2022.txt). Gelesen mit daten.hi_frueh_eins.

@@ -93,18 +93,19 @@ def sterne():
 
 
 def falte():
-    """Die Falte: 10⁶ M☉ in der Galaxie, Temperatur und Periode der Sonnenfalte, Abgabe beim Fall, Entropie, Treffpunkt M_U/4."""
+    """Die Falte: 10⁶ M☉ in der Galaxie, Temperatur und Periode der Sonnenfalte, Abgabe beim Fall, Entropie, Lebensdauer, Treffpunkt M_U/4."""
     M6 = 1e6 * K.M_sun
     fe = 100 * [e for e in D.ame2020() if e[0] == 26 and e[2] == 56][0][3] / (K.m_u * K.c**2 / K.e / 1e3)
     abgabe = 1 - 2 / 3 * math.sqrt(2)
     return dict(s2=K.c**4 / (4 * K.G * M6) / K.a0 / 1e17, r_stern=K.schwellenradius(M6) / K.pc,
                 T=K.falte_temperatur(K.M_sun) / 1e-8, periode=K.falte_temperatur(K.M_sun) * K.c * K.k_B / (K.hbar * K.a0) / 1e22,
                 abgabe=100 * abgabe, abgabe_j=100 * (1 - 1 / math.sqrt(3)), fe=fe, mal=abgabe / (fe / 100),
-                S=K.entropie_falte(K.M_sun) / 1e77, MU4=K.schnittmassen()[3] / 4 / K.M_sun / 1e23)
+                S=K.entropie_falte(K.M_sun) / 1e77, MU4=K.schnittmassen()[3] / 4 / K.M_sun / 1e23,
+                leben=K.lebensdauer_falte(K.M_sun) / K.yr / 1e67)
 
 
 def milchstrasse(radien=(5.0, None, 15.0, 50.0)):
-    """Die Milchstraße als Punktmasse (6·10¹⁰ M☉): Regel gegen Newton, Licht weit außen, Naht."""
+    """Die Milchstraße als Punktmasse (6·10¹⁰ M☉): Regel gegen Newton, Licht weit außen, Naht, größte Umkehr."""
     M = 6e10 * K.M_sun
     rs = K.schwellenradius(M) / K.kpc
     r = [rs if x is None else x for x in radien]
@@ -113,7 +114,7 @@ def milchstrasse(radien=(5.0, None, 15.0, 50.0)):
                 v_N=[math.sqrt(K.G * M / (x * K.kpc)) / 1e3 for x in r], v=[K.bahntempo_regel(M, x * K.kpc) / 1e3 for x in r],
                 nu50=K.verstaerkung(aN50),
                 alpha_inf=math.degrees(K.ablenkung_grenz(M)) * 3600, RQ=K.naht_radius(M) / K.kpc,
-                aN_Q=math.log(K.Q_kosm / (1 + K.Q_kosm))**2)
+                aN_Q=math.log(K.Q_kosm / (1 + K.Q_kosm))**2, Rmax=K.groesste_umkehr(M)[0] / K.Mpc)
 
 
 def schwelle_sparc():
@@ -167,10 +168,10 @@ def zahlen():
             (st["Z_ende"], 1), (st["carter"], 1), (st["aG"], 3), (st["faktor"], 1)]
     f = falte()
     aus += [(f["s2"], 1), (f["r_stern"], 0), (f["T"], 1), (f["periode"], 1), (f["abgabe"], 1), (f["abgabe_j"], 0), (f["fe"], 2),
-            (f["mal"], 1), (f["S"], 2), (f["MU4"], 1)]
+            (f["mal"], 1), (f["S"], 2), (f["MU4"], 1), (f["leben"], 1)]
     mw = milchstrasse()
     aus += [(mw["ds"], 1), (mw["rs"], 2), (mw["vflach"], 1), (mw["nu_rs"], 3), (mw["nu50"], 2),
-            (mw["alpha_inf"], 2), (mw["RQ"], 1), (mw["aN_Q"], 3)] + [(v, 0) for v in mw["v_N"] + mw["v"]]
+            (mw["alpha_inf"], 2), (mw["RQ"], 1), (mw["aN_Q"], 3), (mw["Rmax"], 2)] + [(v, 0) for v in mw["v_N"] + mw["v"]]
     sp = schwelle_sparc()
     aus += [(sp["yd"], 2), (sp["n_gal"], 0), (sp["n_pkt"], 0), (sp["a0"], 2), (sp["lo"], 2), (sp["hi"], 2), (sp["d_einfach"], 0),
             (sp["d_standard"], 0), (sp["dim"], 2), (sp["dim_s"], 2), (sp["Rd"], 2), (sp["Rd_lo"], 2), (sp["Rd_hi"], 2), (sp["steig"], 2),
@@ -192,7 +193,8 @@ BESCHRIFTUNG = {
                z="Rotverschiebung z", DMDH="D_M/D_H", desi="DESI DR2", modell="Modell, keine freie Zahl",
                ohne="ohne Rückstellung (Ω_DE = 0)", Z="Kernladung Z", abfall="Abfall der Ionisierungsenergie  IE(Z)/IE(Z + 1)",
                pubchem="PubChem", vflach="v⁴ = GMa₀", masse="Masse M [kg]", laenge="Länge [m]", lam="λ̄ = ħ/(Mc)",
-               ds="3Δs = GM/c²", rs="r* = √(GM/a₀)", l0="ℓ₀ = 2Λ", lP="ℓ_P", proton="Proton", sonne="Sonne", mw="Milchstraße"),
+               ds="3Δs = GM/c²", rs="r* = √(GM/a₀)", rt="r̃ = √(λ̄·ℓ₀)", rmax="R_max = v_flach/H_∞", l0="ℓ₀ = 2Λ", lP="ℓ_P", proton="Proton", sonne="Sonne", mw="Milchstraße",
+               elektron="Elektron", ganzes="Ganzes"),
     "en": dict(aN="Newton from the visible  a_N  [m/s²]", a="measured acceleration  a  [m/s²]",
                regel="rule  a = a_N/(1 − q)", newton="Newton  a = a_N", sparc="SPARC, 141 galaxies",
                A="mass number A", BA="binding per nucleon [MeV]", ame="AME2020, valley of stability",
@@ -201,7 +203,8 @@ BESCHRIFTUNG = {
                z="redshift z", DMDH="D_M/D_H", desi="DESI DR2", modell="model, no free number",
                ohne="without restoring force (Ω_DE = 0)", Z="nuclear charge Z", abfall="drop of the ionisation energy  IE(Z)/IE(Z + 1)",
                pubchem="PubChem", vflach="v⁴ = GMa₀", masse="mass M [kg]", laenge="length [m]", lam="λ̄ = ħ/(Mc)",
-               ds="3Δs = GM/c²", rs="r* = √(GM/a₀)", l0="ℓ₀ = 2Λ", lP="ℓ_P", proton="proton", sonne="Sun", mw="Milky Way")}
+               ds="3Δs = GM/c²", rs="r* = √(GM/a₀)", rt="r̃ = √(λ̄·ℓ₀)", rmax="R_max = v_flat/H_∞", l0="ℓ₀ = 2Λ", lP="ℓ_P", proton="proton", sonne="Sun", mw="Milky Way",
+               elektron="electron", ganzes="whole")}
 
 
 def _tex(t):
@@ -358,19 +361,24 @@ def bilder(sprache="de", ordner=None):
     ax.loglog(M, K.hbar / (M * K.c), "-", color="k", lw=1.0, label=B["lam"])
     ax.loglog(M, K.G * M / K.c**2, "-", color="#555", lw=1.0, label=B["ds"])
     ax.loglog(M, np.sqrt(K.G * M / K.a0), "-", color="#999", lw=1.2, label=B["rs"])
+    ax.loglog(M, np.array([K.schwelle_spiegel(m) for m in M]), "--", color="#999", lw=1.2, label=B["rt"])
+    ax.loglog(M, np.array([K.groesste_umkehr(m)[0] for m in M]), "-.", color="#777", lw=1.0, label=_tex(B["rmax"]).replace("H_∞", "$\\mathrm{H_{\\infty}}$"))
     l0 = 2 * K.schliesslaenge()
     ax.axhline(l0, color="k", lw=0.7, ls="--"); ax.text(mPl, l0 * 1e3, B["l0"], fontsize=9, ha="center")
     ax.axhline(K.l_P, color="k", lw=0.5, ls=":"); ax.text(Mmin * 1e3, K.l_P * 1e3, "$\\ell_{\\mathrm{P}}$", fontsize=10)
-    for m, y, name in ((Mmin, l0, "M_min"), (Mc, K.hbar / (Mc * K.c), "M_c"), (mPl, K.l_P, "m_Pl"), (MU, l0, "M_U")):
+    for m, y, name in ((Mmin, l0, "M_min"), (Mc, K.hbar / (Mc * K.c), "M_c"), (mPl, K.l_P, "m_Pl"),
+                       (mPl**2 / Mc, K.G * mPl**2 / Mc / K.c**2, "$\\mathrm{m_{Pl}^2/M_c}$"), (MU, l0, "M_U")):
         ax.plot(m, y, "o", color="k", ms=4)
-        ax.annotate(_tex(name), (m, y), xytext=(6, -13) if name != "M_min" else (6, 4), textcoords="offset points", fontsize=9)
-    for m, name in ((K.m_p, B["proton"]), (K.M_sun, B["sonne"]), (6e10 * K.M_sun, B["mw"])):
+        ax.annotate(name if "$" in name else _tex(name), (m, y), xytext=(6, -13) if name != "M_min" else (6, 4),
+                    textcoords="offset points", fontsize=9)
+    for m, name in ((K.m_e, B["elektron"]), (K.m_p, B["proton"]), (K.M_sun, B["sonne"]), (6e10 * K.M_sun, B["mw"]),
+                    (3 / (4 * math.pi) * MU, B["ganzes"])):
         ax.axvline(m, color="#ccc", lw=0.6)
         ax.text(m * 2, 1e-90, name, fontsize=8, rotation=90, va="bottom", color="#555")
     ax.set_xlim(Mmin / 10, MU * 10); ax.set_ylim(1e-100, 1e30)
     ax.xaxis.set_major_locator(LogLocator(base=10, numticks=8)); ax.yaxis.set_major_locator(LogLocator(base=10, numticks=8))
     ax.set_xlabel(B["masse"]); ax.set_ylabel(B["laenge"])
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=3, fontsize=8.5)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=4, fontsize=8.5)
     ablage(fig, "leiter")
     return wege
 

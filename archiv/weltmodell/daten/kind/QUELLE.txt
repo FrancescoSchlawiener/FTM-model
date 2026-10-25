@@ -1,0 +1,1 @@
+KIND (Schuetz, Richter, Martini, Ecker, RSC Med. Chem. 11, 1285, 2020): D0MD00178C.xlt von kbbox.h-its.org ist nur ein Verweis auf die Zusatzdaten bei RSC (d0md00178c1.xlsx). Diese waren am 16.10.2026 dort nicht abrufbar (404).

@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 archiv/weltmodell/simulation/.zwischenspeicher/
 *.sperre
+*.teil
+simulation/.pruefspeicher/
+simulation/zwischen/haufen/

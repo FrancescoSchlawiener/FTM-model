@@ -1,0 +1,1 @@
+RC100: Rotationskurven von 100 massereichen Sternbildenden Galaxien bei z = 0,6 bis 2,5 (Nestor Shachar u. a. 2023, ApJ 944, 78, arXiv:2209.12199). rc100_tab3.txt: Tabelle 3 (Seiten 27 bis 29, nur als Bild im PDF), von Hand abgeschrieben am 16.10.2026: z, lg M_baryon, R_e, f_DM(<R_e) = V_DM²/V_c² bei R_e, V_c(R_e), je mit Fehler. Gelesen mit daten.rc100.

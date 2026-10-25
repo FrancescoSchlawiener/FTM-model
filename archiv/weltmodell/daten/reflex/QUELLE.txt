@@ -1,0 +1,2 @@
+Bewegung der Scheibe der Milchstraße gegen die Sterne des äußeren Halos (40 < r < 120 kpc), Rückstoß durch die LMC: Petersen, Peñarrubia 2021, Detection of the Milky Way reflex motion due to the Large Magellanic Cloud infall, arXiv:2011.10581, aus der Zusammenfassung der Arbeit abgeschrieben am 25.10.2026 (export.arxiv.org/abs/2011.10581). Gelesen mit daten.reflex_gemessen.
+- petersen2021.txt: v_travel [km/s] mit Fehler oben und unten, Richtung des Ziels l und b [°] mit Fehlern oben und unten.

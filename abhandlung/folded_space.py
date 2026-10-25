@@ -1,22 +1,26 @@
-"""The Folded Space (Text des Autors, the_folded_space.md) als PDF neben der Quelle und im Hauptverzeichnis: Formeln mit KaTeX gesetzt (npm,
-abgelegt in ~/.cache/ftm_katex), gedruckt mit dem Chromium des Rechners. Wie in allen PDFs ohne Semikolon und
-Gedankenstrich (pdf.zeichen: Komma, bei Zahlenbereichen „to“).
-Lauf: python abhandlung/folded_space.py; schreibt abhandlung/the_folded_space.pdf und dieselbe Datei als The_Folded_Space.pdf
-ins Hauptverzeichnis."""
+"""The Folded Space (Text des Autors, the_folded_space.md, deutsch the_folded_space_de.md) als PDF neben der Quelle und im
+Hauptverzeichnis: Formeln mit KaTeX gesetzt (npm, abgelegt in ~/.cache/ftm_katex), gedruckt mit dem Chromium des Rechners.
+Wie in allen PDFs ohne Semikolon und Gedankenstrich (pdf.zeichen: Komma, bei Zahlenbereichen „to“ oder „bis“).
+Lauf: python abhandlung/folded_space.py [en|de]; schreibt abhandlung/the_folded_space.pdf (deutsch the_folded_space_de.pdf)
+und dieselbe Datei als The_Folded_Space.pdf (The_Folded_Space_de.pdf) ins Hauptverzeichnis."""
 import html
 import json
 import os
 import pathlib
 import re
 import subprocess
+import sys
 import tempfile
 
 from pdf import chromium, zeichen
 
 HIER = pathlib.Path(__file__).resolve().parent
-QUELLE = HIER / "the_folded_space.md"
-ZIEL = HIER / "the_folded_space.pdf"
-HAUPT = HIER.parent / "The_Folded_Space.pdf"
+SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ("en", "de") else "en"
+ENDE = "" if SPRACHE == "en" else "_de"
+QUELLE = HIER / f"the_folded_space{ENDE}.md"
+ZIEL = HIER / f"the_folded_space{ENDE}.pdf"
+HAUPT = HIER.parent / f"The_Folded_Space{ENDE}.pdf"
+KOPF = {"en": "Abstract", "de": "Zusammenfassung"}[SPRACHE]
 KATEX = pathlib.Path.home() / ".cache" / "ftm_katex"
 VERSION = "0.16.11"
 
@@ -67,9 +71,9 @@ def absatz(text, formeln):
         m = re.fullmatch(r"(\(?)\$([^$]+)\$([.,;:)]*)", t)
         if m:
             formeln.append((m.group(2), False))
-            aus.append(f'<span class="inline">{m.group(1)}\0{len(formeln) - 1}\0{html.escape(zeichen(m.group(3), "en"))}</span>')
+            aus.append(f'<span class="inline">{m.group(1)}\0{len(formeln) - 1}\0{html.escape(zeichen(m.group(3), SPRACHE))}</span>')
         else:
-            aus.append(html.escape(zeichen(t, "en")))
+            aus.append(html.escape(zeichen(t, SPRACHE)))
     return "".join(aus)
 
 
@@ -82,8 +86,8 @@ def seite():
             aus.append(f"<h1>{absatz(b[2:], formeln)}</h1>")
         elif i == 1:
             aus.append(f'<div class="autor">{html.escape(b)}</div>')
-        elif b == "## Abstract":
-            aus.append('<div class="abstract"><h2>Abstract</h2>')
+        elif b == f"## {KOPF}":
+            aus.append(f'<div class="abstract"><h2>{KOPF}</h2>')
             im_abstract = True
         elif b.startswith("## "):
             if im_abstract:
@@ -99,13 +103,14 @@ def seite():
     for n, h in enumerate(setze_formeln(formeln)):
         rumpf = rumpf.replace(f"\0{n}\0", h)
     css = (katex() / "dist" / "katex.min.css").as_uri()
-    return (f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>The Folded Space</title>'
+    titel = "The Folded Space" if SPRACHE == "en" else "Der gefaltete Raum"
+    return (f'<!DOCTYPE html><html lang="{SPRACHE}"><head><meta charset="utf-8"><title>{titel}</title>'
             f'<link rel="stylesheet" href="{css}"><style>{STIL}</style></head><body>{rumpf}</body></html>')
 
 
 def schreibe():
     with tempfile.TemporaryDirectory() as d:
-        quelle_html = pathlib.Path(d) / "the_folded_space.html"
+        quelle_html = pathlib.Path(d) / f"the_folded_space{ENDE}.html"
         quelle_html.write_text(seite(), encoding="utf-8")
         subprocess.run([chromium(), "--headless", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer",
                         "--allow-file-access-from-files", f"--print-to-pdf={ZIEL}", quelle_html.as_uri()],

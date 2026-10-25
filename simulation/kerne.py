@@ -314,6 +314,25 @@ def kippstelle(f):
 
 
 @lru_cache(maxsize=None)
+def ende_bindung(selbst=True, f=TROPFEN):
+    """Größte Bindung je Nukleon der glatten Formel (ohne Paarglied) längs ihres Tals ∂B/∂Z = 0. Dort fällt das Glied der
+    Asymmetrie aus d(B/A)/dA heraus, und es bleibt (1/d)·E_S = (1 − 1/d)·E_C, also x = 1/(2(d − 1)) = ¼ für jede Stärke
+    der Glieder, die Hülle E_S ∝ A^{(d−1)/d}, die Windung E_C ∝ Z²·A^{−1/d}. selbst: die Windung wirkt nicht auf sich,
+    Z(Z − 1) wie in der Formel, dann x = ¼·2Z/(2Z + 1). False: Z². Gibt (A, Z, x = a_C·Z²/(2a_S·A))."""
+    from scipy.optimize import minimize_scalar
+    p = anpassung(f)[0]
+
+    def B(Z, A):
+        zz = Z * (Z - 1) if selbst else Z * Z
+        return p[0] * A - p[1] * A**(2 / 3) - p[2] * zz / A**(1 / 3) - p[3] * (A - 2 * Z)**2 / A
+    zs = lambda A: minimize_scalar(lambda z: -B(z, A), bounds=(0.3 * A, 0.55 * A), method="bounded",
+                                   options=dict(xatol=1e-10)).x
+    A = minimize_scalar(lambda a: -B(zs(a), a) / a, bounds=(20, 200), method="bounded", options=dict(xatol=1e-8)).x
+    Z = zs(A)
+    return A, Z, p[2] * Z * Z / (2 * p[1] * A)
+
+
+@lru_cache(maxsize=None)
 def kippstelle_ganz(f):
     """Zweiter Weg: erstes ganzes Z im Tal (je A das ganze Z kleinster Masse) mit x ≥ 1, und dessen A-Bereich."""
     t = tal_ganz(f)

@@ -1,0 +1,7 @@
+# AGC 114905: Neigung aus der Scheibe der Sterne, unabhängig vom Gas.
+# Mancera Piña, Golini, Trujillo, Montes 2024, A&A, arXiv:2404.06537, Abschnitt 3.1 (Gl. 1):
+#   Isophoten der tiefen Aufnahme (GTC, mu_r,lim = 32 mag/arcsec²), Achsenverhältnis b/a = 0,86 ± 0,02,
+#   Positionswinkel 78 ± 5 Grad; Neigung nach cos²i = ((b/a)² − q0²)/(1 − q0²) mit 0 < q0 < 0,4: i = 31 ± 2 Grad.
+#   Zum Vergleich aus der Form des Gases (Mancera Piña u. a. 2022): i = 32 ± 3 Grad.
+# Spalten: agc  b_a  b_a_fehler  q0_min  q0_max  i_gas  i_gas_fehler
+114905  0.86  0.02  0.0  0.4  32.0  3.0

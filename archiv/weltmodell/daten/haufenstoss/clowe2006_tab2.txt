@@ -1,0 +1,8 @@
+# 1E0657-56 (Bullet-Haufen, z = 0,296), Clowe u. a. 2006, ApJ 648, L109, Tabelle 2
+# Mittel über Öffnungen von 100 kpc Radius. M_X Gas aus Chandra, M_stern aus dem I-Band (M/L = 2, obere Grenze),
+# kappa mittlere Konvergenz der Linse, an den Gasgipfeln der Rest nach Abzug der Profile um die Zentralgalaxien.
+# Teil            M_X[1e12 Msun] Fehler M_stern[1e12 Msun] Fehler kappa Fehler
+haupt_galaxie     5.5  0.6  0.54 0.08 0.36 0.06
+haupt_gas         6.6  0.7  0.23 0.02 0.05 0.06
+neben_galaxie     2.7  0.3  0.58 0.09 0.20 0.05
+neben_gas         5.8  0.6  0.12 0.01 0.02 0.06

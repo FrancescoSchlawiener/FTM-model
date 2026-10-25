@@ -1,0 +1,1 @@
+BindingDB, Teilmenge aus Artikeln (BindingDB_BindingDB_Articles_202610_tsv.zip), www.bindingdb.org/rwd/bind/downloads, geholt am 16.10.2026. Gelesen mit daten.bindingdb_kinetik, ohne auszupacken.

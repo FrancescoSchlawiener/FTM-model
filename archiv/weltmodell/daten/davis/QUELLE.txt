@@ -1,0 +1,4 @@
+Davis u. a. 2011, Nature Biotechnology 29, 1046: 68 Kinasehemmer gegen 442 Kinasen, K_d in nM (10000 = keine Bindung gemessen).
+Bezogen aus github.com/hkmztrk/DeepDTA, data/davis: Y (NumPy-Feld als Pickle, gelesen nur mit gesperrtem Leser),
+ligands_can.txt (SMILES je PubChem-Nummer), proteins.txt (Sequenz je Kinase). Geladen am 15.10.2026.
+Dazu atome_pubchem.csv: Zahl der schweren Atome (HeavyAtomCount) je PubChem-Nummer, von PubChem geholt mit daten.davis_atome am 15.10.2026.

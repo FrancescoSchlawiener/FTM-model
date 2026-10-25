@@ -98,7 +98,7 @@ M = ω₃·(√(3π)/2)·m_Pl³/(2m_u)² = **1.456 M☉**
 
 ## Example 5: The Fold
 
-When the shell falls onto the centre, the funnel stays finite. A fold of 10⁶ M☉ in a galaxy has s² = **1.4·10¹⁷** at the horizon: it lies deep in the Newtonian regime, the return acts only outside r* = **36 pc**. The fold of one solar mass has the temperature kT = m̃c²/(4π), T = **6.2·10⁻⁸ K**, a period **2.3·10²²** times shorter than the return (kT_I = ħa₀/c). Its entropy is S = 4πk·(M/m_Pl)² = **1.05·10⁷⁷** k. What falls into it releases, down to the innermost stable orbit, **5.7 %** of its rest energy, **6.1** times as much as nuclear binding up to iron (⁵⁶Fe: **0.94 %**, AME2020). At the meeting point of rotation, j = 1, it is **42 %**. Only at M_U/4 = **1.4·10²³ M☉** do horizon, threshold and closure length coincide.
+When the shell falls onto the centre, the funnel stays finite. A fold of 10⁶ M☉ in a galaxy has s² = **1.4·10¹⁷** at the horizon: it lies deep in the Newtonian regime, the return acts only outside r* = **36 pc**. The fold of one solar mass has the temperature kT = m̃c²/(4π), T = **6.2·10⁻⁸ K**, a period **2.3·10²²** times shorter than the return (kT_I = ħa₀/c). Its entropy is S = 4πk·(M/m_Pl)² = **1.05·10⁷⁷** k. If it radiates as a black body at its temperature, it lives t = 5120π·α_G·3Δs/c = **2.1·10⁶⁷** years. What falls into it releases, down to the innermost stable orbit, **5.7 %** of its rest energy, **6.1** times as much as nuclear binding up to iron (⁵⁶Fe: **0.94 %**, AME2020). At the meeting point of rotation, j = 1, it is **42 %**. Only at M_U/4 = **1.4·10²³ M☉** do horizon, threshold and closure length coincide.
 
 ---
 
@@ -140,7 +140,7 @@ As a point mass of 6·10¹⁰ M☉ the Milky Way has the fold Δs = **197.4 AU**
 | 15 | 131 | 196 |
 | 50 | 72 | 178 |
 
-At 50 kpc the enhancement is ν = **6.14** (Figure 5). A uniform external field does not change it, the Milky Way falls with it. Far outside, the deflection of light tends to α_∞ = 2π·(v_flat/c)² = **0.42″**. The seam, where the local q reaches the cosmic one (a_N = **0.029**·a₀), lies at R_Q = **52.0 kpc**.
+At 50 kpc the enhancement is ν = **6.14** (Figure 5). A uniform external field does not change it, the Milky Way falls with it. Far outside, the deflection of light tends to α_∞ = 2π·(v_flat/c)² = **0.42″**. The seam, where the local q reaches the cosmic one (a_N = **0.029**·a₀), lies at R_Q = **52.0 kpc**. No region around it binds beyond R_max = v_flat/H_∞ = **3.07 Mpc**, the mean of threshold and closure, with H_∞ = c·√Λ_s, the rate of the end state.
 
 ![The Milky Way as a point mass: Newton falls off outwards, the rule bends around r* and runs flat towards v⁴ = GMa₀.](bilder/en/milchstrasse.svg)
 
@@ -148,9 +148,9 @@ At 50 kpc the enhancement is ν = **6.14** (Figure 5). A uniform external field 
 
 ## Example 8: The Threshold from 141 Galaxies
 
-Over all **141** galaxies (SPARC, quality 1 or 2, inclination above 30°) with **2688** points, distance, inclination and mass-to-light estimated for each galaxy: the mass-to-light ratio of the discs follows from the demand that stars and gas obey the same rule, Υ_d = **0.67**. Then the threshold reads a₀ = **1.11**·10⁻¹⁰ m/s² (16–84 %: 1.00–1.21). The Bose form fits best: the simple form is worse by Δχ² = **53**, the standard form by **41**. The return has dimension **0.92** ± **0.05**, one-dimensional as the square root in q requires.
+Over all **141** galaxies (SPARC, quality 1 or 2, inclination above 30°) with **2688** points, distance, inclination and mass-to-light estimated for each galaxy: the mass-to-light ratio of the discs follows from the demand that stars and gas obey the same rule, Υ_d = **0.67**. Then the threshold reads a₀ = **1.11**·10⁻¹⁰ m/s² (16 to 84 %: 1.00 to 1.21). The Bose form fits best: the simple form is worse by Δχ² = **53**, the standard form by **41**. The return has dimension **0.92** ± **0.05**, one-dimensional as the square root in q requires.
 
-**Discs at the threshold.** The disc scale length is, in the median, **0.71**·r* (16–84 %: 0.37–1.28), that is r*/√2, and it grows with the baryonic mass as M_b^{0.31 ± 0.02}.
+**Discs at the threshold.** The disc scale length is, in the median, **0.71**·r* (16 to 84 %: 0.37 to 1.28), that is r*/√2, and it grows with the baryonic mass as M_b^{0.31 ± 0.02}.
 
 **Single funnel or collective.** Compact globular clusters (g = 25·a₀) show hardly any addition, ν = **1.007**. Thin systems (g = 0.13·a₀) the full one, ν = **3.3**. Pressure-supported spheres have σ_v⁴ = (4/81)·GMa₀: **9.1 km/s** at 10⁷ M☉, **19.3 km/s** at 2·10⁸ M☉. A whole system lies below the threshold at Σ < a₀/(πG) = **242 M☉/pc²**. On the 52 star clusters of the Local Volume Database with measured dispersion the thin ones (g_N < a₀) lie +0.10 ± 0.03 dex above the prediction with the rule, +0.41 with Newton (χ² 53 against 235).
 
@@ -198,7 +198,7 @@ From the threshold alone follow the closure length Λ = c²/(2a₀) = **13.7 Gpc
 
 The breathing: Θ = 2πa₀/(cH₀) = **1.020**, the vacuum part Ω_s = (π²/45)·Θ² = **0.228**. Three loops give Ω_DE, today Ω_DE/Ω_s = **3.03** (read after Planck). The vacuum part is the geometric mean of the Planck density and the quantum density of the closure length: Λ_s·ℓ_P² = (4π⁴/15)·ε_L² = **9.4·10⁻¹²³**. Its time-fixed number is k_s = π³/30 = **1.034**. If it alone carried the expansion, this would run into H_s = H₀·√Ω_s = **32.1 km/s/Mpc**, with three parts into **55.6 km/s/Mpc**. The whole lies with r*/Λ = **0.971** just below its own meeting point. Its cell is L = **27.9 Gpc**.
 
-![The ladder of lengths: quantum length λ̄, fold 3Δs and threshold radius r* over the mass, with the length of action ℓ₀ and the Planck length. Where two lengths become equal lies a rung. The mirror M ↔ m_Pl²/M exchanges λ̄ and 3Δs.](bilder/en/leiter.svg)
+![The ladder of lengths: quantum length λ̄, fold 3Δs, threshold radius r* and return depth of the quantum motion r̃ over the mass, the largest turnaround R_max = v_flat/H_∞, with the length of action ℓ₀ and the Planck length. Where two lengths become equal lies a rung, five meeting masses from M_min to M_U. The mirror M ↔ m_Pl²/M exchanges λ̄ and 3Δs and with them r* and r̃.](bilder/en/leiter.svg)
 
 ---
 

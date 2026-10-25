@@ -1,0 +1,6 @@
+# Chowdhury, Kanekar, Chengalur 2022, ApJ 935, 167 (arXiv:2207.00031), GMRT-CATz1, Abschnitt 6 und Tabelle 4:
+# mittlere HI-Masse blauer sternbildender Galaxien bei <z> = 1,04 (0,74 < z < 1,45, 11 419 Galaxien gestapelt,
+# mittlere Sternmasse ≈ 10^10 M_sun) und dieselbe Größe heute bei gleicher Verteilung der Sternmasse
+# (blaue Galaxien NUV − r < 4 aus xGASS, Catinella u. a. 2018, wie in der Arbeit gewichtet).
+# z  M_HI[1e9 M_sun]  Fehler  M_HI_heute[1e9 M_sun]  Fehler  Zahl
+1.04 13.7 1.9 3.96 0.17 11419

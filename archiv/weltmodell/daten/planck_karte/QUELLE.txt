@@ -1,0 +1,5 @@
+Planck 2015 (PR2), Karte der Hintergrundstrahlung nach SMICA: COM_CMB_IQU-smica_1024_R2.02_full.fits, IRSA,
+irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/cmb/, geladen 2026-10-17, 176 209 920 Byte,
+SHA-256 18875a357d2af866a9f7ded657ecf66e387fd627375a144bf4126ff254d4999f. Galaktische Koordinaten, Nside 1024, NESTED.
+smica_t_512.npz: daraus I_STOKES (in µK) und TMASK, umgeordnet nach RING und mit healpy.ud_grade auf Nside 512 gemittelt,
+Maske 1, wo die gemittelte TMASK über 0,999 liegt (83,0 % des Himmels). Gelesen mit daten.planck_karte.

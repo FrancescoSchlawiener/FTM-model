@@ -1,0 +1,2 @@
+# EDGES (Bowman u. a. 2018, arXiv:1810.05912): Mitte [MHz], Breite auf halber Höhe [MHz], Tiefe [K]
+78 19 0.5

@@ -1,0 +1,14 @@
+# 1E0657-56 (Bullet-Haufen), Bradač u. a. 2006, ApJ 652, 937, Linse aus starker und schwacher Verzerrung
+# Tabelle 3: Gas- und Gesamtmasse in Ellipsen Ra x Rb um die Gasgipfel und die Zentralgalaxien (je Haufen gleich groß)
+# Teil            Ra[kpc] Rb[kpc] M_gas[1e13 Msun] Fehler M_total[1e13 Msun] Fehler
+haupt_gas         125  250  2.0  0.2  10.8 0.6
+haupt_galaxie     125  250  1.4  0.1  16.3 0.9
+neben_gas          80   80  0.42 0.04  2.1 0.2
+neben_galaxie      80   80  0.18 0.02  4.3 0.2
+feld             1300  830 13    1    91   10
+# Tabelle 2: Lage der Gipfel gegen die Zentralgalaxie (Haupthaufen: südliche cD), dx dy [Bogenminuten] mit Fehlern
+# Teil            dx    Fehler dy    Fehler
+lage_haupt_linse  0.26 0.08 -0.01 0.09
+lage_haupt_gas    1.06 0.0   0.84 0.0
+lage_neben_linse -0.05 0.10  0.00 0.07
+lage_neben_gas   -0.73 0.0   0.10 0.0

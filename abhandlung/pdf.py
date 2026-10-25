@@ -360,7 +360,8 @@ def pruefe(sprache="de", name="abhandlung"):
     import pypdfium2 as pdfium
     pdf = pdfium.PdfDocument(str(HIER / f"{name}_{sprache}.pdf"))
     seiten = [pdf[i].get_textpage().get_text_range() for i in range(len(pdf))]
-    text = _glatt("".join(re.sub(rf"^{i + 1}\r?\n", "", s) + "\n" for i, s in enumerate(seiten)), sprache)   # ohne Seitenzahl
+    text = _glatt("".join(re.sub(r"(\r?\n[0-9 ]+)+\s*$", "", re.sub(rf"^{i + 1}\r?\n", "", s)) + "\n"
+                          for i, s in enumerate(seiten)), sprache)   # ohne Seitenzahl und lose Hochzahlen am Seitenende
     fehlt, block = [], False
     for z in (HIER / f"{name}_{sprache}.md").read_text(encoding="utf-8").split("\n"):
         if z.startswith("```"):
@@ -376,7 +377,9 @@ def pruefe(sprache="de", name="abhandlung"):
             teile = [c.rstrip(",") for c in teile]
         for t in teile:
             g = _glatt(t.lstrip("#- "), sprache)
-            if g and g not in text:
+            hoch = list(re.finditer(r"[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+", t))   # eine Hochzahl kann ans Seitenende rutschen
+            ohne = (_glatt((t[:h.start()] + t[h.end():]).lstrip("#- "), sprache) for h in hoch)
+            if g and g not in text and not any(o in text for o in ohne):
                 fehlt.append(t.strip())
     return fehlt
 

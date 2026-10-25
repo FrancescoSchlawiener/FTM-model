@@ -29,7 +29,7 @@ T² → T¹ geht auf drei Wegen: Einrasten (beide Zyklen schwingen weiter, gebun
 
 Die Zahl unabhängiger Zyklen ist die Zahl der neutralen Lyapunov-Exponenten. Quer zum Torus sind sie negativ. Stabilität ist Bewegung ohne Wiederholungspflicht: Die Rückwirkung muss greifen, bevor sich eine Störung aufschaukelt. Verzweigungen sind Rollenwechsel: Die Geburt eines Zyklus macht eine transversale Richtung tangential, Einrasten eine tangentiale transversal.
 
-**Kippstelle:** Bei q = 1 divergiert die Rückkopplungssumme Σqⁿ. Vor der Falte gilt 1 − q ∝ δ^{1/2}. Das Hysteresefenster öffnet mit dem Abstand hoch 3/2, die Rückkehrrate fällt mit dessen Wurzel (kritische Verlangsamung).
+**Kippstelle:** Bei q = 1 divergiert die Rückkopplungssumme Σqⁿ. Jenseits davon öffnet sich das Hysteresefenster mit dem Abstand von der Kippstelle hoch 3/2, und vor jedem Rand des Fensters fällt die Rückkehrrate 1 − q mit der Wurzel des Abstands zum Rand (kritische Verlangsamung).
 
 **Hysterese ohne Speicher:** Ein Preisach-Zustand ist nur die Folge der nicht ausgelöschten Extremwerte. Rauschen und Dissipation stammen aus derselben Dämpfung. Die Dicke des Torusbandes ist D_⊥/|λ_⊥|.
 
@@ -41,7 +41,7 @@ Auf einem geschlossenen Zustandsraum gilt für jede Zerlegung in Bereiche
 Σᵢ 1/⟨T_{Aᵢ}⟩ = 1,     ⟨T_A⟩ = μ(X)/μ(A)
 ```
 
-Schließung verteilt ein festes Budget an Wiederkehr. Ein offener Raum setzt es auf null. Für die Verweilzeiten eines geschlossenen, stationären Systems zwischen zwei Zuständen gilt Σ1/⟨τ⟩ = 1: ein direkter Test auf Geschlossenheit.
+Schließung verteilt ein festes Budget an Wiederkehr. Ein offener Raum setzt es auf null. Für die mittleren Wiederkehrzeiten eines geschlossenen, stationären Systems in seine Zustände, gezählt von jedem Augenblick in ihnen aus, gilt Σ1/⟨T⟩ = 1. Kehrt ein Teil nie zurück, bleibt die Summe unter eins: ein direkter Test auf Geschlossenheit.
 
 ## Labor
 

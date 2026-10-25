@@ -1,0 +1,3 @@
+Das mittlere 21-cm-Signal des Himmels in der Zeit der ersten Sterne, aus den Zusammenfassungen der Arbeiten abgeschrieben am 25.10.2026 (export.arxiv.org). Gelesen mit daten.signal_21cm_messung.
+- edges2018.txt: EDGES, Aufnahme im gemittelten Spektrum des Himmels, Mitte 78 MHz, volle Breite auf halber Höhe 19 MHz, Tiefe 0,5 K (Bowman, Rogers, Monsalve, Mozdzen, Mahesh 2018, Nature, doi:10.1038/nature25792, arXiv:1810.05912). Der Fehler der Tiefe steht nicht in der Zusammenfassung.
+- saras3.txt: SARAS 3, Spektrum des Himmels von 55 bis 85 MHz, das beste Profil von EDGES ist mit 95,3 % verworfen (Singh, Nambissan T., Subrahmanyan, Udaya Shankar, Girish u. a. 2022, arXiv:2112.06778).

@@ -1,0 +1,4 @@
+# Poggio u. a. 2020, Nature Astronomy, doi:10.1038/s41550-020-1017-3 (arXiv:1912.10471): Präzession des Warps, Gaia DR2, 12 Millionen Riesensterne,
+# in Richtung der Drehung der Galaxis positiv (rechtläufig).
+# Rate[km/s/kpc]  Fehler_Statistik  Fehler_System  Zahl_Sterne
+10.86 0.03 3.20 12000000

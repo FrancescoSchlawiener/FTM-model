@@ -1,0 +1,4 @@
+ChEMBL über www.ebi.ac.uk/chembl/api/data/activity: alle K_i und K_d mit pChEMBL, je Zeile Molekül, Ziel, Art, pChEMBL, Ligandeneffizienz LE = 1,37·pChEMBL/N und BEI. Geholt mit daten.chembl_bindung am 15.10.2026.
+atome.csv: Zahl der schweren Atome (molecule_properties.heavy_atoms) je Molekül, geholt mit daten.chembl_atome.
+strukturen.csv: InChI und SMILES der Moleküle mit festgelegter räumlicher Anordnung (InChI mit Schicht /m), geholt mit daten.chembl_strukturen am 15.10.2026.
+kinetik.csv: alle k_off in s⁻¹ (standard_type koff oder k_off) mit Molekül, Ziel, UniProt (über die Querverweise von UniProt) und Dokument, geholt mit daten.chembl_kinetik am 16.10.2026.
